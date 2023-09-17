@@ -99,8 +99,8 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: Vivia
-# remote_theme: hydecorp/hydejack
+# theme: Vivia
+remote_theme: hydecorp/hydejack
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
