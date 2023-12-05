@@ -98,6 +98,10 @@
   color: var(--second-text-color) !important;
 }
 
+img {
+  width: 100%;
+}
+
 :root body {
   margin: 0;
   height: 100vh;
