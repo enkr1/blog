@@ -100,3 +100,14 @@
 img {
   width: 100%;
 }
+
+figure {
+  margin: 0 0 1rem !important;
+  text-align: left;
+}
+figure td:first-child {
+  width: 1%;
+}
+figure td pre {
+  text-align: left;
+}
