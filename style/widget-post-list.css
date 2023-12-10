@@ -98,9 +98,10 @@
 .post-container .tag-widget .category-list .category-list-item .archive-list-count,
 .post-container .tag-widget .archive-list .archive-list-item .category-list-count,
 .post-container .tag-widget .archive-list .archive-list-item .archive-list-count {
-  padding: 0 12px;
-  border-radius: 11px;
+  padding: 0.2rem 0.6rem;
+  border-radius: 1rem;
   background: var(--third-bg-color);
+  font-size: 0.8rem;
 }
 .post-container .profile-widget {
   min-height: 300px;
@@ -171,7 +172,8 @@
 .post-container .recent-widget ul li:last-child section {
   border-bottom: none;
 }
-.post-container .recent-widget img, .post-container .recent-widget .post-img-placeholder {
+.post-container .recent-widget img,
+.post-container .recent-widget .post-img-placeholder {
   width: 50px;
   height: 50px;
   margin-right: 5px;
