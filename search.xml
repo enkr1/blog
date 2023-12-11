@@ -23,48 +23,9 @@
     
     
     <entry>
-      <title>bd-tmr!</title>
-      <link href="/blog/20231205/19:37:25/bd-tmr/"/>
-      <url>/blog/20231205/19:37:25/bd-tmr/</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>bd</title>
-      <link href="/blog/20231205/19:36:58/bd/"/>
-      <url>/blog/20231205/19:36:58/bd/</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>test!</title>
       <link href="/blog/20231124/12:07:12/test/"/>
       <url>/blog/20231124/12:07:12/test/</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>first-post</title>
-      <link href="/blog/20231124/12:06:52/first-post-1/"/>
-      <url>/blog/20231124/12:06:52/first-post-1/</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -82,38 +43,12 @@
         <content type="html"><![CDATA[]]></content>
       
       
-      <categories>
-          
-          <category> Sports </category>
-          
-          <category> Baseball </category>
-          
-          <category> MLB </category>
-          
-          <category> American League </category>
-          
-          <category> Boston Red Sox </category>
-          
-          <category> New York Yankees </category>
-          
-          <category> Rivalries </category>
-          
-      </categories>
-      
       
         <tags>
             
             <tag> test </tag>
             
-            <tag> first post </tag>
-            
-            <tag> Sports,Baseball </tag>
-            
-            <tag> MLB,American League,Boston Red Sox </tag>
-            
-            <tag> MLB,American League,New York Yankees </tag>
-            
-            <tag> Rivalries </tag>
+            <tag> first-post </tag>
             
         </tags>
       

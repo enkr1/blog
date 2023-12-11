@@ -39,32 +39,6 @@
   </entry>
   
   <entry>
-    <title>bd-tmr!</title>
-    <link href="https://enkr1.github.io/blog/20231205/19:37:25/bd-tmr/"/>
-    <id>https://enkr1.github.io/blog/20231205/19:37:25/bd-tmr/</id>
-    <published>2023-12-05T11:37:25.000Z</published>
-    <updated>2023-12-05T11:37:25.761Z</updated>
-    
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>bd</title>
-    <link href="https://enkr1.github.io/blog/20231205/19:36:58/bd/"/>
-    <id>https://enkr1.github.io/blog/20231205/19:36:58/bd/</id>
-    <published>2023-12-05T11:36:58.000Z</published>
-    <updated>2023-12-05T11:36:58.736Z</updated>
-    
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
     <title>test!</title>
     <link href="https://enkr1.github.io/blog/20231124/12:07:12/test/"/>
     <id>https://enkr1.github.io/blog/20231124/12:07:12/test/</id>
@@ -79,53 +53,18 @@
   
   <entry>
     <title>first-post</title>
-    <link href="https://enkr1.github.io/blog/20231124/12:06:52/first-post-1/"/>
-    <id>https://enkr1.github.io/blog/20231124/12:06:52/first-post-1/</id>
-    <published>2023-11-24T04:06:52.000Z</published>
-    <updated>2023-11-24T04:06:52.080Z</updated>
-    
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>first-post</title>
     <link href="https://enkr1.github.io/blog/20231124/12:06:43/first-post/"/>
     <id>https://enkr1.github.io/blog/20231124/12:06:43/first-post/</id>
     <published>2023-11-24T04:06:43.000Z</published>
-    <updated>2023-12-10T22:54:38.528Z</updated>
+    <updated>2023-12-11T04:42:17.633Z</updated>
     
     
     
-    
-    <category term="Sports" scheme="https://enkr1.github.io/blog/categories/Sports/"/>
-    
-    <category term="Baseball" scheme="https://enkr1.github.io/blog/categories/Sports/Baseball/"/>
-    
-    <category term="MLB" scheme="https://enkr1.github.io/blog/categories/MLB/"/>
-    
-    <category term="American League" scheme="https://enkr1.github.io/blog/categories/MLB/American-League/"/>
-    
-    <category term="Boston Red Sox" scheme="https://enkr1.github.io/blog/categories/MLB/American-League/Boston-Red-Sox/"/>
-    
-    <category term="New York Yankees" scheme="https://enkr1.github.io/blog/categories/MLB/American-League/New-York-Yankees/"/>
-    
-    <category term="Rivalries" scheme="https://enkr1.github.io/blog/categories/Rivalries/"/>
     
     
     <category term="test" scheme="https://enkr1.github.io/blog/tags/test/"/>
     
-    <category term="first post" scheme="https://enkr1.github.io/blog/tags/first-post/"/>
-    
-    <category term="Sports,Baseball" scheme="https://enkr1.github.io/blog/tags/Sports-Baseball/"/>
-    
-    <category term="MLB,American League,Boston Red Sox" scheme="https://enkr1.github.io/blog/tags/MLB-American-League-Boston-Red-Sox/"/>
-    
-    <category term="MLB,American League,New York Yankees" scheme="https://enkr1.github.io/blog/tags/MLB-American-League-New-York-Yankees/"/>
-    
-    <category term="Rivalries" scheme="https://enkr1.github.io/blog/tags/Rivalries/"/>
+    <category term="first-post" scheme="https://enkr1.github.io/blog/tags/first-post/"/>
     
   </entry>
   
