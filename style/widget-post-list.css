@@ -168,6 +168,7 @@
 }
 .post-container .recent-widget ul li {
   margin-bottom: 15px;
+  gap: 0.3rem;
 }
 .post-container .recent-widget ul li:last-child section {
   border-bottom: none;
