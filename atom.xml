@@ -62,9 +62,9 @@
     
     
     
-    <category term="test" scheme="https://enkr1.github.io/blog/tags/test/"/>
-    
     <category term="first-post" scheme="https://enkr1.github.io/blog/tags/first-post/"/>
+    
+    <category term="test" scheme="https://enkr1.github.io/blog/tags/test/"/>
     
   </entry>
   
