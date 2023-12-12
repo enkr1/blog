@@ -11,6 +11,15 @@
   </url>
   
   <url>
+    <loc>https://enkr1.github.io/blog/20231124/120643/first-post/</loc>
+    
+    <lastmod>2023-12-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://enkr1.github.io/blog/20231212/034543/My-Journey-with-Hexo-Building-a-Blog-page/</loc>
     
     <lastmod>2023-12-12</lastmod>
@@ -21,15 +30,6 @@
   
   <url>
     <loc>https://enkr1.github.io/blog/404/index.html</loc>
-    
-    <lastmod>2023-12-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://enkr1.github.io/blog/20231124/120643/first-post/</loc>
     
     <lastmod>2023-12-12</lastmod>
     
@@ -106,13 +106,6 @@
   </url>
   
   <url>
-    <loc>https://enkr1.github.io/blog/tags/test/</loc>
-    <lastmod>2023-12-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://enkr1.github.io/blog/tags/first-post/</loc>
     <lastmod>2023-12-12</lastmod>
     <changefreq>weekly</changefreq>
@@ -128,6 +121,13 @@
   
   <url>
     <loc>https://enkr1.github.io/blog/tags/test-tag-2/</loc>
+    <lastmod>2023-12-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://enkr1.github.io/blog/tags/test/</loc>
     <lastmod>2023-12-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -150,14 +150,7 @@
   </url>
   
   <url>
-    <loc>https://enkr1.github.io/blog/categories/test-cat-1/test-cat-2/</loc>
-    <lastmod>2023-12-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://enkr1.github.io/blog/categories/test-cat-1/test-cat-3/</loc>
+    <loc>https://enkr1.github.io/blog/categories/test-cat-1/test-cat-1-1/</loc>
     <lastmod>2023-12-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -165,6 +158,20 @@
   
   <url>
     <loc>https://enkr1.github.io/blog/categories/test-cat-2/</loc>
+    <lastmod>2023-12-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://enkr1.github.io/blog/categories/test-cat-2/test-cat-2-2/</loc>
+    <lastmod>2023-12-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://enkr1.github.io/blog/categories/test-cat-3/</loc>
     <lastmod>2023-12-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
