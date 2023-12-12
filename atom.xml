@@ -115,9 +115,9 @@
     
     <category term="test-cat-1" scheme="https://enkr1.github.io/blog/categories/test-cat-1/"/>
     
-    <category term="test-cat-1.1" scheme="https://enkr1.github.io/blog/categories/test-cat-1/test-cat-1-1/"/>
-    
     <category term="test-cat-2" scheme="https://enkr1.github.io/blog/categories/test-cat-2/"/>
+    
+    <category term="test-cat-1.1" scheme="https://enkr1.github.io/blog/categories/test-cat-1/test-cat-1-1/"/>
     
     <category term="test-cat-3" scheme="https://enkr1.github.io/blog/categories/test-cat-3/"/>
     
