@@ -6,7 +6,7 @@
   <link href="https://enkr1.github.io/blog/atom.xml" rel="self"/>
   
   <link href="https://enkr1.github.io/blog/"/>
-  <updated>2023-12-10T23:34:46.350Z</updated>
+  <updated>2023-12-12T07:42:19.456Z</updated>
   <id>https://enkr1.github.io/blog/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>My Journey with Hexo - Building a Blog from Scratch</title>
+    <link href="https://enkr1.github.io/blog/20231212/10:00:00/My-Journey-with-Hexo-Building-a-Blog-page/"/>
+    <id>https://enkr1.github.io/blog/20231212/10:00:00/My-Journey-with-Hexo-Building-a-Blog-page/</id>
+    <published>2023-12-12T02:00:00.000Z</published>
+    <updated>2023-12-12T07:42:19.456Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Hello…-World"><a href="#Hello…-World" class="headerlink" title="Hello… World!"></a>Hello… World!</h2><p>Welcome to my very first blog post! 🎉 I am super excited to share my journey with you. Combining tech and creativity has always been my jam, and what better way to do that than by building my own blog, right? So, I dived into the world of Hexo - a super cool blog framework that’s all about speed and simplicity.</p><h2 id="Why-Hexo-Good-Question"><a href="#Why-Hexo-Good-Question" class="headerlink" title="Why Hexo? Good Question!"></a>Why Hexo? Good Question!</h2><p>I chose Hexo for a few kick-ass reasons:</p><ul><li><strong>Lightning Fast</strong>: Hexo zips through generating pages like a race car. 🏎️💨</li><li><strong>Markdown Magic</strong>: Writing in Markdown is like texting, but cooler. And Hexo totally gets that.</li><li><strong>Plugin Paradise</strong>: Hexo’s got this treasure trove of plugins and themes that let me tweak my blog just the way I like.</li></ul><h2 id="Getting-My-Hands-Dirty-with-Hexo"><a href="#Getting-My-Hands-Dirty-with-Hexo" class="headerlink" title="Getting My Hands Dirty with Hexo"></a>Getting My Hands Dirty with Hexo</h2><p>Getting started was as easy as pie:</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure><p>Then I kicked off my new blog project:</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init blog</span><br></pre></td></tr></table></figure><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> blog</span><br></pre></td></tr></table></figure><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo serve</span><br></pre></td></tr></table></figure><blockquote><p>Now you have it!</p></blockquote><h2 id="Writing-a-Post"><a href="#Writing-a-Post" class="headerlink" title="Writing a Post"></a>Writing a Post</h2><p>Let me break it down for you. It’s as simple as making a cup of coffee – well, almost!</p><h3 id="The-Magic-Command"><a href="#The-Magic-Command" class="headerlink" title="The Magic Command"></a>The Magic Command</h3><p>All it takes is one command to start a new post. Here it is:</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new <span class="string">&quot;The Title of Your Post&quot;</span></span><br></pre></td></tr></table></figure><p>Replace <code>&quot;The Title of Your Post&quot;</code> with whatever mind-blowing title you’ve cooked up for your next blog entry. When you run this command, Hexo creates a new Markdown file in the <code>source/_posts</code> directory. It’s prepped and ready for you to pour your thoughts into.</p><h3 id="The-Markdown-Charm"><a href="#The-Markdown-Charm" class="headerlink" title="The Markdown Charm"></a>The Markdown Charm</h3><p>Now, the fun part begins! Open this new file, and you’ll see some default content called front-matter at the top. It looks something like this:</p><figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: The Title of Your Post</span><br><span class="line"><span class="section">date: 2023-12-12 10:00:00</span></span><br><span class="line"><span class="section">---</span></span><br></pre></td></tr></table></figure><p>After this front-matter, it’s your stage! Write your post using Markdown, a super intuitive way to format text. If you haven’t used Markdown before, don’t sweat it. It’s pretty straightforward – like, <code>*italic*</code> for <em>italic</em> and <code>**bold**</code> for <strong>bold</strong>. You’ll get the hang of it in no time!</p><h3 id="Preview-as-You-Go"><a href="#Preview-as-You-Go" class="headerlink" title="Preview as You Go"></a>Preview as You Go</h3><p>Want to see how your post looks as you write? Just run <code>hexo server</code> in your blog directory, and you can see your work in progress in real-time by visiting <code>localhost:4000</code> in your browser. It’s like having a live preview – pretty cool, huh?</p><h2 id="Deployment-🔧"><a href="#Deployment-🔧" class="headerlink" title="Deployment! 🔧"></a>Deployment! 🔧</h2><p>Alright, here comes the tech wizardry part! 🧙‍♂️ When I am ready to deploy your blog. As it could’ve been a chore, but I’ve got this neat little trick up my sleeve. I created a custom command (<strong>alias</strong>, in geek speak) that does all the heavy lifting in one go. Check this out:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">alias</span> hd=<span class="string">&#x27;hexo clean &amp;&amp; hexo generate &amp;&amp; hexo deploy&#x27;</span></span><br></pre></td></tr></table></figure><p>What does it do? Well, it’s like a magic spell that cleans up old files, generates new ones, and then, whoosh, deploys everything to my site!<br>🚀 So, instead of typing three separate commands every time, I just type <code>hd</code>, and bam – my updates are live!</p><h3 id="Making-It-Stick-Saving-to-profile"><a href="#Making-It-Stick-Saving-to-profile" class="headerlink" title="Making It Stick: Saving to .profile"></a>Making It Stick: Saving to .profile</h3><p>I didn’t want to type this alias every time I open a new terminal session, right? So, I went a step further and saved it into my .profile file. This means my hd command is always ready to go, no matter when or where I start my work. Here’s how you can do it:</p><p>Use <code>vim</code> to edit your <code>.profile</code>:</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim ~/.profile</span><br></pre></td></tr></table></figure><blockquote><p>Add the alias line to the file and save it and close the editor by <code>:x</code></p></blockquote><p>To make the changes take effect, you can restart your terminal or type <code>source ~/.profile</code>.</p><p>And voilà! 🎩✨ Now, every time I fire up my terminal, my <code>hd</code> command is there, waiting to deploy my latest musings and tech adventures. Feel free to use this trick for your own blog. It’s all about working smarter, not harder!</p><h2 id="Theme-Time"><a href="#Theme-Time" class="headerlink" title="Theme Time!"></a>Theme Time!</h2><p>I started playing dress-up with my blog by messing around with themes:</p><ul><li>Poked around in the <code>themes</code> directory to make my own.</li><li>Toyed with layout files like <code>index.ejs</code> and <code>post.ejs</code>.</li><li>Jazzed things up with CSS and a dash of Sass.</li><li>Sprinkled some JavaScript for that extra zing.</li></ul><p>But you know what? There are so many awesome ready-made themes out there. I ended up picking the Next theme! It’s pretty rad – check it out: <a href="https://theme-next.js.org/">Next Theme</a>.</p><h2 id="Bumps-Along-the-Road"><a href="#Bumps-Along-the-Road" class="headerlink" title="Bumps Along the Road"></a>Bumps Along the Road</h2><p>Not gonna lie, there were a few hiccups:</p><ul><li>Figuring out Hexo’s maze of directories and config files was a bit of a brain teaser.</li><li>Tweaking the theme was a tricky dance, especially when trying to layer global CSS styles.</li><li>Ran into a few head-scratchers with the config, but hey, nothing Dr. Google couldn’t fix!</li></ul><h2 id="Wrapping-Up"><a href="#Wrapping-Up" class="headerlink" title="Wrapping Up"></a>Wrapping Up</h2><p>All in all, crafting this blog with Hexo has been a blast! It’s a sweet spot where my geeky side meets my creative spirit. I can’t wait to fill this space with cool tech stuff and maybe some beatbox beats. Because why not?</p><hr><p>Got questions or wanna chat? Drop me a text! Till next time, happy coding!</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;Hello…-World&quot;&gt;&lt;a href=&quot;#Hello…-World&quot; class=&quot;headerlink&quot; title=&quot;Hello… World!&quot;&gt;&lt;/a&gt;Hello… World!&lt;/h2&gt;&lt;p&gt;Welcome to my very first blo</summary>
+      
+    
+    
+    
+    <category term="hexo" scheme="https://enkr1.github.io/blog/categories/hexo/"/>
+    
+    
+    <category term="note" scheme="https://enkr1.github.io/blog/tags/note/"/>
+    
+    <category term="sharing" scheme="https://enkr1.github.io/blog/tags/sharing/"/>
+    
+  </entry>
   
   <entry>
     <title>Test another one</title>
@@ -56,15 +82,21 @@
     <link href="https://enkr1.github.io/blog/20231124/12:06:43/first-post/"/>
     <id>https://enkr1.github.io/blog/20231124/12:06:43/first-post/</id>
     <published>2023-11-24T04:06:43.000Z</published>
-    <updated>2023-12-11T04:42:17.633Z</updated>
+    <updated>2023-12-12T06:51:26.784Z</updated>
     
     
     
     
+    <category term="test-cat-1" scheme="https://enkr1.github.io/blog/categories/test-cat-1/"/>
     
-    <category term="test" scheme="https://enkr1.github.io/blog/tags/test/"/>
+    <category term="test-cat-2" scheme="https://enkr1.github.io/blog/categories/test-cat-1/test-cat-2/"/>
+    
     
     <category term="first-post" scheme="https://enkr1.github.io/blog/tags/first-post/"/>
+    
+    <category term="test-tag-1" scheme="https://enkr1.github.io/blog/tags/test-tag-1/"/>
+    
+    <category term="test-tag-2" scheme="https://enkr1.github.io/blog/tags/test-tag-2/"/>
     
   </entry>
   
@@ -73,7 +105,7 @@
     <link href="https://enkr1.github.io/blog/20231124/12:02:13/hello-world/"/>
     <id>https://enkr1.github.io/blog/20231124/12:02:13/hello-world/</id>
     <published>2023-11-24T04:02:13.574Z</published>
-    <updated>2023-12-10T23:45:15.426Z</updated>
+    <updated>2023-12-12T06:51:08.796Z</updated>
     
     <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
     
@@ -85,7 +117,9 @@
     
     
     
-    <category term="test" scheme="https://enkr1.github.io/blog/categories/test/"/>
+    <category term="test-cat-1" scheme="https://enkr1.github.io/blog/categories/test-cat-1/"/>
+    
+    <category term="test-cat-2" scheme="https://enkr1.github.io/blog/categories/test-cat-1/test-cat-2/"/>
     
     
   </entry>
