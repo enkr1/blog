@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://enkr1.github.io/blog/20231124/120213/hello-world/</loc>
+    
+    <lastmod>2023-12-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://enkr1.github.io/blog/20231212/034543/My-Journey-with-Hexo-Building-a-Blog-page/</loc>
     
     <lastmod>2023-12-12</lastmod>
@@ -21,15 +30,6 @@
   
   <url>
     <loc>https://enkr1.github.io/blog/20231124/120643/first-post/</loc>
-    
-    <lastmod>2023-12-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://enkr1.github.io/blog/20231124/120213/hello-world/</loc>
     
     <lastmod>2023-12-12</lastmod>
     
@@ -151,6 +151,20 @@
   
   <url>
     <loc>https://enkr1.github.io/blog/categories/test-cat-1/test-cat-2/</loc>
+    <lastmod>2023-12-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://enkr1.github.io/blog/categories/test-cat-1/test-cat-3/</loc>
+    <lastmod>2023-12-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://enkr1.github.io/blog/categories/test-cat-2/</loc>
     <lastmod>2023-12-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
