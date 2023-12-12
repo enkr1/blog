@@ -6,7 +6,7 @@
   <link href="https://enkr1.github.io/blog/atom.xml" rel="self"/>
   
   <link href="https://enkr1.github.io/blog/"/>
-  <updated>2023-12-12T08:05:54.047Z</updated>
+  <updated>2023-12-12T15:39:33.657Z</updated>
   <id>https://enkr1.github.io/blog/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>24 Hours Harvard CS50 By David Malan</title>
+    <link href="https://enkr1.github.io/blog/20231212/231357/Harvard-CS50-By-David-Malan/"/>
+    <id>https://enkr1.github.io/blog/20231212/231357/Harvard-CS50-By-David-Malan/</id>
+    <published>2023-12-12T15:13:57.000Z</published>
+    <updated>2023-12-12T15:39:33.657Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>References</strong></p><ul><li>YouTube: <a href="https://youtu.be/LfaMVlDaQ24?si=8Iv9r7XYzZBxDpW0">Harvard CS50 (2023) – Full Computer Science University Course</a></li></ul><h1 id="Lecture-1-Scratch"><a href="#Lecture-1-Scratch" class="headerlink" title="Lecture 1 - Scratch"></a>Lecture 1 - Scratch</h1><h2 id="What-is-Computer-Science"><a href="#What-is-Computer-Science" class="headerlink" title="What is Computer Science?"></a>What is Computer Science?</h2><p>Computational thinking</p><p><img data-src="/blog/blog/20231212/231357/Harvard-CS50-By-David-Malan/image.png" alt="Alt text"></p><!-- <img data-src="/blog/20231212/231357/Harvard-CS50-By-David-Malan/image.png" class="" title="Alt Text"> -->]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;References&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;YouTube: &lt;a href=&quot;https://youtu.be/LfaMVlDaQ24?si=8Iv9r7XYzZBxDpW0&quot;&gt;Harvard CS50 (2023) – Full C</summary>
+      
+    
+    
+    
+    <category term="study" scheme="https://enkr1.github.io/blog/categories/study/"/>
+    
+    
+    <category term="note" scheme="https://enkr1.github.io/blog/tags/note/"/>
+    
+  </entry>
   
   <entry>
     <title>My Journey with Hexo - Building a Blog from Scratch</title>
@@ -109,9 +135,9 @@
     <link href="https://enkr1.github.io/blog/20231124/120213/hello-world/"/>
     <id>https://enkr1.github.io/blog/20231124/120213/hello-world/</id>
     <published>2023-11-24T04:02:13.574Z</published>
-    <updated>2023-12-12T14:58:41.588Z</updated>
+    <updated>2023-12-12T15:02:02.581Z</updated>
     
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p><h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><ul><li><a href="https://hexo.io/docs/configuration.html">https://hexo.io/docs/configuration.html</a></li><li><a href="https://hexo.io/docs/commands">https://hexo.io/docs/commands</a></li></ul>]]></content>
     
     
       

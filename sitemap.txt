@@ -1,3 +1,4 @@
+https://enkr1.github.io/blog/20231212/231357/Harvard-CS50-By-David-Malan/
 https://enkr1.github.io/blog/20231124/120213/hello-world/
 https://enkr1.github.io/blog/20231124/120643/first-post/
 https://enkr1.github.io/blog/20231212/034543/My-Journey-with-Hexo-Building-a-Blog-page/
@@ -10,10 +11,11 @@ https://enkr1.github.io/blog/20231124/120712/test/
 https://enkr1.github.io/blog
 https://enkr1.github.io/blog/tags/note/
 https://enkr1.github.io/blog/tags/sharing/
+https://enkr1.github.io/blog/tags/test/
 https://enkr1.github.io/blog/tags/first-post/
 https://enkr1.github.io/blog/tags/test-tag-1/
 https://enkr1.github.io/blog/tags/test-tag-2/
-https://enkr1.github.io/blog/tags/test/
+https://enkr1.github.io/blog/categories/study/
 https://enkr1.github.io/blog/categories/hexo/
 https://enkr1.github.io/blog/categories/test-cat-1/
 https://enkr1.github.io/blog/categories/test-cat-1/test-cat-1-1/
