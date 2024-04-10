@@ -178,7 +178,7 @@ body {
   background: var(--body-bg-color);
   color: var(--text-color);
   font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
-  font-size: 0.9em;
+  font-size: 1em;
   line-height: 2;
 }
 @media (max-width: 991px) {
@@ -1253,7 +1253,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #baffff;
+  background: #ffff5c;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -1858,25 +1858,6 @@ pre .javascript .function {
   overflow-wrap: break-word;
   word-wrap: break-word;
 }
-.posts-expand .post-title .post-edit-link {
-  border-bottom: none;
-  color: #bbb;
-  display: inline-block;
-  float: right;
-  font-size: 1.25em;
-  margin-left: -1.2em;
-  transition-delay: 0s;
-  transition-duration: 0.2s;
-  transition-timing-function: ease-in;
-}
-@media (max-width: 567px) {
-  .posts-expand .post-title .post-edit-link {
-    margin-left: initial;
-  }
-}
-.posts-expand .post-title .post-edit-link:hover {
-  color: #fc6423;
-}
 .posts-expand .post-title-link {
   border-bottom: none;
   color: var(--link-color);
@@ -2461,10 +2442,6 @@ ul.breadcrumb li + li:last-child {
 }
 .site-subtitle {
   margin: 0.8rem 10px 0;
-/* display: none; */
-/* +tablet-mobile() {
-    width: auto;
-  } */
 }
 .custom-logo-image {
   margin-top: 20px;

@@ -57,7 +57,7 @@
         localStorage.setItem('uid', uid);
         navigator.sendBeacon('https://www.google-analytics.com/collect', new URLSearchParams({
           v  : 1,
-          tid: '6436701203',
+          tid: 'G-2S9K52G4MP',
           cid: uid,
           t  : 'pageview',
           dp : encodeURIComponent(location.pathname)
@@ -146,12 +146,12 @@
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/blog/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">7</span></a>
+    <a href="/blog/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">6</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/blog/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">10</span></a>
+    <a href="/blog/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">9</span></a>
 
   </li>
         <li class="menu-item menu-item-archives">
@@ -235,7 +235,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: Thu 11 April 2024 01:31:56 AM / Modified: 01:32:20 AM" itemprop="dateCreated datePublished" datetime="2024-04-11T01:31:56+08:00">Thu 11 April 2024</time>
+              <time title="Created: Thu 11 April 2024 01:31:56 AM / Modified: 02:29:06 AM" itemprop="dateCreated datePublished" datetime="2024-04-11T01:31:56+08:00">Thu 11 April 2024</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -243,7 +243,7 @@
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/programming-language/" itemprop="url" rel="index"><span itemprop="name">programming language</span></a>
+                  <a href="/blog/categories/Programming-Language/" itemprop="url" rel="index"><span itemprop="name">Programming Language</span></a>
                 </span>
             </span>
 
@@ -336,7 +336,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: Thu 11 April 2024 01:33:56 AM" itemprop="dateModified" datetime="2024-04-11T01:33:56+08:00">Thu 11 April 2024</time>
+                <time title="Modified: Thu 11 April 2024 02:29:11 AM" itemprop="dateModified" datetime="2024-04-11T02:29:11+08:00">Thu 11 April 2024</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -437,7 +437,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: Fri 15 December 2023 12:43:03 PM" itemprop="dateModified" datetime="2023-12-15T12:43:03+08:00">Fri 15 December 2023</time>
+                <time title="Modified: Thu 11 April 2024 02:29:09 AM" itemprop="dateModified" datetime="2024-04-11T02:29:09+08:00">Thu 11 April 2024</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -445,7 +445,7 @@
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/programming-language/" itemprop="url" rel="index"><span itemprop="name">programming language</span></a>
+                  <a href="/blog/categories/Programming-Language/" itemprop="url" rel="index"><span itemprop="name">Programming Language</span></a>
                 </span>
             </span>
 
@@ -761,7 +761,7 @@ TODO: Search how to link image
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: Thu 11 April 2024 01:37:37 AM" itemprop="dateModified" datetime="2024-04-11T01:37:37+08:00">Thu 11 April 2024</time>
+                <time title="Modified: Thu 11 April 2024 02:15:40 AM" itemprop="dateModified" datetime="2024-04-11T02:15:40+08:00">Thu 11 April 2024</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -850,7 +850,6 @@ TODO: Search how to link image
 </ol>
 <ul>
 <li>If you haven’t already, create a repository on GitHub. This is where your blog’s content will live and be served from.</li>
-<li>Name it <code>&lt;yourusername&gt;.github.io</code>, where <code>&lt;yourusername&gt;</code> is your actual GitHub username.</li>
 </ul>
 <ol start="2">
 <li><strong>Create a Deploy Key</strong>:</li>
@@ -862,20 +861,20 @@ TODO: Search how to link image
 <li><strong>Configure Hexo</strong>:</li>
 </ol>
 <ul>
-<li>In your Hexo blog’s <code>_config.yml</code> file, update the <code>deploy</code> section with your repository details. It should look something like this:<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">https://github.com/enkr1/enkr1.github.io.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure></li>
+<li>In your Hexo blog’s <code>_config.yml</code> file, update the <code>deploy</code> section with your repository details. It should look something like this:<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">https://github.com/enkr1/blog</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure></li>
 </ul>
-<ol>
+<ol start="4">
 <li><strong>First Deployment</strong>:</li>
 </ol>
 <ul>
 <li>Run <code>hexo clean &amp;&amp; hexo generate &amp;&amp; hexo deploy</code></li>
 <li>This will push your generated blog to the <code>master</code> branch of your GitHub repository.</li>
 </ul>
-<ol>
+<ol start="5">
 <li><strong>Check It Out</strong>:</li>
 </ol>
 <ul>
-<li>After a few minutes, your blog should be live at <code>https://&lt;yourusername&gt;.github.io</code>.</li>
+<li>After a few minutes, your blog should be live at <code>https://enkr1.github.io/blog</code>.</li>
 <li>Go on, open your browser and bask in the glory of your new Hexo blog!</li>
 </ul>
 <h2 id="Deployment-🔧"><a href="#Deployment-🔧" class="headerlink" title="Deployment! 🔧"></a>Deployment! 🔧</h2><p>Alright, here comes the tech wizardry part! 🧙‍♂️ When I am ready to deploy your blog. As it could’ve been a chore, but I’ve got this neat little trick up my sleeve. I created a custom command (<strong>alias</strong>, in geek speak) that does all the heavy lifting in one go. Check this out:</p>
@@ -1252,22 +1251,17 @@ TODO: Search how to link image
       <div class="site-state-item site-state-categories">
             <a href="/blog/categories/">
           
-        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-count">9</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/blog/tags/">
           
-        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-count">6</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
 </div>
-  <div class="links-of-author motion-element">
-      <span class="links-of-author-item">
-        <span class="exturl" data-url="bWFpbHRvOmppbmdodWlwYW5nOTlAZ21haWwuY29t" title="Email → mailto:jinghuipang99@gmail.com"><i class="fa fa-envelope fa-fw"></i></span>
-      </span>
-  </div>
 
 
   <div class="links-of-blogroll motion-element">
@@ -1418,6 +1412,31 @@ window.addEventListener('pjax:success', () => {
 
 
   
+  <script data-pjax>
+    (function(){
+      var canonicalURL, curProtocol;
+      //Get the <link> tag
+      var x=document.getElementsByTagName("link");
+		//Find the last canonical URL
+		if(x.length > 0){
+			for (i=0;i<x.length;i++){
+				if(x[i].rel.toLowerCase() == 'canonical' && x[i].href){
+					canonicalURL=x[i].href;
+				}
+			}
+		}
+    //Get protocol
+	    if (!canonicalURL){
+	    	curProtocol = window.location.protocol.split(':')[0];
+	    }
+	    else{
+	    	curProtocol = canonicalURL.split(':')[0];
+	    }
+      //Get current URL if the canonical URL does not exist
+	    if (!canonicalURL) canonicalURL = window.location.href;
+	    //Assign script content. Replace current URL with the canonical URL
+      !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=canonicalURL,t=document.referrer;if(!e.test(r)){var n=(String(curProtocol).toLowerCase() === 'https')?"https://sp0.baidu.com/9_Q4simg2RQJ8t7jm9iCKT-xh_/s.gif":"//api.share.baidu.com/s.gif";t?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var i=new Image;i.src=n}}(window);})();
+  </script>
 
 
 
