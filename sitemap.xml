@@ -2,6 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://enkr1.github.io/blog/20231212/034543/My-Journey-with-Hexo-Building-a-Blog-page/</loc>
+    
+    <lastmod>2024-04-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://enkr1.github.io/blog/20231212/231357/Harvard-CS50-By-David-Malan/</loc>
+    
+    <lastmod>2024-04-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://enkr1.github.io/blog/20231213/145315/Elixir/</loc>
+    
+    <lastmod>2024-04-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://enkr1.github.io/blog/20240411/013156/JavaScript/</loc>
+    
+    <lastmod>2024-04-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://enkr1.github.io/blog/20231124/120643/first-post/</loc>
     
     <lastmod>2024-04-10</lastmod>
@@ -14,24 +50,6 @@
     <loc>https://enkr1.github.io/blog/20231213/143720/Python/</loc>
     
     <lastmod>2023-12-15</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://enkr1.github.io/blog/20231212/231357/Harvard-CS50-By-David-Malan/</loc>
-    
-    <lastmod>2023-12-13</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://enkr1.github.io/blog/20231213/145315/Elixir/</loc>
-    
-    <lastmod>2023-12-13</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -74,15 +92,6 @@
   </url>
   
   <url>
-    <loc>https://enkr1.github.io/blog/20231212/034543/My-Journey-with-Hexo-Building-a-Blog-page/</loc>
-    
-    <lastmod>2023-12-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://enkr1.github.io/blog/404/index.html</loc>
     
     <lastmod>2023-12-12</lastmod>
@@ -101,6 +110,13 @@
 
   
   <url>
+    <loc>https://enkr1.github.io/blog/tags/Note/</loc>
+    <lastmod>2024-04-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://enkr1.github.io/blog/tags/note/</loc>
     <lastmod>2024-04-10</lastmod>
     <changefreq>weekly</changefreq>
@@ -108,14 +124,14 @@
   </url>
   
   <url>
-    <loc>https://enkr1.github.io/blog/tags/tech/</loc>
+    <loc>https://enkr1.github.io/blog/tags/sharing/</loc>
     <lastmod>2024-04-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://enkr1.github.io/blog/tags/sharing/</loc>
+    <loc>https://enkr1.github.io/blog/tags/tech/</loc>
     <lastmod>2024-04-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -145,6 +161,13 @@
 
   
   <url>
+    <loc>https://enkr1.github.io/blog/categories/Programming-Language/</loc>
+    <lastmod>2024-04-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://enkr1.github.io/blog/categories/study/</loc>
     <lastmod>2024-04-10</lastmod>
     <changefreq>weekly</changefreq>
@@ -166,14 +189,14 @@
   </url>
   
   <url>
-    <loc>https://enkr1.github.io/blog/categories/study/cs50/</loc>
+    <loc>https://enkr1.github.io/blog/categories/test-cat-1/</loc>
     <lastmod>2024-04-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://enkr1.github.io/blog/categories/test-cat-1/</loc>
+    <loc>https://enkr1.github.io/blog/categories/study/cs50/</loc>
     <lastmod>2024-04-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
