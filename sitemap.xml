@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://enkr1.github.io/blog/20231212/231357/Harvard-CS50-By-David-Malan/</loc>
+    
+    <lastmod>2024-04-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://enkr1.github.io/blog/20231212/034543/My-Journey-with-Hexo-Building-a-Blog-page/</loc>
     
     <lastmod>2024-04-10</lastmod>
@@ -29,15 +38,6 @@
   </url>
   
   <url>
-    <loc>https://enkr1.github.io/blog/20231212/231357/Harvard-CS50-By-David-Malan/</loc>
-    
-    <lastmod>2024-04-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://enkr1.github.io/blog/20240411/013156/JavaScript/</loc>
     
     <lastmod>2024-04-10</lastmod>
@@ -56,24 +56,6 @@
   </url>
   
   <url>
-    <loc>https://enkr1.github.io/blog/lib/pjax/example/forms.html</loc>
-    
-    <lastmod>2024-04-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://enkr1.github.io/blog/lib/pjax/example/page3.html</loc>
-    
-    <lastmod>2024-04-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://enkr1.github.io/blog/lib/pjax/example/index.html</loc>
     
     <lastmod>2024-04-10</lastmod>
@@ -84,6 +66,24 @@
   
   <url>
     <loc>https://enkr1.github.io/blog/lib/pjax/example/page2.html</loc>
+    
+    <lastmod>2024-04-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://enkr1.github.io/blog/lib/pjax/example/forms.html</loc>
+    
+    <lastmod>2024-04-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://enkr1.github.io/blog/lib/pjax/example/page3.html</loc>
     
     <lastmod>2024-04-10</lastmod>
     
@@ -171,14 +171,14 @@
   </url>
   
   <url>
-    <loc>https://enkr1.github.io/blog/tags/note/</loc>
+    <loc>https://enkr1.github.io/blog/tags/Sharing/</loc>
     <lastmod>2024-04-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://enkr1.github.io/blog/tags/Sharing/</loc>
+    <loc>https://enkr1.github.io/blog/tags/Learning-Journal/</loc>
     <lastmod>2024-04-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -194,7 +194,14 @@
   </url>
   
   <url>
-    <loc>https://enkr1.github.io/blog/categories/study/</loc>
+    <loc>https://enkr1.github.io/blog/categories/Learning-Journal/</loc>
+    <lastmod>2024-04-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://enkr1.github.io/blog/categories/Learning-Journal/CS50/</loc>
     <lastmod>2024-04-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -209,13 +216,6 @@
   
   <url>
     <loc>https://enkr1.github.io/blog/categories/Test/</loc>
-    <lastmod>2024-04-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://enkr1.github.io/blog/categories/study/cs50/</loc>
     <lastmod>2024-04-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

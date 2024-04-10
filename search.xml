@@ -88,16 +88,16 @@
       
       <categories>
           
-          <category> study </category>
+          <category> Learning Journal </category>
           
-          <category> cs50 </category>
+          <category> CS50 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> note </tag>
+            <tag> Note </tag>
             
         </tags>
       
@@ -125,6 +125,8 @@
             <tag> Note </tag>
             
             <tag> Sharing </tag>
+            
+            <tag> Learning Journal </tag>
             
         </tags>
       
