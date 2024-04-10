@@ -20,7 +20,7 @@
       
         <tags>
             
-            <tag> Note </tag>
+            <tag> note </tag>
             
         </tags>
       
@@ -45,7 +45,7 @@
       
         <tags>
             
-            <tag> Note </tag>
+            <tag> note </tag>
             
         </tags>
       
@@ -70,7 +70,7 @@
       
         <tags>
             
-            <tag> Note </tag>
+            <tag> note </tag>
             
         </tags>
       
@@ -97,7 +97,7 @@
       
         <tags>
             
-            <tag> Note </tag>
+            <tag> note </tag>
             
         </tags>
       
@@ -117,16 +117,14 @@
           
           <category> Hexo </category>
           
+          <category> Learning Journal </category>
+          
       </categories>
       
       
         <tags>
             
-            <tag> Note </tag>
-            
-            <tag> Sharing </tag>
-            
-            <tag> Learning Journal </tag>
+            <tag> note </tag>
             
         </tags>
       
