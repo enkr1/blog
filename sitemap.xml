@@ -140,6 +140,13 @@
   </url>
   
   <url>
+    <loc>https://enkr1.github.io/blog/tags/test/</loc>
+    <lastmod>2024-04-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://enkr1.github.io/blog/tags/first-post/</loc>
     <lastmod>2024-04-10</lastmod>
     <changefreq>weekly</changefreq>
@@ -160,24 +167,17 @@
     <priority>0.2</priority>
   </url>
   
-  <url>
-    <loc>https://enkr1.github.io/blog/tags/test/</loc>
-    <lastmod>2024-04-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
 
   
   <url>
-    <loc>https://enkr1.github.io/blog/categories/programming-language/</loc>
+    <loc>https://enkr1.github.io/blog/categories/study/</loc>
     <lastmod>2024-04-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://enkr1.github.io/blog/categories/study/</loc>
+    <loc>https://enkr1.github.io/blog/categories/programming-language/</loc>
     <lastmod>2024-04-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -191,14 +191,14 @@
   </url>
   
   <url>
-    <loc>https://enkr1.github.io/blog/categories/test-cat-1/</loc>
+    <loc>https://enkr1.github.io/blog/categories/study/cs50/</loc>
     <lastmod>2024-04-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://enkr1.github.io/blog/categories/study/cs50/</loc>
+    <loc>https://enkr1.github.io/blog/categories/test-cat-1/</loc>
     <lastmod>2024-04-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -219,14 +219,14 @@
   </url>
   
   <url>
-    <loc>https://enkr1.github.io/blog/categories/test-cat-3/</loc>
+    <loc>https://enkr1.github.io/blog/categories/test-cat-2/test-cat-2-2/</loc>
     <lastmod>2024-04-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://enkr1.github.io/blog/categories/test-cat-2/test-cat-2-2/</loc>
+    <loc>https://enkr1.github.io/blog/categories/test-cat-3/</loc>
     <lastmod>2024-04-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
