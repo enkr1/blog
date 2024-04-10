@@ -14,7 +14,7 @@ https://enkr1.github.io/blog
 https://enkr1.github.io/blog/tags/note/
 https://enkr1.github.io/blog/categories/Programming-Language/
 https://enkr1.github.io/blog/categories/Learning-Journal/
-https://enkr1.github.io/blog/categories/Test/
 https://enkr1.github.io/blog/categories/Hexo/
+https://enkr1.github.io/blog/categories/Test/
 https://enkr1.github.io/blog/categories/Learning-Journal/CS50/
 https://enkr1.github.io/blog/categories/Hexo/Learning-Journal/
