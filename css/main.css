@@ -1253,7 +1253,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #ee30e7;
+  background: #e5595c;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -1444,7 +1444,7 @@ pre .javascript .function {
 }
 .site-state-item-count {
   display: block;
-  font-size: 1em;
+  font-size: 1rem;
   font-weight: 600;
   text-align: center;
 }
@@ -1597,7 +1597,7 @@ pre .javascript .function {
 }
 @media (min-width: 1200px) {
   .post-body {
-    font-size: 1.125em;
+    font-size: 1rem;
   }
 }
 .post-body .exturl .fa {
@@ -1891,7 +1891,7 @@ pre .javascript .function {
   color: #999;
   font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
   font-size: 0.75em;
-  margin: 3px 0 60px 0;
+  margin: 1rem 0 1.3rem;
   text-align: center;
 }
 .posts-expand .post-meta .post-description {
