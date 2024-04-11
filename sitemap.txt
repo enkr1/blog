@@ -1,3 +1,4 @@
+https://enkr1.github.io/blog/about/index.html
 https://enkr1.github.io/blog/20240412/031959/Inspirational-Quotes/
 https://enkr1.github.io/blog/20231212/034543/My-Journey-with-Hexo-Building-a-Blog-page/
 https://enkr1.github.io/blog/20231213/145315/Elixir/
@@ -8,7 +9,6 @@ https://enkr1.github.io/blog/20231212/231357/Harvard-CS50-By-David-Malan/
 https://enkr1.github.io/blog/todo.html
 https://enkr1.github.io/blog/20231124/120643/first-post/
 https://enkr1.github.io/blog/google295e26d511c4c6ad.html
-https://enkr1.github.io/blog/about/index.html
 https://enkr1.github.io/blog/tags/index.html
 https://enkr1.github.io/blog/404/index.html
 https://enkr1.github.io/blog

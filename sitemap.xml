@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://enkr1.github.io/blog/about/index.html</loc>
+    
+    <lastmod>2024-04-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://enkr1.github.io/blog/20240412/031959/Inspirational-Quotes/</loc>
     
     <lastmod>2024-04-11</lastmod>
@@ -86,15 +95,6 @@
     <loc>https://enkr1.github.io/blog/google295e26d511c4c6ad.html</loc>
     
     <lastmod>2024-04-10</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://enkr1.github.io/blog/about/index.html</loc>
-    
-    <lastmod>2023-12-12</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>

@@ -178,7 +178,7 @@ body {
   background: var(--body-bg-color);
   color: var(--text-color);
   font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
-  font-size: 1em;
+  font-size: 0.8rem;
   line-height: 2;
 }
 @media (max-width: 991px) {
@@ -282,7 +282,7 @@ kbd {
 table {
   border-collapse: collapse;
   border-spacing: 0;
-  font-size: 0.875em;
+  font-size: 1rem;
   margin: 0 0 20px 0;
   width: 100%;
 }
@@ -317,7 +317,7 @@ td {
   border-radius: 2px;
   color: var(--btn-default-color);
   display: inline-block;
-  font-size: 0.875em;
+  font-size: 1rem;
   line-height: 2;
   padding: 0 20px;
   text-decoration: none;
@@ -467,7 +467,7 @@ code {
   background: #eff2f3;
   color: #4d4d4c;
   display: flex;
-  font-size: 0.875em;
+  font-size: 1rem;
   justify-content: space-between;
   line-height: 1.2;
   padding: 0.5em;
@@ -509,7 +509,7 @@ pre {
 pre code {
   background: none;
   color: #4d4d4c;
-  font-size: 0.875em;
+  font-size: 1rem;
   padding: 0;
   text-shadow: none;
 }
@@ -1075,7 +1075,7 @@ pre .javascript .function {
 }
 .site-subtitle {
   color: #ddd;
-  font-size: 0.8125em;
+  font-size: 0.9rem;
   margin: 10px 0;
 }
 .use-motion .brand {
@@ -1146,7 +1146,7 @@ pre .javascript .function {
 .menu-item span.exturl {
   border-bottom: 0;
   display: block;
-  font-size: 0.8125em;
+  font-size: 0.9rem;
   transition-property: border-color;
   transition-delay: 0s;
   transition-duration: 0.2s;
@@ -1232,7 +1232,7 @@ pre .javascript .function {
 }
 .site-description {
   color: #999;
-  font-size: 0.8125em;
+  font-size: 0.9rem;
   margin-top: 0;
   text-align: center;
 }
@@ -1243,7 +1243,7 @@ pre .javascript .function {
 .links-of-author span.exturl {
   border-bottom-color: #555;
   display: inline-block;
-  font-size: 0.8125em;
+  font-size: 0.9rem;
   margin-bottom: 10px;
   margin-right: 10px;
   vertical-align: middle;
@@ -1253,7 +1253,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #305357;
+  background: #014962;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -1290,11 +1290,11 @@ pre .javascript .function {
   color: #fff;
 }
 .links-of-blogroll {
-  font-size: 0.8125em;
+  font-size: 0.9rem;
   margin-top: 10px;
 }
 .links-of-blogroll-title {
-  font-size: 0.875em;
+  font-size: 1rem;
   font-weight: 600;
   margin-top: 0;
 }
@@ -1334,7 +1334,7 @@ pre .javascript .function {
   color: var(--text-color);
   cursor: pointer;
   display: inline-block;
-  font-size: 0.875em;
+  font-size: 1rem;
 }
 .sidebar-nav li.sidebar-nav-overview {
   margin-left: 10px;
@@ -1343,11 +1343,11 @@ pre .javascript .function {
   color: #fc6423;
 }
 .sidebar-nav .sidebar-nav-active {
-  border-bottom-color: #fc6423;
-  color: #fc6423;
+  border-bottom-color: #c60000;
+  color: #c60000;
 }
 .sidebar-nav .sidebar-nav-active:hover {
-  color: #fc6423;
+  color: #c60000;
 }
 .sidebar-panel {
   display: none;
@@ -1376,10 +1376,10 @@ pre .javascript .function {
   }
 }
 .sidebar-toggle:hover .toggle-line {
-  background: #fc6423;
+  background: #c60000;
 }
 .post-toc {
-  font-size: 0.875em;
+  font-size: 1rem;
 }
 .post-toc ol {
   list-style: none;
@@ -1415,14 +1415,14 @@ pre .javascript .function {
   display: block;
 }
 .post-toc .nav .active > a {
-  border-bottom-color: #fc6423;
-  color: #fc6423;
+  border-bottom-color: #c60000;
+  color: #c60000;
 }
 .post-toc .nav .active-current > a {
-  color: #fc6423;
+  color: #c60000;
 }
 .post-toc .nav .active-current > a:hover {
-  color: #fc6423;
+  color: #c60000;
 }
 .site-state {
   display: flex;
@@ -1444,17 +1444,17 @@ pre .javascript .function {
 }
 .site-state-item-count {
   display: block;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 600;
   text-align: center;
 }
 .site-state-item-name {
   color: #999;
-  font-size: 0.8125em;
+  font-size: 0.9rem;
 }
 .footer {
   color: #999;
-  font-size: 0.875em;
+  font-size: 1rem;
   padding: 20px 0;
 }
 .footer.footer-fixed {
@@ -1481,7 +1481,7 @@ pre .javascript .function {
 }
 .languages {
   display: inline-block;
-  font-size: 1.125em;
+  font-size: 1.4rem;
   position: relative;
 }
 .languages .lang-select-label span {
@@ -1601,13 +1601,13 @@ pre .javascript .function {
   }
 }
 .post-body .exturl .fa {
-  font-size: 0.875em;
+  font-size: 1rem;
   margin-left: 4px;
 }
 .post-body .image-caption,
 .post-body .figure .caption {
   color: #999;
-  font-size: 0.875em;
+  font-size: 1rem;
   font-weight: bold;
   line-height: 1;
   margin: -20px auto 15px;
@@ -1646,7 +1646,7 @@ pre .javascript .function {
   }
 }
 .posts-collapse .collection-title {
-  font-size: 1.125em;
+  font-size: 1.4rem;
   position: relative;
 }
 .posts-collapse .collection-title::before {
@@ -1707,7 +1707,7 @@ pre .javascript .function {
   left: 0;
   margin-left: -4px;
   position: absolute;
-  top: 0.75em;
+  top: 0.8rem;
   transition-property: background;
   width: 6px;
   transition-delay: 0s;
@@ -1722,7 +1722,7 @@ pre .javascript .function {
 }
 .posts-collapse .post-meta {
   display: inline;
-  font-size: 0.75em;
+  font-size: 0.8rem;
   margin-right: 10px;
 }
 .posts-collapse .post-title {
@@ -1734,7 +1734,7 @@ pre .javascript .function {
   color: var(--link-color);
 }
 .posts-collapse .post-title .fa-external-link-alt {
-  font-size: 0.875em;
+  font-size: 1rem;
   margin-left: 5px;
 }
 .posts-collapse::before {
@@ -1848,7 +1848,7 @@ pre .javascript .function {
   margin: 0;
 }
 .posts-expand .post-header {
-  font-size: 1.125em;
+  font-size: 1.4rem;
 }
 .posts-expand .post-title {
   font-size: 1.5em;
@@ -1884,18 +1884,18 @@ pre .javascript .function {
   visibility: visible;
 }
 .posts-expand .post-title-link .fa-external-link-alt {
-  font-size: 0.875em;
+  font-size: 1rem;
   margin-left: 5px;
 }
 .posts-expand .post-meta {
   color: #999;
   font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
-  font-size: 0.75em;
+  font-size: 0.8rem;
   margin: 1rem 0 1.3rem;
   text-align: center;
 }
 .posts-expand .post-meta .post-description {
-  font-size: 0.875em;
+  font-size: 1rem;
   margin-top: 2px;
 }
 .posts-expand .post-meta time {
@@ -1935,7 +1935,7 @@ pre .javascript .function {
 .post-nav-item a {
   border-bottom: none;
   display: block;
-  font-size: 0.875em;
+  font-size: 1rem;
   line-height: 1.6;
   position: relative;
 }
@@ -1943,7 +1943,7 @@ pre .javascript .function {
   top: 2px;
 }
 .post-nav-item .fa {
-  font-size: 0.75em;
+  font-size: 0.8rem;
 }
 .post-nav-item:first-child {
   margin-right: 15px;
@@ -1981,7 +1981,7 @@ pre .javascript .function {
 }
 .post-tags a {
   display: inline-block;
-  font-size: 0.8125em;
+  font-size: 0.9rem;
 }
 .post-tags a:not(:last-child) {
   margin-right: 10px;
@@ -2000,7 +2000,7 @@ pre .javascript .function {
 }
 .social-like {
   display: flex;
-  font-size: 0.875em;
+  font-size: 1rem;
   justify-content: center;
   text-align: center;
 }
@@ -2193,7 +2193,7 @@ pre .javascript .function {
   }
 }
 ul.breadcrumb {
-  font-size: 0.75em;
+  font-size: 0.8rem;
   list-style: none;
   margin: 1em 0;
   padding: 0 2em;
@@ -2323,7 +2323,7 @@ ul.breadcrumb li + li:last-child {
 .popular-posts-header {
   border-bottom: 1px solid #eee;
   display: block;
-  font-size: 1.125em;
+  font-size: 1.4rem;
   margin-bottom: 10px;
   margin-top: 60px;
 }
@@ -2334,7 +2334,7 @@ ul.breadcrumb li + li:last-child {
   margin-left: 2em;
 }
 .popular-posts .popular-posts-item .popular-posts-title {
-  font-size: 0.875em;
+  font-size: 1rem;
   font-weight: normal;
   line-height: 2.4;
   margin: 0;
@@ -2515,14 +2515,14 @@ ul.breadcrumb li + li:last-child {
 .sub-menu .menu-item a:hover,
 .sub-menu .menu-item span.exturl:hover {
   background: transparent;
-  color: #fc6423;
+  color: #c60000;
 }
 .sub-menu .menu-item-active a {
-  border-bottom-color: #fc6423;
-  color: #fc6423;
+  border-bottom-color: #c60000;
+  color: #c60000;
 }
 .sub-menu .menu-item-active a:hover {
-  border-bottom-color: #fc6423;
+  border-bottom-color: #c60000;
 }
 .sidebar {
   background: var(--body-bg-color);
@@ -2707,15 +2707,16 @@ ul.breadcrumb li + li:last-child {
   border-bottom: 1px solid rgba(198,0,0,0.192);
 }
 .post-body h1 {
-  font-size: 1.125em;
+  font-size: 1.4rem;
   color: #c60000;
-  margin: 3rem 0 0;
+  margin: 3rem 0 0.3rem;
 }
 .post-body h2 {
-  font-size: 1rem;
-  margin: 0 0 1rem;
+  font-size: 1.2rem;
+  margin: 0 0 0.6rem;
 }
 .post-body h3 {
+  font-size: 1rem;
   border-bottom: 1px dotted #eee;
 }
 @media (min-width: 768px) and (max-width: 991px) {
