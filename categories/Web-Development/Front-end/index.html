@@ -49,6 +49,16 @@
   };
 </script>
 
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4N4L18VB12"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-4N4L18VB12');
+</script>
+
   <title>Category: Front-end | Blog | ENKR</title>
   
     <script>
@@ -58,7 +68,7 @@
         localStorage.setItem('uid', uid);
         navigator.sendBeacon('https://www.google-analytics.com/collect', new URLSearchParams({
           v  : 1,
-          tid: 'G-2S9K52G4MP',
+          tid: 'G-4N4L18VB12',
           cid: uid,
           t  : 'pageview',
           dp : encodeURIComponent(location.pathname)
