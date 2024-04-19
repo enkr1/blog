@@ -25,21 +25,22 @@
     var CONFIG = {"hostname":"enkr1.github.io","root":"/blog/","scheme":"Gemini","version":"7.8.0","exturl":true,"sidebar":{"position":"left","width":300,"display":"post","padding":0,"offset":0,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"buttons","active":"disqus","storage":true,"lazyload":true,"nav":null,"activeClass":"disqus"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":-1,"unescape":true,"preload":true},"motion":{"enable":true,"async":false,"transition":{"post_block":"slideDownBigIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="Coming soon …">
+  <meta name="description" content="Welcome to a journey through the realm of database normalisation—a key aspect of backend development that ensures your database is not only functional but also efficient and easy to manage. Today, let">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Elixir">
-<meta property="og:url" content="https://enkr1.github.io/blog/2023-12-13/elixir/index.html">
+<meta property="og:title" content="Demystifying Database Design: A Dive into 3NF and BCNF">
+<meta property="og:url" content="https://enkr1.github.io/blog/2024-04-20/demystifying-database-design-a-dive-into-3nf-and-bcnf/index.html">
 <meta property="og:site_name" content="Blog | ENKR">
-<meta property="og:description" content="Coming soon …">
+<meta property="og:description" content="Welcome to a journey through the realm of database normalisation—a key aspect of backend development that ensures your database is not only functional but also efficient and easy to manage. Today, let">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2023-12-13T06:53:15.000Z">
-<meta property="article:modified_time" content="2024-04-13T17:48:42.152Z">
+<meta property="article:published_time" content="2024-04-19T19:09:54.000Z">
+<meta property="article:modified_time" content="2024-04-19T19:31:12.643Z">
 <meta property="article:author" content="Jing Hui PANG | 彭竞辉 | ENKR">
 <meta property="article:tag" content="note">
-<meta property="article:tag" content="programming">
+<meta property="article:tag" content="database-design">
+<meta property="article:tag" content="backend">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://enkr1.github.io/blog/2023-12-13/elixir/">
+<link rel="canonical" href="https://enkr1.github.io/blog/2024-04-20/demystifying-database-design-a-dive-into-3nf-and-bcnf/">
 
 
 <script id="page-configurations">
@@ -62,7 +63,7 @@
   gtag('config', 'G-4N4L18VB12');
 </script>
 
-  <title>Elixir | Blog | ENKR</title>
+  <title>Demystifying Database Design: A Dive into 3NF and BCNF | Blog | ENKR</title>
   
     <script>
       function sendPageView() {
@@ -229,7 +230,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://enkr1.github.io/blog/2023-12-13/elixir/">
+    <link itemprop="mainEntityOfPage" href="https://enkr1.github.io/blog/2024-04-20/demystifying-database-design-a-dive-into-3nf-and-bcnf/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/blog/images/avatar.gif">
@@ -242,7 +243,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Elixir
+          Demystifying Database Design: A Dive into 3NF and BCNF
         </h1>
 
         <div class="post-meta">
@@ -251,27 +252,21 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
+              
 
-              <time title="Created: Wed 13 December 2023 14:53:15 PM" itemprop="dateCreated datePublished" datetime="2023-12-13T14:53:15+08:00">Wed 13 December 2023</time>
+              <time title="Created: Sat 20 April 2024 03:09:54 AM / Modified: 03:31:12 AM" itemprop="dateCreated datePublished" datetime="2024-04-20T03:09:54+08:00">Sat 20 April 2024</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: Sun 14 April 2024 01:48:42 AM" itemprop="dateModified" datetime="2024-04-14T01:48:42+08:00">Sun 14 April 2024</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Programming-Languages/" itemprop="url" rel="index"><span itemprop="name">Programming Languages</span></a>
+                  <a href="/blog/categories/Web-Development/" itemprop="url" rel="index"><span itemprop="name">Web Development</span></a>
                 </span>
                   , 
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Programming-Languages/Elixir/" itemprop="url" rel="index"><span itemprop="name">Elixir</span></a>
+                  <a href="/blog/categories/Web-Development/Back-end/" itemprop="url" rel="index"><span itemprop="name">Back-end</span></a>
                 </span>
             </span>
 
@@ -284,8 +279,8 @@
       </span>
       <span class="post-meta-item-text">Disqus: </span>
     
-    <a title="disqus" href="/blog/2023-12-13/elixir/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2023-12-13/elixir/" itemprop="commentCount"></span>
+    <a title="disqus" href="/blog/2024-04-20/demystifying-database-design-a-dive-into-3nf-and-bcnf/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2024-04-20/demystifying-database-design-a-dive-into-3nf-and-bcnf/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -294,13 +289,13 @@
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-              <span>69</span>
+              <span>709</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
-              <span>1 mins.</span>
+              <span>3 mins.</span>
             </span>
 
         </div>
@@ -312,18 +307,162 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>Coming soon …</p>
+        <p>Welcome to a journey through the realm of database normalisation—a key aspect of backend development that ensures your database is not only functional but also efficient and easy to manage. Today, let’s break down two crucial normalisation forms—Third Normal Form (3NF) and Boyce-Codd Normal Form (BCNF)—using everyday examples to make these concepts clear and memorable.</p>
 <span id="more"></span>
 
-
-<h1 id="TODO"><a href="#TODO" class="headerlink" title="TODO"></a>TODO</h1><h2 id="Links-on-how-to-deploy-an-Elixir-app"><a href="#Links-on-how-to-deploy-an-Elixir-app" class="headerlink" title="Links on how to deploy an Elixir app"></a>Links on how to deploy an Elixir app</h2><ul>
-<li><span class="exturl" data-url="aHR0cHM6Ly9lbGl4aXJmb3J1bS5jb20vdC93aGF0cy10aGUtYmVzdC13YXktdG8tZGVwbG95LWEtcGhvZW5peC1hcHAtaW4tcHJvZHVjdGlvbi8yNjQyMC8yMA==">https://elixirforum.com/t/whats-the-best-way-to-deploy-a-phoenix-app-in-production/26420/20<i class="fa fa-external-link-alt"></i></span></li>
-<li><span class="exturl" data-url="aHR0cHM6Ly9kYW1vbnZqYW5pcy5tZWRpdW0uY29tL29wdGltaXppbmctZm9yLWZyZWUtaG9zdGluZy1lbGl4aXItZGVwbG95bWVudHMtNmJmYzExOWExZjQ0">https://damonvjanis.medium.com/optimizing-for-free-hosting-elixir-deployments-6bfc119a1f44<i class="fa fa-external-link-alt"></i></span></li>
-<li><span class="exturl" data-url="aHR0cHM6Ly93d3cuZ2lnYWxpeGlyLmNvbS9kb2NzLw==">https://www.gigalixir.com/docs/<i class="fa fa-external-link-alt"></i></span></li>
-<li><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2ZseS1hcHBzL2hlbGxvX2VsaXhpcj90YWI9cmVhZG1lLW92LWZpbGU=">https://github.com/fly-apps/hello_elixir?tab=readme-ov-file<i class="fa fa-external-link-alt"></i></span></li>
-<li>Github Action - <span class="exturl" data-url="aHR0cHM6Ly9ub296by5tZWRpdW0uY29tL2VsaXhpci1waG9lbml4LWRlcGxveW1lbnRzLXVzaW5nLWdpdGh1Yi1hY3Rpb25zLWVjNDE3OGJhNWZi">https://noozo.medium.com/elixir-phoenix-deployments-using-github-actions-ec4178ba5fb<i class="fa fa-external-link-alt"></i></span></li>
-<li><span class="exturl" data-url="aHR0cHM6Ly9oZXhkb2NzLnBtL3Bob2VuaXgvZGVwbG95bWVudC5odG1sI3N0YXJ0aW5nLXlvdXItc2VydmVyLWluLXByb2R1Y3Rpb24=">https://hexdocs.pm/phoenix/deployment.html#starting-your-server-in-production<i class="fa fa-external-link-alt"></i></span></li>
+<h1 id="Why-Normalise"><a href="#Why-Normalise" class="headerlink" title="Why Normalise?"></a>Why Normalise?</h1><p>Imagine you’re organising a big party. You have a list of guests where each guest’s contact details are repeated for every event they’re attending. It would be cumbersome and error-prone, right? Normalisation in databases works similarly; it helps organise the data to avoid repetition and confusion, making the database easier to manage—like having a single, organised guest list.</p>
+<h1 id="Third-Normal-Form-3NF-Clearing-Up-Confusion"><a href="#Third-Normal-Form-3NF-Clearing-Up-Confusion" class="headerlink" title="Third Normal Form (3NF): Clearing Up Confusion"></a>Third Normal Form (3NF): Clearing Up Confusion</h1><h2 id="What-is-3NF"><a href="#What-is-3NF" class="headerlink" title="What is 3NF?"></a>What is 3NF?</h2><p>A database is in Third Normal Form if it’s free from the first two forms’ woes (repetitions and dependencies) and goes a step further: it eliminates indirect dependencies. That’s like ensuring not only that each piece of guest information is recorded once but also that all details directly relate to the guest without unnecessary detours.</p>
+<h2 id="Real-life-example"><a href="#Real-life-example" class="headerlink" title="Real-life example:"></a>Real-life example:</h2><p>Consider a school database:</p>
+<table>
+<thead>
+<tr>
+<th>StudentID</th>
+<th>Name</th>
+<th>Subject</th>
+<th>ProfessorID</th>
+<th>ProfessorName</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>Alice</td>
+<td>Math</td>
+<td>101</td>
+<td>Prof. X</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Bob</td>
+<td>Science</td>
+<td>102</td>
+<td>Prof. Y</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Charlie</td>
+<td>English</td>
+<td>103</td>
+<td>Prof. Z</td>
+</tr>
+</tbody></table>
+<p>Here, <code>ProfessorName</code> depends on <code>ProfessorID</code> rather than on the <code>StudentID</code> or <code>Subject</code>. This is like knowing the professor’s name by their ID, not by the student or the subject they teach.</p>
+<h2 id="How-to-Achieve-3NF"><a href="#How-to-Achieve-3NF" class="headerlink" title="How to Achieve 3NF:"></a>How to Achieve 3NF:</h2><p>To organise this into 3NF, split the details into two tables where professors are listed separately. This way, each piece of information is stored only once and directly relates to the primary subject of its table.</p>
+<p>Students Table:</p>
+<table>
+<thead>
+<tr>
+<th>StudentID</th>
+<th>Name</th>
+<th>Subject</th>
+<th>ProfessorID</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>Alice</td>
+<td>Math</td>
+<td>101</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Bob</td>
+<td>Science</td>
+<td>102</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Charlie</td>
+<td>English</td>
+<td>103</td>
+</tr>
+</tbody></table>
+<p>Professors Table:</p>
+<table>
+<thead>
+<tr>
+<th>ProfessorID</th>
+<th>ProfessorName</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>101</td>
+<td>Prof. X</td>
+</tr>
+<tr>
+<td>102</td>
+<td>Prof. Y</td>
+</tr>
+<tr>
+<td>103</td>
+<td>Prof. Z</td>
+</tr>
+</tbody></table>
+<h1 id="Boyce-Codd-Normal-Form-BCNF-A-Tighter-Ship"><a href="#Boyce-Codd-Normal-Form-BCNF-A-Tighter-Ship" class="headerlink" title="Boyce-Codd Normal Form (BCNF): A Tighter Ship"></a>Boyce-Codd Normal Form (BCNF): A Tighter Ship</h1><h2 id="What-is-BCNF"><a href="#What-is-BCNF" class="headerlink" title="What is BCNF?"></a>What is BCNF?</h2><p>BCNF is like 3NF but <em>with stricter rules</em>. It’s about ensuring that every non-trivial dependency in the table relies solely on a <code>superkey</code>, a combination of columns that uniquely identifies a row in the table.</p>
+<h3 id="Practical-Example"><a href="#Practical-Example" class="headerlink" title="Practical Example:"></a>Practical Example:</h3><p>Take a look at this course registration table:</p>
+<table>
+<thead>
+<tr>
+<th>CourseID</th>
+<th>Student</th>
+<th>Professor</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>Alice</td>
+<td>Prof. X</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Bob</td>
+<td>Prof. X</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Alice</td>
+<td>Prof. Y</td>
+</tr>
+</tbody></table>
+<p>The problem? <code>CourseID</code> alone doesn’t always uniquely identify the professor since the same course could be taught by different professors in different years or semesters.</p>
+<h3 id="How-to-Fix-It"><a href="#How-to-Fix-It" class="headerlink" title="How to Fix It:"></a>How to Fix It:</h3><p>By restructuring the data, where <code>CourseID</code> combined with another attribute (like a semester) always leads to a specific professor. This ensures each table entry is uniquely identifiable by its key components, preventing any ambiguity.<br>Absolutely! Let’s elaborate on the example by adding another attribute—let’s say “Semester”—to the table to ensure each entry is uniquely identifiable, thus adhering to the principles of BCNF.</p>
+<p><strong>Example Table After Restructuring:</strong><br>To resolve this and adhere to BCNF, we add the “Semester” attribute, which, combined with <code>CourseID</code>, will act as a superkey:</p>
+<table>
+<thead>
+<tr>
+<th>CourseID</th>
+<th>Semester</th>
+<th>Student</th>
+<th>Professor</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>Fall 2024</td>
+<td>Alice</td>
+<td>Prof. X</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Fall 2024</td>
+<td>Bob</td>
+<td>Prof. X</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Spring 2025</td>
+<td>Alice</td>
+<td>Prof. Y</td>
+</tr>
+</tbody></table>
+<p>Now, each combination of <code>CourseID</code> and <code>Semester</code> uniquely identifies the professor, ensuring no ambiguity remains:</p>
+<ul>
+<li><strong>Superkey:</strong> (<code>CourseID</code>, <code>Semester</code>)</li>
+<li>Every row is now uniquely identifiable by this superkey, satisfying BCNF’s requirement that every determinant must be a superkey.</li>
 </ul>
+<p>This restructuring eliminates any potential anomalies associated with updates, deletions, or insertions by ensuring that the dependencies within the table adhere strictly to the superkey rule. Such adjustments are crucial for maintaining the integrity and efficiency of database operations, particularly in environments with complex data interactions.</p>
+<h1 id="Final-Thoughts-Keeping-It-Practical"><a href="#Final-Thoughts-Keeping-It-Practical" class="headerlink" title="Final Thoughts: Keeping It Practical"></a>Final Thoughts: Keeping It Practical</h1><p>While normalisation is about reducing redundancy and improving data integrity, it’s also about finding the right balance. Over-normalising can lead to overly complex databases, making them hard to query and manage. Always consider the specific needs of your application and strive for a practical level of normalisation that supports performance and maintainability.</p>
+<hr>
+<p>By understanding and applying these normalisation forms, you’re setting the stage for a robust, scalable, and efficient database system. Dive into these principles, experiment with them, and watch as your backend systems become more streamlined than ever!</p>
 
     </div>
 
@@ -333,6 +472,9 @@
       
   <div class="popular-posts-header">Related Posts</div>
   <ul class="popular-posts">
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="/blog/2023-12-13/elixir/" rel="bookmark">Elixir</a></div>
+    </li>
     <li class="popular-posts-item">
       <div class="popular-posts-title"><a href="/blog/2023-12-12/24-hours-harvard-cs50-by-david-malan/" rel="bookmark">24 Hours Harvard CS50 By David Malan</a></div>
     </li>
@@ -345,16 +487,14 @@
     <li class="popular-posts-item">
       <div class="popular-posts-title"><a href="/blog/2023-12-13/python/" rel="bookmark">Python</a></div>
     </li>
-    <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="/blog/2024-04-12/bash/" rel="bookmark">Bash</a></div>
-    </li>
   </ul>
 
 
       <footer class="post-footer">
           <div class="post-tags">
               <a href="/blog/tags/note/" rel="tag"># note</a>
-              <a href="/blog/tags/programming/" rel="tag"># programming</a>
+              <a href="/blog/tags/database-design/" rel="tag"># database-design</a>
+              <a href="/blog/tags/backend/" rel="tag"># backend</a>
           </div>
 
         
@@ -363,13 +503,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/blog/2023-12-13/python/" rel="prev" title="Python">
-      <i class="fa fa-chevron-left"></i> Python
+    <a href="/blog/2024-04-19/my-scss-css-tips-tricks-for-streamlined-web-design/" rel="prev" title="My SCSS/CSS Tips & Tricks for Streamlined Web Design">
+      <i class="fa fa-chevron-left"></i> My SCSS/CSS Tips & Tricks for Streamlined Web Design
     </a></div>
-      <div class="post-nav-item">
-    <a href="/blog/2024-04-11/javascript/" rel="next" title="JavaScript">
-      JavaScript <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -435,7 +572,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#TODO"><span class="nav-number">1.</span> <span class="nav-text">TODO</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Links-on-how-to-deploy-an-Elixir-app"><span class="nav-number">1.1.</span> <span class="nav-text">Links on how to deploy an Elixir app</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Why-Normalise"><span class="nav-number">1.</span> <span class="nav-text">Why Normalise?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Third-Normal-Form-3NF-Clearing-Up-Confusion"><span class="nav-number">2.</span> <span class="nav-text">Third Normal Form (3NF): Clearing Up Confusion</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#What-is-3NF"><span class="nav-number">2.1.</span> <span class="nav-text">What is 3NF?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Real-life-example"><span class="nav-number">2.2.</span> <span class="nav-text">Real-life example:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#How-to-Achieve-3NF"><span class="nav-number">2.3.</span> <span class="nav-text">How to Achieve 3NF:</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Boyce-Codd-Normal-Form-BCNF-A-Tighter-Ship"><span class="nav-number">3.</span> <span class="nav-text">Boyce-Codd Normal Form (BCNF): A Tighter Ship</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#What-is-BCNF"><span class="nav-number">3.1.</span> <span class="nav-text">What is BCNF?</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Practical-Example"><span class="nav-number">3.1.1.</span> <span class="nav-text">Practical Example:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#How-to-Fix-It"><span class="nav-number">3.1.2.</span> <span class="nav-text">How to Fix It:</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Final-Thoughts-Keeping-It-Practical"><span class="nav-number">4.</span> <span class="nav-text">Final Thoughts: Keeping It Practical</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -611,9 +748,9 @@
 </script>
 <script>
   var disqus_config = function() {
-    this.page.url = "https://enkr1.github.io/blog/2023-12-13/elixir/";
-    this.page.identifier = "2023-12-13/elixir/";
-    this.page.title = "Elixir";
+    this.page.url = "https://enkr1.github.io/blog/2024-04-20/demystifying-database-design-a-dive-into-3nf-and-bcnf/";
+    this.page.identifier = "2024-04-20/demystifying-database-design-a-dive-into-3nf-and-bcnf/";
+    this.page.title = "Demystifying Database Design: A Dive into 3NF and BCNF";
     };
   NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
     if (window.DISQUS) {
