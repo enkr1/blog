@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
 <meta name="generator" content="Hexo 7.0.0">
+<meta name="google-site-verification" content="wSUWWkv_QhNXB_N6r3rOSU2YlmmWxYBk6UWVlgu1q94" />
   <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/logo.gif">
   <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/logo.gif">
@@ -285,13 +286,13 @@
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-              <span>624</span>
+              <span>3.6k</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
-              <span>2 mins.</span>
+              <span>3 mins.</span>
             </span>
 
         </div>
@@ -307,48 +308,48 @@
 <span id="more"></span>
 
 <h1 id="Dynamic-Visual-Effects-with-Mix-Blend-Modes"><a href="#Dynamic-Visual-Effects-with-Mix-Blend-Modes" class="headerlink" title="Dynamic Visual Effects with Mix Blend Modes"></a>Dynamic Visual Effects with Mix Blend Modes</h1><p>The <code>mix-blend-mode</code> property is a CSS gem for creating stunning visual effects by blending elements’ colors with their background in various ways:</p>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.blend</span> &#123;</span><br><span class="line">  <span class="attribute">mix-blend-mode</span>: exclusion;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs scss"><span class="hljs-selector-class">.blend</span> &#123;<br>  <span class="hljs-attribute">mix-blend-mode</span>: exclusion;<br>&#125;<br></code></pre></td></tr></table></figure>
 
 <p>Utilising this property can add an artistic flair to images and text, giving your website a unique aesthetic that stands out.</p>
 <p>ref: <span class="exturl" data-url="aHR0cHM6Ly9jc3MtdHJpY2tzLmNvbS9hbG1hbmFjL3Byb3BlcnRpZXMvbS9taXgtYmxlbmQtbW9kZS8=">https://css-tricks.com/almanac/properties/m/mix-blend-mode/<i class="fa fa-external-link-alt"></i></span></p>
 <h1 id="Ensuring-Text-Clarity-and-Layout-Control"><a href="#Ensuring-Text-Clarity-and-Layout-Control" class="headerlink" title="Ensuring Text Clarity and Layout Control"></a>Ensuring Text Clarity and Layout Control</h1><p>Preventing Text Wrapping with White Space Control:</p>
 <p>To keep text in a single, unbroken line, especially useful in navigations and button texts:</p>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">white-space</span>: nowrap;</span><br></pre></td></tr></table></figure>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs scss"><span class="hljs-attribute">white-space</span>: nowrap;<br></code></pre></td></tr></table></figure>
 <p>ref: <span class="exturl" data-url="aHR0cHM6Ly9zdGFja292ZXJmbG93LmNvbS9xdWVzdGlvbnMvMTc3MDQ1MzkvY3NzLWdldHRpbmctdGV4dC1pbi1vbmUtbGluZS1yYXRoZXItdGhhbi10d28=">https://stackoverflow.com/questions/17704539/css-getting-text-in-one-line-rather-than-two<i class="fa fa-external-link-alt"></i></span></p>
 <p>Managing Overflowing Text:</p>
 <p>For text that might extend beyond the bounds of its container, ensuring it wraps effectively without disrupting the layout:</p>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">overflow-wrap</span>: break-word;</span><br></pre></td></tr></table></figure>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs scss"><span class="hljs-attribute">overflow-wrap</span>: break-word;<br></code></pre></td></tr></table></figure>
 
 <p>This property is crucial for maintaining a polished look, particularly on smaller screens.</p>
 <h1 id="Responsive-Design-with-Media-Queries-in-SCSS"><a href="#Responsive-Design-with-Media-Queries-in-SCSS" class="headerlink" title="Responsive Design with Media Queries in SCSS"></a>Responsive Design with Media Queries in SCSS</h1><p>Adjusting layouts responsively based on device screen sizes is seamless with SCSS media queries:</p>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.xx-container</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">50vw</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">@media</span> screen <span class="keyword">and</span> (<span class="attribute">max-width</span>: <span class="variable">$screen_sm</span>) &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">80%</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs scss"><span class="hljs-selector-class">.xx-container</span> &#123;<br>  <span class="hljs-attribute">width</span>: <span class="hljs-number">50vw</span>;<br><br>  <span class="hljs-keyword">@media</span> screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span>: <span class="hljs-variable">$screen_sm</span>) &#123;<br>    <span class="hljs-attribute">width</span>: <span class="hljs-number">80%</span>;<br>  &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 
 <p>These snippets facilitate dynamic styling that adapts fluidly across different devices, enhancing user experience.</p>
 <h1 id="Fine-Tuning-User-Interfaces"><a href="#Fine-Tuning-User-Interfaces" class="headerlink" title="Fine-Tuning User Interfaces"></a>Fine-Tuning User Interfaces</h1><p>Resizable Text Areas:</p>
 <p>Allowing users to resize text areas vertically enhances usability, particularly in forms and comment boxes:</p>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">resize</span>: vertical;</span><br></pre></td></tr></table></figure>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs scss"><span class="hljs-attribute">resize</span>: vertical;<br></code></pre></td></tr></table></figure>
 
 <p>Text Justification for Improved Readability:</p>
 <p>Achieving a clean and aligned text display can be done with:</p>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">text-align</span>: justify;</span><br><span class="line"><span class="attribute">text-justify</span>: inter-word;</span><br></pre></td></tr></table></figure>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs scss"><span class="hljs-attribute">text-align</span>: justify;<br><span class="hljs-attribute">text-justify</span>: inter-word;<br></code></pre></td></tr></table></figure>
 
 <h1 id="Optimising-Element-Sizing-and-Positioning"><a href="#Optimising-Element-Sizing-and-Positioning" class="headerlink" title="Optimising Element Sizing and Positioning"></a>Optimising Element Sizing and Positioning</h1><p>Adjusting Heights for Cross-Browser Compatibility:</p>
 <p>Some properties behave differently across browsers, such as <code>fit-content</code>. For better compatibility, especially with Firefox:</p>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">height</span>: -moz-max-content;</span><br><span class="line"><span class="attribute">height</span>: fit-content <span class="meta">!important</span>;</span><br></pre></td></tr></table></figure>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs scss"><span class="hljs-attribute">height</span>: -moz-max-content;<br><span class="hljs-attribute">height</span>: fit-content <span class="hljs-meta">!important</span>;<br></code></pre></td></tr></table></figure>
 
 <p>Managing Scroll Positions with Scroll Margin:</p>
 <p>Setting a custom scroll position for anchored IDs enhances navigational precision:</p>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">scroll-margin-top</span>: <span class="number">100px</span>;</span><br></pre></td></tr></table></figure>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs scss"><span class="hljs-attribute">scroll-margin-top</span>: <span class="hljs-number">100px</span>;<br></code></pre></td></tr></table></figure>
 
 <h1 id="Mastering-Flexbox-and-Grid-for-Perfect-Layouts"><a href="#Mastering-Flexbox-and-Grid-for-Perfect-Layouts" class="headerlink" title="Mastering Flexbox and Grid for Perfect Layouts"></a>Mastering Flexbox and Grid for Perfect Layouts</h1><p>Flexbox for Centering:</p>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">display</span>: flex;</span><br><span class="line"><span class="attribute">align-items</span>: center;</span><br><span class="line"><span class="attribute">justify-content</span>: center;</span><br></pre></td></tr></table></figure>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs scss"><span class="hljs-attribute">display</span>: flex;<br><span class="hljs-attribute">align-items</span>: center;<br><span class="hljs-attribute">justify-content</span>: center;<br></code></pre></td></tr></table></figure>
 
 <p>Grid for Complex Layouts:</p>
 <p>Creating responsive, grid-based designs is simplified using CSS Grid:</p>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.parent</span> <span class="selector-class">.child</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: grid;</span><br><span class="line">  <span class="attribute">grid-template-columns</span>: <span class="built_in">repeat</span>(auto-fit, <span class="built_in">minmax</span>(<span class="number">25rem</span>, <span class="number">1</span>fr));</span><br><span class="line">  <span class="attribute">grid-gap</span>: <span class="number">3rem</span>;</span><br><span class="line">  <span class="attribute">text-align</span>: center;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs scss"><span class="hljs-selector-class">.parent</span> <span class="hljs-selector-class">.child</span> &#123;<br>  <span class="hljs-attribute">display</span>: grid;<br>  <span class="hljs-attribute">grid-template-columns</span>: <span class="hljs-built_in">repeat</span>(auto-fit, <span class="hljs-built_in">minmax</span>(<span class="hljs-number">25rem</span>, <span class="hljs-number">1</span>fr));<br>  <span class="hljs-attribute">grid-gap</span>: <span class="hljs-number">3rem</span>;<br>  <span class="hljs-attribute">text-align</span>: center;<br>&#125;<br></code></pre></td></tr></table></figure>
 
 <h1 id="Choosing-Between-PX-and-REM-for-Responsive-Design"><a href="#Choosing-Between-PX-and-REM-for-Responsive-Design" class="headerlink" title="Choosing Between PX and REM for Responsive Design"></a>Choosing Between PX and REM for Responsive Design</h1><p>Another common question you will be asked or you have been looking for the answer. Understanding the difference between <code>px</code> and <code>rem</code> can significantly affect the scalability and accessibility of your website:</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">html</span> &#123;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">16px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">h1</span> &#123;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">2rem</span>; <span class="comment">/* 32px */</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">1rem</span>; <span class="comment">/* 16px */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-tag">html</span> &#123;<br>  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">16px</span>;<br>&#125;<br><br><span class="hljs-selector-tag">h1</span> &#123;<br>  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">2rem</span>; <span class="hljs-comment">/* 32px */</span><br>&#125;<br><br><span class="hljs-selector-tag">p</span> &#123;<br>  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">1rem</span>; <span class="hljs-comment">/* 16px */</span><br>&#125;<br></code></pre></td></tr></table></figure>
 
 <p><code>rem</code> units adapt based on the root element’s font size, making them ideal for responsive designs that need to accommodate various device settings.</p>
 <p>To use <code>rem</code> in your project, just replace your <code>px</code> values with <code>rem</code> values, bearing in mind the root font-size. You might need to make adjustments based on the visual design and proportions. For example, if you want a font size of 18px, and your root font-size is 16px, the REM value would be <strong><code>18/16 = 1.125rem</code></strong>.</p>
@@ -536,12 +537,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="Symbols count total">5k</span>
+    <span title="Symbols count total">28k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">18 mins.</span>
+    <span title="Reading time total">26 mins.</span>
 </div>
 
         
