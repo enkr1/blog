@@ -33,7 +33,7 @@
 <meta property="og:description" content="Embracing the Power of Bash: A Journey into the Heart of the Command LineIn the realm of software engineering, the command line holds a special place. It’s the backbone of automation, the gateway to s">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2024-04-11T20:14:20.000Z">
-<meta property="article:modified_time" content="2024-04-14T18:40:21.400Z">
+<meta property="article:modified_time" content="2024-04-20T22:12:40.890Z">
 <meta property="article:author" content="Jing Hui PANG | 彭竞辉 | ENKR">
 <meta property="article:tag" content="note">
 <meta property="article:tag" content="programming">
@@ -259,7 +259,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: Mon 15 April 2024 02:40:21 AM" itemprop="dateModified" datetime="2024-04-15T02:40:21+08:00">Mon 15 April 2024</time>
+                <time title="Modified: Sun 21 April 2024 06:12:40 AM" itemprop="dateModified" datetime="2024-04-21T06:12:40+08:00">Sun 21 April 2024</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -294,13 +294,13 @@
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-              <span>315</span>
+              <span>1.7k</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
-              <span>1 mins.</span>
+              <span>2 mins.</span>
             </span>
 
         </div>
@@ -343,10 +343,10 @@
       <div class="popular-posts-title"><a href="/blog/2023-12-12/my-journey-with-hexo-building-a-blog-from-scratch/" rel="bookmark">My Journey with Hexo - Building a Blog from Scratch</a></div>
     </li>
     <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="/blog/2023-12-13/python/" rel="bookmark">Python</a></div>
+      <div class="popular-posts-title"><a href="/blog/2024-04-11/javascript/" rel="bookmark">JavaScript</a></div>
     </li>
     <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="/blog/2024-04-11/javascript/" rel="bookmark">JavaScript</a></div>
+      <div class="popular-posts-title"><a href="/blog/2023-12-13/python/" rel="bookmark">Python</a></div>
     </li>
     <li class="popular-posts-item">
       <div class="popular-posts-title"><a href="/blog/2023-12-12/24-hours-harvard-cs50-by-david-malan/" rel="bookmark">24 Hours Harvard CS50 By David Malan</a></div>
@@ -385,13 +385,49 @@
 
           </div>
           
-    
+      <div class="comment-button-group">
+          <a class="btn comment-button disqus">disqus</a>
+          <a class="btn comment-button gitalk">gitalk</a>
+      </div>
+        <div class="comment-position disqus">
+          
   <div class="comments">
     <div id="disqus_thread">
       <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
     </div>
   </div>
   
+        </div>
+        <div class="comment-position gitalk">
+          <div class="comments" id="gitalk-container"></div>
+        </div>
+      <script>
+        (function() {
+          let commentButton = document.querySelectorAll('.comment-button');
+            commentButton.forEach(element => {
+            let commentClass = element.classList[2];
+            element.addEventListener('click', () => {
+              commentButton.forEach(rmActive => rmActive.classList.remove('active'));
+              element.classList.add('active');
+              document.querySelectorAll('.comment-position').forEach(rmActive => rmActive.classList.remove('active'));
+              document.querySelector(`.comment-position.${commentClass}`).classList.add('active');
+              if (CONFIG.comments.storage) {
+                localStorage.setItem('comments_active', commentClass);
+              }
+            });
+          });
+          let { activeClass } = CONFIG.comments;
+          if (CONFIG.comments.storage) {
+            activeClass = localStorage.getItem('comments_active') || activeClass;
+          }
+          if (activeClass) {
+            let activeButton = document.querySelector(`.comment-button.${activeClass}`);
+            if (activeButton) {
+              activeButton.click();
+            }
+          }
+        })();
+      </script>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -511,12 +547,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="Symbols count total">7k</span>
+    <span title="Symbols count total">40k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">26 mins.</span>
+    <span title="Reading time total">36 mins.</span>
 </div>
 
         
@@ -631,6 +667,26 @@
       (d.head || d.body).appendChild(s);
     }
   });
+</script>
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : '99dec6d7100fe714dcb6',
+      clientSecret: 'b359363cc177684a276e4812cb8106f0b11decc5',
+      repo        : 'blog',
+      owner       : 'enkr1',
+      admin       : ['enkr1'],
+      id          : 'c6e02bee65e4545d6adce90f697842c4',
+        language: 'en',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
 </script>
 
 </body>

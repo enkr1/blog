@@ -33,7 +33,7 @@
 <meta property="og:description" content="Welcome to my JavaScript notebook! Here, I’ve compiled a variety of tips, tricks, and simple snippets that I’ve gathered over time. These notes come from various sources, including my professional wor">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2024-04-10T17:31:56.000Z">
-<meta property="article:modified_time" content="2024-04-11T20:25:05.924Z">
+<meta property="article:modified_time" content="2024-04-20T22:13:12.844Z">
 <meta property="article:author" content="Jing Hui PANG | 彭竞辉 | ENKR">
 <meta property="article:tag" content="note">
 <meta property="article:tag" content="programming">
@@ -259,7 +259,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: Fri 12 April 2024 04:25:05 AM" itemprop="dateModified" datetime="2024-04-12T04:25:05+08:00">Fri 12 April 2024</time>
+                <time title="Modified: Sun 21 April 2024 06:13:12 AM" itemprop="dateModified" datetime="2024-04-21T06:13:12+08:00">Sun 21 April 2024</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -294,13 +294,13 @@
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-              <span>510</span>
+              <span>4.2k</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
-              <span>2 mins.</span>
+              <span>4 mins.</span>
             </span>
 
         </div>
@@ -317,50 +317,50 @@
 
 
 <h1 id="Sorting-Arrays"><a href="#Sorting-Arrays" class="headerlink" title="Sorting Arrays"></a>Sorting Arrays</h1><p>Sort an array of numbers in ascending order:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs javascript">[<span class="hljs-number">11</span>, <span class="hljs-number">2</span>, <span class="hljs-number">22</span>, <span class="hljs-number">1</span>].<span class="hljs-title function_">sort</span>(<span class="hljs-function">(<span class="hljs-params">a, b</span>) =&gt;</span> a - b);<br></code></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs js">[<span class="hljs-number">11</span>, <span class="hljs-number">2</span>, <span class="hljs-number">22</span>, <span class="hljs-number">1</span>].<span class="hljs-title function_">sort</span>(<span class="hljs-function">(<span class="hljs-params">a, b</span>) =&gt;</span> a - b);<br></code></pre></td></tr></table></figure>
 
 <h1 id="Working-with-JSON"><a href="#Working-with-JSON" class="headerlink" title="Working with JSON"></a>Working with JSON</h1><p>Convert an object or array to a JSON string:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-title class_">JSON</span>.<span class="hljs-title function_">stringify</span>(obj);<br></code></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-title class_">JSON</span>.<span class="hljs-title function_">stringify</span>(obj);<br></code></pre></td></tr></table></figure>
 
 <h1 id="Arrays"><a href="#Arrays" class="headerlink" title="Arrays"></a>Arrays</h1><p>Creating an array filled with empty arrays:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">let</span> filledWithEmptyArrays = <span class="hljs-title class_">Array</span>(<span class="hljs-number">3</span>).<span class="hljs-title function_">fill</span>().<span class="hljs-title function_">map</span>(<span class="hljs-function">() =&gt;</span> []);<br></code></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">let</span> filledWithEmptyArrays = <span class="hljs-title class_">Array</span>(<span class="hljs-number">3</span>).<span class="hljs-title function_">fill</span>().<span class="hljs-title function_">map</span>(<span class="hljs-function">() =&gt;</span> []);<br></code></pre></td></tr></table></figure>
 
 <p>Creating a 2D array (e.g., for a visitation matrix):</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">let</span> visited = <span class="hljs-title class_">Array</span>.<span class="hljs-title function_">from</span>(&#123; <span class="hljs-attr">length</span>: l &#125;, <span class="hljs-function">() =&gt;</span> <span class="hljs-title class_">Array</span>.<span class="hljs-title function_">from</span>(&#123; <span class="hljs-attr">length</span>: l &#125;, <span class="hljs-function">() =&gt;</span> <span class="hljs-number">0</span>));<br></code></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">let</span> visited = <span class="hljs-title class_">Array</span>.<span class="hljs-title function_">from</span>(&#123; <span class="hljs-attr">length</span>: l &#125;, <span class="hljs-function">() =&gt;</span> <span class="hljs-title class_">Array</span>.<span class="hljs-title function_">from</span>(&#123; <span class="hljs-attr">length</span>: l &#125;, <span class="hljs-function">() =&gt;</span> <span class="hljs-number">0</span>));<br></code></pre></td></tr></table></figure>
 
 <p>Creating an array filled with zeros:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-title class_">Array</span>(<span class="hljs-number">26</span>).<span class="hljs-title function_">fill</span>(<span class="hljs-number">0</span>);<br></code></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-title class_">Array</span>(<span class="hljs-number">26</span>).<span class="hljs-title function_">fill</span>(<span class="hljs-number">0</span>);<br></code></pre></td></tr></table></figure>
 
 <p>Creating an array filled with false:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-title class_">Array</span>(n).<span class="hljs-title function_">fill</span>(<span class="hljs-literal">false</span>);<br></code></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-title class_">Array</span>(n).<span class="hljs-title function_">fill</span>(<span class="hljs-literal">false</span>);<br></code></pre></td></tr></table></figure>
 
 
 <h1 id="Math"><a href="#Math" class="headerlink" title="Math"></a>Math</h1><p>Find the maximum value in a list of numbers:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-title class_">Math</span>.<span class="hljs-title function_">max</span>(...list);<br></code></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-title class_">Math</span>.<span class="hljs-title function_">max</span>(...list);<br></code></pre></td></tr></table></figure>
 
 <p>Round a number to at most 2 decimal places:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-title class_">Math</span>.<span class="hljs-title function_">round</span>(num * <span class="hljs-number">100</span>) / <span class="hljs-number">100</span>;<br></code></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-title class_">Math</span>.<span class="hljs-title function_">round</span>(num * <span class="hljs-number">100</span>) / <span class="hljs-number">100</span>;<br></code></pre></td></tr></table></figure>
 
 <p>To ensure numbers like 1.005 round correctly:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-title class_">Math</span>.<span class="hljs-title function_">round</span>((num + <span class="hljs-title class_">Number</span>.<span class="hljs-property">EPSILON</span>) * <span class="hljs-number">100</span>) / <span class="hljs-number">100</span>;<br></code></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-title class_">Math</span>.<span class="hljs-title function_">round</span>((num + <span class="hljs-title class_">Number</span>.<span class="hljs-property">EPSILON</span>) * <span class="hljs-number">100</span>) / <span class="hljs-number">100</span>;<br></code></pre></td></tr></table></figure>
 
 <h1 id="Maps"><a href="#Maps" class="headerlink" title="Maps"></a>Maps</h1><p>Initialise a map with key-value pairs:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">const</span> myMap = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Map</span>([<br>  [<span class="hljs-string">&#x27;key1&#x27;</span>, <span class="hljs-string">&#x27;value1&#x27;</span>],<br>  [<span class="hljs-string">&#x27;key2&#x27;</span>, <span class="hljs-string">&#x27;value2&#x27;</span>],<br>  [<span class="hljs-string">&#x27;key3&#x27;</span>, <span class="hljs-string">&#x27;value3&#x27;</span>]<br>]);<br></code></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">const</span> myMap = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Map</span>([<br>  [<span class="hljs-string">&#x27;key1&#x27;</span>, <span class="hljs-string">&#x27;value1&#x27;</span>],<br>  [<span class="hljs-string">&#x27;key2&#x27;</span>, <span class="hljs-string">&#x27;value2&#x27;</span>],<br>  [<span class="hljs-string">&#x27;key3&#x27;</span>, <span class="hljs-string">&#x27;value3&#x27;</span>]<br>]);<br></code></pre></td></tr></table></figure>
 
 <p>Convert map values to an array:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">const</span> valuesArray = <span class="hljs-title class_">Array</span>.<span class="hljs-title function_">from</span>(myMap.<span class="hljs-title function_">values</span>());<br></code></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">const</span> valuesArray = <span class="hljs-title class_">Array</span>.<span class="hljs-title function_">from</span>(myMap.<span class="hljs-title function_">values</span>());<br></code></pre></td></tr></table></figure>
 
 <h1 id="Adding-Styles-to-before-and-after"><a href="#Adding-Styles-to-before-and-after" class="headerlink" title="Adding Styles to :before and :after"></a>Adding Styles to :before and :after</h1><p>Dynamically add CSS styles to <code>:before</code> and <code>:after</code> selectors:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> styleElem = <span class="hljs-variable language_">document</span>.<span class="hljs-property">head</span>.<span class="hljs-title function_">appendChild</span>(<span class="hljs-variable language_">document</span>.<span class="hljs-title function_">createElement</span>(<span class="hljs-string">&quot;style&quot;</span>));<br>styleElem.<span class="hljs-property">innerHTML</span> = <span class="hljs-string">&quot;.add-fading-&quot;</span> + nth + <span class="hljs-string">&quot;:before &#123; z-index: 1 !important; &#125;&quot;</span>;<br></code></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">var</span> styleElem = <span class="hljs-variable language_">document</span>.<span class="hljs-property">head</span>.<span class="hljs-title function_">appendChild</span>(<span class="hljs-variable language_">document</span>.<span class="hljs-title function_">createElement</span>(<span class="hljs-string">&quot;style&quot;</span>));<br>styleElem.<span class="hljs-property">innerHTML</span> = <span class="hljs-string">&quot;.add-fading-&quot;</span> + nth + <span class="hljs-string">&quot;:before &#123; z-index: 1 !important; &#125;&quot;</span>;<br></code></pre></td></tr></table></figure>
 
 <h1 id="Yii2-Project-Making-GridView-Clickable"><a href="#Yii2-Project-Making-GridView-Clickable" class="headerlink" title="Yii2 Project: Making GridView Clickable"></a>Yii2 Project: Making GridView Clickable</h1><p>Make each row in a GridView clickable and redirect to a URL specified in the <code>data-href</code> attribute:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">hookGridView</span>(<span class="hljs-params"></span>) &#123;<br>  $(<span class="hljs-string">&#x27;tbody td&#x27;</span>).<span class="hljs-title function_">click</span>(<span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) &#123;<br>      <span class="hljs-keyword">var</span> path = $(<span class="hljs-variable language_">this</span>).<span class="hljs-title function_">closest</span>(<span class="hljs-string">&#x27;tr&#x27;</span>).<span class="hljs-title function_">data</span>(<span class="hljs-string">&#x27;href&#x27;</span>);<br>      <span class="hljs-keyword">if</span> ((e.<span class="hljs-property">target</span> == <span class="hljs-variable language_">this</span>) &amp;&amp; (<span class="hljs-keyword">typeof</span> path !== <span class="hljs-string">&#x27;undefined&#x27;</span>)) &#123;<br>          <span class="hljs-variable language_">window</span>.<span class="hljs-property">location</span>.<span class="hljs-property">href</span> = path;<br>      &#125;<br>  &#125;);<br>&#125;<br>$(<span class="hljs-variable language_">document</span>).<span class="hljs-title function_">ready</span>(<span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) &#123;<br>  <span class="hljs-title function_">hookGridView</span>()<br>&#125;);<br>$(<span class="hljs-variable language_">document</span>).<span class="hljs-title function_">on</span>(<span class="hljs-string">&#x27;pjax:success&#x27;</span>, <span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) &#123;<br>  <span class="hljs-title function_">hookGridView</span>()<br>&#125;);<br></code></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">function</span> <span class="hljs-title function_">hookGridView</span>(<span class="hljs-params"></span>) &#123;<br>  $(<span class="hljs-string">&#x27;tbody td&#x27;</span>).<span class="hljs-title function_">click</span>(<span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) &#123;<br>      <span class="hljs-keyword">var</span> path = $(<span class="hljs-variable language_">this</span>).<span class="hljs-title function_">closest</span>(<span class="hljs-string">&#x27;tr&#x27;</span>).<span class="hljs-title function_">data</span>(<span class="hljs-string">&#x27;href&#x27;</span>);<br>      <span class="hljs-keyword">if</span> ((e.<span class="hljs-property">target</span> == <span class="hljs-variable language_">this</span>) &amp;&amp; (<span class="hljs-keyword">typeof</span> path !== <span class="hljs-string">&#x27;undefined&#x27;</span>)) &#123;<br>          <span class="hljs-variable language_">window</span>.<span class="hljs-property">location</span>.<span class="hljs-property">href</span> = path;<br>      &#125;<br>  &#125;);<br>&#125;<br>$(<span class="hljs-variable language_">document</span>).<span class="hljs-title function_">ready</span>(<span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) &#123;<br>  <span class="hljs-title function_">hookGridView</span>()<br>&#125;);<br>$(<span class="hljs-variable language_">document</span>).<span class="hljs-title function_">on</span>(<span class="hljs-string">&#x27;pjax:success&#x27;</span>, <span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) &#123;<br>  <span class="hljs-title function_">hookGridView</span>()<br>&#125;);<br></code></pre></td></tr></table></figure>
 
 <h1 id="NPM-Packages"><a href="#NPM-Packages" class="headerlink" title="NPM Packages"></a>NPM Packages</h1><h2 id="md-file-tree-by-michalbe"><a href="#md-file-tree-by-michalbe" class="headerlink" title="md-file-tree by @michalbe"></a>md-file-tree by <span class="exturl" data-url="aHR0cDovL2dpdGh1Yi5jb20vbWljaGFsYmU=">@michalbe<i class="fa fa-external-link-alt"></i></span></h2><p>Generate a markdown tree of all files in a directory, recursively:</p>
 <figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs dos"># Display <span class="hljs-keyword">in</span> console<br><span class="hljs-built_in">md</span>-file-<span class="hljs-built_in">tree</span><br><br># Output to a file such as README.<span class="hljs-built_in">md</span><br><span class="hljs-built_in">md</span>-file-<span class="hljs-built_in">tree</span> &gt; README.<span class="hljs-built_in">md</span><br></code></pre></td></tr></table></figure>
 
 <h2 id="JavaScript-Obfuscator"><a href="#JavaScript-Obfuscator" class="headerlink" title="JavaScript Obfuscator"></a>JavaScript Obfuscator</h2><p>Obfuscate JavaScript code to make it harder to understand:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> fs = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;fs&quot;</span>);<br><span class="hljs-keyword">var</span> jsObfuscator = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;javascript-obfuscator&quot;</span>);<br><br>fs.<span class="hljs-title function_">readFile</span>(<span class="hljs-string">&quot;./000_unencrypted-js/main.js&quot;</span>, <span class="hljs-string">&quot;UTF-8&quot;</span>, <span class="hljs-keyword">function</span> (<span class="hljs-params">error, code</span>) &#123;<br>    <span class="hljs-keyword">if</span> (error) <span class="hljs-keyword">throw</span> error;<br>    <span class="hljs-keyword">var</span> obfuscatedResult = jsObfuscator.<span class="hljs-title function_">obfuscate</span>(code);<br>    fs.<span class="hljs-title function_">writeFile</span>(<span class="hljs-string">&quot;./js/main.js&quot;</span>, obfuscatedResult.<span class="hljs-title function_">getObfuscatedCode</span>(), <span class="hljs-keyword">function</span> (<span class="hljs-params">fsError</span>) &#123;<br>        <span class="hljs-keyword">if</span> (fsError) <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(fsError);<br>        <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&quot;Obfuscated.&quot;</span>);<br>    &#125;);<br>&#125;);<br></code></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">var</span> fs = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;fs&quot;</span>);<br><span class="hljs-keyword">var</span> jsObfuscator = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;js-obfuscator&quot;</span>);<br><br>fs.<span class="hljs-title function_">readFile</span>(<span class="hljs-string">&quot;./000_unencrypted-js/main.js&quot;</span>, <span class="hljs-string">&quot;UTF-8&quot;</span>, <span class="hljs-keyword">function</span> (<span class="hljs-params">error, code</span>) &#123;<br>    <span class="hljs-keyword">if</span> (error) <span class="hljs-keyword">throw</span> error;<br>    <span class="hljs-keyword">var</span> obfuscatedResult = jsObfuscator.<span class="hljs-title function_">obfuscate</span>(code);<br>    fs.<span class="hljs-title function_">writeFile</span>(<span class="hljs-string">&quot;./js/main.js&quot;</span>, obfuscatedResult.<span class="hljs-title function_">getObfuscatedCode</span>(), <span class="hljs-keyword">function</span> (<span class="hljs-params">fsError</span>) &#123;<br>        <span class="hljs-keyword">if</span> (fsError) <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(fsError);<br>        <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&quot;Obfuscated.&quot;</span>);<br>    &#125;);<br>&#125;);<br></code></pre></td></tr></table></figure>
 
 <h1 id="TypeScript-Child-Manager-Configuration"><a href="#TypeScript-Child-Manager-Configuration" class="headerlink" title="TypeScript: Child Manager Configuration"></a>TypeScript: Child Manager Configuration</h1><p>Example configuration for managing multiple processes:</p>
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><code class="hljs json"><span class="hljs-punctuation">&#123;</span><br>  <span class="hljs-attr">&quot;processes&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span><br>    <span class="hljs-punctuation">&#123;</span><br>      <span class="hljs-attr">&quot;name&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;Frontend&quot;</span><span class="hljs-punctuation">,</span><br>      <span class="hljs-attr">&quot;command&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span><br>        <span class="hljs-attr">&quot;executor&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;yarn&quot;</span><span class="hljs-punctuation">,</span><br>        <span class="hljs-attr">&quot;args&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span><br>          <span class="hljs-string">&quot;start&quot;</span><br>        <span class="hljs-punctuation">]</span><span class="hljs-punctuation">,</span><br>        <span class="hljs-attr">&quot;path&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;../fe-project&quot;</span><span class="hljs-punctuation">,</span><br>        <span class="hljs-attr">&quot;isWindows&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-literal"><span class="hljs-keyword">false</span></span><br>      <span class="hljs-punctuation">&#125;</span><span class="hljs-punctuation">,</span><br>      <span class="hljs-attr">&quot;maxLogs&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">200</span><br>    <span class="hljs-punctuation">&#125;</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-punctuation">&#123;</span><br>      <span class="hljs-attr">&quot;name&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;WebSocket&quot;</span><span class="hljs-punctuation">,</span><br>      <span class="hljs-attr">&quot;command&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span><br>        <span class="hljs-attr">&quot;executor&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;yarn&quot;</span><span class="hljs-punctuation">,</span><br>        <span class="hljs-attr">&quot;args&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span><br>          <span class="hljs-string">&quot;start&quot;</span><br>        <span class="hljs-punctuation">]</span><span class="hljs-punctuation">,</span><br>        <span class="hljs-attr">&quot;path&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;../server-project&quot;</span><span class="hljs-punctuation">,</span><br>        <span class="hljs-attr">&quot;isWindows&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-literal"><span class="hljs-keyword">false</span></span><br>      <span class="hljs-punctuation">&#125;</span><span class="hljs-punctuation">,</span><br>      <span class="hljs-attr">&quot;maxLogs&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">300</span><br>    <span class="hljs-punctuation">&#125;</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-punctuation">&#123;</span><br>      <span class="hljs-attr">&quot;name&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;Docker&quot;</span><span class="hljs-punctuation">,</span><br>      <span class="hljs-attr">&quot;command&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span><br>        <span class="hljs-attr">&quot;executor&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;docker-compose&quot;</span><span class="hljs-punctuation">,</span><br>        <span class="hljs-attr">&quot;args&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span><br>          <span class="hljs-string">&quot;up&quot;</span><br>        <span class="hljs-punctuation">]</span><span class="hljs-punctuation">,</span><br>        <span class="hljs-attr">&quot;path&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;../be-project&quot;</span><span class="hljs-punctuation">,</span><br>        <span class="hljs-attr">&quot;isWindows&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-literal"><span class="hljs-keyword">false</span></span><br>      <span class="hljs-punctuation">&#125;</span><span class="hljs-punctuation">,</span><br>      <span class="hljs-attr">&quot;maxLogs&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">300</span><br>    <span class="hljs-punctuation">&#125;</span><br>  <span class="hljs-punctuation">]</span><span class="hljs-punctuation">,</span><br>  <span class="hljs-attr">&quot;captureExit&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-literal"><span class="hljs-keyword">true</span></span><span class="hljs-punctuation">,</span><br>  <span class="hljs-attr">&quot;longLive&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-literal"><span class="hljs-keyword">false</span></span><span class="hljs-punctuation">,</span><br>  <span class="hljs-attr">&quot;debug&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-literal"><span class="hljs-keyword">false</span></span><br><span class="hljs-punctuation">&#125;</span><br></code></pre></td></tr></table></figure>
@@ -427,13 +427,49 @@
 
           </div>
           
-    
+      <div class="comment-button-group">
+          <a class="btn comment-button disqus">disqus</a>
+          <a class="btn comment-button gitalk">gitalk</a>
+      </div>
+        <div class="comment-position disqus">
+          
   <div class="comments">
     <div id="disqus_thread">
       <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
     </div>
   </div>
   
+        </div>
+        <div class="comment-position gitalk">
+          <div class="comments" id="gitalk-container"></div>
+        </div>
+      <script>
+        (function() {
+          let commentButton = document.querySelectorAll('.comment-button');
+            commentButton.forEach(element => {
+            let commentClass = element.classList[2];
+            element.addEventListener('click', () => {
+              commentButton.forEach(rmActive => rmActive.classList.remove('active'));
+              element.classList.add('active');
+              document.querySelectorAll('.comment-position').forEach(rmActive => rmActive.classList.remove('active'));
+              document.querySelector(`.comment-position.${commentClass}`).classList.add('active');
+              if (CONFIG.comments.storage) {
+                localStorage.setItem('comments_active', commentClass);
+              }
+            });
+          });
+          let { activeClass } = CONFIG.comments;
+          if (CONFIG.comments.storage) {
+            activeClass = localStorage.getItem('comments_active') || activeClass;
+          }
+          if (activeClass) {
+            let activeButton = document.querySelector(`.comment-button.${activeClass}`);
+            if (activeButton) {
+              activeButton.click();
+            }
+          }
+        })();
+      </script>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -553,12 +589,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="Symbols count total">7k</span>
+    <span title="Symbols count total">40k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">26 mins.</span>
+    <span title="Reading time total">36 mins.</span>
 </div>
 
         
@@ -673,6 +709,26 @@
       (d.head || d.body).appendChild(s);
     }
   });
+</script>
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : '99dec6d7100fe714dcb6',
+      clientSecret: 'b359363cc177684a276e4812cb8106f0b11decc5',
+      repo        : 'blog',
+      owner       : 'enkr1',
+      admin       : ['enkr1'],
+      id          : 'c19088ea0c6c2db1f3965e62a7b0d8b0',
+        language: 'en',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
 </script>
 
 </body>
