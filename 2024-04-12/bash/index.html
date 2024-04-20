@@ -340,13 +340,13 @@
       <div class="popular-posts-title"><a href="/blog/2023-12-13/elixir/" rel="bookmark">Elixir</a></div>
     </li>
     <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="/blog/2024-04-11/javascript/" rel="bookmark">JavaScript</a></div>
+      <div class="popular-posts-title"><a href="/blog/2023-12-12/my-journey-with-hexo-building-a-blog-from-scratch/" rel="bookmark">My Journey with Hexo - Building a Blog from Scratch</a></div>
     </li>
     <li class="popular-posts-item">
       <div class="popular-posts-title"><a href="/blog/2023-12-13/python/" rel="bookmark">Python</a></div>
     </li>
     <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="/blog/2023-12-12/my-journey-with-hexo-building-a-blog-from-scratch/" rel="bookmark">My Journey with Hexo - Building a Blog from Scratch</a></div>
+      <div class="popular-posts-title"><a href="/blog/2024-04-11/javascript/" rel="bookmark">JavaScript</a></div>
     </li>
     <li class="popular-posts-item">
       <div class="popular-posts-title"><a href="/blog/2023-12-12/24-hours-harvard-cs50-by-david-malan/" rel="bookmark">24 Hours Harvard CS50 By David Malan</a></div>
@@ -385,49 +385,13 @@
 
           </div>
           
-      <div class="comment-button-group">
-          <a class="btn comment-button disqus">disqus</a>
-          <a class="btn comment-button gitalk">gitalk</a>
-      </div>
-        <div class="comment-position disqus">
-          
+    
   <div class="comments">
     <div id="disqus_thread">
       <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
     </div>
   </div>
   
-        </div>
-        <div class="comment-position gitalk">
-          <div class="comments" id="gitalk-container"></div>
-        </div>
-      <script>
-        (function() {
-          let commentButton = document.querySelectorAll('.comment-button');
-            commentButton.forEach(element => {
-            let commentClass = element.classList[2];
-            element.addEventListener('click', () => {
-              commentButton.forEach(rmActive => rmActive.classList.remove('active'));
-              element.classList.add('active');
-              document.querySelectorAll('.comment-position').forEach(rmActive => rmActive.classList.remove('active'));
-              document.querySelector(`.comment-position.${commentClass}`).classList.add('active');
-              if (CONFIG.comments.storage) {
-                localStorage.setItem('comments_active', commentClass);
-              }
-            });
-          });
-          let { activeClass } = CONFIG.comments;
-          if (CONFIG.comments.storage) {
-            activeClass = localStorage.getItem('comments_active') || activeClass;
-          }
-          if (activeClass) {
-            let activeButton = document.querySelector(`.comment-button.${activeClass}`);
-            if (activeButton) {
-              activeButton.click();
-            }
-          }
-        })();
-      </script>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -667,26 +631,6 @@
       (d.head || d.body).appendChild(s);
     }
   });
-</script>
-
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
-
-<script>
-NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
-  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
-    var gitalk = new Gitalk({
-      clientID    : '99dec6d7100fe714dcb6',
-      clientSecret: 'b359363cc177684a276e4812cb8106f0b11decc5',
-      repo        : 'https://enkr1.github.io/blog/',
-      owner       : 'enkr1',
-      admin       : ['enkr1'],
-      id          : 'c6e02bee65e4545d6adce90f697842c4',
-        language: 'en',
-      distractionFreeMode: true
-    });
-    gitalk.render('gitalk-container');
-  }, window.Gitalk);
-});
 </script>
 
 </body>
