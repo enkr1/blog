@@ -33,7 +33,7 @@
 <meta property="og:description" content="Hello… World!Welcome to my very first blog post! 🎉 I am super excited to share my journey with you. Combining tech and creativity has always been my jam, and what better way to do that than by buildi">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2023-12-11T19:45:43.000Z">
-<meta property="article:modified_time" content="2024-04-19T18:12:22.658Z">
+<meta property="article:modified_time" content="2024-04-20T09:42:29.865Z">
 <meta property="article:author" content="Jing Hui PANG | 彭竞辉 | ENKR">
 <meta property="article:tag" content="note">
 <meta property="article:tag" content="programming">
@@ -160,17 +160,17 @@
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/blog/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">9</span></a>
+    <a href="/blog/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">13</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/blog/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">19</span></a>
+    <a href="/blog/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">21</span></a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/blog/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">11</span></a>
+    <a href="/blog/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">12</span></a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -259,7 +259,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: Sat 20 April 2024 02:12:22 AM" itemprop="dateModified" datetime="2024-04-20T02:12:22+08:00">Sat 20 April 2024</time>
+                <time title="Modified: Sat 20 April 2024 17:42:29 PM" itemprop="dateModified" datetime="2024-04-20T17:42:29+08:00">Sat 20 April 2024</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -267,11 +267,11 @@
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Learning-Journal/" itemprop="url" rel="index"><span itemprop="name">Learning Journal</span></a>
+                  <a href="/blog/categories/Hexo/" itemprop="url" rel="index"><span itemprop="name">Hexo</span></a>
                 </span>
                   , 
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Hexo/" itemprop="url" rel="index"><span itemprop="name">Hexo</span></a>
+                  <a href="/blog/categories/Learning-Journal/" itemprop="url" rel="index"><span itemprop="name">Learning Journal</span></a>
                 </span>
                   , 
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
@@ -298,13 +298,13 @@
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-              <span>1.2k</span>
+              <span>1.6k</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
-              <span>4 mins.</span>
+              <span>6 mins.</span>
             </span>
 
         </div>
@@ -385,13 +385,24 @@
 <li>After a few minutes, your blog should be live at <code>https://enkr1.github.io/blog</code>.</li>
 <li>Go on, open your browser and bask in the glory of your new Hexo blog!</li>
 </ul>
-<h2 id="Deployment-🔧"><a href="#Deployment-🔧" class="headerlink" title="Deployment! 🔧"></a>Deployment! 🔧</h2><p>Alright, here comes the tech wizardry part! 🧙‍♂️ When I am ready to deploy your blog. As it could’ve been a chore, but I’ve got this neat little trick up my sleeve. I created a custom command (<strong>alias</strong>, in geek speak) that does all the heavy lifting in one go. Check this out:</p>
+<h2 id="Deployment-🔧"><a href="#Deployment-🔧" class="headerlink" title="Deployment! 🔧"></a>Deployment! 🔧</h2><h3 id="Simple-Deployment-Script-🚀"><a href="#Simple-Deployment-Script-🚀" class="headerlink" title="Simple Deployment Script 🚀"></a>Simple Deployment Script 🚀</h3><p>Alright, here comes the tech wizardry part! 🧙‍♂️ When I am ready to deploy your blog. As it could’ve been a chore, but I’ve got this neat little trick up my sleeve. I created a custom command (<strong>alias</strong>, in geek speak) that does all the heavy lifting in one go. Check this out:</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">alias</span> hd=<span class="hljs-string">&#x27;hexo clean &amp;&amp; hexo generate &amp;&amp; hexo deploy&#x27;</span><br></code></pre></td></tr></table></figure>
 
 <p>What does it do? Well, it’s like a magic spell that cleans up old files, generates new ones, and then, whoosh, deploys everything to my site!<br>🚀 So, instead of typing three separate commands every time, I just type <code>hd</code>, and bam – my updates are live!</p>
-<h3 id="Making-It-Stick-Saving-to-profile"><a href="#Making-It-Stick-Saving-to-profile" class="headerlink" title="Making It Stick: Saving to .profile"></a>Making It Stick: Saving to .profile</h3><p>I didn’t want to type this alias every time I open a new terminal session, right? So, I went a step further and saved it into my .profile file. This means my hd command is always ready to go, no matter when or where I start my work. Here’s how you can do it:</p>
-<p>Use <code>vim</code> to edit your <code>.profile</code>:</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh">vim ~/.profile<br></code></pre></td></tr></table></figure>
+<h3 id="Supercharging-Deployment-Script-with-Git-Push-🚀"><a href="#Supercharging-Deployment-Script-with-Git-Push-🚀" class="headerlink" title="Supercharging Deployment Script with Git Push 🚀"></a>Supercharging Deployment Script with Git Push 🚀</h3><p>Now that you’re familiar with my basic deployment alias, let’s take this automation a step further. I’ve enhanced my deployment process with a custom shell function that not only handles the Hexo operations but also manages the Git commits and pushes updates to the repository. Here’s how it works:</p>
+<h4 id="The-hd-Function-More-than-Just-Deployment"><a href="#The-hd-Function-More-than-Just-Deployment" class="headerlink" title="The hd Function: More than Just Deployment"></a>The <code>hd</code> Function: More than Just Deployment</h4><p>Rather than just cleaning, generating, and deploying, this function also handles version control automatically. Here’s the script I use:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-keyword">function</span> <span class="hljs-function"><span class="hljs-title">hd</span></span>() &#123;<br>    hexo clean<br>    hexo generate<br>    hexo deploy<br>    git add .<br><br>    <span class="hljs-comment"># Set the default commit message</span><br>    commit_message=<span class="hljs-string">&quot;[auto-commit] Deployed&quot;</span><br><br>    <span class="hljs-comment"># Update the commit message if an argument is provided</span><br>    <span class="hljs-keyword">if</span> [[ -n <span class="hljs-variable">$1</span> ]]; <span class="hljs-keyword">then</span><br>        commit_message=<span class="hljs-string">&quot;[deploy] <span class="hljs-variable">$1</span>&quot;</span><br>    <span class="hljs-keyword">fi</span><br><br>    <span class="hljs-comment"># Commit with the determined message</span><br>    git commit -a -m <span class="hljs-string">&quot;<span class="hljs-variable">$commit_message</span>&quot;</span><br>    git push origin master<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h4 id="How-It-Enhances-the-Workflow"><a href="#How-It-Enhances-the-Workflow" class="headerlink" title="How It Enhances the Workflow"></a>How It Enhances the Workflow</h4><p>This script is a real time-saver. Let me break it down:</p>
+<ol>
+<li><strong>Cleaning, Generating, and Deploying:</strong> Just like the alias, it starts by cleaning up old files, generating new ones, and deploying them to the server.</li>
+<li><strong>Git Integration:</strong> After deploying, it automatically adds all changes to Git (<code>git add .</code>), sets a default commit message, and checks if a custom message has been provided when calling the function. It then commits (<code>git commit -a -m &quot;$commit_message&quot;</code>) and pushes the changes to the master branch on the repository (<code>git push origin master</code>).</li>
+</ol>
+<h4 id="Why-Use-This-Function"><a href="#Why-Use-This-Function" class="headerlink" title="Why Use This Function?"></a>Why Use This Function?</h4><p>With this enhanced deployment function, you can significantly streamline your publishing workflow. It’s not just about making deployment easier; it’s about integrating the entire process from local changes to live updates on your blog, all with a single command. This method ensures that your latest changes are not only deployed but also tracked and version-controlled seamlessly.</p>
+<p>Feel free to adapt this script to fit your workflow or system configuration. It’s all about enhancing efficiency and reducing repetitive tasks, allowing you more time to focus on creating great content!</p>
+<h3 id="Lastly-Making-It-Stick-Saving-to-profile"><a href="#Lastly-Making-It-Stick-Saving-to-profile" class="headerlink" title="Lastly, Making It Stick! - Saving to .profile"></a>Lastly, Making It Stick! - Saving to .profile</h3><p>I didn’t want to type this alias every time I open a new terminal session, right? So, I went a step further and saved it into my .profile file. This means my hd command is always ready to go, no matter when or where I start my work. Here’s how you can do it:</p>
+<p>Use <code>vim</code> to edit your <code>.profile</code> or <code>~/.bash_profil</code> (the file of your main profile):</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs sh"><span class="hljs-comment"># In my case, I saved it in ~/.profile</span><br>vim ~/.profile<br></code></pre></td></tr></table></figure>
 <blockquote>
 <p>Add the alias line to the file and save it and close the editor by <code>:x</code></p>
 </blockquote>
@@ -461,13 +472,13 @@
       <div class="popular-posts-title"><a href="/blog/2023-12-13/elixir/" rel="bookmark">Elixir</a></div>
     </li>
     <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="/blog/2023-12-12/24-hours-harvard-cs50-by-david-malan/" rel="bookmark">24 Hours Harvard CS50 By David Malan</a></div>
+      <div class="popular-posts-title"><a href="/blog/2023-12-13/python/" rel="bookmark">Python</a></div>
     </li>
     <li class="popular-posts-item">
       <div class="popular-posts-title"><a href="/blog/2024-04-11/javascript/" rel="bookmark">JavaScript</a></div>
     </li>
     <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="/blog/2023-12-13/python/" rel="bookmark">Python</a></div>
+      <div class="popular-posts-title"><a href="/blog/2023-12-12/24-hours-harvard-cs50-by-david-malan/" rel="bookmark">24 Hours Harvard CS50 By David Malan</a></div>
     </li>
   </ul>
 
@@ -556,7 +567,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Hello%E2%80%A6-World"><span class="nav-number">1.</span> <span class="nav-text">Hello… World!</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Why-Hexo-Good-Question"><span class="nav-number">2.</span> <span class="nav-text">Why Hexo? Good Question!</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Getting-My-Hands-Dirty-with-Hexo"><span class="nav-number">3.</span> <span class="nav-text">Getting My Hands Dirty with Hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Writing-a-Post"><span class="nav-number">4.</span> <span class="nav-text">Writing a Post</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#The-Magic-Command"><span class="nav-number">4.1.</span> <span class="nav-text">The Magic Command</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#The-Markdown-Charm"><span class="nav-number">4.2.</span> <span class="nav-text">The Markdown Charm</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Preview-as-You-Go"><span class="nav-number">4.3.</span> <span class="nav-text">Preview as You Go</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Don%E2%80%99t-Forget-Set-Up-Your-GitHub-Pages"><span class="nav-number">5.</span> <span class="nav-text">Don’t Forget: Set Up Your GitHub Pages!</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#GitHub-Pages-101"><span class="nav-number">5.1.</span> <span class="nav-text">GitHub Pages 101</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Steps-to-Stardom"><span class="nav-number">5.2.</span> <span class="nav-text">Steps to Stardom</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Deployment-%F0%9F%94%A7"><span class="nav-number">6.</span> <span class="nav-text">Deployment! 🔧</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Making-It-Stick-Saving-to-profile"><span class="nav-number">6.1.</span> <span class="nav-text">Making It Stick: Saving to .profile</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Theme-Time"><span class="nav-number">7.</span> <span class="nav-text">Theme Time!</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Bumps-Along-the-Road"><span class="nav-number">8.</span> <span class="nav-text">Bumps Along the Road</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Shoutouts-and-Inspirations"><span class="nav-number">9.</span> <span class="nav-text">Shoutouts and Inspirations!</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Wrapping-Up"><span class="nav-number">10.</span> <span class="nav-text">Wrapping Up</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#References-Useful-links"><span class="nav-number">11.</span> <span class="nav-text">References (Useful links)</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Hello%E2%80%A6-World"><span class="nav-number">1.</span> <span class="nav-text">Hello… World!</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Why-Hexo-Good-Question"><span class="nav-number">2.</span> <span class="nav-text">Why Hexo? Good Question!</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Getting-My-Hands-Dirty-with-Hexo"><span class="nav-number">3.</span> <span class="nav-text">Getting My Hands Dirty with Hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Writing-a-Post"><span class="nav-number">4.</span> <span class="nav-text">Writing a Post</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#The-Magic-Command"><span class="nav-number">4.1.</span> <span class="nav-text">The Magic Command</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#The-Markdown-Charm"><span class="nav-number">4.2.</span> <span class="nav-text">The Markdown Charm</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Preview-as-You-Go"><span class="nav-number">4.3.</span> <span class="nav-text">Preview as You Go</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Don%E2%80%99t-Forget-Set-Up-Your-GitHub-Pages"><span class="nav-number">5.</span> <span class="nav-text">Don’t Forget: Set Up Your GitHub Pages!</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#GitHub-Pages-101"><span class="nav-number">5.1.</span> <span class="nav-text">GitHub Pages 101</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Steps-to-Stardom"><span class="nav-number">5.2.</span> <span class="nav-text">Steps to Stardom</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Deployment-%F0%9F%94%A7"><span class="nav-number">6.</span> <span class="nav-text">Deployment! 🔧</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Simple-Deployment-Script-%F0%9F%9A%80"><span class="nav-number">6.1.</span> <span class="nav-text">Simple Deployment Script 🚀</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Supercharging-Deployment-Script-with-Git-Push-%F0%9F%9A%80"><span class="nav-number">6.2.</span> <span class="nav-text">Supercharging Deployment Script with Git Push 🚀</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#The-hd-Function-More-than-Just-Deployment"><span class="nav-number">6.2.1.</span> <span class="nav-text">The hd Function: More than Just Deployment</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#How-It-Enhances-the-Workflow"><span class="nav-number">6.2.2.</span> <span class="nav-text">How It Enhances the Workflow</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Why-Use-This-Function"><span class="nav-number">6.2.3.</span> <span class="nav-text">Why Use This Function?</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Lastly-Making-It-Stick-Saving-to-profile"><span class="nav-number">6.3.</span> <span class="nav-text">Lastly, Making It Stick! - Saving to .profile</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Theme-Time"><span class="nav-number">7.</span> <span class="nav-text">Theme Time!</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Bumps-Along-the-Road"><span class="nav-number">8.</span> <span class="nav-text">Bumps Along the Road</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Shoutouts-and-Inspirations"><span class="nav-number">9.</span> <span class="nav-text">Shoutouts and Inspirations!</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Wrapping-Up"><span class="nav-number">10.</span> <span class="nav-text">Wrapping Up</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#References-Useful-links"><span class="nav-number">11.</span> <span class="nav-text">References (Useful links)</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -570,20 +581,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/blog/archives/">
         
-          <span class="site-state-item-count">11</span>
+          <span class="site-state-item-count">12</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/blog/categories/">
           
-        <span class="site-state-item-count">19</span>
+        <span class="site-state-item-count">21</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/blog/tags/">
           
-        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-count">13</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -629,12 +640,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="Symbols count total">6k</span>
+    <span title="Symbols count total">7k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">22 mins.</span>
+    <span title="Reading time total">26 mins.</span>
 </div>
 
         
