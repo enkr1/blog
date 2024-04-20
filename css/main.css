@@ -1260,7 +1260,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #ff8e70;
+  background: #75aa82;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -1857,6 +1857,9 @@ pre .javascript .function {
 .post-body img {
   border-radius: 1.4rem;
   box-shadow: 0 0 0.3rem 0.3rem rgba(0,0,0,0.043);
+  max-height: 20rem;
+  width: 100%;
+  object-fit: cover;
 }
 .post-body .video-container {
   height: 0;
@@ -1875,6 +1878,9 @@ pre .javascript .function {
   position: absolute;
   top: 0;
   width: 100%;
+}
+.post .post-body img {
+  max-height: unset;
 }
 .post-gallery {
   align-items: center;
