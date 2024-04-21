@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://enkr1.github.io/blog/2024-04-20/sharing-session-from-the-ceo-of-sheng-siong/</loc>
+    <loc>https://enkr1.github.io/blog/2023-12-12/my-journey-with-hexo-building-a-blog-from-scratch/</loc>
     
     <lastmod>2024-04-21</lastmod>
     
@@ -11,7 +11,7 @@
   </url>
   
   <url>
-    <loc>https://enkr1.github.io/blog/2023-12-12/my-journey-with-hexo-building-a-blog-from-scratch/</loc>
+    <loc>https://enkr1.github.io/blog/2024-04-20/sharing-session-from-the-ceo-of-sheng-siong/</loc>
     
     <lastmod>2024-04-21</lastmod>
     
@@ -297,20 +297,6 @@
   </url>
   
   <url>
-    <loc>https://enkr1.github.io/blog/categories/Programming-Languages/Python/</loc>
-    <lastmod>2024-04-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://enkr1.github.io/blog/categories/Web-Development/Front-end/</loc>
-    <lastmod>2024-04-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://enkr1.github.io/blog/categories/Hexo/</loc>
     <lastmod>2024-04-21</lastmod>
     <changefreq>weekly</changefreq>
@@ -318,7 +304,7 @@
   </url>
   
   <url>
-    <loc>https://enkr1.github.io/blog/categories/Test/</loc>
+    <loc>https://enkr1.github.io/blog/categories/Programming-Languages/Python/</loc>
     <lastmod>2024-04-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -332,7 +318,21 @@
   </url>
   
   <url>
+    <loc>https://enkr1.github.io/blog/categories/Web-Development/Front-end/</loc>
+    <lastmod>2024-04-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://enkr1.github.io/blog/categories/Learning-Journal/</loc>
+    <lastmod>2024-04-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://enkr1.github.io/blog/categories/Test/</loc>
     <lastmod>2024-04-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -367,14 +367,14 @@
   </url>
   
   <url>
-    <loc>https://enkr1.github.io/blog/categories/Coding-Best-Practices/</loc>
+    <loc>https://enkr1.github.io/blog/categories/Learning-Journal/Blog-by-Hexo/</loc>
     <lastmod>2024-04-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://enkr1.github.io/blog/categories/Learning-Journal/Blog-by-Hexo/</loc>
+    <loc>https://enkr1.github.io/blog/categories/Coding-Best-Practices/</loc>
     <lastmod>2024-04-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
