@@ -1260,7 +1260,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #75aa82;
+  background: #dbc13b;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -1735,6 +1735,9 @@ pre .javascript .function {
   transition-delay: 0s;
   transition-duration: 0.2s;
   transition-timing-function: ease-in-out;
+  display: grid !important;
+  grid-template-columns: auto 1fr; /* Adjust 'auto' as needed to fit your date size */
+  gap: 1rem;
 }
 @media (max-width: 767px) {
   .posts-collapse .post-header {
@@ -1758,15 +1761,15 @@ pre .javascript .function {
   transition-timing-function: ease-in-out;
 }
 .posts-collapse .post-header:hover {
-  border-bottom-color: #666;
+  border-bottom-color: #c60000;
 }
 .posts-collapse .post-header:hover::before {
-  background: #222;
+  background: #c60000;
 }
 .posts-collapse .post-meta {
   display: inline;
   font-size: 0.8rem;
-  margin-right: 10px;
+  text-align: left;
 }
 .posts-collapse .post-title {
   display: inline;
@@ -1857,7 +1860,7 @@ pre .javascript .function {
 .post-body img {
   border-radius: 1.4rem;
   box-shadow: 0 0 0.3rem 0.3rem rgba(0,0,0,0.043);
-  max-height: 20rem;
+  max-height: 25rem;
   width: 100%;
   object-fit: cover;
 }
