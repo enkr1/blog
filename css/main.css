@@ -1260,7 +1260,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #a6ffff;
+  background: #133711;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -1639,10 +1639,9 @@ pre .javascript .function {
 .post-body .image-caption,
 .post-body .figure .caption {
   color: #999;
-  font-size: 1rem;
-  font-weight: bold;
+  font-size: 0.9rem;
   line-height: 1;
-  margin: -20px auto 15px;
+  margin: -0.6rem auto 1.3rem;
   text-align: center;
 }
 .post-sticky-flag {
