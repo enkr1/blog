@@ -178,7 +178,7 @@ body {
   background: var(--body-bg-color);
   color: var(--text-color);
   font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   line-height: 2;
 }
 @media (max-width: 991px) {
@@ -1260,7 +1260,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #25f0aa;
+  background: #ff59f9;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -1587,7 +1587,6 @@ pre .javascript .function {
   position: fixed;
   transition-property: bottom;
   z-index: 1300;
-  mix-blend-mode: difference;
   width: initial;
 }
 .back-to-top:hover {
@@ -2439,8 +2438,9 @@ ul.breadcrumb li + li:last-child {
 @media (max-width: 991px) {
   .header-inner {
     border-radius: initial;
-    position: relative;
-    width: auto;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
   }
 }
 .main-inner {
@@ -2788,7 +2788,7 @@ ul.breadcrumb li + li:last-child {
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .content-wrap {
-    padding: 10px;
+    padding: 6.5rem 1rem 1rem;
   }
   .posts-expand .post-button {
     margin-top: 20px;
@@ -2812,7 +2812,7 @@ ul.breadcrumb li + li:last-child {
 }
 @media (max-width: 767px) {
   .content-wrap {
-    padding: 1rem;
+    padding: 6.5rem 1rem 1rem;
   }
   .posts-expand .post-button {
     margin: 0px 0;
