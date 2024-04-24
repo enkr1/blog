@@ -1200,6 +1200,14 @@ pre .javascript .function {
 .menu .menu-item span.exturl:hover {
   background: var(--menu-item-bg-color);
 }
+@media (max-width: 767px) {
+  .menu-item-active a,
+  .menu .menu-item a:hover,
+  .menu .menu-item span.exturl:hover {
+    background: unset;
+    text-decoration: underline;
+  }
+}
 .use-motion .menu-item {
   opacity: 0;
 }
@@ -1273,7 +1281,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #bbb8de;
+  background: #39857e;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
