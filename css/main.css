@@ -1260,7 +1260,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #c6cdff;
+  background: #e8f704;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2441,6 +2441,7 @@ ul.breadcrumb li + li:last-child {
     position: fixed;
     width: 100%;
     z-index: 999;
+    background: unset;
   }
 }
 .main-inner {
@@ -2495,11 +2496,31 @@ ul.breadcrumb li + li:last-child {
 }
 @media (max-width: 991px) {
   .site-brand-container {
+    background: rgba(34,34,34,0.8);
+    backdrop-filter: blur(3px);
+  }
+}
+@media (max-width: 991px) {
+  .site-brand-container {
     box-shadow: 0 0 16px rgba(0,0,0,0.5);
   }
 }
 .site-meta {
   padding: 1rem 0;
+}
+@media (max-width: 991px) {
+  .site-meta {
+    padding: 0.8rem 0;
+  }
+}
+@media (max-width: 991px) {
+  .site-meta .site-title {
+    font-size: 0.9rem;
+  }
+  .site-meta .site-subtitle {
+    font-size: 0.6rem;
+    margin: 0;
+  }
 }
 .brand {
   padding: 0;
@@ -2796,7 +2817,7 @@ ul.breadcrumb li + li:last-child {
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .content-wrap {
-    padding: 6.5rem 1rem 1rem;
+    padding: 5.5rem 1rem 1rem;
   }
   .posts-expand .post-button {
     margin-top: 20px;
@@ -2820,7 +2841,7 @@ ul.breadcrumb li + li:last-child {
 }
 @media (max-width: 767px) {
   .content-wrap {
-    padding: 6.5rem 1rem 1rem;
+    padding: 5.5rem 1rem 1rem;
   }
   .posts-expand .post-button {
     margin: 0px 0;

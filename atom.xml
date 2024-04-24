@@ -359,9 +359,9 @@
     
     
     
-    <category term="Hexo" scheme="https://enkr1.github.io/blog/categories/Hexo/"/>
-    
     <category term="Learning Journal" scheme="https://enkr1.github.io/blog/categories/Learning-Journal/"/>
+    
+    <category term="Hexo" scheme="https://enkr1.github.io/blog/categories/Hexo/"/>
     
     <category term="Blog by Hexo" scheme="https://enkr1.github.io/blog/categories/Learning-Journal/Blog-by-Hexo/"/>
     
