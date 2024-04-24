@@ -1116,6 +1116,8 @@ pre .javascript .function {
 }
 .site-nav {
   display: block;
+  background: rgba(255,255,255,0.8);
+  backdrop-filter: blur(3px);
 }
 @media (max-width: 767px) {
   .site-nav {
@@ -1127,9 +1129,20 @@ pre .javascript .function {
   display: block;
 }
 .menu {
-  margin-top: 20px;
+  margin: 0.6rem 0 0.8rem;
   padding-left: 0;
   text-align: center;
+}
+@media (max-width: 767px) {
+  .menu {
+    margin: 0;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1rem 1.2rem;
+  }
 }
 .menu-item {
   display: inline-block;
@@ -1260,7 +1273,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #5cff9d;
+  background: #bbb8de;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2563,6 +2576,12 @@ ul.breadcrumb li + li:last-child {
   position: relative;
   text-align: left;
   transition-property: background-color;
+}
+@media (max-width: 767px) {
+  .menu .menu-item a,
+  .menu .menu-item span.exturl {
+    padding: 0;
+  }
 }
 @media (max-width: 991px) {
   .menu .menu-item.menu-item-search {
