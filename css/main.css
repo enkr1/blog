@@ -1292,7 +1292,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #fafc60;
+  background: #abffdd;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -1682,8 +1682,12 @@ pre .javascript .function {
   text-align: center;
 }
 .post-sticky-flag {
+  position: absolute;
   display: inline-block;
-  transform: rotate(30deg);
+  transform: rotate(30deg) scale(0.8);
+  right: -0.2rem;
+  top: -0.5rem;
+  opacity: 0.3;
 }
 .post-button {
   text-align: center;
@@ -1738,8 +1742,11 @@ pre .javascript .function {
 .posts-collapse .collection-year {
   font-size: 2rem;
   font-weight: bold;
-  margin: 0 0 0.8rem;
+  margin: 3rem 0 0.8rem;
   position: relative;
+}
+.posts-collapse .collection-year:first-child {
+  margin-top: unset;
 }
 @media (max-width: 767px) {
   .posts-collapse .collection-year {
