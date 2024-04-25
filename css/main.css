@@ -1292,7 +1292,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #83cf4e;
+  background: #eccc04;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -1727,13 +1727,12 @@ pre .javascript .function {
 .posts-collapse .collection-year {
   font-size: 2rem;
   font-weight: bold;
-  margin: 2rem 0 0;
+  margin: 0 0 0.8rem;
   position: relative;
 }
 @media (max-width: 767px) {
   .posts-collapse .collection-year {
     font-size: 1.4rem;
-    margin: 1rem 0 0;
   }
 }
 .posts-collapse .collection-year::before {
