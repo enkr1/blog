@@ -256,9 +256,9 @@
     
     <category term="Web Development" scheme="https://enkr1.github.io/blog/categories/Web-Development/"/>
     
-    <category term="Software Engineering" scheme="https://enkr1.github.io/blog/categories/Software-Engineering/"/>
-    
     <category term="Front-end" scheme="https://enkr1.github.io/blog/categories/Web-Development/Front-end/"/>
+    
+    <category term="Software Engineering" scheme="https://enkr1.github.io/blog/categories/Software-Engineering/"/>
     
     <category term="UI/UX Design" scheme="https://enkr1.github.io/blog/categories/UI-UX-Design/"/>
     
@@ -463,9 +463,9 @@
     
     <category term="note" scheme="https://enkr1.github.io/blog/tags/note/"/>
     
-    <category term="hexo" scheme="https://enkr1.github.io/blog/tags/hexo/"/>
-    
     <category term="programming" scheme="https://enkr1.github.io/blog/tags/programming/"/>
+    
+    <category term="hexo" scheme="https://enkr1.github.io/blog/tags/hexo/"/>
     
   </entry>
   

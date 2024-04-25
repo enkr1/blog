@@ -250,9 +250,9 @@
           
           <category> Web Development </category>
           
-          <category> Software Engineering </category>
-          
           <category> Front-end </category>
+          
+          <category> Software Engineering </category>
           
           <category> UI/UX Design </category>
           
@@ -474,9 +474,9 @@
             
             <tag> note </tag>
             
-            <tag> hexo </tag>
-            
             <tag> programming </tag>
+            
+            <tag> hexo </tag>
             
         </tags>
       
