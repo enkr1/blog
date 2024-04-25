@@ -317,9 +317,9 @@ td {
   border-radius: 1.4rem;
   color: var(--btn-default-color);
   display: inline-block;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   line-height: 2;
-  padding: 0.3rem 1rem;
+  padding: 0 1rem;
   text-decoration: none;
   transition-property: background-color;
   transition-delay: 0s;
@@ -1292,7 +1292,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #eccc04;
+  background: #fafc60;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -1658,14 +1658,20 @@ pre .javascript .function {
     font-size: 1rem;
   }
 }
+.post-body .exturl {
+  position: relative;
+  margin: 0 1.2rem 0 0;
+  color: #c60000;
+}
 .post-body .exturl .fa {
   font-size: 1rem;
-  margin-left: 4px;
 }
 .post-body .exturl .fa.fa-external-link-alt {
-  font-size: 0.8rem;
-  margin-left: 0.4rem;
-  opacity: 0.3;
+  font-size: 0.7rem;
+  opacity: 0.5;
+  position: absolute;
+  top: 0.33rem;
+  right: -1rem;
 }
 .post-body .image-caption,
 .post-body .figure .caption {
@@ -1680,8 +1686,12 @@ pre .javascript .function {
   transform: rotate(30deg);
 }
 .post-button {
-  margin-top: 2rem;
   text-align: center;
+  position: absolute;
+  right: 0;
+  bottom: -1.5rem;
+  opacity: 0.8;
+  font-size: 0.8rem;
 }
 .use-motion .post-block,
 .use-motion .pagination,
@@ -1710,6 +1720,7 @@ pre .javascript .function {
 .posts-collapse .collection-title {
   font-size: 1.4rem;
   position: relative;
+  margin: 0 0 1rem;
 }
 .posts-collapse .collection-title::before {
   background: #999;
@@ -1749,7 +1760,7 @@ pre .javascript .function {
 }
 .posts-collapse .collection-header {
   display: block;
-  margin: 0 0 0 20px;
+  margin: 0 0 0 1rem;
 }
 .posts-collapse .collection-header small {
   color: #bbb;
