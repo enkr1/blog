@@ -6,7 +6,7 @@
   <link href="https://enkr1.github.io/blog/atom.xml" rel="self"/>
   
   <link href="https://enkr1.github.io/blog/"/>
-  <updated>2024-04-28T16:18:02.851Z</updated>
+  <updated>2024-04-28T16:56:25.957Z</updated>
   <id>https://enkr1.github.io/blog/</id>
   
   <author>
@@ -21,8 +21,16 @@
     <link href="https://enkr1.github.io/blog/2024-04-28/projects/"/>
     <id>https://enkr1.github.io/blog/2024-04-28/projects/</id>
     <published>2024-04-28T15:48:16.000Z</published>
-    <updated>2024-04-28T16:18:02.851Z</updated>
+    <updated>2024-04-28T16:56:25.957Z</updated>
     
+    <content type="html"><![CDATA[<p>Coming Soon …</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Coming Soon …&lt;/p&gt;
+</summary>
+      
     
     
     
@@ -30,12 +38,16 @@
   </entry>
   
   <entry>
-    <title>My Photos</title>
-    <link href="https://enkr1.github.io/blog/2024-04-28/my-photos/"/>
-    <id>https://enkr1.github.io/blog/2024-04-28/my-photos/</id>
+    <title>My Gallery</title>
+    <link href="https://enkr1.github.io/blog/2024-04-28/my-gallery/"/>
+    <id>https://enkr1.github.io/blog/2024-04-28/my-gallery/</id>
     <published>2024-04-28T15:02:50.000Z</published>
-    <updated>2024-04-28T16:16:55.426Z</updated>
+    <updated>2024-04-28T16:59:12.765Z</updated>
     
+    <content type="html"><![CDATA[<p>here is where i dump my photos!</p><span id="more"></span><img data-src="/blog/2024-04-28/my-gallery/me-2024-0.jpg" class="large">]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;here is where i dump my photos!&lt;/p&gt;</summary>
     
     
     
@@ -330,9 +342,9 @@
     
     <category term="Web Development" scheme="https://enkr1.github.io/blog/categories/Web-Development/"/>
     
-    <category term="Software Engineering" scheme="https://enkr1.github.io/blog/categories/Software-Engineering/"/>
-    
     <category term="Front-end" scheme="https://enkr1.github.io/blog/categories/Web-Development/Front-end/"/>
+    
+    <category term="Software Engineering" scheme="https://enkr1.github.io/blog/categories/Software-Engineering/"/>
     
     <category term="UI/UX Design" scheme="https://enkr1.github.io/blog/categories/UI-UX-Design/"/>
     

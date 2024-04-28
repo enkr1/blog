@@ -8,7 +8,7 @@
       <link href="/blog/2024-04-28/projects/"/>
       <url>/blog/2024-04-28/projects/</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<p>Coming Soon …</p>]]></content>
       
       
       
@@ -17,11 +17,11 @@
     
     
     <entry>
-      <title>My Photos</title>
-      <link href="/blog/2024-04-28/my-photos/"/>
-      <url>/blog/2024-04-28/my-photos/</url>
+      <title>My Gallery</title>
+      <link href="/blog/2024-04-28/my-gallery/"/>
+      <url>/blog/2024-04-28/my-gallery/</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<p>here is where i dump my photos!</p><span id="more"></span><img data-src="/blog/2024-04-28/my-gallery/me-2024-0.jpg" class="large">]]></content>
       
       
       
@@ -320,9 +320,9 @@
           
           <category> Web Development </category>
           
-          <category> Software Engineering </category>
-          
           <category> Front-end </category>
+          
+          <category> Software Engineering </category>
           
           <category> UI/UX Design </category>
           
