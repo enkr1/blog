@@ -1118,6 +1118,7 @@ pre .javascript .function {
   display: block;
   background: rgba(255,255,255,0.8);
   backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
 }
 @media (max-width: 767px) {
   .site-nav {
@@ -1292,7 +1293,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #fcbe08;
+  background: #069afa;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -1662,16 +1663,27 @@ pre .javascript .function {
   position: relative;
   margin: 0 1.2rem 0 0;
   color: #c60000;
+  display: inline;
 }
 .post-body .exturl .fa {
   font-size: 1rem;
 }
 .post-body .exturl .fa.fa-external-link-alt {
-  font-size: 0.7rem;
-  opacity: 0.5;
+  font-size: 0.65rem;
+  opacity: 0.3;
   position: absolute;
-  top: 0.33rem;
-  right: -1rem;
+  transform: translate(0.3rem, 0.65rem);
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .post-body .exturl .fa.fa-external-link-alt {
+    font-size: 0.6rem;
+    transform: translate(0.3rem, 0.6rem);
+  }
+}
+@media (max-width: 767px) {
+  .post-body .exturl .fa.fa-external-link-alt {
+    transform: translate(0.3rem, 0.55rem);
+  }
 }
 .post-body .image-caption,
 .post-body .figure .caption {
@@ -2559,6 +2571,7 @@ ul.breadcrumb li + li:last-child {
   .site-brand-container {
     background: rgba(34,34,34,0.8);
     backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
     box-shadow: 0 0 16px rgba(0,0,0,0.5);
   }
 }
@@ -2925,4 +2938,19 @@ ul.breadcrumb li + li:last-child {
   .pagination {
     margin: 1rem 0 0;
   }
+}
+.fancybox {
+  border: unset;
+}
+.fancybox img {
+  display: block;
+}
+@media (min-width: 992px) {
+  .fancybox img {
+    width: 60%;
+  }
+}
+.fancybox img.large {
+  display: unset;
+  width: unset;
 }
