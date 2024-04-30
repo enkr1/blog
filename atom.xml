@@ -48,7 +48,7 @@
     <link href="https://enkr1.github.io/blog/2024-04-28/projects/"/>
     <id>https://enkr1.github.io/blog/2024-04-28/projects/</id>
     <published>2024-04-28T15:48:16.000Z</published>
-    <updated>2024-04-29T15:22:22.343Z</updated>
+    <updated>2024-04-30T17:09:58.927Z</updated>
     
     <content type="html"><![CDATA[<p>Coming Soon …</p>]]></content>
     
@@ -352,9 +352,9 @@
     
     <category term="Web Development" scheme="https://enkr1.github.io/blog/categories/Web-Development/"/>
     
-    <category term="Front-end" scheme="https://enkr1.github.io/blog/categories/Web-Development/Front-end/"/>
-    
     <category term="Software Engineering" scheme="https://enkr1.github.io/blog/categories/Software-Engineering/"/>
+    
+    <category term="Front-end" scheme="https://enkr1.github.io/blog/categories/Web-Development/Front-end/"/>
     
     <category term="UI/UX Design" scheme="https://enkr1.github.io/blog/categories/UI-UX-Design/"/>
     
@@ -374,7 +374,7 @@
     <link href="https://enkr1.github.io/blog/2024-04-12/embracing-the-power-of-bash-a-journey-into-the-heart-of-the-command-line/"/>
     <id>https://enkr1.github.io/blog/2024-04-12/embracing-the-power-of-bash-a-journey-into-the-heart-of-the-command-line/</id>
     <published>2024-04-11T20:14:20.000Z</published>
-    <updated>2024-04-24T16:29:04.880Z</updated>
+    <updated>2024-04-30T17:10:25.575Z</updated>
     
     <content type="html"><![CDATA[<p>In the realm of software engineering, the command line holds a special place. It’s the backbone of automation, the gateway to system administration, and the tool of choice for the discerning developer. Among the various shells available, Bash stands out as a symbol of efficiency and flexibility. As someone deeply enamored with the elegance of Bash, I’ve embarked on a journey to explore its depths and harness its potential.</p><p><code>Bash</code>, or the Bourne Again SHell, is more than just a tool; it’s the soul of the computer. It’s where magic happens, where commands come to life, and where true power resides. With just a few keystrokes and the mighty ‘sudo’, one can orchestrate the symphony of the system, all without the need for a mouse. It’s this simplicity and potency that have made me a fervent advocate of Bash.</p><p>Through this post, I aim to share some of the tips and tricks I’ve gathered along my journey with Bash. While I may not claim to be an expert, my experiences have taught me valuable lessons that I believe can benefit others. From automating mundane tasks to delving into the intricacies of scripting, my journey with Bash has been both enlightening and exhilarating.</p><p>As we embark on this exploration together, I invite you to join me in appreciating the art of command-line wizardry. Whether you’re a seasoned veteran or a curious newcomer, there’s always something new to discover in the world of Bash.</p><span id="more"></span><p>coming soon …</p><p>Convert Jupyter to …</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">! jupyter nbconvert --to filetype <span class="string">&#x27;filename.ipynb&#x27;</span></span><br></pre></td></tr></table></figure><p>Example:</p><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">! jupyter nbconvert <span class="attr">--to</span> md xxx<span class="selector-class">.ipynb</span></span><br><span class="line">! jupyter nbconvert <span class="attr">--to</span> <span class="selector-tag">html</span> xxx<span class="selector-class">.ipynb</span></span><br><span class="line">! jupyter nbconvert <span class="attr">--to</span> <span class="selector-tag">html</span> xxx.ipynb</span><br></pre></td></tr></table></figure><p>filetype: asciidoc, custom, html, latex, markdown, notebook, pdf, python, qtpdf, qtpng, rst, script, slides, webpdf</p><p>test</p><figure class="highlight dust"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="language-xml">$$\hat</span><span class="template-variable">&#123;r&#125;</span><span class="language-xml">_</span><span class="template-variable">&#123;u i&#125;</span><span class="language-xml">=\mu+b_</span><span class="template-variable">&#123;u&#125;</span><span class="language-xml">+b_</span><span class="template-variable">&#123;i&#125;</span><span class="language-xml">+q_</span><span class="template-variable">&#123;i&#125;</span><span class="language-xml">^</span><span class="template-variable">&#123;T&#125;</span><span class="language-xml"> p_</span><span class="template-variable">&#123;u&#125;</span><span class="language-xml">$$</span></span><br></pre></td></tr></table></figure>]]></content>
     
