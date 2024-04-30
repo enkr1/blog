@@ -1335,7 +1335,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #0608ff;
+  background: #f21bff;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -1976,6 +1976,11 @@ pre .javascript .function {
   width: 100%;
   object-fit: cover;
 }
+@media (max-width: 767px) {
+  .post-body img {
+    max-height: unset;
+  }
+}
 .post-body .video-container {
   height: 0;
   margin-bottom: 20px;
@@ -2019,7 +2024,16 @@ pre .javascript .function {
   width: unset;
 }
 .posts-expand.index .fancybox img {
+  border-radius: 1.4rem;
+  box-shadow: 0.3rem 0.3rem 0.3rem 0.3rem rgba(0,0,0,0.013);
+  max-height: 25rem;
   width: 100%;
+  object-fit: cover;
+}
+@media (max-width: 767px) {
+  .posts-expand.index .fancybox img {
+    max-height: unset;
+  }
 }
 .posts-expand .post-header {
   font-size: 1.8rem;
@@ -3016,6 +3030,11 @@ ul.breadcrumb li + li:last-child {
   height: fit-content;
   display: block;
   margin: auto;
+}
+@media (max-width: 767px) {
+  .fancybox {
+    all: unset;
+  }
 }
 .fancybox img {
   display: block;
