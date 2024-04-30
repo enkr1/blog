@@ -52,11 +52,6 @@ pre {
   font-family: monospace, monospace !important;
   font-size: 1.2rem;
 }
-@media (max-width: 767px) {
-  pre {
-    font-size: 1.1rem;
-  }
-}
 pre span {
   font-family: monospace, monospace !important;
 }
@@ -1337,7 +1332,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #867cc2;
+  background: #fba7af;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2864,8 +2859,12 @@ ul.breadcrumb li + li:last-child {
   box-shadow: 0.8rem 0.8rem 0.8rem 0.8rem rgba(0,0,0,0.013);
   margin: 1.4rem 0 0;
 }
-.post-block ul {
+.post-block ul,
+.post-block ol {
   padding: 0 0 2.5rem 3rem;
+}
+.post-block ol li p {
+  margin: 0 0 1rem 0;
 }
 .comments {
   background: var(--content-bg-color);
@@ -2926,33 +2925,33 @@ ul.breadcrumb li + li:last-child {
 }
 .post-body h1 {
   color: #c60000;
-  font-size: 1.8rem;
+  font-size: 2.8rem;
   margin: 2rem 0 0.3rem;
 }
 .post-body h2 {
-  font-size: 1.6rem;
+  font-size: 2.2rem;
   margin: 0 0 0.6rem;
 }
 .post-body h3 {
-  font-size: 1.3rem;
+  font-size: 1.8rem;
   border-bottom: 1px dotted #eee;
 }
 .post-body h4 {
-  font-size: 1.2rem;
+  font-size: 1.6rem;
 }
 @media (max-width: 567px) {
   .post-body h1,
   .post-body h2 {
-    margin: 1rem 0 0.5rem;
+    margin: 1.3rem 0 1rem;
     padding: 0;
   }
   .post-body h1 {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
   }
   .post-body h2,
   .post-body h3,
   .post-body h4 {
-    font-size: 1.3rem;
+    font-size: 1.6rem;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
