@@ -465,7 +465,7 @@ code {
   word-wrap: break-word;
 }
 .highlight *::selection {
-  background: #d6d6d6;
+  background: #c60000;
 }
 .highlight pre {
   border: 0;
@@ -1335,7 +1335,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #a7ff8b;
+  background: #afd605;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
