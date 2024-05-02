@@ -32,7 +32,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://enkr1.github.io/blog/2024-04-12/bash-exploring-the-depths-of-command-line-power/brew-1.png">
 <meta property="article:published_time" content="2024-04-11T20:14:20.000Z">
-<meta property="article:modified_time" content="2024-05-01T15:00:26.870Z">
+<meta property="article:modified_time" content="2024-05-01T15:17:42.726Z">
 <meta property="article:author" content="Jing Hui PANG | 彭竞辉 | ENKR">
 <meta property="article:tag" content="note">
 <meta property="article:tag" content="programming">
@@ -165,7 +165,7 @@
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/blog/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">32</span></a>
+    <a href="/blog/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">33</span></a>
 
   </li>
         <li class="menu-item menu-item-tags">
@@ -175,7 +175,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/blog/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">19</span></a>
+    <a href="/blog/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">20</span></a>
 
   </li>
         <li class="menu-item menu-item-platforms">
@@ -269,7 +269,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: Wed 1 May 2024 23:00:26 PM" itemprop="dateModified" datetime="2024-05-01T23:00:26+08:00">Wed 1 May 2024</time>
+                <time title="Modified: Wed 1 May 2024 23:17:42 PM" itemprop="dateModified" datetime="2024-05-01T23:17:42+08:00">Wed 1 May 2024</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -310,7 +310,7 @@
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
-              <span>10 mins.</span>
+              <span>9 mins.</span>
             </span>
 
         </div>
@@ -552,7 +552,16 @@
 
 <p>wip …</p>
 <hr>
-<h1 id="awk"><a href="#awk" class="headerlink" title="awk"></a>awk</h1><hr>
+<h1 id="awk"><a href="#awk" class="headerlink" title="awk"></a>awk</h1><p><code>awk</code> is a powerful text processing tool that’s commonly used in UNIX-like operating systems. It excels at column-based operations, making it ideal for data extraction and reporting from structured text data. <code>awk</code> is not just a command; it’s an entire programming language designed for text processing.</p>
+<h2 id="Basics-of-awk"><a href="#Basics-of-awk" class="headerlink" title="Basics of awk"></a>Basics of <code>awk</code></h2><p>The basic syntax of <code>awk</code> is:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">awk <span class="string">&#x27;pattern &#123; action &#125;&#x27;</span> file</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong><code>pattern</code></strong>: This specifies the condition for which the <strong><code>action</code></strong> should be executed. If no pattern is provided, the action is executed for every line.</li>
+<li><strong><code>action</code></strong>: This is what <strong><code>awk</code></strong> does when the pattern matches. Actions are enclosed in <strong><code>&#123; &#125;</code></strong>.</li>
+<li><strong><code>file</code></strong>: The file you want to process. If no file is specified, <strong><code>awk</code></strong> reads from the standard input.</li>
+</ul>
+<hr>
 <h1 id="curl"><a href="#curl" class="headerlink" title="curl"></a>curl</h1><hr>
 <h1 id="chmod"><a href="#chmod" class="headerlink" title="chmod"></a>chmod</h1><ul>
 <li><span class="exturl" data-url="aHR0cHM6Ly9jaG1vZC1jYWxjdWxhdG9yLmNvbS8=">https://chmod-calculator.com/<i class="fa fa-external-link-alt"></i></span></li>
@@ -608,34 +617,53 @@
 <li><strong><code>&amp;</code></strong>: This is used to run the command in the background. For instance, <code>some_command &amp;</code> would start <code>some_command</code> and immediately return you to the command prompt while <code>some_command</code> continues to run in the background.</li>
 <li><strong><code>&amp;&amp;</code></strong>: This is used to run the second command only if the first command completes successfully. For example, <code>first_command &amp;&amp; second_command</code> will only execute <code>second_command</code> if <code>first_command</code> exits with a status of 0 (which indicates success in Unix-like systems).</li>
 </ul>
+<h2 id="Special-parameters"><a href="#Special-parameters" class="headerlink" title="Special parameters"></a>Special parameters</h2><p><span class="exturl" data-url="aHR0cHM6Ly90aXN3d3cuY2FzZS5lZHUvcGhwL2NoZXQvYmFzaC9iYXNocmVmLmh0bWwjU3BlY2lhbC1QYXJhbWV0ZXJz">https://tiswww.case.edu/php/chet/bash/bashref.html#Special-Parameters<i class="fa fa-external-link-alt"></i></span></p>
+<ul>
+<li><code>$0</code> — the name of the target script</li>
+<li><code>$1</code> — the 1st arg passed</li>
+<li><code>$2</code> — the 2nd arg …</li>
+<li><code>$n</code> — the <code>n</code>th arg …</li>
+<li><code>$#</code> — the number of args</li>
+<li><code>$*</code> — all args as single string</li>
+</ul>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> arg <span class="keyword">in</span> <span class="string">&quot;$*&quot;</span>; <span class="keyword">do</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="variable">$arg</span></span><br><span class="line"><span class="keyword">done</span></span><br><span class="line"><span class="comment"># output: foo bar baz</span></span><br></pre></td></tr></table></figure>
+
+<p><code>$@</code> — all args as list</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> arg <span class="keyword">in</span> <span class="string">&quot;<span class="variable">$@</span>&quot;</span>; <span class="keyword">do</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="variable">$arg</span></span><br><span class="line"><span class="keyword">done</span></span><br><span class="line"><span class="comment"># output:</span></span><br><span class="line"><span class="comment"># foo</span></span><br><span class="line"><span class="comment"># bar</span></span><br><span class="line"><span class="comment"># abaz</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="Test-conditions"><a href="#Test-conditions" class="headerlink" title="Test conditions"></a>Test conditions</h2><p><strong><code>[ ... ]</code></strong> is a synonym for the <strong><code>test</code></strong> command. Inside the brackets, you specify a condition, and based on whether this condition is true or false, you can make decisions in your script.</p>
+<h3 id="Numbers"><a href="#Numbers" class="headerlink" title="Numbers"></a>Numbers</h3><ul>
+<li><strong><code>eq</code></strong>: equal to</li>
+<li><strong><code>ne</code></strong>: not equal to</li>
+<li><strong><code>gt</code></strong>: greater than</li>
+<li><strong><code>ge</code></strong>: greater than or equal to</li>
+<li><strong><code>lt</code></strong>: less than</li>
+<li><strong><code>le</code></strong>: less than or equal to</li>
+</ul>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> [ <span class="string">&quot;<span class="variable">$a</span>&quot;</span> -eq <span class="string">&quot;<span class="variable">$b</span>&quot;</span> ]; <span class="keyword">then</span></span><br><span class="line">  <span class="built_in">echo</span> <span class="string">&quot;a is equal to b&quot;</span></span><br><span class="line"><span class="keyword">fi</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Strings"><a href="#Strings" class="headerlink" title="Strings"></a>Strings</h3><ul>
+<li><strong><code>=</code></strong> or <strong><code>==</code></strong>: check if two strings are equal</li>
+<li><strong><code>!=</code></strong>: check if two strings are not equal</li>
+<li><strong><code>z</code></strong>: check if the string is empty</li>
+<li><strong><code>n</code></strong>: check if the string is not empty</li>
+</ul>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">str1=<span class="string">&quot;hello&quot;</span></span><br><span class="line">str2=<span class="string">&quot;world&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> [ <span class="string">&quot;<span class="variable">$str1</span>&quot;</span> != <span class="string">&quot;<span class="variable">$str2</span>&quot;</span> ]; <span class="keyword">then</span></span><br><span class="line">  <span class="built_in">echo</span> <span class="string">&quot;The strings are different.&quot;</span></span><br><span class="line"><span class="keyword">fi</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="Testing-Files"><a href="#Testing-Files" class="headerlink" title="Testing Files"></a>Testing Files</h2><ul>
+<li><strong><code>e</code></strong>: Check if file exists</li>
+<li><strong><code>f</code></strong>: Check if it’s a regular file (not a directory or device file)</li>
+<li><strong><code>d</code></strong>: Check if it’s a directory</li>
+<li><strong><code>s</code></strong>: Check if file is not empty</li>
+<li><strong><code>r</code></strong>, <strong><code>w</code></strong>, <strong><code>x</code></strong>: Check if file is readable, writable, or executable</li>
+</ul>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">filename=<span class="string">&quot;./my_script.sh&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> [ -f <span class="string">&quot;<span class="variable">$filename</span>&quot;</span> ]; <span class="keyword">then</span></span><br><span class="line">  <span class="built_in">echo</span> <span class="string">&quot;<span class="variable">$filename</span> is a regular file.&quot;</span></span><br><span class="line"><span class="keyword">fi</span></span><br></pre></td></tr></table></figure>
+
+
 <hr>
 <h1 id="Some-Amazing-Sources"><a href="#Some-Amazing-Sources" class="headerlink" title="Some Amazing Sources"></a>Some Amazing Sources</h1><ul>
 <li><span class="exturl" data-url="aHR0cHM6Ly90bGRwLm9yZy9IT1dUTy9CYXNoLVByb2ctSW50cm8tSE9XVE8uaHRtbA==">BASH Programming - Introduction HOW-TO<i class="fa fa-external-link-alt"></i></span></li>
 </ul>
-<hr>
-<h1 id="Network-related"><a href="#Network-related" class="headerlink" title="Network related"></a>Network related</h1><h2 id="Network-IP-vs-Router-IP"><a href="#Network-IP-vs-Router-IP" class="headerlink" title="Network IP vs Router IP"></a>Network IP vs Router IP</h2><h3 id="Analogy-Your-Home-as-a-Network"><a href="#Analogy-Your-Home-as-a-Network" class="headerlink" title="Analogy: Your Home as a Network"></a>Analogy: Your Home as a Network</h3><p>Think of your <strong>home</strong> as your local network, and your <strong>home’s postal address</strong> as your router’s <strong>public IP address</strong>.</p>
-<ol>
-<li><p><strong>Public IP Address (Router’s External IP)</strong></p>
-<ul>
-<li><strong>Analogy</strong>: Your home’s postal address (e.g., 219.75.101.20)</li>
-<li>This address is how the outside world (e.g., mail delivery, friends visiting) finds your home. When you send a letter (data) from your home, it goes out with this address, and any mail sent to this address from the outside (such as a response from a website) knows how to reach your home.</li>
-<li><strong>Security Note</strong>: Just as your home’s address can be seen by anyone, your public IP can be seen by anyone on the internet. This is why you wouldn’t put sensitive information like your security codes or safe keys publicly accessible at your postal address.</li>
-</ul>
-</li>
-<li><p><strong>Local Network IPs (Private IPs)</strong></p>
-<ul>
-<li><strong>Analogy</strong>: Rooms within your home (e.g., 192.168.1.72)</li>
-<li>Each device in your network is like a room in your house. Inside your home, each room has its own specific purpose and place, much like how each device in your network has its own specific IP address. These addresses only make sense inside your network (home).</li>
-<li><strong>Security Note</strong>: Just as someone can’t directly access a room in your house unless they first come to your main door (router), devices from the internet cannot directly access a device on your private network without going through the router, which acts as a gatekeeper.</li>
-</ul>
-</li>
-</ol>
-<h3 id="Accessing-the-Router"><a href="#Accessing-the-Router" class="headerlink" title="Accessing the Router:"></a>Accessing the Router:</h3><ul>
-<li><strong>SSH to Router</strong>: If SSH is set up and accessible from the internet (usually not recommended for security reasons), someone could potentially attempt to SSH into your router using its public IP address (e.g., 219.75.101.20). This would be akin to someone coming to your home’s main entrance and trying to unlock the door.</li>
-<li><strong>Local Access</strong>: Accessing your router’s settings is typically done from within the network using its private IP (like <code>192.168.1.1</code>), similar to how you’d manage things within your house internally.</li>
-</ul>
-<p><strong>Security Considerations</strong>: Just as you would keep your home secure by locking doors and perhaps having a security system, your network should be secured. This includes using strong passwords, updating firmware, disabling unnecessary external access (like SSH from the internet), and using firewalls.</p>
-<p>This analogy simplifies a bit, but it should help illustrate the basic concepts of how public and private IP addresses function in relation to your network (home) and the internet (outside world).</p>
 <hr>
 
     </div>
@@ -647,6 +675,9 @@
   <div class="popular-posts-header">Related Posts</div>
   <ul class="popular-posts">
     <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="/blog/2023-12-12/my-journey-with-hexo-building-a-blog-from-scratch/" rel="bookmark">My Journey with Hexo - Building a Blog from Scratch</a></div>
+    </li>
+    <li class="popular-posts-item">
       <div class="popular-posts-title"><a href="/blog/2023-12-12/24-hours-harvard-cs50-by-david-malan/" rel="bookmark">24 Hours Harvard CS50 By David Malan</a></div>
     </li>
     <li class="popular-posts-item">
@@ -654,9 +685,6 @@
     </li>
     <li class="popular-posts-item">
       <div class="popular-posts-title"><a href="/blog/2024-04-11/javascript/" rel="bookmark">JavaScript</a></div>
-    </li>
-    <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="/blog/2023-12-12/my-journey-with-hexo-building-a-blog-from-scratch/" rel="bookmark">My Journey with Hexo - Building a Blog from Scratch</a></div>
     </li>
     <li class="popular-posts-item">
       <div class="popular-posts-title"><a href="/blog/2023-12-13/python/" rel="bookmark">Python</a></div>
@@ -761,7 +789,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Efficiency-is-key"><span class="nav-number">1.</span> <span class="nav-text">Efficiency is key!</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#ls-Options"><span class="nav-number">1.1.</span> <span class="nav-text">ls - Options:</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Reading-the-Manual"><span class="nav-number">2.</span> <span class="nav-text">Reading the Manual</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Tips-in-Linux-Understand-Your-Server"><span class="nav-number">3.</span> <span class="nav-text">Tips in Linux: Understand Your Server</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#OS-Details-Check"><span class="nav-number">3.1.</span> <span class="nav-text">OS Details Check</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Kernel-Version"><span class="nav-number">3.2.</span> <span class="nav-text">Kernel Version</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CPU-Info"><span class="nav-number">3.3.</span> <span class="nav-text">CPU Info</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Memory-Info"><span class="nav-number">3.4.</span> <span class="nav-text">Memory Info</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Disk-Space"><span class="nav-number">3.5.</span> <span class="nav-text">Disk Space</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Network-Interfaces"><span class="nav-number">3.6.</span> <span class="nav-text">Network Interfaces</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#System-Services"><span class="nav-number">3.7.</span> <span class="nav-text">System Services</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#z-Powerful-navigator"><span class="nav-number">4.</span> <span class="nav-text">z - Powerful navigator</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Installation-Set-up"><span class="nav-number">4.1.</span> <span class="nav-text">Installation &amp; Set-up</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#grep"><span class="nav-number">5.</span> <span class="nav-text">grep</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Simple-usage"><span class="nav-number">5.1.</span> <span class="nav-text">Simple usage:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Insensitive-case"><span class="nav-number">5.2.</span> <span class="nav-text">Insensitive case:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SRE%E2%80%99s-must-know"><span class="nav-number">5.3.</span> <span class="nav-text">SRE’s must know</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#wc-Word-Count"><span class="nav-number">6.</span> <span class="nav-text">wc - Word Count</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#wc-Options"><span class="nav-number">6.1.</span> <span class="nav-text">wc - Options:</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#SSH"><span class="nav-number">7.</span> <span class="nav-text">SSH</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#mkdir"><span class="nav-number">8.</span> <span class="nav-text">mkdir</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#recursively"><span class="nav-number">8.1.</span> <span class="nav-text">recursively</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#as-known-as-source"><span class="nav-number">9.</span> <span class="nav-text">. as known as source</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#awk"><span class="nav-number">10.</span> <span class="nav-text">awk</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#curl"><span class="nav-number">11.</span> <span class="nav-text">curl</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#chmod"><span class="nav-number">12.</span> <span class="nav-text">chmod</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#gs-%E2%80%94-GhostScript"><span class="nav-number">13.</span> <span class="nav-text">gs — GhostScript</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#unzip"><span class="nav-number">14.</span> <span class="nav-text">unzip</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Unzip-every-zipped-folder-in-a-directory"><span class="nav-number">14.1.</span> <span class="nav-text">Unzip every zipped folder in a directory</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#nbconvert"><span class="nav-number">15.</span> <span class="nav-text">nbconvert</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Convert-Jupyter-notebook-to-specific-file-type"><span class="nav-number">15.1.</span> <span class="nav-text">Convert Jupyter notebook to specific file type</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#brew"><span class="nav-number">16.</span> <span class="nav-text">brew</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Syntax-Notes"><span class="nav-number">17.</span> <span class="nav-text">Syntax Notes</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Explanation-of-and"><span class="nav-number">17.1.</span> <span class="nav-text">Explanation of &amp; and &amp;&amp;</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Some-Amazing-Sources"><span class="nav-number">18.</span> <span class="nav-text">Some Amazing Sources</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Network-related"><span class="nav-number">19.</span> <span class="nav-text">Network related</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Network-IP-vs-Router-IP"><span class="nav-number">19.1.</span> <span class="nav-text">Network IP vs Router IP</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Analogy-Your-Home-as-a-Network"><span class="nav-number">19.1.1.</span> <span class="nav-text">Analogy: Your Home as a Network</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Accessing-the-Router"><span class="nav-number">19.1.2.</span> <span class="nav-text">Accessing the Router:</span></a></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Efficiency-is-key"><span class="nav-number">1.</span> <span class="nav-text">Efficiency is key!</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#ls-Options"><span class="nav-number">1.1.</span> <span class="nav-text">ls - Options:</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Reading-the-Manual"><span class="nav-number">2.</span> <span class="nav-text">Reading the Manual</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Tips-in-Linux-Understand-Your-Server"><span class="nav-number">3.</span> <span class="nav-text">Tips in Linux: Understand Your Server</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#OS-Details-Check"><span class="nav-number">3.1.</span> <span class="nav-text">OS Details Check</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Kernel-Version"><span class="nav-number">3.2.</span> <span class="nav-text">Kernel Version</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CPU-Info"><span class="nav-number">3.3.</span> <span class="nav-text">CPU Info</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Memory-Info"><span class="nav-number">3.4.</span> <span class="nav-text">Memory Info</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Disk-Space"><span class="nav-number">3.5.</span> <span class="nav-text">Disk Space</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Network-Interfaces"><span class="nav-number">3.6.</span> <span class="nav-text">Network Interfaces</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#System-Services"><span class="nav-number">3.7.</span> <span class="nav-text">System Services</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#z-Powerful-navigator"><span class="nav-number">4.</span> <span class="nav-text">z - Powerful navigator</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Installation-Set-up"><span class="nav-number">4.1.</span> <span class="nav-text">Installation &amp; Set-up</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#grep"><span class="nav-number">5.</span> <span class="nav-text">grep</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Simple-usage"><span class="nav-number">5.1.</span> <span class="nav-text">Simple usage:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Insensitive-case"><span class="nav-number">5.2.</span> <span class="nav-text">Insensitive case:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SRE%E2%80%99s-must-know"><span class="nav-number">5.3.</span> <span class="nav-text">SRE’s must know</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#wc-Word-Count"><span class="nav-number">6.</span> <span class="nav-text">wc - Word Count</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#wc-Options"><span class="nav-number">6.1.</span> <span class="nav-text">wc - Options:</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#SSH"><span class="nav-number">7.</span> <span class="nav-text">SSH</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#mkdir"><span class="nav-number">8.</span> <span class="nav-text">mkdir</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#recursively"><span class="nav-number">8.1.</span> <span class="nav-text">recursively</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#as-known-as-source"><span class="nav-number">9.</span> <span class="nav-text">. as known as source</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#awk"><span class="nav-number">10.</span> <span class="nav-text">awk</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Basics-of-awk"><span class="nav-number">10.1.</span> <span class="nav-text">Basics of awk</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#curl"><span class="nav-number">11.</span> <span class="nav-text">curl</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#chmod"><span class="nav-number">12.</span> <span class="nav-text">chmod</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#gs-%E2%80%94-GhostScript"><span class="nav-number">13.</span> <span class="nav-text">gs — GhostScript</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#unzip"><span class="nav-number">14.</span> <span class="nav-text">unzip</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Unzip-every-zipped-folder-in-a-directory"><span class="nav-number">14.1.</span> <span class="nav-text">Unzip every zipped folder in a directory</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#nbconvert"><span class="nav-number">15.</span> <span class="nav-text">nbconvert</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Convert-Jupyter-notebook-to-specific-file-type"><span class="nav-number">15.1.</span> <span class="nav-text">Convert Jupyter notebook to specific file type</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#brew"><span class="nav-number">16.</span> <span class="nav-text">brew</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Syntax-Notes"><span class="nav-number">17.</span> <span class="nav-text">Syntax Notes</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Explanation-of-and"><span class="nav-number">17.1.</span> <span class="nav-text">Explanation of &amp; and &amp;&amp;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Special-parameters"><span class="nav-number">17.2.</span> <span class="nav-text">Special parameters</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Test-conditions"><span class="nav-number">17.3.</span> <span class="nav-text">Test conditions</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Numbers"><span class="nav-number">17.3.1.</span> <span class="nav-text">Numbers</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Strings"><span class="nav-number">17.3.2.</span> <span class="nav-text">Strings</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Testing-Files"><span class="nav-number">17.4.</span> <span class="nav-text">Testing Files</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Some-Amazing-Sources"><span class="nav-number">18.</span> <span class="nav-text">Some Amazing Sources</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -775,14 +803,14 @@
       <div class="site-state-item site-state-posts">
           <a href="/blog/archives/">
         
-          <span class="site-state-item-count">19</span>
+          <span class="site-state-item-count">20</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/blog/categories/">
           
-        <span class="site-state-item-count">32</span>
+        <span class="site-state-item-count">33</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
@@ -829,7 +857,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">50 mins.</span>
+    <span title="Reading time total">51 mins.</span>
 </div>
 
         
