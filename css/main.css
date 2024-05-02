@@ -1156,6 +1156,20 @@ pre .javascript .function {
     padding: 0 1.2rem 0 0;
   }
 }
+::-webkit-scrollbar {
+  height: 0.6rem;
+  width: 0.5rem;
+}
+::-webkit-scrollbar-track {
+  background: #fff;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(198,0,0,0.192);
+  border-radius: 2rem;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #c60000;
+}
 .menu {
   margin: 0.6rem 0 0.8rem;
   padding-left: 0;
@@ -1335,7 +1349,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #ffa7d0;
+  background: #cdffe3;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
