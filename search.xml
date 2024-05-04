@@ -77,7 +77,7 @@
       <link href="/blog/2024-04-28/my-hexo-notebook/"/>
       <url>/blog/2024-04-28/my-hexo-notebook/</url>
       
-        <content type="html"><![CDATA[<p>wip …</p><span id="more"></span><ul><li>If you have your <code>tags/categories</code> name changed from “ABC” to “abc”, it will not reflected immediately, the folder will stay the same name. The trick I found so far is to rename to something else first and change it back to the lowercase. E.g. ABC -&gt; ABC123 -&gt; abc<br>what</li><li>how i added view count globe - <span class="exturl" data-url="aHR0cHM6Ly93d3cucmV2b2x2ZXJtYXBzLmNvbS8/dGFyZ2V0PXNldHVwMmQ=">https://www.revolvermaps.com/?target=setup2d<i class="fa fa-external-link-alt"></i></span> in <code>themes/next/layout/_partials/sidebar/site-overview.swig</code> - idea from <span class="exturl" data-url="aHR0cHM6Ly9xaXV5aXd1LmdpdGh1Yi5pby8yMDE5LzAxLzI2L0hleG8tVmlldy8=">https://qiuyiwu.github.io/2019/01/26/Hexo-View/<i class="fa fa-external-link-alt"></i></span></li></ul>]]></content>
+        <content type="html"><![CDATA[<p>wip …</p><span id="more"></span><ul><li>If you have your <code>tags/categories</code> name changed from “ABC” to “abc”, it will not reflected immediately, the folder will stay the same name. The trick I found so far is to rename to something else first and change it back to the lowercase. E.g. ABC -&gt; ABC123 -&gt; abc<br>what</li><li>how i added view count globe - <span class="exturl" data-url="aHR0cHM6Ly93d3cucmV2b2x2ZXJtYXBzLmNvbS8/dGFyZ2V0PXNldHVwMmQ=">https://www.revolvermaps.com/?target=setup2d<i class="fa fa-external-link-alt"></i></span> in <code>themes/next/layout/_partials/sidebar/site-overview.swig</code> - idea from <span class="exturl" data-url="aHR0cHM6Ly9xaXV5aXd1LmdpdGh1Yi5pby8yMDE5LzAxLzI2L0hleG8tVmlldy8=">https://qiuyiwu.github.io/2019/01/26/Hexo-View/<i class="fa fa-external-link-alt"></i></span></li><li>firebase at themes&#x2F;next&#x2F;layout&#x2F;_partials&#x2F;head&#x2F;head-unique.swig</li></ul>]]></content>
       
       
       
@@ -260,9 +260,9 @@
           
           <category> Personal Development </category>
           
-          <category> Life Lessons </category>
-          
           <category> Career Development </category>
+          
+          <category> Life Lessons </category>
           
           <category> Business Insights </category>
           
@@ -341,9 +341,9 @@
             
             <tag> note </tag>
             
-            <tag> backend </tag>
-            
             <tag> database-design </tag>
+            
+            <tag> backend </tag>
             
         </tags>
       
@@ -361,9 +361,9 @@
       
       <categories>
           
-          <category> Software Engineering </category>
-          
           <category> Web Development </category>
+          
+          <category> Software Engineering </category>
           
           <category> Front-end </category>
           
