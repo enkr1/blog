@@ -1173,6 +1173,11 @@ pre .javascript .function {
 p {
   font-optical-sizing: auto;
 }
+.globe-view-counter-container {
+  margin: 1rem 0 0;
+  border-radius: 1.1rem;
+  overflow: hidden;
+}
 .menu {
   margin: 0.6rem 0 0.8rem;
   padding-left: 0;
@@ -1352,7 +1357,7 @@ p {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #ffdfff;
+  background: #2ed20b;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2806,7 +2811,7 @@ ul.breadcrumb li + li:last-child {
   box-sizing: border-box;
   color: var(--text-color);
   width: 300px;
-  padding: 1.2rem 1rem 1.5rem;
+  padding: 1.2rem 1rem 1.2rem;
   opacity: 0;
 }
 .sidebar-inner.affix {

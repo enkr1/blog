@@ -98,16 +98,12 @@
     <link href="https://enkr1.github.io/blog/2024-04-28/my-hexo-notebook/"/>
     <id>https://enkr1.github.io/blog/2024-04-28/my-hexo-notebook/</id>
     <published>2024-04-28T14:43:18.000Z</published>
-    <updated>2024-05-04T10:58:20.766Z</updated>
+    <updated>2024-05-04T11:11:29.317Z</updated>
     
-    <content type="html"><![CDATA[<ol><li>If you have your <code>tags/categories</code> name changed from “ABC” to “abc”, it will not reflected immediately, the folder will stay the same name. The trick I found so far is to rename to something else first and change it back to the lowercase. E.g. ABC -&gt; ABC123 -&gt; abc<br>what</li></ol>]]></content>
+    <content type="html"><![CDATA[<p>wip …</p><span id="more"></span><ul><li>If you have your <code>tags/categories</code> name changed from “ABC” to “abc”, it will not reflected immediately, the folder will stay the same name. The trick I found so far is to rename to something else first and change it back to the lowercase. E.g. ABC -&gt; ABC123 -&gt; abc<br>what</li><li>how i added view count globe - <span class="exturl" data-url="aHR0cHM6Ly93d3cucmV2b2x2ZXJtYXBzLmNvbS8/dGFyZ2V0PXNldHVwMmQ=">https://www.revolvermaps.com/?target=setup2d<i class="fa fa-external-link-alt"></i></span> in <code>themes/next/layout/_partials/sidebar/site-overview.swig</code></li></ul>]]></content>
     
     
-      
-      
-    <summary type="html">&lt;ol&gt;
-&lt;li&gt;If you have your &lt;code&gt;tags/categories&lt;/code&gt; name changed from “ABC” to “abc”, it will not reflected immediately, the folder will </summary>
-      
+    <summary type="html">&lt;p&gt;wip …&lt;/p&gt;</summary>
     
     
     
@@ -274,9 +270,9 @@
     
     <category term="Personal Development" scheme="https://enkr1.github.io/blog/categories/Personal-Development/"/>
     
-    <category term="Life Lessons" scheme="https://enkr1.github.io/blog/categories/Personal-Development/Life-Lessons/"/>
-    
     <category term="Career Development" scheme="https://enkr1.github.io/blog/categories/Career-Development/"/>
+    
+    <category term="Life Lessons" scheme="https://enkr1.github.io/blog/categories/Personal-Development/Life-Lessons/"/>
     
     <category term="Business Insights" scheme="https://enkr1.github.io/blog/categories/Career-Development/Business-Insights/"/>
     
