@@ -758,10 +758,16 @@ TODO: How to do this?
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: Wed 1 May 2024 23:11:21 PM / Modified: 23:13:30 PM" itemprop="dateCreated datePublished" datetime="2024-05-01T23:11:21+08:00">Wed 1 May 2024</time>
+              <time title="Created: Wed 1 May 2024 23:11:21 PM" itemprop="dateCreated datePublished" datetime="2024-05-01T23:11:21+08:00">Wed 1 May 2024</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: Sun 5 May 2024 06:38:27 AM" itemprop="dateModified" datetime="2024-05-05T06:38:27+08:00">Sun 5 May 2024</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -795,7 +801,7 @@ TODO: How to do this?
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-              <span>406</span>
+              <span>408</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
@@ -813,30 +819,15 @@ TODO: How to do this?
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="Network-IP-vs-Router-IP"><a href="#Network-IP-vs-Router-IP" class="headerlink" title="Network IP vs Router IP"></a>Network IP vs Router IP</h1><h2 id="Analogy-Your-Home-as-a-Network"><a href="#Analogy-Your-Home-as-a-Network" class="headerlink" title="Analogy: Your Home as a Network"></a>Analogy: Your Home as a Network</h2><p>Think of your <strong>home</strong> as your local network, and your <strong>home’s postal address</strong> as your router’s <strong>public IP address</strong>.</p>
-<ol>
-<li><p><strong>Public IP Address (Router’s External IP)</strong></p>
-<ul>
-<li><strong>Analogy</strong>: Your home’s postal address (e.g., 219.75.101.20)</li>
-<li>This address is how the outside world (e.g., mail delivery, friends visiting) finds your home. When you send a letter (data) from your home, it goes out with this address, and any mail sent to this address from the outside (such as a response from a website) knows how to reach your home.</li>
-<li><strong>Security Note</strong>: Just as your home’s address can be seen by anyone, your public IP can be seen by anyone on the internet. This is why you wouldn’t put sensitive information like your security codes or safe keys publicly accessible at your postal address.</li>
-</ul>
-</li>
-<li><p><strong>Local Network IPs (Private IPs)</strong></p>
-<ul>
-<li><strong>Analogy</strong>: Rooms within your home (e.g., 192.168.1.72)</li>
-<li>Each device in your network is like a room in your house. Inside your home, each room has its own specific purpose and place, much like how each device in your network has its own specific IP address. These addresses only make sense inside your network (home).</li>
-<li><strong>Security Note</strong>: Just as someone can’t directly access a room in your house unless they first come to your main door (router), devices from the internet cannot directly access a device on your private network without going through the router, which acts as a gatekeeper.</li>
-</ul>
-</li>
-</ol>
-<h3 id="Accessing-the-Router"><a href="#Accessing-the-Router" class="headerlink" title="Accessing the Router:"></a>Accessing the Router:</h3><ul>
-<li><strong>SSH to Router</strong>: If SSH is set up and accessible from the internet (usually not recommended for security reasons), someone could potentially attempt to SSH into your router using its public IP address (e.g., 219.75.101.20). This would be akin to someone coming to your home’s main entrance and trying to unlock the door.</li>
-<li><strong>Local Access</strong>: Accessing your router’s settings is typically done from within the network using its private IP (like <code>192.168.1.1</code>), similar to how you’d manage things within your house internally.</li>
-</ul>
-<p><strong>Security Considerations</strong>: Just as you would keep your home secure by locking doors and perhaps having a security system, your network should be secured. This includes using strong passwords, updating firmware, disabling unnecessary external access (like SSH from the internet), and using firewalls.</p>
-<p>This analogy simplifies a bit, but it should help illustrate the basic concepts of how public and private IP addresses function in relation to your network (home) and the internet (outside world).</p>
-
+          <p>wip …</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/blog/2024-05-01/computer-networking-notebook/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
