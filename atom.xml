@@ -6,7 +6,7 @@
   <link href="https://enkr1.github.io/blog/atom.xml" rel="self"/>
   
   <link href="https://enkr1.github.io/blog/"/>
-  <updated>2024-05-04T22:27:16.698Z</updated>
+  <updated>2024-05-04T22:32:54.069Z</updated>
   <id>https://enkr1.github.io/blog/</id>
   
   <author>
@@ -21,18 +21,18 @@
     <link href="https://enkr1.github.io/blog/2024-05-04/introduction-to-data-science-ai/"/>
     <id>https://enkr1.github.io/blog/2024-05-04/introduction-to-data-science-ai/</id>
     <published>2024-05-04T12:04:59.000Z</published>
-    <updated>2024-05-04T22:27:16.698Z</updated>
+    <updated>2024-05-04T22:32:54.069Z</updated>
     
-    <content type="html"><![CDATA[<p>Welcome to my exploration into the incredible worlds of Data Science and Artificial Intelligence (AI)—arenas that are totally reshaping how we interact with technology, business, and beyond. I am really excited to share this learning journey with you as we dive into the nuts and bolts of these fascinating fields.</p><span id="more"></span><h2 id="What’s-the-Deal-with-DS-AI"><a href="#What’s-the-Deal-with-DS-AI" class="headerlink" title="What’s the Deal with DS &amp; AI?"></a>What’s the Deal with DS &amp; AI?</h2><p>So, what exactly are Data Science and AI? They are like the superheroes of the tech world. Data Science dives into massive datasets to fish out insights that help us make smart decisions, while AI is all about crafting cool systems that <em>can think and act like humans</em>. Seriously, together, they’re changing the game in pretty much every industry.</p><h2 id="Quizzes"><a href="#Quizzes" class="headerlink" title="Quizzes"></a>Quizzes</h2><p>I have compiled some practical casual quizzes along the way during the session, I thought it would be fun to share as well:</p><ol><li><p><strong>Inferential Data Science</strong>:</p><ul><li><strong>Question</strong>: What’s the scoop on the inferential aspect of data science?</li><li><strong>Answer</strong>: It’s about using stats to guess stuff about a whole population from a tiny sample. Super handy for predicting trends and behaviors.</li></ul></li><li><p><strong>Limits of Guesswork</strong>:</p><ul><li><strong>Question</strong>: What trips up inferential thinking?</li><li><strong>Answer</strong>: You need good data and solid know-how of the subject. Missing these? Well, your guesses might be way off.</li></ul></li><li><p><strong>Computational Paradigm</strong>:</p><ul><li><strong>Question</strong>: What’s a big deal about the computational approach in data science?</li><li><strong>Answer</strong>: It’s all about letting computers do the heavy lifting to process and analyze data faster and more accurately.</li></ul></li><li><p><strong>Aiming High in Computations</strong>:</p><ul><li><strong>Question</strong>: What’s the endgame for computational data science?</li><li><strong>Answer</strong>: To cook up some smart algorithms that streamline how we handle and make sense of data.</li></ul></li><li><p><strong>When Things Get Tricky</strong>:</p><ul><li><strong>Question</strong>: What’s the headache with computational thinking?</li><li><strong>Answer</strong>: The bigger or more complex the data, the tougher the computing challenge. You need some serious computing power to tackle it.</li></ul></li><li><p><strong>Example Time!</strong>:</p><ul><li><strong>Question</strong>: Can you think of a real-world computational headache?</li><li><strong>Answer</strong>: Think about planning the quickest delivery routes for trucks or finding the fastest flight path. Yep, that’s the kind of puzzle we solve here.</li></ul></li></ol><h2 id="Wrapping-Up-What’s-Next-on-Our-Adventure"><a href="#Wrapping-Up-What’s-Next-on-Our-Adventure" class="headerlink" title="Wrapping Up: What’s Next on Our Adventure"></a>Wrapping Up: What’s Next on Our Adventure</h2><p>As we unpack these basic concepts, I am hoping to spark some cool discussions and get us thinking about how we can use these tools in real-life situations. I am pumped to see where this adventure takes us and to share any cool discoveries along the way.</p>]]></content>
+    <content type="html"><![CDATA[<p>Welcome to my exploration into the incredible worlds of Data Science and Artificial Intelligence (AI)—arenas that are totally reshaping how we interact with technology, business, and beyond. I am really excited to share this learning journey with you as we dive into the nuts and bolts of these fascinating fields.</p><span id="more"></span><h2 id="What’s-the-Deal-with-DS-AI"><a href="#What’s-the-Deal-with-DS-AI" class="headerlink" title="What’s the Deal with DS &amp; AI?"></a>What’s the Deal with DS &amp; AI?</h2><p>So, what exactly are Data Science and AI? They are like the superheroes of the tech world. Data Science dives into massive datasets to fish out insights that help us make smart decisions, while AI is all about crafting cool systems that <em>can think and act like humans</em>. Seriously, together, they’re changing the game in pretty much every industry.</p><h2 id="Quizzes"><a href="#Quizzes" class="headerlink" title="Quizzes"></a>Quizzes</h2><p>I have compiled some practical casual quizzes along the way during the session, I thought it would be fun to share as well:</p><ol><li><p><strong>Inferential Data Science</strong>:</p><ul><li><strong>Question</strong>: What’s the scoop on the inferential aspect of data science?</li><li><strong>Answer</strong>: It’s about using stats to guess stuff about a whole population from a tiny sample. Super handy for predicting trends and behaviours.</li></ul></li><li><p><strong>Limits of Guesswork</strong>:</p><ul><li><strong>Question</strong>: What trips up inferential thinking?</li><li><strong>Answer</strong>: You need good data and solid know-how of the subject. Missing these? Well, your guesses might be way off.</li></ul></li><li><p><strong>Computational Paradigm</strong>:</p><ul><li><strong>Question</strong>: What’s a big deal about the computational approach in data science?</li><li><strong>Answer</strong>: It’s all about letting computers do the heavy lifting to process and analyse data faster and more accurately.</li></ul></li><li><p><strong>Aiming High in Computations</strong>:</p><ul><li><strong>Question</strong>: What’s the endgame for computational data science?</li><li><strong>Answer</strong>: To cook up some smart algorithms that streamline how we handle and make sense of data.</li></ul></li><li><p><strong>When Things Get Tricky</strong>:</p><ul><li><strong>Question</strong>: What’s the headache with computational thinking?</li><li><strong>Answer</strong>: The bigger or more complex the data, the tougher the computing challenge. You need some serious computing power to tackle it.</li></ul></li><li><p><strong>Example Time!</strong>:</p><ul><li><strong>Question</strong>: Can you think of a real-world computational headache?</li><li><strong>Answer</strong>: Think about planning the quickest delivery routes for trucks or finding the fastest flight path. Yep, that’s the kind of puzzle we solve here.</li></ul></li></ol><h2 id="Wrapping-Up-What’s-Next-on-Our-Adventure"><a href="#Wrapping-Up-What’s-Next-on-Our-Adventure" class="headerlink" title="Wrapping Up: What’s Next on Our Adventure"></a>Wrapping Up: What’s Next on Our Adventure</h2><p>As I jot down these foundational ideas, I am really excited to dive deeper into how Data Science and AI can transform everyday challenges into opportunities for innovation. It’s like being on a treasure hunt where each concept and tool unlocks a part of the map. I am looking forward to sharing these discoveries and insights as they unfold, making this notebook not just informative, but also a fun ride through the tech landscape.</p><p>Stay tuned for more snippets from my Data Science and AI diary. Let’s keep making learning an adventure!</p>]]></content>
     
     
     <summary type="html">&lt;p&gt;Welcome to my exploration into the incredible worlds of Data Science and Artificial Intelligence (AI)—arenas that are totally reshaping how we interact with technology, business, and beyond. I am really excited to share this learning journey with you as we dive into the nuts and bolts of these fascinating fields.&lt;/p&gt;</summary>
     
     
     
-    <category term="Software Engineering" scheme="https://enkr1.github.io/blog/categories/Software-Engineering/"/>
-    
     <category term="Personal Development" scheme="https://enkr1.github.io/blog/categories/Personal-Development/"/>
+    
+    <category term="Software Engineering" scheme="https://enkr1.github.io/blog/categories/Software-Engineering/"/>
     
     <category term="Online Courses" scheme="https://enkr1.github.io/blog/categories/Personal-Development/Online-Courses/"/>
     
@@ -247,9 +247,9 @@
     
     
     
-    <category term="Software Engineering" scheme="https://enkr1.github.io/blog/categories/Software-Engineering/"/>
-    
     <category term="Personal Development" scheme="https://enkr1.github.io/blog/categories/Personal-Development/"/>
+    
+    <category term="Software Engineering" scheme="https://enkr1.github.io/blog/categories/Software-Engineering/"/>
     
     <category term="Online Courses" scheme="https://enkr1.github.io/blog/categories/Personal-Development/Online-Courses/"/>
     
@@ -401,9 +401,9 @@
     
     <category term="note" scheme="https://enkr1.github.io/blog/tags/note/"/>
     
-    <category term="backend" scheme="https://enkr1.github.io/blog/tags/backend/"/>
-    
     <category term="database-design" scheme="https://enkr1.github.io/blog/tags/database-design/"/>
+    
+    <category term="backend" scheme="https://enkr1.github.io/blog/tags/backend/"/>
     
   </entry>
   
@@ -421,9 +421,9 @@
     
     
     
-    <category term="Software Engineering" scheme="https://enkr1.github.io/blog/categories/Software-Engineering/"/>
-    
     <category term="Web Development" scheme="https://enkr1.github.io/blog/categories/Web-Development/"/>
+    
+    <category term="Software Engineering" scheme="https://enkr1.github.io/blog/categories/Software-Engineering/"/>
     
     <category term="Front-end" scheme="https://enkr1.github.io/blog/categories/Web-Development/Front-end/"/>
     
