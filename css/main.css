@@ -1170,6 +1170,9 @@ pre .javascript .function {
 ::-webkit-scrollbar-thumb:hover {
   background: #c60000;
 }
+p {
+  font-optical-sizing: auto;
+}
 .menu {
   margin: 0.6rem 0 0.8rem;
   padding-left: 0;
@@ -1349,7 +1352,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #53e51c;
+  background: #ffdfff;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
