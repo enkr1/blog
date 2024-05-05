@@ -1357,7 +1357,7 @@ p {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #59ff13;
+  background: #ec86ff;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2080,6 +2080,7 @@ p {
   display: inline-block;
   position: relative;
   vertical-align: top;
+  font-size: 2.2rem;
 }
 .posts-expand .post-title-link::first-letter {
   display: block;
