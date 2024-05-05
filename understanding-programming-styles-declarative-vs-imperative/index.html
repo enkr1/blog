@@ -31,7 +31,7 @@
 <meta property="og:description" content="Programming isn’t just about writing code; it’s about choosing the right approach to solve a problem effectively and efficiently. Today, we’ll delve into two fundamental programming styles: Declarativ">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2024-04-24T16:56:04.000Z">
-<meta property="article:modified_time" content="2024-04-24T16:59:24.860Z">
+<meta property="article:modified_time" content="2024-05-05T02:05:21.429Z">
 <meta property="article:author" content="Jing Hui PANG | 彭竞辉 | ENKR">
 <meta property="article:tag" content="programming">
 <meta property="article:tag" content="software-development">
@@ -197,7 +197,7 @@ TODO: How to do this?
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/blog/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">27</span></a>
+    <a href="/blog/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">28</span></a>
 
   </li>
         <li class="menu-item menu-item-history">
@@ -288,10 +288,16 @@ TODO: How to do this?
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: Thu 25 April 2024 00:56:04 AM / Modified: 00:59:24 AM" itemprop="dateCreated datePublished" datetime="2024-04-25T00:56:04+08:00">Thu 25 April 2024</time>
+              <time title="Created: Thu 25 April 2024 00:56:04 AM" itemprop="dateCreated datePublished" datetime="2024-04-25T00:56:04+08:00">Thu 25 April 2024</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: Sun 5 May 2024 10:05:21 AM" itemprop="dateModified" datetime="2024-05-05T10:05:21+08:00">Sun 5 May 2024</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -346,25 +352,25 @@ TODO: How to do this?
         <p>Programming isn’t just about writing code; it’s about choosing the right approach to solve a problem effectively and efficiently. Today, we’ll delve into two fundamental programming styles: Declarative and Imperative. Each style has its philosophies, methodologies, and uses, which can greatly influence your project’s design and maintenance.</p>
 <span id="more"></span>
 
-<h1 id="Declarative-Programming-Style"><a href="#Declarative-Programming-Style" class="headerlink" title="Declarative Programming Style"></a>Declarative Programming Style</h1><p>Declarative programming is all about specifying <strong>what</strong> you want to achieve, without having to explicitly describe <strong>how</strong> to accomplish it. This style is more about writing expressions than writing step-by-step commands.</p>
-<h2 id="Characteristics"><a href="#Characteristics" class="headerlink" title="Characteristics:"></a>Characteristics:</h2><ul>
+<h2 id="Declarative-Programming-Style"><a href="#Declarative-Programming-Style" class="headerlink" title="Declarative Programming Style"></a>Declarative Programming Style</h2><p>Declarative programming is all about specifying <strong>what</strong> you want to achieve, without having to explicitly describe <strong>how</strong> to accomplish it. This style is more about writing expressions than writing step-by-step commands.</p>
+<h3 id="Characteristics"><a href="#Characteristics" class="headerlink" title="Characteristics:"></a>Characteristics:</h3><ul>
 <li><strong>High-Level Abstraction:</strong> Details of operations are abstracted away.</li>
 <li><strong>Readability:</strong> Easier to understand, especially for non-programmers.</li>
 <li><strong>Reusability:</strong> Promotes the use of more general solutions.</li>
 </ul>
-<h2 id="Example-in-SQL"><a href="#Example-in-SQL" class="headerlink" title="Example in SQL:"></a>Example in SQL:</h2><p>Consider this SQL query which is a perfect example of declarative programming:</p>
+<h3 id="Example-in-SQL"><a href="#Example-in-SQL" class="headerlink" title="Example in SQL:"></a>Example in SQL:</h3><p>Consider this SQL query which is a perfect example of declarative programming:</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> name, age <span class="keyword">FROM</span> employees <span class="keyword">WHERE</span> age <span class="operator">&gt;=</span> <span class="number">30</span>;</span><br></pre></td></tr></table></figure>
 <p>Here, the command describes what result is needed – employees over 30 – without specifying how to traverse the database tables.</p>
-<h1 id="Imperative-Programming-Style"><a href="#Imperative-Programming-Style" class="headerlink" title="Imperative Programming Style"></a>Imperative Programming Style</h1><p>In contrast, imperative programming focuses on the <strong>how</strong>; it requires the programmer to define explicit steps to achieve a desired outcome.</p>
-<h2 id="Characteristics-1"><a href="#Characteristics-1" class="headerlink" title="Characteristics:"></a>Characteristics:</h2><ul>
+<h2 id="Imperative-Programming-Style"><a href="#Imperative-Programming-Style" class="headerlink" title="Imperative Programming Style"></a>Imperative Programming Style</h2><p>In contrast, imperative programming focuses on the <strong>how</strong>; it requires the programmer to define explicit steps to achieve a desired outcome.</p>
+<h3 id="Characteristics-1"><a href="#Characteristics-1" class="headerlink" title="Characteristics:"></a>Characteristics:</h3><ul>
 <li><strong>Control Flow:</strong> Direct control with commands like loops and conditionals.</li>
 <li><strong>State Changes:</strong> Manipulation of program state via assignments.</li>
 <li><strong>Performance:</strong> Allows fine-tuning, which can lead to more optimized code.</li>
 </ul>
-<h2 id="Example-in-Python"><a href="#Example-in-Python" class="headerlink" title="Example in Python:"></a>Example in Python:</h2><p>Here’s how you would write a program to calculate the factorial of a number using Python, an imperative language:</p>
+<h3 id="Example-in-Python"><a href="#Example-in-Python" class="headerlink" title="Example in Python:"></a>Example in Python:</h3><p>Here’s how you would write a program to calculate the factorial of a number using Python, an imperative language:</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">factorial</span>(<span class="params">n</span>):</span><br><span class="line">    result = <span class="number">1</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, n+<span class="number">1</span>):</span><br><span class="line">        result *= i</span><br><span class="line">    <span class="keyword">return</span> result</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(factorial(<span class="number">5</span>))  <span class="comment"># Output: 120</span></span><br></pre></td></tr></table></figure>
 <p>This snippet shows a clear sequence of operations to compute the factorial.</p>
-<h1 id="Comparative-Analysis"><a href="#Comparative-Analysis" class="headerlink" title="Comparative Analysis"></a>Comparative Analysis</h1><p>To encapsulate the differences, here’s a side-by-side comparison of both programming styles:</p>
+<h2 id="Comparative-Analysis"><a href="#Comparative-Analysis" class="headerlink" title="Comparative Analysis"></a>Comparative Analysis</h2><p>To encapsulate the differences, here’s a side-by-side comparison of both programming styles:</p>
 <table>
 <thead>
 <tr>
@@ -399,7 +405,7 @@ TODO: How to do this?
 <td>C, Java, Python</td>
 </tr>
 </tbody></table>
-<h1 id="Conclusion-Which-to-Use-When"><a href="#Conclusion-Which-to-Use-When" class="headerlink" title="Conclusion: Which to Use When?"></a>Conclusion: Which to Use When?</h1><p>Choosing between declarative and imperative programming depends on the specific needs of your project:</p>
+<h2 id="Conclusion-Which-to-Use-When"><a href="#Conclusion-Which-to-Use-When" class="headerlink" title="Conclusion: Which to Use When?"></a>Conclusion: Which to Use When?</h2><p>Choosing between declarative and imperative programming depends on the specific needs of your project:</p>
 <ul>
 <li>Use <strong>declarative</strong> when you need simplicity and readability, and when the operations are not performance-critical.</li>
 <li>Opt for <strong>imperative</strong> when you require control and when performance optimization is crucial.</li>
@@ -532,7 +538,7 @@ TODO: How to do this?
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Declarative-Programming-Style"><span class="nav-number">1.</span> <span class="nav-text">Declarative Programming Style</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Characteristics"><span class="nav-number">1.1.</span> <span class="nav-text">Characteristics:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Example-in-SQL"><span class="nav-number">1.2.</span> <span class="nav-text">Example in SQL:</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Imperative-Programming-Style"><span class="nav-number">2.</span> <span class="nav-text">Imperative Programming Style</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Characteristics-1"><span class="nav-number">2.1.</span> <span class="nav-text">Characteristics:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Example-in-Python"><span class="nav-number">2.2.</span> <span class="nav-text">Example in Python:</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Comparative-Analysis"><span class="nav-number">3.</span> <span class="nav-text">Comparative Analysis</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Conclusion-Which-to-Use-When"><span class="nav-number">4.</span> <span class="nav-text">Conclusion: Which to Use When?</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Declarative-Programming-Style"><span class="nav-number">1.</span> <span class="nav-text">Declarative Programming Style</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Characteristics"><span class="nav-number">1.1.</span> <span class="nav-text">Characteristics:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Example-in-SQL"><span class="nav-number">1.2.</span> <span class="nav-text">Example in SQL:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Imperative-Programming-Style"><span class="nav-number">2.</span> <span class="nav-text">Imperative Programming Style</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Characteristics-1"><span class="nav-number">2.1.</span> <span class="nav-text">Characteristics:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Example-in-Python"><span class="nav-number">2.2.</span> <span class="nav-text">Example in Python:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Comparative-Analysis"><span class="nav-number">3.</span> <span class="nav-text">Comparative Analysis</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Conclusion-Which-to-Use-When"><span class="nav-number">4.</span> <span class="nav-text">Conclusion: Which to Use When?</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -558,7 +564,7 @@ TODO: How to do this?
       <div class="site-state-item site-state-tags">
             <a href="/blog/tags/">
           
-        <span class="site-state-item-count">27</span>
+        <span class="site-state-item-count">28</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>

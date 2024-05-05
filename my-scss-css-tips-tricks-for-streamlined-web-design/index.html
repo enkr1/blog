@@ -31,7 +31,7 @@
 <meta property="og:description" content="As a software engineer, mastering SCSS and CSS has been a game changer in my web development career. These technologies not only facilitate intricate designs but also optimise functionality and respon">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2024-04-18T17:51:40.000Z">
-<meta property="article:modified_time" content="2024-04-24T16:55:51.639Z">
+<meta property="article:modified_time" content="2024-05-05T02:06:32.024Z">
 <meta property="article:author" content="Jing Hui PANG | 彭竞辉 | ENKR">
 <meta property="article:tag" content="note">
 <meta property="article:tag" content="designing">
@@ -197,7 +197,7 @@ TODO: How to do this?
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/blog/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">27</span></a>
+    <a href="/blog/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">28</span></a>
 
   </li>
         <li class="menu-item menu-item-history">
@@ -296,7 +296,7 @@ TODO: How to do this?
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: Thu 25 April 2024 00:55:51 AM" itemprop="dateModified" datetime="2024-04-25T00:55:51+08:00">Thu 25 April 2024</time>
+                <time title="Modified: Sun 5 May 2024 10:06:32 AM" itemprop="dateModified" datetime="2024-05-05T10:06:32+08:00">Sun 5 May 2024</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -364,12 +364,12 @@ TODO: How to do this?
         <p>As a software engineer, mastering SCSS and CSS has been a game changer in my web development career. These technologies not only facilitate intricate designs but also optimise functionality and responsiveness. This blog post explores some of the powerful SCSS&#x2F;CSS features that have revolutionised how I approach web design.</p>
 <span id="more"></span>
 
-<h1 id="Dynamic-Visual-Effects-with-Mix-Blend-Modes"><a href="#Dynamic-Visual-Effects-with-Mix-Blend-Modes" class="headerlink" title="Dynamic Visual Effects with Mix Blend Modes"></a>Dynamic Visual Effects with Mix Blend Modes</h1><p>The <code>mix-blend-mode</code> property is a CSS gem for creating stunning visual effects by blending elements’ colors with their background in various ways:</p>
+<h2 id="Dynamic-Visual-Effects-with-Mix-Blend-Modes"><a href="#Dynamic-Visual-Effects-with-Mix-Blend-Modes" class="headerlink" title="Dynamic Visual Effects with Mix Blend Modes"></a>Dynamic Visual Effects with Mix Blend Modes</h2><p>The <code>mix-blend-mode</code> property is a CSS gem for creating stunning visual effects by blending elements’ colors with their background in various ways:</p>
 <figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.blend</span> &#123;</span><br><span class="line">  <span class="attribute">mix-blend-mode</span>: exclusion;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>Utilising this property can add an artistic flair to images and text, giving your website a unique aesthetic that stands out.</p>
 <p>ref: <span class="exturl" data-url="aHR0cHM6Ly9jc3MtdHJpY2tzLmNvbS9hbG1hbmFjL3Byb3BlcnRpZXMvbS9taXgtYmxlbmQtbW9kZS8=">https://css-tricks.com/almanac/properties/m/mix-blend-mode/<i class="fa fa-external-link-alt"></i></span></p>
-<h1 id="Ensuring-Text-Clarity-and-Layout-Control"><a href="#Ensuring-Text-Clarity-and-Layout-Control" class="headerlink" title="Ensuring Text Clarity and Layout Control"></a>Ensuring Text Clarity and Layout Control</h1><p>Preventing Text Wrapping with White Space Control:</p>
+<h2 id="Ensuring-Text-Clarity-and-Layout-Control"><a href="#Ensuring-Text-Clarity-and-Layout-Control" class="headerlink" title="Ensuring Text Clarity and Layout Control"></a>Ensuring Text Clarity and Layout Control</h2><p>Preventing Text Wrapping with White Space Control:</p>
 <p>To keep text in a single, unbroken line, especially useful in navigations and button texts:</p>
 <figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">white-space</span>: nowrap;</span><br></pre></td></tr></table></figure>
 <p>ref: <span class="exturl" data-url="aHR0cHM6Ly9zdGFja292ZXJmbG93LmNvbS9xdWVzdGlvbnMvMTc3MDQ1MzkvY3NzLWdldHRpbmctdGV4dC1pbi1vbmUtbGluZS1yYXRoZXItdGhhbi10d28=">https://stackoverflow.com/questions/17704539/css-getting-text-in-one-line-rather-than-two<i class="fa fa-external-link-alt"></i></span></p>
@@ -378,11 +378,11 @@ TODO: How to do this?
 <figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">overflow-wrap</span>: break-word;</span><br></pre></td></tr></table></figure>
 
 <p>This property is crucial for maintaining a polished look, particularly on smaller screens.</p>
-<h1 id="Responsive-Design-with-Media-Queries-in-SCSS"><a href="#Responsive-Design-with-Media-Queries-in-SCSS" class="headerlink" title="Responsive Design with Media Queries in SCSS"></a>Responsive Design with Media Queries in SCSS</h1><p>Adjusting layouts responsively based on device screen sizes is seamless with SCSS media queries:</p>
+<h2 id="Responsive-Design-with-Media-Queries-in-SCSS"><a href="#Responsive-Design-with-Media-Queries-in-SCSS" class="headerlink" title="Responsive Design with Media Queries in SCSS"></a>Responsive Design with Media Queries in SCSS</h2><p>Adjusting layouts responsively based on device screen sizes is seamless with SCSS media queries:</p>
 <figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.xx-container</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">50vw</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">@media</span> screen <span class="keyword">and</span> (<span class="attribute">max-width</span>: <span class="variable">$screen_sm</span>) &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">80%</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>These snippets facilitate dynamic styling that adapts fluidly across different devices, enhancing user experience.</p>
-<h1 id="Fine-Tuning-User-Interfaces"><a href="#Fine-Tuning-User-Interfaces" class="headerlink" title="Fine-Tuning User Interfaces"></a>Fine-Tuning User Interfaces</h1><p>Resizable Text Areas:</p>
+<h2 id="Fine-Tuning-User-Interfaces"><a href="#Fine-Tuning-User-Interfaces" class="headerlink" title="Fine-Tuning User Interfaces"></a>Fine-Tuning User Interfaces</h2><p>Resizable Text Areas:</p>
 <p>Allowing users to resize text areas vertically enhances usability, particularly in forms and comment boxes:</p>
 <figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">resize</span>: vertical;</span><br></pre></td></tr></table></figure>
 
@@ -390,7 +390,7 @@ TODO: How to do this?
 <p>Achieving a clean and aligned text display can be done with:</p>
 <figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">text-align</span>: justify;</span><br><span class="line"><span class="attribute">text-justify</span>: inter-word;</span><br></pre></td></tr></table></figure>
 
-<h1 id="Optimising-Element-Sizing-and-Positioning"><a href="#Optimising-Element-Sizing-and-Positioning" class="headerlink" title="Optimising Element Sizing and Positioning"></a>Optimising Element Sizing and Positioning</h1><p>Adjusting Heights for Cross-Browser Compatibility:</p>
+<h2 id="Optimising-Element-Sizing-and-Positioning"><a href="#Optimising-Element-Sizing-and-Positioning" class="headerlink" title="Optimising Element Sizing and Positioning"></a>Optimising Element Sizing and Positioning</h2><p>Adjusting Heights for Cross-Browser Compatibility:</p>
 <p>Some properties behave differently across browsers, such as <code>fit-content</code>. For better compatibility, especially with Firefox:</p>
 <figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">height</span>: -moz-max-content;</span><br><span class="line"><span class="attribute">height</span>: fit-content <span class="meta">!important</span>;</span><br></pre></td></tr></table></figure>
 
@@ -398,19 +398,19 @@ TODO: How to do this?
 <p>Setting a custom scroll position for anchored IDs enhances navigational precision:</p>
 <figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">scroll-margin-top</span>: <span class="number">100px</span>;</span><br></pre></td></tr></table></figure>
 
-<h1 id="Mastering-Flexbox-and-Grid-for-Perfect-Layouts"><a href="#Mastering-Flexbox-and-Grid-for-Perfect-Layouts" class="headerlink" title="Mastering Flexbox and Grid for Perfect Layouts"></a>Mastering Flexbox and Grid for Perfect Layouts</h1><p>Flexbox for Centering:</p>
+<h2 id="Mastering-Flexbox-and-Grid-for-Perfect-Layouts"><a href="#Mastering-Flexbox-and-Grid-for-Perfect-Layouts" class="headerlink" title="Mastering Flexbox and Grid for Perfect Layouts"></a>Mastering Flexbox and Grid for Perfect Layouts</h2><p>Flexbox for Centering:</p>
 <figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">display</span>: flex;</span><br><span class="line"><span class="attribute">align-items</span>: center;</span><br><span class="line"><span class="attribute">justify-content</span>: center;</span><br></pre></td></tr></table></figure>
 
 <p>Grid for Complex Layouts:</p>
 <p>Creating responsive, grid-based designs is simplified using CSS Grid:</p>
 <figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.parent</span> <span class="selector-class">.child</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: grid;</span><br><span class="line">  <span class="attribute">grid-template-columns</span>: <span class="built_in">repeat</span>(auto-fit, <span class="built_in">minmax</span>(<span class="number">25rem</span>, <span class="number">1</span>fr));</span><br><span class="line">  <span class="attribute">grid-gap</span>: <span class="number">3rem</span>;</span><br><span class="line">  <span class="attribute">text-align</span>: center;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h1 id="Choosing-Between-PX-and-REM-for-Responsive-Design"><a href="#Choosing-Between-PX-and-REM-for-Responsive-Design" class="headerlink" title="Choosing Between PX and REM for Responsive Design"></a>Choosing Between PX and REM for Responsive Design</h1><p>Another common question you will be asked or you have been looking for the answer. Understanding the difference between <code>px</code> and <code>rem</code> can significantly affect the scalability and accessibility of your website:</p>
+<h2 id="Choosing-Between-PX-and-REM-for-Responsive-Design"><a href="#Choosing-Between-PX-and-REM-for-Responsive-Design" class="headerlink" title="Choosing Between PX and REM for Responsive Design"></a>Choosing Between PX and REM for Responsive Design</h2><p>Another common question you will be asked or you have been looking for the answer. Understanding the difference between <code>px</code> and <code>rem</code> can significantly affect the scalability and accessibility of your website:</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">html</span> &#123;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">16px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">h1</span> &#123;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">2rem</span>; <span class="comment">/* 32px */</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">1rem</span>; <span class="comment">/* 16px */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p><code>rem</code> units adapt based on the root element’s font size, making them ideal for responsive designs that need to accommodate various device settings.</p>
 <p>To use <code>rem</code> in your project, just replace your <code>px</code> values with <code>rem</code> values, bearing in mind the root font-size. You might need to make adjustments based on the visual design and proportions. For example, if you want a font size of 18px, and your root font-size is 16px, the REM value would be <strong><code>18/16 = 1.125rem</code></strong>.</p>
-<h1 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h1><p>Leveraging the advanced features of SCSS and CSS not only streamlines the styling process but also ensures that web applications are accessible, aesthetically pleasing, and responsive. The journey through CSS and SCSS is ongoing, and each project brings new insights and opportunities for creative solutions.</p>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>Leveraging the advanced features of SCSS and CSS not only streamlines the styling process but also ensures that web applications are accessible, aesthetically pleasing, and responsive. The journey through CSS and SCSS is ongoing, and each project brings new insights and opportunities for creative solutions.</p>
 <hr>
 <p>Embrace these techniques and integrate them into your web development practices to craft more engaging, efficient, and user-friendly web applications.</p>
 
@@ -426,16 +426,16 @@ TODO: How to do this?
       <div class="popular-posts-title"><a href="/blog/demystifying-database-design-a-dive-into-3nf-and-bcnf/" rel="bookmark">Demystifying Database Design: A Dive into 3NF and BCNF</a></div>
     </li>
     <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="/blog/bash-mastery-essential-tips-and-tricks-for-command-line-power/" rel="bookmark">Bash Mastery: Essential Tips and Tricks for Command Line Power</a></div>
-    </li>
-    <li class="popular-posts-item">
       <div class="popular-posts-title"><a href="/blog/computer-networking-notebook/" rel="bookmark">Computer Networking Notebook</a></div>
     </li>
     <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="/blog/shoutout-to-stellar-hexo-blogs/" rel="bookmark">Shoutout to Stellar Hexo Blogs</a></div>
+      <div class="popular-posts-title"><a href="/blog/bash-mastery-essential-tips-and-tricks-for-command-line-power/" rel="bookmark">Bash Mastery: Essential Tips and Tricks for Command Line Power</a></div>
     </li>
     <li class="popular-posts-item">
       <div class="popular-posts-title"><a href="/blog/24-hours-harvard-cs50-by-david-malan/" rel="bookmark">24 Hours Harvard CS50 By David Malan</a></div>
+    </li>
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="/blog/elixir/" rel="bookmark">Elixir</a></div>
     </li>
   </ul>
 <div class="post-widgets">
@@ -538,7 +538,7 @@ TODO: How to do this?
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Dynamic-Visual-Effects-with-Mix-Blend-Modes"><span class="nav-number">1.</span> <span class="nav-text">Dynamic Visual Effects with Mix Blend Modes</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Ensuring-Text-Clarity-and-Layout-Control"><span class="nav-number">2.</span> <span class="nav-text">Ensuring Text Clarity and Layout Control</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Responsive-Design-with-Media-Queries-in-SCSS"><span class="nav-number">3.</span> <span class="nav-text">Responsive Design with Media Queries in SCSS</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Fine-Tuning-User-Interfaces"><span class="nav-number">4.</span> <span class="nav-text">Fine-Tuning User Interfaces</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Optimising-Element-Sizing-and-Positioning"><span class="nav-number">5.</span> <span class="nav-text">Optimising Element Sizing and Positioning</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Mastering-Flexbox-and-Grid-for-Perfect-Layouts"><span class="nav-number">6.</span> <span class="nav-text">Mastering Flexbox and Grid for Perfect Layouts</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Choosing-Between-PX-and-REM-for-Responsive-Design"><span class="nav-number">7.</span> <span class="nav-text">Choosing Between PX and REM for Responsive Design</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Conclusion"><span class="nav-number">8.</span> <span class="nav-text">Conclusion</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Dynamic-Visual-Effects-with-Mix-Blend-Modes"><span class="nav-number">1.</span> <span class="nav-text">Dynamic Visual Effects with Mix Blend Modes</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Ensuring-Text-Clarity-and-Layout-Control"><span class="nav-number">2.</span> <span class="nav-text">Ensuring Text Clarity and Layout Control</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Responsive-Design-with-Media-Queries-in-SCSS"><span class="nav-number">3.</span> <span class="nav-text">Responsive Design with Media Queries in SCSS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Fine-Tuning-User-Interfaces"><span class="nav-number">4.</span> <span class="nav-text">Fine-Tuning User Interfaces</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Optimising-Element-Sizing-and-Positioning"><span class="nav-number">5.</span> <span class="nav-text">Optimising Element Sizing and Positioning</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Mastering-Flexbox-and-Grid-for-Perfect-Layouts"><span class="nav-number">6.</span> <span class="nav-text">Mastering Flexbox and Grid for Perfect Layouts</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Choosing-Between-PX-and-REM-for-Responsive-Design"><span class="nav-number">7.</span> <span class="nav-text">Choosing Between PX and REM for Responsive Design</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Conclusion"><span class="nav-number">8.</span> <span class="nav-text">Conclusion</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -564,7 +564,7 @@ TODO: How to do this?
       <div class="site-state-item site-state-tags">
             <a href="/blog/tags/">
           
-        <span class="site-state-item-count">27</span>
+        <span class="site-state-item-count">28</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>

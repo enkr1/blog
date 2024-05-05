@@ -1357,7 +1357,7 @@ p {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #dff1af;
+  background: #a6ffff;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -1507,7 +1507,7 @@ p {
   white-space: nowrap;
 }
 .post-toc .nav .nav-child {
-  display: block;
+  display: none;
 }
 .post-toc .nav .active > .nav-child {
   display: block;
@@ -2062,7 +2062,7 @@ p {
 }
 .posts-expand .post-title {
   font-size: 2.8rem;
-  font-weight: normal;
+  font-weight: 400;
   margin: initial;
   text-align: center;
   color: #c60000;
