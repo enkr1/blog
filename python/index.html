@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 7.2.0">
+<meta name="google-site-verification" content="wSUWWkv_QhNXB_N6r3rOSU2YlmmWxYBk6UWVlgu1q94" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/logo.gif">
+  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/logo.gif">
+  <link rel="mask-icon" href="/blog/images/logo.svg" color="#222">
+  <meta name="google-site-verification" content="google295e26d511c4c6ad.html">
+
+<link rel="stylesheet" href="/blog/css/main.css">
+
+
+<link rel="stylesheet" href="/blog/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"enkr1.github.io","root":"/blog/","scheme":"Gemini","version":"7.8.0","exturl":true,"sidebar":{"position":"left","width":300,"display":"post","padding":0,"offset":0,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"buttons","active":"disqus","storage":true,"lazyload":true,"nav":null,"activeClass":"disqus"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":-1,"unescape":true,"preload":true},"motion":{"enable":true,"async":false,"transition":{"post_block":"slideDownBigIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="My python notebook!">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python">
+<meta property="og:url" content="https://enkr1.github.io/blog/python/index.html">
+<meta property="og:site_name" content="ENKR&#39;s Blog">
+<meta property="og:description" content="My python notebook!">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-12-13T06:37:20.000Z">
+<meta property="article:modified_time" content="2024-04-24T16:29:32.622Z">
+<meta property="article:author" content="Jing Hui PANG | 彭竞辉 | ENKR">
+<meta property="article:tag" content="note">
+<meta property="article:tag" content="programming">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://enkr1.github.io/blog/python/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4N4L18VB12"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-4N4L18VB12');
+</script>
+
+<!-- Firebase -->
+<!--
+TODO: How to do this?
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyBxexVzGzOqDUGFzHVT_-oYxkqAetlFUSo",
+    authDomain: "hexo-blog-9ccea.firebaseapp.com",
+    projectId: "hexo-blog-9ccea",
+    storageBucket: "hexo-blog-9ccea.appspot.com",
+    messagingSenderId: "71411607593",
+    appId: "1:71411607593:web:d0fb244020c34c5895d438",
+    measurementId: "G-TJPENBTDNS"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
+-->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/ilyabirman-likely@2/release/likely.min.css">
+  <title>Python | ENKR's Blog</title>
+  
+    <script>
+      function sendPageView() {
+        if (CONFIG.hostname !== location.hostname) return;
+        var uid = localStorage.getItem('uid') || (Math.random() + '.' + Math.random());
+        localStorage.setItem('uid', uid);
+        navigator.sendBeacon('https://www.google-analytics.com/collect', new URLSearchParams({
+          v  : 1,
+          tid: 'G-4N4L18VB12',
+          cid: uid,
+          t  : 'pageview',
+          dp : encodeURIComponent(location.pathname)
+        }));
+      }
+      document.addEventListener('pjax:complete', sendPageView);
+      sendPageView();
+    </script>
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/blog/atom.xml" title="ENKR's Blog" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/blog/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">ENKR's Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Software Engineer | Beatbox Artist</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/blog/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/blog/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-gallery">
+
+    <a href="/blog/gallery/" rel="section"><i class="fa fa-image fa-fw"></i>Gallery</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/blog/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">34</span></a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/blog/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">27</span></a>
+
+  </li>
+        <li class="menu-item menu-item-history">
+
+    <a href="/blog/archives/" rel="section"><i class="fa fa-history fa-fw"></i>History</a>
+
+  </li>
+        <li class="menu-item menu-item-platforms">
+
+    <a href="https://enkr1.github.io/platforms/" rel="section"><i class="fa fa-link fa-fw"></i>Platforms</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://enkr1.github.io/blog/python/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="name" content="Jing Hui PANG | 彭竞辉 | ENKR">
+      <meta itemprop="description" content="If you actually try your best, you can't lose. Everything is rented, you can't start slipping.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ENKR's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Python
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: Wed 13 December 2023 14:37:20 PM" itemprop="dateCreated datePublished" datetime="2023-12-13T14:37:20+08:00">Wed 13 December 2023</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: Thu 25 April 2024 00:29:32 AM" itemprop="dateModified" datetime="2024-04-25T00:29:32+08:00">Thu 25 April 2024</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/Programming-Languages/" itemprop="url" rel="index"><span itemprop="name">Programming Languages</span></a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/Programming-Languages/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/blog/python/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="python/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+              <span>1.1k</span>
+            </span>
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+              <span>4 mins.</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>My python notebook!</p>
+<span id="more"></span>
+
+<h1 id="Variables"><a href="#Variables" class="headerlink" title="Variables"></a>Variables</h1><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>()</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Hello&quot;</span>, <span class="string">&quot;World&quot;</span>)</span><br><span class="line"><span class="comment"># &quot;Hello World&quot;</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Hello&quot;</span>, <span class="string">&quot;World&quot;</span>, sep=<span class="string">&quot;&quot;</span>)</span><br><span class="line"><span class="comment"># &quot;HelloWorld&quot;</span></span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">type</span>()</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">// <span class="comment"># this forces the output to be integer</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="Type-Conversion-The-process-of-converting-one-data-type-to-another-data-type-is-called-type-conversion"><a href="#Type-Conversion-The-process-of-converting-one-data-type-to-another-data-type-is-called-type-conversion" class="headerlink" title="Type Conversion: The process of converting one data type to another data type is called type conversion."></a>Type Conversion: The process of converting one data type to another data type is called type conversion.</h2><p>In Python, we can perform two types of type conversion.</p>
+<ol>
+<li>Implicit Type Conversion - Here, Python automatically converts one data type to another in order to avoid data loss.<blockquote>
+<p>e.g. 1 * 1.23 &#x3D; 1.23 as there is no data loss</p>
+</blockquote>
+</li>
+<li>Explicit Type Conversion - Here, the user can convert the data type of a variable to the required data type by using the in-built functions int(), float(), str(), etc.<blockquote>
+<p>e.g. <code>&quot;Hello &quot; + str(123)</code></p>
+</blockquote>
+</li>
+</ol>
+<h1 id="Data-Structures"><a href="#Data-Structures" class="headerlink" title="Data Structures"></a>Data Structures</h1><h2 id="List"><a href="#List" class="headerlink" title="List"></a>List</h2><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">list</span> = [<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br><span class="line"><span class="built_in">len</span>(<span class="built_in">list</span>)</span><br><span class="line"><span class="comment"># 4</span></span><br><span class="line"><span class="built_in">min</span>(<span class="built_in">list</span>)</span><br><span class="line"><span class="comment"># 0</span></span><br><span class="line"><span class="built_in">max</span>(<span class="built_in">list</span>)</span><br><span class="line"><span class="comment"># 3</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="first-N-items-in-list"><a href="#first-N-items-in-list" class="headerlink" title="first N items in list"></a>first N items in list</h3><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="built_in">list</span>[<span class="number">0</span>:<span class="number">3</span>]) <span class="comment"># Exclusive 3 - incl:excl</span></span><br><span class="line"><span class="comment"># [0, 1, 2]</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Last-item"><a href="#Last-item" class="headerlink" title="Last item"></a>Last item</h3><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="built_in">list</span>[-<span class="number">1</span>])</span><br></pre></td></tr></table></figure>
+
+<h3 id="Remove-last-and-return"><a href="#Remove-last-and-return" class="headerlink" title="Remove last and return"></a>Remove last and return</h3><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">list</span>.pop()</span><br><span class="line"><span class="comment"># 3</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">list</span>)</span><br><span class="line"><span class="comment"># [0,1,2]</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Add-to-last"><a href="#Add-to-last" class="headerlink" title="Add to last"></a>Add to last</h3><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">list</span>.append(<span class="number">4</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">list</span>)</span><br><span class="line"><span class="comment"># [0,1,2,4]</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="Tuples"><a href="#Tuples" class="headerlink" title="Tuples"></a>Tuples</h2><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">storage = (<span class="number">32</span>,<span class="number">64</span>,<span class="number">128</span>,<span class="number">256</span>)</span><br><span class="line"><span class="built_in">print</span>(storage)</span><br><span class="line"><span class="comment"># (32, 64, 128, 256)</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(storage[<span class="number">1</span>])</span><br><span class="line"><span class="comment"># 64</span></span><br></pre></td></tr></table></figure>
+
+<p><em>Tuples are immutable</em></p>
+<h2 id="Dictionary-Map"><a href="#Dictionary-Map" class="headerlink" title="Dictionary (Map)"></a>Dictionary (Map)</h2><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># creating a dictionary</span></span><br><span class="line">attributes = &#123;</span><br><span class="line">    <span class="string">&#x27;Brand&#x27;</span>: <span class="string">&#x27;Apple&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;RAM (in GB)&#x27;</span>: <span class="number">4</span>,</span><br><span class="line">    <span class="string">&#x27;Storage (in GB)&#x27;</span>: <span class="number">128</span>,</span><br><span class="line">    <span class="string">&#x27;Price (in $)&#x27;</span>: <span class="number">800</span></span><br><span class="line">    &#125;</span><br><span class="line"><span class="built_in">print</span>(attributes)</span><br><span class="line"><span class="comment"># &#123;&#x27;Brand&#x27;: &#x27;Apple&#x27;, &#x27;RAM (in GB)&#x27;: 4, &#x27;Storage (in GB)&#x27;: 128, &#x27;Price (in $)&#x27;: 800&#125;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">type</span>(attributes)</span><br><span class="line"><span class="comment"># dict</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># creating a dictionary for storing data.</span></span><br><span class="line">products = &#123;</span><br><span class="line">    <span class="string">&#x27;Brand&#x27;</span>: brand_list,</span><br><span class="line">    <span class="string">&#x27;RAM (in GB)&#x27;</span>: ram_list,</span><br><span class="line">    <span class="string">&#x27;Storage (in GB)&#x27;</span>: storage_list,</span><br><span class="line">    <span class="string">&#x27;Price (in $)&#x27;</span>: price_list</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(products)</span><br><span class="line"><span class="comment"># &#123;&#x27;Brand&#x27;: [&#x27;Apple&#x27;, &#x27;Samsung&#x27;, &#x27;LG&#x27;, &#x27;Motorola&#x27;], &#x27;RAM (in GB)&#x27;: [4, 12, 8, 8], &#x27;Storage (in GB)&#x27;: [128, 128, 64, 128], &#x27;Price (in $)&#x27;: [900, 899, 600, 1000]&#125;</span></span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># keys of a dictionary</span></span><br><span class="line">keys = products.keys()</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;The keys of the dictionary are :\n&#x27;</span>,keys)</span><br><span class="line"><span class="comment"># [&#x27;Brand&#x27;, &#x27;RAM (in GB)&#x27;, &#x27;Storage (in GB)&#x27;, &#x27;Price (in $)&#x27;]</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># values of a dictionary</span></span><br><span class="line">values = products.values()</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;The values of the dictionary are :\n&#x27;</span>, values)</span><br><span class="line"><span class="comment"># [[&#x27;Apple&#x27;, &#x27;Samsung&#x27;, &#x27;LG&#x27;, &#x27;Motorola&#x27;], [4, 12, 8, 8], [128, 128, 64, 128], [900, 899, 600, 1000]]</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="update-key-value"><a href="#update-key-value" class="headerlink" title="update({key: value})"></a>update({key: value})</h3><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">dictionary=&#123;<span class="number">1</span>: <span class="string">&quot;USA&quot;</span>, <span class="number">2</span>: <span class="string">&quot;India&quot;</span>, <span class="number">3</span>: <span class="string">&quot;China&quot;</span>&#125;</span><br><span class="line">dictionary.update(&#123;<span class="number">3</span>:<span class="string">&quot;Japan&quot;</span>&#125;)</span><br><span class="line"><span class="built_in">print</span>(dictionary)</span><br><span class="line"><span class="comment"># &#123;1: &#x27;USA&#x27;, 2: &#x27;India&#x27;, 3: &#x27;Japan&#x27;&#125;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="pop-key"><a href="#pop-key" class="headerlink" title="pop(key)"></a>pop(key)</h3><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">dictionary=&#123;<span class="number">1</span>:<span class="string">&quot;USA&quot;</span>, <span class="number">2</span>:<span class="string">&quot;India&quot;</span>, <span class="number">3</span>:<span class="string">&quot;China&quot;</span>&#125;</span><br><span class="line">dictionary.pop(<span class="number">2</span>)</span><br><span class="line"><span class="built_in">print</span>(dictionary)</span><br><span class="line"><span class="comment"># &#123;1: &#x27;USA&#x27;, 3: &#x27;China&#x27;&#125;</span></span><br></pre></td></tr></table></figure>
+
+
+<h1 id="Conditional-Statements"><a href="#Conditional-Statements" class="headerlink" title="Conditional Statements"></a>Conditional Statements</h1><p>… nth much</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">price = <span class="number">900</span></span><br><span class="line"><span class="comment"># define the budget price</span></span><br><span class="line">budget = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&#x27;Enter your budget(in dollars): &#x27;</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># if-else statement</span></span><br><span class="line"><span class="keyword">if</span> price &lt;= budget:</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&#x27;Congrats! You can buy the Iphone&#x27;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&#x27;Sorry! The mobile price is more than your budget&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<h1 id="Looping-Statements"><a href="#Looping-Statements" class="headerlink" title="Looping Statements"></a>Looping Statements</h1><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="built_in">range</span>(<span class="number">6</span>))</span><br><span class="line"><span class="comment"># range(0, 6)</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="built_in">list</span>(<span class="built_in">range</span>(<span class="number">6</span>)))</span><br><span class="line"><span class="comment"># [0, 1, 2, 3, 4, 5]</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="built_in">list</span>(<span class="built_in">range</span>(<span class="number">2</span>,<span class="number">6</span>)))</span><br><span class="line"><span class="comment"># [2, 3, 4, 5]</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="built_in">list</span>(<span class="built_in">range</span>(<span class="number">6</span>, <span class="number">14</span>, <span class="number">2</span>))) <span class="comment"># Iterating by 2</span></span><br><span class="line"><span class="comment"># [6, 8, 10, 12]</span></span><br></pre></td></tr></table></figure>
+
+
+<h1 id="List-Comprehensions"><a href="#List-Comprehensions" class="headerlink" title="List Comprehensions"></a>List Comprehensions</h1><p>Example 1:<br>from:</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">discounted_price_list=[]</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> price_list:</span><br><span class="line">  discounted_price = x - (x*(<span class="number">5</span>/<span class="number">100</span>))</span><br><span class="line">  discounted_price_list.append(discounted_price)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(discounted_price_list)</span><br></pre></td></tr></table></figure>
+<p>to:</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">discounted_price_list = [x - (x*(<span class="number">5</span>/<span class="number">100</span>)) <span class="keyword">for</span> x <span class="keyword">in</span> price_list]</span><br><span class="line"><span class="built_in">print</span>(discounted_price_list)</span><br></pre></td></tr></table></figure>
+
+<p>Example 2:<br>from:</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">within_budget = []</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> discounted_price_list:</span><br><span class="line">  <span class="keyword">if</span> x &lt;= budget:</span><br><span class="line">    within_budget.append(<span class="string">&#x27;Yes&#x27;</span>)</span><br><span class="line">  <span class="keyword">else</span>:</span><br><span class="line">    within_budget.append(<span class="string">&#x27;No&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(within_budget)</span><br></pre></td></tr></table></figure>
+<p>to:</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># asking for customer&#x27;s budget</span></span><br><span class="line">budget = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&#x27;Enter your budget(in dollars): &#x27;</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># creating a list of Yes/No based on budget and discounted prices</span></span><br><span class="line">within_budget = [<span class="string">&#x27;Yes&#x27;</span> <span class="keyword">if</span> x &lt;= budget <span class="keyword">else</span> <span class="string">&#x27;No&#x27;</span> <span class="keyword">for</span> x <span class="keyword">in</span> discounted_price_list]</span><br><span class="line"><span class="built_in">print</span>(within_budget)</span><br></pre></td></tr></table></figure>
+
+
+<h1 id="Functions"><a href="#Functions" class="headerlink" title="Functions"></a>Functions</h1><h2 id="lambda-functions"><a href="#lambda-functions" class="headerlink" title="lambda functions"></a>lambda functions</h2><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">dis_price_lambda = <span class="keyword">lambda</span> discount : <span class="number">900</span> - ( <span class="number">900</span> * (discount / <span class="number">100</span>) )</span><br><span class="line"><span class="comment"># call the function with discount = 10%</span></span><br><span class="line">dis_price_lambda(<span class="number">10</span>)</span><br><span class="line"><span class="comment"># 810.0</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>Wow …</p>
+</blockquote>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">say</span>(<span class="params">message, times</span>):</span><br><span class="line">    <span class="built_in">print</span>(message*times)</span><br><span class="line">say(<span class="string">&quot;How are you&quot;</span>, <span class="number">2</span>)</span><br><span class="line"><span class="comment"># How are youHow are you</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(<span class="keyword">lambda</span> x: (x+<span class="number">2</span>)*<span class="number">5</span>/<span class="number">2</span>)(<span class="number">4</span>)</span><br><span class="line"><span class="comment"># 15.0</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>Due to the division operation in the expression, which produces a floating-point result in Python 3. Use <code>//</code> instead, if you want to perform floor division.</p>
+</blockquote>
+<h1 id="args-and-kwargs"><a href="#args-and-kwargs" class="headerlink" title="*args and **kwargs"></a>*args and **kwargs</h1><p>from:</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">total_amount</span>(<span class="params">price1, price2, price3, price4, price5</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    This function takes the price of five phones ordered</span></span><br><span class="line"><span class="string">    and returns the total order amount.</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    <span class="comment"># computing the total order amount</span></span><br><span class="line">    total = price1 + price2 + price3 + price4 + price5</span><br><span class="line"></span><br><span class="line">    <span class="comment"># return the total amount</span></span><br><span class="line">    <span class="keyword">return</span> total</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;Total order amount:&#x27;</span>, total_amount(<span class="number">700</span>, <span class="number">599</span>, <span class="number">650</span>, <span class="number">900</span>, <span class="number">820</span>))</span><br><span class="line"><span class="comment"># Total order amount: 3669</span></span><br></pre></td></tr></table></figure>
+<p>to:</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">total_amount</span>(<span class="params">*args</span>): <span class="comment"># can be renamed to *prices</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    This function takes the prices of phones ordered</span></span><br><span class="line"><span class="string">    and returns the total order amount.</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    total = <span class="number">0</span></span><br><span class="line">    <span class="comment"># computing the total order amount</span></span><br><span class="line">    <span class="keyword">for</span> arg <span class="keyword">in</span> args:</span><br><span class="line">        total += arg</span><br><span class="line"></span><br><span class="line">    <span class="comment"># return the total amount</span></span><br><span class="line">    <span class="keyword">return</span> total</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;Total order amount:&#x27;</span>, total_amount(<span class="number">700</span>, <span class="number">599</span>, <span class="number">650</span>, <span class="number">900</span>, <span class="number">820</span>))</span><br><span class="line"><span class="comment"># Total order amount: 3669</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;Total order amount:&#x27;</span>, total_amount(<span class="number">700</span>, <span class="number">599</span>, <span class="number">650</span>, <span class="number">900</span>, <span class="number">820</span>, <span class="number">630</span>, <span class="number">520</span>, <span class="number">799</span>, <span class="number">999</span>, <span class="number">840</span>))</span><br><span class="line"><span class="comment"># Total order amount: 7457</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>like a general param in Elixir</p>
+</blockquote>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">customer_net_spend</span>(<span class="params">*prices, discount=<span class="number">0.0</span>, **kwargs</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    This function takes the prices of phones ordered,</span></span><br><span class="line"><span class="string">    the discount percentage, and any other cost additions/subtractions,</span></span><br><span class="line"><span class="string">    and returns the customer&#x27;s net spend on the order.</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    total = <span class="number">0</span></span><br><span class="line">    <span class="comment"># computing the total order amount</span></span><br><span class="line">    <span class="keyword">for</span> price <span class="keyword">in</span> prices:</span><br><span class="line">        total += price</span><br><span class="line"></span><br><span class="line">    total_discounted_price = total - discount*total</span><br><span class="line"></span><br><span class="line">    net_spend = total_discounted_price - kwargs[<span class="string">&#x27;cashback&#x27;</span>]</span><br><span class="line"></span><br><span class="line">    <span class="comment"># return the total amount</span></span><br><span class="line">    <span class="keyword">return</span> net_spend</span><br><span class="line"></span><br><span class="line">additionals = &#123;<span class="string">&#x27;cashback&#x27;</span>: <span class="number">5</span>&#125;</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;Customer net spend (during last day of festive season):&#x27;</span>, customer_net_spend(<span class="number">700</span>, <span class="number">599</span>, <span class="number">650</span>, discount=<span class="number">0.05</span>, **additionals))</span><br><span class="line"><span class="comment"># Customer net spend (during last day of festive season): 1846.55</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>kwargs is like a %{key: value} in Elixir</p>
+</blockquote>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">order_summary</span>(<span class="params">*prices, **additionals</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    This function takes the prices of phones ordered</span></span><br><span class="line"><span class="string">    and any other cost additions/subtractions,</span></span><br><span class="line"><span class="string">    and returns the total amount, net spend,</span></span><br><span class="line"><span class="string">    and rewards points earned for the order.</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    total = <span class="number">0</span></span><br><span class="line">    <span class="comment"># computing the total order amount</span></span><br><span class="line">    <span class="keyword">for</span> price <span class="keyword">in</span> prices:</span><br><span class="line">        total += price</span><br><span class="line"></span><br><span class="line">    net_spend = total - additionals[<span class="string">&#x27;discount&#x27;</span>]*total - additionals[<span class="string">&#x27;cashback&#x27;</span>]</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> total &gt;= <span class="number">10000</span>:</span><br><span class="line">        reward_points = <span class="number">300</span></span><br><span class="line">    <span class="keyword">elif</span> total &gt;= <span class="number">5000</span>:</span><br><span class="line">        reward_points = <span class="number">200</span></span><br><span class="line">    <span class="keyword">elif</span> total &gt;= <span class="number">2000</span>:</span><br><span class="line">        reward_points = <span class="number">100</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        reward_points = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># return the total amount</span></span><br><span class="line">    <span class="keyword">return</span> total, net_spend, reward_points <span class="comment"># Is going to return as tuple</span></span><br><span class="line"></span><br><span class="line">additionals = &#123;<span class="string">&#x27;discount&#x27;</span>:<span class="number">0.05</span>, <span class="string">&#x27;cashback&#x27;</span>: <span class="number">5</span>&#125;</span><br><span class="line">ta, ns, rp = order_summary(<span class="number">700</span>, <span class="number">599</span>, <span class="number">750</span>, **additionals)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;Customer Order Summary:\n&#x27;</span>, <span class="string">&#x27;\nTotal Amount:&#x27;</span>, ta, <span class="string">&#x27;\nTotal Discounted Amount:&#x27;</span>, ns, <span class="string">&#x27;\nReward Points Earned:&#x27;</span>, rp)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Customer Order Summary:</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Total Amount: 2049</span></span><br><span class="line"><span class="comment"># Total Discounted Amount: 1941.55</span></span><br><span class="line"><span class="comment"># Reward Points Earned: 100</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="Invalid-Syntax"><a href="#Invalid-Syntax" class="headerlink" title="Invalid Syntax"></a>Invalid Syntax</h2><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">my_function</span>(<span class="params">a, b, **kwargs, *args</span>):</span><br><span class="line">    <span class="keyword">return</span> a+b</span><br><span class="line">my_function(<span class="number">5</span>,<span class="number">6</span>)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>because *args (for variable-length positional arguments) must be placed before **kwargs (for variable-length keyword arguments).</p>
+</blockquote>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">my_function</span>(<span class="params">a, b, *args, **kwargs</span>):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;a:&quot;</span>, a)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;b:&quot;</span>, b)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;args:&quot;</span>, args)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;kwargs:&quot;</span>, kwargs)</span><br><span class="line"></span><br><span class="line">my_function(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, x=<span class="number">6</span>, y=<span class="number">7</span>)</span><br><span class="line"><span class="comment"># a: 1</span></span><br><span class="line"><span class="comment"># b: 2</span></span><br><span class="line"><span class="comment"># args: (3, 4, 5)</span></span><br><span class="line"><span class="comment"># kwargs: &#123;&#x27;x&#x27;: 6, &#x27;y&#x27;: 7&#125;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">fun</span>(<span class="params">A, B=<span class="number">30</span></span>):</span><br><span class="line">    <span class="keyword">return</span> A + B</span><br><span class="line"></span><br><span class="line"><span class="comment"># A is a positional argument and B is a keyword argument</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h1 id="Some-findings"><a href="#Some-findings" class="headerlink" title="Some findings"></a>Some findings</h1><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">list_mul = [<span class="string">&#x27;2&#x27;</span>,<span class="string">&#x27;2&#x27;</span>,<span class="string">&#x27;2&#x27;</span>]</span><br><span class="line">list_mul*<span class="number">2</span></span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+      
+  <div class="popular-posts-header">Related Posts</div>
+  <ul class="popular-posts">
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="/blog/bash-mastery-essential-tips-and-tricks-for-command-line-power/" rel="bookmark">Bash Mastery: Essential Tips and Tricks for Command Line Power</a></div>
+    </li>
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="/blog/24-hours-harvard-cs50-by-david-malan/" rel="bookmark">24 Hours Harvard CS50 By David Malan</a></div>
+    </li>
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="/blog/elixir/" rel="bookmark">Elixir</a></div>
+    </li>
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="/blog/javascript/" rel="bookmark">JavaScript</a></div>
+    </li>
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="/blog/my-journey-with-hexo-building-a-blog-from-scratch/" rel="bookmark">My Journey with Hexo - Building a Blog from Scratch</a></div>
+    </li>
+  </ul>
+<div class="post-widgets">
+    <div class="likely">
+        <div class="twitter">Tweet</div>
+        <div class="facebook">Share</div>
+        <div class="linkedin">Link</div>
+        <div class="gplus">Plus</div>
+        <div class="vkontakte">Share</div>
+        <div class="odnoklassniki">Class</div>
+        <div class="telegram">Send</div>
+        <div class="whatsapp">Send</div>
+        <div class="pinterest">Pin</div>
+    </div>
+  </div>
+  <script src="//cdn.jsdelivr.net/npm/ilyabirman-likely@2/release/likely.min.js"></script>
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/blog/tags/note/" rel="tag"># note</a>
+              <a href="/blog/tags/programming/" rel="tag"># programming</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/blog/24-hours-harvard-cs50-by-david-malan/" rel="prev" title="24 Hours Harvard CS50 By David Malan">
+      <i class="fa fa-chevron-left"></i> 24 Hours Harvard CS50 By David Malan
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/blog/elixir/" rel="next" title="Elixir">
+      Elixir <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    
+  <div class="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+  </div>
+  
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Variables"><span class="nav-number">1.</span> <span class="nav-text">Variables</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Type-Conversion-The-process-of-converting-one-data-type-to-another-data-type-is-called-type-conversion"><span class="nav-number">1.1.</span> <span class="nav-text">Type Conversion: The process of converting one data type to another data type is called type conversion.</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Data-Structures"><span class="nav-number">2.</span> <span class="nav-text">Data Structures</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#List"><span class="nav-number">2.1.</span> <span class="nav-text">List</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#first-N-items-in-list"><span class="nav-number">2.1.1.</span> <span class="nav-text">first N items in list</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Last-item"><span class="nav-number">2.1.2.</span> <span class="nav-text">Last item</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Remove-last-and-return"><span class="nav-number">2.1.3.</span> <span class="nav-text">Remove last and return</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Add-to-last"><span class="nav-number">2.1.4.</span> <span class="nav-text">Add to last</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Tuples"><span class="nav-number">2.2.</span> <span class="nav-text">Tuples</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Dictionary-Map"><span class="nav-number">2.3.</span> <span class="nav-text">Dictionary (Map)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#update-key-value"><span class="nav-number">2.3.1.</span> <span class="nav-text">update({key: value})</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pop-key"><span class="nav-number">2.3.2.</span> <span class="nav-text">pop(key)</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Conditional-Statements"><span class="nav-number">3.</span> <span class="nav-text">Conditional Statements</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Looping-Statements"><span class="nav-number">4.</span> <span class="nav-text">Looping Statements</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#List-Comprehensions"><span class="nav-number">5.</span> <span class="nav-text">List Comprehensions</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Functions"><span class="nav-number">6.</span> <span class="nav-text">Functions</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#lambda-functions"><span class="nav-number">6.1.</span> <span class="nav-text">lambda functions</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#args-and-kwargs"><span class="nav-number">7.</span> <span class="nav-text">*args and **kwargs</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Invalid-Syntax"><span class="nav-number">7.1.</span> <span class="nav-text">Invalid Syntax</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Some-findings"><span class="nav-number">8.</span> <span class="nav-text">Some findings</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Jing Hui PANG | 彭竞辉 | ENKR</p>
+  <div class="site-description" itemprop="description">If you actually try your best, you can't lose. Everything is rented, you can't start slipping.</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/blog/archives">
+          <span class="site-state-item-count">21</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/blog/categories/">
+          
+        <span class="site-state-item-count">34</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/blog/tags/">
+          
+        <span class="site-state-item-count">27</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+<div class="globe-view-counter-container">
+  <script type="text/javascript" src="//rf.revolvermaps.com/0/0/8.js?i=5uxj8a6ge7p&amp;m=1&amp;c=ff0000&amp;cr1=fff600&amp;f=ubuntu&amp;l=33" async="async"></script>
+</div>
+
+      </div>
+
+    </div>
+
+
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 2023 – 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class=""></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Jing Hui PANG | 彭竞辉 | ENKR</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="Symbols count total">16k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="Reading time total">58 mins.</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/blog/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
+  <script src="/blog/lib/velocity/velocity.min.js"></script>
+  <script src="/blog/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/blog/js/utils.js"></script>
+
+<script src="/blog/js/motion.js"></script>
+
+
+<script src="/blog/js/schemes/pisces.js"></script>
+
+
+<script src="/blog/js/next-boot.js"></script>
+
+
+
+
+  
+  <script>
+    (function(){
+      var canonicalURL, curProtocol;
+      //Get the <link> tag
+      var x=document.getElementsByTagName("link");
+		//Find the last canonical URL
+		if(x.length > 0){
+			for (i=0;i<x.length;i++){
+				if(x[i].rel.toLowerCase() == 'canonical' && x[i].href){
+					canonicalURL=x[i].href;
+				}
+			}
+		}
+    //Get protocol
+	    if (!canonicalURL){
+	    	curProtocol = window.location.protocol.split(':')[0];
+	    }
+	    else{
+	    	curProtocol = canonicalURL.split(':')[0];
+	    }
+      //Get current URL if the canonical URL does not exist
+	    if (!canonicalURL) canonicalURL = window.location.href;
+	    //Assign script content. Replace current URL with the canonical URL
+      !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=canonicalURL,t=document.referrer;if(!e.test(r)){var n=(String(curProtocol).toLowerCase() === 'https')?"https://sp0.baidu.com/9_Q4simg2RQJ8t7jm9iCKT-xh_/s.gif":"//api.share.baidu.com/s.gif";t?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var i=new Image;i.src=n}}(window);})();
+  </script>
+
+
+
+
+  
+<script src="/blog/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+<script>
+  function loadCount() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://https-enkr1-github-io-blog.disqus.com/count.js';
+    s.id = 'dsq-count-scr';
+    (d.head || d.body).appendChild(s);
+  }
+  // defer loading until the whole page loading is completed
+  window.addEventListener('load', loadCount, false);
+</script>
+<script>
+  var disqus_config = function() {
+    this.page.url = "https://enkr1.github.io/blog/python/";
+    this.page.identifier = "python/";
+    this.page.title = "Python";
+    };
+  NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
+    if (window.DISQUS) {
+      DISQUS.reset({
+        reload: true,
+        config: disqus_config
+      });
+    } else {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://https-enkr1-github-io-blog.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', '' + +new Date());
+      (d.head || d.body).appendChild(s);
+    }
+  });
+</script>
+
+</body>
+</html>

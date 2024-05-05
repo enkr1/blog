@@ -1357,7 +1357,7 @@ p {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #f99dff;
+  background: #dff1af;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2061,16 +2061,17 @@ p {
   font-size: 1.8rem;
 }
 .posts-expand .post-title {
-  font-size: 2.2rem;
+  font-size: 2.8rem;
   font-weight: normal;
   margin: initial;
   text-align: center;
+  color: #c60000;
   overflow-wrap: break-word;
   word-wrap: break-word;
 }
 @media (max-width: 567px) {
   .posts-expand .post-title {
-    font-size: 1.8rem;
+    font-size: 2.2rem;
   }
 }
 .posts-expand .post-title-link {
@@ -2083,8 +2084,8 @@ p {
 .posts-expand .post-title-link::first-letter {
   display: block;
   color: #c60000;
-  font-size: 2.34rem;
-  font-weight: 500;
+  font-size: 3.64rem;
+  font-weight: 400;
   opacity: 0.8;
   padding: 0 0.03rem 0 0;
 }
@@ -2967,12 +2968,18 @@ ul.breadcrumb li + li:last-child {
     margin-top: 1rem;
   }
 }
+.post-body h1,
+.post-body h2,
+.post-body h3,
+.post-body h4,
+.post-body h5 {
+  color: #c60000;
+}
 .post-body h1 {
 /* border-bottom: 1px solid $body-bg-color; */
   border-bottom: 1px solid rgba(198,0,0,0.192);
 }
 .post-body h1 {
-  color: #c60000;
   font-size: 2.8rem;
   margin: 2rem 0 0.3rem;
 }

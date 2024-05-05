@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 7.2.0">
+<meta name="google-site-verification" content="wSUWWkv_QhNXB_N6r3rOSU2YlmmWxYBk6UWVlgu1q94" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/logo.gif">
+  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/logo.gif">
+  <link rel="mask-icon" href="/blog/images/logo.svg" color="#222">
+  <meta name="google-site-verification" content="google295e26d511c4c6ad.html">
+
+<link rel="stylesheet" href="/blog/css/main.css">
+
+
+<link rel="stylesheet" href="/blog/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"enkr1.github.io","root":"/blog/","scheme":"Gemini","version":"7.8.0","exturl":true,"sidebar":{"position":"left","width":300,"display":"post","padding":0,"offset":0,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"buttons","active":"disqus","storage":true,"lazyload":true,"nav":null,"activeClass":"disqus"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":-1,"unescape":true,"preload":true},"motion":{"enable":true,"async":false,"transition":{"post_block":"slideDownBigIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="Embarking on a new adventure is always thrilling, and it’s even more so when it plunges me into the fascinating realms of Machine Learning and Artificial Intelligence through the MIT IDSS program, in">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Kicking Off My ML &amp; AI Journey with MIT IDSS and Great Learning">
+<meta property="og:url" content="https://enkr1.github.io/blog/kicking-off-my-ml-ai-journey-with-mit-idss-and-great-learning/index.html">
+<meta property="og:site_name" content="ENKR&#39;s Blog">
+<meta property="og:description" content="Embarking on a new adventure is always thrilling, and it’s even more so when it plunges me into the fascinating realms of Machine Learning and Artificial Intelligence through the MIT IDSS program, in">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://enkr1.github.io/blog/kicking-off-my-ml-ai-journey-with-mit-idss-and-great-learning/first-lesson.png">
+<meta property="og:image" content="https://enkr1.github.io/blog/kicking-off-my-ml-ai-journey-with-mit-idss-and-great-learning/schedule.png">
+<meta property="article:published_time" content="2024-04-24T16:33:24.000Z">
+<meta property="article:modified_time" content="2024-05-04T22:04:36.071Z">
+<meta property="article:author" content="Jing Hui PANG | 彭竞辉 | ENKR">
+<meta property="article:tag" content="mit-idss">
+<meta property="article:tag" content="self-study">
+<meta property="article:tag" content="machine-learning">
+<meta property="article:tag" content="ai">
+<meta property="article:tag" content="data-science">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://enkr1.github.io/blog/kicking-off-my-ml-ai-journey-with-mit-idss-and-great-learning/first-lesson.png">
+
+<link rel="canonical" href="https://enkr1.github.io/blog/kicking-off-my-ml-ai-journey-with-mit-idss-and-great-learning/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4N4L18VB12"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-4N4L18VB12');
+</script>
+
+<!-- Firebase -->
+<!--
+TODO: How to do this?
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyBxexVzGzOqDUGFzHVT_-oYxkqAetlFUSo",
+    authDomain: "hexo-blog-9ccea.firebaseapp.com",
+    projectId: "hexo-blog-9ccea",
+    storageBucket: "hexo-blog-9ccea.appspot.com",
+    messagingSenderId: "71411607593",
+    appId: "1:71411607593:web:d0fb244020c34c5895d438",
+    measurementId: "G-TJPENBTDNS"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
+-->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/ilyabirman-likely@2/release/likely.min.css">
+  <title>Kicking Off My ML & AI Journey with MIT IDSS and Great Learning | ENKR's Blog</title>
+  
+    <script>
+      function sendPageView() {
+        if (CONFIG.hostname !== location.hostname) return;
+        var uid = localStorage.getItem('uid') || (Math.random() + '.' + Math.random());
+        localStorage.setItem('uid', uid);
+        navigator.sendBeacon('https://www.google-analytics.com/collect', new URLSearchParams({
+          v  : 1,
+          tid: 'G-4N4L18VB12',
+          cid: uid,
+          t  : 'pageview',
+          dp : encodeURIComponent(location.pathname)
+        }));
+      }
+      document.addEventListener('pjax:complete', sendPageView);
+      sendPageView();
+    </script>
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/blog/atom.xml" title="ENKR's Blog" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/blog/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">ENKR's Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Software Engineer | Beatbox Artist</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/blog/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/blog/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-gallery">
+
+    <a href="/blog/gallery/" rel="section"><i class="fa fa-image fa-fw"></i>Gallery</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/blog/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">34</span></a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/blog/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">27</span></a>
+
+  </li>
+        <li class="menu-item menu-item-history">
+
+    <a href="/blog/archives/" rel="section"><i class="fa fa-history fa-fw"></i>History</a>
+
+  </li>
+        <li class="menu-item menu-item-platforms">
+
+    <a href="https://enkr1.github.io/platforms/" rel="section"><i class="fa fa-link fa-fw"></i>Platforms</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://enkr1.github.io/blog/kicking-off-my-ml-ai-journey-with-mit-idss-and-great-learning/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="name" content="Jing Hui PANG | 彭竞辉 | ENKR">
+      <meta itemprop="description" content="If you actually try your best, you can't lose. Everything is rented, you can't start slipping.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ENKR's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Kicking Off My ML & AI Journey with MIT IDSS and Great Learning
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: Thu 25 April 2024 00:33:24 AM" itemprop="dateCreated datePublished" datetime="2024-04-25T00:33:24+08:00">Thu 25 April 2024</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: Sun 5 May 2024 06:04:36 AM" itemprop="dateModified" datetime="2024-05-05T06:04:36+08:00">Sun 5 May 2024</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/Software-Engineering/" itemprop="url" rel="index"><span itemprop="name">Software Engineering</span></a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/Personal-Development/" itemprop="url" rel="index"><span itemprop="name">Personal Development</span></a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/Personal-Development/Online-Courses/" itemprop="url" rel="index"><span itemprop="name">Online Courses</span></a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/Personal-Development/Online-Courses/MIT-IDSS-Machine-Learning-AI-Great-Learning/" itemprop="url" rel="index"><span itemprop="name">MIT & IDSS - Machine Learning & AI (Great Learning)</span></a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/Software-Engineering/Machine-Learning-AI/" itemprop="url" rel="index"><span itemprop="name">Machine Learning & AI</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/blog/kicking-off-my-ml-ai-journey-with-mit-idss-and-great-learning/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="kicking-off-my-ml-ai-journey-with-mit-idss-and-great-learning/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+              <span>889</span>
+            </span>
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+              <span>3 mins.</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>Embarking on a new adventure is always thrilling, and it’s even more so when it plunges me into the fascinating realms of <strong>Machine Learning and Artificial Intelligence</strong> through the <span class="exturl" data-url="aHR0cHM6Ly93d3cubXlncmVhdGxlYXJuaW5nLmNvbS9taXQtaWRzcy1kYXRhLXNjaWVuY2UtbWFjaGluZS1sZWFybmluZy1wcm9ncmFt">MIT IDSS program<i class="fa fa-external-link-alt"></i></span>, in partnership with <span class="exturl" data-url="aHR0cHM6Ly93d3cubXlncmVhdGxlYXJuaW5nLmNvbS8=">Great Learning<i class="fa fa-external-link-alt"></i></span>. This journey isn’t just about boosting my technical skills—it’s about deepening my understanding of the complex world of data. With a keen interest in ML &amp; AI, I’m eager to build a solid foundation of fundamentals that will propel my journey toward greater success!</p>
+<span id="more"></span>
+
+<h1 id="Why-I-Chose-MIT-IDSS-by-Great-Learning"><a href="#Why-I-Chose-MIT-IDSS-by-Great-Learning" class="headerlink" title="Why I Chose MIT IDSS by Great Learning"></a>Why I Chose MIT IDSS by Great Learning</h1><p>Selecting the optimal path to advance my career in data science was crucial. The collaboration between MIT IDSS and Great Learning grabbed my attention due to its unique blend of academic rigor and real-world industry exposure. The program promises a manageable yet intense workload of 8-12 hours per week, fitting seamlessly into my busy schedule as a working professional eager to enhance my skills.</p>
+<p>After comparing options like SkillsFuture Singapore, Udemy, and Coursera, the choice became clear. The faculty from MIT, seasoned experts in Data Science and AI, alongside the promise of interactive, mentor-led sessions at least once a month, convinced me of its value. These elements suggest not just learning opportunities but also the chance to engage with accomplished peers.</p>
+<p>I’m approaching this program with an open mind and a critical eye, fully prepared to explore its potential to boost my career. Rest assured, I plan to share candid feedback about my experience and the program’s impact once I’ve made significant progress. Stay tuned for an honest review of whether MIT IDSS meets my expectations and truly enhances my expertise in the field.</p>
+<h1 id="Program-Overview"><a href="#Program-Overview" class="headerlink" title="Program Overview"></a>Program Overview</h1><p>The Data Science and Machine Learning Program by MIT IDSS, in collaboration with Great Learning, blends rigorous academic content with practical industry insights. This structured program requires a commitment of 8-12 hours per week and is designed to fit seamlessly into the schedules of busy professionals.</p>
+<h2 id="Curriculum-and-Structure"><a href="#Curriculum-and-Structure" class="headerlink" title="Curriculum and Structure"></a>Curriculum and Structure</h2><p>The curriculum starts with foundational topics and escalates to complex areas in data science and machine learning. Courses are organized into weekly modules that include:</p>
+<ul>
+<li><strong>Recorded Lectures</strong> by MIT Faculty</li>
+<li><strong>Interactive Mentor-Led Sessions</strong></li>
+<li><strong>Hands-On Case Studies</strong></li>
+<li><strong>Weekly Assessments</strong></li>
+</ul>
+<h2 id="Scoring-and-Evaluation"><a href="#Scoring-and-Evaluation" class="headerlink" title="Scoring and Evaluation"></a>Scoring and Evaluation</h2><p>The program uses a detailed scoring system to evaluate participant performance:</p>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Description</th>
+<th>Marks (Without Project)</th>
+<th>Marks (With Project)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Weekly Quizzes</strong></td>
+<td>Quizzes based on lecture and reading materials</td>
+<td>90</td>
+<td>50</td>
+</tr>
+<tr>
+<td><strong>Project Work</strong></td>
+<td>Practical projects to apply learning</td>
+<td>N&#x2F;A</td>
+<td>40</td>
+</tr>
+<tr>
+<td><strong>Attendance (Mentored Sessions)</strong></td>
+<td>Participation in weekly live sessions</td>
+<td>10</td>
+<td>10</td>
+</tr>
+</tbody></table>
+<h2 id="Attendance-and-Participation"><a href="#Attendance-and-Participation" class="headerlink" title="Attendance and Participation"></a>Attendance and Participation</h2><p>Active participation and attendance are crucial for succeeding in the program:</p>
+<table>
+<thead>
+<tr>
+<th>Criteria</th>
+<th>Scoring</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Less than 60%</strong></td>
+<td>Incomplete (IC)</td>
+</tr>
+<tr>
+<td><strong>60% - 80%</strong></td>
+<td>Complete (C)</td>
+</tr>
+<tr>
+<td><strong>Above 80%</strong></td>
+<td>Excel (E)</td>
+</tr>
+</tbody></table>
+<h2 id="Extension-Policy"><a href="#Extension-Policy" class="headerlink" title="Extension Policy"></a>Extension Policy</h2><p>The program has a strict timeline to ensure consistent progress:</p>
+<ul>
+<li><strong>Assessments</strong>: Must be submitted by the due dates.</li>
+<li><strong>Extensions</strong>: Limited to one per program for emergencies, evaluated on a case-by-case basis.</li>
+</ul>
+<blockquote>
+<p>This program not only aims to enhance your skills but also prepares you to lead in the ever-evolving field of data science and machine learning. As you step into this journey, remember that your instructors and peers are your support network, ready to assist and guide you towards your career aspirations.</p>
+</blockquote>
+<h1 id="First-Impressions-Introduction-to-Python"><a href="#First-Impressions-Introduction-to-Python" class="headerlink" title="First Impressions: Introduction to Python"></a>First Impressions: Introduction to Python</h1><p>The program kicked off with an orientation followed by our first session, “<strong>Prework - Introduction to Python</strong>“. This session was designed to lay the groundwork for upcoming topics and refresh fundamental programming skills. As someone who already possesses a solid foundation in programming, the content felt quite basic. However, revisiting these fundamentals is always beneficial in strengthening my understanding and ensuring no detail is overlooked.</p>
+<img data-src="/blog/kicking-off-my-ml-ai-journey-with-mit-idss-and-great-learning/first-lesson.png" class="" title="First lesson!">
+
+<p>Despite the straightforward nature of the material, the first mentored session did not quite meet my expectations in terms of interaction. It felt more like a standard online course rather than an engaging classroom experience. This <em>lack of dynamic interaction was a bit of a letdown, yet I am optimistic about future sessions</em>. I look forward to them fostering a more collaborative and engaging atmosphere, one that is crucial for deeper learning and professional growth.</p>
+<h1 id="My-Plan"><a href="#My-Plan" class="headerlink" title="My Plan"></a>My Plan</h1><p>Accoridng to my schedule:</p>
+<img data-src="/blog/kicking-off-my-ml-ai-journey-with-mit-idss-and-great-learning/schedule.png" class="" title="Schedule">
+
+<p>I want to make the most out of this program and I have set a few personal goals:</p>
+<ol>
+<li><strong>Engage Fully</strong>: Actively participate in all mentored learning sessions and group discussions.</li>
+<li><strong>Stay Organised</strong>: Keep up with the weekly schedule and assessments to avoid falling below total score of 95% and to keep attendance at 100%.</li>
+<li><strong>Apply Learning</strong>: Implement concepts through personal projects or at my current job to solidify understanding whenever its possible!</li>
+</ol>
+<h1 id="Conclusion-A-Journey-of-Learning-and-Growth"><a href="#Conclusion-A-Journey-of-Learning-and-Growth" class="headerlink" title="Conclusion: A Journey of Learning and Growth"></a>Conclusion: A Journey of Learning and Growth</h1><p>For me, this program extends beyond just mastering algorithms or enhancing my Python coding skills; it’s about grasping the broader impact of Machine Learning and Artificial Intelligence in tackling real-world challenges. I am eager to discover where this journey will take me and how it will refine my contributions to the field of data science.</p>
+<p>I look forward to sharing more insights and developments as I dive deeper into this fascinating field! Feel free to join the conversation—share your thoughts and experiences in ML &amp; AI either here in the comments or in my upcoming posts. Let’s explore these transformative technologies together!</p>
+<hr>
+<!--
+TODO: Use it for last class
+![alt text](image.png)
+-->
+
+    </div>
+
+    
+    
+    
+      
+  <div class="popular-posts-header">Related Posts</div>
+  <ul class="popular-posts">
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="/blog/introduction-to-data-science-ai/" rel="bookmark">Introduction to Data Science & AI</a></div>
+    </li>
+  </ul>
+<div class="post-widgets">
+    <div class="likely">
+        <div class="twitter">Tweet</div>
+        <div class="facebook">Share</div>
+        <div class="linkedin">Link</div>
+        <div class="gplus">Plus</div>
+        <div class="vkontakte">Share</div>
+        <div class="odnoklassniki">Class</div>
+        <div class="telegram">Send</div>
+        <div class="whatsapp">Send</div>
+        <div class="pinterest">Pin</div>
+    </div>
+  </div>
+  <script src="//cdn.jsdelivr.net/npm/ilyabirman-likely@2/release/likely.min.js"></script>
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/blog/tags/mit-idss/" rel="tag"># mit-idss</a>
+              <a href="/blog/tags/self-study/" rel="tag"># self-study</a>
+              <a href="/blog/tags/machine-learning/" rel="tag"># machine-learning</a>
+              <a href="/blog/tags/ai/" rel="tag"># ai</a>
+              <a href="/blog/tags/data-science/" rel="tag"># data-science</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/blog/my-journey-in-leetcoding/" rel="prev" title="My Journey in LeetCoding">
+      <i class="fa fa-chevron-left"></i> My Journey in LeetCoding
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/blog/understanding-programming-styles-declarative-vs-imperative/" rel="next" title="Understanding Programming Styles: Declarative vs Imperative">
+      Understanding Programming Styles: Declarative vs Imperative <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    
+  <div class="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+  </div>
+  
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Why-I-Chose-MIT-IDSS-by-Great-Learning"><span class="nav-number">1.</span> <span class="nav-text">Why I Chose MIT IDSS by Great Learning</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Program-Overview"><span class="nav-number">2.</span> <span class="nav-text">Program Overview</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Curriculum-and-Structure"><span class="nav-number">2.1.</span> <span class="nav-text">Curriculum and Structure</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Scoring-and-Evaluation"><span class="nav-number">2.2.</span> <span class="nav-text">Scoring and Evaluation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Attendance-and-Participation"><span class="nav-number">2.3.</span> <span class="nav-text">Attendance and Participation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Extension-Policy"><span class="nav-number">2.4.</span> <span class="nav-text">Extension Policy</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#First-Impressions-Introduction-to-Python"><span class="nav-number">3.</span> <span class="nav-text">First Impressions: Introduction to Python</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#My-Plan"><span class="nav-number">4.</span> <span class="nav-text">My Plan</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Conclusion-A-Journey-of-Learning-and-Growth"><span class="nav-number">5.</span> <span class="nav-text">Conclusion: A Journey of Learning and Growth</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Jing Hui PANG | 彭竞辉 | ENKR</p>
+  <div class="site-description" itemprop="description">If you actually try your best, you can't lose. Everything is rented, you can't start slipping.</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/blog/archives">
+          <span class="site-state-item-count">21</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/blog/categories/">
+          
+        <span class="site-state-item-count">34</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/blog/tags/">
+          
+        <span class="site-state-item-count">27</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+<div class="globe-view-counter-container">
+  <script type="text/javascript" src="//rf.revolvermaps.com/0/0/8.js?i=5uxj8a6ge7p&amp;m=1&amp;c=ff0000&amp;cr1=fff600&amp;f=ubuntu&amp;l=33" async="async"></script>
+</div>
+
+      </div>
+
+    </div>
+
+
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 2023 – 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class=""></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Jing Hui PANG | 彭竞辉 | ENKR</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="Symbols count total">16k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="Reading time total">58 mins.</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/blog/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
+  <script src="/blog/lib/velocity/velocity.min.js"></script>
+  <script src="/blog/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/blog/js/utils.js"></script>
+
+<script src="/blog/js/motion.js"></script>
+
+
+<script src="/blog/js/schemes/pisces.js"></script>
+
+
+<script src="/blog/js/next-boot.js"></script>
+
+
+
+
+  
+  <script>
+    (function(){
+      var canonicalURL, curProtocol;
+      //Get the <link> tag
+      var x=document.getElementsByTagName("link");
+		//Find the last canonical URL
+		if(x.length > 0){
+			for (i=0;i<x.length;i++){
+				if(x[i].rel.toLowerCase() == 'canonical' && x[i].href){
+					canonicalURL=x[i].href;
+				}
+			}
+		}
+    //Get protocol
+	    if (!canonicalURL){
+	    	curProtocol = window.location.protocol.split(':')[0];
+	    }
+	    else{
+	    	curProtocol = canonicalURL.split(':')[0];
+	    }
+      //Get current URL if the canonical URL does not exist
+	    if (!canonicalURL) canonicalURL = window.location.href;
+	    //Assign script content. Replace current URL with the canonical URL
+      !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=canonicalURL,t=document.referrer;if(!e.test(r)){var n=(String(curProtocol).toLowerCase() === 'https')?"https://sp0.baidu.com/9_Q4simg2RQJ8t7jm9iCKT-xh_/s.gif":"//api.share.baidu.com/s.gif";t?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var i=new Image;i.src=n}}(window);})();
+  </script>
+
+
+
+
+  
+<script src="/blog/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+<script>
+  function loadCount() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://https-enkr1-github-io-blog.disqus.com/count.js';
+    s.id = 'dsq-count-scr';
+    (d.head || d.body).appendChild(s);
+  }
+  // defer loading until the whole page loading is completed
+  window.addEventListener('load', loadCount, false);
+</script>
+<script>
+  var disqus_config = function() {
+    this.page.url = "https://enkr1.github.io/blog/kicking-off-my-ml-ai-journey-with-mit-idss-and-great-learning/";
+    this.page.identifier = "kicking-off-my-ml-ai-journey-with-mit-idss-and-great-learning/";
+    this.page.title = "Kicking Off My ML & AI Journey with MIT IDSS and Great Learning";
+    };
+  NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
+    if (window.DISQUS) {
+      DISQUS.reset({
+        reload: true,
+        config: disqus_config
+      });
+    } else {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://https-enkr1-github-io-blog.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', '' + +new Date());
+      (d.head || d.body).appendChild(s);
+    }
+  });
+</script>
+
+</body>
+</html>

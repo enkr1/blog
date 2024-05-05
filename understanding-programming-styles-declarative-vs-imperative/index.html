@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 7.2.0">
+<meta name="google-site-verification" content="wSUWWkv_QhNXB_N6r3rOSU2YlmmWxYBk6UWVlgu1q94" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/logo.gif">
+  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/logo.gif">
+  <link rel="mask-icon" href="/blog/images/logo.svg" color="#222">
+  <meta name="google-site-verification" content="google295e26d511c4c6ad.html">
+
+<link rel="stylesheet" href="/blog/css/main.css">
+
+
+<link rel="stylesheet" href="/blog/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"enkr1.github.io","root":"/blog/","scheme":"Gemini","version":"7.8.0","exturl":true,"sidebar":{"position":"left","width":300,"display":"post","padding":0,"offset":0,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"buttons","active":"disqus","storage":true,"lazyload":true,"nav":null,"activeClass":"disqus"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":-1,"unescape":true,"preload":true},"motion":{"enable":true,"async":false,"transition":{"post_block":"slideDownBigIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="Programming isn’t just about writing code; it’s about choosing the right approach to solve a problem effectively and efficiently. Today, we’ll delve into two fundamental programming styles: Declarativ">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Understanding Programming Styles: Declarative vs Imperative">
+<meta property="og:url" content="https://enkr1.github.io/blog/understanding-programming-styles-declarative-vs-imperative/index.html">
+<meta property="og:site_name" content="ENKR&#39;s Blog">
+<meta property="og:description" content="Programming isn’t just about writing code; it’s about choosing the right approach to solve a problem effectively and efficiently. Today, we’ll delve into two fundamental programming styles: Declarativ">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2024-04-24T16:56:04.000Z">
+<meta property="article:modified_time" content="2024-04-24T16:59:24.860Z">
+<meta property="article:author" content="Jing Hui PANG | 彭竞辉 | ENKR">
+<meta property="article:tag" content="programming">
+<meta property="article:tag" content="software-development">
+<meta property="article:tag" content="coding-styles">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://enkr1.github.io/blog/understanding-programming-styles-declarative-vs-imperative/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4N4L18VB12"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-4N4L18VB12');
+</script>
+
+<!-- Firebase -->
+<!--
+TODO: How to do this?
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyBxexVzGzOqDUGFzHVT_-oYxkqAetlFUSo",
+    authDomain: "hexo-blog-9ccea.firebaseapp.com",
+    projectId: "hexo-blog-9ccea",
+    storageBucket: "hexo-blog-9ccea.appspot.com",
+    messagingSenderId: "71411607593",
+    appId: "1:71411607593:web:d0fb244020c34c5895d438",
+    measurementId: "G-TJPENBTDNS"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
+-->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/ilyabirman-likely@2/release/likely.min.css">
+  <title>Understanding Programming Styles: Declarative vs Imperative | ENKR's Blog</title>
+  
+    <script>
+      function sendPageView() {
+        if (CONFIG.hostname !== location.hostname) return;
+        var uid = localStorage.getItem('uid') || (Math.random() + '.' + Math.random());
+        localStorage.setItem('uid', uid);
+        navigator.sendBeacon('https://www.google-analytics.com/collect', new URLSearchParams({
+          v  : 1,
+          tid: 'G-4N4L18VB12',
+          cid: uid,
+          t  : 'pageview',
+          dp : encodeURIComponent(location.pathname)
+        }));
+      }
+      document.addEventListener('pjax:complete', sendPageView);
+      sendPageView();
+    </script>
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/blog/atom.xml" title="ENKR's Blog" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/blog/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">ENKR's Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Software Engineer | Beatbox Artist</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/blog/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/blog/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-gallery">
+
+    <a href="/blog/gallery/" rel="section"><i class="fa fa-image fa-fw"></i>Gallery</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/blog/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">34</span></a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/blog/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">27</span></a>
+
+  </li>
+        <li class="menu-item menu-item-history">
+
+    <a href="/blog/archives/" rel="section"><i class="fa fa-history fa-fw"></i>History</a>
+
+  </li>
+        <li class="menu-item menu-item-platforms">
+
+    <a href="https://enkr1.github.io/platforms/" rel="section"><i class="fa fa-link fa-fw"></i>Platforms</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://enkr1.github.io/blog/understanding-programming-styles-declarative-vs-imperative/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="name" content="Jing Hui PANG | 彭竞辉 | ENKR">
+      <meta itemprop="description" content="If you actually try your best, you can't lose. Everything is rented, you can't start slipping.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ENKR's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Understanding Programming Styles: Declarative vs Imperative
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: Thu 25 April 2024 00:56:04 AM / Modified: 00:59:24 AM" itemprop="dateCreated datePublished" datetime="2024-04-25T00:56:04+08:00">Thu 25 April 2024</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/Software-Engineering/" itemprop="url" rel="index"><span itemprop="name">Software Engineering</span></a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/Software-Engineering/Programming-Styles/" itemprop="url" rel="index"><span itemprop="name">Programming Styles</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/blog/understanding-programming-styles-declarative-vs-imperative/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="understanding-programming-styles-declarative-vs-imperative/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+              <span>421</span>
+            </span>
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+              <span>2 mins.</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>Programming isn’t just about writing code; it’s about choosing the right approach to solve a problem effectively and efficiently. Today, we’ll delve into two fundamental programming styles: Declarative and Imperative. Each style has its philosophies, methodologies, and uses, which can greatly influence your project’s design and maintenance.</p>
+<span id="more"></span>
+
+<h1 id="Declarative-Programming-Style"><a href="#Declarative-Programming-Style" class="headerlink" title="Declarative Programming Style"></a>Declarative Programming Style</h1><p>Declarative programming is all about specifying <strong>what</strong> you want to achieve, without having to explicitly describe <strong>how</strong> to accomplish it. This style is more about writing expressions than writing step-by-step commands.</p>
+<h2 id="Characteristics"><a href="#Characteristics" class="headerlink" title="Characteristics:"></a>Characteristics:</h2><ul>
+<li><strong>High-Level Abstraction:</strong> Details of operations are abstracted away.</li>
+<li><strong>Readability:</strong> Easier to understand, especially for non-programmers.</li>
+<li><strong>Reusability:</strong> Promotes the use of more general solutions.</li>
+</ul>
+<h2 id="Example-in-SQL"><a href="#Example-in-SQL" class="headerlink" title="Example in SQL:"></a>Example in SQL:</h2><p>Consider this SQL query which is a perfect example of declarative programming:</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> name, age <span class="keyword">FROM</span> employees <span class="keyword">WHERE</span> age <span class="operator">&gt;=</span> <span class="number">30</span>;</span><br></pre></td></tr></table></figure>
+<p>Here, the command describes what result is needed – employees over 30 – without specifying how to traverse the database tables.</p>
+<h1 id="Imperative-Programming-Style"><a href="#Imperative-Programming-Style" class="headerlink" title="Imperative Programming Style"></a>Imperative Programming Style</h1><p>In contrast, imperative programming focuses on the <strong>how</strong>; it requires the programmer to define explicit steps to achieve a desired outcome.</p>
+<h2 id="Characteristics-1"><a href="#Characteristics-1" class="headerlink" title="Characteristics:"></a>Characteristics:</h2><ul>
+<li><strong>Control Flow:</strong> Direct control with commands like loops and conditionals.</li>
+<li><strong>State Changes:</strong> Manipulation of program state via assignments.</li>
+<li><strong>Performance:</strong> Allows fine-tuning, which can lead to more optimized code.</li>
+</ul>
+<h2 id="Example-in-Python"><a href="#Example-in-Python" class="headerlink" title="Example in Python:"></a>Example in Python:</h2><p>Here’s how you would write a program to calculate the factorial of a number using Python, an imperative language:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">factorial</span>(<span class="params">n</span>):</span><br><span class="line">    result = <span class="number">1</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, n+<span class="number">1</span>):</span><br><span class="line">        result *= i</span><br><span class="line">    <span class="keyword">return</span> result</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(factorial(<span class="number">5</span>))  <span class="comment"># Output: 120</span></span><br></pre></td></tr></table></figure>
+<p>This snippet shows a clear sequence of operations to compute the factorial.</p>
+<h1 id="Comparative-Analysis"><a href="#Comparative-Analysis" class="headerlink" title="Comparative Analysis"></a>Comparative Analysis</h1><p>To encapsulate the differences, here’s a side-by-side comparison of both programming styles:</p>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Declarative</th>
+<th>Imperative</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>What vs How</td>
+<td>Focuses on “what”</td>
+<td>Focuses on “how”</td>
+</tr>
+<tr>
+<td>Control Flow</td>
+<td>Abstracted</td>
+<td>Explicit</td>
+</tr>
+<tr>
+<td>Complexity</td>
+<td>Low to moderate</td>
+<td>Can be high</td>
+</tr>
+<tr>
+<td>Flexibility</td>
+<td>Lower</td>
+<td>Higher</td>
+</tr>
+<tr>
+<td>Examples</td>
+<td>SQL, HTML, Haskell</td>
+<td>C, Java, Python</td>
+</tr>
+</tbody></table>
+<h1 id="Conclusion-Which-to-Use-When"><a href="#Conclusion-Which-to-Use-When" class="headerlink" title="Conclusion: Which to Use When?"></a>Conclusion: Which to Use When?</h1><p>Choosing between declarative and imperative programming depends on the specific needs of your project:</p>
+<ul>
+<li>Use <strong>declarative</strong> when you need simplicity and readability, and when the operations are not performance-critical.</li>
+<li>Opt for <strong>imperative</strong> when you require control and when performance optimization is crucial.</li>
+</ul>
+<p>Understanding these styles not only helps in selecting the right tool for the job but also in better understanding the potential and limitations of different programming languages and paradigms.</p>
+<hr>
+<p>Stay tuned for more insights into programming paradigms and techniques. Whether you’re a novice coder or a seasoned developer, mastering these styles can vastly improve your coding efficiency and problem-solving skills.</p>
+
+    </div>
+
+    
+    
+    
+      
+  <div class="popular-posts-header">Related Posts</div>
+  <ul class="popular-posts">
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="/blog/bash-mastery-essential-tips-and-tricks-for-command-line-power/" rel="bookmark">Bash Mastery: Essential Tips and Tricks for Command Line Power</a></div>
+    </li>
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="/blog/24-hours-harvard-cs50-by-david-malan/" rel="bookmark">24 Hours Harvard CS50 By David Malan</a></div>
+    </li>
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="/blog/elixir/" rel="bookmark">Elixir</a></div>
+    </li>
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="/blog/javascript/" rel="bookmark">JavaScript</a></div>
+    </li>
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="/blog/my-journey-with-hexo-building-a-blog-from-scratch/" rel="bookmark">My Journey with Hexo - Building a Blog from Scratch</a></div>
+    </li>
+  </ul>
+<div class="post-widgets">
+    <div class="likely">
+        <div class="twitter">Tweet</div>
+        <div class="facebook">Share</div>
+        <div class="linkedin">Link</div>
+        <div class="gplus">Plus</div>
+        <div class="vkontakte">Share</div>
+        <div class="odnoklassniki">Class</div>
+        <div class="telegram">Send</div>
+        <div class="whatsapp">Send</div>
+        <div class="pinterest">Pin</div>
+    </div>
+  </div>
+  <script src="//cdn.jsdelivr.net/npm/ilyabirman-likely@2/release/likely.min.js"></script>
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/blog/tags/programming/" rel="tag"># programming</a>
+              <a href="/blog/tags/software-development/" rel="tag"># software-development</a>
+              <a href="/blog/tags/coding-styles/" rel="tag"># coding-styles</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/blog/kicking-off-my-ml-ai-journey-with-mit-idss-and-great-learning/" rel="prev" title="Kicking Off My ML & AI Journey with MIT IDSS and Great Learning">
+      <i class="fa fa-chevron-left"></i> Kicking Off My ML & AI Journey with MIT IDSS and Great Learning
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/blog/shoutout-to-stellar-hexo-blogs/" rel="next" title="Shoutout to Stellar Hexo Blogs">
+      Shoutout to Stellar Hexo Blogs <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    
+  <div class="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+  </div>
+  
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Declarative-Programming-Style"><span class="nav-number">1.</span> <span class="nav-text">Declarative Programming Style</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Characteristics"><span class="nav-number">1.1.</span> <span class="nav-text">Characteristics:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Example-in-SQL"><span class="nav-number">1.2.</span> <span class="nav-text">Example in SQL:</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Imperative-Programming-Style"><span class="nav-number">2.</span> <span class="nav-text">Imperative Programming Style</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Characteristics-1"><span class="nav-number">2.1.</span> <span class="nav-text">Characteristics:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Example-in-Python"><span class="nav-number">2.2.</span> <span class="nav-text">Example in Python:</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Comparative-Analysis"><span class="nav-number">3.</span> <span class="nav-text">Comparative Analysis</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Conclusion-Which-to-Use-When"><span class="nav-number">4.</span> <span class="nav-text">Conclusion: Which to Use When?</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Jing Hui PANG | 彭竞辉 | ENKR</p>
+  <div class="site-description" itemprop="description">If you actually try your best, you can't lose. Everything is rented, you can't start slipping.</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/blog/archives">
+          <span class="site-state-item-count">21</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/blog/categories/">
+          
+        <span class="site-state-item-count">34</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/blog/tags/">
+          
+        <span class="site-state-item-count">27</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+<div class="globe-view-counter-container">
+  <script type="text/javascript" src="//rf.revolvermaps.com/0/0/8.js?i=5uxj8a6ge7p&amp;m=1&amp;c=ff0000&amp;cr1=fff600&amp;f=ubuntu&amp;l=33" async="async"></script>
+</div>
+
+      </div>
+
+    </div>
+
+
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 2023 – 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class=""></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Jing Hui PANG | 彭竞辉 | ENKR</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="Symbols count total">16k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="Reading time total">58 mins.</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/blog/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
+  <script src="/blog/lib/velocity/velocity.min.js"></script>
+  <script src="/blog/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/blog/js/utils.js"></script>
+
+<script src="/blog/js/motion.js"></script>
+
+
+<script src="/blog/js/schemes/pisces.js"></script>
+
+
+<script src="/blog/js/next-boot.js"></script>
+
+
+
+
+  
+  <script>
+    (function(){
+      var canonicalURL, curProtocol;
+      //Get the <link> tag
+      var x=document.getElementsByTagName("link");
+		//Find the last canonical URL
+		if(x.length > 0){
+			for (i=0;i<x.length;i++){
+				if(x[i].rel.toLowerCase() == 'canonical' && x[i].href){
+					canonicalURL=x[i].href;
+				}
+			}
+		}
+    //Get protocol
+	    if (!canonicalURL){
+	    	curProtocol = window.location.protocol.split(':')[0];
+	    }
+	    else{
+	    	curProtocol = canonicalURL.split(':')[0];
+	    }
+      //Get current URL if the canonical URL does not exist
+	    if (!canonicalURL) canonicalURL = window.location.href;
+	    //Assign script content. Replace current URL with the canonical URL
+      !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=canonicalURL,t=document.referrer;if(!e.test(r)){var n=(String(curProtocol).toLowerCase() === 'https')?"https://sp0.baidu.com/9_Q4simg2RQJ8t7jm9iCKT-xh_/s.gif":"//api.share.baidu.com/s.gif";t?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var i=new Image;i.src=n}}(window);})();
+  </script>
+
+
+
+
+  
+<script src="/blog/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+<script>
+  function loadCount() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://https-enkr1-github-io-blog.disqus.com/count.js';
+    s.id = 'dsq-count-scr';
+    (d.head || d.body).appendChild(s);
+  }
+  // defer loading until the whole page loading is completed
+  window.addEventListener('load', loadCount, false);
+</script>
+<script>
+  var disqus_config = function() {
+    this.page.url = "https://enkr1.github.io/blog/understanding-programming-styles-declarative-vs-imperative/";
+    this.page.identifier = "understanding-programming-styles-declarative-vs-imperative/";
+    this.page.title = "Understanding Programming Styles: Declarative vs Imperative";
+    };
+  NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
+    if (window.DISQUS) {
+      DISQUS.reset({
+        reload: true,
+        config: disqus_config
+      });
+    } else {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://https-enkr1-github-io-blog.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', '' + +new Date());
+      (d.head || d.body).appendChild(s);
+    }
+  });
+</script>
+
+</body>
+</html>
