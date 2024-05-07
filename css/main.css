@@ -1360,7 +1360,7 @@ p {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #b521d1;
+  background: #bd4b3e;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -3101,4 +3101,5 @@ ul.breadcrumb li + li:last-child {
 }
 .fancybox .image-caption {
   font-size: 1.2rem;
+  line-height: 1.4;
 }
