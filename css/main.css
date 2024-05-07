@@ -343,7 +343,7 @@ td {
   transition-delay: 0s;
   transition-duration: 0.2s;
   transition-timing-function: ease-in-out;
-  box-shadow: 0.3rem 0.3rem 0.3rem 0.3rem rgba(0,0,0,0.013);
+  box-shadow: 0.3rem 0.3rem 0.8rem 0rem rgba(0,0,0,0.033);
 }
 .btn:hover {
   background: var(--btn-default-hover-bg);
@@ -1254,7 +1254,7 @@ p {
   text-align: center;
   white-space: nowrap;
   border-radius: 100%;
-  box-shadow: 0.3rem 0.3rem 0.3rem 0.3rem rgba(0,0,0,0.013);
+  box-shadow: 0.3rem 0.3rem 0.8rem 0rem rgba(0,0,0,0.033);
   color: #fff;
   background: #c60000;
   width: 2rem;
@@ -1275,6 +1275,7 @@ p {
 .menu .menu-item a:hover,
 .menu .menu-item span.exturl:hover {
   background: var(--menu-item-bg-color);
+  color: #c60000;
 }
 @media (max-width: 767px) {
   .menu-item-active a,
@@ -1283,7 +1284,7 @@ p {
     background: unset;
     border-radius: 0.84rem;
     border: 1px solid #999 !important;
-    box-shadow: 0.3rem 0.3rem 0.3rem 0.3rem rgba(0,0,0,0.013);
+    box-shadow: 0.3rem 0.3rem 0.8rem 0rem rgba(0,0,0,0.033);
   }
 }
 .use-motion .menu-item {
@@ -1359,7 +1360,7 @@ p {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #f54aff;
+  background: #03cb70;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -1998,7 +1999,7 @@ p {
 }
 .post-body img {
   border-radius: 1.4rem;
-  box-shadow: 0.3rem 0.3rem 0.3rem 0.3rem rgba(0,0,0,0.013);
+  box-shadow: 0.3rem 0.3rem 0.8rem 0rem rgba(0,0,0,0.033);
   max-height: 25rem;
   width: 100%;
   object-fit: cover;
@@ -2052,7 +2053,7 @@ p {
 }
 .posts-expand.index .fancybox img {
   border-radius: 1.4rem;
-  box-shadow: 0.3rem 0.3rem 0.3rem 0.3rem rgba(0,0,0,0.013);
+  box-shadow: 0.3rem 0.3rem 0.8rem 0rem rgba(0,0,0,0.033);
   max-height: 25rem;
   width: 100%;
   object-fit: cover;
@@ -2616,7 +2617,7 @@ ul.breadcrumb li + li:last-child {
   background: var(--content-bg-color);
   border-bottom-left-radius: 1.4rem;
   border-bottom-right-radius: 1.4rem;
-  box-shadow: 0.3rem 0.3rem 0.3rem 0.3rem rgba(0,0,0,0.013);
+  box-shadow: 0.3rem 0.3rem 0.8rem 0rem rgba(0,0,0,0.033);
   overflow: hidden;
   padding: 0;
   position: absolute;
@@ -2651,7 +2652,7 @@ ul.breadcrumb li + li:last-child {
 .content-wrap {
   background: var(--content-bg-color);
   border-radius: initial;
-  box-shadow: 0.3rem 0.3rem 0.3rem 0.3rem rgba(0,0,0,0.013);
+  box-shadow: 0.3rem 0.3rem 0.8rem 0rem rgba(0,0,0,0.033);
   box-sizing: border-box;
   padding: 40px;
   width: calc(100% - 300px);
@@ -2821,7 +2822,7 @@ ul.breadcrumb li + li:last-child {
 .sidebar-inner {
   background: var(--content-bg-color);
   border-radius: 1.4rem;
-  box-shadow: 0.3rem 0.3rem 0.3rem 0.3rem rgba(0,0,0,0.013);
+  box-shadow: 0.3rem 0.3rem 0.8rem 0rem rgba(0,0,0,0.033);
   box-sizing: border-box;
   color: var(--text-color);
   width: 300px;
@@ -2912,7 +2913,7 @@ ul.breadcrumb li + li:last-child {
 }
 .post-block {
   background: var(--content-bg-color);
-  box-shadow: 0.3rem 0.3rem 0.3rem 0.3rem rgba(0,0,0,0.013);
+  box-shadow: 0.3rem 0.3rem 0.8rem 0rem rgba(0,0,0,0.033);
   padding: 40px;
   border-radius: 1rem;
   padding: 1.8rem 2.4rem 2.2rem;
@@ -2965,7 +2966,7 @@ ul.breadcrumb li + li:last-child {
 }
 .sub-menu {
   border-bottom: initial;
-  box-shadow: 0.3rem 0.3rem 0.3rem 0.3rem rgba(0,0,0,0.013);
+  box-shadow: 0.3rem 0.3rem 0.8rem 0rem rgba(0,0,0,0.033);
 }
 .sub-menu +.content .post-block {
   box-shadow: 0.8rem 0.8rem 0.8rem 0.8rem rgba(0,0,0,0.013);
