@@ -1360,7 +1360,7 @@ p {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #d162c8;
+  background: #b521d1;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2557,7 +2557,7 @@ ul.breadcrumb li + li:last-child {
   padding: 5px 0;
 }
 .search-popup a.search-result-title {
-  font-weight: bold;
+  font-weight: 600;
 }
 .search-popup .search-keyword {
   border-bottom: 1px dashed #ff2a2a;
