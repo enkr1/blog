@@ -1097,6 +1097,7 @@ pre .javascript .function {
 .site-subtitle {
   color: #ddd;
   font-size: 1.1rem;
+  font-weight: 300;
   margin: 10px 0;
 }
 .use-motion .brand {
@@ -1358,7 +1359,7 @@ p {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #ff3337;
+  background: #f54aff;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -3093,6 +3094,9 @@ ul.breadcrumb li + li:last-child {
   display: unset;
   width: 100%;
   margin: auto auto 0.8rem;
+}
+.fancybox img.no-shadow {
+  box-shadow: unset !important;
 }
 .fancybox .image-caption {
   font-size: 1.2rem;
