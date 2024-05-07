@@ -1360,7 +1360,7 @@ p {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #bd4b3e;
+  background: #e545a7;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2291,8 +2291,12 @@ p {
   display: block;
   padding: 0rem 0.3rem;
 }
+.category-all-page .category-all .category-list .category-list-item .category-list-link::before {
+  content: "";
+}
 .category-all-page .category-all .category-list .category-list-item .category-list-link:hover {
   color: #c60000;
+  font-weight: 500;
 }
 .category-all-page .category-all .category-list .category-list-item .category-list-link:hover::before {
   content: "➤ ";
