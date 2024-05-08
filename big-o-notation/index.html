@@ -23,26 +23,30 @@
     var CONFIG = {"hostname":"enkr1.github.io","root":"/blog/","scheme":"Gemini","version":"7.8.0","exturl":true,"sidebar":{"position":"left","width":300,"display":"post","padding":0,"offset":0,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"buttons","active":"disqus","storage":true,"lazyload":true,"nav":null,"activeClass":"disqus"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":-1,"unescape":true,"preload":true},"motion":{"enable":true,"async":false,"transition":{"post_block":"slideDownBigIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="If you actually try your best, you can&#39;t lose. Everything is rented, you can&#39;t start slipping.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="ENKR&#39;s Blog">
-<meta property="og:url" content="https://enkr1.github.io/blog/index.html">
+  <meta name="description" content="wip … O(1) most efficient &amp; fastest algorithm regardless of n growth, always instant Constant speed  Examples: Accessing Array by index or map Inserting Linked List (Removal is O(n)) Pushing and">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Big-O Notation">
+<meta property="og:url" content="https://enkr1.github.io/blog/big-o-notation/index.html">
 <meta property="og:site_name" content="ENKR&#39;s Blog">
-<meta property="og:description" content="If you actually try your best, you can&#39;t lose. Everything is rented, you can&#39;t start slipping.">
+<meta property="og:description" content="wip … O(1) most efficient &amp; fastest algorithm regardless of n growth, always instant Constant speed  Examples: Accessing Array by index or map Inserting Linked List (Removal is O(n)) Pushing and">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://enkr1.github.io/blog/big-o-notation/bon-graph-1.png">
+<meta property="article:published_time" content="2024-05-08T18:19:27.000Z">
+<meta property="article:modified_time" content="2024-05-08T18:33:32.184Z">
 <meta property="article:author" content="Jing Hui PANG | 彭竞辉 | ENKR">
 <meta property="article:tag" content="ENKR, Jing Hui PANG, Beatbox, Programming, Software Engineering, Beatbox Tutorials, Elixir, Singapore, 555 Beatbox Initiative">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://enkr1.github.io/blog/big-o-notation/bon-graph-1.png">
 
-<link rel="canonical" href="https://enkr1.github.io/blog/">
+<link rel="canonical" href="https://enkr1.github.io/blog/big-o-notation/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'en'
   };
 </script>
@@ -82,7 +86,7 @@
   const analytics = getAnalytics(app);
 </script>
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/ilyabirman-likely@2/release/likely.min.css">
-  <title>ENKR's Blog</title>
+  <title>Big-O Notation | ENKR's Blog</title>
   
     <script>
       function sendPageView() {
@@ -252,706 +256,10 @@
         <div class="content-wrap">
           
 
-          <div class="content index posts-expand">
+          <div class="content post posts-expand">
             
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://enkr1.github.io/blog/my-beatbox-journey-from-solitude-to-the-stage/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/blog/images/avatar.gif">
-      <meta itemprop="name" content="Jing Hui PANG | 彭竞辉 | ENKR">
-      <meta itemprop="description" content="If you actually try your best, you can't lose. Everything is rented, you can't start slipping.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ENKR's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-              <span class="post-sticky-flag" title="Sticky">
-                <i class="fa fa-thumbtack"></i>
-              </span>
-            <a href="/blog/my-beatbox-journey-from-solitude-to-the-stage/" class="post-title-link" itemprop="url">My Beatbox Journey: From Solitude to the Stage</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: Sat 27 April 2024 22:09:02 PM" itemprop="dateCreated datePublished" datetime="2024-04-27T22:09:02+08:00">Sat 27 April 2024</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: Thu 9 May 2024 01:36:04 AM" itemprop="dateModified" datetime="2024-05-09T01:36:04+08:00">Thu 9 May 2024</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/About-Me/" itemprop="url" rel="index"><span itemprop="name">About Me</span></a>
-                </span>
-                  , 
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/About-Me/Hobbies/" itemprop="url" rel="index"><span itemprop="name">Hobbies</span></a>
-                </span>
-                  , 
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/About-Me/Hobbies/Beatboxing/" itemprop="url" rel="index"><span itemprop="name">Beatboxing</span></a>
-                </span>
-            </span>
-
-          
-            <span class="post-meta-item" title="Views">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-users"></i>
-              </span>
-              <span class="post-meta-item-text">Views: </span>
-              <span class="firestore-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus: </span>
-    
-    <a title="disqus" href="/blog/my-beatbox-journey-from-solitude-to-the-stage/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="my-beatbox-journey-from-solitude-to-the-stage/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-            <span class="post-meta-item" title="Symbols count in article">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-              <span>3k</span>
-            </span>
-            <span class="post-meta-item" title="Reading time">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-              <span>11 mins.</span>
-            </span>
-
-        </div>
-      </header>
 
     
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Explore the transformational journey of Jing Hui PANG, from beatboxing in solitude to performing on stage. This blog shares the personal growth and technical skills gained through beatboxing. Join the discussion and share your musical journey!</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/blog/my-beatbox-journey-from-solitude-to-the-stage/">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      
-
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://enkr1.github.io/blog/my-leetcode-journey-from-novice-to-bytedance-software-engineer/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/blog/images/avatar.gif">
-      <meta itemprop="name" content="Jing Hui PANG | 彭竞辉 | ENKR">
-      <meta itemprop="description" content="If you actually try your best, you can't lose. Everything is rented, you can't start slipping.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ENKR's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-              <span class="post-sticky-flag" title="Sticky">
-                <i class="fa fa-thumbtack"></i>
-              </span>
-            <a href="/blog/my-leetcode-journey-from-novice-to-bytedance-software-engineer/" class="post-title-link" itemprop="url">My LeetCode Journey: From Novice to ByteDance Software Engineer</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: Mon 22 April 2024 05:44:45 AM" itemprop="dateCreated datePublished" datetime="2024-04-22T05:44:45+08:00">Mon 22 April 2024</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: Thu 9 May 2024 01:36:13 AM" itemprop="dateModified" datetime="2024-05-09T01:36:13+08:00">Thu 9 May 2024</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Career-Development/" itemprop="url" rel="index"><span itemprop="name">Career Development</span></a>
-                </span>
-                  , 
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Career-Development/Interviews/" itemprop="url" rel="index"><span itemprop="name">Interviews</span></a>
-                </span>
-                  , 
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Career-Development/Interviews/Technical-Coding-Interviews/" itemprop="url" rel="index"><span itemprop="name">Technical Coding Interviews</span></a>
-                </span>
-            </span>
-
-          
-            <span class="post-meta-item" title="Views">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-users"></i>
-              </span>
-              <span class="post-meta-item-text">Views: </span>
-              <span class="firestore-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus: </span>
-    
-    <a title="disqus" href="/blog/my-leetcode-journey-from-novice-to-bytedance-software-engineer/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="my-leetcode-journey-from-novice-to-bytedance-software-engineer/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-            <span class="post-meta-item" title="Symbols count in article">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-              <span>1.5k</span>
-            </span>
-            <span class="post-meta-item" title="Reading time">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-              <span>6 mins.</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Embark on my personal odyssey as I navigate the challenging world of coding interviews through LeetCode. Uncover the strategies that propelled me to secure a coveted position at ByteDance, learn from my journey's ups and downs, and gather actionable tips to boost your own performance in coding interviews.</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/blog/my-leetcode-journey-from-novice-to-bytedance-software-engineer/">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      
-
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://enkr1.github.io/blog/innovative-portfolio-my-journey-in-software-and-technology-projects/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/blog/images/avatar.gif">
-      <meta itemprop="name" content="Jing Hui PANG | 彭竞辉 | ENKR">
-      <meta itemprop="description" content="If you actually try your best, you can't lose. Everything is rented, you can't start slipping.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ENKR's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-              <span class="post-sticky-flag" title="Sticky">
-                <i class="fa fa-thumbtack"></i>
-              </span>
-            <a href="/blog/innovative-portfolio-my-journey-in-software-and-technology-projects/" class="post-title-link" itemprop="url">Innovative Portfolio: My Journey in Software and Technology Projects</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: Sun 28 April 2024 23:48:16 PM" itemprop="dateCreated datePublished" datetime="2024-04-28T23:48:16+08:00">Sun 28 April 2024</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: Thu 9 May 2024 01:36:28 AM" itemprop="dateModified" datetime="2024-05-09T01:36:28+08:00">Thu 9 May 2024</time>
-              </span>
-
-          
-            <span class="post-meta-item" title="Views">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-users"></i>
-              </span>
-              <span class="post-meta-item-text">Views: </span>
-              <span class="firestore-visitors-count"></span>
-            </span>
-  
-  
-            <span class="post-meta-item" title="Symbols count in article">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-              <span>9</span>
-            </span>
-            <span class="post-meta-item" title="Reading time">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-              <span>1 mins.</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Dive deep into my project portfolio where I explore complex software solutions and innovative technology projects. From mobile to web development, discover how I tackle real-world problems with creative and effective solutions.</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/blog/innovative-portfolio-my-journey-in-software-and-technology-projects/">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      
-
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://enkr1.github.io/blog/bash-mastery-essential-tips-and-tricks-for-command-line-power/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/blog/images/avatar.gif">
-      <meta itemprop="name" content="Jing Hui PANG | 彭竞辉 | ENKR">
-      <meta itemprop="description" content="If you actually try your best, you can't lose. Everything is rented, you can't start slipping.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ENKR's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-              <span class="post-sticky-flag" title="Sticky">
-                <i class="fa fa-thumbtack"></i>
-              </span>
-            <a href="/blog/bash-mastery-essential-tips-and-tricks-for-command-line-power/" class="post-title-link" itemprop="url">Bash Mastery: Essential Tips and Tricks for Command Line Power</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: Fri 12 April 2024 04:14:20 AM" itemprop="dateCreated datePublished" datetime="2024-04-12T04:14:20+08:00">Fri 12 April 2024</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: Thu 9 May 2024 02:14:06 AM" itemprop="dateModified" datetime="2024-05-09T02:14:06+08:00">Thu 9 May 2024</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Programming-Languages/" itemprop="url" rel="index"><span itemprop="name">Programming Languages</span></a>
-                </span>
-                  , 
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Programming-Languages/Bash/" itemprop="url" rel="index"><span itemprop="name">Bash</span></a>
-                </span>
-            </span>
-
-          
-            <span class="post-meta-item" title="Views">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-users"></i>
-              </span>
-              <span class="post-meta-item-text">Views: </span>
-              <span class="firestore-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus: </span>
-    
-    <a title="disqus" href="/blog/bash-mastery-essential-tips-and-tricks-for-command-line-power/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="bash-mastery-essential-tips-and-tricks-for-command-line-power/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-            <span class="post-meta-item" title="Symbols count in article">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-              <span>4.1k</span>
-            </span>
-            <span class="post-meta-item" title="Reading time">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-              <span>15 mins.</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Discover essential Bash tips and tricks in this comprehensive guide. Whether you're starting or looking to deepen your command line skills, find advanced techniques and easy-to-follow insights to boost your Bash efficiency.</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/blog/bash-mastery-essential-tips-and-tricks-for-command-line-power/">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      
-
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://enkr1.github.io/blog/manacher-s-algorithm-discover-the-fastest-way-to-find-palindromes/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/blog/images/avatar.gif">
-      <meta itemprop="name" content="Jing Hui PANG | 彭竞辉 | ENKR">
-      <meta itemprop="description" content="If you actually try your best, you can't lose. Everything is rented, you can't start slipping.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ENKR's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-              <span class="post-sticky-flag" title="Sticky">
-                <i class="fa fa-thumbtack"></i>
-              </span>
-            <a href="/blog/manacher-s-algorithm-discover-the-fastest-way-to-find-palindromes/" class="post-title-link" itemprop="url">Manacher's Algorithm: Discover the Fastest Way to Find Palindromes</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
-
-              <time title="Created: Thu 9 May 2024 00:53:14 AM / Modified: 01:36:39 AM" itemprop="dateCreated datePublished" datetime="2024-05-09T00:53:14+08:00">Thu 9 May 2024</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Software-Engineering/" itemprop="url" rel="index"><span itemprop="name">Software Engineering</span></a>
-                </span>
-                  , 
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Software-Engineering/Algorithms/" itemprop="url" rel="index"><span itemprop="name">Algorithms</span></a>
-                </span>
-            </span>
-
-          
-            <span class="post-meta-item" title="Views">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-users"></i>
-              </span>
-              <span class="post-meta-item-text">Views: </span>
-              <span class="firestore-visitors-count"></span>
-            </span>
-  
-  
-            <span class="post-meta-item" title="Symbols count in article">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-              <span>627</span>
-            </span>
-            <span class="post-meta-item" title="Reading time">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-              <span>2 mins.</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Unlock the secrets of Manacher's Algorithm in this detailed exploration. Learn how this ingenious method enables rapid identification of the longest palindromic substrings, drastically reducing computational complexity and enhancing algorithmic efficiency. Perfect for both budding and seasoned computer scientists.</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/blog/manacher-s-algorithm-discover-the-fastest-way-to-find-palindromes/">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      
-
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://enkr1.github.io/blog/java/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/blog/images/avatar.gif">
-      <meta itemprop="name" content="Jing Hui PANG | 彭竞辉 | ENKR">
-      <meta itemprop="description" content="If you actually try your best, you can't lose. Everything is rented, you can't start slipping.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ENKR's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-              <span class="post-sticky-flag" title="Sticky">
-                <i class="fa fa-thumbtack"></i>
-              </span>
-            <a href="/blog/java/" class="post-title-link" itemprop="url">Java</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
-
-              <time title="Created: Thu 9 May 2024 02:16:50 AM / Modified: 02:18:50 AM" itemprop="dateCreated datePublished" datetime="2024-05-09T02:16:50+08:00">Thu 9 May 2024</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Programming-Languages/" itemprop="url" rel="index"><span itemprop="name">Programming Languages</span></a>
-                </span>
-                  , 
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Programming-Languages/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a>
-                </span>
-            </span>
-
-          
-            <span class="post-meta-item" title="Views">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-users"></i>
-              </span>
-              <span class="post-meta-item-text">Views: </span>
-              <span class="firestore-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Disqus: </span>
-    
-    <a title="disqus" href="/blog/java/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="java/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-            <span class="post-meta-item" title="Symbols count in article">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-              <span>3</span>
-            </span>
-            <span class="post-meta-item" title="Reading time">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-              <span>1 mins.</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>wip ...</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/blog/java/">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      
-
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
@@ -967,10 +275,9 @@
       <meta itemprop="name" content="ENKR's Blog">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/blog/big-o-notation/" class="post-title-link" itemprop="url">Big-O Notation</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          Big-O Notation
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -1027,7 +334,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <img data-src="/blog/big-o-notation/bon-graph-1.png" class="">
+        <img data-src="/blog/big-o-notation/bon-graph-1.png" class="">
 
 <p>wip …</p>
 <h2 id="O-1"><a href="#O-1" class="headerlink" title="O(1)"></a><code>O(1)</code></h2><ul>
@@ -1201,374 +508,58 @@
 <li><span class="exturl" data-url="aHR0cHM6Ly9zdGFja292ZXJmbG93LmNvbS9xdWVzdGlvbnMvMTU5MjY0OS9leGFtcGxlcy1vZi1hbGdvcml0aG1zLXdoaWNoLWhhcy1vMS1vbi1sb2ctbi1hbmQtb2xvZy1uLWNvbXBsZXhpdGllcw==">https://stackoverflow.com/questions/1592649/examples-of-algorithms-which-has-o1-on-log-n-and-olog-n-complexities<i class="fa fa-external-link-alt"></i></span></li>
 </ul>
 
-      
     </div>
 
     
     
     
       
+<div class="post-widgets">
+    <div class="likely">
+        <div class="twitter">Tweet</div>
+        <div class="facebook">Share</div>
+        <div class="linkedin">Link</div>
+        <div class="gplus">Plus</div>
+        <div class="vkontakte">Share</div>
+        <div class="odnoklassniki">Class</div>
+        <div class="telegram">Send</div>
+        <div class="whatsapp">Send</div>
+        <div class="pinterest">Pin</div>
+    </div>
+  </div>
+  <script src="//cdn.jsdelivr.net/npm/ilyabirman-likely@2/release/likely.min.js"></script>
 
       <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://enkr1.github.io/blog/making-sense-of-unstructured-data-a-dive-into-clustering-and-dimensionality-reduction/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/blog/images/avatar.gif">
-      <meta itemprop="name" content="Jing Hui PANG | 彭竞辉 | ENKR">
-      <meta itemprop="description" content="If you actually try your best, you can't lose. Everything is rented, you can't start slipping.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ENKR's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/blog/making-sense-of-unstructured-data-a-dive-into-clustering-and-dimensionality-reduction/" class="post-title-link" itemprop="url">Making Sense of Unstructured Data: A Dive into Clustering and Dimensionality Reduction</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
-
-              <time title="Created: Sun 5 May 2024 16:50:12 PM / Modified: 17:01:31 PM" itemprop="dateCreated datePublished" datetime="2024-05-05T16:50:12+08:00">Sun 5 May 2024</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Data-Science-Insights/" itemprop="url" rel="index"><span itemprop="name">Data Science Insights</span></a>
-                </span>
-                  , 
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Data-Science-Insights/Machine-Learning-Techniques/" itemprop="url" rel="index"><span itemprop="name">Machine Learning Techniques</span></a>
-                </span>
-            </span>
-
-          
-            <span class="post-meta-item" title="Views">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-users"></i>
-              </span>
-              <span class="post-meta-item-text">Views: </span>
-              <span class="firestore-visitors-count"></span>
-            </span>
-  
-  
-            <span class="post-meta-item" title="Symbols count in article">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-              <span>559</span>
-            </span>
-            <span class="post-meta-item" title="Reading time">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-              <span>2 mins.</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Unpack the complexities of unstructured data using unsupervised learning methods like clustering and dimensionality reduction to reveal hidden patterns and insights.</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/blog/making-sense-of-unstructured-data-a-dive-into-clustering-and-dimensionality-reduction/">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
         
-      
-    </div>
 
-    
-    
-    
-      
 
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://enkr1.github.io/blog/foundations-of-data-science-navigating-through-inferential-statistics/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/blog/images/avatar.gif">
-      <meta itemprop="name" content="Jing Hui PANG | 彭竞辉 | ENKR">
-      <meta itemprop="description" content="If you actually try your best, you can't lose. Everything is rented, you can't start slipping.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ENKR's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/blog/foundations-of-data-science-navigating-through-inferential-statistics/" class="post-title-link" itemprop="url">Foundations of Data Science: Navigating Through Inferential Statistics</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: Sun 5 May 2024 16:22:15 PM" itemprop="dateCreated datePublished" datetime="2024-05-05T16:22:15+08:00">Sun 5 May 2024</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: Thu 9 May 2024 01:50:18 AM" itemprop="dateModified" datetime="2024-05-09T01:50:18+08:00">Thu 9 May 2024</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Software-Engineering/" itemprop="url" rel="index"><span itemprop="name">Software Engineering</span></a>
-                </span>
-                  , 
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Personal-Development/" itemprop="url" rel="index"><span itemprop="name">Personal Development</span></a>
-                </span>
-                  , 
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Personal-Development/Online-Courses/" itemprop="url" rel="index"><span itemprop="name">Online Courses</span></a>
-                </span>
-                  , 
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Personal-Development/Online-Courses/MIT-IDSS-AI-ML/" itemprop="url" rel="index"><span itemprop="name">MIT & IDSS - AI & ML</span></a>
-                </span>
-                  , 
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Software-Engineering/Machine-Learning-AI/" itemprop="url" rel="index"><span itemprop="name">Machine Learning & AI</span></a>
-                </span>
-            </span>
-
-          
-            <span class="post-meta-item" title="Views">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-users"></i>
-              </span>
-              <span class="post-meta-item-text">Views: </span>
-              <span class="firestore-visitors-count"></span>
-            </span>
-  
-  
-            <span class="post-meta-item" title="Symbols count in article">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-              <span>508</span>
-            </span>
-            <span class="post-meta-item" title="Reading time">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-              <span>2 mins.</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Dive deep into the statistical methods that power data science with a focus on inferential statistics. This post explores core concepts, distribution types, and the application of statistics in making informed decisions based on data.</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/blog/foundations-of-data-science-navigating-through-inferential-statistics/">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
         
-      
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/blog/java/" rel="prev" title="Java">
+      <i class="fa fa-chevron-left"></i> Java
+    </a></div>
+      <div class="post-nav-item"></div>
     </div>
-
-    
-    
-    
-      
-
-      <footer class="post-footer">
-        <div class="post-eof"></div>
       </footer>
+    
   </article>
   
   
   
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://enkr1.github.io/blog/introduction-to-data-science-ai/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/blog/images/avatar.gif">
-      <meta itemprop="name" content="Jing Hui PANG | 彭竞辉 | ENKR">
-      <meta itemprop="description" content="If you actually try your best, you can't lose. Everything is rented, you can't start slipping.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ENKR's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/blog/introduction-to-data-science-ai/" class="post-title-link" itemprop="url">Introduction to Data Science & AI</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: Sat 4 May 2024 20:04:59 PM" itemprop="dateCreated datePublished" datetime="2024-05-04T20:04:59+08:00">Sat 4 May 2024</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: Wed 8 May 2024 02:05:16 AM" itemprop="dateModified" datetime="2024-05-08T02:05:16+08:00">Wed 8 May 2024</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Software-Engineering/" itemprop="url" rel="index"><span itemprop="name">Software Engineering</span></a>
-                </span>
-                  , 
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Personal-Development/" itemprop="url" rel="index"><span itemprop="name">Personal Development</span></a>
-                </span>
-                  , 
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Personal-Development/Online-Courses/" itemprop="url" rel="index"><span itemprop="name">Online Courses</span></a>
-                </span>
-                  , 
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Personal-Development/Online-Courses/MIT-IDSS-AI-ML/" itemprop="url" rel="index"><span itemprop="name">MIT & IDSS - AI & ML</span></a>
-                </span>
-                  , 
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Software-Engineering/Machine-Learning-AI/" itemprop="url" rel="index"><span itemprop="name">Machine Learning & AI</span></a>
-                </span>
-            </span>
-
-          
-            <span class="post-meta-item" title="Views">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-users"></i>
-              </span>
-              <span class="post-meta-item-text">Views: </span>
-              <span class="firestore-visitors-count"></span>
-            </span>
-  
-  
-            <span class="post-meta-item" title="Symbols count in article">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-              <span>444</span>
-            </span>
-            <span class="post-meta-item" title="Reading time">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-              <span>2 mins.</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Step into the realm of Data Science and AI with this introductory guide, designed for those new to the field. Covering fundamental concepts, practical applications, and insights into the future of technology, this post aims to demystify the complexities of AI and data science, making it accessible to aspiring technologists and curious minds alike.</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/blog/introduction-to-data-science-ai/">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      
-
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-
-  
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/blog/page/2/">2</a><a class="page-number" href="/blog/page/3/">3</a><a class="extend next" rel="next" href="/blog/page/2/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
-  </nav>
 
 
 
           </div>
           
+    
+  <div class="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+  </div>
+  
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -1615,6 +606,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#O-1"><span class="nav-number">1.</span> <span class="nav-text">O(1)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Examples"><span class="nav-number">1.1.</span> <span class="nav-text">Examples:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Coding-example"><span class="nav-number">1.2.</span> <span class="nav-text">Coding example</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#O-logn-%E2%80%94-Logarithmic"><span class="nav-number">2.</span> <span class="nav-text">O(logn) — Logarithmic</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Examples-1"><span class="nav-number">2.1.</span> <span class="nav-text">Examples:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Coding-example-1"><span class="nav-number">2.2.</span> <span class="nav-text">Coding example</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#O-sqrt-n"><span class="nav-number">3.</span> <span class="nav-text">O(sqrt(n))</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Coding-example-2"><span class="nav-number">3.1.</span> <span class="nav-text">Coding example</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#O-n-%E2%80%94-Linear"><span class="nav-number">4.</span> <span class="nav-text">O(n) — Linear</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Examples-2"><span class="nav-number">4.1.</span> <span class="nav-text">Examples:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Coding-example-3"><span class="nav-number">4.2.</span> <span class="nav-text">Coding example</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#O-nlogn-%E2%80%94-Linearithmic"><span class="nav-number">5.</span> <span class="nav-text">O(nlogn) — Linearithmic</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Examples-3"><span class="nav-number">5.1.</span> <span class="nav-text">Examples:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#O-n-2-%E2%80%94-Quadratic"><span class="nav-number">6.</span> <span class="nav-text">O(n^2) — Quadratic</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Examples-4"><span class="nav-number">6.1.</span> <span class="nav-text">Examples:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Coding-example-4"><span class="nav-number">6.2.</span> <span class="nav-text">Coding example</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#O-n-m-%E2%80%94-similar-to-n-2"><span class="nav-number">7.</span> <span class="nav-text">O(n*m) — similar to n^2</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Coding-example-5"><span class="nav-number">7.1.</span> <span class="nav-text">Coding example</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#O-n-3-%E2%80%94-Cubic"><span class="nav-number">8.</span> <span class="nav-text">O(n^3) — Cubic</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Coding-example-6"><span class="nav-number">8.1.</span> <span class="nav-text">Coding example</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#O-2-n-O-c-n"><span class="nav-number">9.</span> <span class="nav-text">O(2^n) &#x2F; O(c^n)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Coding-example-7"><span class="nav-number">9.1.</span> <span class="nav-text">Coding example</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#O-n"><span class="nav-number">10.</span> <span class="nav-text">O(n!)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Examples-5"><span class="nav-number">10.1.</span> <span class="nav-text">Examples:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Coding-example-8"><span class="nav-number">10.2.</span> <span class="nav-text">Coding example</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Notes-for-myself"><span class="nav-number">11.</span> <span class="nav-text">Notes for myself</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#References"><span class="nav-number">12.</span> <span class="nav-text">References:</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -1853,6 +845,26 @@
   }
   // defer loading until the whole page loading is completed
   window.addEventListener('load', loadCount, false);
+</script>
+<script>
+  var disqus_config = function() {
+    this.page.url = "https://enkr1.github.io/blog/big-o-notation/";
+    this.page.identifier = "big-o-notation/";
+    this.page.title = "Big-O Notation";
+    };
+  NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
+    if (window.DISQUS) {
+      DISQUS.reset({
+        reload: true,
+        config: disqus_config
+      });
+    } else {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://https-enkr1-github-io-blog.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', '' + +new Date());
+      (d.head || d.body).appendChild(s);
+    }
+  });
 </script>
 
 </body>
