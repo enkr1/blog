@@ -405,9 +405,9 @@
     
     <category term="Personal Development" scheme="https://enkr1.github.io/blog/categories/Personal-Development/"/>
     
-    <category term="Life Lessons" scheme="https://enkr1.github.io/blog/categories/Personal-Development/Life-Lessons/"/>
-    
     <category term="Career Development" scheme="https://enkr1.github.io/blog/categories/Career-Development/"/>
+    
+    <category term="Life Lessons" scheme="https://enkr1.github.io/blog/categories/Personal-Development/Life-Lessons/"/>
     
     <category term="Business Insights" scheme="https://enkr1.github.io/blog/categories/Career-Development/Business-Insights/"/>
     
@@ -416,6 +416,10 @@
     <category term="Leadership Skills" scheme="https://enkr1.github.io/blog/categories/Project-Management/Leadership-Skills/"/>
     
     
+    <category term="inspirational" scheme="https://enkr1.github.io/blog/tags/inspirational/"/>
+    
+    <category term="motivation" scheme="https://enkr1.github.io/blog/tags/motivation/"/>
+    
     <category term="journal" scheme="https://enkr1.github.io/blog/tags/journal/"/>
     
     <category term="workshop" scheme="https://enkr1.github.io/blog/tags/workshop/"/>
@@ -423,10 +427,6 @@
     <category term="entrepreneurship" scheme="https://enkr1.github.io/blog/tags/entrepreneurship/"/>
     
     <category term="corporate-culture" scheme="https://enkr1.github.io/blog/tags/corporate-culture/"/>
-    
-    <category term="inspirational" scheme="https://enkr1.github.io/blog/tags/inspirational/"/>
-    
-    <category term="motivation" scheme="https://enkr1.github.io/blog/tags/motivation/"/>
     
   </entry>
   
