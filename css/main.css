@@ -296,6 +296,7 @@ kbd {
 }
 .table-container {
   overflow: auto;
+  text-align: left;
 }
 table {
   border-collapse: collapse;
@@ -1363,7 +1364,7 @@ p {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #cc8aff;
+  background: #ffffd0;
   border-radius: 50%;
   content: ' ';
   display: inline-block;

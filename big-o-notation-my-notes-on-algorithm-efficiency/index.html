@@ -23,24 +23,25 @@
     var CONFIG = {"hostname":"enkr1.github.io","root":"/blog/","scheme":"Gemini","version":"7.8.0","exturl":true,"sidebar":{"position":"left","width":300,"display":"post","padding":0,"offset":0,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"buttons","active":"disqus","storage":true,"lazyload":true,"nav":null,"activeClass":"disqus"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":-1,"unescape":true,"preload":true},"motion":{"enable":true,"async":false,"transition":{"post_block":"slideDownBigIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="Step into the world of algorithm efficiency with our Big-O Notation guide, tailored for developers and interview candidates. Learn to master the complexities of time and space optimisation to ace tech">
+  <meta name="description" content="Join me as I explore Big-O Notation through my personal notes. This blog is a space where I document my understanding of algorithm efficiency, offering insights into how I approach time and space opti">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Big-O Notation: A Developer&#39;s Guide to Optimising Algorithm Efficiency">
-<meta property="og:url" content="https://enkr1.github.io/blog/big-o-notation-a-developer-s-guide-to-optimising-algorithm-efficiency/index.html">
+<meta property="og:title" content="Big-O Notation: My Notes on Algorithm Efficiency">
+<meta property="og:url" content="https://enkr1.github.io/blog/big-o-notation-my-notes-on-algorithm-efficiency/index.html">
 <meta property="og:site_name" content="ENKR&#39;s Blog">
-<meta property="og:description" content="Step into the world of algorithm efficiency with our Big-O Notation guide, tailored for developers and interview candidates. Learn to master the complexities of time and space optimisation to ace tech">
+<meta property="og:description" content="Join me as I explore Big-O Notation through my personal notes. This blog is a space where I document my understanding of algorithm efficiency, offering insights into how I approach time and space opti">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://enkr1.github.io/blog/big-o-notation-a-developer-s-guide-to-optimising-algorithm-efficiency/bon-graph-1.png">
+<meta property="og:image" content="https://enkr1.github.io/blog/big-o-notation-my-notes-on-algorithm-efficiency/bon-graph-1.png">
+<meta property="og:image" content="https://enkr1.github.io/blog/big-o-notation-my-notes-on-algorithm-efficiency/bon-graph-2.png">
 <meta property="article:published_time" content="2024-05-08T18:19:27.000Z">
-<meta property="article:modified_time" content="2024-05-09T17:17:33.338Z">
+<meta property="article:modified_time" content="2024-05-11T23:01:19.669Z">
 <meta property="article:author" content="Jing Hui PANG | 彭竞辉 | ENKR">
 <meta property="article:tag" content="note">
 <meta property="article:tag" content="algorithm">
 <meta property="article:tag" content="technical-interview-prep">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://enkr1.github.io/blog/big-o-notation-a-developer-s-guide-to-optimising-algorithm-efficiency/bon-graph-1.png">
+<meta name="twitter:image" content="https://enkr1.github.io/blog/big-o-notation-my-notes-on-algorithm-efficiency/bon-graph-1.png">
 
-<link rel="canonical" href="https://enkr1.github.io/blog/big-o-notation-a-developer-s-guide-to-optimising-algorithm-efficiency/">
+<link rel="canonical" href="https://enkr1.github.io/blog/big-o-notation-my-notes-on-algorithm-efficiency/">
 
 
 <script id="page-configurations">
@@ -88,7 +89,7 @@
   const analytics = getAnalytics(app);
 </script>
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/ilyabirman-likely@2/release/likely.min.css">
-  <title>Big-O Notation: A Developer's Guide to Optimising Algorithm Efficiency | ENKR's Blog</title>
+  <title>Big-O Notation: My Notes on Algorithm Efficiency | ENKR's Blog</title>
   
     <script>
       function sendPageView() {
@@ -265,7 +266,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://enkr1.github.io/blog/big-o-notation-a-developer-s-guide-to-optimising-algorithm-efficiency/">
+    <link itemprop="mainEntityOfPage" href="https://enkr1.github.io/blog/big-o-notation-my-notes-on-algorithm-efficiency/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/blog/images/avatar.gif">
@@ -278,7 +279,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Big-O Notation: A Developer's Guide to Optimising Algorithm Efficiency
+          Big-O Notation: My Notes on Algorithm Efficiency
         </h1>
 
         <div class="post-meta">
@@ -295,7 +296,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: Fri 10 May 2024 01:17:33 AM" itemprop="dateModified" datetime="2024-05-10T01:17:33+08:00">Fri 10 May 2024</time>
+                <time title="Modified: Sun 12 May 2024 07:01:19 AM" itemprop="dateModified" datetime="2024-05-12T07:01:19+08:00">Sun 12 May 2024</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -339,8 +340,8 @@
       </span>
       <span class="post-meta-item-text">Disqus: </span>
     
-    <a title="disqus" href="/blog/big-o-notation-a-developer-s-guide-to-optimising-algorithm-efficiency/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="big-o-notation-a-developer-s-guide-to-optimising-algorithm-efficiency/" itemprop="commentCount"></span>
+    <a title="disqus" href="/blog/big-o-notation-my-notes-on-algorithm-efficiency/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="big-o-notation-my-notes-on-algorithm-efficiency/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -349,7 +350,7 @@
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-              <span>2.1k</span>
+              <span>2.3k</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
@@ -357,7 +358,7 @@
               </span>
               <span>8 mins.</span>
             </span>
-            <div class="post-description">Step into the world of algorithm efficiency with our Big-O Notation guide, tailored for developers and interview candidates. Learn to master the complexities of time and space optimisation to ace technical interviews and enhance your coding prowess.</div>
+            <div class="post-description">Join me as I explore Big-O Notation through my personal notes. This blog is a space where I document my understanding of algorithm efficiency, offering insights into how I approach time and space optimisation in coding.</div>
 
         </div>
       </header>
@@ -368,10 +369,9 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <img data-src="/blog/big-o-notation-a-developer-s-guide-to-optimising-algorithm-efficiency/bon-graph-1.png" class="">
-<blockquote>
-<p>Making my note from <span class="exturl" data-url="aHR0cHM6Ly9uZWV0Y29kZS5pby9jb3Vyc2VzL2xlc3NvbnMvYmlnLW8tbm90YXRpb24=">https://neetcode.io/courses/lessons/big-o-notation<i class="fa fa-external-link-alt"></i></span></p>
-</blockquote>
+        <img data-src="/blog/big-o-notation-my-notes-on-algorithm-efficiency/bon-graph-1.png" class="" title="Making my note from https:&#x2F;&#x2F;neetcode.io&#x2F;courses&#x2F;lessons&#x2F;big-o-notation">
+<img data-src="/blog/big-o-notation-my-notes-on-algorithm-efficiency/bon-graph-2.png" class="">
+
 <h2 id="Understanding-Big-O-Notation"><a href="#Understanding-Big-O-Notation" class="headerlink" title="Understanding Big-O Notation"></a>Understanding Big-O Notation</h2><p>Big-O is like <strong>planning for the heaviest traffic during rush hour</strong>—it helps you understand the maximum time an algorithm might take to complete, preparing you for the <strong>worst-case scenario</strong>.</p>
 <h2 id="O-1-Constant-Time-Complexity"><a href="#O-1-Constant-Time-Complexity" class="headerlink" title="O(1): Constant Time Complexity"></a><code>O(1)</code>: Constant Time Complexity</h2><ul>
 <li><strong>Efficiency</strong>: Highest possible, as execution time remains constant regardless of input size <code>n</code>.</li>
@@ -539,6 +539,50 @@
 <li><strong>Set Partitions</strong>: Enumerating all distinct ways to partition a set into non-empty subsets.</li>
 </ul>
 <p>These examples involve extensive computations as the input size increases, making them highly inefficient for larger datasets. Due to the nature of factorial growth, <em>such complexities are often theoretical or restricted to very constrained or small-scale problems in practical applications.</em></p>
+<h2 id="Big-O-Notation-Cheat-Sheet"><a href="#Big-O-Notation-Cheat-Sheet" class="headerlink" title="Big-O Notation Cheat Sheet"></a>Big-O Notation Cheat Sheet</h2><table>
+<thead>
+<tr>
+<th>Complexity</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>O(1)</code></td>
+<td>Constant - The fastest and most efficient complexity, where operations complete in the same time regardless of the input size.</td>
+</tr>
+<tr>
+<td><code>O(log n)</code></td>
+<td>Logarithmic - Efficiency scales with the logarithm of the input size, typical in binary search.</td>
+</tr>
+<tr>
+<td><code>O(n)</code></td>
+<td>Linear - Runtime grows directly in proportion to the input size.</td>
+</tr>
+<tr>
+<td><code>O(n log n)</code></td>
+<td>Linearithmic - Combines linear and logarithmic complexities; common in efficient sorting algorithms like mergesort.</td>
+</tr>
+<tr>
+<td><code>O(n^2)</code></td>
+<td>Quadratic - Often results from nested loops; each element is processed multiple times.</td>
+</tr>
+<tr>
+<td><code>O(n^3)</code></td>
+<td>Cubic - Similar to quadratic, but with three nested loops; less common due to high inefficiency for large data sets.</td>
+</tr>
+<tr>
+<td><code>O(2^n)</code></td>
+<td>Exponential - Doubling with each additional element; common in recursive algorithms solving the subset problems.</td>
+</tr>
+<tr>
+<td><code>O(n!)</code></td>
+<td>Factorial - The slowest and least efficient; associated with algorithms that generate all permutations of a dataset.</td>
+</tr>
+<tr>
+<td><code>O(n^n)</code></td>
+<td>Exponential - Extreme cases where the complexity grows exponentially with the number of elements raised to their own power.</td>
+</tr>
+</tbody></table>
 <hr>
 <h2 id="Notes-for-myself"><a href="#Notes-for-myself" class="headerlink" title="Notes for myself"></a>Notes for myself</h2><ul>
 <li>Case such as <code>n + nlogn</code>, we don’t need to say the first <code>n</code> because in Big-O notation we only care about the larger term <em>if they are the same variable</em>. so we can just say: <code>nlogn</code>.</li>
@@ -568,10 +612,10 @@
       <div class="popular-posts-title"><a href="/blog/computer-networking-notebook/" rel="bookmark">Computer Networking Notebook</a></div>
     </li>
     <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="/blog/my-journey-with-hexo-building-a-blog-from-scratch/" rel="bookmark">My Journey with Hexo - Building a Blog from Scratch</a></div>
+      <div class="popular-posts-title"><a href="/blog/my-hexo-notebook/" rel="bookmark">My Hexo Notebook</a></div>
     </li>
     <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="/blog/my-hexo-notebook/" rel="bookmark">My Hexo Notebook</a></div>
+      <div class="popular-posts-title"><a href="/blog/my-journey-with-hexo-building-a-blog-from-scratch/" rel="bookmark">My Journey with Hexo - Building a Blog from Scratch</a></div>
     </li>
   </ul>
 <div class="post-widgets">
@@ -671,7 +715,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Understanding-Big-O-Notation"><span class="nav-number">1.</span> <span class="nav-text">Understanding Big-O Notation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#O-1-Constant-Time-Complexity"><span class="nav-number">2.</span> <span class="nav-text">O(1): Constant Time Complexity</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Common-Examples"><span class="nav-number">2.1.</span> <span class="nav-text">Common Examples:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Coding-Examples"><span class="nav-number">2.2.</span> <span class="nav-text">Coding Examples:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#O-log-n-Logarithmic-Complexity"><span class="nav-number">3.</span> <span class="nav-text">O(log n): Logarithmic Complexity</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Common-Examples-1"><span class="nav-number">3.1.</span> <span class="nav-text">Common Examples:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Coding-Examples-1"><span class="nav-number">3.2.</span> <span class="nav-text">Coding Examples:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#O-sqrt-n-Square-Root-Complexity"><span class="nav-number">4.</span> <span class="nav-text">O(sqrt(n)): Square Root Complexity</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Coding-Examples-2"><span class="nav-number">4.1.</span> <span class="nav-text">Coding Examples:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#O-n-Linear-Complexity"><span class="nav-number">5.</span> <span class="nav-text">O(n): Linear Complexity</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Common-Examples-2"><span class="nav-number">5.1.</span> <span class="nav-text">Common Examples:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Coding-Examples-3"><span class="nav-number">5.2.</span> <span class="nav-text">Coding Examples:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#O-n-log-n-Linearithmic-Complexity"><span class="nav-number">6.</span> <span class="nav-text">O(n log n): Linearithmic Complexity</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Common-Examples-3"><span class="nav-number">6.1.</span> <span class="nav-text">Common Examples:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Coding-Examples-4"><span class="nav-number">6.2.</span> <span class="nav-text">Coding Examples:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#O-n-2-Quadratic-Complexity"><span class="nav-number">7.</span> <span class="nav-text">O(n^2): Quadratic Complexity</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Common-Examples-4"><span class="nav-number">7.1.</span> <span class="nav-text">Common Examples:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Coding-Examples-5"><span class="nav-number">7.2.</span> <span class="nav-text">Coding Examples:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#O-n-m-Multiplicative-Complexity"><span class="nav-number">8.</span> <span class="nav-text">O(n*m): Multiplicative Complexity</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Common-Examples-5"><span class="nav-number">8.1.</span> <span class="nav-text">Common Examples:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Coding-Examples-6"><span class="nav-number">8.2.</span> <span class="nav-text">Coding Examples:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#O-n-3-Cubic-Complexity"><span class="nav-number">9.</span> <span class="nav-text">O(n^3): Cubic Complexity</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Common-Examples-6"><span class="nav-number">9.1.</span> <span class="nav-text">Common Examples:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Coding-Example"><span class="nav-number">9.2.</span> <span class="nav-text">Coding Example:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#O-2-n-O-c-n-Exponential-Complexity"><span class="nav-number">10.</span> <span class="nav-text">O(2^n) &#x2F; O(c^n): Exponential Complexity</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#O-2-n"><span class="nav-number">10.1.</span> <span class="nav-text">O(2^n):</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Coding-Example-for-O-2-n"><span class="nav-number">10.1.1.</span> <span class="nav-text">Coding Example for O(2^n):</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#O-c-n"><span class="nav-number">10.2.</span> <span class="nav-text">O(c^n):</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Coding-Example-for-O-c-n"><span class="nav-number">10.2.1.</span> <span class="nav-text">Coding Example for O(c^n):</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#O-n-Factorial-Complexity"><span class="nav-number">11.</span> <span class="nav-text">O(n!): Factorial Complexity</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Common-Examples-7"><span class="nav-number">11.1.</span> <span class="nav-text">Common Examples:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Notes-for-myself"><span class="nav-number">12.</span> <span class="nav-text">Notes for myself</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#References"><span class="nav-number">13.</span> <span class="nav-text">References:</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Understanding-Big-O-Notation"><span class="nav-number">1.</span> <span class="nav-text">Understanding Big-O Notation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#O-1-Constant-Time-Complexity"><span class="nav-number">2.</span> <span class="nav-text">O(1): Constant Time Complexity</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Common-Examples"><span class="nav-number">2.1.</span> <span class="nav-text">Common Examples:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Coding-Examples"><span class="nav-number">2.2.</span> <span class="nav-text">Coding Examples:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#O-log-n-Logarithmic-Complexity"><span class="nav-number">3.</span> <span class="nav-text">O(log n): Logarithmic Complexity</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Common-Examples-1"><span class="nav-number">3.1.</span> <span class="nav-text">Common Examples:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Coding-Examples-1"><span class="nav-number">3.2.</span> <span class="nav-text">Coding Examples:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#O-sqrt-n-Square-Root-Complexity"><span class="nav-number">4.</span> <span class="nav-text">O(sqrt(n)): Square Root Complexity</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Coding-Examples-2"><span class="nav-number">4.1.</span> <span class="nav-text">Coding Examples:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#O-n-Linear-Complexity"><span class="nav-number">5.</span> <span class="nav-text">O(n): Linear Complexity</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Common-Examples-2"><span class="nav-number">5.1.</span> <span class="nav-text">Common Examples:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Coding-Examples-3"><span class="nav-number">5.2.</span> <span class="nav-text">Coding Examples:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#O-n-log-n-Linearithmic-Complexity"><span class="nav-number">6.</span> <span class="nav-text">O(n log n): Linearithmic Complexity</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Common-Examples-3"><span class="nav-number">6.1.</span> <span class="nav-text">Common Examples:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Coding-Examples-4"><span class="nav-number">6.2.</span> <span class="nav-text">Coding Examples:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#O-n-2-Quadratic-Complexity"><span class="nav-number">7.</span> <span class="nav-text">O(n^2): Quadratic Complexity</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Common-Examples-4"><span class="nav-number">7.1.</span> <span class="nav-text">Common Examples:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Coding-Examples-5"><span class="nav-number">7.2.</span> <span class="nav-text">Coding Examples:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#O-n-m-Multiplicative-Complexity"><span class="nav-number">8.</span> <span class="nav-text">O(n*m): Multiplicative Complexity</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Common-Examples-5"><span class="nav-number">8.1.</span> <span class="nav-text">Common Examples:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Coding-Examples-6"><span class="nav-number">8.2.</span> <span class="nav-text">Coding Examples:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#O-n-3-Cubic-Complexity"><span class="nav-number">9.</span> <span class="nav-text">O(n^3): Cubic Complexity</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Common-Examples-6"><span class="nav-number">9.1.</span> <span class="nav-text">Common Examples:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Coding-Example"><span class="nav-number">9.2.</span> <span class="nav-text">Coding Example:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#O-2-n-O-c-n-Exponential-Complexity"><span class="nav-number">10.</span> <span class="nav-text">O(2^n) &#x2F; O(c^n): Exponential Complexity</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#O-2-n"><span class="nav-number">10.1.</span> <span class="nav-text">O(2^n):</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Coding-Example-for-O-2-n"><span class="nav-number">10.1.1.</span> <span class="nav-text">Coding Example for O(2^n):</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#O-c-n"><span class="nav-number">10.2.</span> <span class="nav-text">O(c^n):</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Coding-Example-for-O-c-n"><span class="nav-number">10.2.1.</span> <span class="nav-text">Coding Example for O(c^n):</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#O-n-Factorial-Complexity"><span class="nav-number">11.</span> <span class="nav-text">O(n!): Factorial Complexity</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Common-Examples-7"><span class="nav-number">11.1.</span> <span class="nav-text">Common Examples:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Big-O-Notation-Cheat-Sheet"><span class="nav-number">12.</span> <span class="nav-text">Big-O Notation Cheat Sheet</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Notes-for-myself"><span class="nav-number">13.</span> <span class="nav-text">Notes for myself</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#References"><span class="nav-number">14.</span> <span class="nav-text">References:</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -739,7 +783,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="Symbols count total">21k</span>
+    <span title="Symbols count total">22k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
@@ -974,9 +1018,9 @@ window.addEventListener('pjax:success', () => {
 </script>
 <script>
   var disqus_config = function() {
-    this.page.url = "https://enkr1.github.io/blog/big-o-notation-a-developer-s-guide-to-optimising-algorithm-efficiency/";
-    this.page.identifier = "big-o-notation-a-developer-s-guide-to-optimising-algorithm-efficiency/";
-    this.page.title = "Big-O Notation: A Developer's Guide to Optimising Algorithm Efficiency";
+    this.page.url = "https://enkr1.github.io/blog/big-o-notation-my-notes-on-algorithm-efficiency/";
+    this.page.identifier = "big-o-notation-my-notes-on-algorithm-efficiency/";
+    this.page.title = "Big-O Notation: My Notes on Algorithm Efficiency";
     };
   NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
     if (window.DISQUS) {
