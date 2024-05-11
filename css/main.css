@@ -1065,7 +1065,7 @@ pre .javascript .function {
 .site-brand-container {
   display: flex;
   flex-shrink: 0;
-  padding: 0 10px;
+  padding: 0 0.8rem;
 }
 .headband {
   background: #222;
@@ -1128,8 +1128,8 @@ pre .javascript .function {
 .site-nav-toggle .toggle,
 .site-nav-right .toggle {
   color: var(--text-color);
-  padding: 1rem;
-  width: 22px;
+  padding: 1.3rem;
+  width: auto;
 }
 .site-nav-toggle .toggle .toggle-line,
 .site-nav-right .toggle .toggle-line {
@@ -1158,7 +1158,7 @@ pre .javascript .function {
 }
 @media (max-width: 767px) {
   .site-nav-right {
-    padding: 0 1.2rem 0 0;
+    padding: 0;
   }
 }
 ::-webkit-scrollbar {
@@ -1363,7 +1363,7 @@ p {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #ffffcb;
+  background: #cc8aff;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2095,6 +2095,12 @@ p {
   opacity: 0.8;
   padding: 0 0.03rem 0 0;
   font-family: "Lora", serif;
+}
+@media (max-width: 767px) {
+  .posts-expand .post-title-link::first-letter,
+  .posts-expand .post-title::first-letter {
+    padding: 0 0.1rem 0 0;
+  }
 }
 .posts-expand .post-title-link {
   border-bottom: none;
