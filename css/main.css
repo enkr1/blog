@@ -1363,7 +1363,7 @@ p {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #d911ff;
+  background: #dbff73;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2301,7 +2301,7 @@ p {
   font-weight: 500;
 }
 .category-all-page .category-all .category-list .category-list-item .category-list-link:hover::before {
-  content: "➤ ";
+  content: "► ";
 }
 .category-all-page .category-all .category-list .category-list-item .category-list-link:hover ~.category-list-count {
   color: #c60000;
