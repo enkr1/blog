@@ -1374,7 +1374,7 @@ p {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #5dc36c;
+  background: #ffc634;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -1703,20 +1703,13 @@ p {
   backdrop-filter: blur(3px);
   width: initial;
 }
-.back-to-top:hover {
-  color: #c60000;
-}
 .back-to-top.back-to-top-on {
   bottom: 3.3rem;
+  right: 1rem;
 }
 @media (max-width: 991px) {
   .back-to-top.back-to-top-on {
-    bottom: 1.3rem;
-  }
-}
-@media (max-width: 991px) {
-  .back-to-top {
-    left: 1.3rem;
+    bottom: 6rem;
   }
 }
 .reading-progress-bar {
