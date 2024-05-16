@@ -1072,6 +1072,16 @@ pre .javascript .function {
   background: #222;
   height: 3px;
 }
+@media (min-width: 768px) and (max-width: 991px) {
+  .headband {
+    display: none !important;
+  }
+}
+@media (max-width: 767px) {
+  .headband {
+    display: none !important;
+  }
+}
 .site-meta {
   flex-grow: 1;
   text-align: center;
@@ -1364,7 +1374,7 @@ p {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #7c526a;
+  background: #4b1661;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
