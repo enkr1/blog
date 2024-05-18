@@ -319,13 +319,13 @@
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-              <span>2.9k</span>
+              <span>539</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
-              <span>3 mins.</span>
+              <span>2 mins.</span>
             </span>
   
   
@@ -349,262 +349,299 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="What-is-Vim"><a href="#What-is-Vim" class="headerlink" title="What is Vim?"></a>What is Vim?</h2><p>Vim (Vi IMproved) is a highly configurable text editor built to make creating and changing any kind of text very efficient. It is an improved version of the vi editor distributed with most UNIX systems.</p>
+        <h2 id="what-is-vim">What is Vim?</h2>
+<p>Vim (Vi IMproved) is a highly configurable text editor built to make
+creating and changing any kind of text very efficient. It is an improved
+version of the vi editor distributed with most UNIX systems.</p>
 <blockquote>
-<p>I am using Vim for monitoring log files, modifying scripts and environment files for DevOps tasks. Occasionally, I switch to frontend and backend development, where I might forget some commands. Here are some notes for myself, and hopefully, they help others too!</p>
+<p>I am using Vim for monitoring log files, modifying scripts and
+environment files for DevOps tasks. Occasionally, I switch to frontend
+and backend development, where I might forget some commands. Here are
+some notes for myself, and hopefully, they help others too!</p>
 </blockquote>
-<h2 id="Basic-Movements"><a href="#Basic-Movements" class="headerlink" title="Basic Movements"></a>Basic Movements</h2><table>
+<h2 id="basic-movements">Basic Movements</h2>
+<table>
+<colgroup>
+<col style="width: 6%" />
+<col style="width: 93%" />
+</colgroup>
 <thead>
-<tr>
+<tr class="header">
 <th>Command</th>
 <th>Description</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr class="odd">
 <td><code>h</code></td>
 <td>Move cursor left</td>
 </tr>
-<tr>
+<tr class="even">
 <td><code>j</code></td>
 <td>Move cursor down</td>
 </tr>
-<tr>
+<tr class="odd">
 <td><code>k</code></td>
 <td>Move cursor up</td>
 </tr>
-<tr>
+<tr class="even">
 <td><code>l</code></td>
 <td>Move cursor right</td>
 </tr>
-<tr>
+<tr class="odd">
 <td><code>gg</code></td>
 <td>Go to the first line of the file</td>
 </tr>
-<tr>
+<tr class="even">
 <td><code>G</code></td>
 <td>Go to the last line of the file</td>
 </tr>
-<tr>
+<tr class="odd">
 <td><code>w</code></td>
 <td>Move to the beginning of the next word</td>
 </tr>
-<tr>
+<tr class="even">
 <td><code>e</code></td>
 <td>Move to the end of the current word</td>
 </tr>
-<tr>
+<tr class="odd">
 <td><code>b</code></td>
 <td>Move to the beginning of the previous word</td>
 </tr>
-<tr>
+<tr class="even">
 <td><code>0</code></td>
 <td>Move the cursor to the beginning of the current line</td>
 </tr>
-<tr>
+<tr class="odd">
 <td><code>$</code></td>
 <td>Move the cursor to the end of the current line</td>
 </tr>
-<tr>
+<tr class="even">
 <td><code>W</code></td>
-<td>Move the cursor to the beginning of the next WORD (a WORD is a sequence of non-whitespace characters)</td>
+<td>Move the cursor to the beginning of the next WORD (a WORD is a
+sequence of non-whitespace characters)</td>
 </tr>
-<tr>
+<tr class="odd">
 <td><code>&#125;</code></td>
 <td>Move the cursor to the beginning of the next paragraph</td>
 </tr>
-<tr>
+<tr class="even">
 <td><code>&#123;</code></td>
 <td>Move the cursor to the beginning of the previous paragraph</td>
 </tr>
-<tr>
+<tr class="odd">
 <td><code>%</code></td>
 <td>Move the cursor to the matching bracket or parenthesis</td>
 </tr>
-</tbody></table>
-<h2 id="Editing-Commands"><a href="#Editing-Commands" class="headerlink" title="Editing Commands"></a>Editing Commands</h2><table>
+</tbody>
+</table>
+<h2 id="editing-commands">Editing Commands</h2>
+<table>
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 87%" />
+</colgroup>
 <thead>
-<tr>
+<tr class="header">
 <th>Command</th>
 <th>Description</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr class="odd">
 <td><code>i</code></td>
 <td>Enter insert mode before the cursor</td>
 </tr>
-<tr>
+<tr class="even">
 <td><code>o</code></td>
 <td>Insert a new line below the current line and enter insert mode</td>
 </tr>
-<tr>
+<tr class="odd">
 <td><code>O</code></td>
 <td>Insert a new line above the current line and enter insert mode</td>
 </tr>
-<tr>
+<tr class="even">
 <td><code>dd</code></td>
 <td>Delete the current line</td>
 </tr>
-<tr>
+<tr class="odd">
 <td><code>yy</code></td>
 <td>Yank (copy) the current line</td>
 </tr>
-<tr>
+<tr class="even">
 <td><code>p</code></td>
 <td>Paste the yanked or deleted text after the cursor</td>
 </tr>
-<tr>
+<tr class="odd">
 <td><code>J</code></td>
 <td>join the current line with the next line</td>
 </tr>
-<tr>
+<tr class="even">
 <td><code>u</code></td>
 <td>Undo the last change</td>
 </tr>
-<tr>
+<tr class="odd">
 <td><code>r</code></td>
-<td>Replace the character under the cursor with the next character typed</td>
+<td>Replace the character under the cursor with the next character
+typed</td>
 </tr>
-<tr>
+<tr class="even">
 <td><code>s</code></td>
 <td>Delete the character under the cursor and enter insert mode</td>
 </tr>
-<tr>
+<tr class="odd">
 <td><code>x</code></td>
 <td>Delete the character under the cursor</td>
 </tr>
-<tr>
+<tr class="even">
 <td><code>Ctrl + r</code></td>
 <td>Redo the undone change</td>
 </tr>
-<tr>
+<tr class="odd">
 <td><code>:w</code></td>
 <td>Save the file</td>
 </tr>
-<tr>
+<tr class="even">
 <td><code>:q</code></td>
 <td>Quit Vim</td>
 </tr>
-<tr>
+<tr class="odd">
 <td><code>:wq</code></td>
 <td>Save and quit</td>
 </tr>
-<tr>
+<tr class="even">
 <td><code>:q!</code></td>
 <td>Quit without saving</td>
 </tr>
-</tbody></table>
-<h2 id="Searching-and-Replacing"><a href="#Searching-and-Replacing" class="headerlink" title="Searching and Replacing"></a>Searching and Replacing</h2><table>
+</tbody>
+</table>
+<h2 id="searching-and-replacing">Searching and Replacing</h2>
+<table>
 <thead>
-<tr>
+<tr class="header">
 <th>Command</th>
 <th>Description</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr class="odd">
 <td><code>/pattern</code></td>
 <td>Search for <code>pattern</code></td>
 </tr>
-<tr>
+<tr class="even">
 <td><code>n</code></td>
 <td>Repeat search in the same direction</td>
 </tr>
-<tr>
+<tr class="odd">
 <td><code>N</code></td>
 <td>Repeat search in the opposite direction</td>
 </tr>
-<tr>
+<tr class="even">
 <td><code>:s/foo/bar/g</code></td>
 <td>Replace <code>foo</code> with <code>bar</code> in the file</td>
 </tr>
-<tr>
+<tr class="odd">
 <td><code>:%s/old/new/g</code></td>
 <td>Replace all instances of <code>old</code> with <code>new</code></td>
 </tr>
-</tbody></table>
-<h2 id="Control"><a href="#Control" class="headerlink" title="Control"></a>Control</h2><table>
+</tbody>
+</table>
+<h2 id="control">Control</h2>
+<table>
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 87%" />
+</colgroup>
 <thead>
-<tr>
+<tr class="header">
 <th>Command</th>
 <th>Description</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr class="odd">
 <td><code>Ctrl + o</code></td>
 <td>Jump back to the previous position</td>
 </tr>
-<tr>
+<tr class="even">
 <td><code>Ctrl + i</code></td>
 <td>Jump forward to the next position</td>
 </tr>
-<tr>
+<tr class="odd">
 <td><code>Ctrl + f</code></td>
 <td>Move the cursor forward one screen</td>
 </tr>
-<tr>
+<tr class="even">
 <td><code>Ctrl + b</code></td>
 <td>Move the cursor backward one screen</td>
 </tr>
-<tr>
+<tr class="odd">
 <td><code>Ctrl + d</code></td>
 <td>Move the cursor down half a screen</td>
 </tr>
-<tr>
+<tr class="even">
 <td><code>Ctrl + u</code></td>
 <td>Move the cursor up half a screen</td>
 </tr>
-<tr>
+<tr class="odd">
 <td><code>Ctrl + g</code></td>
 <td>Show the current cursor position in the document</td>
 </tr>
-<tr>
+<tr class="even">
 <td><code>Ctrl + w</code></td>
 <td>Delete the word before the cursor</td>
 </tr>
-<tr>
+<tr class="odd">
 <td><code>Ctrl + y</code></td>
-<td>Copy the character above the cursor and insert it at the cursor position</td>
+<td>Copy the character above the cursor and insert it at the cursor
+position</td>
 </tr>
-<tr>
+<tr class="even">
 <td><code>Ctrl + e</code></td>
-<td>Copy the character below the cursor and insert it at the cursor position</td>
+<td>Copy the character below the cursor and insert it at the cursor
+position</td>
 </tr>
-<tr>
+<tr class="odd">
 <td><code>Ctrl + r</code></td>
 <td>Enter register mode (used for copying and pasting text)</td>
 </tr>
-</tbody></table>
-<h2 id="Customisation"><a href="#Customisation" class="headerlink" title="Customisation"></a>Customisation</h2><table>
+</tbody>
+</table>
+<h2 id="customisation">Customisation</h2>
+<table>
 <thead>
-<tr>
+<tr class="header">
 <th>Command</th>
 <th>Description</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr class="odd">
 <td><code>:set number</code></td>
 <td>Show line numbers</td>
 </tr>
-<tr>
+<tr class="even">
 <td><code>:set hlsearch</code></td>
 <td>Highlight all search matches</td>
 </tr>
-<tr>
+<tr class="odd">
 <td><code>:set ignorecase</code></td>
 <td>Ignore case when searching</td>
 </tr>
-<tr>
+<tr class="even">
 <td><code>:set tabstop=4</code></td>
 <td>Set the tab width to 4 spaces</td>
 </tr>
-<tr>
+<tr class="odd">
 <td><code>:set expandtab</code></td>
 <td>Convert tabs to spaces</td>
 </tr>
-<tr>
+<tr class="even">
 <td><code>:set mouse=a</code></td>
 <td>Enable mouse support in Vim</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
 
     </div>
 
@@ -618,6 +655,9 @@
       <div class="popular-posts-title"><a href="/blog/demystifying-database-design-a-dive-into-3nf-and-bcnf/" rel="bookmark">Demystifying Database Design: A Dive into 3NF and BCNF</a></div>
     </li>
     <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="/blog/floyd-warshall-algorithm/" rel="bookmark">Floyd-Warshall Algorithm</a></div>
+    </li>
+    <li class="popular-posts-item">
       <div class="popular-posts-title"><a href="/blog/floyd-s-tortoise-and-hare-algorithm-cycle-finding/" rel="bookmark">Floyd's Tortoise and Hare Algorithm: Cycle Finding</a></div>
     </li>
     <li class="popular-posts-item">
@@ -625,9 +665,6 @@
     </li>
     <li class="popular-posts-item">
       <div class="popular-posts-title"><a href="/blog/manacher-s-algorithm-discover-the-fastest-way-to-find-palindromes/" rel="bookmark">Manacher's Algorithm: Discover the Fastest Way to Find Palindromes</a></div>
-    </li>
-    <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="/blog/my-journey-with-hexo-building-a-blog-from-scratch/" rel="bookmark">My Journey with Hexo - Building a Blog from Scratch</a></div>
     </li>
   </ul>
 <div class="post-widgets">
@@ -725,7 +762,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#What-is-Vim"><span class="nav-number">1.</span> <span class="nav-text">What is Vim?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Basic-Movements"><span class="nav-number">2.</span> <span class="nav-text">Basic Movements</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Editing-Commands"><span class="nav-number">3.</span> <span class="nav-text">Editing Commands</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Searching-and-Replacing"><span class="nav-number">4.</span> <span class="nav-text">Searching and Replacing</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Control"><span class="nav-number">5.</span> <span class="nav-text">Control</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Customisation"><span class="nav-number">6.</span> <span class="nav-text">Customisation</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#what-is-vim"><span class="nav-number">1.</span> <span class="nav-text">What is Vim?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#basic-movements"><span class="nav-number">2.</span> <span class="nav-text">Basic Movements</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#editing-commands"><span class="nav-number">3.</span> <span class="nav-text">Editing Commands</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#searching-and-replacing"><span class="nav-number">4.</span> <span class="nav-text">Searching and Replacing</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#control"><span class="nav-number">5.</span> <span class="nav-text">Control</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#customisation"><span class="nav-number">6.</span> <span class="nav-text">Customisation</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -738,7 +775,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/blog/archives">
-          <span class="site-state-item-count">34</span>
+          <span class="site-state-item-count">35</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -793,12 +830,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="Symbols count total">159k</span>
+    <span title="Symbols count total">27k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">2:25</span>
+    <span title="Reading time total">1:36</span>
 </div>
 
         
@@ -950,6 +987,8 @@
 
 
 
+
+  
 
   
 

@@ -23,21 +23,22 @@
     var CONFIG = {"hostname":"enkr1.github.io","root":"/blog/","scheme":"Gemini","version":"7.8.0","exturl":true,"sidebar":{"position":"left","width":300,"display":"post","padding":0,"offset":0,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"buttons","active":"disqus","storage":true,"lazyload":true,"nav":null,"activeClass":"disqus"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":-1,"unescape":true,"preload":true},"motion":{"enable":true,"async":false,"transition":{"post_block":"slideDownBigIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="Explore the world of Elixir, the dynamic, functional language designed for building scalable and maintainable applications. This post delves into the core features of Elixir, including its concurrency">
+  <meta name="description" content="What is Floyd-Warshall Algorithm? The Floyd-Warshall algorithm is a dynamic programming algorithm used to find the shortest paths between all pairs of vertices in a weighted graph. It can handle both">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Elixir">
-<meta property="og:url" content="https://enkr1.github.io/blog/elixir/index.html">
+<meta property="og:title" content="Floyd-Warshall Algorithm">
+<meta property="og:url" content="https://enkr1.github.io/blog/floyd-warshall-algorithm/index.html">
 <meta property="og:site_name" content="ENKR&#39;s Blog">
-<meta property="og:description" content="Explore the world of Elixir, the dynamic, functional language designed for building scalable and maintainable applications. This post delves into the core features of Elixir, including its concurrency">
+<meta property="og:description" content="What is Floyd-Warshall Algorithm? The Floyd-Warshall algorithm is a dynamic programming algorithm used to find the shortest paths between all pairs of vertices in a weighted graph. It can handle both">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2023-12-13T06:53:15.000Z">
-<meta property="article:modified_time" content="2024-05-18T20:45:42.530Z">
+<meta property="article:published_time" content="2024-05-18T22:17:35.000Z">
+<meta property="article:modified_time" content="2024-05-18T22:33:18.089Z">
 <meta property="article:author" content="Jing Hui PANG | 彭竞辉 | ENKR">
 <meta property="article:tag" content="note">
-<meta property="article:tag" content="programming">
+<meta property="article:tag" content="algorithm">
+<meta property="article:tag" content="two-pointer">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://enkr1.github.io/blog/elixir/">
+<link rel="canonical" href="https://enkr1.github.io/blog/floyd-warshall-algorithm/">
 
 
 <script id="page-configurations">
@@ -85,7 +86,7 @@
   const analytics = getAnalytics(app);
 </script>
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/ilyabirman-likely@2/release/likely.min.css">
-  <title>Elixir | ENKR's Blog</title>
+  <title>Floyd-Warshall Algorithm | ENKR's Blog</title>
   
     <script>
       function sendPageView() {
@@ -267,7 +268,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://enkr1.github.io/blog/elixir/">
+    <link itemprop="mainEntityOfPage" href="https://enkr1.github.io/blog/floyd-warshall-algorithm/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/blog/images/avatar.gif">
@@ -280,7 +281,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Elixir
+          Floyd-Warshall Algorithm
         </h1>
 
         <div class="post-meta">
@@ -289,16 +290,10 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
+              
 
-              <time title="Created: Wed 13 December 2023 14:53:15 PM" itemprop="dateCreated datePublished" datetime="2023-12-13T14:53:15+08:00">Wed 13 December 2023</time>
+              <time title="Created: Sun 19 May 2024 06:17:35 AM / Modified: 06:33:18 AM" itemprop="dateCreated datePublished" datetime="2024-05-19T06:17:35+08:00">Sun 19 May 2024</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: Sun 19 May 2024 04:45:42 AM" itemprop="dateModified" datetime="2024-05-19T04:45:42+08:00">Sun 19 May 2024</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -309,11 +304,7 @@
                 </span>
                   , 
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Software-Engineering/Programming-Languages/" itemprop="url" rel="index"><span itemprop="name">Programming Languages</span></a>
-                </span>
-                  , 
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Software-Engineering/Programming-Languages/Elixir/" itemprop="url" rel="index"><span itemprop="name">Elixir</span></a>
+                  <a href="/blog/categories/Software-Engineering/Algorithms/" itemprop="url" rel="index"><span itemprop="name">Algorithms</span></a>
                 </span>
             </span>
 
@@ -322,13 +313,13 @@
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-              <span>86</span>
+              <span>924</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
-              <span>1 mins.</span>
+              <span>3 mins.</span>
             </span>
   
   <span class="post-meta-item">
@@ -338,8 +329,8 @@
       </span>
       <span class="post-meta-item-text">Disqus: </span>
     
-    <a title="disqus" href="/blog/elixir/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="elixir/" itemprop="commentCount"></span>
+    <a title="disqus" href="/blog/floyd-warshall-algorithm/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="floyd-warshall-algorithm/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -353,7 +344,6 @@
               <span class="post-meta-item-text">Views: </span>
               <span class="firestore-visitors-count"></span>
             </span>
-            <div class="post-description">Explore the world of Elixir, the dynamic, functional language designed for building scalable and maintainable applications. This post delves into the core features of Elixir, including its concurrency model, fault tolerance, and functional programming paradigms. Whether you're a beginner eager to learn Elixir or an experienced developer looking to expand your toolkit, find comprehensive insights and practical examples to harness the full potential of this powerful language.</div>
 
         </div>
       </header>
@@ -364,25 +354,194 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>Coming soon ...</p>
-<span id="more"></span>
-<h2 id="todo">TODO</h2>
-<h3 id="links-on-how-to-deploy-an-elixir-app">Links on how to deploy an
-Elixir app</h3>
+        <h2 id="what-is-floyd-warshall-algorithm">What is Floyd-Warshall
+Algorithm?</h2>
+<p>The Floyd-Warshall algorithm is a <strong>dynamic programming
+algorithm</strong> used to find the shortest paths between <strong>all
+pairs of vertices in a weighted graph</strong>. It can <strong>handle
+both positive and negative edge weights</strong>, provided there are no
+negative weight cycles.</p>
+<h3 id="positive-and-negative-edge-weights">Positive and Negative Edge
+Weights</h3>
 <ul>
-<li>https://elixirforum.com/t/whats-the-best-way-to-deploy-a-phoenix-app-in-production/26420/20</li>
-<li>https://damonvjanis.medium.com/optimizing-for-free-hosting-elixir-deployments-6bfc119a1f44</li>
-<li>https://www.gigalixir.com/docs/</li>
-<li>https://github.com/fly-apps/hello_elixir?tab=readme-ov-file</li>
-<li>Github Action -
-https://noozo.medium.com/elixir-phoenix-deployments-using-github-actions-ec4178ba5fb</li>
-<li>https://hexdocs.pm/phoenix/deployment.html#starting-your-server-in-production</li>
-<li>https://practical-elixir.woojiahao.com/</li>
+<li><strong>Positive Edge Weights:</strong> Represent positive costs or
+distances (e.g., road lengths).</li>
+<li><strong>Negative Edge Weights:</strong> Represent scenarios where
+moving reduces the total cost (e.g., financial gains).</li>
 </ul>
-<h2 id="ref">Ref</h2>
+<h3 id="negative-weight-cycles">Negative Weight Cycles</h3>
 <ul>
-<li>https://curiosum.com/blog/phoenix-framework-guide#modern-web-frameworks---what-are-the-expectations</li>
+<li><strong>Definition:</strong> A cycle where the sum of the edge
+weights is negative.</li>
+<li><strong>Issue:</strong> Makes shortest path calculations meaningless
+as you can reduce the path cost indefinitely by looping through the
+cycle.</li>
 </ul>
+<h3 id="floyd-warshall-algorithm">Floyd-Warshall Algorithm</h3>
+<ul>
+<li><strong>Capability:</strong> Handles both positive and negative edge
+weights.</li>
+<li><strong>Limitation:</strong> <strong>Cannot</strong> compute
+shortest paths correctly if there are negative weight cycles.</li>
+</ul>
+<h3 id="detection">Detection</h3>
+<ul>
+<li><strong>Method:</strong> After running the algorithm, check if any
+diagonal element (<code>dist[i][i]</code>) in the distance matrix is
+negative. If so, a negative weight cycle exists.</li>
+</ul>
+<h2 id="when-to-use-floyd-warshall-algorithm">When to Use Floyd-Warshall
+Algorithm</h2>
+<p><strong>Use Cases:</strong> 1. <strong>Dense Graphs:</strong> When
+the graph is dense, meaning <strong>the number of edges is close to the
+square of the number of vertices</strong>. 2. <strong>All-Pairs Shortest
+Paths:</strong> When you need to find the <strong>shortest paths between
+every pair of vertices</strong>. 3. <strong>Negative Weights:</strong>
+When the graph contains <strong>negative edge weights but no negative
+weight cycles</strong>.</p>
+<h3 id="example-applications">Example Applications:</h3>
+<ul>
+<li><strong>Network Routing:</strong> Determining the shortest paths for
+data packet routing in a network.</li>
+<li><strong>Transitive Closure:</strong> Finding the transitive closure
+of a graph to determine reachability.</li>
+<li><strong>Shortest Path Problems in Graphs with Negative
+Weights:</strong> When other algorithms like Dijkstra's are not suitable
+due to negative weights.</li>
+</ul>
+<h2 id="why-floyd-warshall-algorithm">Why Floyd-Warshall Algorithm?</h2>
+<p><strong>Advantages:</strong> 1. <strong>Handles Negative
+Weights:</strong> It can handle graphs with negative edge weights,
+unlike Dijkstra's algorithm. 2. <strong>All-Pairs Shortest
+Paths:</strong> It efficiently computes shortest paths between all pairs
+of vertices. 3. <strong>Simplicity:</strong> The algorithm is
+straightforward to implement with a triple nested loop.</p>
+<p>But, <strong>Cannot Handle:</strong> Negative weight cycles (they
+make shortest path calculations invalid).</p>
+<p><strong>Drawbacks:</strong> 1. <strong>Time Complexity:</strong>
+(O(V^3)), which can be prohibitive for very large graphs. 2.
+<strong>Space Complexity:</strong> (O(V^2)), requiring significant
+memory for storing the distance matrix.</p>
+<p>Certainly! Here's the section with the equations formatted for use
+with MathJax and KaTeX using <code>mhchem</code>:</p>
+<hr />
+<h2 id="how-to-use-floyd-warshall-algorithm">How to Use Floyd-Warshall
+Algorithm</h2>
+<p><strong>Algorithm Steps:</strong></p>
+<ol type="1">
+<li><strong>Initialize Distance Matrix:</strong>
+<ul>
+<li>Create a 2D array <code>dist</code> where
+<code>\(\text&#123;dist&#125;[i][j]\)</code> represents the shortest distance from
+vertex (i) to vertex (j).</li>
+<li>If there is an edge between (i) and (j), set
+<code>\(\text&#123;dist&#125;[i][j]\)</code> to the edge weight.</li>
+<li>Set <code>\(\text&#123;dist&#125;[i][i]\)</code> to 0 for all vertices
+(i).</li>
+<li>Set <code>\(\text&#123;dist&#125;[i][j]\)</code> to infinity if there is no
+edge between (i) and (j).</li>
+</ul></li>
+<li><strong>Dynamic Programming Update:</strong>
+<ul>
+<li>Iterate over each vertex (k) as an intermediate vertex.</li>
+<li>For each pair of vertices ((i, j)), update
+<code>\(\text&#123;dist&#125;[i][j]\)</code> to the minimum of
+<code>\(\text&#123;dist&#125;[i][j]\)</code> and the path that goes through (k):
+<span class="math display">\[
+\text{dist}[i][j] = \min(\text{dist}[i][j], \text{dist}[i][k] +
+\text{dist}[k][j])
+\]</span></li>
+</ul></li>
+<li><strong>Result:</strong>
+<ul>
+<li>After completing the iterations, <code>\(\text&#123;dist&#125;[i][j]\)</code>
+will contain the shortest path distance from vertex (i) to vertex
+(j).</li>
+</ul></li>
+</ol>
+<h3 id="example">Example</h3>
+<p>Consider a graph with the following adjacency matrix
+representation:</p>
+<p><span class="math display">\[
+\begin{array}{cccc}
+  &amp; A &amp; B &amp; C &amp; D \\
+A &amp; 0 &amp; 3 &amp; \infty &amp; 7 \\
+B &amp; 8 &amp; 0 &amp; 2 &amp; \infty \\
+C &amp; 5 &amp; \infty &amp; 0 &amp; 1 \\
+D &amp; 2 &amp; \infty &amp; \infty &amp; 0 \\
+\end{array}
+\]</span></p>
+<p><strong>Step-by-Step Execution:</strong></p>
+<ol type="1">
+<li><p><strong>Initialize Distance Matrix:</strong>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">dist = [[0, 3, ∞, 7],</span><br><span class="line">        [8, 0, 2, ∞],</span><br><span class="line">        [5, ∞, 0, 1],</span><br><span class="line">        [2, ∞, ∞, 0]]</span><br></pre></td></tr></table></figure></p></li>
+<li><p><strong>Iterate Over Intermediate Vertex (k):</strong></p>
+<p>For (k = 0) (vertex A): <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">dist = [[0, 3, ∞, 7],</span><br><span class="line">        [8, 0, 2, 15],  // Update: 8 + 7 = 15</span><br><span class="line">        [5, 8, 0, 1],   // Update: 5 + 3 = 8</span><br><span class="line">        [2, 5, ∞, 0]]   // Update: 2 + 3 = 5</span><br></pre></td></tr></table></figure></p>
+<p>For (k = 1) (vertex B): <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">dist = [[0, 3, 5, 7],   // Update: 3 + 2 = 5</span><br><span class="line">        [8, 0, 2, 3],   // Update: 2 + 1 = 3</span><br><span class="line">        [5, 8, 0, 1],</span><br><span class="line">        [2, 5, 7, 0]]   // Update: 5 + 2 = 7</span><br></pre></td></tr></table></figure></p>
+<p>For (k = 2) (vertex C): <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">dist = [[0, 3, 5, 6],   // Update: 5 + 1 = 6</span><br><span class="line">        [8, 0, 2, 3],</span><br><span class="line">        [5, 8, 0, 1],</span><br><span class="line">        [2, 5, 7, 0]]</span><br></pre></td></tr></table></figure></p>
+<p>For (k = 3) (vertex D): <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">dist = [[0, 3, 5, 6],</span><br><span class="line">        [5, 0, 2, 3],   // Update: 2 + 6 = 6</span><br><span class="line">        [3, 6, 0, 1],   // Update: 3 + 1 = 4</span><br><span class="line">        [2, 5, 7, 0]]</span><br></pre></td></tr></table></figure></p></li>
+<li><p><strong>Final Distance Matrix:</strong> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">dist = [[0, 3, 5, 6],</span><br><span class="line">        [5, 0, 2, 3],</span><br><span class="line">        [3, 6, 0, 1],</span><br><span class="line">        [2, 5, 7, 0]]</span><br></pre></td></tr></table></figure></p></li>
+</ol>
+<hr />
+<p>This matrix represents the shortest path distances between all pairs
+of vertices in the graph.</p>
+<table>
+<colgroup>
+<col style="width: 7%" />
+<col style="width: 48%" />
+<col style="width: 43%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Aspect</strong></th>
+<th><strong>Floyd-Warshall Algorithm</strong></th>
+<th><strong>Dijkstra's Algorithm</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Purpose</strong></td>
+<td>All-pairs shortest paths</td>
+<td>Single-source shortest path</td>
+</tr>
+<tr class="even">
+<td><strong>Graph Type</strong></td>
+<td>Weighted graphs with positive and negative weights (no cycles)</td>
+<td>Weighted graphs with non-negative weights</td>
+</tr>
+<tr class="odd">
+<td><strong>Time Complexity</strong></td>
+<td>(O(V^3))</td>
+<td>(O((V + E) V)) with a priority queue</td>
+</tr>
+<tr class="even">
+<td><strong>Space Complexity</strong></td>
+<td>(O(V^2))</td>
+<td>(O(V)) for distances and the priority queue</td>
+</tr>
+<tr class="odd">
+<td><strong>Algorithm Steps</strong></td>
+<td>1. Initialize distance matrix<br>2. Set <code>dist[i][i]</code> to
+0<br>3. Update distances using:
+<code>dist[i][j] = min(dist[i][j], dist[i][k] + dist[k][j])</code><br>4.
+Result in <code>dist[i][j]</code> for shortest paths</td>
+<td>1. Initialize distances<br>2. Use priority queue to select vertex
+with smallest distance<br>3. Update distances for neighbors<br>4. Repeat
+until all vertices are processed</td>
+</tr>
+<tr class="even">
+<td><strong>Use Cases</strong></td>
+<td>Dense graphs, network analysis, finding transitive closure</td>
+<td>Sparse graphs, map routing, network routing</td>
+</tr>
+<tr class="odd">
+<td><strong>Handles Negative Weights</strong></td>
+<td>Yes, but no negative cycles</td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<p>This table should make it easier to compare the two algorithms.</p>
 
     </div>
 
@@ -393,19 +552,19 @@ https://noozo.medium.com/elixir-phoenix-deployments-using-github-actions-ec4178b
   <div class="popular-posts-header">Related Posts</div>
   <ul class="popular-posts">
     <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="/blog/my-journey-with-hexo-building-a-blog-from-scratch/" rel="bookmark">My Journey with Hexo - Building a Blog from Scratch</a></div>
+      <div class="popular-posts-title"><a href="/blog/floyd-s-tortoise-and-hare-algorithm-cycle-finding/" rel="bookmark">Floyd's Tortoise and Hare Algorithm: Cycle Finding</a></div>
     </li>
     <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="/blog/24-hours-harvard-cs50-by-david-malan/" rel="bookmark">24 Hours Harvard CS50 By David Malan</a></div>
+      <div class="popular-posts-title"><a href="/blog/big-o-notation-my-notes-on-algorithm-efficiency/" rel="bookmark">Big-O Notation: My Notes on Algorithm Efficiency</a></div>
     </li>
     <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="/blog/bash-mastery-essential-tips-and-tricks-for-command-line-power/" rel="bookmark">Bash Mastery: Essential Tips and Tricks for Command Line Power</a></div>
+      <div class="popular-posts-title"><a href="/blog/manacher-s-algorithm-discover-the-fastest-way-to-find-palindromes/" rel="bookmark">Manacher's Algorithm: Discover the Fastest Way to Find Palindromes</a></div>
     </li>
     <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="/blog/javascript/" rel="bookmark">JavaScript</a></div>
+      <div class="popular-posts-title"><a href="/blog/demystifying-database-design-a-dive-into-3nf-and-bcnf/" rel="bookmark">Demystifying Database Design: A Dive into 3NF and BCNF</a></div>
     </li>
     <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="/blog/python/" rel="bookmark">Python</a></div>
+      <div class="popular-posts-title"><a href="/blog/computer-networking-notebook/" rel="bookmark">Computer Networking Notebook</a></div>
     </li>
   </ul>
 <div class="post-widgets">
@@ -426,7 +585,8 @@ https://noozo.medium.com/elixir-phoenix-deployments-using-github-actions-ec4178b
       <footer class="post-footer">
           <div class="post-tags">
               <a href="/blog/tags/note/" rel="tag"># note</a>
-              <a href="/blog/tags/programming/" rel="tag"># programming</a>
+              <a href="/blog/tags/algorithm/" rel="tag"># algorithm</a>
+              <a href="/blog/tags/two-pointer/" rel="tag"># two-pointer</a>
           </div>
 
         
@@ -435,13 +595,10 @@ https://noozo.medium.com/elixir-phoenix-deployments-using-github-actions-ec4178b
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/blog/python/" rel="prev" title="Python">
-      <i class="fa fa-chevron-left"></i> Python
+    <a href="/blog/floyd-s-tortoise-and-hare-algorithm-cycle-finding/" rel="prev" title="Floyd's Tortoise and Hare Algorithm: Cycle Finding">
+      <i class="fa fa-chevron-left"></i> Floyd's Tortoise and Hare Algorithm: Cycle Finding
     </a></div>
-      <div class="post-nav-item">
-    <a href="/blog/kicking-off-my-ml-ai-journey-with-mit-idss-and-great-learning/" rel="next" title="Kicking Off My ML & AI Journey with MIT IDSS and Great Learning">
-      Kicking Off My ML & AI Journey with MIT IDSS and Great Learning <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -507,8 +664,11 @@ https://noozo.medium.com/elixir-phoenix-deployments-using-github-actions-ec4178b
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#todo"><span class="nav-number">1.</span> <span class="nav-text">TODO</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#links-on-how-to-deploy-an-elixir-app"><span class="nav-number">1.1.</span> <span class="nav-text">Links on how to deploy an
-Elixir app</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ref"><span class="nav-number">2.</span> <span class="nav-text">Ref</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#what-is-floyd-warshall-algorithm"><span class="nav-number">1.</span> <span class="nav-text">What is Floyd-Warshall
+Algorithm?</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#positive-and-negative-edge-weights"><span class="nav-number">1.1.</span> <span class="nav-text">Positive and Negative Edge
+Weights</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#negative-weight-cycles"><span class="nav-number">1.2.</span> <span class="nav-text">Negative Weight Cycles</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#floyd-warshall-algorithm"><span class="nav-number">1.3.</span> <span class="nav-text">Floyd-Warshall Algorithm</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#detection"><span class="nav-number">1.4.</span> <span class="nav-text">Detection</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#when-to-use-floyd-warshall-algorithm"><span class="nav-number">2.</span> <span class="nav-text">When to Use Floyd-Warshall
+Algorithm</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#example-applications"><span class="nav-number">2.1.</span> <span class="nav-text">Example Applications:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#why-floyd-warshall-algorithm"><span class="nav-number">3.</span> <span class="nav-text">Why Floyd-Warshall Algorithm?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#how-to-use-floyd-warshall-algorithm"><span class="nav-number">4.</span> <span class="nav-text">How to Use Floyd-Warshall
+Algorithm</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#example"><span class="nav-number">4.1.</span> <span class="nav-text">Example</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -752,9 +912,9 @@ Elixir app</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="n
 </script>
 <script>
   var disqus_config = function() {
-    this.page.url = "https://enkr1.github.io/blog/elixir/";
-    this.page.identifier = "elixir/";
-    this.page.title = "Elixir";
+    this.page.url = "https://enkr1.github.io/blog/floyd-warshall-algorithm/";
+    this.page.identifier = "floyd-warshall-algorithm/";
+    this.page.title = "Floyd-Warshall Algorithm";
     };
   NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
     if (window.DISQUS) {

@@ -313,13 +313,13 @@
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-              <span>1.9k</span>
+              <span>343</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
-              <span>2 mins.</span>
+              <span>1 mins.</span>
             </span>
   
   <span class="post-meta-item">
@@ -355,23 +355,36 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>Floyd’s Tortoise and Hare Algorithm, also known as the <em>Floyd’s cycle-finding algorithm</em> or the Tortoise and Hare Algorithm, is used to <strong>detect cycles</strong> in a linked list or an array. It was named after Robert W. Floyd, who first described the algorithm.</p>
-<p>The algorithm works by using two pointers, one moving at a slower pace (tortoise) and the other moving at a faster pace (hare), and iterating through the linked list or array. If there is a cycle, the two pointers will eventually meet at the same node.</p>
+        <p>Floyd's Tortoise and Hare Algorithm, also known as the <em>Floyd's
+cycle-finding algorithm</em> or the Tortoise and Hare Algorithm, is used
+to <strong>detect cycles</strong> in a linked list or an array. It was
+named after Robert W. Floyd, who first described the algorithm.</p>
+<p>The algorithm works by using two pointers, one moving at a slower
+pace (tortoise) and the other moving at a faster pace (hare), and
+iterating through the linked list or array. If there is a cycle, the two
+pointers will eventually meet at the same node.</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">slow pointer s always move by 1</span><br><span class="line">┌───┐</span><br><span class="line">↓   ↓</span><br><span class="line">s   s</span><br><span class="line">1 → 2 → 3 → 4 → 5 → 6 → 7</span><br><span class="line">f       f</span><br><span class="line">↑       ↑</span><br><span class="line">└───────┘</span><br><span class="line">fast pointer f always move by 2</span><br></pre></td></tr></table></figure>
-
-<p><strong>Here’s a step-by-step explanation of Floyd’s Tortoise and Hare Algorithm:</strong></p>
-<ol>
-<li>Initialise two pointers, the tortoise (slow) and the hare (fast), at the head of the linked list or the first element of the array.</li>
-<li>Move the tortoise one step forward and the hare two steps forward.</li>
-<li>Repeat step 2 until one of the following conditions is met:<ul>
-<li>The hare reaches the end of the linked list or array (i.e., the hare encounters a <strong><code>null</code></strong> or out-of-bounds index). In this case, there is no cycle, and the algorithm terminates.</li>
-<li>The tortoise and hare pointers meet at the same node. This indicates the presence of a cycle in the linked list or array.</li>
-</ul>
-</li>
-<li>If the tortoise and hare meet, reset the tortoise to the head of the linked list or the first element of the array and keep the hare at the meeting point.</li>
-<li>Move the tortoise and hare pointers one step at a time until they meet again. The point at which they meet is the start of the cycle in the linked list or array.</li>
-</ol>
-<p><strong>Floyd’s Tortoise and Hare Algorithm</strong> is an efficient algorithm that runs in <strong>linear time complexity</strong>, making it useful for detecting cycles in large <strong>linked lists</strong> or <strong>arrays</strong>. It does <strong>NOT</strong> require any additional data structures and uses only <strong>two pointers</strong> to achieve the detection.</p>
+<p><strong>Here's a step-by-step explanation of Floyd's Tortoise and
+Hare Algorithm:</strong> 1. Initialise two pointers, the tortoise (slow)
+and the hare (fast), at the head of the linked list or the first element
+of the array. 2. Move the tortoise one step forward and the hare two
+steps forward. 3. Repeat step 2 until one of the following conditions is
+met: - The hare reaches the end of the linked list or array (i.e., the
+hare encounters a <strong><code>null</code></strong> or out-of-bounds
+index). In this case, there is no cycle, and the algorithm terminates. -
+The tortoise and hare pointers meet at the same node. This indicates the
+presence of a cycle in the linked list or array. 4. If the tortoise and
+hare meet, reset the tortoise to the head of the linked list or the
+first element of the array and keep the hare at the meeting point. 5.
+Move the tortoise and hare pointers one step at a time until they meet
+again. The point at which they meet is the start of the cycle in the
+linked list or array.</p>
+<p><strong>Floyd's Tortoise and Hare Algorithm</strong> is an efficient
+algorithm that runs in <strong>linear time complexity</strong>, making
+it useful for detecting cycles in large <strong>linked lists</strong> or
+<strong>arrays</strong>. It does <strong>NOT</strong> require any
+additional data structures and uses only <strong>two pointers</strong>
+to achieve the detection.</p>
 
     </div>
 
@@ -382,6 +395,9 @@
   <div class="popular-posts-header">Related Posts</div>
   <ul class="popular-posts">
     <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="/blog/floyd-warshall-algorithm/" rel="bookmark">Floyd-Warshall Algorithm</a></div>
+    </li>
+    <li class="popular-posts-item">
       <div class="popular-posts-title"><a href="/blog/big-o-notation-my-notes-on-algorithm-efficiency/" rel="bookmark">Big-O Notation: My Notes on Algorithm Efficiency</a></div>
     </li>
     <li class="popular-posts-item">
@@ -389,9 +405,6 @@
     </li>
     <li class="popular-posts-item">
       <div class="popular-posts-title"><a href="/blog/demystifying-database-design-a-dive-into-3nf-and-bcnf/" rel="bookmark">Demystifying Database Design: A Dive into 3NF and BCNF</a></div>
-    </li>
-    <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="/blog/my-journey-with-hexo-building-a-blog-from-scratch/" rel="bookmark">My Journey with Hexo - Building a Blog from Scratch</a></div>
     </li>
     <li class="popular-posts-item">
       <div class="popular-posts-title"><a href="/blog/computer-networking-notebook/" rel="bookmark">Computer Networking Notebook</a></div>
@@ -428,7 +441,10 @@
     <a href="/blog/sql-notebook/" rel="prev" title="SQL Notebook">
       <i class="fa fa-chevron-left"></i> SQL Notebook
     </a></div>
-      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/blog/floyd-warshall-algorithm/" rel="next" title="Floyd-Warshall Algorithm">
+      Floyd-Warshall Algorithm <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
       </footer>
     
@@ -506,7 +522,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/blog/archives">
-          <span class="site-state-item-count">34</span>
+          <span class="site-state-item-count">35</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -561,12 +577,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="Symbols count total">159k</span>
+    <span title="Symbols count total">27k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">2:25</span>
+    <span title="Reading time total">1:36</span>
 </div>
 
         
@@ -718,6 +734,8 @@
 
 
 
+
+  
 
   
 

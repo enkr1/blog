@@ -318,13 +318,13 @@
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-              <span>2.4k</span>
+              <span>408</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
-              <span>2 mins.</span>
+              <span>1 mins.</span>
             </span>
   
   <span class="post-meta-item">
@@ -360,32 +360,64 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>wip …</p>
+        <p>wip ...</p>
 <span id="more"></span>
-
-<h2 id="Network-IP-vs-Router-IP"><a href="#Network-IP-vs-Router-IP" class="headerlink" title="Network IP vs Router IP"></a>Network IP vs Router IP</h2><h3 id="Analogy-Your-Home-as-a-Network"><a href="#Analogy-Your-Home-as-a-Network" class="headerlink" title="Analogy: Your Home as a Network"></a>Analogy: Your Home as a Network</h3><p>Think of your <strong>home</strong> as your local network, and your <strong>home’s postal address</strong> as your router’s <strong>public IP address</strong>.</p>
-<ol>
-<li><p><strong>Public IP Address (Router’s External IP)</strong></p>
+<h2 id="network-ip-vs-router-ip">Network IP vs Router IP</h2>
+<h3 id="analogy-your-home-as-a-network">Analogy: Your Home as a
+Network</h3>
+<p>Think of your <strong>home</strong> as your local network, and your
+<strong>home's postal address</strong> as your router's <strong>public
+IP address</strong>.</p>
+<ol type="1">
+<li><strong>Public IP Address (Router's External IP)</strong>
 <ul>
-<li><strong>Analogy</strong>: Your home’s postal address (e.g., 219.75.101.20)</li>
-<li>This address is how the outside world (e.g., mail delivery, friends visiting) finds your home. When you send a letter (data) from your home, it goes out with this address, and any mail sent to this address from the outside (such as a response from a website) knows how to reach your home.</li>
-<li><strong>Security Note</strong>: Just as your home’s address can be seen by anyone, your public IP can be seen by anyone on the internet. This is why you wouldn’t put sensitive information like your security codes or safe keys publicly accessible at your postal address.</li>
-</ul>
-</li>
-<li><p><strong>Local Network IPs (Private IPs)</strong></p>
+<li><strong>Analogy</strong>: Your home's postal address (e.g.,
+219.75.101.20)</li>
+<li>This address is how the outside world (e.g., mail delivery, friends
+visiting) finds your home. When you send a letter (data) from your home,
+it goes out with this address, and any mail sent to this address from
+the outside (such as a response from a website) knows how to reach your
+home.</li>
+<li><strong>Security Note</strong>: Just as your home's address can be
+seen by anyone, your public IP can be seen by anyone on the internet.
+This is why you wouldn't put sensitive information like your security
+codes or safe keys publicly accessible at your postal address.</li>
+</ul></li>
+<li><strong>Local Network IPs (Private IPs)</strong>
 <ul>
-<li><strong>Analogy</strong>: Rooms within your home (e.g., 192.168.1.72)</li>
-<li>Each device in your network is like a room in your house. Inside your home, each room has its own specific purpose and place, much like how each device in your network has its own specific IP address. These addresses only make sense inside your network (home).</li>
-<li><strong>Security Note</strong>: Just as someone can’t directly access a room in your house unless they first come to your main door (router), devices from the internet cannot directly access a device on your private network without going through the router, which acts as a gatekeeper.</li>
-</ul>
-</li>
+<li><strong>Analogy</strong>: Rooms within your home (e.g.,
+192.168.1.72)</li>
+<li>Each device in your network is like a room in your house. Inside
+your home, each room has its own specific purpose and place, much like
+how each device in your network has its own specific IP address. These
+addresses only make sense inside your network (home).</li>
+<li><strong>Security Note</strong>: Just as someone can't directly
+access a room in your house unless they first come to your main door
+(router), devices from the internet cannot directly access a device on
+your private network without going through the router, which acts as a
+gatekeeper.</li>
+</ul></li>
 </ol>
-<h4 id="Accessing-the-Router"><a href="#Accessing-the-Router" class="headerlink" title="Accessing the Router:"></a>Accessing the Router:</h4><ul>
-<li><strong>SSH to Router</strong>: If SSH is set up and accessible from the internet (usually not recommended for security reasons), someone could potentially attempt to SSH into your router using its public IP address (e.g., 219.75.101.20). This would be akin to someone coming to your home’s main entrance and trying to unlock the door.</li>
-<li><strong>Local Access</strong>: Accessing your router’s settings is typically done from within the network using its private IP (like <code>192.168.1.1</code>), similar to how you’d manage things within your house internally.</li>
+<h4 id="accessing-the-router">Accessing the Router:</h4>
+<ul>
+<li><strong>SSH to Router</strong>: If SSH is set up and accessible from
+the internet (usually not recommended for security reasons), someone
+could potentially attempt to SSH into your router using its public IP
+address (e.g., 219.75.101.20). This would be akin to someone coming to
+your home's main entrance and trying to unlock the door.</li>
+<li><strong>Local Access</strong>: Accessing your router's settings is
+typically done from within the network using its private IP (like
+<code>192.168.1.1</code>), similar to how you'd manage things within
+your house internally.</li>
 </ul>
-<p><strong>Security Considerations</strong>: Just as you would keep your home secure by locking doors and perhaps having a security system, your network should be secured. This includes using strong passwords, updating firmware, disabling unnecessary external access (like SSH from the internet), and using firewalls.</p>
-<p>This analogy simplifies a bit, but it should help illustrate the basic concepts of how public and private IP addresses function in relation to your network (home) and the internet (outside world).</p>
+<p><strong>Security Considerations</strong>: Just as you would keep your
+home secure by locking doors and perhaps having a security system, your
+network should be secured. This includes using strong passwords,
+updating firmware, disabling unnecessary external access (like SSH from
+the internet), and using firewalls.</p>
+<p>This analogy simplifies a bit, but it should help illustrate the
+basic concepts of how public and private IP addresses function in
+relation to your network (home) and the internet (outside world).</p>
 
     </div>
 
@@ -399,6 +431,9 @@
       <div class="popular-posts-title"><a href="/blog/demystifying-database-design-a-dive-into-3nf-and-bcnf/" rel="bookmark">Demystifying Database Design: A Dive into 3NF and BCNF</a></div>
     </li>
     <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="/blog/floyd-warshall-algorithm/" rel="bookmark">Floyd-Warshall Algorithm</a></div>
+    </li>
+    <li class="popular-posts-item">
       <div class="popular-posts-title"><a href="/blog/floyd-s-tortoise-and-hare-algorithm-cycle-finding/" rel="bookmark">Floyd's Tortoise and Hare Algorithm: Cycle Finding</a></div>
     </li>
     <li class="popular-posts-item">
@@ -406,9 +441,6 @@
     </li>
     <li class="popular-posts-item">
       <div class="popular-posts-title"><a href="/blog/manacher-s-algorithm-discover-the-fastest-way-to-find-palindromes/" rel="bookmark">Manacher's Algorithm: Discover the Fastest Way to Find Palindromes</a></div>
-    </li>
-    <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="/blog/my-journey-with-hexo-building-a-blog-from-scratch/" rel="bookmark">My Journey with Hexo - Building a Blog from Scratch</a></div>
     </li>
   </ul>
 <div class="post-widgets">
@@ -510,7 +542,8 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Network-IP-vs-Router-IP"><span class="nav-number">1.</span> <span class="nav-text">Network IP vs Router IP</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Analogy-Your-Home-as-a-Network"><span class="nav-number">1.1.</span> <span class="nav-text">Analogy: Your Home as a Network</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Accessing-the-Router"><span class="nav-number">1.1.1.</span> <span class="nav-text">Accessing the Router:</span></a></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#network-ip-vs-router-ip"><span class="nav-number">1.</span> <span class="nav-text">Network IP vs Router IP</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#analogy-your-home-as-a-network"><span class="nav-number">1.1.</span> <span class="nav-text">Analogy: Your Home as a
+Network</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#accessing-the-router"><span class="nav-number">1.1.1.</span> <span class="nav-text">Accessing the Router:</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -523,7 +556,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/blog/archives">
-          <span class="site-state-item-count">34</span>
+          <span class="site-state-item-count">35</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -578,12 +611,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="Symbols count total">159k</span>
+    <span title="Symbols count total">27k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">2:25</span>
+    <span title="Reading time total">1:36</span>
 </div>
 
         
@@ -735,6 +768,8 @@
 
 
 
+
+  
 
   
 
