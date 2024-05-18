@@ -31,8 +31,11 @@
 <meta property="og:description" content="Dive deep into the statistical methods that power data science with a focus on inferential statistics. This post explores core concepts, distribution types, and the application of statistics in making">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://enkr1.github.io/blog/foundations-of-data-science-navigating-through-inferential-statistics/desc-vs-inf-stats.png">
+<meta property="og:image" content="https://enkr1.github.io/blog/foundations-of-data-science-navigating-through-inferential-statistics/random-variable.png">
+<meta property="og:image" content="https://enkr1.github.io/blog/foundations-of-data-science-navigating-through-inferential-statistics/rv-pd-diagram.png">
+<meta property="og:image" content="https://enkr1.github.io/blog/foundations-of-data-science-navigating-through-inferential-statistics/rv-pd-example.png">
 <meta property="article:published_time" content="2024-02-01T08:22:15.000Z">
-<meta property="article:modified_time" content="2024-05-18T14:54:11.187Z">
+<meta property="article:modified_time" content="2024-05-18T15:41:56.879Z">
 <meta property="article:author" content="Jing Hui PANG | 彭竞辉 | ENKR">
 <meta property="article:tag" content="note">
 <meta property="article:tag" content="mit-idss">
@@ -303,7 +306,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: Sat 18 May 2024 22:54:11 PM" itemprop="dateModified" datetime="2024-05-18T22:54:11+08:00">Sat 18 May 2024</time>
+                <time title="Modified: Sat 18 May 2024 23:41:56 PM" itemprop="dateModified" datetime="2024-05-18T23:41:56+08:00">Sat 18 May 2024</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -336,13 +339,13 @@
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-              <span>508</span>
+              <span>877</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
-              <span>2 mins.</span>
+              <span>3 mins.</span>
             </span>
   
   
@@ -366,7 +369,10 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="Getting-Started-with-Inferential-Statistics"><a href="#Getting-Started-with-Inferential-Statistics" class="headerlink" title="Getting Started with Inferential Statistics"></a>Getting Started with Inferential Statistics</h2><p>Inferential statistics provide the backbone for making predictions and decisions in data science. By examining a sample of data, we can infer properties about a larger population. This approach is not only practical but necessary, as it is often impractical or impossible to examine an entire population.</p>
+        <p>For myself:</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd <span class="regexp">/Users/</span>enkr<span class="regexp">/Personal/</span>_mit_idss<span class="regexp">/week_2/</span>Notebook_Inferential_Statistics.ipynb</span><br></pre></td></tr></table></figure>
+
+<h2 id="Getting-Started-with-Inferential-Statistics"><a href="#Getting-Started-with-Inferential-Statistics" class="headerlink" title="Getting Started with Inferential Statistics"></a>Getting Started with Inferential Statistics</h2><p>Inferential statistics provide the backbone for making predictions and decisions in data science. By examining a sample of data, we can infer properties about a larger population. This approach is not only practical but necessary, as it is often impractical or impossible to examine an entire population.</p>
 <ul>
 <li>Inferential statistics involve using sample data to make generalisations and predictions about a larger population.</li>
 </ul>
@@ -399,8 +405,39 @@
 <li>Forecasting sales based on historical data.</li>
 <li>Optimizing logistical operations to improve efficiency.</li>
 </ul>
-<h2 id="Wrap-Up-The-Power-of-Data"><a href="#Wrap-Up-The-Power-of-Data" class="headerlink" title="Wrap-Up: The Power of Data"></a>Wrap-Up: The Power of Data</h2><p>Inferential statistics are a powerful tool in the arsenal of a data scientist. They transform raw data into actionable insights, driving decisions that can have significant impacts on business and policy. As we continue to delve deeper into the complexities of data science, the foundations laid by understanding inferential statistics will guide our journey.</p>
-<p>Feel free to dive deeper into each concept and explore how you can apply these statistical techniques in your professional or personal projects. This journey through data science is just beginning, and the paths to exploration are as varied as they are exciting.</p>
+<h2 id="Random-Variable"><a href="#Random-Variable" class="headerlink" title="Random Variable"></a>Random Variable</h2><blockquote>
+<p>A random variable is a variable whose possible values are numerical outcomes of a random phenomenon. There are two types of random variables. e.g. If i dont buy bread today, doesnt mean i will buy tomorrow.</p>
+</blockquote>
+<img data-src="/blog/foundations-of-data-science-navigating-through-inferential-statistics/random-variable.png" class="">
+
+<ol>
+<li><p><strong>Discrete Random Variable</strong></p>
+<p> This type of variable assumes specific values and results from a countable number of outcomes. Examples include the number of heads when flipping a coin multiple times, or the number of students present in a class.</p>
+<blockquote>
+<p>e.g. 1, 2, 3 students</p>
+</blockquote>
+</li>
+<li><p><strong>Continuous Random Variable</strong></p>
+<p> This type takes on an infinite number of possible values, often measurements, and results from a continuum of outcomes. An example would be the time it takes for a computer to boot up or the amount of milk in a jug.</p>
+<blockquote>
+<p>e.g. 120.213 ml for a jug of milk</p>
+</blockquote>
+</li>
+</ol>
+<h3 id="Probability-Distribution-for-RV"><a href="#Probability-Distribution-for-RV" class="headerlink" title="Probability Distribution for RV"></a>Probability Distribution for RV</h3><img data-src="/blog/foundations-of-data-science-navigating-through-inferential-statistics/rv-pd-diagram.png" class="">
+<img data-src="/blog/foundations-of-data-science-navigating-through-inferential-statistics/rv-pd-example.png" class="">
+
+<ul>
+<li>Think of a random variable (RV) as a box of surprises. Every time you reach into the box, you pull out a surprise, and that surprise is a result of some random event, like a number or an outcome.</li>
+<li>A discrete random variable is like a box with labeled balls: you can count them, and each one has a number. For example, if you have a box with balls labeled 1, 2, 3, … up to 10, picking a ball is a discrete random event because there are a countable number of balls.</li>
+<li>The probability distribution for a discrete RV is like a recipe that tells you how likely each ball is to be picked. It’s like saying, “Ball number 1 has a 10% chance, ball number 2 has a 20% chance, and so on.”</li>
+<li>A continuous random variable, on the other hand, is like a spectrum of colors in a rainbow. You can’t count them because they smoothly transition from one to another. For instance, the exact amount of milk in a jug could be any number between 0 liters and the jug’s capacity.</li>
+<li>The probability distribution for a continuous RV tells you the likelihood of getting a color in a certain range, like “there’s a 30% chance of seeing shades of blue between these two points on the rainbow.” Since there are infinitely many points, the chance of picking one exact point (or one exact amount of milk) is practically zero.</li>
+</ul>
+<p>To sum it up, a random variable represents the outcomes from a random event, and the probability distribution is like a guide that tells you how likely each outcome is. Discrete RVs have countable outcomes, and their probability distribution is a list of chances, while continuous RVs have an infinite range of outcomes, and their distribution is more like a continuous curve that shows the chances over a range.</p>
+<!--
+WIP: ...
+-->
 
     </div>
 
@@ -414,16 +451,16 @@
       <div class="popular-posts-title"><a href="/blog/pre-work-introduction-to-data-science-ai/" rel="bookmark">Pre Work: Introduction to Data Science & AI</a></div>
     </li>
     <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="/blog/kicking-off-my-ml-ai-journey-with-mit-idss-and-great-learning/" rel="bookmark">Kicking Off My ML & AI Journey with MIT IDSS and Great Learning</a></div>
+      <div class="popular-posts-title"><a href="/blog/regression-hypothesis-testing/" rel="bookmark">Regression & Hypothesis Testing</a></div>
     </li>
     <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="/blog/regression-prediction/" rel="bookmark">Regression & Prediction</a></div>
+      <div class="popular-posts-title"><a href="/blog/networking-graphical-models/" rel="bookmark">Networking & Graphical Models</a></div>
     </li>
     <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="/blog/making-sense-of-unstructured-data-a-dive-into-clustering-and-dimensionality-reduction/" rel="bookmark">Making Sense of Unstructured Data: A Dive into Clustering and Dimensionality Reduction</a></div>
+      <div class="popular-posts-title"><a href="/blog/deep-learning/" rel="bookmark">Deep Learning</a></div>
     </li>
     <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="/blog/demystifying-database-design-a-dive-into-3nf-and-bcnf/" rel="bookmark">Demystifying Database Design: A Dive into 3NF and BCNF</a></div>
+      <div class="popular-posts-title"><a href="/blog/recommendation-systems/" rel="bookmark">Recommendation Systems</a></div>
     </li>
   </ul>
 <div class="post-widgets">
@@ -522,7 +559,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Getting-Started-with-Inferential-Statistics"><span class="nav-number">1.</span> <span class="nav-text">Getting Started with Inferential Statistics</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Key-Concepts-in-Inferential-Statistics"><span class="nav-number">1.1.</span> <span class="nav-text">Key Concepts in Inferential Statistics:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Important-Statistical-Tests"><span class="nav-number">1.2.</span> <span class="nav-text">Important Statistical Tests:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Diving-Into-Distributions"><span class="nav-number">2.</span> <span class="nav-text">Diving Into Distributions</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Common-Statistical-Distributions"><span class="nav-number">2.1.</span> <span class="nav-text">Common Statistical Distributions:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Sampling-and-Estimation"><span class="nav-number">3.</span> <span class="nav-text">Sampling and Estimation</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Techniques-and-Theories"><span class="nav-number">3.1.</span> <span class="nav-text">Techniques and Theories:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Practical-Application-Using-Statistics-to-Make-Decisions"><span class="nav-number">4.</span> <span class="nav-text">Practical Application: Using Statistics to Make Decisions</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Real-World-Examples"><span class="nav-number">4.1.</span> <span class="nav-text">Real-World Examples:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Wrap-Up-The-Power-of-Data"><span class="nav-number">5.</span> <span class="nav-text">Wrap-Up: The Power of Data</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Getting-Started-with-Inferential-Statistics"><span class="nav-number">1.</span> <span class="nav-text">Getting Started with Inferential Statistics</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Key-Concepts-in-Inferential-Statistics"><span class="nav-number">1.1.</span> <span class="nav-text">Key Concepts in Inferential Statistics:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Important-Statistical-Tests"><span class="nav-number">1.2.</span> <span class="nav-text">Important Statistical Tests:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Diving-Into-Distributions"><span class="nav-number">2.</span> <span class="nav-text">Diving Into Distributions</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Common-Statistical-Distributions"><span class="nav-number">2.1.</span> <span class="nav-text">Common Statistical Distributions:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Sampling-and-Estimation"><span class="nav-number">3.</span> <span class="nav-text">Sampling and Estimation</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Techniques-and-Theories"><span class="nav-number">3.1.</span> <span class="nav-text">Techniques and Theories:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Practical-Application-Using-Statistics-to-Make-Decisions"><span class="nav-number">4.</span> <span class="nav-text">Practical Application: Using Statistics to Make Decisions</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Real-World-Examples"><span class="nav-number">4.1.</span> <span class="nav-text">Real-World Examples:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Random-Variable"><span class="nav-number">5.</span> <span class="nav-text">Random Variable</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Probability-Distribution-for-RV"><span class="nav-number">5.1.</span> <span class="nav-text">Probability Distribution for RV</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -590,12 +627,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="Symbols count total">23k</span>
+    <span title="Symbols count total">24k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">1:23</span>
+    <span title="Reading time total">1:26</span>
 </div>
 
         
