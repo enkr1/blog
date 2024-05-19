@@ -23,24 +23,22 @@
     var CONFIG = {"hostname":"enkr1.github.io","root":"/blog/","scheme":"Gemini","version":"7.8.0","exturl":true,"sidebar":{"position":"left","width":300,"display":"post","padding":0,"offset":0,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"buttons","active":"disqus","storage":true,"lazyload":true,"nav":null,"activeClass":"disqus"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":-1,"unescape":true,"preload":true},"motion":{"enable":true,"async":false,"transition":{"post_block":"slideDownBigIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="Unlock the secrets of Manacher&#39;s Algorithm in this detailed exploration. Learn how this ingenious method enables rapid identification of the longest palindromic substrings, drastically reducing comput">
+  <meta name="description" content="Explore Floyd&#39;s Tortoise and Hare Algorithm for detecting cycles in linked lists and arrays. This efficient algorithm, named after Robert W. Floyd, uses two pointers moving at different speeds to iden">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Manacher&#39;s Algorithm: Discover the Fastest Way to Find Palindromes">
-<meta property="og:url" content="https://enkr1.github.io/blog/manacher-s-algorithm-discover-the-fastest-way-to-find-palindromes/index.html">
+<meta property="og:title" content="Floyd&#39;s Tortoise and Hare Algorithm: Efficient Cycle Detection">
+<meta property="og:url" content="https://enkr1.github.io/blog/floyd-s-tortoise-and-hare-algorithm-efficient-cycle-detection/index.html">
 <meta property="og:site_name" content="ENKR&#39;s Blog">
-<meta property="og:description" content="Unlock the secrets of Manacher&#39;s Algorithm in this detailed exploration. Learn how this ingenious method enables rapid identification of the longest palindromic substrings, drastically reducing comput">
+<meta property="og:description" content="Explore Floyd&#39;s Tortoise and Hare Algorithm for detecting cycles in linked lists and arrays. This efficient algorithm, named after Robert W. Floyd, uses two pointers moving at different speeds to iden">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://enkr1.github.io/blog/manacher-s-algorithm-discover-the-fastest-way-to-find-palindromes/workaround-1.png">
-<meta property="og:image" content="https://enkr1.github.io/blog/manacher-s-algorithm-discover-the-fastest-way-to-find-palindromes/workaround-2.png">
-<meta property="article:published_time" content="2024-05-08T16:53:14.000Z">
-<meta property="article:modified_time" content="2024-05-18T22:07:04.404Z">
+<meta property="article:published_time" content="2024-05-18T22:01:41.000Z">
+<meta property="article:modified_time" content="2024-05-19T10:47:01.352Z">
 <meta property="article:author" content="Jing Hui PANG | 彭竞辉 | ENKR">
 <meta property="article:tag" content="note">
 <meta property="article:tag" content="algorithm">
+<meta property="article:tag" content="two-pointer">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://enkr1.github.io/blog/manacher-s-algorithm-discover-the-fastest-way-to-find-palindromes/workaround-1.png">
 
-<link rel="canonical" href="https://enkr1.github.io/blog/manacher-s-algorithm-discover-the-fastest-way-to-find-palindromes/">
+<link rel="canonical" href="https://enkr1.github.io/blog/floyd-s-tortoise-and-hare-algorithm-efficient-cycle-detection/">
 
 
 <script id="page-configurations">
@@ -88,7 +86,7 @@
   const analytics = getAnalytics(app);
 </script>
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/ilyabirman-likely@2/release/likely.min.css">
-  <title>Manacher's Algorithm: Discover the Fastest Way to Find Palindromes | ENKR's Blog</title>
+  <title>Floyd's Tortoise and Hare Algorithm: Efficient Cycle Detection | ENKR's Blog</title>
   
     <script>
       function sendPageView() {
@@ -196,12 +194,12 @@
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/blog/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">39</span></a>
+    <a href="/blog/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">38</span></a>
 
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/blog/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">60</span></a>
+    <a href="/blog/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">64</span></a>
 
   </li>
         <li class="menu-item menu-item-history">
@@ -270,7 +268,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://enkr1.github.io/blog/manacher-s-algorithm-discover-the-fastest-way-to-find-palindromes/">
+    <link itemprop="mainEntityOfPage" href="https://enkr1.github.io/blog/floyd-s-tortoise-and-hare-algorithm-efficient-cycle-detection/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/blog/images/avatar.gif">
@@ -283,7 +281,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Manacher's Algorithm: Discover the Fastest Way to Find Palindromes
+          Floyd's Tortoise and Hare Algorithm: Efficient Cycle Detection
         </h1>
 
         <div class="post-meta">
@@ -292,16 +290,10 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
+              
 
-              <time title="Created: Thu 9 May 2024 00:53:14 AM" itemprop="dateCreated datePublished" datetime="2024-05-09T00:53:14+08:00">Thu 9 May 2024</time>
+              <time title="Created: Sun 19 May 2024 06:01:41 AM / Modified: 18:47:01 PM" itemprop="dateCreated datePublished" datetime="2024-05-19T06:01:41+08:00">Sun 19 May 2024</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: Sun 19 May 2024 06:07:04 AM" itemprop="dateModified" datetime="2024-05-19T06:07:04+08:00">Sun 19 May 2024</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -321,13 +313,13 @@
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-              <span>627</span>
+              <span>350</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
-              <span>2 mins.</span>
+              <span>1 mins.</span>
             </span>
   
   <span class="post-meta-item">
@@ -337,8 +329,8 @@
       </span>
       <span class="post-meta-item-text">Disqus: </span>
     
-    <a title="disqus" href="/blog/manacher-s-algorithm-discover-the-fastest-way-to-find-palindromes/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="manacher-s-algorithm-discover-the-fastest-way-to-find-palindromes/" itemprop="commentCount"></span>
+    <a title="disqus" href="/blog/floyd-s-tortoise-and-hare-algorithm-efficient-cycle-detection/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="floyd-s-tortoise-and-hare-algorithm-efficient-cycle-detection/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -352,7 +344,7 @@
               <span class="post-meta-item-text">Views: </span>
               <span class="firestore-visitors-count"></span>
             </span>
-            <div class="post-description">Unlock the secrets of Manacher's Algorithm in this detailed exploration. Learn how this ingenious method enables rapid identification of the longest palindromic substrings, drastically reducing computational complexity and enhancing algorithmic efficiency. Perfect for both budding and seasoned computer scientists.</div>
+            <div class="post-description">Explore Floyd's Tortoise and Hare Algorithm for detecting cycles in linked lists and arrays. This efficient algorithm, named after Robert W. Floyd, uses two pointers moving at different speeds to identify cycles with linear time complexity and minimal space usage.</div>
 
         </div>
       </header>
@@ -363,96 +355,38 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="note-for-myself">Note for myself</h2>
-<ul>
-<li>add special char just to partition them for expansion e.g.
-<code>#</code> → <code>#A#B#B#C#</code></li>
-<li>initialise ⇒
-<code>maxRight=0, palindromLengths=[], center=0</code></li>
-<li>by looping it we check if the current <code>i</code> is within
-maxRight, if yes, we use a
-<ul>
-<li><code>mirror = center*2 - i</code></li>
-<li><code>min(maxRight - i, p[mirror])</code> for the case when the part
-of palindrome is not starting from <code>0</code></li>
-</ul></li>
-<li>and every loop just move the <code>maxRight</code> and
-<code>center</code> when <code>i + p[i] &gt; R</code> ⇒
-<code>maxRight = i + p[i], center=i</code></li>
-<li>case below is looking for the number of palindrome:
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">countSubstrings</span> = (<span class="params">s</span>) =&gt; &#123; <span class="comment">// Manacher&#x27;s algorithm</span></span><br><span class="line">  <span class="keyword">let</span> modifiedString = <span class="string">&#x27;#&#x27;</span>;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; s.<span class="property">length</span>; i++) &#123;</span><br><span class="line">    modifiedString += s[i] + <span class="string">&#x27;#&#x27;</span>;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> n = modifiedString.<span class="property">length</span>;</span><br><span class="line">  <span class="keyword">const</span> P = <span class="keyword">new</span> <span class="title class_">Array</span>(n).<span class="title function_">fill</span>(<span class="number">0</span>);</span><br><span class="line">  <span class="keyword">let</span> center = <span class="number">0</span>, right = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">let</span> count = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">    <span class="keyword">if</span> (i &lt;= right) &#123;</span><br><span class="line">      <span class="keyword">const</span> mirror = <span class="number">2</span> * center - i;</span><br><span class="line">      P[i] = <span class="title class_">Math</span>.<span class="title function_">min</span>(right - i, P[mirror]);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">let</span> leftIndex = i - (<span class="number">1</span> + P[i]);</span><br><span class="line">    <span class="keyword">let</span> rightIndex = i + (<span class="number">1</span> + P[i]);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (leftIndex &gt;= <span class="number">0</span> &amp;&amp; rightIndex &lt; n &amp;&amp; modifiedString[leftIndex] === modifiedString[rightIndex]) &#123;</span><br><span class="line">      P[i]++;</span><br><span class="line">      leftIndex--;</span><br><span class="line">      rightIndex++;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (i + P[i] &gt; right) &#123;</span><br><span class="line">      center = i;</span><br><span class="line">      right = i + P[i];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    count += <span class="title class_">Math</span>.<span class="title function_">ceil</span>(P[i] / <span class="number">2</span>);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> count;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></li>
-</ul>
-<blockquote>
-<p>rewind please its hard to actually memorise - do it again!</p>
-</blockquote>
-<hr />
-<h2 id="manachers-algorithm">Manacher's algorithm</h2>
-<p>Manacher's algorithm is an efficient algorithm used to find the
-<strong>longest palindromic substring in a given string</strong>. It was
-invented by Gustav Manacher in 1975. The algorithm works by using the
-properties of palindromic substrings to avoid unnecessary comparisons,
-thereby reducing the overall time complexity.</p>
-<p>Overall, Manacher's algorithm is a very elegant and efficient
-solution to the problem of finding the longest palindromic substring in
-a given string.</p>
-<p>The algorithm uses two key ideas:</p>
-<ol type="1">
-<li>Symmetry property: A palindrome has a symmetry around its
-<code>center</code>. If we already know the palindrome of a
-<code>center</code>, we can use it to avoid checking characters that
-cannot be part of a longer palindrome.</li>
-<li>Dynamic Programming: We can use previous calculations to compute new
-ones.</li>
-</ol>
-<p><em>The Manacher's algorithm has a time complexity of O(n), where n
-is the length of the string, which makes it very efficient.</em></p>
-<p>Here's how the Manacher algorithm works:</p>
-<ol type="1">
-<li><p>Preprocess the input string <code>s</code> by inserting a special
-character, such as '#', between each pair of characters to make the
-string odd-length. For example, the string "abba" would become
-"#a#b#b#a#".</p></li>
-<li><p>Initialise two arrays:</p>
-<ol type="1">
-<li><code>P</code>, where <code>P[i]</code> stores the length of the
-longest palindromic substring centered at <code>i</code>, and</li>
-<li><code>C</code>, where <code>C[i]</code> stores the center of the
-longest palindromic substring found so far.</li>
-</ol></li>
-<li><p>Set a variable called <code>maxRight</code> to <code>0</code>,
-which represents the rightmost boundary of the longest palindromic
-substring found so far, and set <code>center</code> to <code>0</code>,
-which represents its center.</p></li>
-<li><p>Iterate through the string <code>s</code> from left to right, and
-for each character <code>i</code>, do the following:</p>
-<ol type="a">
-<li><p>If <code>i</code> is within the current palindromic substring
-(i.e., i &lt;= maxRight), set <code>P[i]</code> to
-<code>min(P[2 * center - i], maxRight - i)</code>, which means the
-palindrome centered at <code>i</code> is a reflection of the palindrome
-centered at center.</p></li>
-<li><p>Expand the palindrome centered at <code>i</code> by comparing
-characters <code>s[i - P[i] - 1]</code> and
-<code>s[i + P[i] + 1]</code>. If they are equal, increase
-<code>P[i]</code> by <code>1</code>.</p></li>
-<li><p>If the expanded palindrome centered at <code>i</code> extends
-beyond <code>maxRight</code>, update <code>maxRight</code> and
-<code>center</code> accordingly.</p></li>
-</ol></li>
-<li><p>Find the maximum value in the <code>P</code> array, and its
-corresponding <code>center</code> index. The longest palindromic
-substring is then the substring centered at this index, with length
-<code>P[center] - 1</code>.</p></li>
-</ol>
-<hr />
-<h2 id="for-myself">For myself</h2>
-<p>My workaround: <img data-src="/blog/manacher-s-algorithm-discover-the-fastest-way-to-find-palindromes/workaround-1.png" class="" title="usual case"> <img data-src="/blog/manacher-s-algorithm-discover-the-fastest-way-to-find-palindromes/workaround-2.png" class="" title="example of case where window is not starting form 0"></p>
-<h2 id="references">References</h2>
-<ul>
-<li><span class="exturl" data-url="aHR0cHM6Ly95b3V0dS5iZS9sLVhDV2pwcy1VUT9zaT1oZThHRWMyVzdrYkdlQ09D">YouTube -
-LeetCode Solution - 5.0 Longest Palindromic Substring | Manacher
-Algorithm 100% Beat<i class="fa fa-external-link-alt"></i></span></li>
-</ul>
+        <h2 id="what-is-floyds-tortoise-and-hare-algorithm">What is Floyd's
+Tortoise and Hare Algorithm?</h2>
+<p>Floyd's Tortoise and Hare Algorithm, also known as the <em>Floyd's
+cycle-finding algorithm</em> or the Tortoise and Hare Algorithm, is used
+to <strong>detect cycles</strong> in a linked list or an array. It was
+named after Robert W. Floyd, who first described the algorithm.</p>
+<p>The algorithm works by using two pointers, one moving at a slower
+pace (tortoise) and the other moving at a faster pace (hare), and
+iterating through the linked list or array. If there is a cycle, the two
+pointers will eventually meet at the same node.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">slow pointer s always move by 1</span><br><span class="line">┌───┐</span><br><span class="line">↓   ↓</span><br><span class="line">s   s</span><br><span class="line">1 → 2 → 3 → 4 → 5 → 6 → 7</span><br><span class="line">f       f</span><br><span class="line">↑       ↑</span><br><span class="line">└───────┘</span><br><span class="line">fast pointer f always move by 2</span><br></pre></td></tr></table></figure>
+<p><strong>Here's a step-by-step explanation of Floyd's Tortoise and
+Hare Algorithm:</strong> 1. Initialise two pointers, the tortoise (slow)
+and the hare (fast), at the head of the linked list or the first element
+of the array. 2. Move the tortoise one step forward and the hare two
+steps forward. 3. Repeat step 2 until one of the following conditions is
+met: - The hare reaches the end of the linked list or array (i.e., the
+hare encounters a <strong><code>null</code></strong> or out-of-bounds
+index). In this case, there is no cycle, and the algorithm terminates. -
+The tortoise and hare pointers meet at the same node. This indicates the
+presence of a cycle in the linked list or array. 4. If the tortoise and
+hare meet, reset the tortoise to the head of the linked list or the
+first element of the array and keep the hare at the meeting point. 5.
+Move the tortoise and hare pointers one step at a time until they meet
+again. The point at which they meet is the start of the cycle in the
+linked list or array.</p>
+<p><strong>Floyd's Tortoise and Hare Algorithm</strong> is an efficient
+algorithm that runs in <strong>linear time complexity</strong>, making
+it useful for detecting cycles in large <strong>linked lists</strong> or
+<strong>arrays</strong>. It does <strong>NOT</strong> require any
+additional data structures and uses only <strong>two pointers</strong>
+to achieve the detection.</p>
 
     </div>
 
@@ -463,19 +397,19 @@ Algorithm 100% Beat<i class="fa fa-external-link-alt"></i></span></li>
   <div class="popular-posts-header">Related Posts</div>
   <ul class="popular-posts">
     <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="/blog/floyd-warshall-algorithm-all-pairs-shortest-path/" rel="bookmark">Floyd-Warshall Algorithm: All-Pairs Shortest Path</a></div>
+      <div class="popular-posts-title"><a href="/blog/dijkstra-s-algorithm-efficient-shortest-path-finding-in-graphs/" rel="bookmark">Dijkstra's Algorithm: Efficient Shortest Path Finding in Graphs</a></div>
+    </li>
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="/blog/floyd-warshall-algorithm-comprehensive-guide-to-all-pairs-shortest-paths/" rel="bookmark">Floyd-Warshall Algorithm: Comprehensive Guide to All-Pairs Shortest Paths</a></div>
+    </li>
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="/blog/manacher-s-algorithm-fast-and-efficient-palindrome-detection/" rel="bookmark">Manacher's Algorithm: Fast and Efficient Palindrome Detection</a></div>
     </li>
     <li class="popular-posts-item">
       <div class="popular-posts-title"><a href="/blog/big-o-notation-my-notes-on-algorithm-efficiency/" rel="bookmark">Big-O Notation: My Notes on Algorithm Efficiency</a></div>
     </li>
     <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="/blog/floyd-s-tortoise-and-hare-algorithm-cycle-finding/" rel="bookmark">Floyd's Tortoise and Hare Algorithm: Cycle Finding</a></div>
-    </li>
-    <li class="popular-posts-item">
       <div class="popular-posts-title"><a href="/blog/demystifying-database-design-a-dive-into-3nf-and-bcnf/" rel="bookmark">Demystifying Database Design: A Dive into 3NF and BCNF</a></div>
-    </li>
-    <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="/blog/computer-networking-notebook/" rel="bookmark">Computer Networking Notebook</a></div>
     </li>
   </ul>
 <div class="post-widgets">
@@ -497,6 +431,7 @@ Algorithm 100% Beat<i class="fa fa-external-link-alt"></i></span></li>
           <div class="post-tags">
               <a href="/blog/tags/note/" rel="tag"># note</a>
               <a href="/blog/tags/algorithm/" rel="tag"># algorithm</a>
+              <a href="/blog/tags/two-pointer/" rel="tag"># two-pointer</a>
           </div>
 
         
@@ -505,12 +440,12 @@ Algorithm 100% Beat<i class="fa fa-external-link-alt"></i></span></li>
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/blog/computer-networking-notebook/" rel="prev" title="Computer Networking Notebook">
-      <i class="fa fa-chevron-left"></i> Computer Networking Notebook
+    <a href="/blog/sql-notebook/" rel="prev" title="SQL Notebook">
+      <i class="fa fa-chevron-left"></i> SQL Notebook
     </a></div>
       <div class="post-nav-item">
-    <a href="/blog/java-notebook/" rel="next" title="Java Notebook">
-      Java Notebook <i class="fa fa-chevron-right"></i>
+    <a href="/blog/floyd-warshall-algorithm-comprehensive-guide-to-all-pairs-shortest-paths/" rel="next" title="Floyd-Warshall Algorithm: Comprehensive Guide to All-Pairs Shortest Paths">
+      Floyd-Warshall Algorithm: Comprehensive Guide to All-Pairs Shortest Paths <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -577,7 +512,8 @@ Algorithm 100% Beat<i class="fa fa-external-link-alt"></i></span></li>
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#note-for-myself"><span class="nav-number">1.</span> <span class="nav-text">Note for myself</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#manachers-algorithm"><span class="nav-number">2.</span> <span class="nav-text">Manacher&#39;s algorithm</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#for-myself"><span class="nav-number">3.</span> <span class="nav-text">For myself</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#references"><span class="nav-number">4.</span> <span class="nav-text">References</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#what-is-floyds-tortoise-and-hare-algorithm"><span class="nav-number">1.</span> <span class="nav-text">What is Floyd&#39;s
+Tortoise and Hare Algorithm?</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -590,20 +526,20 @@ Algorithm 100% Beat<i class="fa fa-external-link-alt"></i></span></li>
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/blog/archives">
-          <span class="site-state-item-count">35</span>
+          <span class="site-state-item-count">36</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/blog/categories/">
           
-        <span class="site-state-item-count">39</span>
+        <span class="site-state-item-count">38</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/blog/tags/">
           
-        <span class="site-state-item-count">60</span>
+        <span class="site-state-item-count">64</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -645,12 +581,12 @@ Algorithm 100% Beat<i class="fa fa-external-link-alt"></i></span></li>
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="Symbols count total">27k</span>
+    <span title="Symbols count total">28k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">1:37</span>
+    <span title="Reading time total">1:42</span>
 </div>
 
         
@@ -874,9 +810,9 @@ Algorithm 100% Beat<i class="fa fa-external-link-alt"></i></span></li>
 </script>
 <script>
   var disqus_config = function() {
-    this.page.url = "https://enkr1.github.io/blog/manacher-s-algorithm-discover-the-fastest-way-to-find-palindromes/";
-    this.page.identifier = "manacher-s-algorithm-discover-the-fastest-way-to-find-palindromes/";
-    this.page.title = "Manacher's Algorithm: Discover the Fastest Way to Find Palindromes";
+    this.page.url = "https://enkr1.github.io/blog/floyd-s-tortoise-and-hare-algorithm-efficient-cycle-detection/";
+    this.page.identifier = "floyd-s-tortoise-and-hare-algorithm-efficient-cycle-detection/";
+    this.page.title = "Floyd's Tortoise and Hare Algorithm: Efficient Cycle Detection";
     };
   NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
     if (window.DISQUS) {

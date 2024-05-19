@@ -31,11 +31,12 @@
 <meta property="og:description" content="Welcome to a journey through the realm of database normalisation—a key aspect of backend development that ensures your database is not only functional but also efficient and easy to manage. Today, let">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2024-04-19T19:09:54.000Z">
-<meta property="article:modified_time" content="2024-05-18T20:43:44.094Z">
+<meta property="article:modified_time" content="2024-05-19T04:06:03.892Z">
 <meta property="article:author" content="Jing Hui PANG | 彭竞辉 | ENKR">
 <meta property="article:tag" content="note">
 <meta property="article:tag" content="database-design">
 <meta property="article:tag" content="backend">
+<meta property="article:tag" content="sql">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="https://enkr1.github.io/blog/demystifying-database-design-a-dive-into-3nf-and-bcnf/">
@@ -194,12 +195,12 @@
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/blog/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">39</span></a>
+    <a href="/blog/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">38</span></a>
 
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/blog/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">60</span></a>
+    <a href="/blog/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">64</span></a>
 
   </li>
         <li class="menu-item menu-item-history">
@@ -298,7 +299,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: Sun 19 May 2024 04:43:44 AM" itemprop="dateModified" datetime="2024-05-19T04:43:44+08:00">Sun 19 May 2024</time>
+                <time title="Modified: Sun 19 May 2024 12:06:03 PM" itemprop="dateModified" datetime="2024-05-19T12:06:03+08:00">Sun 19 May 2024</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -310,11 +311,11 @@
                 </span>
                   , 
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Software-Engineering/Web-Development/" itemprop="url" rel="index"><span itemprop="name">Web Development</span></a>
+                  <a href="/blog/categories/Software-Engineering/Programming-Languages/" itemprop="url" rel="index"><span itemprop="name">Programming Languages</span></a>
                 </span>
                   , 
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Software-Engineering/Web-Development/Back-end/" itemprop="url" rel="index"><span itemprop="name">Back-end</span></a>
+                  <a href="/blog/categories/Software-Engineering/Programming-Languages/SQL/" itemprop="url" rel="index"><span itemprop="name">SQL</span></a>
                 </span>
             </span>
 
@@ -605,16 +606,16 @@ backend systems become more streamlined than ever!</p>
       <div class="popular-posts-title"><a href="/blog/computer-networking-notebook/" rel="bookmark">Computer Networking Notebook</a></div>
     </li>
     <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="/blog/floyd-warshall-algorithm-all-pairs-shortest-path/" rel="bookmark">Floyd-Warshall Algorithm: All-Pairs Shortest Path</a></div>
+      <div class="popular-posts-title"><a href="/blog/sql-notebook/" rel="bookmark">SQL Notebook</a></div>
     </li>
     <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="/blog/manacher-s-algorithm-discover-the-fastest-way-to-find-palindromes/" rel="bookmark">Manacher's Algorithm: Discover the Fastest Way to Find Palindromes</a></div>
+      <div class="popular-posts-title"><a href="/blog/dijkstra-s-algorithm-efficient-shortest-path-finding-in-graphs/" rel="bookmark">Dijkstra's Algorithm: Efficient Shortest Path Finding in Graphs</a></div>
     </li>
     <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="/blog/big-o-notation-my-notes-on-algorithm-efficiency/" rel="bookmark">Big-O Notation: My Notes on Algorithm Efficiency</a></div>
+      <div class="popular-posts-title"><a href="/blog/floyd-warshall-algorithm-comprehensive-guide-to-all-pairs-shortest-paths/" rel="bookmark">Floyd-Warshall Algorithm: Comprehensive Guide to All-Pairs Shortest Paths</a></div>
     </li>
     <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="/blog/floyd-s-tortoise-and-hare-algorithm-cycle-finding/" rel="bookmark">Floyd's Tortoise and Hare Algorithm: Cycle Finding</a></div>
+      <div class="popular-posts-title"><a href="/blog/manacher-s-algorithm-fast-and-efficient-palindrome-detection/" rel="bookmark">Manacher's Algorithm: Fast and Efficient Palindrome Detection</a></div>
     </li>
   </ul>
 <div class="post-widgets">
@@ -637,6 +638,7 @@ backend systems become more streamlined than ever!</p>
               <a href="/blog/tags/note/" rel="tag"># note</a>
               <a href="/blog/tags/database-design/" rel="tag"># database-design</a>
               <a href="/blog/tags/backend/" rel="tag"># backend</a>
+              <a href="/blog/tags/sql/" rel="tag"># sql</a>
           </div>
 
         
@@ -733,20 +735,20 @@ Practical</span></a></li></ol></div>
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/blog/archives">
-          <span class="site-state-item-count">35</span>
+          <span class="site-state-item-count">36</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/blog/categories/">
           
-        <span class="site-state-item-count">39</span>
+        <span class="site-state-item-count">38</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/blog/tags/">
           
-        <span class="site-state-item-count">60</span>
+        <span class="site-state-item-count">64</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -788,12 +790,12 @@ Practical</span></a></li></ol></div>
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="Symbols count total">27k</span>
+    <span title="Symbols count total">28k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">1:37</span>
+    <span title="Reading time total">1:42</span>
 </div>
 
         

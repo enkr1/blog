@@ -33,7 +33,7 @@
 <meta property="og:image" content="https://enkr1.github.io/blog/big-o-notation-my-notes-on-algorithm-efficiency/bon-graph-1.png">
 <meta property="og:image" content="https://enkr1.github.io/blog/big-o-notation-my-notes-on-algorithm-efficiency/bon-graph-2.png">
 <meta property="article:published_time" content="2024-05-08T18:19:27.000Z">
-<meta property="article:modified_time" content="2024-05-11T23:01:19.669Z">
+<meta property="article:modified_time" content="2024-05-19T06:45:22.747Z">
 <meta property="article:author" content="Jing Hui PANG | 彭竞辉 | ENKR">
 <meta property="article:tag" content="note">
 <meta property="article:tag" content="algorithm">
@@ -197,12 +197,12 @@
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/blog/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">39</span></a>
+    <a href="/blog/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">38</span></a>
 
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/blog/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">60</span></a>
+    <a href="/blog/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">64</span></a>
 
   </li>
         <li class="menu-item menu-item-history">
@@ -301,7 +301,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: Sun 12 May 2024 07:01:19 AM" itemprop="dateModified" datetime="2024-05-12T07:01:19+08:00">Sun 12 May 2024</time>
+                <time title="Modified: Sun 19 May 2024 14:45:22 PM" itemprop="dateModified" datetime="2024-05-19T14:45:22+08:00">Sun 19 May 2024</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -727,7 +727,7 @@ with the number of elements raised to their own power.</td>
 </tbody>
 </table>
 <hr />
-<h2 id="notes-for-myself">Notes for myself</h2>
+<h2 id="notes-for-myself">Notes for Myself</h2>
 <ul>
 <li>Case such as <code>n + nlogn</code>, we don't need to say the first
 <code>n</code> because in Big-O notation we only care about the larger
@@ -753,19 +753,19 @@ different variable.</li>
   <div class="popular-posts-header">Related Posts</div>
   <ul class="popular-posts">
     <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="/blog/floyd-warshall-algorithm-all-pairs-shortest-path/" rel="bookmark">Floyd-Warshall Algorithm: All-Pairs Shortest Path</a></div>
+      <div class="popular-posts-title"><a href="/blog/dijkstra-s-algorithm-efficient-shortest-path-finding-in-graphs/" rel="bookmark">Dijkstra's Algorithm: Efficient Shortest Path Finding in Graphs</a></div>
     </li>
     <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="/blog/manacher-s-algorithm-discover-the-fastest-way-to-find-palindromes/" rel="bookmark">Manacher's Algorithm: Discover the Fastest Way to Find Palindromes</a></div>
+      <div class="popular-posts-title"><a href="/blog/floyd-warshall-algorithm-comprehensive-guide-to-all-pairs-shortest-paths/" rel="bookmark">Floyd-Warshall Algorithm: Comprehensive Guide to All-Pairs Shortest Paths</a></div>
     </li>
     <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="/blog/floyd-s-tortoise-and-hare-algorithm-cycle-finding/" rel="bookmark">Floyd's Tortoise and Hare Algorithm: Cycle Finding</a></div>
+      <div class="popular-posts-title"><a href="/blog/manacher-s-algorithm-fast-and-efficient-palindrome-detection/" rel="bookmark">Manacher's Algorithm: Fast and Efficient Palindrome Detection</a></div>
+    </li>
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="/blog/floyd-s-tortoise-and-hare-algorithm-efficient-cycle-detection/" rel="bookmark">Floyd's Tortoise and Hare Algorithm: Efficient Cycle Detection</a></div>
     </li>
     <li class="popular-posts-item">
       <div class="popular-posts-title"><a href="/blog/demystifying-database-design-a-dive-into-3nf-and-bcnf/" rel="bookmark">Demystifying Database Design: A Dive into 3NF and BCNF</a></div>
-    </li>
-    <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="/blog/computer-networking-notebook/" rel="bookmark">Computer Networking Notebook</a></div>
     </li>
   </ul>
 <div class="post-widgets">
@@ -878,7 +878,7 @@ Multiplicative Complexity</span></a><ol class="nav-child"><li class="nav-item na
 O(c^n): Exponential Complexity</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#o2n"><span class="nav-number">10.1.</span> <span class="nav-text">O(2^n):</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#coding-example-for-o2n"><span class="nav-number">10.1.1.</span> <span class="nav-text">Coding Example for
 O(2^n):</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ocn"><span class="nav-number">10.2.</span> <span class="nav-text">O(c^n):</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#coding-example-for-ocn"><span class="nav-number">10.2.1.</span> <span class="nav-text">Coding Example for
 O(c^n):</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#on-factorial-complexity"><span class="nav-number">11.</span> <span class="nav-text">O(n!): Factorial
-Complexity</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#common-examples-7"><span class="nav-number">11.1.</span> <span class="nav-text">Common Examples:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#big-o-notation-cheat-sheet"><span class="nav-number">12.</span> <span class="nav-text">Big-O Notation Cheat Sheet</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#notes-for-myself"><span class="nav-number">13.</span> <span class="nav-text">Notes for myself</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#references"><span class="nav-number">14.</span> <span class="nav-text">References:</span></a></li></ol></div>
+Complexity</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#common-examples-7"><span class="nav-number">11.1.</span> <span class="nav-text">Common Examples:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#big-o-notation-cheat-sheet"><span class="nav-number">12.</span> <span class="nav-text">Big-O Notation Cheat Sheet</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#notes-for-myself"><span class="nav-number">13.</span> <span class="nav-text">Notes for Myself</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#references"><span class="nav-number">14.</span> <span class="nav-text">References:</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -891,20 +891,20 @@ Complexity</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a c
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/blog/archives">
-          <span class="site-state-item-count">35</span>
+          <span class="site-state-item-count">36</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/blog/categories/">
           
-        <span class="site-state-item-count">39</span>
+        <span class="site-state-item-count">38</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/blog/tags/">
           
-        <span class="site-state-item-count">60</span>
+        <span class="site-state-item-count">64</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -946,12 +946,12 @@ Complexity</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a c
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="Symbols count total">27k</span>
+    <span title="Symbols count total">28k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">1:37</span>
+    <span title="Reading time total">1:42</span>
 </div>
 
         
