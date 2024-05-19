@@ -23,22 +23,22 @@
     var CONFIG = {"hostname":"enkr1.github.io","root":"/blog/","scheme":"Gemini","version":"7.8.0","exturl":true,"sidebar":{"position":"left","width":300,"display":"post","padding":0,"offset":0,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"buttons","active":"disqus","storage":true,"lazyload":true,"nav":null,"activeClass":"disqus"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":-1,"unescape":true,"preload":true},"motion":{"enable":true,"async":false,"transition":{"post_block":"slideDownBigIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="What is Floyd-Warshall Algorithm? The Floyd-Warshall algorithm is a dynamic programming algorithm used to find the shortest paths between all pairs of vertices in a weighted graph. It can handle both">
+  <meta name="description" content="Explore the Floyd-Warshall algorithm for finding shortest paths between all pairs of vertices in a weighted graph. Learn about its applications, benefits, and limitations in handling both positive and">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Floyd-Warshall Algorithm">
-<meta property="og:url" content="https://enkr1.github.io/blog/floyd-warshall-algorithm/index.html">
+<meta property="og:title" content="Floyd-Warshall Algorithm: All-Pairs Shortest Path">
+<meta property="og:url" content="https://enkr1.github.io/blog/floyd-warshall-algorithm-all-pairs-shortest-path/index.html">
 <meta property="og:site_name" content="ENKR&#39;s Blog">
-<meta property="og:description" content="What is Floyd-Warshall Algorithm? The Floyd-Warshall algorithm is a dynamic programming algorithm used to find the shortest paths between all pairs of vertices in a weighted graph. It can handle both">
+<meta property="og:description" content="Explore the Floyd-Warshall algorithm for finding shortest paths between all pairs of vertices in a weighted graph. Learn about its applications, benefits, and limitations in handling both positive and">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2024-05-18T22:17:35.000Z">
-<meta property="article:modified_time" content="2024-05-18T22:33:18.089Z">
+<meta property="article:modified_time" content="2024-05-19T04:03:57.988Z">
 <meta property="article:author" content="Jing Hui PANG | 彭竞辉 | ENKR">
 <meta property="article:tag" content="note">
 <meta property="article:tag" content="algorithm">
-<meta property="article:tag" content="two-pointer">
+<meta property="article:tag" content="dynamic programming">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://enkr1.github.io/blog/floyd-warshall-algorithm/">
+<link rel="canonical" href="https://enkr1.github.io/blog/floyd-warshall-algorithm-all-pairs-shortest-path/">
 
 
 <script id="page-configurations">
@@ -86,7 +86,7 @@
   const analytics = getAnalytics(app);
 </script>
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/ilyabirman-likely@2/release/likely.min.css">
-  <title>Floyd-Warshall Algorithm | ENKR's Blog</title>
+  <title>Floyd-Warshall Algorithm: All-Pairs Shortest Path | ENKR's Blog</title>
   
     <script>
       function sendPageView() {
@@ -199,7 +199,7 @@
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/blog/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">59</span></a>
+    <a href="/blog/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">60</span></a>
 
   </li>
         <li class="menu-item menu-item-history">
@@ -268,7 +268,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://enkr1.github.io/blog/floyd-warshall-algorithm/">
+    <link itemprop="mainEntityOfPage" href="https://enkr1.github.io/blog/floyd-warshall-algorithm-all-pairs-shortest-path/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/blog/images/avatar.gif">
@@ -281,7 +281,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Floyd-Warshall Algorithm
+          Floyd-Warshall Algorithm: All-Pairs Shortest Path
         </h1>
 
         <div class="post-meta">
@@ -292,7 +292,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: Sun 19 May 2024 06:17:35 AM / Modified: 06:33:18 AM" itemprop="dateCreated datePublished" datetime="2024-05-19T06:17:35+08:00">Sun 19 May 2024</time>
+              <time title="Created: Sun 19 May 2024 06:17:35 AM / Modified: 12:03:57 PM" itemprop="dateCreated datePublished" datetime="2024-05-19T06:17:35+08:00">Sun 19 May 2024</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -313,13 +313,13 @@
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-              <span>924</span>
+              <span>1.2k</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
-              <span>3 mins.</span>
+              <span>4 mins.</span>
             </span>
   
   <span class="post-meta-item">
@@ -329,8 +329,8 @@
       </span>
       <span class="post-meta-item-text">Disqus: </span>
     
-    <a title="disqus" href="/blog/floyd-warshall-algorithm/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="floyd-warshall-algorithm/" itemprop="commentCount"></span>
+    <a title="disqus" href="/blog/floyd-warshall-algorithm-all-pairs-shortest-path/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="floyd-warshall-algorithm-all-pairs-shortest-path/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -344,6 +344,7 @@
               <span class="post-meta-item-text">Views: </span>
               <span class="firestore-visitors-count"></span>
             </span>
+            <div class="post-description">Explore the Floyd-Warshall algorithm for finding shortest paths between all pairs of vertices in a weighted graph. Learn about its applications, benefits, and limitations in handling both positive and negative edge weights.</div>
 
         </div>
       </header>
@@ -410,81 +411,129 @@ Weights:</strong> When other algorithms like Dijkstra's are not suitable
 due to negative weights.</li>
 </ul>
 <h2 id="why-floyd-warshall-algorithm">Why Floyd-Warshall Algorithm?</h2>
-<p><strong>Advantages:</strong> 1. <strong>Handles Negative
-Weights:</strong> It can handle graphs with negative edge weights,
-unlike Dijkstra's algorithm. 2. <strong>All-Pairs Shortest
-Paths:</strong> It efficiently computes shortest paths between all pairs
-of vertices. 3. <strong>Simplicity:</strong> The algorithm is
-straightforward to implement with a triple nested loop.</p>
+<h3 id="advantages">Advantages</h3>
+<ol type="1">
+<li><strong>Handles Negative Weights:</strong> It can handle graphs with
+negative edge weights, unlike Dijkstra's algorithm.</li>
+<li><strong>All-Pairs Shortest Paths:</strong> It efficiently computes
+shortest paths between all pairs of vertices.</li>
+<li><strong>Simplicity:</strong> The algorithm is straightforward to
+implement with a triple nested loop.</li>
+</ol>
 <p>But, <strong>Cannot Handle:</strong> Negative weight cycles (they
 make shortest path calculations invalid).</p>
-<p><strong>Drawbacks:</strong> 1. <strong>Time Complexity:</strong>
-(O(V^3)), which can be prohibitive for very large graphs. 2.
-<strong>Space Complexity:</strong> (O(V^2)), requiring significant
-memory for storing the distance matrix.</p>
-<p>Certainly! Here's the section with the equations formatted for use
-with MathJax and KaTeX using <code>mhchem</code>:</p>
-<hr />
-<h2 id="how-to-use-floyd-warshall-algorithm">How to Use Floyd-Warshall
-Algorithm</h2>
-<p><strong>Algorithm Steps:</strong></p>
+<h3 id="drawbacks">Drawbacks</h3>
 <ol type="1">
-<li><strong>Initialize Distance Matrix:</strong>
+<li><p><strong>Time Complexity:</strong> <span
+class="math display">\[O(V^3)\]</span></p>
+<blockquote>
+<p>which can be prohibitive for very large graphs.</p>
+</blockquote></li>
+<li><p><strong>Space Complexity:</strong> <span
+class="math display">\[O(V^2)\]</span></p>
+<blockquote>
+<p>requiring significant memory for storing the distance matrix.</p>
+</blockquote></li>
+</ol>
+<h2
+id="step-by-step-guide-to-implement-floyd-warshall-algorithm">Step-by-Step
+Guide to Implement Floyd-Warshall Algorithm</h2>
+<ol type="1">
+<li><strong>Understand the Problem:</strong>
 <ul>
-<li>Create a 2D array <code>dist</code> where
-<code>\(\text&#123;dist&#125;[i][j]\)</code> represents the shortest distance from
-vertex (i) to vertex (j).</li>
-<li>If there is an edge between (i) and (j), set
-<code>\(\text&#123;dist&#125;[i][j]\)</code> to the edge weight.</li>
-<li>Set <code>\(\text&#123;dist&#125;[i][i]\)</code> to 0 for all vertices
-(i).</li>
-<li>Set <code>\(\text&#123;dist&#125;[i][j]\)</code> to infinity if there is no
-edge between (i) and (j).</li>
+<li>You need to find the shortest paths between all pairs of vertices in
+a weighted directed graph.</li>
+<li>The graph is represented as an adjacency matrix.</li>
+<li>If there is no direct edge between two vertices, the weight is
+<code>Infinity</code>.</li>
 </ul></li>
-<li><strong>Dynamic Programming Update:</strong>
+<li><strong>Initialisation Distance Matrix:</strong>
 <ul>
-<li>Iterate over each vertex (k) as an intermediate vertex.</li>
-<li>For each pair of vertices ((i, j)), update
-<code>\(\text&#123;dist&#125;[i][j]\)</code> to the minimum of
-<code>\(\text&#123;dist&#125;[i][j]\)</code> and the path that goes through (k):
-<span class="math display">\[
-\text{dist}[i][j] = \min(\text{dist}[i][j], \text{dist}[i][k] +
-\text{dist}[k][j])
-\]</span></li>
+<li>Create a 2D array of distance matrix <code>dist</code> as a copy of
+the input graph. This will store the shortest distances.</li>
+<li>Set the diagonal elements to 0, because the shortest distance from
+any vertex to itself is 0.</li>
+</ul></li>
+<li><strong>Algorithm Execution:</strong>
+<ul>
+<li>Use three nested loops:
+<ul>
+<li>Outer loop iterates over each vertex <code>k</code> as an
+intermediate vertex.</li>
+<li>Middle loop iterates over each vertex <code>i</code> as the
+source.</li>
+<li>Inner loop iterates over each vertex <code>j</code> as the
+destination.</li>
+</ul></li>
+<li>Update <code>dist[i][j]</code> if a shorter path through
+<code>k</code> is found: <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (dist[i][k] + dist[k][j] &lt; dist[i][j]) &#123;</span><br><span class="line">  dist[i][j] = dist[i][k] + dist[k][j];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
 </ul></li>
 <li><strong>Result:</strong>
 <ul>
-<li>After completing the iterations, <code>\(\text&#123;dist&#125;[i][j]\)</code>
-will contain the shortest path distance from vertex (i) to vertex
-(j).</li>
+<li>After all iterations, <code>dist[i][j]</code> will contain the
+shortest distance from vertex <code>i</code> to vertex
+<code>j</code>.</li>
+<li>Output the Result: Print the <code>dist</code> matrix, replacing
+<code>Infinity</code> with <code>∞</code> for readability.</li>
 </ul></li>
 </ol>
-<h3 id="example">Example</h3>
-<p>Consider a graph with the following adjacency matrix
-representation:</p>
-<p><span class="math display">\[
-\begin{array}{cccc}
-  &amp; A &amp; B &amp; C &amp; D \\
-A &amp; 0 &amp; 3 &amp; \infty &amp; 7 \\
-B &amp; 8 &amp; 0 &amp; 2 &amp; \infty \\
-C &amp; 5 &amp; \infty &amp; 0 &amp; 1 \\
-D &amp; 2 &amp; \infty &amp; \infty &amp; 0 \\
-\end{array}
-\]</span></p>
-<p><strong>Step-by-Step Execution:</strong></p>
-<ol type="1">
-<li><p><strong>Initialize Distance Matrix:</strong>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">dist = [[0, 3, ∞, 7],</span><br><span class="line">        [8, 0, 2, ∞],</span><br><span class="line">        [5, ∞, 0, 1],</span><br><span class="line">        [2, ∞, ∞, 0]]</span><br></pre></td></tr></table></figure></p></li>
-<li><p><strong>Iterate Over Intermediate Vertex (k):</strong></p>
-<p>For (k = 0) (vertex A): <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">dist = [[0, 3, ∞, 7],</span><br><span class="line">        [8, 0, 2, 15],  // Update: 8 + 7 = 15</span><br><span class="line">        [5, 8, 0, 1],   // Update: 5 + 3 = 8</span><br><span class="line">        [2, 5, ∞, 0]]   // Update: 2 + 3 = 5</span><br></pre></td></tr></table></figure></p>
-<p>For (k = 1) (vertex B): <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">dist = [[0, 3, 5, 7],   // Update: 3 + 2 = 5</span><br><span class="line">        [8, 0, 2, 3],   // Update: 2 + 1 = 3</span><br><span class="line">        [5, 8, 0, 1],</span><br><span class="line">        [2, 5, 7, 0]]   // Update: 5 + 2 = 7</span><br></pre></td></tr></table></figure></p>
-<p>For (k = 2) (vertex C): <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">dist = [[0, 3, 5, 6],   // Update: 5 + 1 = 6</span><br><span class="line">        [8, 0, 2, 3],</span><br><span class="line">        [5, 8, 0, 1],</span><br><span class="line">        [2, 5, 7, 0]]</span><br></pre></td></tr></table></figure></p>
-<p>For (k = 3) (vertex D): <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">dist = [[0, 3, 5, 6],</span><br><span class="line">        [5, 0, 2, 3],   // Update: 2 + 6 = 6</span><br><span class="line">        [3, 6, 0, 1],   // Update: 3 + 1 = 4</span><br><span class="line">        [2, 5, 7, 0]]</span><br></pre></td></tr></table></figure></p></li>
-<li><p><strong>Final Distance Matrix:</strong> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">dist = [[0, 3, 5, 6],</span><br><span class="line">        [5, 0, 2, 3],</span><br><span class="line">        [3, 6, 0, 1],</span><br><span class="line">        [2, 5, 7, 0]]</span><br></pre></td></tr></table></figure></p></li>
-</ol>
+<h3 id="memorisation-tips">Memorisation Tips</h3>
+<ul>
+<li><strong>Initialisation:</strong>
+<ul>
+<li><code>dist[i][j] = graph[i][j]</code> for all pairs
+<code>(i, j)</code>.</li>
+</ul></li>
+<li><strong>Update Rule:</strong>
+<ul>
+<li><code>dist[i][j] = min(dist[i][j], dist[i][k] + dist[k][j])</code>.</li>
+</ul></li>
+<li><strong>Loop Structure:</strong>
+<ul>
+<li>Three nested loops for <code>k</code>, <code>i</code>, and
+<code>j</code>.</li>
+</ul></li>
+<li><strong>Edge Cases:</strong>
+<ul>
+<li>Self-loops are always <code>0</code>.</li>
+<li>Use <code>Infinity</code> for no direct path.</li>
+</ul></li>
+</ul>
+<h3 id="detailed-example-in-javascript">Detailed Example in
+JavaScript</h3>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">floydWarshall</span>(<span class="params">graph</span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> dist = [];</span><br><span class="line">  <span class="keyword">const</span> V = graph.<span class="property">length</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// Step 1: Initialise the distance matrix</span></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; V; i++) &#123;</span><br><span class="line">    dist[i] = [];</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> j = <span class="number">0</span>; j &lt; V; j++) &#123;</span><br><span class="line">      dist[i][j] = graph[i][j];</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// Step 2: Apply Floyd-Warshall Algorithm</span></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> k = <span class="number">0</span>; k &lt; V; k++) &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; V; i++) &#123;</span><br><span class="line">      <span class="keyword">for</span> (<span class="keyword">let</span> j = <span class="number">0</span>; j &lt; V; j++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (dist[i][k] + dist[k][j] &lt; dist[i][j]) &#123;</span><br><span class="line">          dist[i][j] = dist[i][k] + dist[k][j];</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// Step 3: Return the shortest distance matrix</span></span><br><span class="line">  <span class="keyword">return</span> dist;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Example graph</span></span><br><span class="line"><span class="keyword">const</span> graph = [</span><br><span class="line">  [<span class="number">0</span>, <span class="number">3</span>, <span class="title class_">Infinity</span>, <span class="number">7</span>],</span><br><span class="line">  [<span class="number">8</span>, <span class="number">0</span>, <span class="number">2</span>, <span class="title class_">Infinity</span>],</span><br><span class="line">  [<span class="number">5</span>, <span class="title class_">Infinity</span>, <span class="number">0</span>, <span class="number">1</span>],</span><br><span class="line">  [<span class="number">2</span>, <span class="title class_">Infinity</span>, <span class="title class_">Infinity</span>, <span class="number">0</span>]</span><br><span class="line">];</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> result = <span class="title function_">floydWarshall</span>(graph);</span><br><span class="line"></span><br><span class="line"><span class="comment">// Format the output for readability</span></span><br><span class="line">result.<span class="title function_">forEach</span>(<span class="function"><span class="params">row</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(row.<span class="title function_">map</span>(<span class="function"><span class="params">value</span> =&gt;</span> (value === <span class="title class_">Infinity</span> ? <span class="string">&quot;∞&quot;</span> : value)).<span class="title function_">join</span>(<span class="string">&quot; &quot;</span>));</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">Expected output:</span></span><br><span class="line"><span class="comment">[</span></span><br><span class="line"><span class="comment">  [0, 3, 5, 6],</span></span><br><span class="line"><span class="comment">  [5, 0, 2, 3],</span></span><br><span class="line"><span class="comment">  [3, 6, 0, 1],</span></span><br><span class="line"><span class="comment">  [2, 5, 7, 0]</span></span><br><span class="line"><span class="comment">]</span></span><br><span class="line"><span class="comment">*;</span></span><br></pre></td></tr></table></figure>
+<h3 id="example-1-basic-graph">Example 1: Basic Graph</h3>
+<p>A simple graph with four vertices (A, B, C, D) and both finite and
+infinite distances: <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> graph1 = [</span><br><span class="line">  [<span class="number">0</span>, <span class="number">3</span>, <span class="title class_">Infinity</span>, <span class="number">7</span>],</span><br><span class="line">  [<span class="number">8</span>, <span class="number">0</span>, <span class="number">2</span>, <span class="title class_">Infinity</span>],</span><br><span class="line">  [<span class="number">5</span>, <span class="title class_">Infinity</span>, <span class="number">0</span>, <span class="number">1</span>],</span><br><span class="line">  [<span class="number">2</span>, <span class="title class_">Infinity</span>, <span class="title class_">Infinity</span>, <span class="number">0</span>]</span><br><span class="line">];</span><br></pre></td></tr></table></figure></p>
+<h3 id="example-2-graph-with-no-edges">Example 2: Graph with No
+Edges</h3>
+<p>A graph where no vertices are directly connected except for
+self-loops: <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> graph2 = [</span><br><span class="line">  [<span class="number">0</span>, <span class="title class_">Infinity</span>, <span class="title class_">Infinity</span>, <span class="title class_">Infinity</span>],</span><br><span class="line">  [<span class="title class_">Infinity</span>, <span class="number">0</span>, <span class="title class_">Infinity</span>, <span class="title class_">Infinity</span>],</span><br><span class="line">  [<span class="title class_">Infinity</span>, <span class="title class_">Infinity</span>, <span class="number">0</span>, <span class="title class_">Infinity</span>],</span><br><span class="line">  [<span class="title class_">Infinity</span>, <span class="title class_">Infinity</span>, <span class="title class_">Infinity</span>, <span class="number">0</span>]</span><br><span class="line">];</span><br></pre></td></tr></table></figure></p>
+<h3 id="example-3-complete-graph">Example 3: Complete Graph</h3>
+<p>A fully connected graph where every vertex is directly connected to
+every other vertex with varying weights: <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> graph3 = [</span><br><span class="line">  [<span class="number">0</span>, <span class="number">1</span>, <span class="number">4</span>, <span class="number">6</span>],</span><br><span class="line">  [<span class="number">1</span>, <span class="number">0</span>, <span class="number">2</span>, <span class="number">3</span>],</span><br><span class="line">  [<span class="number">4</span>, <span class="number">2</span>, <span class="number">0</span>, <span class="number">5</span>],</span><br><span class="line">  [<span class="number">6</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">0</span>]</span><br><span class="line">];</span><br></pre></td></tr></table></figure></p>
+<h3
+id="example-4-graph-with-negative-weights-no-negative-cycles">Example 4:
+Graph with Negative Weights (No Negative Cycles)</h3>
+<p>A graph with some edges having negative weights, but no negative
+weight cycles: <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> graph4 = [</span><br><span class="line">  [<span class="number">0</span>, <span class="number">3</span>, -<span class="number">2</span>, <span class="number">8</span>],</span><br><span class="line">  [<span class="title class_">Infinity</span>, <span class="number">0</span>, <span class="title class_">Infinity</span>, <span class="number">1</span>],</span><br><span class="line">  [<span class="title class_">Infinity</span>, <span class="title class_">Infinity</span>, <span class="number">0</span>, <span class="number">4</span>],</span><br><span class="line">  [<span class="title class_">Infinity</span>, <span class="title class_">Infinity</span>, <span class="title class_">Infinity</span>, <span class="number">0</span>]</span><br><span class="line">];</span><br></pre></td></tr></table></figure></p>
+<h3 id="example-5-sparse-graph">Example 5: Sparse Graph</h3>
+<p>A sparse graph with more infinite distances (disconnected
+vertices):</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> graph5 = [</span><br><span class="line">  [<span class="number">0</span>, <span class="number">5</span>, <span class="title class_">Infinity</span>, <span class="number">10</span>],</span><br><span class="line">  [<span class="title class_">Infinity</span>, <span class="number">0</span>, <span class="number">3</span>, <span class="title class_">Infinity</span>],</span><br><span class="line">  [<span class="title class_">Infinity</span>, <span class="title class_">Infinity</span>, <span class="number">0</span>, <span class="number">1</span>],</span><br><span class="line">  [<span class="title class_">Infinity</span>, <span class="title class_">Infinity</span>, <span class="title class_">Infinity</span>, <span class="number">0</span>]</span><br><span class="line">];</span><br></pre></td></tr></table></figure>
+<h3 id="running-the-algorithm">Running the Algorithm</h3>
+<p>You can use the <code>floydWarshall</code> function provided in the
+previous example to compute the shortest paths for each of these graphs.
+Here's how you can do it for one of the examples: <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> graph1 = [</span><br><span class="line">  [<span class="number">0</span>, <span class="number">3</span>, <span class="title class_">Infinity</span>, <span class="number">7</span>],</span><br><span class="line">  [<span class="number">8</span>, <span class="number">0</span>, <span class="number">2</span>, <span class="title class_">Infinity</span>],</span><br><span class="line">  [<span class="number">5</span>, <span class="title class_">Infinity</span>, <span class="number">0</span>, <span class="number">1</span>],</span><br><span class="line">  [<span class="number">2</span>, <span class="title class_">Infinity</span>, <span class="title class_">Infinity</span>, <span class="number">0</span>]</span><br><span class="line">];</span><br><span class="line"></span><br><span class="line"><span class="title function_">floydWarshall</span>(graph1);</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">Expected output:</span></span><br><span class="line"><span class="comment">[</span></span><br><span class="line"><span class="comment">  [0, 3, 5, 6],</span></span><br><span class="line"><span class="comment">  [5, 0, 2, 3],</span></span><br><span class="line"><span class="comment">  [3, 6, 0, 1],</span></span><br><span class="line"><span class="comment">  [2, 5, 7, 0]</span></span><br><span class="line"><span class="comment">]</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure></p>
+<p>You can similarly run the function for the other graphs by replacing
+<code>graph1</code> with <code>graph2</code>, <code>graph3</code>,
+<code>graph4</code>, or <code>graph5</code>. This will give you the
+shortest path distances between all pairs of vertices for each input
+graph.</p>
 <hr />
-<p>This matrix represents the shortest path distances between all pairs
-of vertices in the graph.</p>
+<h2
+id="side-knowledge-floyd-warshal-algorithm-vs-dijkstras-algorithm">Side
+Knowledge: Floyd-Warshal Algorithm vs Dijkstra's Algorithm</h2>
 <table>
 <colgroup>
 <col style="width: 7%" />
@@ -500,6 +549,18 @@ of vertices in the graph.</p>
 </thead>
 <tbody>
 <tr class="odd">
+<td><strong>Time Complexity</strong></td>
+<td><span class="math display">\[O(V^3)\]</span></td>
+<td><span class="math display">\[O((V + E) \log V)\]</span> With a
+priority queue</td>
+</tr>
+<tr class="even">
+<td><strong>Space Complexity</strong></td>
+<td><span class="math display">\[O(V^2)\]</span></td>
+<td><span class="math display">\[O(V)\]</span> For distances and the
+priority queue</td>
+</tr>
+<tr class="odd">
 <td><strong>Purpose</strong></td>
 <td>All-pairs shortest paths</td>
 <td>Single-source shortest path</td>
@@ -508,16 +569,6 @@ of vertices in the graph.</p>
 <td><strong>Graph Type</strong></td>
 <td>Weighted graphs with positive and negative weights (no cycles)</td>
 <td>Weighted graphs with non-negative weights</td>
-</tr>
-<tr class="odd">
-<td><strong>Time Complexity</strong></td>
-<td>(O(V^3))</td>
-<td>(O((V + E) V)) with a priority queue</td>
-</tr>
-<tr class="even">
-<td><strong>Space Complexity</strong></td>
-<td>(O(V^2))</td>
-<td>(O(V)) for distances and the priority queue</td>
 </tr>
 <tr class="odd">
 <td><strong>Algorithm Steps</strong></td>
@@ -541,7 +592,6 @@ until all vertices are processed</td>
 </tr>
 </tbody>
 </table>
-<p>This table should make it easier to compare the two algorithms.</p>
 
     </div>
 
@@ -552,13 +602,13 @@ until all vertices are processed</td>
   <div class="popular-posts-header">Related Posts</div>
   <ul class="popular-posts">
     <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="/blog/floyd-s-tortoise-and-hare-algorithm-cycle-finding/" rel="bookmark">Floyd's Tortoise and Hare Algorithm: Cycle Finding</a></div>
+      <div class="popular-posts-title"><a href="/blog/manacher-s-algorithm-discover-the-fastest-way-to-find-palindromes/" rel="bookmark">Manacher's Algorithm: Discover the Fastest Way to Find Palindromes</a></div>
     </li>
     <li class="popular-posts-item">
       <div class="popular-posts-title"><a href="/blog/big-o-notation-my-notes-on-algorithm-efficiency/" rel="bookmark">Big-O Notation: My Notes on Algorithm Efficiency</a></div>
     </li>
     <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="/blog/manacher-s-algorithm-discover-the-fastest-way-to-find-palindromes/" rel="bookmark">Manacher's Algorithm: Discover the Fastest Way to Find Palindromes</a></div>
+      <div class="popular-posts-title"><a href="/blog/floyd-s-tortoise-and-hare-algorithm-cycle-finding/" rel="bookmark">Floyd's Tortoise and Hare Algorithm: Cycle Finding</a></div>
     </li>
     <li class="popular-posts-item">
       <div class="popular-posts-title"><a href="/blog/demystifying-database-design-a-dive-into-3nf-and-bcnf/" rel="bookmark">Demystifying Database Design: A Dive into 3NF and BCNF</a></div>
@@ -586,7 +636,7 @@ until all vertices are processed</td>
           <div class="post-tags">
               <a href="/blog/tags/note/" rel="tag"># note</a>
               <a href="/blog/tags/algorithm/" rel="tag"># algorithm</a>
-              <a href="/blog/tags/two-pointer/" rel="tag"># two-pointer</a>
+              <a href="/blog/tags/dynamic-programming/" rel="tag"># dynamic programming</a>
           </div>
 
         
@@ -667,8 +717,12 @@ until all vertices are processed</td>
           <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#what-is-floyd-warshall-algorithm"><span class="nav-number">1.</span> <span class="nav-text">What is Floyd-Warshall
 Algorithm?</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#positive-and-negative-edge-weights"><span class="nav-number">1.1.</span> <span class="nav-text">Positive and Negative Edge
 Weights</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#negative-weight-cycles"><span class="nav-number">1.2.</span> <span class="nav-text">Negative Weight Cycles</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#floyd-warshall-algorithm"><span class="nav-number">1.3.</span> <span class="nav-text">Floyd-Warshall Algorithm</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#detection"><span class="nav-number">1.4.</span> <span class="nav-text">Detection</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#when-to-use-floyd-warshall-algorithm"><span class="nav-number">2.</span> <span class="nav-text">When to Use Floyd-Warshall
-Algorithm</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#example-applications"><span class="nav-number">2.1.</span> <span class="nav-text">Example Applications:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#why-floyd-warshall-algorithm"><span class="nav-number">3.</span> <span class="nav-text">Why Floyd-Warshall Algorithm?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#how-to-use-floyd-warshall-algorithm"><span class="nav-number">4.</span> <span class="nav-text">How to Use Floyd-Warshall
-Algorithm</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#example"><span class="nav-number">4.1.</span> <span class="nav-text">Example</span></a></li></ol></li></ol></div>
+Algorithm</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#example-applications"><span class="nav-number">2.1.</span> <span class="nav-text">Example Applications:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#why-floyd-warshall-algorithm"><span class="nav-number">3.</span> <span class="nav-text">Why Floyd-Warshall Algorithm?</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#advantages"><span class="nav-number">3.1.</span> <span class="nav-text">Advantages</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#drawbacks"><span class="nav-number">3.2.</span> <span class="nav-text">Drawbacks</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#step-by-step-guide-to-implement-floyd-warshall-algorithm"><span class="nav-number">4.</span> <span class="nav-text">Step-by-Step
+Guide to Implement Floyd-Warshall Algorithm</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#memorisation-tips"><span class="nav-number">4.1.</span> <span class="nav-text">Memorisation Tips</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#detailed-example-in-javascript"><span class="nav-number">4.2.</span> <span class="nav-text">Detailed Example in
+JavaScript</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#example-1-basic-graph"><span class="nav-number">4.3.</span> <span class="nav-text">Example 1: Basic Graph</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#example-2-graph-with-no-edges"><span class="nav-number">4.4.</span> <span class="nav-text">Example 2: Graph with No
+Edges</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#example-3-complete-graph"><span class="nav-number">4.5.</span> <span class="nav-text">Example 3: Complete Graph</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#example-4-graph-with-negative-weights-no-negative-cycles"><span class="nav-number">4.6.</span> <span class="nav-text">Example 4:
+Graph with Negative Weights (No Negative Cycles)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#example-5-sparse-graph"><span class="nav-number">4.7.</span> <span class="nav-text">Example 5: Sparse Graph</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#running-the-algorithm"><span class="nav-number">4.8.</span> <span class="nav-text">Running the Algorithm</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#side-knowledge-floyd-warshal-algorithm-vs-dijkstras-algorithm"><span class="nav-number">5.</span> <span class="nav-text">Side
+Knowledge: Floyd-Warshal Algorithm vs Dijkstra&#39;s Algorithm</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -694,7 +748,7 @@ Algorithm</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a cl
       <div class="site-state-item site-state-tags">
             <a href="/blog/tags/">
           
-        <span class="site-state-item-count">59</span>
+        <span class="site-state-item-count">60</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -741,7 +795,7 @@ Algorithm</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a cl
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">1:36</span>
+    <span title="Reading time total">1:37</span>
 </div>
 
         
@@ -897,6 +951,59 @@ Algorithm</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a cl
   
 
   
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
 
   
 
@@ -912,9 +1019,9 @@ Algorithm</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a cl
 </script>
 <script>
   var disqus_config = function() {
-    this.page.url = "https://enkr1.github.io/blog/floyd-warshall-algorithm/";
-    this.page.identifier = "floyd-warshall-algorithm/";
-    this.page.title = "Floyd-Warshall Algorithm";
+    this.page.url = "https://enkr1.github.io/blog/floyd-warshall-algorithm-all-pairs-shortest-path/";
+    this.page.identifier = "floyd-warshall-algorithm-all-pairs-shortest-path/";
+    this.page.title = "Floyd-Warshall Algorithm: All-Pairs Shortest Path";
     };
   NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
     if (window.DISQUS) {

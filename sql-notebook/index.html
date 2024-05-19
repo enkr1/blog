@@ -200,7 +200,7 @@
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/blog/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">59</span></a>
+    <a href="/blog/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">60</span></a>
 
   </li>
         <li class="menu-item menu-item-history">
@@ -576,16 +576,16 @@ represents the grand total of all counts.</p>
       <div class="popular-posts-title"><a href="/blog/demystifying-database-design-a-dive-into-3nf-and-bcnf/" rel="bookmark">Demystifying Database Design: A Dive into 3NF and BCNF</a></div>
     </li>
     <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="/blog/floyd-warshall-algorithm/" rel="bookmark">Floyd-Warshall Algorithm</a></div>
+      <div class="popular-posts-title"><a href="/blog/floyd-warshall-algorithm-all-pairs-shortest-path/" rel="bookmark">Floyd-Warshall Algorithm: All-Pairs Shortest Path</a></div>
     </li>
     <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="/blog/floyd-s-tortoise-and-hare-algorithm-cycle-finding/" rel="bookmark">Floyd's Tortoise and Hare Algorithm: Cycle Finding</a></div>
+      <div class="popular-posts-title"><a href="/blog/manacher-s-algorithm-discover-the-fastest-way-to-find-palindromes/" rel="bookmark">Manacher's Algorithm: Discover the Fastest Way to Find Palindromes</a></div>
     </li>
     <li class="popular-posts-item">
       <div class="popular-posts-title"><a href="/blog/big-o-notation-my-notes-on-algorithm-efficiency/" rel="bookmark">Big-O Notation: My Notes on Algorithm Efficiency</a></div>
     </li>
     <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="/blog/manacher-s-algorithm-discover-the-fastest-way-to-find-palindromes/" rel="bookmark">Manacher's Algorithm: Discover the Fastest Way to Find Palindromes</a></div>
+      <div class="popular-posts-title"><a href="/blog/computer-networking-notebook/" rel="bookmark">Computer Networking Notebook</a></div>
     </li>
   </ul>
 <div class="post-widgets">
@@ -722,7 +722,7 @@ Column</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class
       <div class="site-state-item site-state-tags">
             <a href="/blog/tags/">
           
-        <span class="site-state-item-count">59</span>
+        <span class="site-state-item-count">60</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -769,7 +769,7 @@ Column</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">1:36</span>
+    <span title="Reading time total">1:37</span>
 </div>
 
         
@@ -925,6 +925,59 @@ Column</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class
   
 
   
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
 
   
 

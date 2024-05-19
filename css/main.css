@@ -1374,7 +1374,7 @@ p {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #61ffff;
+  background: #57aa71;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2611,7 +2611,7 @@ ul.breadcrumb li + li:last-child {
 }
 mjx-container[jax="CHTML"][display="true"],
 .has-jax {
-  overflow: auto hidden;
+  overflow: visible;
 }
 mjx-container + br {
   display: none;
