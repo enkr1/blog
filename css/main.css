@@ -294,6 +294,9 @@ kbd {
   padding: 0.1em 0.3em;
   white-space: nowrap;
 }
+li {
+  line-height: 1.8;
+}
 .table-container {
   overflow: auto;
   text-align: left;
@@ -1374,7 +1377,7 @@ p {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #ffbeff;
+  background: #66cd1d;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -1727,31 +1730,26 @@ p {
   overflow-wrap: break-word;
   word-wrap: break-word;
 }
-.post-body .exturl {
+.post-body a:not(.fancybox):not(.category-list-link):not(.btn) {
   position: relative;
-  margin: 0 1.2rem 0 0;
+  margin: 0 0.1rem 0 0;
   color: #c60000;
   display: inline;
 }
-.post-body .exturl .fa {
-  font-size: 1.3rem;
-}
-.post-body .exturl .fa.fa-external-link-alt {
-  font-size: 0.95rem;
+.post-body a:not(.fancybox):not(.category-list-link):not(.btn)::after {
+  font-family: 'Font Awesome 5 Free';
+  content: "\f35d";
+  font-weight: 900;
+  font-size: 1.1rem;
+  position: relative;
+  top: -0.1rem;
+  right: 0;
+  padding: 0 0.1rem 0 0.4rem;
   opacity: 0.3;
-  position: absolute;
-  transform: translate(0.3rem, 0.65rem);
+  display: inline-block;
 }
-@media (min-width: 768px) and (max-width: 991px) {
-  .post-body .exturl .fa.fa-external-link-alt {
-    font-size: 0.9rem;
-    transform: translate(0.3rem, 0.6rem);
-  }
-}
-@media (max-width: 767px) {
-  .post-body .exturl .fa.fa-external-link-alt {
-    transform: translate(0.3rem, 0.55rem);
-  }
+.post-body .exturl .fa {
+  display: none;
 }
 .post-body .image-caption,
 .post-body .figure .caption {
@@ -2006,7 +2004,7 @@ p {
 .post-body iframe,
 .post-body img,
 .post-body video {
-  margin-bottom: 20px;
+  margin-bottom: 1.3rem;
 }
 .post-body img {
   border-radius: 1.4rem;
@@ -2601,7 +2599,7 @@ ul.breadcrumb li + li:last-child {
   padding: 0;
 }
 .popular-posts .popular-posts-item {
-  margin-left: 2em;
+  margin-left: 0.8rem;
 }
 .popular-posts .popular-posts-item .popular-posts-title {
   font-size: 1.3rem;
@@ -3148,6 +3146,17 @@ mjx-container + br {
   padding: 0 0 1rem;
   text-align: center;
   color: #999;
+}
+.category-all-page .tag-cloud-tags a,
+.tag-cloud .tag-cloud-tags a {
+  margin: auto !important;
+  transition: all 0.6s ease-in-out;
+  padding: 1.3rem;
+  border: none;
+}
+.category-all-page .tag-cloud-tags a::after,
+.tag-cloud .tag-cloud-tags a::after {
+  all: unset !important;
 }
 .yt-playlist {
   height: 100%;
