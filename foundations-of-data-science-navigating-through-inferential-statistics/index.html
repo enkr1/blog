@@ -35,7 +35,7 @@
 <meta property="og:image" content="https://enkr1.github.io/blog/foundations-of-data-science-navigating-through-inferential-statistics/rv-pd-diagram.png">
 <meta property="og:image" content="https://enkr1.github.io/blog/foundations-of-data-science-navigating-through-inferential-statistics/rv-pd-example.png">
 <meta property="article:published_time" content="2024-02-01T08:22:15.000Z">
-<meta property="article:modified_time" content="2024-05-18T15:41:56.879Z">
+<meta property="article:modified_time" content="2024-05-22T18:32:05.738Z">
 <meta property="article:author" content="Jing Hui PANG | 彭竞辉 | ENKR">
 <meta property="article:tag" content="note">
 <meta property="article:tag" content="mit-idss">
@@ -301,7 +301,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: Sat 18 May 2024 23:41:56 PM" itemprop="dateModified" datetime="2024-05-18T23:41:56+08:00">Sat 18 May 2024</time>
+                <time title="Modified: Thu 23 May 2024 02:32:05 AM" itemprop="dateModified" datetime="2024-05-23T02:32:05+08:00">Thu 23 May 2024</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -334,13 +334,13 @@
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-              <span>877</span>
+              <span>1.4k</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
-              <span>3 mins.</span>
+              <span>5 mins.</span>
             </span>
   
   
@@ -364,7 +364,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>For myself: <figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd <span class="regexp">/Users/</span>enkr<span class="regexp">/Personal/</span>_mit_idss<span class="regexp">/week_2/</span>Notebook_Inferential_Statistics.ipynb</span><br></pre></td></tr></table></figure></p>
+        <p>For myself: <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /Users/enkr/Personal/_mit_idss/week_2/Notebook_Inferential_Statistics.ipynb</span><br></pre></td></tr></table></figure></p>
 <h2 id="getting-started-with-inferential-statistics">Getting Started
 with Inferential Statistics</h2>
 <p>Inferential statistics provide the backbone for making predictions
@@ -493,9 +493,127 @@ event, and the probability distribution is like a guide that tells you
 how likely each outcome is. Discrete RVs have countable outcomes, and
 their probability distribution is a list of chances, while continuous
 RVs have an infinite range of outcomes, and their distribution is more
-like a continuous curve that shows the chances over a range. <!--
-WIP: ...
---></p>
+like a continuous curve that shows the chances over a range.</p>
+<h3
+id="discrete-vs-continuous-data-understanding-probability-distributions">Discrete
+vs Continuous Data: Understanding Probability Distributions</h3>
+<table>
+<colgroup>
+<col style="width: 22%" />
+<col style="width: 37%" />
+<col style="width: 39%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Aspect</strong></th>
+<th><strong>Discrete Data</strong></th>
+<th><strong>Continuous Data</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Definition</strong></td>
+<td>Values that are countable and distinct</td>
+<td>Values that can take on any value within a range</td>
+</tr>
+<tr class="even">
+<td><strong>Examples</strong></td>
+<td>Number of students, die rolls</td>
+<td>Height, weight, temperature</td>
+</tr>
+<tr class="odd">
+<td><strong>Nature</strong></td>
+<td>Can only take specific values</td>
+<td>Can take any value within a range</td>
+</tr>
+<tr class="even">
+<td><strong>Measurement</strong></td>
+<td>Counted</td>
+<td>Measured</td>
+</tr>
+<tr class="odd">
+<td><strong>Graphical Representation</strong></td>
+<td>Bar charts, pie charts, frequency distribution</td>
+<td>Histograms, line graphs, scatter plots</td>
+</tr>
+<tr class="even">
+<td><strong>Variability</strong></td>
+<td>Limited by the number of outcomes</td>
+<td>Infinite possibilities within intervals</td>
+</tr>
+<tr class="odd">
+<td><strong>Value Changes</strong></td>
+<td>Jump from one value to another</td>
+<td>Can change gradually</td>
+</tr>
+<tr class="even">
+<td><strong>Type of Analysis</strong></td>
+<td>Frequencies, mode, probability</td>
+<td>Mean, median, mode, standard deviation, variance</td>
+</tr>
+</tbody>
+</table>
+<h2 id="types-of-distributions">Types of Distributions</h2>
+<h3 id="bernoulli-distribution-discrete-random-variable---drv">1.
+Bernoulli Distribution (Discrete Random Variable - DRV)</h3>
+<p>Imagine flipping a coin. There are only two possible outcomes: heads
+or tails. This is a Bernoulli distribution, where an event has only two
+outcomes: success (1) or failure (0). For example, flipping a coin and
+getting heads (success) or tails (failure).</p>
+<h3 id="binomial-distribution-drv">2. Binomial Distribution (DRV)</h3>
+<p>Think about flipping a coin multiple times. Let's say you flip it 10
+times and you're interested in how many times it lands on heads. The
+binomial distribution is used when you have a certain number of
+independent Bernoulli trials (like multiple coin flips) and you count
+the number of successes (like landing on heads). - The number of trials,
+<code>n</code>, is fixed. - There are only two possible outcomes per
+trial. - The probability of success, <code>p</code>, remains constant
+across trials.</p>
+<h3 id="probability-mass-function">Probability Mass Function</h3>
+<p>The probability mass function for the binomial distribution is given
+by:</p>
+<p><span class="math display">\[P(X = x) = \binom{n}{x} p^x (1 - p)^{n -
+x}\]</span></p>
+<hr />
+<p>Where:</p>
+<p><span class="math display">\[\binom{n}{x}\]</span> is the binomial
+coefficient, calculated as <span
+class="math display">\[\frac{n!}{x!(n-x)!}\]</span></p>
+<ul>
+<li><code>n</code> is the number of trials</li>
+<li><code>x</code> is the number of successes</li>
+<li><code>p</code> is the probability of success on an individual
+trial</li>
+</ul>
+<h3 id="uniform-distribution-continuous-random-variable---crv">3.
+Uniform Distribution (Continuous Random Variable - CRV)</h3>
+<p>Imagine you have a bag of marbles, and every marble is a different
+colour. If each marble is just as likely to be picked as every other
+marble, this is a uniform distribution. It's like having an equal chance
+of drawing any number between 1 and 6 when you roll a fair die.</p>
+<h3 id="normal-distribution-crv">4. Normal Distribution (CRV)</h3>
+<p>Picture a classic bell-shaped curve. This is a normal distribution,
+often seen in nature and human-made processes. For example, the heights
+of people in a population are normally distributed—most people are of
+average height, a few are very short, and a few are very tall. This
+distribution is symmetrical around the mean (average), and it describes
+many natural phenomena where values cluster around a central mean.</p>
+<p>To remember these, think:</p>
+<ul>
+<li><strong>Bernoulli</strong>: Coin flip (2 outcomes).</li>
+<li><strong>Binomial</strong>: Multiple coin flips (counting
+successes).</li>
+<li><strong>Uniform</strong>: Fair die roll (equal chance for all
+outcomes).</li>
+<li><strong>Normal</strong>: Human heights (average is most common,
+extremes are less so).</li>
+</ul>
+<p>Each distribution tells a story about the likelihood of different
+outcomes and helps us understand and predict patterns in the real
+world.</p>
+<p>wip ...</p>
+<p><span class="math display">\[CI = \bar{x} \pm z \times
+\left(\frac{\sigma}{\sqrt{n}}\right)\]</span></p>
 
     </div>
 
@@ -506,19 +624,19 @@ WIP: ...
   <div class="popular-posts-header">Related Posts</div>
   <ul class="popular-posts">
     <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="/blog/regression-hypothesis-testing/" rel="bookmark">Regression & Hypothesis Testing</a></div>
-    </li>
-    <li class="popular-posts-item">
       <div class="popular-posts-title"><a href="/blog/pre-work-introduction-to-data-science-ai/" rel="bookmark">Pre Work: Introduction to Data Science & AI</a></div>
     </li>
     <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="/blog/recommendation-systems/" rel="bookmark">Recommendation Systems</a></div>
+      <div class="popular-posts-title"><a href="/blog/regression-hypothesis-testing/" rel="bookmark">Regression & Hypothesis Testing</a></div>
+    </li>
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="/blog/deep-learning/" rel="bookmark">Deep Learning</a></div>
     </li>
     <li class="popular-posts-item">
       <div class="popular-posts-title"><a href="/blog/networking-graphical-models/" rel="bookmark">Networking & Graphical Models</a></div>
     </li>
     <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="/blog/deep-learning/" rel="bookmark">Deep Learning</a></div>
+      <div class="popular-posts-title"><a href="/blog/recommendation-systems/" rel="bookmark">Recommendation Systems</a></div>
     </li>
   </ul>
 <div class="post-widgets">
@@ -622,7 +740,10 @@ with Inferential Statistics</span></a><ol class="nav-child"><li class="nav-item 
 Inferential Statistics:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#important-statistical-tests"><span class="nav-number">1.2.</span> <span class="nav-text">Important Statistical Tests:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#diving-into-distributions"><span class="nav-number">2.</span> <span class="nav-text">Diving Into Distributions</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#common-statistical-distributions"><span class="nav-number">2.1.</span> <span class="nav-text">Common Statistical
 Distributions:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#sampling-and-estimation"><span class="nav-number">3.</span> <span class="nav-text">Sampling and Estimation</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#techniques-and-theories"><span class="nav-number">3.1.</span> <span class="nav-text">Techniques and Theories:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#practical-application-using-statistics-to-make-decisions"><span class="nav-number">4.</span> <span class="nav-text">Practical
 Application: Using Statistics to Make Decisions</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#real-world-examples"><span class="nav-number">4.1.</span> <span class="nav-text">Real-World Examples:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#random-variable"><span class="nav-number">5.</span> <span class="nav-text">Random Variable</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#probability-distribution-for-rv"><span class="nav-number">5.1.</span> <span class="nav-text">Probability Distribution for
-RV</span></a></li></ol></li></ol></div>
+RV</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#discrete-vs-continuous-data-understanding-probability-distributions"><span class="nav-number">5.2.</span> <span class="nav-text">Discrete
+vs Continuous Data: Understanding Probability Distributions</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#types-of-distributions"><span class="nav-number">6.</span> <span class="nav-text">Types of Distributions</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#bernoulli-distribution-discrete-random-variable---drv"><span class="nav-number">6.1.</span> <span class="nav-text">1.
+Bernoulli Distribution (Discrete Random Variable - DRV)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#binomial-distribution-drv"><span class="nav-number">6.2.</span> <span class="nav-text">2. Binomial Distribution (DRV)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#probability-mass-function"><span class="nav-number">6.3.</span> <span class="nav-text">Probability Mass Function</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#uniform-distribution-continuous-random-variable---crv"><span class="nav-number">6.4.</span> <span class="nav-text">3.
+Uniform Distribution (Continuous Random Variable - CRV)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#normal-distribution-crv"><span class="nav-number">6.5.</span> <span class="nav-text">4. Normal Distribution (CRV)</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -695,7 +816,7 @@ RV</span></a></li></ol></li></ol></div>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">1:45</span>
+    <span title="Reading time total">1:46</span>
 </div>
 
         
