@@ -1377,7 +1377,7 @@ p {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #785305;
+  background: #953406;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2947,7 +2947,7 @@ mjx-container + br {
   padding: 0 0 2.5rem 3rem;
 }
 .post-block ul {
-  padding: 0 0 0 3rem;
+  padding: 0 0 1.3rem 3rem;
 }
 .post-block ol li p {
   margin: 0 0 1rem 0;
@@ -3018,11 +3018,9 @@ mjx-container + br {
 }
 .post-body h1 {
   font-size: 2.8rem;
-  margin: 2rem 0 0.3rem;
 }
 .post-body h2 {
   font-size: 2.2rem;
-  margin: 0 0 0.6rem;
 }
 .post-body h3 {
   font-size: 1.8rem;
@@ -3121,7 +3119,6 @@ mjx-container + br {
   min-height: 100%;
   height: 100%;
   max-height: unset;
-  margin: auto auto 0.8rem;
 }
 .fancybox img.no-shadow {
   box-shadow: unset !important;
