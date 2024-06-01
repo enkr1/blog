@@ -6,7 +6,7 @@
   <link href="https://enkr1.github.io/blog/atom.xml" rel="self"/>
   
   <link href="https://enkr1.github.io/blog/"/>
-  <updated>2024-06-01T18:22:13.763Z</updated>
+  <updated>2024-06-01T18:23:07.400Z</updated>
   <id>https://enkr1.github.io/blog/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://enkr1.github.io/blog/my-experience-interviewing-at-tiktok-for-a-site-reliability-engineer-role/"/>
     <id>https://enkr1.github.io/blog/my-experience-interviewing-at-tiktok-for-a-site-reliability-engineer-role/</id>
     <published>2024-05-31T19:23:45.000Z</published>
-    <updated>2024-06-01T18:22:13.763Z</updated>
+    <updated>2024-06-01T18:23:07.400Z</updated>
     
     <content type="html"><![CDATA[<blockquote><p><strong>Role</strong>: Site Reliability Engineer, TikTok AppliedMachine Learning</p></blockquote><h2 id="tldr"><strong>TL;DR</strong></h2><p>I only passed the first technical round and <strong>failed at thesecond round of the technical interview</strong>. However, I just wannashare this experience and the mistakes I made, hoping it helps you guysin any interview process.</p><p>Quick introduction for those who don't know me: I am currently asoftware engineer at ByteDance. I have interviewed with several big techcompanies, and while I haven't aced them all, I want to share mylearning points, including dos and don'ts, in the hope that it helpsothers.</p><h2 id="stage-1-hr-call">Stage 1: HR Call</h2><p>People always mention that the HR call is important, and they'reright. It's not just a casual chat to confirm the next step; they canask critical questions based on your resume. If you can't answer them,you might be at risk. So, take every process seriously, right until youwalk out of the interview or end the call.</p><h3 id="notes-from-my-hr-call">Notes from My HR Call:</h3><ul><li><strong>Live Coding / Screen Sharing</strong>: Be prepared toshowcase your coding skills live.</li><li><strong>Thought Process</strong>: Explain your thought processclearly.</li><li><strong>Collaboration Work</strong>: Highlight any team projects orcollaborative work.</li><li><strong>Interview Structure</strong>: 3 technical rounds and 1 HRround.</li><li><strong>Work Hours</strong>: Be ready to discuss flexible hours(e.g., 10 to 7 or 9 to 6).</li></ul><h2 id="stage-2-technical-interview---round-1">Stage 2: TechnicalInterview - Round 1</h2><p>My remark for this interview was: the best interviewer ever, but Idid not get his name. He was one of the best interviewers I had ever metin my job search journey.</p><p>He didn't ask for an introduction and instead sent me straight to alive coding platform, HackerRank. He asked 4 technical questions:</p><ol type="1"><li><strong>SRE Basics</strong>: Linux-related questions. For someonewith 3 years of full-stack experience in a startup, I found themrelatively easy. I could do them with my eyes closed, as long as you cannavigate around using bash and do simple actions like vim logs, grep,and select certain parts of the files, you are ready for this part.</li><li><strong>LeetCode Easy Question</strong>: A <strong>LeetCode EasyDynamic Programming</strong> question. I proposed a reallystraightforward solution and got the optimised solution all by myself asI went along. It was unplanned; I actually just thought out loud and gotthe solution myself while talking to the interviewer.</li><li><strong>Hash Table Implementation</strong>: This was a challengingone. I was asked to implement a Hash Table supporting Add, Get, andUpdate, and measure the performance of the Hash Table. I knew we neededa hash value and to store it, but when I got asked this question, I wasquite stunned. I asked for a moment to think. However, the interviewerwas more interested in assisting me rather than challenging me; he gaveme a lot of hints and led me in the right direction. For this question,I was not that confident, but I really felt like I vibed with theinterviewer.</li><li><strong>System Design</strong>: As we ran out of time by about anhour, usually interviews would just rush us off, but he did notthroughout the call, and we only realised the time at the last question.He just told me to give him a rough answer to prove it. He showed me anapplication architecture and asked a few common questions like how toensure backend reliability, how to build a CI/CD pipeline for thebackend, reliability for a MySQL database, and how to handle staticresources efficiently. I gave him a rough list of solutions for each aswell as drawbacks and some personal thoughts on each aspect. I feltrelatively confident in this area, and that was all about it.</li></ol><p>We used almost 2 hours for the interview, and I can still remember itdeeply. I passed this round, and I was really fortunate to have such asupportive interviewer who helped me rather than pushing me to theedge.</p><h2 id="stage-3-technical-interview---round-2">Stage 3: TechnicalInterview - Round 2</h2><p>It started with the interviewer explaining the company, team, andtheir team missions in Chinese, my first interviews in Chinese. I wasnot ready for that. We vibed at the start, felt like a chit-chattingsession, and after that, he asked me to fill in a list of scores forspecific areas like Bash, Networking, etc., rating my knowledge from 0to 10. After filling that up for like 10 minutes, he threw a few Linuxquestions at me. They felt like <strong>medium-hard</strong> questionsthat you can only solve if you have learned them before or have actuallysolved them in real life. They were not easy, mostly focused ontroubleshooting specific aspects like log files, server configurations,and memory checks.</p><p>The moment I knew I was in trouble was when he rushed me to solve aLeetCode easy question. "Hey, can you just solve it in Python? We don'thave much time, just solve it", he said. I was out of practice withPython, being more comfortable in Java, Elixir, and JavaScript. So, Iasked, "Can I code it in Java instead?" "No, just do it in Python, wedon't have much time," he replied in a flat tone.</p><p>I felt like I hadn't done well in the previous assessments. I gotflustered, I froze, and I couldn't solve the LeetCode easy question. Icouldn't even explain my thought process. My mind went completely blank,and it was dead silent for what felt like an eternity. Although I triedto write some pseudocode to help me visualise the problem, I couldn'tcome up with any solution. He rushed me and then abruptly stopped thetest. "I have another call in a bit, so let's just end here. Do you haveany more questions?"</p><p>I did ask a few questions that I had written down before theinterview, but I was not in the mood at all. After the call, I took abreak, went out for a walk, came back, opened LeetCode, and found thatquestion. I solved it in 5 minutes. It was frustrating, but a valuablelearning experience.</p><h2 id="conclusion">Conclusion</h2><p>My experience interviewing at TikTok was a learning journey filledwith both successes and setbacks. Here are my key takeaways:</p><ol type="1"><li><strong>Preparation</strong>: Be prepared for all aspects of theinterview, including unexpected languages or formats.</li><li><strong>Flexibility</strong>: Be flexible with programming languagesand ready to adapt.</li><li><strong>Calm Under Pressure</strong>: Practice staying calm underpressure to avoid freezing up.</li><li><strong>Continuous Learning</strong>: Use each interview experienceas a learning opportunity to improve for the next one.</li></ol><p>I hope my story helps others in their job search journey. Remember,every setback is a setup for a comeback. Keep learning andimproving!</p>]]></content>
     
@@ -30,22 +30,22 @@
     
     
     
-    <category term="Career" scheme="https://enkr1.github.io/blog/categories/Career/"/>
+    <category term="Career Development" scheme="https://enkr1.github.io/blog/categories/Career-Development/"/>
     
-    <category term="Interviews" scheme="https://enkr1.github.io/blog/categories/Career/Interviews/"/>
+    <category term="Interviews" scheme="https://enkr1.github.io/blog/categories/Career-Development/Interviews/"/>
     
-    <category term="Technical Coding Interviews" scheme="https://enkr1.github.io/blog/categories/Career/Interviews/Technical-Coding-Interviews/"/>
+    <category term="Technical Coding Interviews" scheme="https://enkr1.github.io/blog/categories/Career-Development/Interviews/Technical-Coding-Interviews/"/>
     
-    
-    <category term="leetcode" scheme="https://enkr1.github.io/blog/tags/leetcode/"/>
-    
-    <category term="coding-interview" scheme="https://enkr1.github.io/blog/tags/coding-interview/"/>
     
     <category term="interview-experience" scheme="https://enkr1.github.io/blog/tags/interview-experience/"/>
     
     <category term="site-reliability-engineer" scheme="https://enkr1.github.io/blog/tags/site-reliability-engineer/"/>
     
     <category term="sre" scheme="https://enkr1.github.io/blog/tags/sre/"/>
+    
+    <category term="leetcode" scheme="https://enkr1.github.io/blog/tags/leetcode/"/>
+    
+    <category term="coding-interview" scheme="https://enkr1.github.io/blog/tags/coding-interview/"/>
     
     <category term="tiktok" scheme="https://enkr1.github.io/blog/tags/tiktok/"/>
     

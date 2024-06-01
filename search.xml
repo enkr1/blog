@@ -13,7 +13,7 @@
       
       <categories>
           
-          <category> Career </category>
+          <category> Career Development </category>
           
           <category> Interviews </category>
           
@@ -24,15 +24,15 @@
       
         <tags>
             
-            <tag> leetcode </tag>
-            
-            <tag> coding-interview </tag>
-            
             <tag> interview-experience </tag>
             
             <tag> site-reliability-engineer </tag>
             
             <tag> sre </tag>
+            
+            <tag> leetcode </tag>
+            
+            <tag> coding-interview </tag>
             
             <tag> tiktok </tag>
             
