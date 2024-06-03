@@ -1377,7 +1377,7 @@ p {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #9649ff;
+  background: #4ba2ff;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2144,6 +2144,16 @@ p {
 .posts-expand .post-meta .post-description {
   font-size: 1.3rem;
   margin-top: 2px;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .posts-expand .post-meta .post-description {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .posts-expand .post-meta .post-description {
+    display: none;
+  }
 }
 .posts-expand .post-meta time {
   border-bottom: 1px dashed #999;
