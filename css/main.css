@@ -1377,7 +1377,7 @@ p {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #408eff;
+  background: #ff16ff;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2138,7 +2138,7 @@ p {
   color: #999;
   font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
   font-size: 1.1rem;
-  margin: 1rem 0 1.3rem;
+  margin: 1rem 0 2.4rem;
   text-align: center;
 }
 .posts-expand .post-meta .post-description {
