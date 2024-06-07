@@ -13,7 +13,7 @@
       
       <categories>
           
-          <category> Other </category>
+          <category> _Other </category>
           
           <category> Rentals </category>
           
@@ -461,9 +461,9 @@
           
           <category> Software Engineering </category>
           
-          <category> Software Engineering Best Practices </category>
-          
           <category> Career Development </category>
+          
+          <category> Software Engineering Best Practices </category>
           
           <category> Interviews </category>
           
@@ -771,9 +771,9 @@
       
       <categories>
           
-          <category> Career Development </category>
-          
           <category> Personal Development </category>
+          
+          <category> Career Development </category>
           
           <category> Life Lessons </category>
           
@@ -786,10 +786,6 @@
       
         <tags>
             
-            <tag> inspirational </tag>
-            
-            <tag> motivation </tag>
-            
             <tag> journal </tag>
             
             <tag> workshop </tag>
@@ -797,6 +793,10 @@
             <tag> entrepreneurship </tag>
             
             <tag> corporate-culture </tag>
+            
+            <tag> inspirational </tag>
+            
+            <tag> motivation </tag>
             
         </tags>
       
