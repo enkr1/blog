@@ -6,7 +6,7 @@
   <link href="https://enkr1.github.io/blog/atom.xml" rel="self"/>
   
   <link href="https://enkr1.github.io/blog/"/>
-  <updated>2024-06-03T18:08:45.234Z</updated>
+  <updated>2024-06-07T20:12:42.139Z</updated>
   <id>https://enkr1.github.io/blog/</id>
   
   <author>
@@ -15,6 +15,41 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Urgent: Seeking a Room for Rent in Singapore for Two by July 2024</title>
+    <link href="https://enkr1.github.io/blog/urgent-seeking-a-room-for-rent-in-singapore-for-two-by-july-2024/"/>
+    <id>https://enkr1.github.io/blog/urgent-seeking-a-room-for-rent-in-singapore-for-two-by-july-2024/</id>
+    <published>2024-06-07T19:43:37.000Z</published>
+    <updated>2024-06-07T20:12:42.139Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="urgent-room-for-rent-in-singapore-for-two-by-july-2024">Urgent:Room for Rent in Singapore for Two by July 2024</h2><p>Hello, my sister and I are currently looking for a room to rent inSingapore. Here are our specific requirements:</p><ul><li><strong>Occupants</strong>: 2 people, we are siblings (one male, onefemale)</li><li><strong>Facilities</strong>: Ideally more than one toilet, AC &amp;WiFi needed</li><li><strong>Budget</strong>: Around $1,100 SGD per month</li><li><strong>Move-In Date</strong>: Preferably before July 2024</li></ul><h2 id="about-us">About Us</h2><ul><li>We are both <strong>full-time employees</strong> and<strong>Singapore Permanent Residents</strong>.</li><li>Being permanent residents and working professionals, we offer<strong>stability and reliability as tenants</strong>.</li><li>Our work schedules can be <strong>irregular</strong>, <strong>mightwork from home but not often</strong>, and we usually <strong>return toMalaysia over the weekends</strong>, which can help <strong>save onutility costs</strong>.</li><li>We are <strong>responsible and tidy tenants</strong>, and we<strong>will take good care of the property</strong>.</li></ul><h2 id="how-you-can-help">How You Can Help</h2><p>If you have any leads or need more information, please feel free toscan the <strong>QR code</strong> below to contact me via WhatsApp.Additionally, <strong>we would be grateful if you could share thisrequest within your agents' network</strong>. Any assistance in findinga suitable room would be greatly appreciated.</p><p>Thank you very much for your help and consideration!</p><h2 id="whatsapp-qr-code">WhatsApp QR Code</h2><img data-src="/blog/urgent-seeking-a-room-for-rent-in-singapore-for-two-by-july-2024/qr-code-whatsapp.png" class="Find me on WhatsApp">]]></content>
+    
+    
+    <summary type="html">Searching for a room to rent in Singapore for two siblings by July 2024. Budget around $1,100 SGD per month. Full-time employees and permanent residents. Contact via WhatsApp for more details.</summary>
+    
+    
+    
+    <category term="Other" scheme="https://enkr1.github.io/blog/categories/Other/"/>
+    
+    <category term="Rentals" scheme="https://enkr1.github.io/blog/categories/Other/Rentals/"/>
+    
+    
+    <category term="room-rent" scheme="https://enkr1.github.io/blog/tags/room-rent/"/>
+    
+    <category term="Singapore" scheme="https://enkr1.github.io/blog/tags/Singapore/"/>
+    
+    <category term="urgent" scheme="https://enkr1.github.io/blog/tags/urgent/"/>
+    
+    <category term="accommodation" scheme="https://enkr1.github.io/blog/tags/accommodation/"/>
+    
+    <category term="roommates" scheme="https://enkr1.github.io/blog/tags/roommates/"/>
+    
+    <category term="housing" scheme="https://enkr1.github.io/blog/tags/housing/"/>
+    
+    <category term="advertisement" scheme="https://enkr1.github.io/blog/tags/advertisement/"/>
+    
+  </entry>
   
   <entry>
     <title>My Interview Experience: Site Reliability Engineer at TikTok Applied Machine Learning</title>
@@ -597,33 +632,6 @@
     <category term="note" scheme="https://enkr1.github.io/blog/tags/note/"/>
     
     <category term="hexo" scheme="https://enkr1.github.io/blog/tags/hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Understanding Programming Styles: Declarative vs Imperative</title>
-    <link href="https://enkr1.github.io/blog/understanding-programming-styles-declarative-vs-imperative/"/>
-    <id>https://enkr1.github.io/blog/understanding-programming-styles-declarative-vs-imperative/</id>
-    <published>2024-04-24T16:56:04.000Z</published>
-    <updated>2024-05-09T16:52:10.113Z</updated>
-    
-    <content type="html"><![CDATA[<p>Programming isn't just about writing code; it's about choosing theright approach to solve a problem effectively and efficiently. Today,we'll delve into two fundamental programming styles: Declarative andImperative. Each style has its philosophies, methodologies, and uses,which can greatly influence your project's design and maintenance.</p><span id="more"></span><h2 id="declarative-programming-style">Declarative ProgrammingStyle</h2><p>Declarative programming is all about specifying <strong>what</strong>you want to achieve, without having to explicitly describe<strong>how</strong> to accomplish it. This style is more about writingexpressions than writing step-by-step commands.</p><h3 id="characteristics">Characteristics:</h3><ul><li><strong>High-Level Abstraction:</strong> Details of operations areabstracted away.</li><li><strong>Readability:</strong> Easier to understand, especially fornon-programmers.</li><li><strong>Reusability:</strong> Promotes the use of more generalsolutions.</li></ul><h3 id="example-in-sql">Example in SQL:</h3><p>Consider this SQL query which is a perfect example of declarativeprogramming: <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> name, age <span class="keyword">FROM</span> employees <span class="keyword">WHERE</span> age <span class="operator">&gt;=</span> <span class="number">30</span>;</span><br></pre></td></tr></table></figure> Here, the command describes what result isneeded – employees over 30 – without specifying how to traverse thedatabase tables.</p><h2 id="imperative-programming-style">Imperative Programming Style</h2><p>In contrast, imperative programming focuses on the<strong>how</strong>; it requires the programmer to define explicitsteps to achieve a desired outcome.</p><h3 id="characteristics-1">Characteristics:</h3><ul><li><strong>Control Flow:</strong> Direct control with commands likeloops and conditionals.</li><li><strong>State Changes:</strong> Manipulation of program state viaassignments.</li><li><strong>Performance:</strong> Allows fine-tuning, which can lead tomore optimized code.</li></ul><h3 id="example-in-python">Example in Python:</h3><p>Here's how you would write a program to calculate the factorial of anumber using Python, an imperative language: <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">factorial</span>(<span class="params">n</span>):</span><br><span class="line">    result = <span class="number">1</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, n+<span class="number">1</span>):</span><br><span class="line">        result *= i</span><br><span class="line">    <span class="keyword">return</span> result</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(factorial(<span class="number">5</span>))  <span class="comment"># Output: 120</span></span><br></pre></td></tr></table></figure> This snippetshows a clear sequence of operations to compute the factorial.</p><h2 id="comparative-analysis">Comparative Analysis</h2><p>To encapsulate the differences, here's a side-by-side comparison ofboth programming styles:</p><table><colgroup><col style="width: 23%" /><col style="width: 38%" /><col style="width: 37%" /></colgroup><thead><tr class="header"><th>Aspect</th><th>Declarative</th><th>Imperative</th></tr></thead><tbody><tr class="odd"><td>What vs How</td><td>Focuses on "what"</td><td>Focuses on "how"</td></tr><tr class="even"><td>Control Flow</td><td>Abstracted</td><td>Explicit</td></tr><tr class="odd"><td>Complexity</td><td>Low to moderate</td><td>Can be high</td></tr><tr class="even"><td>Flexibility</td><td>Lower</td><td>Higher</td></tr><tr class="odd"><td>Examples</td><td>SQL, HTML, Haskell</td><td>C, Java, Python</td></tr></tbody></table><h2 id="conclusion-which-to-use-when">Conclusion: Which to UseWhen?</h2><p>Choosing between declarative and imperative programming depends onthe specific needs of your project: - Use <strong>declarative</strong>when you need simplicity and readability, and when the operations arenot performance-critical. - Opt for <strong>imperative</strong> when yourequire control and when performance optimization is crucial.</p><p>Understanding these styles not only helps in selecting the right toolfor the job but also in better understanding the potential andlimitations of different programming languages and paradigms.</p><hr /><p>Stay tuned for more insights into programming paradigms andtechniques. Whether you're a novice coder or a seasoned developer,mastering these styles can vastly improve your coding efficiency andproblem-solving skills.</p>]]></content>
-    
-    
-    <summary type="html">Dive into the core differences between declarative and imperative programming styles in this comprehensive guide. Understand the unique benefits and challenges of each approach to enhance your coding techniques and optimize your software development process. Whether you&#39;re a novice coder or an experienced developer, this article will provide valuable insights into choosing the right programming style for your projects.</summary>
-    
-    
-    
-    <category term="Software Engineering" scheme="https://enkr1.github.io/blog/categories/Software-Engineering/"/>
-    
-    <category term="Programming Styles" scheme="https://enkr1.github.io/blog/categories/Software-Engineering/Programming-Styles/"/>
-    
-    
-    <category term="programming" scheme="https://enkr1.github.io/blog/tags/programming/"/>
-    
-    <category term="software-development" scheme="https://enkr1.github.io/blog/tags/software-development/"/>
-    
-    <category term="coding-styles" scheme="https://enkr1.github.io/blog/tags/coding-styles/"/>
     
   </entry>
   
