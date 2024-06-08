@@ -1377,7 +1377,7 @@ p {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #32e85e;
+  background: #afff4f;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2954,7 +2954,7 @@ mjx-container + br {
   margin: 1.4rem 0 0;
 }
 .post-block ol {
-  padding: 0 0 2.5rem 3rem;
+  padding: 0 0 1.5rem 3rem;
 }
 .post-block ul {
   padding: 0 0 1.3rem 3rem;
