@@ -1377,7 +1377,7 @@ p {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #520904;
+  background: #5dfbdf;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2144,6 +2144,7 @@ p {
 .posts-expand .post-meta .post-description {
   font-size: 1.3rem;
   margin-top: 2px;
+  text-align: justify;
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .posts-expand .post-meta .post-description {
