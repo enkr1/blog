@@ -4,6 +4,41 @@
   
     
     <entry>
+      <title>LeetCode-192: Word Frequency</title>
+      <link href="/blog/leetcode-192-word-frequency/"/>
+      <url>/blog/leetcode-192-word-frequency/</url>
+      
+        <content type="html"><![CDATA[<h2 id="problem-192.-word-frequency"><ahref="https://leetcode.com/problems/word-frequency/description/">Problem:192. Word Frequency</a></h2><h2 id="solution">Solution</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cat</span> words.txt | <span class="built_in">tr</span> -s <span class="string">&#x27; &#x27;</span> <span class="string">&#x27;\n&#x27;</span> | <span class="built_in">sort</span> | <span class="built_in">uniq</span> -c | <span class="built_in">sort</span> -r | awk <span class="string">&#x27;&#123;print $2 &quot; &quot; $1&#125;&#x27;</span></span><br></pre></td></tr></table></figure><h2 id="word-frequency-explanation">Word Frequency Explanation</h2><p>Here is a breakdown of each command in the pipeline:</p><table><colgroup><col style="width: 25%" /><col style="width: 74%" /></colgroup><thead><tr class="header"><th>Command</th><th>Explanation</th></tr></thead><tbody><tr class="odd"><td><code>cat words.txt</code></td><td>Reads the content of the file <code>words.txt</code>.</td></tr><tr class="even"><td><code>tr -s ' ' '\n'</code></td><td>Transforms spaces into newlines, putting each word on a separateline.</td></tr><tr class="odd"><td><code>sort</code></td><td>Sorts the words alphabetically.</td></tr><tr class="even"><td><code>uniq -c</code></td><td>Counts the occurrences of each word and prefixes each word with itscount.</td></tr><tr class="odd"><td><code>sort -r</code></td><td>Sorts the words by frequency in descending order.</td></tr><tr class="even"><td><code>awk '&#123;print $2 " " $1&#125;'</code></td><td>Formats the output to display the word followed by itsfrequency.</td></tr></tbody></table><h3 id="example-workflow">Example Workflow</h3><p>Given the input file <code>words.txt</code> containing:<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">this is a test this is only a test</span><br></pre></td></tr></table></figure></p><p>The pipeline processes it as follows:</p><table><colgroup><col style="width: 28%" /><col style="width: 25%" /><col style="width: 46%" /></colgroup><thead><tr class="header"><th>Step</th><th>Command</th><th>Output</th></tr></thead><tbody><tr class="odd"><td>Read file content</td><td><code>cat words.txt</code></td><td><code>this is a test this is only a test</code></td></tr><tr class="even"><td>Transform spaces to newlines</td><td><code>tr -s ' ' '\n'</code></td><td><code>this\nis\na\ntest\nthis\nis\nonly\na\ntest\n</code></td></tr><tr class="odd"><td>Sort words alphabetically</td><td><code>sort</code></td><td><code>a\na\nis\nis\nonly\ntest\ntest\nthis\nthis\n</code></td></tr><tr class="even"><td>Count word occurrences</td><td><code>uniq -c</code></td><td><code>2 a\n2 is\n1 only\n2 test\n2 this\n</code></td></tr><tr class="odd"><td>Sort by frequency descending</td><td><code>sort -r</code></td><td><code>2 this\n2 test\n2 is\n2 a\n1 only\n</code></td></tr><tr class="even"><td>Format output</td><td><code>awk '&#123;print $2 " " $1&#125;'</code></td><td><code>this 2\ntest 2\nis 2\na 2\nonly 1\n</code></td></tr></tbody></table><h3 id="final-output">Final Output</h3><figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">this 2</span><br><span class="line">test 2</span><br><span class="line">is 2</span><br><span class="line">a 2</span><br><span class="line">only 1</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> Software Engineering </category>
+          
+          <category> Coding Problems </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> algorithm </tag>
+            
+            <tag> leetcode </tag>
+            
+            <tag> problem-solving </tag>
+            
+            <tag> coding </tag>
+            
+            <tag> interview-preparation </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Urgent: Seeking a Room for Rent in Singapore for Two by July 2024</title>
       <link href="/blog/urgent-seeking-a-room-for-rent-in-singapore-for-two-by-july-2024/"/>
       <url>/blog/urgent-seeking-a-room-for-rent-in-singapore-for-two-by-july-2024/</url>
@@ -745,11 +780,11 @@
             
             <tag> coding-interview </tag>
             
+            <tag> interview-preparation </tag>
+            
             <tag> bytedance </tag>
             
             <tag> software-engineering </tag>
-            
-            <tag> interview-preparation </tag>
             
         </tags>
       
