@@ -6,7 +6,7 @@
   <link href="https://enkr1.github.io/blog/atom.xml" rel="self"/>
   
   <link href="https://enkr1.github.io/blog/"/>
-  <updated>2024-06-19T18:04:23.162Z</updated>
+  <updated>2024-06-22T18:13:44.321Z</updated>
   <id>https://enkr1.github.io/blog/</id>
   
   <author>
@@ -15,6 +15,39 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>LeetCode-193: Valid Phone Numbers</title>
+    <link href="https://enkr1.github.io/blog/leetcode-193-valid-phone-numbers/"/>
+    <id>https://enkr1.github.io/blog/leetcode-193-valid-phone-numbers/</id>
+    <published>2024-06-22T18:09:19.000Z</published>
+    <updated>2024-06-22T18:13:44.321Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="leetcode-problem-193-valid-phone-numbers"><ahref="https://leetcode.com/problems/valid-phone-numbers/description/">LeetCodeProblem 193: Valid Phone Numbers</a></h2><h2 id="solution">Solution</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grep -E <span class="string">&#x27;^\([0-9]&#123;3&#125;\) [0-9]&#123;3&#125;-[0-9]&#123;4&#125;$|^[0-9]&#123;3&#125;-[0-9]&#123;3&#125;-[0-9]&#123;4&#125;$&#x27;</span> file.txt</span><br></pre></td></tr></table></figure><h2 id="valid-phone-numbers-explanation">Valid Phone NumbersExplanation</h2><h3 id="correct-regular-expressions">Correct Regular Expressions</h3><p>Pattern for <code>(xxx) xxx-xxxx</code>: <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">^\([0-9]&#123;3&#125;\) [0-9]&#123;3&#125;-[0-9]&#123;4&#125;$</span><br></pre></td></tr></table></figure></p><p>Pattern for <code>xxx-xxx-xxxx</code>: <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">^[0-9]&#123;3&#125;-[0-9]&#123;3&#125;-[0-9]&#123;4&#125;$</span><br></pre></td></tr></table></figure></p><h3 id="example-workflow">Example Workflow</h3><p>Given the input file <code>file.txt</code> containing:<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">987-123-4567</span><br><span class="line">123 456 7890</span><br><span class="line">(123) 456-7890</span><br><span class="line">text 123-456-7890</span><br><span class="line">(123) 456-7890 text</span><br></pre></td></tr></table></figure></p><p>The command processes it as follows: <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grep -E <span class="string">&#x27;^\([0-9]&#123;3&#125;\) [0-9]&#123;3&#125;-[0-9]&#123;4&#125;$|^[0-9]&#123;3&#125;-[0-9]&#123;3&#125;-[0-9]&#123;4&#125;$&#x27;</span> file.txt</span><br></pre></td></tr></table></figure></p><h3 id="expected-output">Expected Output</h3><figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">987-123-4567</span><br><span class="line">(123) 456-7890</span><br></pre></td></tr></table></figure><h2 id="debugging-and-attempts">Debugging and Attempts</h2><h3 id="original-attempt">Original Attempt</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grep -E <span class="string">&#x27;^\(\d&#123;3&#125;\) \d&#123;3&#125;-\d&#123;4&#125;$|^\d&#123;3&#125;-\d&#123;3&#125;-\d&#123;4&#125;$&#x27;</span> file.txt</span><br></pre></td></tr></table></figure><blockquote><p>Failed due to incorrect digit matching.</p></blockquote><h3 id="corrected-solution">Corrected Solution</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grep -E <span class="string">&#x27;^\([0-9]&#123;3&#125;\) [0-9]&#123;3&#125;-[0-9]&#123;4&#125;$|^[0-9]&#123;3&#125;-[0-9]&#123;3&#125;-[0-9]&#123;4&#125;$&#x27;</span> file.txt</span><br></pre></td></tr></table></figure><blockquote><p>Uses <code>[0-9]</code> instead of <code>\d</code> for bettercompatibility.</p></blockquote><h3 id="debugging-script">Debugging Script</h3><p>To verify line-by-line matching: <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> IFS= <span class="built_in">read</span> -r line; <span class="keyword">do</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">&quot;Checking: &#x27;<span class="variable">$line</span>&#x27;&quot;</span></span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">echo</span> <span class="string">&quot;<span class="variable">$line</span>&quot;</span> | grep -E <span class="string">&#x27;^\([0-9]&#123;3&#125;\) [0-9]&#123;3&#125;-[0-9]&#123;4&#125;$|^[0-9]&#123;3&#125;-[0-9]&#123;3&#125;-[0-9]&#123;4&#125;$&#x27;</span>; <span class="keyword">then</span></span><br><span class="line">        <span class="built_in">echo</span> <span class="string">&quot;Matched: <span class="variable">$line</span>&quot;</span></span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="built_in">echo</span> <span class="string">&quot;Not Matched: <span class="variable">$line</span>&quot;</span></span><br><span class="line">    <span class="keyword">fi</span></span><br><span class="line"><span class="keyword">done</span> &lt; file.txt</span><br></pre></td></tr></table></figure></p><h3 id="final-thoughts">Final Thoughts</h3><p>This solution ensures correct pattern matching for valid phonenumbers in the specified formats, using extended regex for betterreadability and compatibility.</p>]]></content>
+    
+    
+    <summary type="html">A comprehensive solution and detailed explanation for solving LeetCode Problem 193: Valid Phone Numbers. This guide includes the problem statement, approach, and code implementation.</summary>
+    
+    
+    
+    <category term="Software Engineering" scheme="https://enkr1.github.io/blog/categories/Software-Engineering/"/>
+    
+    <category term="Coding Problems" scheme="https://enkr1.github.io/blog/categories/Software-Engineering/Coding-Problems/"/>
+    
+    
+    <category term="algorithm" scheme="https://enkr1.github.io/blog/tags/algorithm/"/>
+    
+    <category term="leetcode" scheme="https://enkr1.github.io/blog/tags/leetcode/"/>
+    
+    <category term="problem-solving" scheme="https://enkr1.github.io/blog/tags/problem-solving/"/>
+    
+    <category term="coding" scheme="https://enkr1.github.io/blog/tags/coding/"/>
+    
+    <category term="interview-preparation" scheme="https://enkr1.github.io/blog/tags/interview-preparation/"/>
+    
+    <category term="bash" scheme="https://enkr1.github.io/blog/tags/bash/"/>
+    
+  </entry>
   
   <entry>
     <title>LeetCode-194: Transpose File</title>
@@ -54,7 +87,7 @@
     <link href="https://enkr1.github.io/blog/leetcode-192-word-frequency/"/>
     <id>https://enkr1.github.io/blog/leetcode-192-word-frequency/</id>
     <published>2024-06-19T16:30:35.000Z</published>
-    <updated>2024-06-19T17:10:37.643Z</updated>
+    <updated>2024-06-22T18:12:38.008Z</updated>
     
     <content type="html"><![CDATA[<h2 id="problem-192.-word-frequency"><ahref="https://leetcode.com/problems/word-frequency/description/">Problem:192. Word Frequency</a></h2><h2 id="solution">Solution</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cat</span> words.txt | <span class="built_in">tr</span> -s <span class="string">&#x27; &#x27;</span> <span class="string">&#x27;\n&#x27;</span> | <span class="built_in">sort</span> | <span class="built_in">uniq</span> -c | <span class="built_in">sort</span> -r | awk <span class="string">&#x27;&#123;print $2 &quot; &quot; $1&#125;&#x27;</span></span><br></pre></td></tr></table></figure><h2 id="word-frequency-explanation">Word Frequency Explanation</h2><p>Here is a breakdown of each command in the pipeline:</p><table><colgroup><col style="width: 25%" /><col style="width: 74%" /></colgroup><thead><tr class="header"><th>Command</th><th>Explanation</th></tr></thead><tbody><tr class="odd"><td><code>cat words.txt</code></td><td>Reads the content of the file <code>words.txt</code>.</td></tr><tr class="even"><td><code>tr -s ' ' '\n'</code></td><td>Transforms spaces into newlines, putting each word on a separateline.</td></tr><tr class="odd"><td><code>sort</code></td><td>Sorts the words alphabetically.</td></tr><tr class="even"><td><code>uniq -c</code></td><td>Counts the occurrences of each word and prefixes each word with itscount.</td></tr><tr class="odd"><td><code>sort -r</code></td><td>Sorts the words by frequency in descending order.</td></tr><tr class="even"><td><code>awk '&#123;print $2 " " $1&#125;'</code></td><td>Formats the output to display the word followed by itsfrequency.</td></tr></tbody></table><h3 id="example-workflow">Example Workflow</h3><p>Given the input file <code>words.txt</code> containing:<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">this is a test this is only a test</span><br></pre></td></tr></table></figure></p><p>The pipeline processes it as follows:</p><table><colgroup><col style="width: 28%" /><col style="width: 25%" /><col style="width: 46%" /></colgroup><thead><tr class="header"><th>Step</th><th>Command</th><th>Output</th></tr></thead><tbody><tr class="odd"><td>Read file content</td><td><code>cat words.txt</code></td><td><code>this is a test this is only a test</code></td></tr><tr class="even"><td>Transform spaces to newlines</td><td><code>tr -s ' ' '\n'</code></td><td><code>this\nis\na\ntest\nthis\nis\nonly\na\ntest\n</code></td></tr><tr class="odd"><td>Sort words alphabetically</td><td><code>sort</code></td><td><code>a\na\nis\nis\nonly\ntest\ntest\nthis\nthis\n</code></td></tr><tr class="even"><td>Count word occurrences</td><td><code>uniq -c</code></td><td><code>2 a\n2 is\n1 only\n2 test\n2 this\n</code></td></tr><tr class="odd"><td>Sort by frequency descending</td><td><code>sort -r</code></td><td><code>2 this\n2 test\n2 is\n2 a\n1 only\n</code></td></tr><tr class="even"><td>Format output</td><td><code>awk '&#123;print $2 " " $1&#125;'</code></td><td><code>this 2\ntest 2\nis 2\na 2\nonly 1\n</code></td></tr></tbody></table><h3 id="final-output">Final Output</h3><figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">this 2</span><br><span class="line">test 2</span><br><span class="line">is 2</span><br><span class="line">a 2</span><br><span class="line">only 1</span><br></pre></td></tr></table></figure>]]></content>
     
@@ -613,31 +646,6 @@
     
     
     <category term="book" scheme="https://enkr1.github.io/blog/tags/book/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>My Hexo Notebook</title>
-    <link href="https://enkr1.github.io/blog/my-hexo-notebook/"/>
-    <id>https://enkr1.github.io/blog/my-hexo-notebook/</id>
-    <published>2024-04-28T14:43:18.000Z</published>
-    <updated>2024-05-31T19:18:45.400Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="issue-with-categoriestags-insensitive-name-change">issue withcategories/tags insensitive name change</h2><ul><li>If you have your <code>tags/categories</code> name changed from"ABC" to "abc", it will not reflected immediately, the folder will staythe same name. The trick I found so far is to rename to something elsefirst and change it back to the lowercase. E.g. ABC -&gt; ABC123 -&gt;abc</li></ul><h2 id="how-i-added-view-count-globe">how i added view count globe</h2><ul><li>https://www.revolvermaps.com/?target=setup2d in<code>themes/next/layout/_partials/sidebar/site-overview.swig</code></li><li>idea from https://qiuyiwu.github.io/2019/01/26/Hexo-View/</li></ul><h2 id="firebase">firebase</h2><ul><li>firebase at themes/next/layout/_partials/head/head-unique.swig<ul><li><p>todo:https://www.google.com/search?q=firebase+hexo+next+visitor+count&amp;rlz=1C5CHFA_enSG961SG961&amp;oq=firebase+hexo+next+visitor+count&amp;gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIGCAEQRRhA0gEINDkzOWowajSoAgCwAgE&amp;sourceid=chrome&amp;ie=UTF-8<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">firebase init firestore <span class="comment"># will give u the file to add - access by cmd + click</span></span><br><span class="line"><span class="comment"># select N on:</span></span><br><span class="line"><span class="comment"># ? File firestore.rules already exists. Do you want to overwrite it with the Firestore Rules</span></span><br><span class="line"><span class="comment"># from the Firebase Console? (y/N)</span></span><br><span class="line">firebase deploy --only firestore</span><br></pre></td></tr></table></figure></p></li><li><p>https://stackoverflow.com/questions/46590155/firestore-permission-denied-missing-or-insufficient-permissions</p></li><li><p>https://console.cloud.google.com/firestore/databases/-default-/data/panel/articles/My%20LeetCode%20Journey:%20From%20Novice%20to%20ByteDance%20Software%20Engineer?project=hexo-blog-9ccea</p></li><li><p>https://cloud.google.com/firestore/docs/security/get-started?_gl=1<em>1qcz2lv</em>_ga<em>MTMyODM5MzcwNC4xNzE0ODIzMDUz</em>_ga_WH2QY8WWF5*MTcxNTEwMTkxMy4yLjEuMTcxNTEwMzcxOS4wLjAuMA..&amp;_ga=2.209118674.-1328393704.1714823053#use_the_cli</p></li></ul></li></ul><h2 id="math-syntax">math syntax</h2><ul><li>https://theme-next.js.org/docs/third-party-services/math-equations#mjx-eqn%3Aeq4</li></ul>]]></content>
-    
-    
-    <summary type="html">Join me as I delve into the intricacies of using Hexo for blogging. This post covers everything from the initial setup to customizing themes and optimizing performance. Whether you&#39;re a blogger looking to switch to a static site generator or a developer interested in Hexo&#39;s capabilities, find detailed insights and practical tips that can help you build a faster, more secure website.</summary>
-    
-    
-    
-    <category term="Software Engineering" scheme="https://enkr1.github.io/blog/categories/Software-Engineering/"/>
-    
-    <category term="Frameworks" scheme="https://enkr1.github.io/blog/categories/Software-Engineering/Frameworks/"/>
-    
-    <category term="Hexo" scheme="https://enkr1.github.io/blog/categories/Software-Engineering/Frameworks/Hexo/"/>
-    
-    
-    <category term="note" scheme="https://enkr1.github.io/blog/tags/note/"/>
     
   </entry>
   

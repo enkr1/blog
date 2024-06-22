@@ -4,6 +4,43 @@
   
     
     <entry>
+      <title>LeetCode-193: Valid Phone Numbers</title>
+      <link href="/blog/leetcode-193-valid-phone-numbers/"/>
+      <url>/blog/leetcode-193-valid-phone-numbers/</url>
+      
+        <content type="html"><![CDATA[<h2 id="leetcode-problem-193-valid-phone-numbers"><ahref="https://leetcode.com/problems/valid-phone-numbers/description/">LeetCodeProblem 193: Valid Phone Numbers</a></h2><h2 id="solution">Solution</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grep -E <span class="string">&#x27;^\([0-9]&#123;3&#125;\) [0-9]&#123;3&#125;-[0-9]&#123;4&#125;$|^[0-9]&#123;3&#125;-[0-9]&#123;3&#125;-[0-9]&#123;4&#125;$&#x27;</span> file.txt</span><br></pre></td></tr></table></figure><h2 id="valid-phone-numbers-explanation">Valid Phone NumbersExplanation</h2><h3 id="correct-regular-expressions">Correct Regular Expressions</h3><p>Pattern for <code>(xxx) xxx-xxxx</code>: <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">^\([0-9]&#123;3&#125;\) [0-9]&#123;3&#125;-[0-9]&#123;4&#125;$</span><br></pre></td></tr></table></figure></p><p>Pattern for <code>xxx-xxx-xxxx</code>: <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">^[0-9]&#123;3&#125;-[0-9]&#123;3&#125;-[0-9]&#123;4&#125;$</span><br></pre></td></tr></table></figure></p><h3 id="example-workflow">Example Workflow</h3><p>Given the input file <code>file.txt</code> containing:<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">987-123-4567</span><br><span class="line">123 456 7890</span><br><span class="line">(123) 456-7890</span><br><span class="line">text 123-456-7890</span><br><span class="line">(123) 456-7890 text</span><br></pre></td></tr></table></figure></p><p>The command processes it as follows: <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grep -E <span class="string">&#x27;^\([0-9]&#123;3&#125;\) [0-9]&#123;3&#125;-[0-9]&#123;4&#125;$|^[0-9]&#123;3&#125;-[0-9]&#123;3&#125;-[0-9]&#123;4&#125;$&#x27;</span> file.txt</span><br></pre></td></tr></table></figure></p><h3 id="expected-output">Expected Output</h3><figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">987-123-4567</span><br><span class="line">(123) 456-7890</span><br></pre></td></tr></table></figure><h2 id="debugging-and-attempts">Debugging and Attempts</h2><h3 id="original-attempt">Original Attempt</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grep -E <span class="string">&#x27;^\(\d&#123;3&#125;\) \d&#123;3&#125;-\d&#123;4&#125;$|^\d&#123;3&#125;-\d&#123;3&#125;-\d&#123;4&#125;$&#x27;</span> file.txt</span><br></pre></td></tr></table></figure><blockquote><p>Failed due to incorrect digit matching.</p></blockquote><h3 id="corrected-solution">Corrected Solution</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grep -E <span class="string">&#x27;^\([0-9]&#123;3&#125;\) [0-9]&#123;3&#125;-[0-9]&#123;4&#125;$|^[0-9]&#123;3&#125;-[0-9]&#123;3&#125;-[0-9]&#123;4&#125;$&#x27;</span> file.txt</span><br></pre></td></tr></table></figure><blockquote><p>Uses <code>[0-9]</code> instead of <code>\d</code> for bettercompatibility.</p></blockquote><h3 id="debugging-script">Debugging Script</h3><p>To verify line-by-line matching: <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> IFS= <span class="built_in">read</span> -r line; <span class="keyword">do</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">&quot;Checking: &#x27;<span class="variable">$line</span>&#x27;&quot;</span></span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">echo</span> <span class="string">&quot;<span class="variable">$line</span>&quot;</span> | grep -E <span class="string">&#x27;^\([0-9]&#123;3&#125;\) [0-9]&#123;3&#125;-[0-9]&#123;4&#125;$|^[0-9]&#123;3&#125;-[0-9]&#123;3&#125;-[0-9]&#123;4&#125;$&#x27;</span>; <span class="keyword">then</span></span><br><span class="line">        <span class="built_in">echo</span> <span class="string">&quot;Matched: <span class="variable">$line</span>&quot;</span></span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="built_in">echo</span> <span class="string">&quot;Not Matched: <span class="variable">$line</span>&quot;</span></span><br><span class="line">    <span class="keyword">fi</span></span><br><span class="line"><span class="keyword">done</span> &lt; file.txt</span><br></pre></td></tr></table></figure></p><h3 id="final-thoughts">Final Thoughts</h3><p>This solution ensures correct pattern matching for valid phonenumbers in the specified formats, using extended regex for betterreadability and compatibility.</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Software Engineering </category>
+          
+          <category> Coding Problems </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> algorithm </tag>
+            
+            <tag> leetcode </tag>
+            
+            <tag> problem-solving </tag>
+            
+            <tag> coding </tag>
+            
+            <tag> interview-preparation </tag>
+            
+            <tag> bash </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>LeetCode-194: Transpose File</title>
       <link href="/blog/leetcode-194-transpose-file/"/>
       <url>/blog/leetcode-194-transpose-file/</url>
