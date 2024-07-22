@@ -34,7 +34,7 @@
 <meta property="og:image" content="https://enkr1.github.io/blog/my-bash-notebook/dig-output.png">
 <meta property="og:image" content="https://enkr1.github.io/blog/my-bash-notebook/brew-1.png">
 <meta property="article:published_time" content="2024-04-11T20:14:20.000Z">
-<meta property="article:modified_time" content="2024-06-28T19:32:47.827Z">
+<meta property="article:modified_time" content="2024-07-22T15:28:52.978Z">
 <meta property="article:author" content="Jing Hui PANG | 彭竞辉 | ENKR">
 <meta property="article:tag" content="note">
 <meta property="article:tag" content="bash">
@@ -207,7 +207,7 @@
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/blog/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">94</span></a>
+    <a href="/blog/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">96</span></a>
 
   </li>
         <li class="menu-item menu-item-history">
@@ -311,7 +311,7 @@ NOTE: created_at
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: Sat 29 June 2024 03:32:47 AM" itemprop="dateModified" datetime="2024-06-29T03:32:47+08:00">Sat 29 June 2024</time>
+                <time title="Modified: Mon 22 July 2024 23:28:52 PM" itemprop="dateModified" datetime="2024-07-22T23:28:52+08:00">Mon 22 July 2024</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -336,13 +336,13 @@ NOTE: created_at
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-              <span>4.3k</span>
+              <span>4.7k</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
-              <span>16 mins.</span>
+              <span>17 mins.</span>
             </span>
 
 <!--
@@ -907,6 +907,62 @@ something else you'd like to inquire about?</p>
 <h3 id="unzip-every-zipped-folder-in-a-directory">Unzip every zipped
 folder in a directory</h3>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">unzip \*.zip</span><br></pre></td></tr></table></figure>
+<h2 id="convert">convert</h2>
+<p><strong>ImageMagick (Convert)</strong></p>
+<ul>
+<li><strong>Primary Use</strong>: Specifically designed for image
+processing. It's primarily used for creating, editing, composing, or
+converting bitmap images.</li>
+<li><strong>Capabilities</strong>: Offers a wide range of options for
+image manipulations such as resizing, flipping, mirroring, rotating,
+distorting, shearing, transforming, and more. It also supports a vast
+number of image formats.</li>
+<li><strong>Simplicity for Images</strong>: Generally provides simpler
+and more direct commands for image manipulation and conversion, making
+it more suitable for tasks that solely involve images.</li>
+</ul>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> file <span class="keyword">in</span> *.JPG; <span class="keyword">do</span></span><br><span class="line">  convert <span class="string">&quot;<span class="variable">$file</span>&quot;</span> <span class="string">&quot;<span class="variable">$&#123;file%.jpg&#125;</span>.jpeg&quot;</span></span><br><span class="line"><span class="keyword">done</span></span><br></pre></td></tr></table></figure>
+<h3 id="ffmpeg">1. <strong>FFmpeg</strong></h3>
+<ul>
+<li><strong>Primary Use</strong>: Primarily designed for video and audio
+processing. It excels at handling multimedia data streams and complex
+encoding and decoding processes.</li>
+<li><strong>Capabilities</strong>: Can handle batch processing of video
+and audio files, applying filters, changing codecs, and modifying
+multimedia files in various ways.</li>
+<li><strong>Complexity</strong>: Typically offers more complex and
+detailed command-line options for video and audio processing, which
+might be overkill or less efficient for simple image conversions.</li>
+</ul>
+<h3 id="imagemagick-convert">2. <strong>ImageMagick
+(Convert)</strong></h3>
+<ul>
+<li><strong>Primary Use</strong>: Specifically designed for image
+processing. It's primarily used for creating, editing, composing, or
+converting bitmap images.</li>
+<li><strong>Capabilities</strong>: Offers a wide range of options for
+image manipulations such as resizing, flipping, mirroring, rotating,
+distorting, shearing, transforming, and more. It also supports a vast
+number of image formats.</li>
+<li><strong>Simplicity for Images</strong>: Generally provides simpler
+and more direct commands for image manipulation and conversion, making
+it more suitable for tasks that solely involve images.</li>
+</ul>
+<h3 id="practical-differences-in-usage">Practical Differences in
+Usage</h3>
+<ul>
+<li><strong>Efficiency</strong>: For image file conversions, ImageMagick
+is generally more efficient and provides tools better suited for the job
+with less overhead compared to FFmpeg.</li>
+<li><strong>Functionality</strong>: FFmpeg is more powerful for any
+media format conversion or processing that includes video or audio.
+However, for straight image-to-image conversion, ImageMagick is usually
+preferred due to its optimization for images.</li>
+</ul>
+<p>In your case, using <code>convert</code> from ImageMagick for
+converting HEIC to JPEG is more straightforward and efficient, given
+that <code>convert</code> is optimized for image operations.</p>
+<p>[WIP]</p>
 <h2 id="nbconvert">nbconvert</h2>
 <h3 id="convert-jupyter-notebook-to-specific-file-type">Convert Jupyter
 notebook to specific file type</h3>
@@ -1269,9 +1325,11 @@ Shell Tricks for SPEEEEEED (and efficiency)<i class="fa fa-external-link-alt"></
 Your Server</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#here-are-some-differences-between-bash-and-linux"><span class="nav-number">4.1.</span> <span class="nav-text">Here are some
 differences between Bash and Linux:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#os-details-check"><span class="nav-number">4.2.</span> <span class="nav-text">OS Details Check</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#kernel-version"><span class="nav-number">4.3.</span> <span class="nav-text">Kernel Version</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cpu-info"><span class="nav-number">4.4.</span> <span class="nav-text">CPU Info</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#memory-info"><span class="nav-number">4.5.</span> <span class="nav-text">Memory Info</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#disk-space"><span class="nav-number">4.6.</span> <span class="nav-text">Disk Space</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#network-interfaces"><span class="nav-number">4.7.</span> <span class="nav-text">Network Interfaces</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#system-services"><span class="nav-number">4.8.</span> <span class="nav-text">System Services</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#reminder-system-update"><span class="nav-number">4.9.</span> <span class="nav-text">Reminder: System Update</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#why-update"><span class="nav-number">4.9.1.</span> <span class="nav-text">Why Update?</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#how-to-update---yum"><span class="nav-number">4.9.2.</span> <span class="nav-text">How to Update - yum:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#tips"><span class="nav-number">4.9.3.</span> <span class="nav-text">Tips:</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#z---powerful-navigator"><span class="nav-number">5.</span> <span class="nav-text">z - Powerful navigator</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#installation-set-up"><span class="nav-number">5.1.</span> <span class="nav-text">Installation &amp; Set-up</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#grep"><span class="nav-number">6.</span> <span class="nav-text">grep</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#simple-usage"><span class="nav-number">6.1.</span> <span class="nav-text">Simple usage:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#insensitive-case"><span class="nav-number">6.2.</span> <span class="nav-text">Insensitive case:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sres-must-know"><span class="nav-number">6.3.</span> <span class="nav-text">SRE&#39;s must know</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#some-notes"><span class="nav-number">6.4.</span> <span class="nav-text">Some notes</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#awk"><span class="nav-number">7.</span> <span class="nav-text">awk</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#basics-of-awk"><span class="nav-number">7.1.</span> <span class="nav-text">Basics of awk</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#wc---word-count"><span class="nav-number">8.</span> <span class="nav-text">wc - Word Count</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#wc---options"><span class="nav-number">8.1.</span> <span class="nav-text">wc - Options:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ssh"><span class="nav-number">9.</span> <span class="nav-text">SSH</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#genkey"><span class="nav-number">9.1.</span> <span class="nav-text">genkey</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pbcopy-key"><span class="nav-number">9.2.</span> <span class="nav-text">pbcopy key</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#scp"><span class="nav-number">9.3.</span> <span class="nav-text">scp</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#mkdir"><span class="nav-number">10.</span> <span class="nav-text">mkdir</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#recursively"><span class="nav-number">10.1.</span> <span class="nav-text">recursively</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#as-known-as-source"><span class="nav-number">11.</span> <span class="nav-text">. as known as
 source</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#curl"><span class="nav-number">12.</span> <span class="nav-text">curl</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#chmod"><span class="nav-number">13.</span> <span class="nav-text">chmod</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#gs-ghostscript"><span class="nav-number">14.</span> <span class="nav-text">gs — GhostScript</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#unzip"><span class="nav-number">15.</span> <span class="nav-text">unzip</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#unzip-every-zipped-folder-in-a-directory"><span class="nav-number">15.1.</span> <span class="nav-text">Unzip every zipped
-folder in a directory</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#nbconvert"><span class="nav-number">16.</span> <span class="nav-text">nbconvert</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#convert-jupyter-notebook-to-specific-file-type"><span class="nav-number">16.1.</span> <span class="nav-text">Convert Jupyter
-notebook to specific file type</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#dig---dns-of-a-website"><span class="nav-number">17.</span> <span class="nav-text">dig - DNS of a website</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#symlink"><span class="nav-number">18.</span> <span class="nav-text">symlink</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ps---check-processes"><span class="nav-number">19.</span> <span class="nav-text">ps - Check Processes</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#basic-usage"><span class="nav-number">19.1.</span> <span class="nav-text">Basic Usage</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#extended-usage"><span class="nav-number">19.2.</span> <span class="nav-text">Extended Usage</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#examples"><span class="nav-number">19.3.</span> <span class="nav-text">Examples</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#traceroute"><span class="nav-number">20.</span> <span class="nav-text">traceroute</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#why-using-it"><span class="nav-number">20.1.</span> <span class="nav-text">Why using it?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#when-to-use-it"><span class="nav-number">20.2.</span> <span class="nav-text">When to use it?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#how-to-use-it"><span class="nav-number">20.3.</span> <span class="nav-text">How to use it:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#top"><span class="nav-number">21.</span> <span class="nav-text">top</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#uptime"><span class="nav-number">22.</span> <span class="nav-text">uptime</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cal"><span class="nav-number">23.</span> <span class="nav-text">cal</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#say"><span class="nav-number">24.</span> <span class="nav-text">say</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#start-a-python-web-server"><span class="nav-number">25.</span> <span class="nav-text">Start a python web server</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#wifi-password"><span class="nav-number">26.</span> <span class="nav-text">WiFi password</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#touch-id-forever"><span class="nav-number">27.</span> <span class="nav-text">Touch ID forever!</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#setting-up-with-colours"><span class="nav-number">28.</span> <span class="nav-text">Setting up with colours</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#brew"><span class="nav-number">29.</span> <span class="nav-text">brew</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#bash-basics-core-concepts"><span class="nav-number">30.</span> <span class="nav-text">Bash Basics: Core Concepts</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#mv"><span class="nav-number">30.1.</span> <span class="nav-text">mv</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cp---copy-file-to-filedir"><span class="nav-number">31.</span> <span class="nav-text">cp - Copy file to file&#x2F;dir</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#explanation-of-and"><span class="nav-number">31.1.</span> <span class="nav-text">Explanation of &amp; and
-&amp;&amp;</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#special-parameters"><span class="nav-number">31.2.</span> <span class="nav-text">Special parameters</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#test-conditions"><span class="nav-number">31.3.</span> <span class="nav-text">Test conditions</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#numbers"><span class="nav-number">31.3.1.</span> <span class="nav-text">Numbers</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#strings"><span class="nav-number">31.3.2.</span> <span class="nav-text">Strings</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#testing-files"><span class="nav-number">31.4.</span> <span class="nav-text">Testing Files</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#some-amazing-sources"><span class="nav-number">32.</span> <span class="nav-text">Some Amazing Sources</span></a></li></ol></div>
+folder in a directory</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#convert"><span class="nav-number">16.</span> <span class="nav-text">convert</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ffmpeg"><span class="nav-number">16.1.</span> <span class="nav-text">1. FFmpeg</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#imagemagick-convert"><span class="nav-number">16.2.</span> <span class="nav-text">2. ImageMagick
+(Convert)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#practical-differences-in-usage"><span class="nav-number">16.3.</span> <span class="nav-text">Practical Differences in
+Usage</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#nbconvert"><span class="nav-number">17.</span> <span class="nav-text">nbconvert</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#convert-jupyter-notebook-to-specific-file-type"><span class="nav-number">17.1.</span> <span class="nav-text">Convert Jupyter
+notebook to specific file type</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#dig---dns-of-a-website"><span class="nav-number">18.</span> <span class="nav-text">dig - DNS of a website</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#symlink"><span class="nav-number">19.</span> <span class="nav-text">symlink</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ps---check-processes"><span class="nav-number">20.</span> <span class="nav-text">ps - Check Processes</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#basic-usage"><span class="nav-number">20.1.</span> <span class="nav-text">Basic Usage</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#extended-usage"><span class="nav-number">20.2.</span> <span class="nav-text">Extended Usage</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#examples"><span class="nav-number">20.3.</span> <span class="nav-text">Examples</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#traceroute"><span class="nav-number">21.</span> <span class="nav-text">traceroute</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#why-using-it"><span class="nav-number">21.1.</span> <span class="nav-text">Why using it?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#when-to-use-it"><span class="nav-number">21.2.</span> <span class="nav-text">When to use it?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#how-to-use-it"><span class="nav-number">21.3.</span> <span class="nav-text">How to use it:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#top"><span class="nav-number">22.</span> <span class="nav-text">top</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#uptime"><span class="nav-number">23.</span> <span class="nav-text">uptime</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cal"><span class="nav-number">24.</span> <span class="nav-text">cal</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#say"><span class="nav-number">25.</span> <span class="nav-text">say</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#start-a-python-web-server"><span class="nav-number">26.</span> <span class="nav-text">Start a python web server</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#wifi-password"><span class="nav-number">27.</span> <span class="nav-text">WiFi password</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#touch-id-forever"><span class="nav-number">28.</span> <span class="nav-text">Touch ID forever!</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#setting-up-with-colours"><span class="nav-number">29.</span> <span class="nav-text">Setting up with colours</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#brew"><span class="nav-number">30.</span> <span class="nav-text">brew</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#bash-basics-core-concepts"><span class="nav-number">31.</span> <span class="nav-text">Bash Basics: Core Concepts</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#mv"><span class="nav-number">31.1.</span> <span class="nav-text">mv</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cp---copy-file-to-filedir"><span class="nav-number">32.</span> <span class="nav-text">cp - Copy file to file&#x2F;dir</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#explanation-of-and"><span class="nav-number">32.1.</span> <span class="nav-text">Explanation of &amp; and
+&amp;&amp;</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#special-parameters"><span class="nav-number">32.2.</span> <span class="nav-text">Special parameters</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#test-conditions"><span class="nav-number">32.3.</span> <span class="nav-text">Test conditions</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#numbers"><span class="nav-number">32.3.1.</span> <span class="nav-text">Numbers</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#strings"><span class="nav-number">32.3.2.</span> <span class="nav-text">Strings</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#testing-files"><span class="nav-number">32.4.</span> <span class="nav-text">Testing Files</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#some-amazing-sources"><span class="nav-number">33.</span> <span class="nav-text">Some Amazing Sources</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -1284,7 +1342,7 @@ notebook to specific file type</span></a></li></ol></li><li class="nav-item nav-
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/blog/archives">
-          <span class="site-state-item-count">46</span>
+          <span class="site-state-item-count">47</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -1297,7 +1355,7 @@ notebook to specific file type</span></a></li></ol></li><li class="nav-item nav-
       <div class="site-state-item site-state-tags">
             <a href="/blog/tags/">
           
-        <span class="site-state-item-count">94</span>
+        <span class="site-state-item-count">96</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -1339,12 +1397,12 @@ notebook to specific file type</span></a></li></ol></li><li class="nav-item nav-
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="Symbols count total">35k</span>
+    <span title="Symbols count total">36k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">2:08</span>
+    <span title="Reading time total">2:12</span>
 </div>
 
         
