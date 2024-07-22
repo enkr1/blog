@@ -626,11 +626,11 @@
           
           <category> Software Engineering </category>
           
+          <category> Software Engineering Best Practices </category>
+          
           <category> Career Development </category>
           
           <category> Interviews </category>
-          
-          <category> Software Engineering Best Practices </category>
           
           <category> Interview Preparation </category>
           
@@ -877,9 +877,9 @@
       
         <tags>
             
-            <tag> software-development </tag>
-            
             <tag> programming </tag>
+            
+            <tag> software-development </tag>
             
             <tag> coding-styles </tag>
             
@@ -936,11 +936,11 @@
       
       <categories>
           
+          <category> Career Development </category>
+          
           <category> Personal Development </category>
           
           <category> Life Lessons </category>
-          
-          <category> Career Development </category>
           
           <category> Project Management </category>
           
