@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://enkr1.github.io/blog/journal-week-1-discoveries-and-thoughts/</loc>
+    <loc>https://enkr1.github.io/blog/journal-week-1/</loc>
     
     <lastmod>2024-07-27</lastmod>
     
@@ -541,7 +541,28 @@
   </url>
   
   <url>
-    <loc>https://enkr1.github.io/blog/tags/dynamic-programming/</loc>
+    <loc>https://enkr1.github.io/blog/tags/heap-map/</loc>
+    <lastmod>2024-07-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://enkr1.github.io/blog/tags/breadth-first-search/</loc>
+    <lastmod>2024-07-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://enkr1.github.io/blog/tags/shortest-path/</loc>
+    <lastmod>2024-07-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://enkr1.github.io/blog/tags/graph-algorithms/</loc>
     <lastmod>2024-07-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -576,35 +597,14 @@
   </url>
   
   <url>
-    <loc>https://enkr1.github.io/blog/tags/heap-map/</loc>
-    <lastmod>2024-07-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://enkr1.github.io/blog/tags/breadth-first-search/</loc>
-    <lastmod>2024-07-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://enkr1.github.io/blog/tags/shortest-path/</loc>
-    <lastmod>2024-07-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://enkr1.github.io/blog/tags/graph-algorithms/</loc>
-    <lastmod>2024-07-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://enkr1.github.io/blog/tags/two-pointer/</loc>
+    <lastmod>2024-07-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://enkr1.github.io/blog/tags/dynamic-programming/</loc>
     <lastmod>2024-07-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -660,7 +660,14 @@
   </url>
   
   <url>
-    <loc>https://enkr1.github.io/blog/tags/tiktok/</loc>
+    <loc>https://enkr1.github.io/blog/tags/interesting/</loc>
+    <lastmod>2024-07-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://enkr1.github.io/blog/tags/google/</loc>
     <lastmod>2024-07-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -709,13 +716,6 @@
   </url>
   
   <url>
-    <loc>https://enkr1.github.io/blog/tags/google/</loc>
-    <lastmod>2024-07-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://enkr1.github.io/blog/tags/interview-preparation/</loc>
     <lastmod>2024-07-27</lastmod>
     <changefreq>weekly</changefreq>
@@ -724,6 +724,13 @@
   
   <url>
     <loc>https://enkr1.github.io/blog/tags/bash/</loc>
+    <lastmod>2024-07-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://enkr1.github.io/blog/tags/tiktok/</loc>
     <lastmod>2024-07-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -745,27 +752,6 @@
   
   <url>
     <loc>https://enkr1.github.io/blog/tags/learning/</loc>
-    <lastmod>2024-07-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://enkr1.github.io/blog/tags/interesting/</loc>
-    <lastmod>2024-07-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://enkr1.github.io/blog/tags/hobby/</loc>
-    <lastmod>2024-07-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://enkr1.github.io/blog/tags/stage-performance/</loc>
     <lastmod>2024-07-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -808,6 +794,20 @@
   
   <url>
     <loc>https://enkr1.github.io/blog/tags/top-interview-150/</loc>
+    <lastmod>2024-07-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://enkr1.github.io/blog/tags/hobby/</loc>
+    <lastmod>2024-07-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://enkr1.github.io/blog/tags/stage-performance/</loc>
     <lastmod>2024-07-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -892,41 +892,6 @@
   
   <url>
     <loc>https://enkr1.github.io/blog/tags/programming/</loc>
-    <lastmod>2024-07-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://enkr1.github.io/blog/tags/mit-idss/</loc>
-    <lastmod>2024-07-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://enkr1.github.io/blog/tags/self-study/</loc>
-    <lastmod>2024-07-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://enkr1.github.io/blog/tags/machine-learning/</loc>
-    <lastmod>2024-07-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://enkr1.github.io/blog/tags/ai/</loc>
-    <lastmod>2024-07-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://enkr1.github.io/blog/tags/data-science/</loc>
     <lastmod>2024-07-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1024,6 +989,41 @@
   </url>
   
   <url>
+    <loc>https://enkr1.github.io/blog/tags/mit-idss/</loc>
+    <lastmod>2024-07-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://enkr1.github.io/blog/tags/self-study/</loc>
+    <lastmod>2024-07-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://enkr1.github.io/blog/tags/machine-learning/</loc>
+    <lastmod>2024-07-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://enkr1.github.io/blog/tags/ai/</loc>
+    <lastmod>2024-07-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://enkr1.github.io/blog/tags/data-science/</loc>
+    <lastmod>2024-07-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://enkr1.github.io/blog/tags/unsupervised-learning/</loc>
     <lastmod>2024-07-27</lastmod>
     <changefreq>weekly</changefreq>
@@ -1073,6 +1073,27 @@
   </url>
   
   <url>
+    <loc>https://enkr1.github.io/blog/tags/coding-styles/</loc>
+    <lastmod>2024-07-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://enkr1.github.io/blog/tags/mysql/</loc>
+    <lastmod>2024-07-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://enkr1.github.io/blog/tags/postgresql/</loc>
+    <lastmod>2024-07-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://enkr1.github.io/blog/tags/advertisement/</loc>
     <lastmod>2024-07-27</lastmod>
     <changefreq>weekly</changefreq>
@@ -1102,20 +1123,6 @@
   
   <url>
     <loc>https://enkr1.github.io/blog/tags/housing/</loc>
-    <lastmod>2024-07-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://enkr1.github.io/blog/tags/coding-styles/</loc>
-    <lastmod>2024-07-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://enkr1.github.io/blog/tags/book/</loc>
     <lastmod>2024-07-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1164,14 +1171,7 @@
   </url>
   
   <url>
-    <loc>https://enkr1.github.io/blog/tags/mysql/</loc>
-    <lastmod>2024-07-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://enkr1.github.io/blog/tags/postgresql/</loc>
+    <loc>https://enkr1.github.io/blog/tags/book/</loc>
     <lastmod>2024-07-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1215,7 +1215,7 @@
   </url>
   
   <url>
-    <loc>https://enkr1.github.io/blog/categories/Software-Engineering/Computer-Networking/</loc>
+    <loc>https://enkr1.github.io/blog/categories/Other/</loc>
     <lastmod>2024-07-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1229,14 +1229,7 @@
   </url>
   
   <url>
-    <loc>https://enkr1.github.io/blog/categories/About-Me/</loc>
-    <lastmod>2024-07-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://enkr1.github.io/blog/categories/Software-Engineering/Programming-Languages/SQL/</loc>
+    <loc>https://enkr1.github.io/blog/categories/Software-Engineering/Computer-Networking/</loc>
     <lastmod>2024-07-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1250,7 +1243,14 @@
   </url>
   
   <url>
-    <loc>https://enkr1.github.io/blog/categories/Other/</loc>
+    <loc>https://enkr1.github.io/blog/categories/Software-Engineering/Programming-Languages/SQL/</loc>
+    <lastmod>2024-07-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://enkr1.github.io/blog/categories/About-Me/</loc>
     <lastmod>2024-07-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1264,13 +1264,6 @@
   </url>
   
   <url>
-    <loc>https://enkr1.github.io/blog/categories/Personal-Development/Life-Lessons/</loc>
-    <lastmod>2024-07-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://enkr1.github.io/blog/categories/Personal-Development/Inspirational-Insights/</loc>
     <lastmod>2024-07-27</lastmod>
     <changefreq>weekly</changefreq>
@@ -1278,7 +1271,21 @@
   </url>
   
   <url>
+    <loc>https://enkr1.github.io/blog/categories/Personal-Development/Life-Lessons/</loc>
+    <lastmod>2024-07-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://enkr1.github.io/blog/categories/Personal-Development/Online-Courses/</loc>
+    <lastmod>2024-07-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://enkr1.github.io/blog/categories/Other/Social-Science-Insights/</loc>
     <lastmod>2024-07-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1299,35 +1306,7 @@
   </url>
   
   <url>
-    <loc>https://enkr1.github.io/blog/categories/About-Me/Journals/</loc>
-    <lastmod>2024-07-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://enkr1.github.io/blog/categories/Software-Engineering/Programming-Languages/Elixir/</loc>
-    <lastmod>2024-07-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://enkr1.github.io/blog/categories/Software-Engineering/Programming-Languages/JavaScript/</loc>
-    <lastmod>2024-07-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://enkr1.github.io/blog/categories/Software-Engineering/Programming-Languages/Bash/</loc>
-    <lastmod>2024-07-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://enkr1.github.io/blog/categories/Software-Engineering/Programming-Languages/Java/</loc>
     <lastmod>2024-07-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1341,14 +1320,14 @@
   </url>
   
   <url>
-    <loc>https://enkr1.github.io/blog/categories/About-Me/Hobbies/</loc>
+    <loc>https://enkr1.github.io/blog/categories/About-Me/Journals/</loc>
     <lastmod>2024-07-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://enkr1.github.io/blog/categories/Other/Social-Science-Insights/</loc>
+    <loc>https://enkr1.github.io/blog/categories/About-Me/Hobbies/</loc>
     <lastmod>2024-07-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1376,6 +1355,13 @@
   </url>
   
   <url>
+    <loc>https://enkr1.github.io/blog/categories/Personal-Development/Online-Courses/CS50/</loc>
+    <lastmod>2024-07-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://enkr1.github.io/blog/categories/Personal-Development/Online-Courses/MIT-IDSS-AI-ML/</loc>
     <lastmod>2024-07-27</lastmod>
     <changefreq>weekly</changefreq>
@@ -1391,13 +1377,6 @@
   
   <url>
     <loc>https://enkr1.github.io/blog/categories/About-Me/Journals/2024/</loc>
-    <lastmod>2024-07-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://enkr1.github.io/blog/categories/Personal-Development/Online-Courses/CS50/</loc>
     <lastmod>2024-07-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1432,7 +1411,7 @@
   </url>
   
   <url>
-    <loc>https://enkr1.github.io/blog/categories/Other/Rentals/</loc>
+    <loc>https://enkr1.github.io/blog/categories/Software-Engineering/Programming-Languages/Elixir/</loc>
     <lastmod>2024-07-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1446,7 +1425,21 @@
   </url>
   
   <url>
-    <loc>https://enkr1.github.io/blog/categories/Personal-Development/Reading-Materials/</loc>
+    <loc>https://enkr1.github.io/blog/categories/Software-Engineering/Programming-Languages/JavaScript/</loc>
+    <lastmod>2024-07-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://enkr1.github.io/blog/categories/Software-Engineering/Programming-Languages/Java/</loc>
+    <lastmod>2024-07-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://enkr1.github.io/blog/categories/Other/Rentals/</loc>
     <lastmod>2024-07-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1461,6 +1454,13 @@
   
   <url>
     <loc>https://enkr1.github.io/blog/categories/Software-Engineering/Development-Tools/</loc>
+    <lastmod>2024-07-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://enkr1.github.io/blog/categories/Personal-Development/Reading-Materials/</loc>
     <lastmod>2024-07-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
