@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>Journal: Week 1 - Discoveries and Thoughts</title>
+      <link href="/blog/journal-week-1-discoveries-and-thoughts/"/>
+      <url>/blog/journal-week-1-discoveries-and-thoughts/</url>
+      
+        <content type="html"><![CDATA[<p>i'm starting a new adventure: journaling! i want to jot down theinteresting things I learn and experience every week. Hopefully, thiswill become a habit, and maybe i'll even start doing it daily.</p><p>Why am i doing this? honestly, i'm not sure. But i feel like sharingmy weekly and daily discoveries with everyone could be fun andinsightful. Let's see where this journey takes us!</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> About Me </category>
+          
+          <category> Journals </category>
+          
+          <category> 2024 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> journal </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>My Crew Beatbox Performance: A Memorable Experience at the New MINI Family Launch</title>
       <link href="/blog/my-crew-beatbox-performance-a-memorable-experience-at-the-new-mini-family-launch/"/>
       <url>/blog/my-crew-beatbox-performance-a-memorable-experience-at-the-new-mini-family-launch/</url>
@@ -228,6 +257,8 @@
       
         <tags>
             
+            <tag> tiktok </tag>
+            
             <tag> site-reliability-engineer </tag>
             
             <tag> sre </tag>
@@ -239,8 +270,6 @@
             <tag> coding-interview </tag>
             
             <tag> job-interview </tag>
-            
-            <tag> tiktok </tag>
             
         </tags>
       
@@ -269,8 +298,6 @@
       
         <tags>
             
-            <tag> google </tag>
-            
             <tag> site-reliability-engineer </tag>
             
             <tag> sre </tag>
@@ -282,6 +309,8 @@
             <tag> coding-interview </tag>
             
             <tag> job-interview </tag>
+            
+            <tag> google </tag>
             
         </tags>
       
@@ -936,9 +965,9 @@
       
       <categories>
           
-          <category> Career Development </category>
-          
           <category> Personal Development </category>
+          
+          <category> Career Development </category>
           
           <category> Life Lessons </category>
           

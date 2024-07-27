@@ -6,7 +6,7 @@
   <link href="https://enkr1.github.io/blog/atom.xml" rel="self"/>
   
   <link href="https://enkr1.github.io/blog/"/>
-  <updated>2024-07-22T16:21:07.172Z</updated>
+  <updated>2024-07-27T23:17:28.839Z</updated>
   <id>https://enkr1.github.io/blog/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Journal: Week 1 - Discoveries and Thoughts</title>
+    <link href="https://enkr1.github.io/blog/journal-week-1-discoveries-and-thoughts/"/>
+    <id>https://enkr1.github.io/blog/journal-week-1-discoveries-and-thoughts/</id>
+    <published>2024-07-27T23:10:05.000Z</published>
+    <updated>2024-07-27T23:17:28.839Z</updated>
+    
+    <content type="html"><![CDATA[<p>i'm starting a new adventure: journaling! i want to jot down theinteresting things I learn and experience every week. Hopefully, thiswill become a habit, and maybe i'll even start doing it daily.</p><p>Why am i doing this? honestly, i'm not sure. But i feel like sharingmy weekly and daily discoveries with everyone could be fun andinsightful. Let's see where this journey takes us!</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;i&#39;m starting a new adventure: journaling! i want to jot down the
+interesting things I learn and experience every week. Hopefully, this
+wi</summary>
+      
+    
+    
+    
+    <category term="About Me" scheme="https://enkr1.github.io/blog/categories/About-Me/"/>
+    
+    <category term="Journals" scheme="https://enkr1.github.io/blog/categories/About-Me/Journals/"/>
+    
+    <category term="2024" scheme="https://enkr1.github.io/blog/categories/About-Me/Journals/2024/"/>
+    
+    
+    <category term="journal" scheme="https://enkr1.github.io/blog/tags/journal/"/>
+    
+  </entry>
   
   <entry>
     <title>My Crew Beatbox Performance: A Memorable Experience at the New MINI Family Launch</title>
@@ -217,6 +247,8 @@
     <category term="Technical Coding Interviews" scheme="https://enkr1.github.io/blog/categories/Career-Development/Interviews/Technical-Coding-Interviews/"/>
     
     
+    <category term="tiktok" scheme="https://enkr1.github.io/blog/tags/tiktok/"/>
+    
     <category term="site-reliability-engineer" scheme="https://enkr1.github.io/blog/tags/site-reliability-engineer/"/>
     
     <category term="sre" scheme="https://enkr1.github.io/blog/tags/sre/"/>
@@ -228,8 +260,6 @@
     <category term="coding-interview" scheme="https://enkr1.github.io/blog/tags/coding-interview/"/>
     
     <category term="job-interview" scheme="https://enkr1.github.io/blog/tags/job-interview/"/>
-    
-    <category term="tiktok" scheme="https://enkr1.github.io/blog/tags/tiktok/"/>
     
   </entry>
   
@@ -254,8 +284,6 @@
     <category term="Technical Coding Interviews" scheme="https://enkr1.github.io/blog/categories/Career-Development/Interviews/Technical-Coding-Interviews/"/>
     
     
-    <category term="google" scheme="https://enkr1.github.io/blog/tags/google/"/>
-    
     <category term="site-reliability-engineer" scheme="https://enkr1.github.io/blog/tags/site-reliability-engineer/"/>
     
     <category term="sre" scheme="https://enkr1.github.io/blog/tags/sre/"/>
@@ -267,6 +295,8 @@
     <category term="coding-interview" scheme="https://enkr1.github.io/blog/tags/coding-interview/"/>
     
     <category term="job-interview" scheme="https://enkr1.github.io/blog/tags/job-interview/"/>
+    
+    <category term="google" scheme="https://enkr1.github.io/blog/tags/google/"/>
     
   </entry>
   
@@ -623,31 +653,6 @@
     
     
     <category term="note" scheme="https://enkr1.github.io/blog/tags/note/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Manacher&#39;s Algorithm: Fast and Efficient Palindrome Detection</title>
-    <link href="https://enkr1.github.io/blog/manacher-s-algorithm-fast-and-efficient-palindrome-detection/"/>
-    <id>https://enkr1.github.io/blog/manacher-s-algorithm-fast-and-efficient-palindrome-detection/</id>
-    <published>2024-05-08T16:53:14.000Z</published>
-    <updated>2024-05-22T15:23:05.172Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="note-for-myself">Note for myself</h2><ul><li>add special char just to partition them for expansion e.g.<code>#</code> → <code>#A#B#B#C#</code></li><li>initialise ⇒<code>maxRight=0, palindromLengths=[], center=0</code></li><li>by looping it we check if the current <code>i</code> is withinmaxRight, if yes, we use a<ul><li><code>mirror = center*2 - i</code></li><li><code>min(maxRight - i, p[mirror])</code> for the case when the partof palindrome is not starting from <code>0</code></li></ul></li><li>and every loop just move the <code>maxRight</code> and<code>center</code> when <code>i + p[i] &gt; R</code> ⇒<code>maxRight = i + p[i], center=i</code></li><li>case below is looking for the number of palindrome:<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">countSubstrings</span> = (<span class="params">s</span>) =&gt; &#123; <span class="comment">// Manacher&#x27;s algorithm</span></span><br><span class="line">  <span class="keyword">let</span> modifiedString = <span class="string">&#x27;#&#x27;</span>;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; s.<span class="property">length</span>; i++) &#123;</span><br><span class="line">    modifiedString += s[i] + <span class="string">&#x27;#&#x27;</span>;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> n = modifiedString.<span class="property">length</span>;</span><br><span class="line">  <span class="keyword">const</span> P = <span class="keyword">new</span> <span class="title class_">Array</span>(n).<span class="title function_">fill</span>(<span class="number">0</span>);</span><br><span class="line">  <span class="keyword">let</span> center = <span class="number">0</span>, right = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">let</span> count = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">    <span class="keyword">if</span> (i &lt;= right) &#123;</span><br><span class="line">      <span class="keyword">const</span> mirror = <span class="number">2</span> * center - i;</span><br><span class="line">      P[i] = <span class="title class_">Math</span>.<span class="title function_">min</span>(right - i, P[mirror]);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">let</span> leftIndex = i - (<span class="number">1</span> + P[i]);</span><br><span class="line">    <span class="keyword">let</span> rightIndex = i + (<span class="number">1</span> + P[i]);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (leftIndex &gt;= <span class="number">0</span> &amp;&amp; rightIndex &lt; n &amp;&amp; modifiedString[leftIndex] === modifiedString[rightIndex]) &#123;</span><br><span class="line">      P[i]++;</span><br><span class="line">      leftIndex--;</span><br><span class="line">      rightIndex++;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (i + P[i] &gt; right) &#123;</span><br><span class="line">      center = i;</span><br><span class="line">      right = i + P[i];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    count += <span class="title class_">Math</span>.<span class="title function_">ceil</span>(P[i] / <span class="number">2</span>);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> count;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></li></ul><blockquote><p>rewind please its hard to actually memorise - do it again!</p></blockquote><hr /><h2 id="what-is-manachers-algorithm">What is Manacher's Algorithm?</h2><p>Manacher's algorithm is an efficient algorithm used to find the<strong>longest palindromic substring in a given string</strong>. It wasinvented by Gustav Manacher in 1975. The algorithm works by using theproperties of palindromic substrings to avoid unnecessary comparisons,thereby reducing the overall time complexity.</p><p>Overall, Manacher's algorithm is a very elegant and efficientsolution to the problem of finding the longest palindromic substring ina given string.</p><p>The algorithm uses two key ideas:</p><ol type="1"><li>Symmetry property: A palindrome has a symmetry around its<code>center</code>. If we already know the palindrome of a<code>center</code>, we can use it to avoid checking characters thatcannot be part of a longer palindrome.</li><li>Dynamic Programming: We can use previous calculations to compute newones.</li></ol><p><em>The Manacher's algorithm has a time complexity of O(n), where nis the length of the string, which makes it very efficient.</em></p><p>Here's how the Manacher algorithm works:</p><ol type="1"><li><p>Preprocess the input string <code>s</code> by inserting a specialcharacter, such as '#', between each pair of characters to make thestring odd-length. For example, the string "abba" would become"#a#b#b#a#".</p></li><li><p>Initialise two arrays:</p><ol type="1"><li><code>P</code>, where <code>P[i]</code> stores the length of thelongest palindromic substring centered at <code>i</code>, and</li><li><code>C</code>, where <code>C[i]</code> stores the center of thelongest palindromic substring found so far.</li></ol></li><li><p>Set a variable called <code>maxRight</code> to <code>0</code>,which represents the rightmost boundary of the longest palindromicsubstring found so far, and set <code>center</code> to <code>0</code>,which represents its center.</p></li><li><p>Iterate through the string <code>s</code> from left to right, andfor each character <code>i</code>, do the following:</p><ol type="a"><li><p>If <code>i</code> is within the current palindromic substring(i.e., i &lt;= maxRight), set <code>P[i]</code> to<code>min(P[2 * center - i], maxRight - i)</code>, which means thepalindrome centered at <code>i</code> is a reflection of the palindromecentered at center.</p></li><li><p>Expand the palindrome centered at <code>i</code> by comparingcharacters <code>s[i - P[i] - 1]</code> and<code>s[i + P[i] + 1]</code>. If they are equal, increase<code>P[i]</code> by <code>1</code>.</p></li><li><p>If the expanded palindrome centered at <code>i</code> extendsbeyond <code>maxRight</code>, update <code>maxRight</code> and<code>center</code> accordingly.</p></li></ol></li><li><p>Find the maximum value in the <code>P</code> array, and itscorresponding <code>center</code> index. The longest palindromicsubstring is then the substring centered at this index, with length<code>P[center] - 1</code>.</p></li></ol><hr /><h2 id="for-myself">For myself</h2><p>My workaround: <img data-src="/blog/manacher-s-algorithm-fast-and-efficient-palindrome-detection/workaround-1.png" class="" title="usual case"> <img data-src="/blog/manacher-s-algorithm-fast-and-efficient-palindrome-detection/workaround-2.png" class="" title="example of case where window is not starting form 0"></p><h2 id="references">References</h2><ul><li><span class="exturl" data-url="aHR0cHM6Ly95b3V0dS5iZS9sLVhDV2pwcy1VUT9zaT1oZThHRWMyVzdrYkdlQ09D">YouTube -LeetCode Solution - 5.0 Longest Palindromic Substring | ManacherAlgorithm 100% Beat<i class="fa fa-external-link-alt"></i></span></li></ul>]]></content>
-    
-    
-    <summary type="html">Unlock the secrets of Manacher&#39;s Algorithm in this detailed exploration. Learn how this ingenious method enables rapid identification of the longest palindromic substrings, drastically reducing computational complexity and enhancing algorithmic efficiency. Perfect for both budding and seasoned computer scientists.</summary>
-    
-    
-    
-    <category term="Software Engineering" scheme="https://enkr1.github.io/blog/categories/Software-Engineering/"/>
-    
-    <category term="Algorithms" scheme="https://enkr1.github.io/blog/categories/Software-Engineering/Algorithms/"/>
-    
-    
-    <category term="note" scheme="https://enkr1.github.io/blog/tags/note/"/>
-    
-    <category term="algorithm" scheme="https://enkr1.github.io/blog/tags/algorithm/"/>
     
   </entry>
   
