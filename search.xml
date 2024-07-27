@@ -228,19 +228,19 @@
       
         <tags>
             
+            <tag> leetcode </tag>
+            
+            <tag> tiktok </tag>
+            
             <tag> site-reliability-engineer </tag>
             
             <tag> sre </tag>
-            
-            <tag> leetcode </tag>
             
             <tag> interview-experience </tag>
             
             <tag> coding-interview </tag>
             
             <tag> job-interview </tag>
-            
-            <tag> tiktok </tag>
             
         </tags>
       
@@ -269,19 +269,19 @@
       
         <tags>
             
-            <tag> google </tag>
+            <tag> leetcode </tag>
             
             <tag> site-reliability-engineer </tag>
             
             <tag> sre </tag>
-            
-            <tag> leetcode </tag>
             
             <tag> interview-experience </tag>
             
             <tag> coding-interview </tag>
             
             <tag> job-interview </tag>
+            
+            <tag> google </tag>
             
         </tags>
       
@@ -626,9 +626,9 @@
           
           <category> Software Engineering </category>
           
-          <category> Software Engineering Best Practices </category>
-          
           <category> Career Development </category>
+          
+          <category> Software Engineering Best Practices </category>
           
           <category> Interviews </category>
           
@@ -815,9 +815,9 @@
       
         <tags>
             
-            <tag> hobby </tag>
-            
             <tag> beatbox </tag>
+            
+            <tag> hobby </tag>
             
             <tag> stage-performance </tag>
             
@@ -912,9 +912,9 @@
             
             <tag> leetcode </tag>
             
-            <tag> coding-interview </tag>
-            
             <tag> interview-preparation </tag>
+            
+            <tag> coding-interview </tag>
             
             <tag> bytedance </tag>
             
@@ -936,9 +936,9 @@
       
       <categories>
           
-          <category> Personal Development </category>
-          
           <category> Career Development </category>
+          
+          <category> Personal Development </category>
           
           <category> Life Lessons </category>
           
@@ -1019,9 +1019,9 @@
             
             <tag> note </tag>
             
-            <tag> backend </tag>
-            
             <tag> database-design </tag>
+            
+            <tag> backend </tag>
             
             <tag> sql </tag>
             
