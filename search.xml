@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>Journal: Week 2</title>
+      <link href="/blog/journal-week-2/"/>
+      <url>/blog/journal-week-2/</url>
+      
+        <content type="html"><![CDATA[<h2 id="highlights-of-the-week">Highlights of the Week:</h2><ul><li><strong>Personal update</strong>: this week was a busy week for meto migrate to my new place. renting a room in singapore is tough. i feellike a hermit crab... i skipped quite a few gym sessions because i hadto clean up and unpack stuff. from the lease that we just ended, mysister and i did not get the full deposit back, which was totallyridiculous. we were speechless but just let it go. (might update more onthis next time?)</li><li><strong>Beatboxing</strong>: oh dear, i had a bad flu this week :(didn't beat as much, but i've been progressing on my throat bass andvibration throat bass. i'm getting more and more comfortable withit!</li><li><strong>Work</strong>: i had my first ByteDance All-Hands in person!it was totally an eye-opening experience to hear the heads of eachdepartment talk about the updates of last quarter, their visions for thedepartments, products, and company.</li></ul><h2 id="little-lesson">Little Lesson:</h2><p>this week i re-learnt that to have a solid and great product, youneed to be the user. you need to be in the user's shoes to actually seehow good or bad your product is. by doing this, you can get first-handfeedback and better understand your product and the overall experience,said Rubo Liang. i totally agree with this point. i learnt this keyconcept from Lio when i was working at Pixium Digital. he was my leaderand the CTO of the company. i used to build something inhuman when i wasin charge of my first few projects, even though i had a UX/UIbackground. that's strange, isn't it? and yes, i still made thosemistakes. but after listening to him, i tried to use my product andrealised, wow, he was totally right. this is a solid point and somethingto always remember as a developer, project manager, or leader.</p><img data-src="/blog/journal-week-2/IMG_3473.png" class="large"><video width="auto" height="auto" controls><source src="/blog/journal-week-2/IMG_3476_compressed.mp4" type="video/mp4"></video><img data-src="/blog/journal-week-2/IMG_3482.png" class="large"><video width="auto" height="auto" controls><source src="/blog/journal-week-2/IMG_3483_compressed.mp4" type="video/mp4"></video><!-- .post-body video -->]]></content>
+      
+      
+      <categories>
+          
+          <category> About Me </category>
+          
+          <category> Journals </category>
+          
+          <category> 2024 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> journal </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Journal: Week 1</title>
       <link href="/blog/journal-week-1/"/>
       <url>/blog/journal-week-1/</url>
@@ -257,6 +286,8 @@
       
         <tags>
             
+            <tag> tiktok </tag>
+            
             <tag> site-reliability-engineer </tag>
             
             <tag> sre </tag>
@@ -268,8 +299,6 @@
             <tag> coding-interview </tag>
             
             <tag> job-interview </tag>
-            
-            <tag> tiktok </tag>
             
         </tags>
       
@@ -298,8 +327,6 @@
       
         <tags>
             
-            <tag> google </tag>
-            
             <tag> site-reliability-engineer </tag>
             
             <tag> sre </tag>
@@ -311,6 +338,8 @@
             <tag> coding-interview </tag>
             
             <tag> job-interview </tag>
+            
+            <tag> google </tag>
             
         </tags>
       
@@ -844,9 +873,9 @@
       
         <tags>
             
-            <tag> hobby </tag>
-            
             <tag> beatbox </tag>
+            
+            <tag> hobby </tag>
             
             <tag> stage-performance </tag>
             
@@ -1048,9 +1077,9 @@
             
             <tag> note </tag>
             
-            <tag> backend </tag>
-            
             <tag> database-design </tag>
+            
+            <tag> backend </tag>
             
             <tag> sql </tag>
             
