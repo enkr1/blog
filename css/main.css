@@ -347,7 +347,7 @@ td {
   transition-delay: 0s;
   transition-duration: 0.2s;
   transition-timing-function: ease-in-out;
-  box-shadow: 0.3rem 0.3rem 0.8rem 0rem rgba(0,0,0,0.033);
+  box-shadow: 0.3rem 0.3rem 0.8rem 0rem rgba(0,0,0,0.1);
   backdrop-filter: blur(3px);
 }
 .btn:hover {
@@ -1271,7 +1271,7 @@ p {
   text-align: center;
   white-space: nowrap;
   border-radius: 100%;
-  box-shadow: 0.3rem 0.3rem 0.8rem 0rem rgba(0,0,0,0.033);
+  box-shadow: 0.3rem 0.3rem 0.8rem 0rem rgba(0,0,0,0.1);
   color: #fff;
   background: #c60000;
   width: 2rem;
@@ -1301,7 +1301,7 @@ p {
     background: unset;
     border-radius: 0.84rem;
     border: 1px solid #999 !important;
-    box-shadow: 0.3rem 0.3rem 0.8rem 0rem rgba(0,0,0,0.033);
+    box-shadow: 0.3rem 0.3rem 0.8rem 0rem rgba(0,0,0,0.1);
   }
 }
 .use-motion .menu-item {
@@ -1377,7 +1377,7 @@ p {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #ff9863;
+  background: #beff8f;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2017,7 +2017,7 @@ p {
 }
 .post-body img {
   border-radius: 1.4rem;
-  box-shadow: 0.3rem 0.3rem 0.8rem 0rem rgba(0,0,0,0.033);
+  box-shadow: 0.3rem 0.3rem 0.8rem 0rem rgba(0,0,0,0.1);
   max-height: 25rem;
   width: 100%;
   object-fit: cover;
@@ -2071,7 +2071,7 @@ p {
 }
 .posts-expand.index .fancybox img {
   border-radius: 1.4rem;
-  box-shadow: 0.3rem 0.3rem 0.8rem 0rem rgba(0,0,0,0.033);
+  box-shadow: 0.3rem 0.3rem 0.8rem 0rem rgba(0,0,0,0.1);
   max-height: 25rem;
   width: 100%;
   object-fit: cover;
@@ -2661,7 +2661,7 @@ mjx-container + br {
   background: var(--content-bg-color);
   border-bottom-left-radius: 1.4rem;
   border-bottom-right-radius: 1.4rem;
-  box-shadow: 0.3rem 0.3rem 0.8rem 0rem rgba(0,0,0,0.033);
+  box-shadow: 0.3rem 0.3rem 0.8rem 0rem rgba(0,0,0,0.1);
   overflow: hidden;
   padding: 0;
   position: absolute;
@@ -2696,7 +2696,7 @@ mjx-container + br {
 .content-wrap {
   background: var(--content-bg-color);
   border-radius: initial;
-  box-shadow: 0.3rem 0.3rem 0.8rem 0rem rgba(0,0,0,0.033);
+  box-shadow: 0.3rem 0.3rem 0.8rem 0rem rgba(0,0,0,0.1);
   box-sizing: border-box;
   padding: 40px;
   width: calc(100% - 300px);
@@ -2866,7 +2866,7 @@ mjx-container + br {
 .sidebar-inner {
   background: var(--content-bg-color);
   border-radius: 1.4rem;
-  box-shadow: 0.3rem 0.3rem 0.8rem 0rem rgba(0,0,0,0.033);
+  box-shadow: 0.3rem 0.3rem 0.8rem 0rem rgba(0,0,0,0.1);
   box-sizing: border-box;
   color: var(--text-color);
   width: 300px;
@@ -2957,13 +2957,13 @@ mjx-container + br {
 }
 .post-block {
   background: var(--content-bg-color);
-  box-shadow: 0.3rem 0.3rem 0.8rem 0rem rgba(0,0,0,0.033);
+  box-shadow: 0.3rem 0.3rem 0.8rem 0rem rgba(0,0,0,0.1);
   border-radius: 1rem;
   padding: 40px;
   padding: 1rem 2.4rem 2rem;
 }
 .post-block+.post-block {
-  box-shadow: 0.8rem 0.8rem 0.8rem 0.8rem rgba(0,0,0,0.013);
+  box-shadow: 0.3rem 0.3rem 0.8rem 0rem rgba(0,0,0,0.1);
   margin: 1.4rem 0 0;
 }
 .post-block ol {
@@ -2978,7 +2978,7 @@ mjx-container + br {
 .comments {
   background: var(--content-bg-color);
   border-radius: 1.4rem;
-  box-shadow: 0.8rem 0.8rem 0.8rem 0.8rem rgba(0,0,0,0.013);
+  box-shadow: 0.3rem 0.3rem 0.8rem 0rem rgba(0,0,0,0.1);
   margin: 1.4rem 0 0;
   padding: 40px;
   user-select: none;
@@ -3012,10 +3012,10 @@ mjx-container + br {
 }
 .sub-menu {
   border-bottom: initial;
-  box-shadow: 0.3rem 0.3rem 0.8rem 0rem rgba(0,0,0,0.033);
+  box-shadow: 0.3rem 0.3rem 0.8rem 0rem rgba(0,0,0,0.1);
 }
 .sub-menu +.content .post-block {
-  box-shadow: 0.8rem 0.8rem 0.8rem 0.8rem rgba(0,0,0,0.013);
+  box-shadow: 0.3rem 0.3rem 0.8rem 0rem rgba(0,0,0,0.1);
   margin-top: 0px;
 }
 @media (min-width: 768px) and (max-width: 991px) {
@@ -3076,7 +3076,7 @@ mjx-container + br {
   }
   .post-block {
     border-radius: 1.4rem;
-    box-shadow: 0.8rem 0.8rem 0.8rem 0.8rem rgba(0,0,0,0.013);
+    box-shadow: 0.3rem 0.3rem 0.8rem 0rem rgba(0,0,0,0.1);
     padding: 5px 20px 25px;
     font-size: 1.2rem;
   }
@@ -3100,7 +3100,7 @@ mjx-container + br {
   }
   .post-block {
     border-radius: 1.4rem;
-    box-shadow: 0.8rem 0.8rem 0.8rem 0.8rem rgba(0,0,0,0.013);
+    box-shadow: 0.3rem 0.3rem 0.8rem 0rem rgba(0,0,0,0.1);
     min-height: auto;
     padding: 0.8rem 1rem 2.2rem;
   }
