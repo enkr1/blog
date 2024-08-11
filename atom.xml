@@ -6,7 +6,7 @@
   <link href="https://enkr1.github.io/blog/atom.xml" rel="self"/>
   
   <link href="https://enkr1.github.io/blog/"/>
-  <updated>2024-08-11T19:47:24.154Z</updated>
+  <updated>2024-08-11T20:04:56.601Z</updated>
   <id>https://enkr1.github.io/blog/</id>
   
   <author>
@@ -21,18 +21,31 @@
     <link href="https://enkr1.github.io/blog/journal-week-3/"/>
     <id>https://enkr1.github.io/blog/journal-week-3/</id>
     <published>2024-08-11T19:30:11.000Z</published>
-    <updated>2024-08-11T19:47:24.154Z</updated>
+    <updated>2024-08-11T20:04:56.601Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="highlights-of-the-week">Highlights of the Week:</h2><ul><li><p><strong>Family Time:</strong> my brother came back from Spainthis week, and it was both great and challenging to reconnect. he'sevolved in many ways—he's grown, learned, and become a better version ofhimself. however, we also noticed a bit of arrogance and ego creepingin, which made our interactions a bit tense. we wanted to help him seesome of these changes, but our approach came off more like an attackthan a helpful conversation. It reminded me that even with goodintentions, the way you frame your words really matters.</p></li><li><p><strong>Communication Insight:</strong> this week, i reallylearned the importance of how you frame what you say. It's not justabout having good intentions or the right message—it's about deliveringthat message in a way that others can easily digest and understand. ifyou frame things poorly, you might convey the wrong meaning, leading toconfusion or even conflict. This idea resonated with me deeply,especially in the context of my work where communication and structuringinformation are crucial, just like how a well-structured JSON makes lifeeasier for the backend developers.</p></li></ul><h2 id="little-lesson">Little Lesson:</h2><p>this week i was reminded that communication isn't just about what yousay but how you say it. when you frame your thoughts well, you make iteasier for others to understand and engage with your ideas. this is truein personal conversations, like the ones i had with my brother, and it'salso true in professional settings. just as a well-structured dataobject streamlines coding; clear and thoughtful communication smoothsthe path in life. it's not about giving vague, surface-levelinformation, but about sharing your thoughts in a way that makes senseand is easy to digest for others.</p>]]></content>
+    <content type="html"><![CDATA[<h2 id="highlights-of-the-week">Highlights of the Week:</h2><ul><li><p><strong>Family Time:</strong> my brother came back from Spainthis week, and it was both great and challenging to reconnect. he'sevolved in many ways—he's grown, learned, and become a better version ofhimself. however, we also noticed a bit of arrogance and ego creepingin, which made our interactions a bit tense. we wanted to help him seesome of these changes, but our approach came off more like an attackthan a helpful conversation. It reminded me that even with goodintentions, the way you frame your words really matters.</p></li><li><p><strong>Communication Insight:</strong> this week, i reallylearned the importance of how you frame what you say. It's not justabout having good intentions or the right message—it's about deliveringthat message in a way that others can easily digest and understand. ifyou frame things poorly, you might convey the wrong meaning, leading toconfusion or even conflict. This idea resonated with me deeply,especially in the context of my work where communication and structuringinformation are crucial, just like how a well-structured JSON makes lifeeasier for the backend developers.</p></li></ul><span id="more"></span><h2 id="little-lesson">Little Lesson:</h2><p>this week i was reminded that communication isn't just about what yousay but how you say it. when you frame your thoughts well, you make iteasier for others to understand and engage with your ideas. this is truein personal conversations, like the ones i had with my brother, and it'salso true in professional settings. just as a well-structured dataobject streamlines coding; clear and thoughtful communication smoothsthe path in life. it's not about giving vague, surface-levelinformation, but about sharing your thoughts in a way that makes senseand is easy to digest for others.</p>]]></content>
     
     
-      
-      
     <summary type="html">&lt;h2 id=&quot;highlights-of-the-week&quot;&gt;Highlights of the Week:&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;&lt;strong&gt;Family Time:&lt;/strong&gt; my brother came back from Spain
-this </summary>
-      
+this week, and it was both great and challenging to reconnect. he&#39;s
+evolved in many ways—he&#39;s grown, learned, and become a better version of
+himself. however, we also noticed a bit of arrogance and ego creeping
+in, which made our interactions a bit tense. we wanted to help him see
+some of these changes, but our approach came off more like an attack
+than a helpful conversation. It reminded me that even with good
+intentions, the way you frame your words really matters.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Communication Insight:&lt;/strong&gt; this week, i really
+learned the importance of how you frame what you say. It&#39;s not just
+about having good intentions or the right message—it&#39;s about delivering
+that message in a way that others can easily digest and understand. if
+you frame things poorly, you might convey the wrong meaning, leading to
+confusion or even conflict. This idea resonated with me deeply,
+especially in the context of my work where communication and structuring
+information are crucial, just like how a well-structured JSON makes life
+easier for the backend developers.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;</summary>
     
     
     
@@ -389,8 +402,6 @@ brewing!&lt;/li&gt;
     <category term="Technical Coding Interviews" scheme="https://enkr1.github.io/blog/categories/Career-Development/Interviews/Technical-Coding-Interviews/"/>
     
     
-    <category term="tiktok" scheme="https://enkr1.github.io/blog/tags/tiktok/"/>
-    
     <category term="site-reliability-engineer" scheme="https://enkr1.github.io/blog/tags/site-reliability-engineer/"/>
     
     <category term="sre" scheme="https://enkr1.github.io/blog/tags/sre/"/>
@@ -402,6 +413,8 @@ brewing!&lt;/li&gt;
     <category term="coding-interview" scheme="https://enkr1.github.io/blog/tags/coding-interview/"/>
     
     <category term="job-interview" scheme="https://enkr1.github.io/blog/tags/job-interview/"/>
+    
+    <category term="tiktok" scheme="https://enkr1.github.io/blog/tags/tiktok/"/>
     
   </entry>
   
@@ -426,6 +439,8 @@ brewing!&lt;/li&gt;
     <category term="Technical Coding Interviews" scheme="https://enkr1.github.io/blog/categories/Career-Development/Interviews/Technical-Coding-Interviews/"/>
     
     
+    <category term="google" scheme="https://enkr1.github.io/blog/tags/google/"/>
+    
     <category term="site-reliability-engineer" scheme="https://enkr1.github.io/blog/tags/site-reliability-engineer/"/>
     
     <category term="sre" scheme="https://enkr1.github.io/blog/tags/sre/"/>
@@ -437,8 +452,6 @@ brewing!&lt;/li&gt;
     <category term="coding-interview" scheme="https://enkr1.github.io/blog/tags/coding-interview/"/>
     
     <category term="job-interview" scheme="https://enkr1.github.io/blog/tags/job-interview/"/>
-    
-    <category term="google" scheme="https://enkr1.github.io/blog/tags/google/"/>
     
   </entry>
   

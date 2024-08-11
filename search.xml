@@ -8,7 +8,7 @@
       <link href="/blog/journal-week-3/"/>
       <url>/blog/journal-week-3/</url>
       
-        <content type="html"><![CDATA[<h2 id="highlights-of-the-week">Highlights of the Week:</h2><ul><li><p><strong>Family Time:</strong> my brother came back from Spainthis week, and it was both great and challenging to reconnect. he'sevolved in many ways—he's grown, learned, and become a better version ofhimself. however, we also noticed a bit of arrogance and ego creepingin, which made our interactions a bit tense. we wanted to help him seesome of these changes, but our approach came off more like an attackthan a helpful conversation. It reminded me that even with goodintentions, the way you frame your words really matters.</p></li><li><p><strong>Communication Insight:</strong> this week, i reallylearned the importance of how you frame what you say. It's not justabout having good intentions or the right message—it's about deliveringthat message in a way that others can easily digest and understand. ifyou frame things poorly, you might convey the wrong meaning, leading toconfusion or even conflict. This idea resonated with me deeply,especially in the context of my work where communication and structuringinformation are crucial, just like how a well-structured JSON makes lifeeasier for the backend developers.</p></li></ul><h2 id="little-lesson">Little Lesson:</h2><p>this week i was reminded that communication isn't just about what yousay but how you say it. when you frame your thoughts well, you make iteasier for others to understand and engage with your ideas. this is truein personal conversations, like the ones i had with my brother, and it'salso true in professional settings. just as a well-structured dataobject streamlines coding; clear and thoughtful communication smoothsthe path in life. it's not about giving vague, surface-levelinformation, but about sharing your thoughts in a way that makes senseand is easy to digest for others.</p>]]></content>
+        <content type="html"><![CDATA[<h2 id="highlights-of-the-week">Highlights of the Week:</h2><ul><li><p><strong>Family Time:</strong> my brother came back from Spainthis week, and it was both great and challenging to reconnect. he'sevolved in many ways—he's grown, learned, and become a better version ofhimself. however, we also noticed a bit of arrogance and ego creepingin, which made our interactions a bit tense. we wanted to help him seesome of these changes, but our approach came off more like an attackthan a helpful conversation. It reminded me that even with goodintentions, the way you frame your words really matters.</p></li><li><p><strong>Communication Insight:</strong> this week, i reallylearned the importance of how you frame what you say. It's not justabout having good intentions or the right message—it's about deliveringthat message in a way that others can easily digest and understand. ifyou frame things poorly, you might convey the wrong meaning, leading toconfusion or even conflict. This idea resonated with me deeply,especially in the context of my work where communication and structuringinformation are crucial, just like how a well-structured JSON makes lifeeasier for the backend developers.</p></li></ul><span id="more"></span><h2 id="little-lesson">Little Lesson:</h2><p>this week i was reminded that communication isn't just about what yousay but how you say it. when you frame your thoughts well, you make iteasier for others to understand and engage with your ideas. this is truein personal conversations, like the ones i had with my brother, and it'salso true in professional settings. just as a well-structured dataobject streamlines coding; clear and thoughtful communication smoothsthe path in life. it's not about giving vague, surface-levelinformation, but about sharing your thoughts in a way that makes senseand is easy to digest for others.</p>]]></content>
       
       
       <categories>
@@ -383,8 +383,6 @@
       
         <tags>
             
-            <tag> tiktok </tag>
-            
             <tag> site-reliability-engineer </tag>
             
             <tag> sre </tag>
@@ -396,6 +394,8 @@
             <tag> coding-interview </tag>
             
             <tag> job-interview </tag>
+            
+            <tag> tiktok </tag>
             
         </tags>
       
@@ -424,6 +424,8 @@
       
         <tags>
             
+            <tag> google </tag>
+            
             <tag> site-reliability-engineer </tag>
             
             <tag> sre </tag>
@@ -435,8 +437,6 @@
             <tag> coding-interview </tag>
             
             <tag> job-interview </tag>
-            
-            <tag> google </tag>
             
         </tags>
       
@@ -1318,15 +1318,15 @@
             
             <tag> note </tag>
             
-            <tag> data-science </tag>
-            
-            <tag> machine-learning </tag>
-            
             <tag> mit-idss </tag>
             
             <tag> self-study </tag>
             
+            <tag> machine-learning </tag>
+            
             <tag> ai </tag>
+            
+            <tag> data-science </tag>
             
         </tags>
       
@@ -1392,15 +1392,15 @@
             
             <tag> note </tag>
             
-            <tag> data-science </tag>
-            
-            <tag> machine-learning </tag>
-            
             <tag> mit-idss </tag>
             
             <tag> self-study </tag>
             
+            <tag> machine-learning </tag>
+            
             <tag> ai </tag>
+            
+            <tag> data-science </tag>
             
         </tags>
       
@@ -1435,15 +1435,15 @@
             
             <tag> note </tag>
             
-            <tag> data-science </tag>
-            
-            <tag> machine-learning </tag>
-            
             <tag> mit-idss </tag>
             
             <tag> self-study </tag>
             
+            <tag> machine-learning </tag>
+            
             <tag> ai </tag>
+            
+            <tag> data-science </tag>
             
         </tags>
       
@@ -1478,15 +1478,15 @@
             
             <tag> note </tag>
             
-            <tag> data-science </tag>
-            
-            <tag> machine-learning </tag>
-            
             <tag> mit-idss </tag>
             
             <tag> self-study </tag>
             
+            <tag> machine-learning </tag>
+            
             <tag> ai </tag>
+            
+            <tag> data-science </tag>
             
         </tags>
       
@@ -1521,9 +1521,9 @@
             
             <tag> note </tag>
             
-            <tag> data-science </tag>
-            
             <tag> machine-learning </tag>
+            
+            <tag> data-science </tag>
             
         </tags>
       
@@ -1558,9 +1558,9 @@
             
             <tag> note </tag>
             
-            <tag> data-science </tag>
-            
             <tag> machine-learning </tag>
+            
+            <tag> data-science </tag>
             
             <tag> unsupervised-learning </tag>
             
@@ -1601,15 +1601,15 @@
             
             <tag> note </tag>
             
-            <tag> data-science </tag>
-            
-            <tag> machine-learning </tag>
-            
             <tag> mit-idss </tag>
             
             <tag> self-study </tag>
             
+            <tag> machine-learning </tag>
+            
             <tag> ai </tag>
+            
+            <tag> data-science </tag>
             
         </tags>
       
@@ -1644,15 +1644,15 @@
             
             <tag> note </tag>
             
-            <tag> data-science </tag>
-            
-            <tag> machine-learning </tag>
-            
             <tag> mit-idss </tag>
             
             <tag> self-study </tag>
             
+            <tag> machine-learning </tag>
+            
             <tag> ai </tag>
+            
+            <tag> data-science </tag>
             
         </tags>
       
@@ -1685,15 +1685,15 @@
       
         <tags>
             
-            <tag> data-science </tag>
-            
-            <tag> machine-learning </tag>
-            
             <tag> mit-idss </tag>
             
             <tag> self-study </tag>
             
+            <tag> machine-learning </tag>
+            
             <tag> ai </tag>
+            
+            <tag> data-science </tag>
             
         </tags>
       
