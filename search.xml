@@ -379,8 +379,6 @@
       
         <tags>
             
-            <tag> tiktok </tag>
-            
             <tag> site-reliability-engineer </tag>
             
             <tag> sre </tag>
@@ -392,6 +390,8 @@
             <tag> coding-interview </tag>
             
             <tag> job-interview </tag>
+            
+            <tag> tiktok </tag>
             
         </tags>
       
@@ -420,6 +420,8 @@
       
         <tags>
             
+            <tag> google </tag>
+            
             <tag> site-reliability-engineer </tag>
             
             <tag> sre </tag>
@@ -431,8 +433,6 @@
             <tag> coding-interview </tag>
             
             <tag> job-interview </tag>
-            
-            <tag> google </tag>
             
         </tags>
       
@@ -739,25 +739,11 @@
       
         <tags>
             
-            <tag> beatbox </tag>
-            
             <tag> personal-goals </tag>
-            
-            <tag> degree-pursuit </tag>
-            
-            <tag> computer-science </tag>
             
             <tag> career-development </tag>
             
             <tag> professional-growth </tag>
-            
-            <tag> financial-growth </tag>
-            
-            <tag> reading-goals </tag>
-            
-            <tag> music-production </tag>
-            
-            <tag> bodybuilding </tag>
             
         </tags>
       
@@ -966,9 +952,9 @@
       
         <tags>
             
-            <tag> beatbox </tag>
-            
             <tag> hobby </tag>
+            
+            <tag> beatbox </tag>
             
             <tag> stage-performance </tag>
             
