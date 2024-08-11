@@ -65,7 +65,7 @@ easier for the backend developers.&lt;/p&gt;&lt;/li&gt;
     <link href="https://enkr1.github.io/blog/my-domain-setup-dynadot/"/>
     <id>https://enkr1.github.io/blog/my-domain-setup-dynadot/</id>
     <published>2024-08-11T03:47:41.000Z</published>
-    <updated>2024-08-11T20:01:34.330Z</updated>
+    <updated>2024-08-11T20:06:29.965Z</updated>
     
     <content type="html"><![CDATA[<p>wip ...</p><!--## IntroductionBriefly introduce the purpose of the post. Explain why you chose Dynadot for your domain registration and what this guide will cover.## Why Dynadot?- **User-Friendly Interface:** Describe the ease of use.- **Competitive Pricing:** Mention any pricing benefits.- **Reliable Customer Support:** Share any experiences or reviews.- --><h2 id="registering-a-domain">Registering a Domain</h2><ul><li>Navigate to <span class="exturl" data-url="aHR0cHM6Ly93d3cuZHluYWRvdC5jb20v">Dynadot'sWebsite<i class="fa fa-external-link-alt"></i></span>.</li><li>Search for your desired domain name.</li><li>Proceed with the registration and payment.</li></ul><p><!-- Insert screenshot --><!-- ![Registering Domain](path_to_image.png) --></p><h2 id="configuring-dns-settings">Configuring DNS Settings</h2><ul><li>Access the DNS management panel.</li><li>Update the necessary records (A, CNAME, etc.) to point to yourhosting provider.</li></ul><p><!-- Insert screenshot --><!-- ![DNS Settings](path_to_image.png) --></p><!-- 3. **Integrating with Hexo**   - Update the `_config.yml` file in your Hexo project with the new domain.   - Deploy your Hexo site to ensure the changes take effect.   ```yaml   # _config.yml   url: https://www.yourdomain.com   root: /   ``` --><!-- ## Troubleshooting Common Issues- **Propagation Delays:** Explain that DNS changes might take up to 48 hours to propagate.- **SSL Certificate Setup:** Briefly touch on setting up SSL for your domain.## ConclusionSummarize the steps and reiterate the benefits of having a custom domain. Encourage readers to leave comments or reach out if they have questions.## Future UpdatesMention that the post is a work in progress (WIP) and that you plan to add more detailed instructions or cover additional topics related to domain management. -->]]></content>
     
@@ -81,15 +81,11 @@ easier for the backend developers.&lt;/p&gt;&lt;/li&gt;
     <category term="DNS" scheme="https://enkr1.github.io/blog/categories/Software-Engineering/Configurations/DNS/"/>
     
     
-    <category term="domain setup" scheme="https://enkr1.github.io/blog/tags/domain-setup/"/>
+    <category term="dns" scheme="https://enkr1.github.io/blog/tags/dns/"/>
     
-    <category term="Dynadot" scheme="https://enkr1.github.io/blog/tags/Dynadot/"/>
+    <category term="hexo" scheme="https://enkr1.github.io/blog/tags/hexo/"/>
     
-    <category term="DNS" scheme="https://enkr1.github.io/blog/tags/DNS/"/>
-    
-    <category term="Hexo" scheme="https://enkr1.github.io/blog/tags/Hexo/"/>
-    
-    <category term="GitHub Pages" scheme="https://enkr1.github.io/blog/tags/GitHub-Pages/"/>
+    <category term="gitHub-pages" scheme="https://enkr1.github.io/blog/tags/gitHub-pages/"/>
     
   </entry>
   
