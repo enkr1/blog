@@ -65,9 +65,9 @@ easier for the backend developers.&lt;/p&gt;&lt;/li&gt;
     <link href="https://enkr1.github.io/blog/my-domain-setup-dynadot/"/>
     <id>https://enkr1.github.io/blog/my-domain-setup-dynadot/</id>
     <published>2024-08-11T03:47:41.000Z</published>
-    <updated>2024-08-11T20:06:29.965Z</updated>
+    <updated>2024-08-13T16:59:09.362Z</updated>
     
-    <content type="html"><![CDATA[<p>wip ...</p><!--## IntroductionBriefly introduce the purpose of the post. Explain why you chose Dynadot for your domain registration and what this guide will cover.## Why Dynadot?- **User-Friendly Interface:** Describe the ease of use.- **Competitive Pricing:** Mention any pricing benefits.- **Reliable Customer Support:** Share any experiences or reviews.- --><h2 id="registering-a-domain">Registering a Domain</h2><ul><li>Navigate to <span class="exturl" data-url="aHR0cHM6Ly93d3cuZHluYWRvdC5jb20v">Dynadot'sWebsite<i class="fa fa-external-link-alt"></i></span>.</li><li>Search for your desired domain name.</li><li>Proceed with the registration and payment.</li></ul><p><!-- Insert screenshot --><!-- ![Registering Domain](path_to_image.png) --></p><h2 id="configuring-dns-settings">Configuring DNS Settings</h2><ul><li>Access the DNS management panel.</li><li>Update the necessary records (A, CNAME, etc.) to point to yourhosting provider.</li></ul><p><!-- Insert screenshot --><!-- ![DNS Settings](path_to_image.png) --></p><!-- 3. **Integrating with Hexo**   - Update the `_config.yml` file in your Hexo project with the new domain.   - Deploy your Hexo site to ensure the changes take effect.   ```yaml   # _config.yml   url: https://www.yourdomain.com   root: /   ``` --><!-- ## Troubleshooting Common Issues- **Propagation Delays:** Explain that DNS changes might take up to 48 hours to propagate.- **SSL Certificate Setup:** Briefly touch on setting up SSL for your domain.## ConclusionSummarize the steps and reiterate the benefits of having a custom domain. Encourage readers to leave comments or reach out if they have questions.## Future UpdatesMention that the post is a work in progress (WIP) and that you plan to add more detailed instructions or cover additional topics related to domain management. -->]]></content>
+    <content type="html"><![CDATA[<p>wip ...</p><!--## IntroductionBriefly introduce the purpose of the post. Explain why you chose Dynadot for your domain registration and what this guide will cover.## Why Dynadot?- **User-Friendly Interface:** Describe the ease of use.- **Competitive Pricing:** Mention any pricing benefits.- **Reliable Customer Support:** Share any experiences or reviews.- --><h2 id="registering-a-domain">Registering a Domain</h2><ul><li>Navigate to <span class="exturl" data-url="aHR0cHM6Ly93d3cuZHluYWRvdC5jb20v">Dynadot'sWebsite<i class="fa fa-external-link-alt"></i></span>.</li><li>Search for your desired domain name.</li><li>Proceed with the registration and payment.</li></ul><p><!-- Insert screenshot --><!-- ![Registering Domain](path_to_image.png) --></p><h2 id="configuring-dns-settings">Configuring DNS Settings</h2><ul><li>Access the DNS management panel.</li><li>Update the necessary records (A, CNAME, etc.) to point to yourhosting provider.</li></ul><p><!-- Insert screenshot --><!-- ![DNS Settings](path_to_image.png) --></p><h2 id="references">References</h2><ul><li><ahref="https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site">GitHub- Managing a custom domain for your GitHub Pages site</a></li><li>https://webmail.dynadot.com/mailbox/folder.html</li></ul><!-- 3. **Integrating with Hexo**   - Update the `_config.yml` file in your Hexo project with the new domain.   - Deploy your Hexo site to ensure the changes take effect.   ```yaml   # _config.yml   url: https://www.yourdomain.com   root: /   ``` --><!-- ## Troubleshooting Common Issues- **Propagation Delays:** Explain that DNS changes might take up to 48 hours to propagate.- **SSL Certificate Setup:** Briefly touch on setting up SSL for your domain.## ConclusionSummarize the steps and reiterate the benefits of having a custom domain. Encourage readers to leave comments or reach out if they have questions.## Future UpdatesMention that the post is a work in progress (WIP) and that you plan to add more detailed instructions or cover additional topics related to domain management. -->]]></content>
     
     
     <summary type="html">A detailed guide on how to configure a custom domain from Dynadot with GitHub Pages. Learn how to manage DNS settings and integrate your domain with Hexo for seamless website hosting.</summary>
@@ -398,6 +398,8 @@ brewing!&lt;/li&gt;
     <category term="Technical Coding Interviews" scheme="https://enkr1.github.io/blog/categories/Career-Development/Interviews/Technical-Coding-Interviews/"/>
     
     
+    <category term="tiktok" scheme="https://enkr1.github.io/blog/tags/tiktok/"/>
+    
     <category term="site-reliability-engineer" scheme="https://enkr1.github.io/blog/tags/site-reliability-engineer/"/>
     
     <category term="sre" scheme="https://enkr1.github.io/blog/tags/sre/"/>
@@ -409,8 +411,6 @@ brewing!&lt;/li&gt;
     <category term="coding-interview" scheme="https://enkr1.github.io/blog/tags/coding-interview/"/>
     
     <category term="job-interview" scheme="https://enkr1.github.io/blog/tags/job-interview/"/>
-    
-    <category term="tiktok" scheme="https://enkr1.github.io/blog/tags/tiktok/"/>
     
   </entry>
   
@@ -435,8 +435,6 @@ brewing!&lt;/li&gt;
     <category term="Technical Coding Interviews" scheme="https://enkr1.github.io/blog/categories/Career-Development/Interviews/Technical-Coding-Interviews/"/>
     
     
-    <category term="google" scheme="https://enkr1.github.io/blog/tags/google/"/>
-    
     <category term="site-reliability-engineer" scheme="https://enkr1.github.io/blog/tags/site-reliability-engineer/"/>
     
     <category term="sre" scheme="https://enkr1.github.io/blog/tags/sre/"/>
@@ -448,6 +446,8 @@ brewing!&lt;/li&gt;
     <category term="coding-interview" scheme="https://enkr1.github.io/blog/tags/coding-interview/"/>
     
     <category term="job-interview" scheme="https://enkr1.github.io/blog/tags/job-interview/"/>
+    
+    <category term="google" scheme="https://enkr1.github.io/blog/tags/google/"/>
     
   </entry>
   
