@@ -6,7 +6,7 @@
   <link href="https://enkr1.github.io/blog/atom.xml" rel="self"/>
   
   <link href="https://enkr1.github.io/blog/"/>
-  <updated>2024-08-11T20:04:56.601Z</updated>
+  <updated>2024-08-18T18:04:19.198Z</updated>
   <id>https://enkr1.github.io/blog/</id>
   
   <author>
@@ -15,6 +15,41 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Journal: Week 4</title>
+    <link href="https://enkr1.github.io/blog/journal-week-4/"/>
+    <id>https://enkr1.github.io/blog/journal-week-4/</id>
+    <published>2024-08-18T13:25:23.000Z</published>
+    <updated>2024-08-18T18:04:19.198Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="highlights-of-the-week">Highlights of the Week:</h2><ul><li><strong>Work:</strong> full productivity at work, got a lot of todosdone! felt really productive and even managed to get off work earlier.doing so much better compared to my last quarter where i'd be OT-ingtill 4 am.</li><li><strong>Gym:</strong> back to my usual gym routine (PPL), onlyresting a day now! getting back into my old routine feels so good!</li><li><strong>Personal Priorities:</strong> finally got some time forpersonal priorities and even squeezed in some learning!</li></ul><span id="more"></span><h2 id="little-lesson">Little Lesson:</h2><p>i relearned how important it is to make notes and write down yourtodos. it's like having a second brain, which reminded me of the book"Building a Second Brain" by Tiago Forte. this book really changed mylife. it was recommended by my previous leader, Lio!</p>]]></content>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;highlights-of-the-week&quot;&gt;Highlights of the Week:&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Work:&lt;/strong&gt; full productivity at work, got a lot of todos
+done! felt really productive and even managed to get off work earlier.
+doing so much better compared to my last quarter where i&#39;d be OT-ing
+till 4 am.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Gym:&lt;/strong&gt; back to my usual gym routine (PPL), only
+resting a day now! getting back into my old routine feels so good!&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Personal Priorities:&lt;/strong&gt; finally got some time for
+personal priorities and even squeezed in some learning!&lt;/li&gt;
+&lt;/ul&gt;</summary>
+    
+    
+    
+    <category term="About Me" scheme="https://enkr1.github.io/blog/categories/About-Me/"/>
+    
+    <category term="Journals" scheme="https://enkr1.github.io/blog/categories/About-Me/Journals/"/>
+    
+    <category term="2024" scheme="https://enkr1.github.io/blog/categories/About-Me/Journals/2024/"/>
+    
+    
+    <category term="journal" scheme="https://enkr1.github.io/blog/tags/journal/"/>
+    
+  </entry>
   
   <entry>
     <title>Journal: Week 3</title>
@@ -398,8 +433,6 @@ brewing!&lt;/li&gt;
     <category term="Technical Coding Interviews" scheme="https://enkr1.github.io/blog/categories/Career-Development/Interviews/Technical-Coding-Interviews/"/>
     
     
-    <category term="tiktok" scheme="https://enkr1.github.io/blog/tags/tiktok/"/>
-    
     <category term="site-reliability-engineer" scheme="https://enkr1.github.io/blog/tags/site-reliability-engineer/"/>
     
     <category term="sre" scheme="https://enkr1.github.io/blog/tags/sre/"/>
@@ -411,6 +444,8 @@ brewing!&lt;/li&gt;
     <category term="coding-interview" scheme="https://enkr1.github.io/blog/tags/coding-interview/"/>
     
     <category term="job-interview" scheme="https://enkr1.github.io/blog/tags/job-interview/"/>
+    
+    <category term="tiktok" scheme="https://enkr1.github.io/blog/tags/tiktok/"/>
     
   </entry>
   
@@ -435,6 +470,8 @@ brewing!&lt;/li&gt;
     <category term="Technical Coding Interviews" scheme="https://enkr1.github.io/blog/categories/Career-Development/Interviews/Technical-Coding-Interviews/"/>
     
     
+    <category term="google" scheme="https://enkr1.github.io/blog/tags/google/"/>
+    
     <category term="site-reliability-engineer" scheme="https://enkr1.github.io/blog/tags/site-reliability-engineer/"/>
     
     <category term="sre" scheme="https://enkr1.github.io/blog/tags/sre/"/>
@@ -446,8 +483,6 @@ brewing!&lt;/li&gt;
     <category term="coding-interview" scheme="https://enkr1.github.io/blog/tags/coding-interview/"/>
     
     <category term="job-interview" scheme="https://enkr1.github.io/blog/tags/job-interview/"/>
-    
-    <category term="google" scheme="https://enkr1.github.io/blog/tags/google/"/>
     
   </entry>
   
@@ -627,39 +662,6 @@ brewing!&lt;/li&gt;
     <category term="mysql" scheme="https://enkr1.github.io/blog/tags/mysql/"/>
     
     <category term="postgresql" scheme="https://enkr1.github.io/blog/tags/postgresql/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>My Vim Journey: Essential Commands and Tricks for Developers</title>
-    <link href="https://enkr1.github.io/blog/my-vim-journey-essential-commands-and-tricks-for-developers/"/>
-    <id>https://enkr1.github.io/blog/my-vim-journey-essential-commands-and-tricks-for-developers/</id>
-    <published>2024-05-18T20:09:35.000Z</published>
-    <updated>2024-06-03T17:52:36.347Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="what-is-vim">What is Vim?</h2><p>Vim (Vi IMproved) is a highly configurable text editor built to makecreating and changing any kind of text very efficient. It is an improvedversion of the vi editor distributed with most UNIX systems.</p><blockquote><p>I am using Vim for monitoring log files, modifying scripts andenvironment files for DevOps tasks. Occasionally, I switch to frontendand backend development, where I might forget some commands. Here aresome notes for myself, and hopefully, they help others too!</p></blockquote><h2 id="basic-movements">Basic Movements</h2><table><colgroup><col style="width: 6%" /><col style="width: 93%" /></colgroup><thead><tr class="header"><th>Command</th><th>Description</th></tr></thead><tbody><tr class="odd"><td><code>h</code></td><td>Move cursor left</td></tr><tr class="even"><td><code>j</code></td><td>Move cursor down</td></tr><tr class="odd"><td><code>k</code></td><td>Move cursor up</td></tr><tr class="even"><td><code>l</code></td><td>Move cursor right</td></tr><tr class="odd"><td><code>gg</code></td><td>Go to the first line of the file</td></tr><tr class="even"><td><code>G</code></td><td>Go to the last line of the file</td></tr><tr class="odd"><td><code>w</code></td><td>Move to the beginning of the next word</td></tr><tr class="even"><td><code>e</code></td><td>Move to the end of the current word</td></tr><tr class="odd"><td><code>b</code></td><td>Move to the beginning of the previous word</td></tr><tr class="even"><td><code>0</code></td><td>Move the cursor to the beginning of the current line</td></tr><tr class="odd"><td><code>$</code></td><td>Move the cursor to the end of the current line</td></tr><tr class="even"><td><code>W</code></td><td>Move the cursor to the beginning of the next WORD (a WORD is asequence of non-whitespace characters)</td></tr><tr class="odd"><td><code>&#125;</code></td><td>Move the cursor to the beginning of the next paragraph</td></tr><tr class="even"><td><code>&#123;</code></td><td>Move the cursor to the beginning of the previous paragraph</td></tr><tr class="odd"><td><code>%</code></td><td>Move the cursor to the matching bracket or parenthesis</td></tr></tbody></table><h2 id="editing-commands">Editing Commands</h2><table><colgroup><col style="width: 12%" /><col style="width: 87%" /></colgroup><thead><tr class="header"><th>Command</th><th>Description</th></tr></thead><tbody><tr class="odd"><td><code>i</code></td><td>Enter insert mode before the cursor</td></tr><tr class="even"><td><code>o</code></td><td>Insert a new line below the current line and enter insert mode</td></tr><tr class="odd"><td><code>O</code></td><td>Insert a new line above the current line and enter insert mode</td></tr><tr class="even"><td><code>dd</code></td><td>Delete the current line</td></tr><tr class="odd"><td><code>yy</code></td><td>Yank (copy) the current line</td></tr><tr class="even"><td><code>p</code></td><td>Paste the yanked or deleted text after the cursor</td></tr><tr class="odd"><td><code>J</code></td><td>join the current line with the next line</td></tr><tr class="even"><td><code>u</code></td><td>Undo the last change</td></tr><tr class="odd"><td><code>r</code></td><td>Replace the character under the cursor with the next charactertyped</td></tr><tr class="even"><td><code>s</code></td><td>Delete the character under the cursor and enter insert mode</td></tr><tr class="odd"><td><code>x</code></td><td>Delete the character under the cursor</td></tr><tr class="even"><td><code>Ctrl + r</code></td><td>Redo the undone change</td></tr><tr class="odd"><td><code>:w</code></td><td>Save the file</td></tr><tr class="even"><td><code>:q</code></td><td>Quit Vim</td></tr><tr class="odd"><td><code>:wq</code></td><td>Save and quit</td></tr><tr class="even"><td><code>:q!</code></td><td>Quit without saving</td></tr></tbody></table><h2 id="searching-and-replacing">Searching and Replacing</h2><table><thead><tr class="header"><th>Command</th><th>Description</th></tr></thead><tbody><tr class="odd"><td><code>/pattern</code></td><td>Search for <code>pattern</code></td></tr><tr class="even"><td><code>n</code></td><td>Repeat search in the same direction</td></tr><tr class="odd"><td><code>N</code></td><td>Repeat search in the opposite direction</td></tr><tr class="even"><td><code>:s/foo/bar/g</code></td><td>Replace <code>foo</code> with <code>bar</code> in the file</td></tr><tr class="odd"><td><code>:%s/old/new/g</code></td><td>Replace all instances of <code>old</code> with <code>new</code></td></tr></tbody></table><h2 id="control">Control</h2><table><colgroup><col style="width: 12%" /><col style="width: 87%" /></colgroup><thead><tr class="header"><th>Command</th><th>Description</th></tr></thead><tbody><tr class="odd"><td><code>Ctrl + o</code></td><td>Jump back to the previous position</td></tr><tr class="even"><td><code>Ctrl + i</code></td><td>Jump forward to the next position</td></tr><tr class="odd"><td><code>Ctrl + f</code></td><td>Move the cursor forward one screen</td></tr><tr class="even"><td><code>Ctrl + b</code></td><td>Move the cursor backward one screen</td></tr><tr class="odd"><td><code>Ctrl + d</code></td><td>Move the cursor down half a screen</td></tr><tr class="even"><td><code>Ctrl + u</code></td><td>Move the cursor up half a screen</td></tr><tr class="odd"><td><code>Ctrl + g</code></td><td>Show the current cursor position in the document</td></tr><tr class="even"><td><code>Ctrl + w</code></td><td>Delete the word before the cursor</td></tr><tr class="odd"><td><code>Ctrl + y</code></td><td>Copy the character above the cursor and insert it at the cursorposition</td></tr><tr class="even"><td><code>Ctrl + e</code></td><td>Copy the character below the cursor and insert it at the cursorposition</td></tr><tr class="odd"><td><code>Ctrl + r</code></td><td>Enter register mode (used for copying and pasting text)</td></tr></tbody></table><h2 id="customisation">Customisation</h2><table><thead><tr class="header"><th>Command</th><th>Description</th></tr></thead><tbody><tr class="odd"><td><code>:set number</code></td><td>Show line numbers</td></tr><tr class="even"><td><code>:set hlsearch</code></td><td>Highlight all search matches</td></tr><tr class="odd"><td><code>:set ignorecase</code></td><td>Ignore case when searching</td></tr><tr class="even"><td><code>:set tabstop=4</code></td><td>Set the tab width to 4 spaces</td></tr><tr class="odd"><td><code>:set expandtab</code></td><td>Convert tabs to spaces</td></tr><tr class="even"><td><code>:set mouse=a</code></td><td>Enable mouse support in Vim</td></tr></tbody></table>]]></content>
-    
-    
-    <summary type="html">Explore a personal collection of Vim commands and tricks that I&#39;ve found useful in enhancing my text editing efficiency. Whether you&#39;re a DevOps engineer, a frontend developer, or a backend coder, these notes will guide you through mastering Vim.</summary>
-    
-    
-    
-    <category term="Software Engineering" scheme="https://enkr1.github.io/blog/categories/Software-Engineering/"/>
-    
-    <category term="Development Tools" scheme="https://enkr1.github.io/blog/categories/Software-Engineering/Development-Tools/"/>
-    
-    <category term="Editors" scheme="https://enkr1.github.io/blog/categories/Software-Engineering/Development-Tools/Editors/"/>
-    
-    
-    <category term="note" scheme="https://enkr1.github.io/blog/tags/note/"/>
-    
-    <category term="vim" scheme="https://enkr1.github.io/blog/tags/vim/"/>
-    
-    <category term="text-editor" scheme="https://enkr1.github.io/blog/tags/text-editor/"/>
-    
-    <category term="development-tools" scheme="https://enkr1.github.io/blog/tags/development-tools/"/>
-    
-    <category term="coding-productivity" scheme="https://enkr1.github.io/blog/tags/coding-productivity/"/>
     
   </entry>
   
