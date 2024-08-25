@@ -31,10 +31,11 @@
 <meta property="og:description" content="My notes on solving LeetCode Problem 210: Course Schedule II using Topological Sort. This guide includes the problem statement, approach, and code implementation.">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2024-06-23T11:49:05.000Z">
-<meta property="article:modified_time" content="2024-06-23T12:06:29.718Z">
+<meta property="article:modified_time" content="2024-08-25T16:07:33.738Z">
 <meta property="article:author" content="Jing Hui PANG | 彭竞辉 | ENKR">
 <meta property="article:tag" content="algorithm">
 <meta property="article:tag" content="leetcode">
+<meta property="article:tag" content="leetcode-medium">
 <meta property="article:tag" content="interview-preparation">
 <meta property="article:tag" content="javascript">
 <meta property="article:tag" content="topological-sort">
@@ -195,17 +196,17 @@
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/blog/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">46</span></a>
+    <a href="/blog/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">47</span></a>
 
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/blog/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">94</span></a>
+    <a href="/blog/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">97</span></a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/blog/archives/" rel="section"><i class="fa fa-history fa-fw"></i>Archives<span class="badge">54</span></a>
+    <a href="/blog/archives/" rel="section"><i class="fa fa-history fa-fw"></i>Archives<span class="badge">55</span></a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -290,9 +291,8 @@ NOTE: created_at
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: Sun 23 June 2024 19:49:05 PM / Modified: 20:06:29 PM" itemprop="dateCreated datePublished" datetime="2024-06-23T19:49:05+08:00">Sun 23 June 2024</time>
+              <time title="Created: Sun 23 June 2024 19:49:05 PM" itemprop="dateCreated datePublished" datetime="2024-06-23T19:49:05+08:00">Sun 23 June 2024</time>
             </span>
 
 <!--
@@ -300,6 +300,13 @@ NOTE: created_at
 -->
 <!--
 -->
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: Mon 26 August 2024 00:07:33 AM" itemprop="dateModified" datetime="2024-08-26T00:07:33+08:00">Mon 26 August 2024</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -312,6 +319,10 @@ NOTE: created_at
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/blog/categories/Software-Engineering/Coding-Problems/" itemprop="url" rel="index"><span itemprop="name">Coding Problems</span></a>
                 </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/To-Re-do/" itemprop="url" rel="index"><span itemprop="name">To Re-do</span></a>
+                </span>
             </span>
 
           
@@ -319,13 +330,13 @@ NOTE: created_at
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-              <span>5.2k</span>
+              <span>862</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
-              <span>5 mins.</span>
+              <span>3 mins.</span>
             </span>
 
 <!--
@@ -416,7 +427,7 @@ be done before task <code>B</code>, there is a directed edge from
 <code>A</code> to <code>B</code>.</li>
 <li><strong>Indegree</strong>: The number of incoming edges to a node.
 Nodes with zero indegree can be processed immediately as they have no
-dependencies.</li>
+dependencies. <figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Example: [[1, 0], [2, 0], [3, 1], [3, 2]]</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Graph:</span></span><br><span class="line"><span class="attribute">0</span> -&gt; <span class="number">1</span>: Course <span class="number">0</span> is a prerequisite for Course <span class="number">1</span>.</span><br><span class="line"><span class="attribute">0</span> -&gt; <span class="number">2</span>: Course <span class="number">0</span> is a prerequisite for Course <span class="number">2</span>.</span><br><span class="line"><span class="attribute">1</span> -&gt; <span class="number">3</span>: Course <span class="number">1</span> is a prerequisite for Course <span class="number">3</span>.</span><br><span class="line"><span class="attribute">2</span> -&gt; <span class="number">3</span>: Course <span class="number">2</span> is a prerequisite for Course <span class="number">3</span>.</span><br><span class="line"></span><br><span class="line"><span class="comment"># Indegree of a course = Number of prerequisites.</span></span><br><span class="line"><span class="attribute">indegree</span>[<span class="number">0</span>] = <span class="number">0</span> (No prerequisites)</span><br><span class="line"><span class="attribute">indegree</span>[<span class="number">1</span>] = <span class="number">1</span> (Prerequisite: Course <span class="number">0</span>)</span><br><span class="line"><span class="attribute">indegree</span>[<span class="number">2</span>] = <span class="number">1</span> (Prerequisite: Course <span class="number">0</span>)</span><br><span class="line"><span class="attribute">indegree</span>[<span class="number">3</span>] = <span class="number">2</span> (Prerequisites: Courses <span class="number">1</span>, <span class="number">2</span>)</span><br></pre></td></tr></table></figure></li>
 </ol>
 <h3 id="steps-to-perform-topological-sort">Steps to Perform Topological
 Sort:</h3>
@@ -515,10 +526,10 @@ are met.</p>
   <div class="popular-posts-header">Related Posts</div>
   <ul class="popular-posts">
     <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="/blog/leetcode-192-word-frequency/" rel="bookmark">LeetCode-192: Word Frequency</a></div>
+      <div class="popular-posts-title"><a href="/blog/leetcode-704-binary-search/" rel="bookmark">LeetCode-704: Binary Search</a></div>
     </li>
     <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="/blog/leetcode-193-valid-phone-numbers/" rel="bookmark">LeetCode-193: Valid Phone Numbers</a></div>
+      <div class="popular-posts-title"><a href="/blog/leetcode-192-word-frequency/" rel="bookmark">LeetCode-192: Word Frequency</a></div>
     </li>
     <li class="popular-posts-item">
       <div class="popular-posts-title"><a href="/blog/leetcode-194-transpose-file/" rel="bookmark">LeetCode-194: Transpose File</a></div>
@@ -527,7 +538,7 @@ are met.</p>
       <div class="popular-posts-title"><a href="/blog/my-leetcode-journey-from-novice-to-bytedance-software-engineer/" rel="bookmark">My LeetCode Journey: From Novice to ByteDance Software Engineer</a></div>
     </li>
     <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="/blog/floyd-warshall-algorithm-comprehensive-guide-to-all-pairs-shortest-paths/" rel="bookmark">Floyd-Warshall Algorithm: Comprehensive Guide to All-Pairs Shortest Paths</a></div>
+      <div class="popular-posts-title"><a href="/blog/leetcode-193-valid-phone-numbers/" rel="bookmark">LeetCode-193: Valid Phone Numbers</a></div>
     </li>
   </ul>
 <div class="post-widgets">
@@ -549,6 +560,7 @@ are met.</p>
           <div class="post-tags">
               <a href="/blog/tags/algorithm/" rel="tag"># algorithm</a>
               <a href="/blog/tags/leetcode/" rel="tag"># leetcode</a>
+              <a href="/blog/tags/leetcode-medium/" rel="tag"># leetcode-medium</a>
               <a href="/blog/tags/interview-preparation/" rel="tag"># interview-preparation</a>
               <a href="/blog/tags/javascript/" rel="tag"># javascript</a>
               <a href="/blog/tags/topological-sort/" rel="tag"># topological-sort</a>
@@ -653,20 +665,20 @@ Topological Sort to Course Schedule II:</span></a><ol class="nav-child"><li clas
       <div class="site-state-item site-state-posts">
           <a href="/blog/archives/">
         
-          <span class="site-state-item-count">54</span>
+          <span class="site-state-item-count">55</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/blog/categories/">
           
-        <span class="site-state-item-count">46</span>
+        <span class="site-state-item-count">47</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/blog/tags/">
           
-        <span class="site-state-item-count">94</span>
+        <span class="site-state-item-count">97</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -708,12 +720,12 @@ Topological Sort to Course Schedule II:</span></a><ol class="nav-child"><li clas
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="Symbols count total">235k</span>
+    <span title="Symbols count total">41k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">3:33</span>
+    <span title="Reading time total">2:30</span>
 </div>
 
         
