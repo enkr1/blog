@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>Journal: Week 5</title>
+      <link href="/blog/journal-week-5/"/>
+      <url>/blog/journal-week-5/</url>
+      
+        <content type="html"><![CDATA[<h2 id="highlights-of-the-week">Highlights of the Week:</h2><ul><li><strong>Elixir Exploration:</strong> this week, i dived back intosome elixir topics and even tried deploying my app on fly.io. i'm reallyseeing the potential in elixir and its famous phoenix framework. i'mexcited to start a side project with it and relearn everything i knowabout elixir!</li><li><strong>Reading:</strong> i've been reading <em>The Diary of aCEO</em> by Steven Bartlett. one quote that really resonated with me is:"Do the thing you fear, and keep on doing it. that is the quickest andsurest way ever yet discovered to conquer fear." it's been on my mindall week and has inspired me to push through my own fears.</li></ul><span id="more"></span><h2 id="little-lesson">Little Lesson:</h2><p>this week reminded me of the importance of revisiting foundationalknowledge. whether it's with elixir or in life, going back to the basicscan open up new perspectives and reignite your passion. continuouslearning and embracing the journey are key to growth.</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> About Me </category>
+          
+          <category> Journals </category>
+          
+          <category> 2024 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> journal </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Journal: Week 4</title>
       <link href="/blog/journal-week-4/"/>
       <url>/blog/journal-week-4/</url>
@@ -1104,9 +1133,9 @@
           
           <category> Personal Development </category>
           
-          <category> Career Development </category>
-          
           <category> Life Lessons </category>
+          
+          <category> Career Development </category>
           
           <category> Project Management </category>
           
