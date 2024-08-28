@@ -233,7 +233,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/blog/archives/" rel="section"><i class="fa fa-history fa-fw"></i>Archives<span class="badge">55</span></a>
+    <a href="/blog/archives/" rel="section"><i class="fa fa-history fa-fw"></i>Archives<span class="badge">56</span></a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -1435,6 +1435,121 @@ NOTE: views count
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://enkr1.github.io/blog/leetcode-1642/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="name" content="Jing Hui PANG | 彭竞辉 | ENKR">
+      <meta itemprop="description" content="Insights and beats at the intersection of technology and artistry by Jing Hui PANG, also known as ENKR. Discover programming tips, beatbox tutorials, and more.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ENKR's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/blog/leetcode-1642/" class="post-title-link" itemprop="url">leetcode-1642</a>
+        </h2>
+
+        <div class="post-meta">
+
+<!--
+NOTE: created_at
+-->
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: Wed 28 August 2024 23:36:05 PM / Modified: 23:46:40 PM" itemprop="dateCreated datePublished" datetime="2024-08-28T23:36:05+08:00">Wed 28 August 2024</time>
+            </span>
+
+<!--
+NOTE: created_at
+-->
+<!--
+-->
+
+          
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+              <span>170</span>
+            </span>
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+              <span>1 mins.</span>
+            </span>
+
+<!--
+NOTE: disqus
+-->
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/blog/leetcode-1642/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="leetcode-1642/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+<!--
+NOTE: views count
+-->
+            <span class="post-meta-item" title="Views">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-users"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <b><span class="firestore-visitors-count"></span></b>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="furthest-building-you-can-reach"><a
+target="_blank" rel="noopener" href="https://leetcode.com/problems/furthest-building-you-can-reach/">1642.
+Furthest Building You Can Reach</a></h2>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">number[]</span>&#125; <span class="variable">heights</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">number</span>&#125; <span class="variable">bricks</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">number</span>&#125; <span class="variable">ladders</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">number</span>&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">furthestBuilding</span> = (<span class="params">heights, bricks, ladders</span>) =&gt; &#123;</span><br><span class="line">    <span class="keyword">let</span> N = heights.<span class="property">length</span>;</span><br><span class="line">    <span class="comment">// MinPriorityQueue (min-heap) to store the height differences we need to overcome</span></span><br><span class="line">    <span class="keyword">let</span> heap = <span class="keyword">new</span> <span class="title class_">MinPriorityQueue</span>();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">1</span>; i &lt; N;h i++) &#123;</span><br><span class="line">        <span class="keyword">let</span> curr = heights[i - <span class="number">1</span>];</span><br><span class="line">        <span class="keyword">let</span> next = heights[i];</span><br><span class="line">        <span class="keyword">let</span> diff = next - curr;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// when climbing up, we have to decide whether to use bricks or ladders.</span></span><br><span class="line">        <span class="keyword">if</span> (diff &gt; <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="comment">// store into min heap</span></span><br><span class="line">            heap.<span class="title function_">enqueue</span>(diff);</span><br><span class="line"></span><br><span class="line">            <span class="comment">// if the heap size exceeds the number of ladders available, we need to start using bricks, also means we have encountered more gaps than we have ladders to cover</span></span><br><span class="line">            <span class="comment">// note: when we have more in heap than ladders, that is when to decide whether we can continue by checking the smallest height.</span></span><br><span class="line">            <span class="keyword">if</span> (heap.<span class="title function_">size</span>() &gt; ladders) &#123;</span><br><span class="line">                <span class="keyword">let</span> smallestHeight = heap.<span class="title function_">dequeue</span>().<span class="property">element</span>;</span><br><span class="line"></span><br><span class="line">                <span class="keyword">if</span> (bricks &gt;= smallestHeight) &#123;</span><br><span class="line">                    bricks -= smallestHeight;</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    <span class="comment">// if bricks cant cover the smallest height, that is the furtherest we can go.</span></span><br><span class="line">                    <span class="keyword">return</span> i - <span class="number">1</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> N - <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+      
+
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="https://enkr1.github.io/blog/leetcode-704-binary-search/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1462,9 +1577,8 @@ NOTE: created_at
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: Sun 25 August 2024 23:44:12 PM / Modified: 23:56:51 PM" itemprop="dateCreated datePublished" datetime="2024-08-25T23:44:12+08:00">Sun 25 August 2024</time>
+              <time title="Created: Sun 25 August 2024 23:44:12 PM" itemprop="dateCreated datePublished" datetime="2024-08-25T23:44:12+08:00">Sun 25 August 2024</time>
             </span>
 
 <!--
@@ -1472,6 +1586,13 @@ NOTE: created_at
 -->
 <!--
 -->
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: Wed 28 August 2024 23:37:16 PM" itemprop="dateModified" datetime="2024-08-28T23:37:16+08:00">Wed 28 August 2024</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -1491,7 +1612,7 @@ NOTE: created_at
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-              <span>187</span>
+              <span>186</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
@@ -2722,7 +2843,7 @@ NOTE: created_at
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: Mon 26 August 2024 00:07:33 AM" itemprop="dateModified" datetime="2024-08-26T00:07:33+08:00">Mon 26 August 2024</time>
+                <time title="Modified: Wed 28 August 2024 23:36:52 PM" itemprop="dateModified" datetime="2024-08-28T23:36:52+08:00">Wed 28 August 2024</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -2747,7 +2868,7 @@ NOTE: created_at
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-              <span>862</span>
+              <span>861</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
@@ -2864,7 +2985,7 @@ NOTE: created_at
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: Sun 25 August 2024 23:54:46 PM" itemprop="dateModified" datetime="2024-08-25T23:54:46+08:00">Sun 25 August 2024</time>
+                <time title="Modified: Wed 28 August 2024 23:37:04 PM" itemprop="dateModified" datetime="2024-08-28T23:37:04+08:00">Wed 28 August 2024</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -2885,7 +3006,7 @@ NOTE: created_at
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-              <span>266</span>
+              <span>264</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
@@ -3002,7 +3123,7 @@ NOTE: created_at
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: Sun 25 August 2024 23:54:34 PM" itemprop="dateModified" datetime="2024-08-25T23:54:34+08:00">Sun 25 August 2024</time>
+                <time title="Modified: Wed 28 August 2024 23:36:57 PM" itemprop="dateModified" datetime="2024-08-28T23:36:57+08:00">Wed 28 August 2024</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -3023,7 +3144,7 @@ NOTE: created_at
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-              <span>507</span>
+              <span>506</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
@@ -3140,7 +3261,7 @@ NOTE: created_at
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: Sun 25 August 2024 23:54:56 PM" itemprop="dateModified" datetime="2024-08-25T23:54:56+08:00">Sun 25 August 2024</time>
+                <time title="Modified: Wed 28 August 2024 23:37:08 PM" itemprop="dateModified" datetime="2024-08-28T23:37:08+08:00">Wed 28 August 2024</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -3161,7 +3282,7 @@ NOTE: created_at
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-              <span>238</span>
+              <span>237</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
@@ -4319,132 +4440,6 @@ NOTE: views count
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://enkr1.github.io/blog/innovative-portfolio-a-journey-through-software-and-technology/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/blog/images/avatar.gif">
-      <meta itemprop="name" content="Jing Hui PANG | 彭竞辉 | ENKR">
-      <meta itemprop="description" content="Insights and beats at the intersection of technology and artistry by Jing Hui PANG, also known as ENKR. Discover programming tips, beatbox tutorials, and more.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ENKR's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/blog/innovative-portfolio-a-journey-through-software-and-technology/" class="post-title-link" itemprop="url">Innovative Portfolio: A Journey Through Software and Technology</a>
-        </h2>
-
-        <div class="post-meta">
-
-<!--
-NOTE: created_at
--->
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: Fri 17 May 2024 03:18:36 AM" itemprop="dateCreated datePublished" datetime="2024-05-17T03:18:36+08:00">Fri 17 May 2024</time>
-            </span>
-
-<!--
-NOTE: created_at
--->
-<!--
--->
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: Thu 23 May 2024 01:43:09 AM" itemprop="dateModified" datetime="2024-05-23T01:43:09+08:00">Thu 23 May 2024</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Software-Engineering/" itemprop="url" rel="index"><span itemprop="name">Software Engineering</span></a>
-                </span>
-                  , 
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Software-Engineering/Projects/" itemprop="url" rel="index"><span itemprop="name">Projects</span></a>
-                </span>
-            </span>
-
-          
-            <span class="post-meta-item" title="Symbols count in article">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-              <span>65</span>
-            </span>
-            <span class="post-meta-item" title="Reading time">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-              <span>1 mins.</span>
-            </span>
-
-<!--
-NOTE: disqus
--->
-  
-  
-
-<!--
-NOTE: views count
--->
-            <span class="post-meta-item" title="Views">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-users"></i>
-              </span>
-              <span class="post-meta-item-text">Views: </span>
-              <b><span class="firestore-visitors-count"></span></b>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Explore my portfolio of cutting-edge software and technology projects. From mobile apps to web platforms, discover how I solve real-world challenges with innovative and effective solutions.</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/blog/innovative-portfolio-a-journey-through-software-and-technology/">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      
-
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -4514,7 +4509,7 @@ NOTE: views count
       <div class="site-state-item site-state-posts">
           <a href="/blog/archives/">
         
-          <span class="site-state-item-count">55</span>
+          <span class="site-state-item-count">56</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
