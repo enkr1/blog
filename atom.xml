@@ -6,7 +6,7 @@
   <link href="https://enkr1.github.io/blog/atom.xml" rel="self"/>
   
   <link href="https://enkr1.github.io/blog/"/>
-  <updated>2024-08-28T15:46:40.646Z</updated>
+  <updated>2024-08-28T15:56:07.113Z</updated>
   <id>https://enkr1.github.io/blog/</id>
   
   <author>
@@ -17,24 +17,39 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>leetcode-1642</title>
-    <link href="https://enkr1.github.io/blog/leetcode-1642/"/>
-    <id>https://enkr1.github.io/blog/leetcode-1642/</id>
+    <title>LeetCode-1642: Furthest Building You Can Reach</title>
+    <link href="https://enkr1.github.io/blog/leetcode-1642-furthest-building-you-can-reach/"/>
+    <id>https://enkr1.github.io/blog/leetcode-1642-furthest-building-you-can-reach/</id>
     <published>2024-08-28T15:36:05.000Z</published>
-    <updated>2024-08-28T15:46:40.646Z</updated>
+    <updated>2024-08-28T15:56:07.113Z</updated>
     
     <content type="html"><![CDATA[<h2 id="furthest-building-you-can-reach"><ahref="https://leetcode.com/problems/furthest-building-you-can-reach/">1642.Furthest Building You Can Reach</a></h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">number[]</span>&#125; <span class="variable">heights</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">number</span>&#125; <span class="variable">bricks</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">number</span>&#125; <span class="variable">ladders</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">number</span>&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">furthestBuilding</span> = (<span class="params">heights, bricks, ladders</span>) =&gt; &#123;</span><br><span class="line">    <span class="keyword">let</span> N = heights.<span class="property">length</span>;</span><br><span class="line">    <span class="comment">// MinPriorityQueue (min-heap) to store the height differences we need to overcome</span></span><br><span class="line">    <span class="keyword">let</span> heap = <span class="keyword">new</span> <span class="title class_">MinPriorityQueue</span>();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">1</span>; i &lt; N;h i++) &#123;</span><br><span class="line">        <span class="keyword">let</span> curr = heights[i - <span class="number">1</span>];</span><br><span class="line">        <span class="keyword">let</span> next = heights[i];</span><br><span class="line">        <span class="keyword">let</span> diff = next - curr;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// when climbing up, we have to decide whether to use bricks or ladders.</span></span><br><span class="line">        <span class="keyword">if</span> (diff &gt; <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="comment">// store into min heap</span></span><br><span class="line">            heap.<span class="title function_">enqueue</span>(diff);</span><br><span class="line"></span><br><span class="line">            <span class="comment">// if the heap size exceeds the number of ladders available, we need to start using bricks, also means we have encountered more gaps than we have ladders to cover</span></span><br><span class="line">            <span class="comment">// note: when we have more in heap than ladders, that is when to decide whether we can continue by checking the smallest height.</span></span><br><span class="line">            <span class="keyword">if</span> (heap.<span class="title function_">size</span>() &gt; ladders) &#123;</span><br><span class="line">                <span class="keyword">let</span> smallestHeight = heap.<span class="title function_">dequeue</span>().<span class="property">element</span>;</span><br><span class="line"></span><br><span class="line">                <span class="keyword">if</span> (bricks &gt;= smallestHeight) &#123;</span><br><span class="line">                    bricks -= smallestHeight;</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    <span class="comment">// if bricks cant cover the smallest height, that is the furtherest we can go.</span></span><br><span class="line">                    <span class="keyword">return</span> i - <span class="number">1</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> N - <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
     
     
-      
-      
-    <summary type="html">&lt;h2 id=&quot;furthest-building-you-can-reach&quot;&gt;&lt;a
-href=&quot;https://leetcode.com/problems/furthest-building-you-can-reach/&quot;&gt;1642.
-Furthest Building Yo</summary>
-      
+    <summary type="html">A detailed guide to solving LeetCode 1642 using a min-heap for optimal resource management. Learn how to reach the furthest building with given bricks and ladders.</summary>
     
     
     
+    <category term="Software Engineering" scheme="https://enkr1.github.io/blog/categories/Software-Engineering/"/>
+    
+    <category term="Coding Problems" scheme="https://enkr1.github.io/blog/categories/Software-Engineering/Coding-Problems/"/>
+    
+    
+    <category term="algorithm" scheme="https://enkr1.github.io/blog/tags/algorithm/"/>
+    
+    <category term="leetcode" scheme="https://enkr1.github.io/blog/tags/leetcode/"/>
+    
+    <category term="leetcode-medium" scheme="https://enkr1.github.io/blog/tags/leetcode-medium/"/>
+    
+    <category term="interview-preparation" scheme="https://enkr1.github.io/blog/tags/interview-preparation/"/>
+    
+    <category term="javascript" scheme="https://enkr1.github.io/blog/tags/javascript/"/>
+    
+    <category term="min-heap" scheme="https://enkr1.github.io/blog/tags/min-heap/"/>
+    
+    <category term="priority-queue" scheme="https://enkr1.github.io/blog/tags/priority-queue/"/>
+    
+    <category term="dynamic-programming" scheme="https://enkr1.github.io/blog/tags/dynamic-programming/"/>
     
   </entry>
   
@@ -63,9 +78,9 @@ Furthest Building Yo</summary>
     
     <category term="interview-preparation" scheme="https://enkr1.github.io/blog/tags/interview-preparation/"/>
     
-    <category term="javascript" scheme="https://enkr1.github.io/blog/tags/javascript/"/>
-    
     <category term="leetcode-easy" scheme="https://enkr1.github.io/blog/tags/leetcode-easy/"/>
+    
+    <category term="javascript" scheme="https://enkr1.github.io/blog/tags/javascript/"/>
     
     <category term="binary-search" scheme="https://enkr1.github.io/blog/tags/binary-search/"/>
     
@@ -535,8 +550,6 @@ brewing!&lt;/li&gt;
     <category term="Technical Coding Interviews" scheme="https://enkr1.github.io/blog/categories/Career-Development/Interviews/Technical-Coding-Interviews/"/>
     
     
-    <category term="tiktok" scheme="https://enkr1.github.io/blog/tags/tiktok/"/>
-    
     <category term="site-reliability-engineer" scheme="https://enkr1.github.io/blog/tags/site-reliability-engineer/"/>
     
     <category term="sre" scheme="https://enkr1.github.io/blog/tags/sre/"/>
@@ -548,6 +561,8 @@ brewing!&lt;/li&gt;
     <category term="coding-interview" scheme="https://enkr1.github.io/blog/tags/coding-interview/"/>
     
     <category term="job-interview" scheme="https://enkr1.github.io/blog/tags/job-interview/"/>
+    
+    <category term="tiktok" scheme="https://enkr1.github.io/blog/tags/tiktok/"/>
     
   </entry>
   
@@ -572,6 +587,8 @@ brewing!&lt;/li&gt;
     <category term="Technical Coding Interviews" scheme="https://enkr1.github.io/blog/categories/Career-Development/Interviews/Technical-Coding-Interviews/"/>
     
     
+    <category term="google" scheme="https://enkr1.github.io/blog/tags/google/"/>
+    
     <category term="site-reliability-engineer" scheme="https://enkr1.github.io/blog/tags/site-reliability-engineer/"/>
     
     <category term="sre" scheme="https://enkr1.github.io/blog/tags/sre/"/>
@@ -583,8 +600,6 @@ brewing!&lt;/li&gt;
     <category term="coding-interview" scheme="https://enkr1.github.io/blog/tags/coding-interview/"/>
     
     <category term="job-interview" scheme="https://enkr1.github.io/blog/tags/job-interview/"/>
-    
-    <category term="google" scheme="https://enkr1.github.io/blog/tags/google/"/>
     
   </entry>
   

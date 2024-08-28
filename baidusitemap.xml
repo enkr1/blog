@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://enkr1.github.io/blog/blog/leetcode-1642/</loc>
+    <loc>https://enkr1.github.io/blog/blog/leetcode-1642-furthest-building-you-can-reach/</loc>
+    <lastmod>2024-08-28</lastmod>
+  </url>
+  <url>
+    <loc>https://enkr1.github.io/blog/blog/my-javascript-notebook/</loc>
     <lastmod>2024-08-28</lastmod>
   </url>
   <url>
@@ -82,10 +86,6 @@
   </url>
   <url>
     <loc>https://enkr1.github.io/blog/blog/my-leetcode-journey-from-novice-to-bytedance-software-engineer/</loc>
-    <lastmod>2024-07-07</lastmod>
-  </url>
-  <url>
-    <loc>https://enkr1.github.io/blog/blog/my-javascript-notebook/</loc>
     <lastmod>2024-07-07</lastmod>
   </url>
   <url>
