@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 7.2.0">
+<meta name="google-site-verification" content="wSUWWkv_QhNXB_N6r3rOSU2YlmmWxYBk6UWVlgu1q94" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/logo.gif">
+  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/logo.gif">
+  <link rel="mask-icon" href="/blog/images/logo.svg" color="#222">
+  <meta name="google-site-verification" content="google295e26d511c4c6ad.html">
+
+<link rel="stylesheet" href="/blog/css/main.css">
+
+
+<link rel="stylesheet" href="/blog/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"enkr1.github.io","root":"/blog/","scheme":"Gemini","version":"7.8.0","exturl":true,"sidebar":{"position":"left","width":300,"display":"post","padding":0,"offset":0,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"buttons","active":"disqus","storage":true,"lazyload":true,"nav":null,"activeClass":"disqus"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":-1,"unescape":true,"preload":true},"motion":{"enable":true,"async":false,"transition":{"post_block":"slideDownBigIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="Delve into the core concepts, practical implementations, and advanced techniques of essential data structures. This notebook covers topics like Union-Find, path compression, union by rank, and more, p">
+<meta property="og:type" content="article">
+<meta property="og:title" content="My Data Structure Notebook">
+<meta property="og:url" content="https://enkr1.github.io/blog/my-data-structure-notebook/index.html">
+<meta property="og:site_name" content="ENKR&#39;s Blog">
+<meta property="og:description" content="Delve into the core concepts, practical implementations, and advanced techniques of essential data structures. This notebook covers topics like Union-Find, path compression, union by rank, and more, p">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2024-08-29T15:56:49.000Z">
+<meta property="article:modified_time" content="2024-09-02T17:40:43.012Z">
+<meta property="article:author" content="Jing Hui PANG | 彭竞辉 | ENKR">
+<meta property="article:tag" content="note">
+<meta property="article:tag" content="programming">
+<meta property="article:tag" content="data-structures">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://enkr1.github.io/blog/my-data-structure-notebook/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4N4L18VB12"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-4N4L18VB12');
+</script>
+
+<!-- Firebase -->
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyBxexVzGzOqDUGFzHVT_-oYxkqAetlFUSo",
+    authDomain: "hexo-blog-9ccea.firebaseapp.com",
+    projectId: "hexo-blog-9ccea",
+    storageBucket: "hexo-blog-9ccea.appspot.com",
+    messagingSenderId: "71411607593",
+    appId: "1:71411607593:web:d0fb244020c34c5895d438",
+    measurementId: "G-TJPENBTDNS"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/ilyabirman-likely@2/release/likely.min.css">
+  <title>My Data Structure Notebook | ENKR's Blog</title>
+  
+    <script>
+      function sendPageView() {
+        if (CONFIG.hostname !== location.hostname) return;
+        var uid = localStorage.getItem('uid') || (Math.random() + '.' + Math.random());
+        localStorage.setItem('uid', uid);
+        navigator.sendBeacon('https://www.google-analytics.com/collect', new URLSearchParams({
+          v  : 1,
+          tid: 'G-4N4L18VB12',
+          cid: uid,
+          t  : 'pageview',
+          dp : encodeURIComponent(location.pathname)
+        }));
+      }
+      document.addEventListener('pjax:complete', sendPageView);
+      sendPageView();
+    </script>
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/blog/atom.xml" title="ENKR's Blog" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/blog/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">ENKR's Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Jing Hui PANG - Software Engineer | Beatbox Artist</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/blog/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/blog/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-platforms">
+
+    <a href="https://enkr1.github.io/platforms/" rel="section"><i class="fa fa-link fa-fw"></i>Platforms</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/blog/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">47</span></a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/blog/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">101</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/blog/archives/" rel="section"><i class="fa fa-history fa-fw"></i>Archives<span class="badge">58</span></a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://enkr1.github.io/blog/my-data-structure-notebook/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="name" content="Jing Hui PANG | 彭竞辉 | ENKR">
+      <meta itemprop="description" content="Insights and beats at the intersection of technology and artistry by Jing Hui PANG, also known as ENKR. Discover programming tips, beatbox tutorials, and more.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ENKR's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          My Data Structure Notebook
+        </h1>
+
+        <div class="post-meta">
+
+<!--
+NOTE: created_at
+-->
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: Thu 29 August 2024 23:56:49 PM" itemprop="dateCreated datePublished" datetime="2024-08-29T23:56:49+08:00">Thu 29 August 2024</time>
+            </span>
+
+<!--
+NOTE: created_at
+-->
+<!--
+-->
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: Tue 3 September 2024 01:40:43 AM" itemprop="dateModified" datetime="2024-09-03T01:40:43+08:00">Tue 3 September 2024</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/Software-Engineering/" itemprop="url" rel="index"><span itemprop="name">Software Engineering</span></a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/Software-Engineering/Data-Structures-Algorithms/" itemprop="url" rel="index"><span itemprop="name">Data Structures & Algorithms</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+              <span>1.4k</span>
+            </span>
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+              <span>5 mins.</span>
+            </span>
+
+<!--
+NOTE: disqus
+-->
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/blog/my-data-structure-notebook/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="my-data-structure-notebook/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+<!--
+NOTE: views count
+-->
+            <span class="post-meta-item" title="Views">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-users"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <b><span class="firestore-visitors-count"></span></b>
+            </span>
+            <div class="post-description">Delve into the core concepts, practical implementations, and advanced techniques of essential data structures. This notebook covers topics like Union-Find, path compression, union by rank, and more, providing developers with the knowledge to tackle complex algorithmic challenges. Ideal for those looking to deepen their understanding of data structures and their applications in solving diverse problems.</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="union-find-dsu">Union Find (DSU)</h2>
+<p><a
+target="_blank" rel="noopener" href="https://www.geeksforgeeks.org/introduction-to-disjoint-set-data-structure-or-union-find-algorithm/">Union-Find</a>,
+also known as <strong>Disjoint Set Union (DSU)</strong>, is a data
+structure that keeps track of a set of elements partitioned into a
+number of disjoint (non-overlapping) subsets. It provides efficient
+methods for two key operations: (1) <strong>Union</strong>: Merging two
+subsets into a single subset. (2) <strong>Find</strong>: Determining
+which subset a particular element is in. This can be used to check if
+two elements are in the same subset.</p>
+<p>Union-Find is particularly useful in problems that involve
+<strong>finding connected components in a graph</strong>, such as
+<strong>detecting cycles in an undirected graph</strong>, solving
+<strong>connectivity problems</strong>. For instance, grouping stones in
+the <a
+target="_blank" rel="noopener" href="https://leetcode.com/problems/most-stones-removed-with-same-row-or-column/description/">Most
+Stones Removed with Same Row or Column</a> problem.</p>
+<h3 id="components-of-union-find">Components of Union-Find</h3>
+<h4 id="parent-arraymap">Parent Array/Map</h4>
+<ul>
+<li>This structure keeps track of the parent or representative of each
+element.</li>
+<li>Initially, every element is its own parent (meaning every element is
+in its own set).</li>
+</ul>
+<h4 id="find-operation">Find Operation</h4>
+<ul>
+<li>The <code>find</code> operation traces up the parent pointers to
+find the root or representative of the set that an element belongs
+to.</li>
+<li><strong>Path Compression</strong>: While performing
+<code>find</code>, we make the structure flatter by making each node
+point directly to the root. This speeds up future operations.</li>
+</ul>
+<h4 id="union-operation">Union Operation</h4>
+<ul>
+<li>The <code>union</code> operation merges two sets by connecting their
+roots.</li>
+<li><strong>Union by Rank/Size</strong>: To keep the tree shallow (and
+operations fast), the <strong>smaller tree is usually attached under the
+root of the larger tree.</strong></li>
+</ul>
+<h3 id="implementing-union-find">Implementing Union-Find</h3>
+<h4 id="basic-union-find-without-optimisations">Basic Union-Find Without
+Optimisations</h4>
+<p>This implementation starts with each element being its own parent,
+and the <code>find</code> operation simply follows parent pointers to
+the root.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">UnionFind</span> &#123;</span><br><span class="line">    <span class="title function_">constructor</span>(<span class="params">size</span>) &#123;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">parent</span> = <span class="keyword">new</span> <span class="title class_">Array</span>(size).<span class="title function_">fill</span>(<span class="number">0</span>).<span class="title function_">map</span>(<span class="function">(<span class="params">_, index</span>) =&gt;</span> index);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="title function_">find</span>(<span class="params">x</span>) &#123;</span><br><span class="line">        <span class="comment">// Find the root of the set containing x</span></span><br><span class="line">        <span class="keyword">while</span> (<span class="variable language_">this</span>.<span class="property">parent</span>[x] !== x) &#123;</span><br><span class="line">            x = <span class="variable language_">this</span>.<span class="property">parent</span>[x];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> x;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="title function_">union</span>(<span class="params">x, y</span>) &#123;</span><br><span class="line">        <span class="comment">// Find the roots of x and y</span></span><br><span class="line">        <span class="keyword">let</span> rootX = <span class="variable language_">this</span>.<span class="title function_">find</span>(x);</span><br><span class="line">        <span class="keyword">let</span> rootY = <span class="variable language_">this</span>.<span class="title function_">find</span>(y);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// Merge the sets by connecting the roots</span></span><br><span class="line">        <span class="keyword">if</span> (rootX !== rootY) &#123;</span><br><span class="line">            <span class="variable language_">this</span>.<span class="property">parent</span>[rootX] = rootY;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="union-find-with-path-compression">Union-Find with Path
+Compression</h4>
+<p>Path compression is a technique used to flatten the structure. Every
+time we perform a <code>find</code>, we make all nodes along the path
+point directly to the root. This makes future <code>find</code>
+operations faster.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">UnionFind</span> &#123;</span><br><span class="line">    <span class="title function_">constructor</span>(<span class="params">size</span>) &#123;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">parent</span> = <span class="keyword">new</span> <span class="title class_">Array</span>(size).<span class="title function_">fill</span>(<span class="number">0</span>).<span class="title function_">map</span>(<span class="function">(<span class="params">_, index</span>) =&gt;</span> index);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="title function_">find</span>(<span class="params">x</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="variable language_">this</span>.<span class="property">parent</span>[x] !== x) &#123;</span><br><span class="line">            <span class="variable language_">this</span>.<span class="property">parent</span>[x] = <span class="variable language_">this</span>.<span class="title function_">find</span>(<span class="variable language_">this</span>.<span class="property">parent</span>[x]); <span class="comment">// Path compression</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="variable language_">this</span>.<span class="property">parent</span>[x];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="title function_">union</span>(<span class="params">x, y</span>) &#123;</span><br><span class="line">        <span class="keyword">let</span> rootX = <span class="variable language_">this</span>.<span class="title function_">find</span>(x);</span><br><span class="line">        <span class="keyword">let</span> rootY = <span class="variable language_">this</span>.<span class="title function_">find</span>(y);</span><br><span class="line">        <span class="keyword">if</span> (rootX !== rootY) &#123;</span><br><span class="line">            <span class="variable language_">this</span>.<span class="property">parent</span>[rootX] = rootY;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="union-find-with-union-by-rank">Union-Find with Union by
+Rank</h4>
+<p>Union by rank ensures that we always attach the shorter tree under
+the taller tree. This keeps the overall height of the trees small,
+making the operations efficient. <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">UnionFind</span> &#123;</span><br><span class="line">    <span class="title function_">constructor</span>(<span class="params">size</span>) &#123;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">parent</span> = <span class="keyword">new</span> <span class="title class_">Array</span>(size).<span class="title function_">fill</span>(<span class="number">0</span>).<span class="title function_">map</span>(<span class="function">(<span class="params">_, index</span>) =&gt;</span> index);</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">rank</span> = <span class="keyword">new</span> <span class="title class_">Array</span>(size).<span class="title function_">fill</span>(<span class="number">1</span>); <span class="comment">// Rank (size or depth of the tree)</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="title function_">find</span>(<span class="params">x</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="variable language_">this</span>.<span class="property">parent</span>[x] !== x) &#123;</span><br><span class="line">            <span class="variable language_">this</span>.<span class="property">parent</span>[x] = <span class="variable language_">this</span>.<span class="title function_">find</span>(<span class="variable language_">this</span>.<span class="property">parent</span>[x]); <span class="comment">// Path compression</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="variable language_">this</span>.<span class="property">parent</span>[x];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="title function_">union</span>(<span class="params">x, y</span>) &#123;</span><br><span class="line">        <span class="keyword">let</span> rootX = <span class="variable language_">this</span>.<span class="title function_">find</span>(x);</span><br><span class="line">        <span class="keyword">let</span> rootY = <span class="variable language_">this</span>.<span class="title function_">find</span>(y);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (rootX !== rootY) &#123;</span><br><span class="line">            <span class="keyword">if</span> (<span class="variable language_">this</span>.<span class="property">rank</span>[rootX] &gt; <span class="variable language_">this</span>.<span class="property">rank</span>[rootY]) &#123;</span><br><span class="line">                <span class="variable language_">this</span>.<span class="property">parent</span>[rootY] = rootX;</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="variable language_">this</span>.<span class="property">rank</span>[rootX] &lt; <span class="variable language_">this</span>.<span class="property">rank</span>[rootY]) &#123;</span><br><span class="line">                <span class="variable language_">this</span>.<span class="property">parent</span>[rootX] = rootY;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="variable language_">this</span>.<span class="property">parent</span>[rootY] = rootX;</span><br><span class="line">                <span class="variable language_">this</span>.<span class="property">rank</span>[rootX] += <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="key-points-to-understand">Key Points to Understand</h3>
+<h4 id="find-operation-1">Find Operation</h4>
+<ul>
+<li>In the <code>find</code> operation, if <code>x</code> is not the
+root of its set, we recursively find its root and perform path
+compression by setting the parent of <code>x</code> directly to the
+root.</li>
+<li><strong>Path compression</strong> makes the tree flatter, leading to
+faster future operations.</li>
+</ul>
+<h4 id="union-operation-1">Union Operation</h4>
+<ul>
+<li>In the <code>union</code> operation, if the roots of <code>x</code>
+and <code>y</code> are different, we connect them.</li>
+<li><strong>Union by rank</strong> ensures that we always attach the
+smaller tree to the larger tree, minimising the tree height and
+improving efficiency.</li>
+</ul>
+<h4 id="time-complexity">Time Complexity</h4>
+<ul>
+<li>With both path compression and union by rank, the time complexity
+for each operation is almost constant, <span
+class="math inline">\(O(\alpha(n))\)</span>, where <span
+class="math inline">\(\alpha\)</span> is the inverse Ackermann function,
+which grows very slowly.</li>
+</ul>
+<h3 id="example-usage">Example Usage</h3>
+<p>To illustrate how Union-Find works, let's consider an example of
+merging sets and finding connected components.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> uf = <span class="keyword">new</span> <span class="title class_">UnionFind</span>(<span class="number">10</span>);</span><br><span class="line"></span><br><span class="line">uf.<span class="title function_">union</span>(<span class="number">1</span>, <span class="number">2</span>); <span class="comment">// Union sets containing 1 and 2</span></span><br><span class="line">uf.<span class="title function_">union</span>(<span class="number">2</span>, <span class="number">3</span>); <span class="comment">// Union sets containing 2 and 3</span></span><br><span class="line">uf.<span class="title function_">union</span>(<span class="number">4</span>, <span class="number">5</span>); <span class="comment">// Union sets containing 4 and 5</span></span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(uf.<span class="title function_">find</span>(<span class="number">1</span>)); <span class="comment">// Should return the root of the set containing 1 (same as 2, 3)</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(uf.<span class="title function_">find</span>(<span class="number">3</span>)); <span class="comment">// Should return the same root as above</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(uf.<span class="title function_">find</span>(<span class="number">4</span>)); <span class="comment">// Should return the root of the set containing 4 (same as 5)</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(uf.<span class="title function_">find</span>(<span class="number">6</span>)); <span class="comment">// Should return 6, as it&#x27;s not connected to others</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Check if 1 and 3 are in the same set</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(uf.<span class="title function_">find</span>(<span class="number">1</span>) === uf.<span class="title function_">find</span>(<span class="number">3</span>)); <span class="comment">// true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Check if 1 and 4 are in the same set</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(uf.<span class="title function_">find</span>(<span class="number">1</span>) === uf.<span class="title function_">find</span>(<span class="number">4</span>)); <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Create an instance of UnionFind with 8 elements (0 through 7)</span></span><br><span class="line"><span class="keyword">let</span> uf = <span class="keyword">new</span> <span class="title class_">UnionFind</span>(<span class="number">8</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// Test Cases</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;\nTest Case 1: Union operations&quot;</span>);</span><br><span class="line">uf.<span class="title function_">union</span>(<span class="number">1</span>, <span class="number">2</span>);</span><br><span class="line">uf.<span class="title function_">union</span>(<span class="number">2</span>, <span class="number">3</span>);</span><br><span class="line">uf.<span class="title function_">union</span>(<span class="number">4</span>, <span class="number">5</span>);</span><br><span class="line">uf.<span class="title function_">union</span>(<span class="number">6</span>, <span class="number">7</span>);</span><br><span class="line">uf.<span class="title function_">union</span>(<span class="number">5</span>, <span class="number">6</span>);</span><br><span class="line">uf.<span class="title function_">union</span>(<span class="number">3</span>, <span class="number">7</span>); <span class="comment">// This will connect two previously separate sets</span></span><br></pre></td></tr></table></figure>
+<h3 id="map-approach">Map approach</h3>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">UnionFind</span> &#123;</span><br><span class="line">    <span class="title function_">constructor</span>(<span class="params"></span>) &#123;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">parent</span> = <span class="keyword">new</span> <span class="title class_">Map</span>(); <span class="comment">// Tracks the parent of each element</span></span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">rank</span> = <span class="keyword">new</span> <span class="title class_">Map</span>();   <span class="comment">// Tracks the rank (depth) of each tree</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// The add method ensures the element is initialized in the Union-Find structure</span></span><br><span class="line">    <span class="title function_">add</span>(<span class="params">x</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="variable language_">this</span>.<span class="property">parent</span>.<span class="title function_">has</span>(x)) <span class="keyword">return</span>;</span><br><span class="line"></span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">parent</span>.<span class="title function_">set</span>(x, x); <span class="comment">// Set itself as its own parent</span></span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">rank</span>.<span class="title function_">set</span>(x, <span class="number">1</span>);   <span class="comment">// Initialize its rank to 1</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// The find method returns the root of the element with path compression</span></span><br><span class="line">    <span class="title function_">find</span>(<span class="params">x</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="variable language_">this</span>.<span class="property">parent</span>.<span class="title function_">get</span>(x) !== x) &#123;</span><br><span class="line">            <span class="variable language_">this</span>.<span class="property">parent</span>.<span class="title function_">set</span>(x, <span class="variable language_">this</span>.<span class="title function_">find</span>(<span class="variable language_">this</span>.<span class="property">parent</span>.<span class="title function_">get</span>(x))); <span class="comment">// Path compression</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="variable language_">this</span>.<span class="property">parent</span>.<span class="title function_">get</span>(x);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// The union method connects two elements by their roots</span></span><br><span class="line">    <span class="title function_">union</span>(<span class="params">x, y</span>) &#123;</span><br><span class="line">        <span class="keyword">let</span> rootX = <span class="variable language_">this</span>.<span class="title function_">find</span>(x);</span><br><span class="line">        <span class="keyword">let</span> rootY = <span class="variable language_">this</span>.<span class="title function_">find</span>(y);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (rootX !== rootY) &#123;</span><br><span class="line">            <span class="keyword">let</span> rankX = <span class="variable language_">this</span>.<span class="property">rank</span>.<span class="title function_">get</span>(rootX) || <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">let</span> rankY = <span class="variable language_">this</span>.<span class="property">rank</span>.<span class="title function_">get</span>(rootY) || <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">            <span class="comment">// Union by rank: attach the smaller tree under the larger tree</span></span><br><span class="line">            <span class="keyword">if</span> (rankX &gt; rankY) &#123;</span><br><span class="line">                <span class="variable language_">this</span>.<span class="property">parent</span>.<span class="title function_">set</span>(rootY, rootX); <span class="comment">// Attach rootY under rootX</span></span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (rankX &lt; rankY) &#123;</span><br><span class="line">                <span class="variable language_">this</span>.<span class="property">parent</span>.<span class="title function_">set</span>(rootX, rootY); <span class="comment">// Attach rootX under rootY</span></span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="variable language_">this</span>.<span class="property">parent</span>.<span class="title function_">set</span>(rootY, rootX); <span class="comment">// Arbitrarily choose one and increase its rank</span></span><br><span class="line">                <span class="variable language_">this</span>.<span class="property">rank</span>.<span class="title function_">set</span>(rootX, rankX + <span class="number">1</span>); <span class="comment">// Increase the rank of rootX</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>Path compression is a crucial optimization in Union-Find that ensures
+the data structure remains efficient over a series of operations. It
+works by flattening the tree during the find operation so that all nodes
+in a set point directly to the root, minimizing the depth of the tree
+and speeding up future operations. The example you provided demonstrates
+how path compression helps keep the structure flat and efficient,
+particularly when combining different sets through union operations.</p>
+</blockquote>
+<h3 id="applications-of-union-find">Applications of Union-Find</h3>
+<ul>
+<li><strong>Connected Components</strong>: Finding how many connected
+components exist in a graph.</li>
+<li><strong>Cycle Detection</strong>: Checking whether adding an edge to
+a graph will form a cycle.</li>
+<li><strong>Kruskal's Algorithm</strong>: Finding the minimum spanning
+tree in a graph.</li>
+</ul>
+<h3 id="practice-with-simple-problems">Practice with Simple
+Problems</h3>
+<ol type="1">
+<li><strong>Friend Circles</strong>: Given a list of friendships,
+determine how many friend circles (connected components) exist.</li>
+<li><strong>Number of Islands</strong>: Determine the number of islands
+(connected groups of 1s) in a grid.</li>
+</ol>
+<h3
+id="applying-union-find-to-the-most-stones-removed-with-same-row-or-column-problem">Applying
+Union-Find to the "Most Stones Removed with Same Row or Column"
+Problem</h3>
+<p>In the "Most Stones Removed with Same Row or Column" problem, we
+treat each stone's row and column as unique identifiers. We use
+Union-Find to group stones that share a row or column into the same
+connected component. Once we've grouped them, the number of stones that
+can be removed is equal to the total number of stones minus the number
+of connected components.</p>
+<h3 id="conclusion">Conclusion</h3>
+<p>Union-Find is a versatile and efficient data structure for managing
+disjoint sets. By understanding and practicing the basic operations and
+optimisations like path compression and union by rank, you'll be able to
+apply it to a wide range of problems involving connectivity and
+component finding.</p>
+<h3 id="summary">Summary</h3>
+<ul>
+<li><strong>Union-Find</strong> is a powerful and efficient data
+structure used to manage and find connected components.</li>
+<li><strong>Path Compression</strong> and <strong>Union by Rank</strong>
+are optimizations that make Union-Find operations almost constant time,
+(O((n))), where () is the inverse Ackermann function.</li>
+<li><strong>Applications</strong>: Union-Find is widely used in problems
+related to connectivity, such as Kruskal's algorithm for finding minimum
+spanning trees, finding cycles in graphs, and solving the "Most Stones
+Removed with Same Row or Column" problem.</li>
+</ul>
+<p>Understanding Union-Find and its applications will help you solve a
+wide range of graph-related problems efficiently.</p>
+
+    </div>
+
+    
+    
+    
+      
+  <div class="popular-posts-header">Related Posts</div>
+  <ul class="popular-posts">
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="/blog/my-journey-with-hexo-building-a-blog-from-scratch/" rel="bookmark">My Journey with Hexo - Building a Blog from Scratch</a></div>
+    </li>
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="/blog/24-hours-harvard-cs50-by-david-malan/" rel="bookmark">24 Hours Harvard CS50 By David Malan</a></div>
+    </li>
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="/blog/my-bash-notebook/" rel="bookmark">My Bash Notebook</a></div>
+    </li>
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="/blog/my-elixir-notebook/" rel="bookmark">My Elixir Notebook</a></div>
+    </li>
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="/blog/my-javascript-notebook/" rel="bookmark">My JavaScript Notebook</a></div>
+    </li>
+  </ul>
+<div class="post-widgets">
+    <div class="likely">
+        <div class="twitter">Tweet</div>
+        <div class="facebook">Share</div>
+        <div class="linkedin">Link</div>
+        <div class="gplus">Plus</div>
+        <div class="vkontakte">Share</div>
+        <div class="odnoklassniki">Class</div>
+        <div class="telegram">Send</div>
+        <div class="whatsapp">Send</div>
+        <div class="pinterest">Pin</div>
+    </div>
+  </div>
+  <script src="//cdn.jsdelivr.net/npm/ilyabirman-likely@2/release/likely.min.js"></script>
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/blog/tags/note/" rel="tag"># note</a>
+              <a href="/blog/tags/programming/" rel="tag"># programming</a>
+              <a href="/blog/tags/data-structures/" rel="tag"># data-structures</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/blog/leetcode-1642-furthest-building-you-can-reach/" rel="prev" title="LeetCode-1642: Furthest Building You Can Reach">
+      <i class="fa fa-chevron-left"></i> LeetCode-1642: Furthest Building You Can Reach
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/blog/journal-week-6/" rel="next" title="Journal: Week 6">
+      Journal: Week 6 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    
+  <div class="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+  </div>
+  
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#union-find-dsu"><span class="nav-number">1.</span> <span class="nav-text">Union Find (DSU)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#components-of-union-find"><span class="nav-number">1.1.</span> <span class="nav-text">Components of Union-Find</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#parent-arraymap"><span class="nav-number">1.1.1.</span> <span class="nav-text">Parent Array&#x2F;Map</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#find-operation"><span class="nav-number">1.1.2.</span> <span class="nav-text">Find Operation</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#union-operation"><span class="nav-number">1.1.3.</span> <span class="nav-text">Union Operation</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#implementing-union-find"><span class="nav-number">1.2.</span> <span class="nav-text">Implementing Union-Find</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#basic-union-find-without-optimisations"><span class="nav-number">1.2.1.</span> <span class="nav-text">Basic Union-Find Without
+Optimisations</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#union-find-with-path-compression"><span class="nav-number">1.2.2.</span> <span class="nav-text">Union-Find with Path
+Compression</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#union-find-with-union-by-rank"><span class="nav-number">1.2.3.</span> <span class="nav-text">Union-Find with Union by
+Rank</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#key-points-to-understand"><span class="nav-number">1.3.</span> <span class="nav-text">Key Points to Understand</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#find-operation-1"><span class="nav-number">1.3.1.</span> <span class="nav-text">Find Operation</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#union-operation-1"><span class="nav-number">1.3.2.</span> <span class="nav-text">Union Operation</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#time-complexity"><span class="nav-number">1.3.3.</span> <span class="nav-text">Time Complexity</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#example-usage"><span class="nav-number">1.4.</span> <span class="nav-text">Example Usage</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#map-approach"><span class="nav-number">1.5.</span> <span class="nav-text">Map approach</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#applications-of-union-find"><span class="nav-number">1.6.</span> <span class="nav-text">Applications of Union-Find</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#practice-with-simple-problems"><span class="nav-number">1.7.</span> <span class="nav-text">Practice with Simple
+Problems</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#applying-union-find-to-the-most-stones-removed-with-same-row-or-column-problem"><span class="nav-number">1.8.</span> <span class="nav-text">Applying
+Union-Find to the &quot;Most Stones Removed with Same Row or Column&quot;
+Problem</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#conclusion"><span class="nav-number">1.9.</span> <span class="nav-text">Conclusion</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#summary"><span class="nav-number">1.10.</span> <span class="nav-text">Summary</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Jing Hui PANG | 彭竞辉 | ENKR</p>
+  <div class="site-description" itemprop="description">Insights and beats at the intersection of technology and artistry by Jing Hui PANG, also known as ENKR. Discover programming tips, beatbox tutorials, and more.</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/blog/archives/">
+        
+          <span class="site-state-item-count">58</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/blog/categories/">
+          
+        <span class="site-state-item-count">47</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/blog/tags/">
+          
+        <span class="site-state-item-count">101</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+<div class="globe-view-counter-container">
+  <script type="text/javascript" src="//rf.revolvermaps.com/0/0/8.js?i=5uxj8a6ge7p&amp;m=1&amp;c=ff0000&amp;cr1=fff600&amp;f=ubuntu&amp;l=33" async="async"></script>
+</div>
+
+      </div>
+
+    </div>
+
+
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 2023 – 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class=""></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Jing Hui PANG | 彭竞辉 | ENKR</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="Symbols count total">44k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="Reading time total">2:39</span>
+</div>
+
+        
+
+
+
+
+  <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-firestore.js"></script>
+  <script>
+    firebase.initializeApp({
+      apiKey   : 'AIzaSyBxexVzGzOqDUGFzHVT_-oYxkqAetlFUSo',
+      projectId: 'hexo-blog-9ccea'
+    });
+
+    function getCount(doc, increaseCount) {
+      // IncreaseCount will be false when not in article page
+      return doc.get().then(d => {
+        var count = 0;
+        if (!d.exists) { // Has no data, initialize count
+          if (increaseCount) {
+            doc.set({
+              count: 1
+            });
+            count = 1;
+          }
+        } else { // Has data
+          count = d.data().count;
+          if (increaseCount) {
+            // If first view this article
+            doc.set({ // Increase count
+              count: count + 1
+            });
+            count++;
+          }
+        }
+
+        return count;
+      });
+    }
+
+    function appendCountTo(el) {
+      return count => {
+        el.innerText = count;
+      }
+    }
+  </script>
+  <script>
+    (function() {
+      var db = firebase.firestore();
+      var articles = db.collection('articles');
+
+      if (CONFIG.page.isPost) { // Is article page
+        var title = document.querySelector('.post-title').innerText.trim();
+        var doc = articles.doc(title);
+        var increaseCount = CONFIG.hostname === location.hostname;
+        if (localStorage.getItem(title)) {
+          increaseCount = false;
+        } else {
+          // Mark as visited
+          localStorage.setItem(title, true);
+        }
+        getCount(doc, increaseCount).then(appendCountTo(document.querySelector('.firestore-visitors-count')));
+      } else if (CONFIG.page.isHome) { // Is index page
+        var promises = [...document.querySelectorAll('.post-title')].map(element => {
+          var title = element.innerText.trim();
+          var doc = articles.doc(title);
+          return getCount(doc);
+        });
+        Promise.all(promises).then(counts => {
+          var metas = document.querySelectorAll('.firestore-visitors-count');
+          counts.forEach((val, idx) => {
+            appendCountTo(metas[idx])(val);
+          });
+        });
+      }
+    })();
+  </script>
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/blog/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
+  <script src="/blog/lib/velocity/velocity.min.js"></script>
+  <script src="/blog/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/blog/js/utils.js"></script>
+
+<script src="/blog/js/motion.js"></script>
+
+
+<script src="/blog/js/schemes/pisces.js"></script>
+
+
+<script src="/blog/js/next-boot.js"></script>
+
+
+
+
+  
+  <script>
+    (function(){
+      var canonicalURL, curProtocol;
+      //Get the <link> tag
+      var x=document.getElementsByTagName("link");
+		//Find the last canonical URL
+		if(x.length > 0){
+			for (i=0;i<x.length;i++){
+				if(x[i].rel.toLowerCase() == 'canonical' && x[i].href){
+					canonicalURL=x[i].href;
+				}
+			}
+		}
+    //Get protocol
+	    if (!canonicalURL){
+	    	curProtocol = window.location.protocol.split(':')[0];
+	    }
+	    else{
+	    	curProtocol = canonicalURL.split(':')[0];
+	    }
+      //Get current URL if the canonical URL does not exist
+	    if (!canonicalURL) canonicalURL = window.location.href;
+	    //Assign script content. Replace current URL with the canonical URL
+      !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=canonicalURL,t=document.referrer;if(!e.test(r)){var n=(String(curProtocol).toLowerCase() === 'https')?"https://sp0.baidu.com/9_Q4simg2RQJ8t7jm9iCKT-xh_/s.gif":"//api.share.baidu.com/s.gif";t?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var i=new Image;i.src=n}}(window);})();
+  </script>
+
+
+
+
+  
+<script src="/blog/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+<script>
+  function loadCount() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://https-enkr1-github-io-blog.disqus.com/count.js';
+    s.id = 'dsq-count-scr';
+    (d.head || d.body).appendChild(s);
+  }
+  // defer loading until the whole page loading is completed
+  window.addEventListener('load', loadCount, false);
+</script>
+<script>
+  var disqus_config = function() {
+    this.page.url = "https://enkr1.github.io/blog/my-data-structure-notebook/";
+    this.page.identifier = "my-data-structure-notebook/";
+    this.page.title = "My Data Structure Notebook";
+    };
+  NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
+    if (window.DISQUS) {
+      DISQUS.reset({
+        reload: true,
+        config: disqus_config
+      });
+    } else {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://https-enkr1-github-io-blog.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', '' + +new Date());
+      (d.head || d.body).appendChild(s);
+    }
+  });
+</script>
+
+</body>
+</html>

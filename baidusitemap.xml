@@ -1,11 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://enkr1.github.io/blog/blog/journal-week-6/</loc>
+    <lastmod>2024-09-02</lastmod>
+  </url>
+  <url>
+    <loc>https://enkr1.github.io/blog/blog/my-leetcode-journey-from-novice-to-bytedance-software-engineer/</loc>
+    <lastmod>2024-09-02</lastmod>
+  </url>
+  <url>
+    <loc>https://enkr1.github.io/blog/blog/my-sql-notebook/</loc>
+    <lastmod>2024-09-02</lastmod>
+  </url>
+  <url>
+    <loc>https://enkr1.github.io/blog/blog/my-first-ever-interview-experience-software-engineer-general-gcloud-tech-infra-24x7-site-reliability/</loc>
+    <lastmod>2024-09-02</lastmod>
+  </url>
+  <url>
+    <loc>https://enkr1.github.io/blog/blog/journal-week-1/</loc>
+    <lastmod>2024-09-02</lastmod>
+  </url>
+  <url>
+    <loc>https://enkr1.github.io/blog/blog/journal-week-3/</loc>
+    <lastmod>2024-09-02</lastmod>
+  </url>
+  <url>
+    <loc>https://enkr1.github.io/blog/blog/my-crew-beatbox-performance-a-memorable-experience-at-the-new-mini-family-launch/</loc>
+    <lastmod>2024-09-02</lastmod>
+  </url>
+  <url>
+    <loc>https://enkr1.github.io/blog/blog/my-interview-experience-site-reliability-engineer-at-tiktok-applied-machine-learning/</loc>
+    <lastmod>2024-09-02</lastmod>
+  </url>
+  <url>
+    <loc>https://enkr1.github.io/blog/blog/my-data-structure-notebook/</loc>
+    <lastmod>2024-09-02</lastmod>
+  </url>
+  <url>
+    <loc>https://enkr1.github.io/blog/blog/euclidean-algorithm-finding-the-greatest-common-divisor-gcd/</loc>
+    <lastmod>2024-09-02</lastmod>
+  </url>
+  <url>
     <loc>https://enkr1.github.io/blog/blog/dijkstra-s-algorithm-efficient-shortest-path-finding-in-graphs/</loc>
-    <lastmod>2024-08-28</lastmod>
+    <lastmod>2024-09-02</lastmod>
+  </url>
+  <url>
+    <loc>https://enkr1.github.io/blog/blog/floyd-s-tortoise-and-hare-algorithm-efficient-cycle-detection/</loc>
+    <lastmod>2024-09-02</lastmod>
+  </url>
+  <url>
+    <loc>https://enkr1.github.io/blog/blog/manacher-s-algorithm-fast-and-efficient-palindrome-detection/</loc>
+    <lastmod>2024-09-02</lastmod>
+  </url>
+  <url>
+    <loc>https://enkr1.github.io/blog/blog/floyd-warshall-algorithm-comprehensive-guide-to-all-pairs-shortest-paths/</loc>
+    <lastmod>2024-09-02</lastmod>
   </url>
   <url>
     <loc>https://enkr1.github.io/blog/blog/my-javascript-notebook/</loc>
+    <lastmod>2024-09-01</lastmod>
+  </url>
+  <url>
+    <loc>https://enkr1.github.io/blog/blog/achieving-my-ambitious-goals-in-2024/</loc>
     <lastmod>2024-08-28</lastmod>
   </url>
   <url>
@@ -45,14 +101,6 @@
     <lastmod>2024-08-13</lastmod>
   </url>
   <url>
-    <loc>https://enkr1.github.io/blog/blog/achieving-my-ambitious-goals-in-2024/</loc>
-    <lastmod>2024-08-13</lastmod>
-  </url>
-  <url>
-    <loc>https://enkr1.github.io/blog/blog/journal-week-3/</loc>
-    <lastmod>2024-08-11</lastmod>
-  </url>
-  <url>
     <loc>https://enkr1.github.io/blog/blog/journal-week-2/</loc>
     <lastmod>2024-08-11</lastmod>
   </url>
@@ -61,15 +109,7 @@
     <lastmod>2024-08-07</lastmod>
   </url>
   <url>
-    <loc>https://enkr1.github.io/blog/blog/my-crew-beatbox-performance-a-memorable-experience-at-the-new-mini-family-launch/</loc>
-    <lastmod>2024-08-06</lastmod>
-  </url>
-  <url>
     <loc>https://enkr1.github.io/blog/blog/memories-new-mini-launch-2024/</loc>
-    <lastmod>2024-08-06</lastmod>
-  </url>
-  <url>
-    <loc>https://enkr1.github.io/blog/blog/journal-week-1/</loc>
     <lastmod>2024-08-06</lastmod>
   </url>
   <url>
@@ -77,28 +117,12 @@
     <lastmod>2024-07-27</lastmod>
   </url>
   <url>
-    <loc>https://enkr1.github.io/blog/blog/my-interview-experience-site-reliability-engineer-at-tiktok-applied-machine-learning/</loc>
-    <lastmod>2024-07-27</lastmod>
-  </url>
-  <url>
-    <loc>https://enkr1.github.io/blog/blog/my-first-ever-interview-experience-software-engineer-general-gcloud-tech-infra-24x7-site-reliability/</loc>
-    <lastmod>2024-07-27</lastmod>
-  </url>
-  <url>
     <loc>https://enkr1.github.io/blog/blog/my-beatbox-journey-from-solitude-to-the-stage/</loc>
     <lastmod>2024-07-27</lastmod>
   </url>
   <url>
-    <loc>https://enkr1.github.io/blog/blog/my-leetcode-journey-from-novice-to-bytedance-software-engineer/</loc>
-    <lastmod>2024-07-07</lastmod>
-  </url>
-  <url>
     <loc>https://enkr1.github.io/blog/blog/personal-note-the-7-habits-of-highly-effective-people-by-stephen-covey/</loc>
     <lastmod>2024-06-23</lastmod>
-  </url>
-  <url>
-    <loc>https://enkr1.github.io/blog/blog/my-sql-notebook/</loc>
-    <lastmod>2024-06-22</lastmod>
   </url>
   <url>
     <loc>https://enkr1.github.io/blog/blog/my-python-notebook/</loc>
@@ -141,14 +165,6 @@
     <lastmod>2024-05-22</lastmod>
   </url>
   <url>
-    <loc>https://enkr1.github.io/blog/blog/euclidean-algorithm-finding-the-greatest-common-divisor-gcd/</loc>
-    <lastmod>2024-05-22</lastmod>
-  </url>
-  <url>
-    <loc>https://enkr1.github.io/blog/blog/manacher-s-algorithm-fast-and-efficient-palindrome-detection/</loc>
-    <lastmod>2024-05-22</lastmod>
-  </url>
-  <url>
     <loc>https://enkr1.github.io/blog/blog/my-journey-in-elixir-phoenix/</loc>
     <lastmod>2024-05-20</lastmod>
   </url>
@@ -158,14 +174,6 @@
   </url>
   <url>
     <loc>https://enkr1.github.io/blog/blog/my-journey-with-hexo-building-a-blog-from-scratch/</loc>
-    <lastmod>2024-05-19</lastmod>
-  </url>
-  <url>
-    <loc>https://enkr1.github.io/blog/blog/floyd-warshall-algorithm-comprehensive-guide-to-all-pairs-shortest-paths/</loc>
-    <lastmod>2024-05-19</lastmod>
-  </url>
-  <url>
-    <loc>https://enkr1.github.io/blog/blog/floyd-s-tortoise-and-hare-algorithm-efficient-cycle-detection/</loc>
     <lastmod>2024-05-19</lastmod>
   </url>
   <url>
