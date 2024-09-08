@@ -1,8 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://enkr1.github.io/blog/blog/boyer-moore-voting-algorithm-finding-the-majority-element/</loc>
+    <lastmod>2024-09-08</lastmod>
+  </url>
+  <url>
+    <loc>https://enkr1.github.io/blog/blog/euclidean-algorithm-finding-the-greatest-common-divisor-gcd/</loc>
+    <lastmod>2024-09-08</lastmod>
+  </url>
+  <url>
+    <loc>https://enkr1.github.io/blog/blog/floyd-warshall-algorithm-comprehensive-guide-to-all-pairs-shortest-paths/</loc>
+    <lastmod>2024-09-07</lastmod>
+  </url>
+  <url>
     <loc>https://enkr1.github.io/blog/blog/my-data-structure-notebook/</loc>
-    <lastmod>2024-09-06</lastmod>
+    <lastmod>2024-09-07</lastmod>
   </url>
   <url>
     <loc>https://enkr1.github.io/blog/blog/journal-week-6/</loc>
@@ -25,19 +37,15 @@
     <lastmod>2024-09-02</lastmod>
   </url>
   <url>
-    <loc>https://enkr1.github.io/blog/blog/journal-week-3/</loc>
-    <lastmod>2024-09-02</lastmod>
-  </url>
-  <url>
     <loc>https://enkr1.github.io/blog/blog/my-interview-experience-site-reliability-engineer-at-tiktok-applied-machine-learning/</loc>
     <lastmod>2024-09-02</lastmod>
   </url>
   <url>
-    <loc>https://enkr1.github.io/blog/blog/my-crew-beatbox-performance-a-memorable-experience-at-the-new-mini-family-launch/</loc>
+    <loc>https://enkr1.github.io/blog/blog/journal-week-3/</loc>
     <lastmod>2024-09-02</lastmod>
   </url>
   <url>
-    <loc>https://enkr1.github.io/blog/blog/euclidean-algorithm-finding-the-greatest-common-divisor-gcd/</loc>
+    <loc>https://enkr1.github.io/blog/blog/my-crew-beatbox-performance-a-memorable-experience-at-the-new-mini-family-launch/</loc>
     <lastmod>2024-09-02</lastmod>
   </url>
   <url>
@@ -50,10 +58,6 @@
   </url>
   <url>
     <loc>https://enkr1.github.io/blog/blog/manacher-s-algorithm-fast-and-efficient-palindrome-detection/</loc>
-    <lastmod>2024-09-02</lastmod>
-  </url>
-  <url>
-    <loc>https://enkr1.github.io/blog/blog/floyd-warshall-algorithm-comprehensive-guide-to-all-pairs-shortest-paths/</loc>
     <lastmod>2024-09-02</lastmod>
   </url>
   <url>
