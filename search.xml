@@ -156,9 +156,9 @@
             
             <tag> leetcode </tag>
             
-            <tag> leetcode-medium </tag>
-            
             <tag> interview-preparation </tag>
+            
+            <tag> leetcode-medium </tag>
             
             <tag> min-heap </tag>
             
@@ -197,9 +197,9 @@
             
             <tag> leetcode </tag>
             
-            <tag> interview-preparation </tag>
-            
             <tag> leetcode-easy </tag>
+            
+            <tag> interview-preparation </tag>
             
             <tag> binary-search </tag>
             
@@ -478,9 +478,9 @@
             
             <tag> leetcode </tag>
             
-            <tag> leetcode-medium </tag>
-            
             <tag> interview-preparation </tag>
+            
+            <tag> leetcode-medium </tag>
             
             <tag> topological-sort </tag>
             
@@ -519,11 +519,11 @@
             
             <tag> leetcode </tag>
             
+            <tag> leetcode-easy </tag>
+            
             <tag> interview-preparation </tag>
             
             <tag> bash </tag>
-            
-            <tag> leetcode-easy </tag>
             
         </tags>
       
@@ -552,11 +552,11 @@
             
             <tag> leetcode </tag>
             
-            <tag> leetcode-medium </tag>
-            
             <tag> interview-preparation </tag>
             
             <tag> bash </tag>
+            
+            <tag> leetcode-medium </tag>
             
         </tags>
       
@@ -585,11 +585,11 @@
             
             <tag> leetcode </tag>
             
-            <tag> leetcode-medium </tag>
-            
             <tag> interview-preparation </tag>
             
             <tag> bash </tag>
+            
+            <tag> leetcode-medium </tag>
             
         </tags>
       
@@ -1228,9 +1228,9 @@
       
         <tags>
             
-            <tag> beatbox </tag>
-            
             <tag> hobby </tag>
+            
+            <tag> beatbox </tag>
             
             <tag> stage-performance </tag>
             
@@ -1349,9 +1349,9 @@
       
       <categories>
           
-          <category> Personal Development </category>
-          
           <category> Career Development </category>
+          
+          <category> Personal Development </category>
           
           <category> Life Lessons </category>
           
@@ -2075,9 +2075,9 @@
             
             <tag> note </tag>
             
-            <tag> hexo </tag>
-            
             <tag> programming </tag>
+            
+            <tag> hexo </tag>
             
         </tags>
       
