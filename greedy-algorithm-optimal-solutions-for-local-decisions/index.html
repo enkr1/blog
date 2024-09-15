@@ -31,7 +31,7 @@
 <meta property="og:description" content="A comprehensive guide to understanding greedy algorithms and how they provide efficient, optimal solutions by making locally optimal choices. Explore key concepts, implementation examples, and applica">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2024-09-09T19:02:12.000Z">
-<meta property="article:modified_time" content="2024-09-15T16:49:14.684Z">
+<meta property="article:modified_time" content="2024-09-15T23:30:01.025Z">
 <meta property="article:author" content="Jing Hui PANG | 彭竞辉 | ENKR">
 <meta property="article:tag" content="note">
 <meta property="article:tag" content="algorithm">
@@ -298,7 +298,7 @@ NOTE: created_at
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: Mon 16 September 2024 00:49:14 AM" itemprop="dateModified" datetime="2024-09-16T00:49:14+08:00">Mon 16 September 2024</time>
+                <time title="Modified: Mon 16 September 2024 07:30:01 AM" itemprop="dateModified" datetime="2024-09-16T07:30:01+08:00">Mon 16 September 2024</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -319,13 +319,13 @@ NOTE: created_at
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-              <span>2k</span>
+              <span>2.1k</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
-              <span>7 mins.</span>
+              <span>8 mins.</span>
             </span>
 
 <!--
@@ -367,77 +367,76 @@ NOTE: views count
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="wip-...">WIP ...</h2>
-<h3 id="what-is-the-greedy-approach">What is the Greedy Approach?</h3>
+        <h2 id="what-is-the-greedy-approach">What is the Greedy Approach?</h2>
 <p>A <strong>greedy algorithm</strong> is a type of algorithmic strategy
 where we make the best possible decision <strong>at each step</strong>
 without worrying about the future consequences. In other words, we
 <strong>choose the locally optimal solution</strong> at each stage with
 the hope that these local solutions will lead to the <strong>global
 optimum</strong> (the best overall solution).</p>
+<h3 id="greedy-algorithms-as-an-umbrella-term">Greedy Algorithms as an
+Umbrella Term</h3>
+<p><strong>Greedy</strong> is an <strong>umbrella term</strong> used to
+describe a broad class of algorithms that follow a specific strategy:
+making the best possible choice (local optimal choice) at each step with
+the hope that this will lead to the best global solution. However, not
+all algorithms are greedy—only those that follow this decision-making
+process at every step. The <strong>greedy approach</strong> is a
+problem-solving paradigm, much like <strong>dynamic programming</strong>
+or <strong>divide and conquer</strong>. It is applied to a variety of
+algorithms across different domains, but only in scenarios where making
+local decisions (without considering future consequences) leads to a
+globally optimal solution.</p>
+<h3
+id="greedy-algorithm-example-best-time-to-buy-and-sell-stock-ii">Greedy
+Algorithm Example: <a
+target="_blank" rel="noopener" href="https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/">Best
+Time to Buy and Sell Stock II</a></h3>
 <p>In this context, the greedy approach makes sense because we are
 allowed to make multiple transactions (buy/sell as many times as we
 want). So, <strong>every time there's a price increase</strong>, the
 most "greedy" thing to do is to sell the stock and capture the profit
 from that small increase. By summing up all the small profits, we end up
-with the maximum profit.</p>
-<h3 id="is-this-a-greedy-approach">Is This a Greedy Approach?</h3>
-<p>Yes, your solution is an example of the <strong>greedy
-approach</strong>. Here's why: - At every step, you check if the next
-day's price is higher than the current day's price. If it is, you
-"greedily" take that profit by selling the stock (without waiting for a
-future peak). - The decision to "sell" at every increase is
-<strong>local</strong> to that particular pair of days. You are not
-concerned with how the prices behave in the distant future, but just
-focusing on the immediate gain. - Despite the simplicity, this greedy
-strategy guarantees the <strong>global maximum profit</strong>, because
-capturing every price increase ensures that you are taking advantage of
-every opportunity to make a profit.</p>
-<h3 id="why-is-it-considered-a-greedy-algorithm">Why Is It Considered a
-Greedy Algorithm?</h3>
-<ul>
-<li><strong>Local decisions</strong>: You are making decisions based on
-the current and next day's prices.</li>
-<li><strong>No backtracking</strong>: Once you decide to "sell" (i.e.,
-take profit), you don't reconsider or reverse that decision.</li>
-<li><strong>Efficient</strong>: Greedy algorithms are typically
-efficient in terms of time complexity, as they only need to make one
-pass through the data to get a solution (in this case, O(n)).</li>
-</ul>
-<h3 id="why-does-the-greedy-approach-work-here">Why Does the Greedy
-Approach Work Here?</h3>
-<p>The greedy approach works here because the problem is structured in a
-way that each local profit opportunity contributes to the overall
-solution. There are no penalties or hidden conditions for making
-multiple transactions. Each upward price trend is an independent
-opportunity to make a profit, and capturing every small increase results
-in the maximum total profit.</p>
+with the maximum profit. <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">number[]</span>&#125; <span class="variable">prices</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">number</span>&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> maxProfit = <span class="keyword">function</span> (<span class="params">prices</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> N = prices.<span class="property">length</span>;</span><br><span class="line">    <span class="keyword">let</span> accProfit = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; N; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (i + <span class="number">1</span> == N) <span class="keyword">continue</span>;</span><br><span class="line">        <span class="keyword">let</span> next = prices[i + <span class="number">1</span>];</span><br><span class="line">        <span class="keyword">let</span> curr = prices[i];</span><br><span class="line">        <span class="keyword">if</span> (next &gt; curr) &#123;</span><br><span class="line">            accProfit += next - curr; <span class="comment">// Take profit on every price rise</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> accProfit;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<h4 id="why-is-this-a-greedy-algorithm">Why is this a Greedy
+Algorithm?</h4>
+<ol type="1">
+<li><strong>Immediate decisions</strong>: At every step, we check if the
+next day's price is higher than today's. If it is, we "sell"
+immediately, taking the profit without looking further into the
+future.</li>
+<li><strong>No looking back</strong>: Once we take the profit, we don't
+go back or reconsider the decision. We only focus on the current gain,
+not future possibilities.</li>
+<li><strong>Efficient</strong>: This algorithm runs in <span
+class="math inline">\(O(n)\)</span> time, making it fast and scalable.
+Even though it's simple, this greedy approach guarantees the maximum
+profit because it captures every price increase.</li>
+</ol>
+<h4 id="why-does-the-greedy-approach-work-here">Why Does the Greedy
+Approach Work Here?</h4>
+<p>The greedy approach is effective because the problem allows each
+local profit (from a price increase) to contribute directly to the
+overall solution. In this scenario, there are no penalties or
+constraints for making multiple transactions. Each price increase
+represents an independent opportunity for profit, and by capturing every
+small gain, the total profit is maximised. This is why the greedy
+strategy is both efficient and optimal—it seizes each profit opportunity
+without the need for backtracking or complex calculations.</p>
+<h2 id="algorithms-applying-the-greedy-approach">Algorithms Applying the
+Greedy Approach</h2>
+<p>The greedy approach is a well-established strategy in algorithm
+design, especially for <strong>optimisation problems</strong> where
+local decisions lead to a globally optimal solution. This strategy
+focuses on making the best choice at each step without considering the
+entire problem, which often results in simpler and faster
+algorithms.</p>
 <h3 id="is-this-really-an-algorithm">Is This Really an Algorithm?</h3>
 <p>Yes, this is a valid and efficient algorithm! The greedy approach is
-a recognized strategy in algorithm design, and it often leads to simple,
-elegant solutions for certain types of problems, particularly
-<strong>optimization problems</strong>.</p>
-<p>Examples of other well-known greedy algorithms include: -
-<strong>Dijkstra's Algorithm</strong> for finding the shortest path in
-graphs. - <strong>Kruskal's Algorithm</strong> for finding the minimum
-spanning tree. - <strong>Huffman Coding</strong> for data
-compression.</p>
-<h3 id="how-do-we-come-up-with-this">How Do We Come Up with This?</h3>
-<ol type="1">
-<li><p><strong>Understand the Problem Constraints</strong>: In this
-case, you're allowed unlimited transactions, which means capturing every
-profit opportunity is ideal.</p></li>
-<li><p><strong>Simplify the Problem</strong>: Focus on the individual
-elements (each pair of consecutive days) instead of trying to handle the
-entire array at once.</p></li>
-<li><p><strong>Find Local Opportunities</strong>: The key to greedy
-algorithms is to recognize that local optimizations (small daily
-profits) add up to the global optimum (maximum total profit).</p></li>
-<li><p><strong>Test Small Examples</strong>: As you saw with the example
-<code>[1, 2, 3, 4, 5]</code>, even selling on each increase produces the
-same result as holding till the last day. This validates the
-approach.</p></li>
-</ol>
+recognised for its ability to solve problems that can be broken down
+into smaller, independent parts. By making a series of locally optimal
+choices, the algorithm can arrive at the best possible solution without
+needing complex calculations or backtracking.</p>
 <h3 id="why-does-it-seem-so-simple">Why Does It Seem So Simple?</h3>
 <p>The beauty of the greedy approach is that it often leads to very
 simple and efficient solutions for problems that can be broken down into
@@ -445,87 +444,144 @@ smaller, independent steps. It's one of the reasons greedy algorithms
 are widely used—they're often easy to implement and very efficient, even
 though they may not always guarantee the optimal solution for every
 problem (but in this case, it does!).</p>
-<p>In summary: - <strong>Greedy algorithms</strong> make local, myopic
-decisions. - They are used when these local decisions lead to an optimal
-solution. - Your solution is <strong>greedy</strong> because it captures
-profit at every price increase. - The simplicity of the solution doesn't
-make it any less of a valid algorithm—it's both correct and efficient
-for this problem!</p>
-<hr />
-<p>Yes, <strong>greedy</strong> is an <strong>umbrella term</strong>
-used to describe a broad class of algorithms that follow a specific
-strategy: making the best possible choice (local optimal choice) at each
-step with the hope that this will lead to the best global solution.
-However, not all algorithms are greedy—only those that follow this
-decision-making process at every step.</p>
-<h3 id="greedy-algorithms-as-an-umbrella-term">Greedy Algorithms as an
-Umbrella Term</h3>
-<p>The <strong>greedy approach</strong> is a problem-solving paradigm,
-much like <strong>dynamic programming</strong> or <strong>divide and
-conquer</strong>. It is applied to a variety of algorithms across
-different domains, but only in scenarios where making local decisions
-(without considering future consequences) leads to a globally optimal
-solution.</p>
 <h3 id="algorithms-using-the-greedy-approach">Algorithms Using the
 Greedy Approach</h3>
 <p>Here are some well-known algorithms that fall under the greedy
-umbrella:</p>
+umbrella, with examples of problems to practice:</p>
 <ol type="1">
 <li><strong>Dijkstra's Algorithm</strong> (Shortest Path in Graphs):
 <ul>
-<li>Greedily selects the node with the smallest known distance from the
-start node at each step.</li>
-<li>Updates its neighbors with the shortest known distances.</li>
-<li>Works because each shortest path is built step-by-step in an optimal
-manner.</li>
+<li>At each step, Dijkstra's algorithm <strong>greedily</strong> selects
+the node with the smallest known distance from the start node.</li>
+<li><strong>Practice Problems</strong>:
+<ol type="1">
+<li><a
+target="_blank" rel="noopener" href="https://leetcode.com/problems/shortest-path-in-binary-matrix/">Shortest
+Path in a Grid</a> — Given a binary matrix, find the shortest path from
+the top-left to the bottom-right.</li>
+<li><span class="exturl" data-url="aHR0cHM6Ly9sZWV0Y29kZS5jb20vcHJvYmxlbXMvbmV0d29yay1kZWxheS10aW1lLw==">Network
+Delay Time<i class="fa fa-external-link-alt"></i></span> — Find how long it takes for all nodes to receive a
+signal sent from a specific node.</li>
+<li><a
+target="_blank" rel="noopener" href="https://leetcode.com/problems/cheapest-flights-within-k-stops/">Cheapest
+Flights Within K Stops</a> — Find the cheapest flight route from one
+city to another within K stops.</li>
+</ol></li>
 </ul></li>
 <li><strong>Prim's and Kruskal's Algorithms</strong> (Minimum Spanning
 Tree):
 <ul>
 <li><strong>Kruskal's Algorithm</strong>: Greedily adds the smallest
-edge that doesn't form a cycle.</li>
-<li><strong>Prim's Algorithm</strong>: Greedily adds the minimum weight
+edge that doesn't create a cycle, ensuring the minimum total weight of
+edges in the spanning tree.</li>
+<li><strong>Prim's Algorithm</strong>: Greedily adds the lowest weight
 edge that connects to an unvisited node.</li>
+<li><strong>Practice Problems</strong>:
+<ol type="1">
+<li><a
+target="_blank" rel="noopener" href="https://leetcode.com/problems/min-cost-to-connect-all-points/">Minimum
+Cost to Connect All Points</a> — Find the minimum cost to connect all
+points in a 2D plane.</li>
+<li><a
+target="_blank" rel="noopener" href="https://leetcode.com/problems/connecting-cities-with-minimum-cost/">Connecting
+Cities with Minimum Cost</a> — Given cities connected by roads, find the
+minimum cost to connect all cities.</li>
+<li><a
+target="_blank" rel="noopener" href="https://www.hackerrank.com/challenges/kruskalmstrsub/problem">Minimum
+Spanning Tree</a> — A classic problem involving Kruskal’s algorithm to
+find the minimum spanning tree of a graph.</li>
+</ol></li>
 </ul></li>
 <li><strong>Huffman Coding</strong> (Data Compression):
 <ul>
-<li>Greedily merges the two smallest frequency nodes to build a tree
-with minimal weighted path length, which is optimal for data
+<li>Greedily combines the two nodes with the smallest frequencies to
+build a <strong>prefix tree</strong>. This ensures an optimal way of
+compressing data by using shorter codes for more frequent
+characters.</li>
+<li><strong>Practice Problems</strong>:
+<ol type="1">
+<li><a
+target="_blank" rel="noopener" href="https://www.hackerrank.com/challenges/tree-huffman-decoding/problem">Huffman
+Decoding</a> — Implement Huffman decoding for compressed strings.</li>
+<li><a
+target="_blank" rel="noopener" href="https://www.geeksforgeeks.org/optimal-file-merge-patterns/">Optimal
+File Merge Patterns</a> — Find the optimal way to merge files,
+minimizing the total cost of merging.</li>
+<li><a
+target="_blank" rel="noopener" href="https://www.geeksforgeeks.org/shannon-fano-algorithm-for-data-compression/">Shannon-Fano
+Algorithm</a> — Implement a Huffman-like greedy algorithm for data
 compression.</li>
+</ol></li>
 </ul></li>
 <li><strong>Activity Selection Problem</strong>:
 <ul>
-<li>Greedily selects the next activity that finishes the earliest and
-doesn't overlap with the previously selected activity. This ensures the
-maximum number of non-overlapping activities.</li>
+<li>Greedily selects the next activity that finishes the earliest,
+ensuring maximum non-overlapping activities in the schedule.</li>
+<li><strong>Practice Problems</strong>:
+<ol type="1">
+<li><a
+target="_blank" rel="noopener" href="https://www.geeksforgeeks.org/activity-selection-problem-greedy-algo-1/">Activity
+Selection</a> — Classic problem where you maximize the number of
+activities without overlap.</li>
+<li><span class="exturl" data-url="aHR0cHM6Ly9sZWV0Y29kZS5jb20vcHJvYmxlbXMvbWVldGluZy1yb29tcy1paS8=">Meeting
+Rooms II<i class="fa fa-external-link-alt"></i></span> — Given a list of meeting time intervals, find the minimum
+number of conference rooms required.</li>
+<li><a
+target="_blank" rel="noopener" href="https://leetcode.com/problems/maximum-number-of-events-that-can-be-attended/">Maximum
+Number of Events That Can Be Attended</a> — Attend the maximum number of
+events without overlaps.</li>
+</ol></li>
 </ul></li>
-<li><strong>Fractional Knapsack</strong> (Maximizing Value/Weight in
-Knapsack Problem):
+<li><strong>Fractional Knapsack Problem</strong>:
 <ul>
-<li>Greedily chooses the item with the highest value-to-weight ratio
-until the knapsack is full.</li>
+<li>Greedily chooses the item with the highest value-to-weight ratio and
+continues until the knapsack is full, ensuring maximum profit.</li>
+<li><strong>Practice Problems</strong>:
+<ol type="1">
+<li><a
+target="_blank" rel="noopener" href="https://www.geeksforgeeks.org/fractional-knapsack-problem/">Fractional
+Knapsack</a> — Given weights and values, find the maximum value that can
+fit in a knapsack.</li>
+<li><span class="exturl" data-url="aHR0cHM6Ly9sZWV0Y29kZS5jb20vcHJvYmxlbXMvcGFydGl0aW9uLWxhYmVscy8=">Partition
+Labels<i class="fa fa-external-link-alt"></i></span> — Partition a string into as many parts as possible such that
+each letter appears in at most one part.</li>
+<li><a
+target="_blank" rel="noopener" href="https://leetcode.com/problems/maximum-units-on-a-truck/">Maximum
+Units on a Truck</a> — Given box types with their corresponding units,
+maximize the units you can load onto a truck.</li>
+</ol></li>
 </ul></li>
 </ol>
 <h3 id="why-arent-all-algorithms-greedy">Why Aren't All Algorithms
 Greedy?</h3>
-<p>Not all problems can be solved optimally using the greedy approach.
-The greedy strategy works well for certain problems, but in other cases,
-it may <strong>not guarantee the globally optimal solution</strong>
-because the locally optimal decisions might not lead to the best overall
-outcome.</p>
-<p>For example: - <strong>Dynamic Programming</strong> (like in the
-<strong>0/1 Knapsack Problem</strong>) often beats greedy solutions. In
-the <strong>0/1 Knapsack Problem</strong>, a greedy approach of choosing
-items based on their value-to-weight ratio may not lead to the optimal
-solution. A dynamic programming approach, which considers all possible
-combinations of items, guarantees the best outcome. - <strong>Divide and
-Conquer</strong> algorithms like <strong>Merge Sort</strong> and
-<strong>Quick Sort</strong> solve problems by dividing the problem into
-subproblems, solving each independently, and then combining the results.
-These are different from greedy algorithms.</p>
-<h3
+<p>Not all problems can be optimally solved using the greedy approach
+because:</p>
+<ul>
+<li><strong>Greedy algorithms make decisions based on the local
+optimum</strong>, which may not always result in the global
+optimum.</li>
+<li>Some problems, like the <strong>0/1 Knapsack Problem</strong>,
+require considering multiple combinations of items (or solutions) to
+guarantee an optimal outcome, which the greedy strategy does not
+explore.</li>
+</ul>
+<h4 id="examples-of-where-greedy-fails">Examples of where greedy
+fails:</h4>
+<ul>
+<li><strong>0/1 Knapsack Problem</strong>: A greedy strategy of picking
+the highest value-to-weight ratio may leave behind items that could have
+provided a better total value when combined with other items.</li>
+<li><strong>Job Scheduling Problem</strong>: A greedy approach that
+selects jobs based on their profit might miss an optimal schedule that
+maximizes total profit.</li>
+</ul>
+<p>In contrast, <strong>dynamic programming</strong> and <strong>divide
+and conquer</strong> algorithms systematically explore multiple options,
+solving subproblems and combining them for the globally optimal
+solution.</p>
+<h2
 id="characteristics-of-problems-suitable-for-greedy-algorithms">Characteristics
-of Problems Suitable for Greedy Algorithms:</h3>
+of Problems Suitable for Greedy Algorithms:</h2>
 <ol type="1">
 <li><strong>Greedy Choice Property</strong>: A globally optimal solution
 can be arrived at by making a series of locally optimal choices.</li>
@@ -537,35 +593,21 @@ to the problem can be built from the solutions to the subproblems.</li>
 give you the correct solution. However, not all problems have these
 properties, and that's why greedy algorithms aren't always the right
 choice.</p>
-<h3 id="so-is-dijkstras-algorithm-greedy">So, Is Dijkstra's Algorithm
-Greedy?</h3>
-<p>Yes! <strong>Dijkstra's Algorithm</strong> is indeed a greedy
-algorithm because: - It makes the local optimal choice at each step,
-selecting the node with the smallest distance to explore next. - This
-works because the shortest path substructure allows it to build an
-optimal solution step by step.</p>
 <h3 id="summary">Summary:</h3>
-<ul>
-<li><strong>Greedy algorithms</strong> make decisions based on local
-optimal choices in the hope that it leads to a global optimum.</li>
-<li><strong>Not all algorithms are greedy</strong>, but many famous
-algorithms like <strong>Dijkstra's</strong>, <strong>Prim's</strong>,
-and <strong>Kruskal's</strong> are.</li>
-<li>Greedy algorithms work when <strong>local decisions</strong> lead to
-the globally optimal solution, but they don't always work for every
-problem.</li>
-<li>Some problems, like those solved by <strong>dynamic
-programming</strong>, require more careful, exhaustive exploration of
-possibilities and can't be solved optimally by greedy strategies.</li>
-</ul>
-<p>So, while the greedy approach is a powerful and widely applicable
-paradigm, it's not universal, and understanding when to use it is
-key!</p>
+<p>A <strong>greedy algorithm</strong> solves problems by making the
+best possible choice at each step, without considering the broader
+consequences of those decisions. It works well for problems where local
+optimal choices lead to a global optimal solution. The key
+characteristics of greedy algorithms are the <strong>Greedy Choice
+Property</strong> (making local decisions leads to the best overall
+solution) and <strong>Optimal Substructure</strong> (the problem can be
+broken into smaller, solvable subproblems). Examples include
+<strong>Dijkstra's</strong> and <strong>Kruskal's</strong> algorithms,
+but greedy methods don't always work, like in the <strong>0/1 Knapsack
+Problem</strong>, where a dynamic programming approach is required to
+ensure the best solution.</p>
 <hr />
 <h2 id="jump-game-i-ii">Jump Game I &amp; II</h2>
-<p>Certainly! Here's a combined note for <strong>Jump Game I</strong>
-and <strong>Jump Game II</strong> using the greedy approach:</p>
-<hr />
 <h3 id="greedy-algorithm-for-jump-game-i-and-ii">Greedy Algorithm for
 Jump Game I and II</h3>
 <p><strong>Jump Game I (LeetCode 55)</strong>: Given an array
@@ -673,10 +715,10 @@ problems, providing an optimal solution in linear time.</p>
       <div class="popular-posts-title"><a href="/blog/euclidean-algorithm-finding-the-greatest-common-divisor-gcd/" rel="bookmark">Euclidean Algorithm: Finding the Greatest Common Divisor (GCD)</a></div>
     </li>
     <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="/blog/floyd-s-tortoise-and-hare-algorithm-efficient-cycle-detection/" rel="bookmark">Floyd's Tortoise and Hare Algorithm: Efficient Cycle Detection</a></div>
+      <div class="popular-posts-title"><a href="/blog/manacher-s-algorithm-fast-and-efficient-palindrome-detection/" rel="bookmark">Manacher's Algorithm: Fast and Efficient Palindrome Detection</a></div>
     </li>
     <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="/blog/manacher-s-algorithm-fast-and-efficient-palindrome-detection/" rel="bookmark">Manacher's Algorithm: Fast and Efficient Palindrome Detection</a></div>
+      <div class="popular-posts-title"><a href="/blog/big-o-notation-my-notes-on-algorithm-efficiency/" rel="bookmark">Big-O Notation: My Notes on Algorithm Efficiency</a></div>
     </li>
   </ul>
 <div class="post-widgets">
@@ -779,18 +821,21 @@ problems, providing an optimal solution in linear time.</p>
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#wip-..."><span class="nav-number">1.</span> <span class="nav-text">WIP ...</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#what-is-the-greedy-approach"><span class="nav-number">1.1.</span> <span class="nav-text">What is the Greedy Approach?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#is-this-a-greedy-approach"><span class="nav-number">1.2.</span> <span class="nav-text">Is This a Greedy Approach?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#why-is-it-considered-a-greedy-algorithm"><span class="nav-number">1.3.</span> <span class="nav-text">Why Is It Considered a
-Greedy Algorithm?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#why-does-the-greedy-approach-work-here"><span class="nav-number">1.4.</span> <span class="nav-text">Why Does the Greedy
-Approach Work Here?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#is-this-really-an-algorithm"><span class="nav-number">1.5.</span> <span class="nav-text">Is This Really an Algorithm?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#how-do-we-come-up-with-this"><span class="nav-number">1.6.</span> <span class="nav-text">How Do We Come Up with This?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#why-does-it-seem-so-simple"><span class="nav-number">1.7.</span> <span class="nav-text">Why Does It Seem So Simple?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#greedy-algorithms-as-an-umbrella-term"><span class="nav-number">1.8.</span> <span class="nav-text">Greedy Algorithms as an
-Umbrella Term</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#algorithms-using-the-greedy-approach"><span class="nav-number">1.9.</span> <span class="nav-text">Algorithms Using the
-Greedy Approach</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#why-arent-all-algorithms-greedy"><span class="nav-number">1.10.</span> <span class="nav-text">Why Aren&#39;t All Algorithms
-Greedy?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#characteristics-of-problems-suitable-for-greedy-algorithms"><span class="nav-number">1.11.</span> <span class="nav-text">Characteristics
-of Problems Suitable for Greedy Algorithms:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#so-is-dijkstras-algorithm-greedy"><span class="nav-number">1.12.</span> <span class="nav-text">So, Is Dijkstra&#39;s Algorithm
-Greedy?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#summary"><span class="nav-number">1.13.</span> <span class="nav-text">Summary:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#jump-game-i-ii"><span class="nav-number">2.</span> <span class="nav-text">Jump Game I &amp; II</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#greedy-algorithm-for-jump-game-i-and-ii"><span class="nav-number">2.1.</span> <span class="nav-text">Greedy Algorithm for
-Jump Game I and II</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#why-use-a-greedy-approach-for-both-problems"><span class="nav-number">2.2.</span> <span class="nav-text">Why Use a Greedy
-Approach for Both Problems?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#greedy-approach-for-jump-game-i"><span class="nav-number">2.3.</span> <span class="nav-text">Greedy Approach for
-Jump Game I:</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#goal"><span class="nav-number">2.3.1.</span> <span class="nav-text">Goal:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#strategy"><span class="nav-number">2.3.2.</span> <span class="nav-text">Strategy:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#code"><span class="nav-number">2.3.3.</span> <span class="nav-text">Code:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#key-points"><span class="nav-number">2.3.4.</span> <span class="nav-text">Key Points:</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#greedy-approach-for-jump-game-ii"><span class="nav-number">2.4.</span> <span class="nav-text">Greedy Approach for
-Jump Game II:</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#goal-1"><span class="nav-number">2.4.1.</span> <span class="nav-text">Goal:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#strategy-1"><span class="nav-number">2.4.2.</span> <span class="nav-text">Strategy:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#code-1"><span class="nav-number">2.4.3.</span> <span class="nav-text">Code:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#key-points-1"><span class="nav-number">2.4.4.</span> <span class="nav-text">Key Points:</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#summary-of-greedy-approach"><span class="nav-number">2.5.</span> <span class="nav-text">Summary of Greedy Approach:</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#what-is-the-greedy-approach"><span class="nav-number">1.</span> <span class="nav-text">What is the Greedy Approach?</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#greedy-algorithms-as-an-umbrella-term"><span class="nav-number">1.1.</span> <span class="nav-text">Greedy Algorithms as an
+Umbrella Term</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#greedy-algorithm-example-best-time-to-buy-and-sell-stock-ii"><span class="nav-number">1.2.</span> <span class="nav-text">Greedy
+Algorithm Example: Best
+Time to Buy and Sell Stock II</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#why-is-this-a-greedy-algorithm"><span class="nav-number">1.2.1.</span> <span class="nav-text">Why is this a Greedy
+Algorithm?</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#why-does-the-greedy-approach-work-here"><span class="nav-number">1.2.2.</span> <span class="nav-text">Why Does the Greedy
+Approach Work Here?</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#algorithms-applying-the-greedy-approach"><span class="nav-number">2.</span> <span class="nav-text">Algorithms Applying the
+Greedy Approach</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#is-this-really-an-algorithm"><span class="nav-number">2.1.</span> <span class="nav-text">Is This Really an Algorithm?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#why-does-it-seem-so-simple"><span class="nav-number">2.2.</span> <span class="nav-text">Why Does It Seem So Simple?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#algorithms-using-the-greedy-approach"><span class="nav-number">2.3.</span> <span class="nav-text">Algorithms Using the
+Greedy Approach</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#why-arent-all-algorithms-greedy"><span class="nav-number">2.4.</span> <span class="nav-text">Why Aren&#39;t All Algorithms
+Greedy?</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#examples-of-where-greedy-fails"><span class="nav-number">2.4.1.</span> <span class="nav-text">Examples of where greedy
+fails:</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#characteristics-of-problems-suitable-for-greedy-algorithms"><span class="nav-number">3.</span> <span class="nav-text">Characteristics
+of Problems Suitable for Greedy Algorithms:</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#summary"><span class="nav-number">3.1.</span> <span class="nav-text">Summary:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#jump-game-i-ii"><span class="nav-number">4.</span> <span class="nav-text">Jump Game I &amp; II</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#greedy-algorithm-for-jump-game-i-and-ii"><span class="nav-number">4.1.</span> <span class="nav-text">Greedy Algorithm for
+Jump Game I and II</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#why-use-a-greedy-approach-for-both-problems"><span class="nav-number">4.2.</span> <span class="nav-text">Why Use a Greedy
+Approach for Both Problems?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#greedy-approach-for-jump-game-i"><span class="nav-number">4.3.</span> <span class="nav-text">Greedy Approach for
+Jump Game I:</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#goal"><span class="nav-number">4.3.1.</span> <span class="nav-text">Goal:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#strategy"><span class="nav-number">4.3.2.</span> <span class="nav-text">Strategy:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#code"><span class="nav-number">4.3.3.</span> <span class="nav-text">Code:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#key-points"><span class="nav-number">4.3.4.</span> <span class="nav-text">Key Points:</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#greedy-approach-for-jump-game-ii"><span class="nav-number">4.4.</span> <span class="nav-text">Greedy Approach for
+Jump Game II:</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#goal-1"><span class="nav-number">4.4.1.</span> <span class="nav-text">Goal:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#strategy-1"><span class="nav-number">4.4.2.</span> <span class="nav-text">Strategy:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#code-1"><span class="nav-number">4.4.3.</span> <span class="nav-text">Code:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#key-points-1"><span class="nav-number">4.4.4.</span> <span class="nav-text">Key Points:</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#summary-of-greedy-approach"><span class="nav-number">4.5.</span> <span class="nav-text">Summary of Greedy Approach:</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -859,7 +904,7 @@ Jump Game II:</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="Symbols count total">48k</span>
+    <span title="Symbols count total">49k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
