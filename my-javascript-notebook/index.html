@@ -31,7 +31,7 @@
 <meta property="og:description" content="Delve into the world of JavaScript with this extensive guide designed for programmers at all levels. From basic syntax to advanced functionalities, this post explores the core concepts and latest feat">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2024-04-10T17:31:56.000Z">
-<meta property="article:modified_time" content="2024-09-01T09:06:12.811Z">
+<meta property="article:modified_time" content="2024-09-09T17:35:15.528Z">
 <meta property="article:author" content="Jing Hui PANG | 彭竞辉 | ENKR">
 <meta property="article:tag" content="note">
 <meta property="article:tag" content="programming">
@@ -193,12 +193,12 @@
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/blog/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">105</span></a>
+    <a href="/blog/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">107</span></a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/blog/archives/" rel="section"><i class="fa fa-history fa-fw"></i>Archives<span class="badge">60</span></a>
+    <a href="/blog/archives/" rel="section"><i class="fa fa-history fa-fw"></i>Archives<span class="badge">63</span></a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -297,7 +297,7 @@ NOTE: created_at
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: Sun 1 September 2024 17:06:12 PM" itemprop="dateModified" datetime="2024-09-01T17:06:12+08:00">Sun 1 September 2024</time>
+                <time title="Modified: Tue 10 September 2024 01:35:15 AM" itemprop="dateModified" datetime="2024-09-10T01:35:15+08:00">Tue 10 September 2024</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -322,13 +322,13 @@ NOTE: created_at
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-              <span>1.3k</span>
+              <span>2.2k</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
-              <span>5 mins.</span>
+              <span>8 mins.</span>
             </span>
 
 <!--
@@ -510,6 +510,184 @@ To put on
 <p>to prevent user clicks on enter. <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">onkeydown=<span class="string">&quot;return event.key != &#x27;Enter&#x27;;&quot;</span></span><br></pre></td></tr></table></figure></p>
 <h3 id="spread-operator">Spread operator</h3>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> obj = &#123;<span class="attr">name</span>: <span class="string">&quot;Jing Hui&quot;</span>, <span class="attr">age</span>: <span class="number">24</span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(obj)</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> test = &#123;...obj, <span class="attr">age</span>: <span class="number">25</span>, <span class="attr">nationality</span>: <span class="string">&quot;malaysian&quot;</span>&#125;</span><br></pre></td></tr></table></figure>
+<hr />
+<h2 id="destructuring-assignments">Destructuring assignments</h2>
+<p>You can use them in different contexts, such as swapping values,
+extracting properties from objects or arrays, and working with
+functions:</p>
+<h3 id="swapping-two-variables">Swapping Two Variables</h3>
+<p>This is the most common use case: swapping two variables without
+using a temporary variable.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a = <span class="number">5</span>;</span><br><span class="line"><span class="keyword">let</span> b = <span class="number">10</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Swap a and b</span></span><br><span class="line">[a, b] = [b, a];</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(a); <span class="comment">// Output: 10</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(b); <span class="comment">// Output: 5</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>got this from Rotate Array (todo add link)</p>
+</blockquote>
+<h3 id="extracting-values-from-arrays">Extracting Values from
+Arrays</h3>
+<p>You can use destructuring to assign array elements to variables.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> numbers = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>];</span><br><span class="line"></span><br><span class="line"><span class="comment">// Destructure first two elements</span></span><br><span class="line"><span class="keyword">const</span> [first, second] = numbers;</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(first);  <span class="comment">// Output: 1</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(second); <span class="comment">// Output: 2</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Skip elements</span></span><br><span class="line"><span class="keyword">const</span> [, , third] = numbers;</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(third);  <span class="comment">// Output: 3</span></span><br></pre></td></tr></table></figure>
+<h3 id="default-values-in-array-destructuring">Default Values in Array
+Destructuring</h3>
+<p>If the array is shorter than expected, you can provide default
+values.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> colors = [<span class="string">&#x27;red&#x27;</span>];</span><br><span class="line"></span><br><span class="line"><span class="comment">// Destructure with a default value</span></span><br><span class="line"><span class="keyword">const</span> [primaryColor, secondaryColor = <span class="string">&#x27;blue&#x27;</span>] = colors;</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(primaryColor);  <span class="comment">// Output: &#x27;red&#x27;</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(secondaryColor); <span class="comment">// Output: &#x27;blue&#x27; (default value)</span></span><br></pre></td></tr></table></figure>
+<h3 id="object-destructuring">Object Destructuring</h3>
+<p>You can destructure objects to extract specific properties into
+variables.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> person = &#123;</span><br><span class="line">  <span class="attr">name</span>: <span class="string">&#x27;Alice&#x27;</span>,</span><br><span class="line">  <span class="attr">age</span>: <span class="number">30</span>,</span><br><span class="line">  <span class="attr">job</span>: <span class="string">&#x27;Engineer&#x27;</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Destructure object properties</span></span><br><span class="line"><span class="keyword">const</span> &#123; name, age &#125; = person;</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(name); <span class="comment">// Output: &#x27;Alice&#x27;</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(age);  <span class="comment">// Output: 30</span></span><br></pre></td></tr></table></figure>
+<h3 id="object-destructuring-with-aliases">Object Destructuring with
+Aliases</h3>
+<p>You can also rename the extracted properties by assigning them to new
+variable names.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> employee = &#123;</span><br><span class="line">  <span class="attr">firstName</span>: <span class="string">&#x27;John&#x27;</span>,</span><br><span class="line">  <span class="attr">lastName</span>: <span class="string">&#x27;Doe&#x27;</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Destructure with alias</span></span><br><span class="line"><span class="keyword">const</span> &#123; <span class="attr">firstName</span>: fName, <span class="attr">lastName</span>: lName &#125; = employee;</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(fName); <span class="comment">// Output: &#x27;John&#x27;</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(lName);  <span class="comment">// Output: &#x27;Doe&#x27;</span></span><br></pre></td></tr></table></figure>
+<h3 id="nested-object-destructuring">Nested Object Destructuring</h3>
+<p>Destructuring can also be used for nested objects.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> student = &#123;</span><br><span class="line">  <span class="attr">info</span>: &#123;</span><br><span class="line">    <span class="attr">name</span>: <span class="string">&#x27;Mark&#x27;</span>,</span><br><span class="line">    <span class="attr">grade</span>: <span class="string">&#x27;A&#x27;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">courses</span>: [<span class="string">&#x27;Math&#x27;</span>, <span class="string">&#x27;Physics&#x27;</span>]</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Destructure nested properties</span></span><br><span class="line"><span class="keyword">const</span> &#123; <span class="attr">info</span>: &#123; name &#125;, <span class="attr">courses</span>: [firstCourse] &#125; = student;</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(name);        <span class="comment">// Output: &#x27;Mark&#x27;</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(firstCourse); <span class="comment">// Output: &#x27;Math&#x27;</span></span><br></pre></td></tr></table></figure>
+<h3 id="function-parameter-destructuring">Function Parameter
+Destructuring</h3>
+<p>You can destructure objects or arrays passed as function
+parameters.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Destructure object in function parameters</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">printStudent</span>(<span class="params">&#123; name, age &#125;</span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">`<span class="subst">$&#123;name&#125;</span> is <span class="subst">$&#123;age&#125;</span> years old.`</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> student = &#123; <span class="attr">name</span>: <span class="string">&#x27;Emily&#x27;</span>, <span class="attr">age</span>: <span class="number">25</span> &#125;;</span><br><span class="line"><span class="title function_">printStudent</span>(student); <span class="comment">// Output: &#x27;Emily is 25 years old.&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Destructure array in function parameters</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">sum</span>(<span class="params">[a, b]</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> a + b;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">sum</span>([<span class="number">3</span>, <span class="number">7</span>])); <span class="comment">// Output: 10</span></span><br></pre></td></tr></table></figure>
+<h3 id="rest-operator-in-destructuring-spread-operator">Rest Operator in
+Destructuring (Spread Operator)</h3>
+<p>You can use the rest (<code>...</code>) operator to capture the
+remaining elements after destructuring.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> fruits = [<span class="string">&#x27;apple&#x27;</span>, <span class="string">&#x27;banana&#x27;</span>, <span class="string">&#x27;cherry&#x27;</span>, <span class="string">&#x27;date&#x27;</span>];</span><br><span class="line"></span><br><span class="line"><span class="comment">// Destructure first element and capture the rest</span></span><br><span class="line"><span class="keyword">const</span> [firstFruit, ...otherFruits] = fruits;</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(firstFruit);   <span class="comment">// Output: &#x27;apple&#x27;</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(otherFruits);  <span class="comment">// Output: [&#x27;banana&#x27;, &#x27;cherry&#x27;, &#x27;date&#x27;]</span></span><br></pre></td></tr></table></figure>
+<h3 id="ignoring-values-in-destructuring">Ignoring Values in
+Destructuring</h3>
+<p>You can ignore certain elements when destructuring arrays.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> scores = [<span class="number">100</span>, <span class="number">90</span>, <span class="number">85</span>, <span class="number">80</span>];</span><br><span class="line"></span><br><span class="line"><span class="comment">// Ignore the second score</span></span><br><span class="line"><span class="keyword">const</span> [firstScore, , thirdScore] = scores;</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(firstScore); <span class="comment">// Output: 100</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(thirdScore); <span class="comment">// Output: 85</span></span><br></pre></td></tr></table></figure>
+<h3 id="combining-arrays-and-destructuring">Combining Arrays and
+Destructuring</h3>
+<p>Destructuring works seamlessly when combining multiple arrays.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> arr1 = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line"><span class="keyword">const</span> arr2 = [<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>];</span><br><span class="line"></span><br><span class="line"><span class="comment">// Combine and destructure</span></span><br><span class="line"><span class="keyword">const</span> combined = [...arr1, ...arr2];</span><br><span class="line"><span class="keyword">const</span> [first, second, ...rest] = combined;</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(first);  <span class="comment">// Output: 1</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(second); <span class="comment">// Output: 2</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(rest);   <span class="comment">// Output: [3, 4, 5, 6]</span></span><br></pre></td></tr></table></figure>
+<h2 id="todo-rest-operator-...">TODO: Rest Operator
+(<code>...</code>)</h2>
+<p>The <strong>rest operator</strong> is used to <strong>gather</strong>
+multiple elements into a single array or object. You usually see it in
+function parameters or destructuring.</p>
+<h3 id="example-1-rest-in-function-parameters">Example 1: Rest in
+Function Parameters</h3>
+<p>In functions, the rest operator gathers all the extra arguments
+passed to the function into an array.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">showNumbers</span>(<span class="params">...numbers</span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(numbers); <span class="comment">// Gathers arguments into an array</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title function_">showNumbers</span>(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>); <span class="comment">// Output: [1, 2, 3, 4, 5]</span></span><br></pre></td></tr></table></figure>
+<h4 id="breakdown">Breakdown:</h4>
+<ul>
+<li>The <code>...numbers</code> gathers all the arguments (1, 2, 3, 4,
+5) into a single array named <code>numbers</code>.</li>
+</ul>
+<hr />
+<h3 id="example-2-rest-in-array-destructuring">Example 2: Rest in Array
+Destructuring</h3>
+<p>In destructuring, the rest operator gathers remaining elements of an
+array into a new array.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> [first, second, ...rest] = [<span class="number">10</span>, <span class="number">20</span>, <span class="number">30</span>, <span class="number">40</span>, <span class="number">50</span>];</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(first);   <span class="comment">// Output: 10</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(second);  <span class="comment">// Output: 20</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(rest);    <span class="comment">// Output: [30, 40, 50]</span></span><br></pre></td></tr></table></figure>
+<h4 id="breakdown-1">Breakdown:</h4>
+<ul>
+<li><code>first</code> gets the value <code>10</code>,
+<code>second</code> gets <code>20</code>, and the rest of the values
+(<code>30, 40, 50</code>) are collected into the <code>rest</code>
+array.</li>
+</ul>
+<hr />
+<h3 id="example-3-rest-in-object-destructuring">Example 3: Rest in
+Object Destructuring</h3>
+<p>You can also use the rest operator to gather remaining properties of
+an object.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> person = &#123; <span class="attr">name</span>: <span class="string">&#x27;Alice&#x27;</span>, <span class="attr">age</span>: <span class="number">25</span>, <span class="attr">country</span>: <span class="string">&#x27;USA&#x27;</span> &#125;;</span><br><span class="line"><span class="keyword">const</span> &#123; name, ...details &#125; = person;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(name);     <span class="comment">// Output: Alice</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(details);  <span class="comment">// Output: &#123; age: 25, country: &#x27;USA&#x27; &#125;</span></span><br></pre></td></tr></table></figure>
+<h4 id="breakdown-2">Breakdown:</h4>
+<ul>
+<li><code>name</code> gets <code>Alice</code>, and the remaining
+properties (<code>age</code>, <code>country</code>) are collected into
+the <code>details</code> object.</li>
+</ul>
+<hr />
+<h2 id="spread-operator-...">Spread Operator (<code>...</code>)</h2>
+<p>The <strong>spread operator</strong> is used to <strong>spread
+out</strong> the elements of an array, object, or iterable into
+individual elements.</p>
+<h3 id="example-1-spread-in-arrays">Example 1: Spread in Arrays</h3>
+<p>Spread operator expands the elements of an array. This is often used
+to combine arrays.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> arr1 = [<span class="number">1</span>, <span class="number">2</span>];</span><br><span class="line"><span class="keyword">const</span> arr2 = [<span class="number">3</span>, <span class="number">4</span>];</span><br><span class="line"><span class="keyword">const</span> combined = [...arr1, ...arr2];</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(combined); <span class="comment">// Output: [1, 2, 3, 4]</span></span><br></pre></td></tr></table></figure>
+<h4 id="breakdown-3">Breakdown:</h4>
+<ul>
+<li><code>...arr1</code> spreads out <code>[1, 2]</code>, and
+<code>...arr2</code> spreads out <code>[3, 4]</code>, combining them
+into one array.</li>
+</ul>
+<hr />
+<h3 id="example-2-spread-in-function-calls">Example 2: Spread in
+Function Calls</h3>
+<p>You can pass the elements of an array as individual arguments to a
+function using the spread operator.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> numbers = [<span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>];</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Math</span>.<span class="title function_">max</span>(...numbers)); <span class="comment">// Output: 7</span></span><br></pre></td></tr></table></figure>
+<h4 id="breakdown-4">Breakdown:</h4>
+<ul>
+<li><code>...numbers</code> spreads the array <code>[5, 6, 7]</code>
+into <code>Math.max</code> as individual arguments
+(<code>5, 6, 7</code>).</li>
+</ul>
+<hr />
+<h3 id="example-3-spread-in-objects">Example 3: Spread in Objects</h3>
+<p>The spread operator can copy properties from one object to
+another.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> obj1 = &#123; <span class="attr">a</span>: <span class="number">1</span>, <span class="attr">b</span>: <span class="number">2</span> &#125;;</span><br><span class="line"><span class="keyword">const</span> obj2 = &#123; <span class="attr">c</span>: <span class="number">3</span> &#125;;</span><br><span class="line"><span class="keyword">const</span> merged = &#123; ...obj1, ...obj2 &#125;;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(merged); <span class="comment">// Output: &#123; a: 1, b: 2, c: 3 &#125;</span></span><br></pre></td></tr></table></figure>
+<h4 id="breakdown-5">Breakdown:</h4>
+<ul>
+<li><code>...obj1</code> spreads the properties of <code>obj1</code>
+into a new object, followed by <code>...obj2</code> spreading the
+properties of <code>obj2</code>.</li>
+</ul>
+<hr />
+<h3 id="summary-of-differences">Summary of Differences</h3>
+<table>
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 43%" />
+<col style="width: 39%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Feature</th>
+<th>Rest Operator (<code>...</code>)</th>
+<th>Spread Operator (<code>...</code>)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Purpose</strong></td>
+<td>Gathers elements into an array/object</td>
+<td>Spreads elements into individual items</td>
+</tr>
+<tr class="even">
+<td><strong>Usage</strong></td>
+<td>Function parameters, destructuring</td>
+<td>Function calls, array/object merging</td>
+</tr>
+<tr class="odd">
+<td><strong>Example</strong></td>
+<td><code>function(...args) &#123;&#125;</code></td>
+<td><code>Math.max(...[1, 2, 3])</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="final-thoughts">Final Thoughts</h3>
+<ul>
+<li><strong>Rest</strong> collects multiple elements into an array or
+object.
+<ul>
+<li>Example: Collect remaining arguments in a function.</li>
+</ul></li>
+<li><strong>Spread</strong> takes an array or object and breaks it into
+individual elements.
+<ul>
+<li>Example: Pass an array as arguments to a function or merge
+arrays/objects.</li>
+</ul></li>
+</ul>
+<hr />
 <h2 id="todo">TODO</h2>
 <ul>
 <li>https://threejs.org/</li>
@@ -641,7 +819,19 @@ To put on
           <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#graph-common-functions"><span class="nav-number">1.</span> <span class="nav-text">Graph common functions</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#adjacency"><span class="nav-number">1.1.</span> <span class="nav-text">Adjacency</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#visited"><span class="nav-number">1.2.</span> <span class="nav-text">visited</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#min-max-heap"><span class="nav-number">2.</span> <span class="nav-text">Min &amp; Max Heap</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#leetcode-imported-tips"><span class="nav-number">2.1.</span> <span class="nav-text">LeetCode Imported Tips</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#minpriorityqueue"><span class="nav-number">2.1.1.</span> <span class="nav-text">MinPriorityQueue</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#maxpriorityqueue"><span class="nav-number">2.1.2.</span> <span class="nav-text">MaxPriorityQueue</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#example-usage"><span class="nav-number">2.1.3.</span> <span class="nav-text">Example Usage:</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#build-from-scratch"><span class="nav-number">2.2.</span> <span class="nav-text">Build From Scratch</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#min-heap-implementation"><span class="nav-number">2.2.1.</span> <span class="nav-text">Min-Heap Implementation</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#max-heap-implementation"><span class="nav-number">2.2.2.</span> <span class="nav-text">Max-Heap Implementation</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#key-points-to-remember"><span class="nav-number">2.2.3.</span> <span class="nav-text">Key Points to Remember:</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#sorting-arrays"><span class="nav-number">3.</span> <span class="nav-text">Sorting Arrays</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#working-with-json"><span class="nav-number">4.</span> <span class="nav-text">Working with JSON</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#arrays"><span class="nav-number">5.</span> <span class="nav-text">Arrays</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#math"><span class="nav-number">6.</span> <span class="nav-text">Math</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#maps---set"><span class="nav-number">7.</span> <span class="nav-text">Maps - set()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#set---add"><span class="nav-number">8.</span> <span class="nav-text">Set - add()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#adding-styles-to-before-and-after"><span class="nav-number">9.</span> <span class="nav-text">Adding Styles to :before and
 :after</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#yii2-project-making-gridview-clickable"><span class="nav-number">10.</span> <span class="nav-text">Yii2 Project: Making
 GridView Clickable</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#npm-packages"><span class="nav-number">11.</span> <span class="nav-text">NPM Packages</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#md-file-tree-by-michalbe"><span class="nav-number">11.1.</span> <span class="nav-text">md-file-tree by @michalbe</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#javascript-obfuscator"><span class="nav-number">11.2.</span> <span class="nav-text">JavaScript Obfuscator</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#typescript-child-manager-configuration"><span class="nav-number">12.</span> <span class="nav-text">TypeScript: Child
-Manager Configuration</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#tips"><span class="nav-number">13.</span> <span class="nav-text">Tips</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#onkeydown"><span class="nav-number">13.1.</span> <span class="nav-text">onkeydown</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#spread-operator"><span class="nav-number">13.2.</span> <span class="nav-text">Spread operator</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#todo"><span class="nav-number">14.</span> <span class="nav-text">TODO</span></a></li></ol></div>
+Manager Configuration</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#tips"><span class="nav-number">13.</span> <span class="nav-text">Tips</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#onkeydown"><span class="nav-number">13.1.</span> <span class="nav-text">onkeydown</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#spread-operator"><span class="nav-number">13.2.</span> <span class="nav-text">Spread operator</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#destructuring-assignments"><span class="nav-number">14.</span> <span class="nav-text">Destructuring assignments</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#swapping-two-variables"><span class="nav-number">14.1.</span> <span class="nav-text">Swapping Two Variables</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#extracting-values-from-arrays"><span class="nav-number">14.2.</span> <span class="nav-text">Extracting Values from
+Arrays</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#default-values-in-array-destructuring"><span class="nav-number">14.3.</span> <span class="nav-text">Default Values in Array
+Destructuring</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#object-destructuring"><span class="nav-number">14.4.</span> <span class="nav-text">Object Destructuring</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#object-destructuring-with-aliases"><span class="nav-number">14.5.</span> <span class="nav-text">Object Destructuring with
+Aliases</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#nested-object-destructuring"><span class="nav-number">14.6.</span> <span class="nav-text">Nested Object Destructuring</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#function-parameter-destructuring"><span class="nav-number">14.7.</span> <span class="nav-text">Function Parameter
+Destructuring</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#rest-operator-in-destructuring-spread-operator"><span class="nav-number">14.8.</span> <span class="nav-text">Rest Operator in
+Destructuring (Spread Operator)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ignoring-values-in-destructuring"><span class="nav-number">14.9.</span> <span class="nav-text">Ignoring Values in
+Destructuring</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#combining-arrays-and-destructuring"><span class="nav-number">14.10.</span> <span class="nav-text">Combining Arrays and
+Destructuring</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#todo-rest-operator-..."><span class="nav-number">15.</span> <span class="nav-text">TODO: Rest Operator
+(...)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#example-1-rest-in-function-parameters"><span class="nav-number">15.1.</span> <span class="nav-text">Example 1: Rest in
+Function Parameters</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#breakdown"><span class="nav-number">15.1.1.</span> <span class="nav-text">Breakdown:</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#example-2-rest-in-array-destructuring"><span class="nav-number">15.2.</span> <span class="nav-text">Example 2: Rest in Array
+Destructuring</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#breakdown-1"><span class="nav-number">15.2.1.</span> <span class="nav-text">Breakdown:</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#example-3-rest-in-object-destructuring"><span class="nav-number">15.3.</span> <span class="nav-text">Example 3: Rest in
+Object Destructuring</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#breakdown-2"><span class="nav-number">15.3.1.</span> <span class="nav-text">Breakdown:</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#spread-operator-..."><span class="nav-number">16.</span> <span class="nav-text">Spread Operator (...)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#example-1-spread-in-arrays"><span class="nav-number">16.1.</span> <span class="nav-text">Example 1: Spread in Arrays</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#breakdown-3"><span class="nav-number">16.1.1.</span> <span class="nav-text">Breakdown:</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#example-2-spread-in-function-calls"><span class="nav-number">16.2.</span> <span class="nav-text">Example 2: Spread in
+Function Calls</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#breakdown-4"><span class="nav-number">16.2.1.</span> <span class="nav-text">Breakdown:</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#example-3-spread-in-objects"><span class="nav-number">16.3.</span> <span class="nav-text">Example 3: Spread in Objects</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#breakdown-5"><span class="nav-number">16.3.1.</span> <span class="nav-text">Breakdown:</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#summary-of-differences"><span class="nav-number">16.4.</span> <span class="nav-text">Summary of Differences</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#final-thoughts"><span class="nav-number">16.5.</span> <span class="nav-text">Final Thoughts</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#todo"><span class="nav-number">17.</span> <span class="nav-text">TODO</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -655,7 +845,7 @@ Manager Configuration</span></a></li><li class="nav-item nav-level-2"><a class="
       <div class="site-state-item site-state-posts">
           <a href="/blog/archives/">
         
-          <span class="site-state-item-count">60</span>
+          <span class="site-state-item-count">63</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -668,7 +858,7 @@ Manager Configuration</span></a></li><li class="nav-item nav-level-2"><a class="
       <div class="site-state-item site-state-tags">
             <a href="/blog/tags/">
           
-        <span class="site-state-item-count">105</span>
+        <span class="site-state-item-count">107</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -710,12 +900,12 @@ Manager Configuration</span></a></li><li class="nav-item nav-level-2"><a class="
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="Symbols count total">45k</span>
+    <span title="Symbols count total">48k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">2:43</span>
+    <span title="Reading time total">2:56</span>
 </div>
 
         

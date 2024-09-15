@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 7.2.0">
+<meta name="google-site-verification" content="wSUWWkv_QhNXB_N6r3rOSU2YlmmWxYBk6UWVlgu1q94" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/logo.gif">
+  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/logo.gif">
+  <link rel="mask-icon" href="/blog/images/logo.svg" color="#222">
+  <meta name="google-site-verification" content="google295e26d511c4c6ad.html">
+
+<link rel="stylesheet" href="/blog/css/main.css">
+
+
+<link rel="stylesheet" href="/blog/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"enkr1.github.io","root":"/blog/","scheme":"Gemini","version":"7.8.0","exturl":true,"sidebar":{"position":"left","width":300,"display":"post","padding":0,"offset":0,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"buttons","active":"disqus","storage":true,"lazyload":true,"nav":null,"activeClass":"disqus"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":-1,"unescape":true,"preload":true},"motion":{"enable":true,"async":false,"transition":{"post_block":"slideDownBigIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="A comprehensive guide to understanding greedy algorithms and how they provide efficient, optimal solutions by making locally optimal choices. Explore key concepts, implementation examples, and applica">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Greedy Algorithm: Optimal Solutions for Local Decisions">
+<meta property="og:url" content="https://enkr1.github.io/blog/greedy-algorithm-optimal-solutions-for-local-decisions/index.html">
+<meta property="og:site_name" content="ENKR&#39;s Blog">
+<meta property="og:description" content="A comprehensive guide to understanding greedy algorithms and how they provide efficient, optimal solutions by making locally optimal choices. Explore key concepts, implementation examples, and applica">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2024-09-09T19:02:12.000Z">
+<meta property="article:modified_time" content="2024-09-15T16:49:14.684Z">
+<meta property="article:author" content="Jing Hui PANG | 彭竞辉 | ENKR">
+<meta property="article:tag" content="note">
+<meta property="article:tag" content="algorithm">
+<meta property="article:tag" content="greedy-algorithm">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://enkr1.github.io/blog/greedy-algorithm-optimal-solutions-for-local-decisions/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4N4L18VB12"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-4N4L18VB12');
+</script>
+
+<!-- Firebase -->
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyBxexVzGzOqDUGFzHVT_-oYxkqAetlFUSo",
+    authDomain: "hexo-blog-9ccea.firebaseapp.com",
+    projectId: "hexo-blog-9ccea",
+    storageBucket: "hexo-blog-9ccea.appspot.com",
+    messagingSenderId: "71411607593",
+    appId: "1:71411607593:web:d0fb244020c34c5895d438",
+    measurementId: "G-TJPENBTDNS"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/ilyabirman-likely@2/release/likely.min.css">
+  <title>Greedy Algorithm: Optimal Solutions for Local Decisions | ENKR's Blog</title>
+  
+    <script>
+      function sendPageView() {
+        if (CONFIG.hostname !== location.hostname) return;
+        var uid = localStorage.getItem('uid') || (Math.random() + '.' + Math.random());
+        localStorage.setItem('uid', uid);
+        navigator.sendBeacon('https://www.google-analytics.com/collect', new URLSearchParams({
+          v  : 1,
+          tid: 'G-4N4L18VB12',
+          cid: uid,
+          t  : 'pageview',
+          dp : encodeURIComponent(location.pathname)
+        }));
+      }
+      document.addEventListener('pjax:complete', sendPageView);
+      sendPageView();
+    </script>
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/blog/atom.xml" title="ENKR's Blog" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/blog/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">ENKR's Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Jing Hui PANG - Software Engineer | Beatbox Artist</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/blog/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/blog/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-platforms">
+
+    <a href="https://enkr1.github.io/platforms/" rel="section"><i class="fa fa-link fa-fw"></i>Platforms</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/blog/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">47</span></a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/blog/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">107</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/blog/archives/" rel="section"><i class="fa fa-history fa-fw"></i>Archives<span class="badge">63</span></a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://enkr1.github.io/blog/greedy-algorithm-optimal-solutions-for-local-decisions/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="name" content="Jing Hui PANG | 彭竞辉 | ENKR">
+      <meta itemprop="description" content="Insights and beats at the intersection of technology and artistry by Jing Hui PANG, also known as ENKR. Discover programming tips, beatbox tutorials, and more.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ENKR's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Greedy Algorithm: Optimal Solutions for Local Decisions
+        </h1>
+
+        <div class="post-meta">
+
+<!--
+NOTE: created_at
+-->
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: Tue 10 September 2024 03:02:12 AM" itemprop="dateCreated datePublished" datetime="2024-09-10T03:02:12+08:00">Tue 10 September 2024</time>
+            </span>
+
+<!--
+NOTE: created_at
+-->
+<!--
+-->
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: Mon 16 September 2024 00:49:14 AM" itemprop="dateModified" datetime="2024-09-16T00:49:14+08:00">Mon 16 September 2024</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/Software-Engineering/" itemprop="url" rel="index"><span itemprop="name">Software Engineering</span></a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/Software-Engineering/Data-Structures-Algorithms/" itemprop="url" rel="index"><span itemprop="name">Data Structures & Algorithms</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+              <span>2k</span>
+            </span>
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+              <span>7 mins.</span>
+            </span>
+
+<!--
+NOTE: disqus
+-->
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/blog/greedy-algorithm-optimal-solutions-for-local-decisions/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="greedy-algorithm-optimal-solutions-for-local-decisions/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+<!--
+NOTE: views count
+-->
+            <span class="post-meta-item" title="Views">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-users"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <b><span class="firestore-visitors-count"></span></b>
+            </span>
+            <div class="post-description">A comprehensive guide to understanding greedy algorithms and how they provide efficient, optimal solutions by making locally optimal choices. Explore key concepts, implementation examples, and applications in real-world problem-solving scenarios.</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="wip-...">WIP ...</h2>
+<h3 id="what-is-the-greedy-approach">What is the Greedy Approach?</h3>
+<p>A <strong>greedy algorithm</strong> is a type of algorithmic strategy
+where we make the best possible decision <strong>at each step</strong>
+without worrying about the future consequences. In other words, we
+<strong>choose the locally optimal solution</strong> at each stage with
+the hope that these local solutions will lead to the <strong>global
+optimum</strong> (the best overall solution).</p>
+<p>In this context, the greedy approach makes sense because we are
+allowed to make multiple transactions (buy/sell as many times as we
+want). So, <strong>every time there's a price increase</strong>, the
+most "greedy" thing to do is to sell the stock and capture the profit
+from that small increase. By summing up all the small profits, we end up
+with the maximum profit.</p>
+<h3 id="is-this-a-greedy-approach">Is This a Greedy Approach?</h3>
+<p>Yes, your solution is an example of the <strong>greedy
+approach</strong>. Here's why: - At every step, you check if the next
+day's price is higher than the current day's price. If it is, you
+"greedily" take that profit by selling the stock (without waiting for a
+future peak). - The decision to "sell" at every increase is
+<strong>local</strong> to that particular pair of days. You are not
+concerned with how the prices behave in the distant future, but just
+focusing on the immediate gain. - Despite the simplicity, this greedy
+strategy guarantees the <strong>global maximum profit</strong>, because
+capturing every price increase ensures that you are taking advantage of
+every opportunity to make a profit.</p>
+<h3 id="why-is-it-considered-a-greedy-algorithm">Why Is It Considered a
+Greedy Algorithm?</h3>
+<ul>
+<li><strong>Local decisions</strong>: You are making decisions based on
+the current and next day's prices.</li>
+<li><strong>No backtracking</strong>: Once you decide to "sell" (i.e.,
+take profit), you don't reconsider or reverse that decision.</li>
+<li><strong>Efficient</strong>: Greedy algorithms are typically
+efficient in terms of time complexity, as they only need to make one
+pass through the data to get a solution (in this case, O(n)).</li>
+</ul>
+<h3 id="why-does-the-greedy-approach-work-here">Why Does the Greedy
+Approach Work Here?</h3>
+<p>The greedy approach works here because the problem is structured in a
+way that each local profit opportunity contributes to the overall
+solution. There are no penalties or hidden conditions for making
+multiple transactions. Each upward price trend is an independent
+opportunity to make a profit, and capturing every small increase results
+in the maximum total profit.</p>
+<h3 id="is-this-really-an-algorithm">Is This Really an Algorithm?</h3>
+<p>Yes, this is a valid and efficient algorithm! The greedy approach is
+a recognized strategy in algorithm design, and it often leads to simple,
+elegant solutions for certain types of problems, particularly
+<strong>optimization problems</strong>.</p>
+<p>Examples of other well-known greedy algorithms include: -
+<strong>Dijkstra's Algorithm</strong> for finding the shortest path in
+graphs. - <strong>Kruskal's Algorithm</strong> for finding the minimum
+spanning tree. - <strong>Huffman Coding</strong> for data
+compression.</p>
+<h3 id="how-do-we-come-up-with-this">How Do We Come Up with This?</h3>
+<ol type="1">
+<li><p><strong>Understand the Problem Constraints</strong>: In this
+case, you're allowed unlimited transactions, which means capturing every
+profit opportunity is ideal.</p></li>
+<li><p><strong>Simplify the Problem</strong>: Focus on the individual
+elements (each pair of consecutive days) instead of trying to handle the
+entire array at once.</p></li>
+<li><p><strong>Find Local Opportunities</strong>: The key to greedy
+algorithms is to recognize that local optimizations (small daily
+profits) add up to the global optimum (maximum total profit).</p></li>
+<li><p><strong>Test Small Examples</strong>: As you saw with the example
+<code>[1, 2, 3, 4, 5]</code>, even selling on each increase produces the
+same result as holding till the last day. This validates the
+approach.</p></li>
+</ol>
+<h3 id="why-does-it-seem-so-simple">Why Does It Seem So Simple?</h3>
+<p>The beauty of the greedy approach is that it often leads to very
+simple and efficient solutions for problems that can be broken down into
+smaller, independent steps. It's one of the reasons greedy algorithms
+are widely used—they're often easy to implement and very efficient, even
+though they may not always guarantee the optimal solution for every
+problem (but in this case, it does!).</p>
+<p>In summary: - <strong>Greedy algorithms</strong> make local, myopic
+decisions. - They are used when these local decisions lead to an optimal
+solution. - Your solution is <strong>greedy</strong> because it captures
+profit at every price increase. - The simplicity of the solution doesn't
+make it any less of a valid algorithm—it's both correct and efficient
+for this problem!</p>
+<hr />
+<p>Yes, <strong>greedy</strong> is an <strong>umbrella term</strong>
+used to describe a broad class of algorithms that follow a specific
+strategy: making the best possible choice (local optimal choice) at each
+step with the hope that this will lead to the best global solution.
+However, not all algorithms are greedy—only those that follow this
+decision-making process at every step.</p>
+<h3 id="greedy-algorithms-as-an-umbrella-term">Greedy Algorithms as an
+Umbrella Term</h3>
+<p>The <strong>greedy approach</strong> is a problem-solving paradigm,
+much like <strong>dynamic programming</strong> or <strong>divide and
+conquer</strong>. It is applied to a variety of algorithms across
+different domains, but only in scenarios where making local decisions
+(without considering future consequences) leads to a globally optimal
+solution.</p>
+<h3 id="algorithms-using-the-greedy-approach">Algorithms Using the
+Greedy Approach</h3>
+<p>Here are some well-known algorithms that fall under the greedy
+umbrella:</p>
+<ol type="1">
+<li><strong>Dijkstra's Algorithm</strong> (Shortest Path in Graphs):
+<ul>
+<li>Greedily selects the node with the smallest known distance from the
+start node at each step.</li>
+<li>Updates its neighbors with the shortest known distances.</li>
+<li>Works because each shortest path is built step-by-step in an optimal
+manner.</li>
+</ul></li>
+<li><strong>Prim's and Kruskal's Algorithms</strong> (Minimum Spanning
+Tree):
+<ul>
+<li><strong>Kruskal's Algorithm</strong>: Greedily adds the smallest
+edge that doesn't form a cycle.</li>
+<li><strong>Prim's Algorithm</strong>: Greedily adds the minimum weight
+edge that connects to an unvisited node.</li>
+</ul></li>
+<li><strong>Huffman Coding</strong> (Data Compression):
+<ul>
+<li>Greedily merges the two smallest frequency nodes to build a tree
+with minimal weighted path length, which is optimal for data
+compression.</li>
+</ul></li>
+<li><strong>Activity Selection Problem</strong>:
+<ul>
+<li>Greedily selects the next activity that finishes the earliest and
+doesn't overlap with the previously selected activity. This ensures the
+maximum number of non-overlapping activities.</li>
+</ul></li>
+<li><strong>Fractional Knapsack</strong> (Maximizing Value/Weight in
+Knapsack Problem):
+<ul>
+<li>Greedily chooses the item with the highest value-to-weight ratio
+until the knapsack is full.</li>
+</ul></li>
+</ol>
+<h3 id="why-arent-all-algorithms-greedy">Why Aren't All Algorithms
+Greedy?</h3>
+<p>Not all problems can be solved optimally using the greedy approach.
+The greedy strategy works well for certain problems, but in other cases,
+it may <strong>not guarantee the globally optimal solution</strong>
+because the locally optimal decisions might not lead to the best overall
+outcome.</p>
+<p>For example: - <strong>Dynamic Programming</strong> (like in the
+<strong>0/1 Knapsack Problem</strong>) often beats greedy solutions. In
+the <strong>0/1 Knapsack Problem</strong>, a greedy approach of choosing
+items based on their value-to-weight ratio may not lead to the optimal
+solution. A dynamic programming approach, which considers all possible
+combinations of items, guarantees the best outcome. - <strong>Divide and
+Conquer</strong> algorithms like <strong>Merge Sort</strong> and
+<strong>Quick Sort</strong> solve problems by dividing the problem into
+subproblems, solving each independently, and then combining the results.
+These are different from greedy algorithms.</p>
+<h3
+id="characteristics-of-problems-suitable-for-greedy-algorithms">Characteristics
+of Problems Suitable for Greedy Algorithms:</h3>
+<ol type="1">
+<li><strong>Greedy Choice Property</strong>: A globally optimal solution
+can be arrived at by making a series of locally optimal choices.</li>
+<li><strong>Optimal Substructure</strong>: The problem can be broken
+down into subproblems that can be solved independently, and the solution
+to the problem can be built from the solutions to the subproblems.</li>
+</ol>
+<p>If both of these properties hold, a greedy algorithm is likely to
+give you the correct solution. However, not all problems have these
+properties, and that's why greedy algorithms aren't always the right
+choice.</p>
+<h3 id="so-is-dijkstras-algorithm-greedy">So, Is Dijkstra's Algorithm
+Greedy?</h3>
+<p>Yes! <strong>Dijkstra's Algorithm</strong> is indeed a greedy
+algorithm because: - It makes the local optimal choice at each step,
+selecting the node with the smallest distance to explore next. - This
+works because the shortest path substructure allows it to build an
+optimal solution step by step.</p>
+<h3 id="summary">Summary:</h3>
+<ul>
+<li><strong>Greedy algorithms</strong> make decisions based on local
+optimal choices in the hope that it leads to a global optimum.</li>
+<li><strong>Not all algorithms are greedy</strong>, but many famous
+algorithms like <strong>Dijkstra's</strong>, <strong>Prim's</strong>,
+and <strong>Kruskal's</strong> are.</li>
+<li>Greedy algorithms work when <strong>local decisions</strong> lead to
+the globally optimal solution, but they don't always work for every
+problem.</li>
+<li>Some problems, like those solved by <strong>dynamic
+programming</strong>, require more careful, exhaustive exploration of
+possibilities and can't be solved optimally by greedy strategies.</li>
+</ul>
+<p>So, while the greedy approach is a powerful and widely applicable
+paradigm, it's not universal, and understanding when to use it is
+key!</p>
+<hr />
+<h2 id="jump-game-i-ii">Jump Game I &amp; II</h2>
+<p>Certainly! Here's a combined note for <strong>Jump Game I</strong>
+and <strong>Jump Game II</strong> using the greedy approach:</p>
+<hr />
+<h3 id="greedy-algorithm-for-jump-game-i-and-ii">Greedy Algorithm for
+Jump Game I and II</h3>
+<p><strong>Jump Game I (LeetCode 55)</strong>: Given an array
+<code>nums</code>, where each element represents your maximum jump
+length at that position, determine whether you can reach the last index
+starting from index 0.</p>
+<p><strong>Jump Game II (LeetCode 45)</strong>: Similarly, given an
+array <code>nums</code>, find the <strong>minimum number of
+jumps</strong> required to reach the last index, starting from index
+0.</p>
+<hr />
+<h3 id="why-use-a-greedy-approach-for-both-problems">Why Use a Greedy
+Approach for Both Problems?</h3>
+<p>The greedy algorithm works for both problems because it makes
+<strong>locally optimal choices</strong> at each step to ensure an
+efficient solution. The core idea is to track how far you can jump from
+each position and decide when to commit to a jump (in the case of Jump
+Game II).</p>
+<hr />
+<h3 id="greedy-approach-for-jump-game-i">Greedy Approach for
+<strong>Jump Game I</strong>:</h3>
+<h4 id="goal">Goal:</h4>
+<p>Determine if you can reach the last index from the starting
+position.</p>
+<h4 id="strategy">Strategy:</h4>
+<ol type="1">
+<li><strong>Track Farthest Reach</strong>: As you traverse the array,
+keep track of the farthest point you can reach
+(<code>furthestIndex</code>).</li>
+<li><strong>Check Reachability</strong>: If at any point the current
+index exceeds the farthest reachable index, return <code>false</code>
+since you can't proceed further.</li>
+<li><strong>End Condition</strong>: If the farthest reachable index is
+greater than or equal to the last index, return <code>true</code>.</li>
+</ol>
+<h4 id="code">Code:</h4>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">number[]</span>&#125; <span class="variable">nums</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">boolean</span>&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> canJump = <span class="keyword">function</span> (<span class="params">nums</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> furthestIndex = <span class="number">0</span>; <span class="comment">// Farthest index we can reach</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; nums.<span class="property">length</span>; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (i &gt; furthestIndex) <span class="keyword">return</span> <span class="literal">false</span>; <span class="comment">// If we can&#x27;t reach this index</span></span><br><span class="line">        furthestIndex = <span class="title class_">Math</span>.<span class="title function_">max</span>(furthestIndex, i + nums[i]); <span class="comment">// Update farthest reach</span></span><br><span class="line">        <span class="keyword">if</span> (furthestIndex &gt;= nums.<span class="property">length</span> - <span class="number">1</span>) <span class="keyword">return</span> <span class="literal">true</span>; <span class="comment">// If we can reach the end</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h4 id="key-points">Key Points:</h4>
+<ul>
+<li><strong>Locally Optimal</strong>: The algorithm checks whether you
+can reach the last index by calculating the farthest index you can jump
+to at each step.</li>
+<li><strong>Efficient</strong>: Runs in <strong>O(n)</strong> time,
+making a single pass through the array.</li>
+</ul>
+<hr />
+<h3 id="greedy-approach-for-jump-game-ii">Greedy Approach for
+<strong>Jump Game II</strong>:</h3>
+<h4 id="goal-1">Goal:</h4>
+<p>Find the minimum number of jumps needed to reach the last index.</p>
+<h4 id="strategy-1">Strategy:</h4>
+<ol type="1">
+<li><strong>Track Farthest Reach</strong>: Just like in Jump Game I,
+track the farthest index you can reach
+(<code>furthestIndex</code>).</li>
+<li><strong>Decide When to Jump</strong>: Keep track of when you
+<strong>must</strong> make a jump by monitoring the current jump's range
+(<code>jumpAtIndex</code>). When you reach the end of this range, make a
+jump and update the range to the farthest point you can reach.</li>
+<li><strong>Early Exit</strong>: As soon as you find that you can reach
+or surpass the last index, return the jump count.</li>
+</ol>
+<h4 id="code-1">Code:</h4>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">number[]</span>&#125; <span class="variable">nums</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">number</span>&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> jump = <span class="keyword">function</span> (<span class="params">nums</span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> N = nums.<span class="property">length</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">let</span> jumpAtIndex = nums[<span class="number">0</span>]; <span class="comment">// The current jump range</span></span><br><span class="line">    <span class="keyword">let</span> furthestIndex = nums[<span class="number">0</span>]; <span class="comment">// Farthest we can reach</span></span><br><span class="line">    <span class="keyword">let</span> nbOfJump = <span class="number">1</span>; <span class="comment">// Minimum 1 jump if N &gt; 1</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">1</span>; i &lt; N - <span class="number">1</span>; i++) &#123;</span><br><span class="line">        <span class="comment">// Update the farthest reachable index</span></span><br><span class="line">        furthestIndex = <span class="title class_">Math</span>.<span class="title function_">max</span>(nums[i] + i, furthestIndex);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// When we reach the end of the current jump range</span></span><br><span class="line">        <span class="keyword">if</span> (jumpAtIndex === i) &#123;</span><br><span class="line">            nbOfJump++; <span class="comment">// Increment jump count</span></span><br><span class="line">            jumpAtIndex = furthestIndex; <span class="comment">// Update jump range</span></span><br><span class="line"></span><br><span class="line">            <span class="comment">// If we can reach the last index, return the jump count</span></span><br><span class="line">            <span class="keyword">if</span> (furthestIndex &gt;= N - <span class="number">1</span>) &#123;</span><br><span class="line">                <span class="keyword">return</span> nbOfJump;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> nbOfJump;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h4 id="key-points-1">Key Points:</h4>
+<ul>
+<li><strong>Locally Optimal</strong>: Each time you decide to jump, you
+aim to reach the farthest point possible, ensuring the fewest number of
+jumps.</li>
+<li><strong>Efficient</strong>: Runs in <strong>O(n)</strong> time,
+making a single pass through the array.</li>
+</ul>
+<hr />
+<h3 id="summary-of-greedy-approach">Summary of Greedy Approach:</h3>
+<ul>
+<li><strong>Jump Game I</strong> focuses on checking whether the last
+index is reachable, while <strong>Jump Game II</strong> focuses on
+minimizing the number of jumps needed.</li>
+<li>In both problems, we use the greedy strategy to <strong>track the
+farthest point</strong> reachable at every step and decide when to jump
+(in Jump Game II).</li>
+<li><strong>Greedy algorithms</strong> are effective here because they
+allow us to make local decisions (the farthest jump at each step) that
+lead to the global solution (whether we can reach the end or minimize
+jumps).</li>
+</ul>
+<p>This greedy approach ensures efficiency and correctness for both
+problems, providing an optimal solution in linear time.</p>
+
+    </div>
+
+    
+    
+    
+      
+  <div class="popular-posts-header">Related Posts</div>
+  <ul class="popular-posts">
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="/blog/boyer-moore-voting-algorithm-finding-the-majority-element/" rel="bookmark">Boyer-Moore Voting Algorithm: Finding the Majority Element</a></div>
+    </li>
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="/blog/dijkstra-s-algorithm-efficient-shortest-path-finding-in-graphs/" rel="bookmark">Dijkstra's Algorithm: Efficient Shortest Path Finding in Graphs</a></div>
+    </li>
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="/blog/euclidean-algorithm-finding-the-greatest-common-divisor-gcd/" rel="bookmark">Euclidean Algorithm: Finding the Greatest Common Divisor (GCD)</a></div>
+    </li>
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="/blog/floyd-s-tortoise-and-hare-algorithm-efficient-cycle-detection/" rel="bookmark">Floyd's Tortoise and Hare Algorithm: Efficient Cycle Detection</a></div>
+    </li>
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="/blog/manacher-s-algorithm-fast-and-efficient-palindrome-detection/" rel="bookmark">Manacher's Algorithm: Fast and Efficient Palindrome Detection</a></div>
+    </li>
+  </ul>
+<div class="post-widgets">
+    <div class="likely">
+        <div class="twitter">Tweet</div>
+        <div class="facebook">Share</div>
+        <div class="linkedin">Link</div>
+        <div class="gplus">Plus</div>
+        <div class="vkontakte">Share</div>
+        <div class="odnoklassniki">Class</div>
+        <div class="telegram">Send</div>
+        <div class="whatsapp">Send</div>
+        <div class="pinterest">Pin</div>
+    </div>
+  </div>
+  <script src="//cdn.jsdelivr.net/npm/ilyabirman-likely@2/release/likely.min.js"></script>
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/blog/tags/note/" rel="tag"># note</a>
+              <a href="/blog/tags/algorithm/" rel="tag"># algorithm</a>
+              <a href="/blog/tags/greedy-algorithm/" rel="tag"># greedy-algorithm</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/blog/leetcode-189-rotate-array/" rel="prev" title="LeetCode-189: Rotate Array">
+      <i class="fa fa-chevron-left"></i> LeetCode-189: Rotate Array
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/blog/journal-week-8/" rel="next" title="Journal: Week 8">
+      Journal: Week 8 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    
+  <div class="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+  </div>
+  
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#wip-..."><span class="nav-number">1.</span> <span class="nav-text">WIP ...</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#what-is-the-greedy-approach"><span class="nav-number">1.1.</span> <span class="nav-text">What is the Greedy Approach?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#is-this-a-greedy-approach"><span class="nav-number">1.2.</span> <span class="nav-text">Is This a Greedy Approach?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#why-is-it-considered-a-greedy-algorithm"><span class="nav-number">1.3.</span> <span class="nav-text">Why Is It Considered a
+Greedy Algorithm?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#why-does-the-greedy-approach-work-here"><span class="nav-number">1.4.</span> <span class="nav-text">Why Does the Greedy
+Approach Work Here?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#is-this-really-an-algorithm"><span class="nav-number">1.5.</span> <span class="nav-text">Is This Really an Algorithm?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#how-do-we-come-up-with-this"><span class="nav-number">1.6.</span> <span class="nav-text">How Do We Come Up with This?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#why-does-it-seem-so-simple"><span class="nav-number">1.7.</span> <span class="nav-text">Why Does It Seem So Simple?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#greedy-algorithms-as-an-umbrella-term"><span class="nav-number">1.8.</span> <span class="nav-text">Greedy Algorithms as an
+Umbrella Term</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#algorithms-using-the-greedy-approach"><span class="nav-number">1.9.</span> <span class="nav-text">Algorithms Using the
+Greedy Approach</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#why-arent-all-algorithms-greedy"><span class="nav-number">1.10.</span> <span class="nav-text">Why Aren&#39;t All Algorithms
+Greedy?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#characteristics-of-problems-suitable-for-greedy-algorithms"><span class="nav-number">1.11.</span> <span class="nav-text">Characteristics
+of Problems Suitable for Greedy Algorithms:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#so-is-dijkstras-algorithm-greedy"><span class="nav-number">1.12.</span> <span class="nav-text">So, Is Dijkstra&#39;s Algorithm
+Greedy?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#summary"><span class="nav-number">1.13.</span> <span class="nav-text">Summary:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#jump-game-i-ii"><span class="nav-number">2.</span> <span class="nav-text">Jump Game I &amp; II</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#greedy-algorithm-for-jump-game-i-and-ii"><span class="nav-number">2.1.</span> <span class="nav-text">Greedy Algorithm for
+Jump Game I and II</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#why-use-a-greedy-approach-for-both-problems"><span class="nav-number">2.2.</span> <span class="nav-text">Why Use a Greedy
+Approach for Both Problems?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#greedy-approach-for-jump-game-i"><span class="nav-number">2.3.</span> <span class="nav-text">Greedy Approach for
+Jump Game I:</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#goal"><span class="nav-number">2.3.1.</span> <span class="nav-text">Goal:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#strategy"><span class="nav-number">2.3.2.</span> <span class="nav-text">Strategy:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#code"><span class="nav-number">2.3.3.</span> <span class="nav-text">Code:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#key-points"><span class="nav-number">2.3.4.</span> <span class="nav-text">Key Points:</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#greedy-approach-for-jump-game-ii"><span class="nav-number">2.4.</span> <span class="nav-text">Greedy Approach for
+Jump Game II:</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#goal-1"><span class="nav-number">2.4.1.</span> <span class="nav-text">Goal:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#strategy-1"><span class="nav-number">2.4.2.</span> <span class="nav-text">Strategy:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#code-1"><span class="nav-number">2.4.3.</span> <span class="nav-text">Code:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#key-points-1"><span class="nav-number">2.4.4.</span> <span class="nav-text">Key Points:</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#summary-of-greedy-approach"><span class="nav-number">2.5.</span> <span class="nav-text">Summary of Greedy Approach:</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Jing Hui PANG | 彭竞辉 | ENKR</p>
+  <div class="site-description" itemprop="description">Insights and beats at the intersection of technology and artistry by Jing Hui PANG, also known as ENKR. Discover programming tips, beatbox tutorials, and more.</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/blog/archives/">
+        
+          <span class="site-state-item-count">63</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/blog/categories/">
+          
+        <span class="site-state-item-count">47</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/blog/tags/">
+          
+        <span class="site-state-item-count">107</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+<div class="globe-view-counter-container">
+  <script type="text/javascript" src="//rf.revolvermaps.com/0/0/8.js?i=5uxj8a6ge7p&amp;m=1&amp;c=ff0000&amp;cr1=fff600&amp;f=ubuntu&amp;l=33" async="async"></script>
+</div>
+
+      </div>
+
+    </div>
+
+
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 2023 – 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class=""></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Jing Hui PANG | 彭竞辉 | ENKR</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="Symbols count total">48k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="Reading time total">2:56</span>
+</div>
+
+        
+
+
+
+
+  <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-firestore.js"></script>
+  <script>
+    firebase.initializeApp({
+      apiKey   : 'AIzaSyBxexVzGzOqDUGFzHVT_-oYxkqAetlFUSo',
+      projectId: 'hexo-blog-9ccea'
+    });
+
+    function getCount(doc, increaseCount) {
+      // IncreaseCount will be false when not in article page
+      return doc.get().then(d => {
+        var count = 0;
+        if (!d.exists) { // Has no data, initialize count
+          if (increaseCount) {
+            doc.set({
+              count: 1
+            });
+            count = 1;
+          }
+        } else { // Has data
+          count = d.data().count;
+          if (increaseCount) {
+            // If first view this article
+            doc.set({ // Increase count
+              count: count + 1
+            });
+            count++;
+          }
+        }
+
+        return count;
+      });
+    }
+
+    function appendCountTo(el) {
+      return count => {
+        el.innerText = count;
+      }
+    }
+  </script>
+  <script>
+    (function() {
+      var db = firebase.firestore();
+      var articles = db.collection('articles');
+
+      if (CONFIG.page.isPost) { // Is article page
+        var title = document.querySelector('.post-title').innerText.trim();
+        var doc = articles.doc(title);
+        var increaseCount = CONFIG.hostname === location.hostname;
+        if (localStorage.getItem(title)) {
+          increaseCount = false;
+        } else {
+          // Mark as visited
+          localStorage.setItem(title, true);
+        }
+        getCount(doc, increaseCount).then(appendCountTo(document.querySelector('.firestore-visitors-count')));
+      } else if (CONFIG.page.isHome) { // Is index page
+        var promises = [...document.querySelectorAll('.post-title')].map(element => {
+          var title = element.innerText.trim();
+          var doc = articles.doc(title);
+          return getCount(doc);
+        });
+        Promise.all(promises).then(counts => {
+          var metas = document.querySelectorAll('.firestore-visitors-count');
+          counts.forEach((val, idx) => {
+            appendCountTo(metas[idx])(val);
+          });
+        });
+      }
+    })();
+  </script>
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/blog/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
+  <script src="/blog/lib/velocity/velocity.min.js"></script>
+  <script src="/blog/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/blog/js/utils.js"></script>
+
+<script src="/blog/js/motion.js"></script>
+
+
+<script src="/blog/js/schemes/pisces.js"></script>
+
+
+<script src="/blog/js/next-boot.js"></script>
+
+
+
+
+  
+  <script>
+    (function(){
+      var canonicalURL, curProtocol;
+      //Get the <link> tag
+      var x=document.getElementsByTagName("link");
+		//Find the last canonical URL
+		if(x.length > 0){
+			for (i=0;i<x.length;i++){
+				if(x[i].rel.toLowerCase() == 'canonical' && x[i].href){
+					canonicalURL=x[i].href;
+				}
+			}
+		}
+    //Get protocol
+	    if (!canonicalURL){
+	    	curProtocol = window.location.protocol.split(':')[0];
+	    }
+	    else{
+	    	curProtocol = canonicalURL.split(':')[0];
+	    }
+      //Get current URL if the canonical URL does not exist
+	    if (!canonicalURL) canonicalURL = window.location.href;
+	    //Assign script content. Replace current URL with the canonical URL
+      !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=canonicalURL,t=document.referrer;if(!e.test(r)){var n=(String(curProtocol).toLowerCase() === 'https')?"https://sp0.baidu.com/9_Q4simg2RQJ8t7jm9iCKT-xh_/s.gif":"//api.share.baidu.com/s.gif";t?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var i=new Image;i.src=n}}(window);})();
+  </script>
+
+
+
+
+  
+<script src="/blog/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+<script>
+  function loadCount() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://https-enkr1-github-io-blog.disqus.com/count.js';
+    s.id = 'dsq-count-scr';
+    (d.head || d.body).appendChild(s);
+  }
+  // defer loading until the whole page loading is completed
+  window.addEventListener('load', loadCount, false);
+</script>
+<script>
+  var disqus_config = function() {
+    this.page.url = "https://enkr1.github.io/blog/greedy-algorithm-optimal-solutions-for-local-decisions/";
+    this.page.identifier = "greedy-algorithm-optimal-solutions-for-local-decisions/";
+    this.page.title = "Greedy Algorithm: Optimal Solutions for Local Decisions";
+    };
+  NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
+    if (window.DISQUS) {
+      DISQUS.reset({
+        reload: true,
+        config: disqus_config
+      });
+    } else {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://https-enkr1-github-io-blog.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', '' + +new Date());
+      (d.head || d.body).appendChild(s);
+    }
+  });
+</script>
+
+</body>
+</html>
