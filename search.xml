@@ -24,15 +24,15 @@
             
             <tag> algorithm </tag>
             
-            <tag> javascript </tag>
-            
             <tag> leetcode </tag>
+            
+            <tag> javascript </tag>
             
             <tag> leetcode-medium </tag>
             
-            <tag> dynamic-programming </tag>
-            
             <tag> interview-preparation </tag>
+            
+            <tag> dynamic-programming </tag>
             
             <tag> top-interview-150 </tag>
             
@@ -63,15 +63,15 @@
             
             <tag> algorithm </tag>
             
-            <tag> javascript </tag>
-            
             <tag> leetcode </tag>
+            
+            <tag> javascript </tag>
             
             <tag> leetcode-medium </tag>
             
-            <tag> dynamic-programming </tag>
-            
             <tag> interview-preparation </tag>
+            
+            <tag> dynamic-programming </tag>
             
         </tags>
       
@@ -160,9 +160,9 @@
             
             <tag> algorithm </tag>
             
-            <tag> javascript </tag>
-            
             <tag> leetcode </tag>
+            
+            <tag> javascript </tag>
             
             <tag> interview-preparation </tag>
             
@@ -287,6 +287,8 @@
           
           <category> Data Structures &amp; Algorithms </category>
           
+          <category> My Notes </category>
+          
       </categories>
       
       
@@ -325,19 +327,19 @@
             
             <tag> algorithm </tag>
             
-            <tag> javascript </tag>
-            
             <tag> leetcode </tag>
             
-            <tag> leetcode-medium </tag>
+            <tag> javascript </tag>
             
-            <tag> dynamic-programming </tag>
+            <tag> leetcode-medium </tag>
             
             <tag> interview-preparation </tag>
             
             <tag> min-heap </tag>
             
             <tag> priority-queue </tag>
+            
+            <tag> dynamic-programming </tag>
             
         </tags>
       
@@ -366,9 +368,9 @@
             
             <tag> algorithm </tag>
             
-            <tag> javascript </tag>
-            
             <tag> leetcode </tag>
+            
+            <tag> javascript </tag>
             
             <tag> interview-preparation </tag>
             
@@ -647,15 +649,13 @@
             
             <tag> algorithm </tag>
             
-            <tag> javascript </tag>
-            
             <tag> leetcode </tag>
+            
+            <tag> javascript </tag>
             
             <tag> leetcode-medium </tag>
             
             <tag> interview-preparation </tag>
-            
-            <tag> top-interview-150 </tag>
             
             <tag> topological-sort </tag>
             
@@ -664,6 +664,8 @@
             <tag> adjacency-list </tag>
             
             <tag> indegree </tag>
+            
+            <tag> top-interview-150 </tag>
             
         </tags>
       
@@ -694,9 +696,9 @@
             
             <tag> interview-preparation </tag>
             
-            <tag> bash </tag>
-            
             <tag> leetcode-easy </tag>
+            
+            <tag> bash </tag>
             
         </tags>
       
@@ -1216,6 +1218,8 @@
           
           <category> Career Development </category>
           
+          <category> My Notes </category>
+          
           <category> Interviews </category>
           
           <category> Interview Preparation </category>
@@ -1666,6 +1670,8 @@
           
           <category> Programming Languages </category>
           
+          <category> My Notes </category>
+          
           <category> Bash </category>
           
       </categories>
@@ -1749,15 +1755,15 @@
             
             <tag> note </tag>
             
+            <tag> data-science </tag>
+            
+            <tag> machine-learning </tag>
+            
             <tag> mit-idss </tag>
             
             <tag> self-study </tag>
             
-            <tag> machine-learning </tag>
-            
             <tag> ai </tag>
-            
-            <tag> data-science </tag>
             
         </tags>
       
@@ -1778,6 +1784,8 @@
           <category> Software Engineering </category>
           
           <category> Programming Languages </category>
+          
+          <category> My Notes </category>
           
           <category> JavaScript </category>
           
@@ -1823,15 +1831,15 @@
             
             <tag> note </tag>
             
+            <tag> data-science </tag>
+            
+            <tag> machine-learning </tag>
+            
             <tag> mit-idss </tag>
             
             <tag> self-study </tag>
             
-            <tag> machine-learning </tag>
-            
             <tag> ai </tag>
-            
-            <tag> data-science </tag>
             
         </tags>
       
@@ -1866,15 +1874,15 @@
             
             <tag> note </tag>
             
+            <tag> data-science </tag>
+            
+            <tag> machine-learning </tag>
+            
             <tag> mit-idss </tag>
             
             <tag> self-study </tag>
             
-            <tag> machine-learning </tag>
-            
             <tag> ai </tag>
-            
-            <tag> data-science </tag>
             
         </tags>
       
@@ -1909,15 +1917,15 @@
             
             <tag> note </tag>
             
+            <tag> data-science </tag>
+            
+            <tag> machine-learning </tag>
+            
             <tag> mit-idss </tag>
             
             <tag> self-study </tag>
             
-            <tag> machine-learning </tag>
-            
             <tag> ai </tag>
-            
-            <tag> data-science </tag>
             
         </tags>
       
@@ -1952,9 +1960,9 @@
             
             <tag> note </tag>
             
-            <tag> machine-learning </tag>
-            
             <tag> data-science </tag>
+            
+            <tag> machine-learning </tag>
             
         </tags>
       
@@ -1989,9 +1997,9 @@
             
             <tag> note </tag>
             
-            <tag> machine-learning </tag>
-            
             <tag> data-science </tag>
+            
+            <tag> machine-learning </tag>
             
             <tag> unsupervised-learning </tag>
             
@@ -2032,15 +2040,15 @@
             
             <tag> note </tag>
             
+            <tag> data-science </tag>
+            
+            <tag> machine-learning </tag>
+            
             <tag> mit-idss </tag>
             
             <tag> self-study </tag>
             
-            <tag> machine-learning </tag>
-            
             <tag> ai </tag>
-            
-            <tag> data-science </tag>
             
         </tags>
       
@@ -2075,15 +2083,15 @@
             
             <tag> note </tag>
             
+            <tag> data-science </tag>
+            
+            <tag> machine-learning </tag>
+            
             <tag> mit-idss </tag>
             
             <tag> self-study </tag>
             
-            <tag> machine-learning </tag>
-            
             <tag> ai </tag>
-            
-            <tag> data-science </tag>
             
         </tags>
       
@@ -2116,15 +2124,15 @@
       
         <tags>
             
+            <tag> data-science </tag>
+            
+            <tag> machine-learning </tag>
+            
             <tag> mit-idss </tag>
             
             <tag> self-study </tag>
             
-            <tag> machine-learning </tag>
-            
             <tag> ai </tag>
-            
-            <tag> data-science </tag>
             
         </tags>
       
@@ -2248,9 +2256,9 @@
             
             <tag> note </tag>
             
-            <tag> hexo </tag>
-            
             <tag> programming </tag>
+            
+            <tag> hexo </tag>
             
         </tags>
       
