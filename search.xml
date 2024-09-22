@@ -4,6 +4,45 @@
   
     
     <entry>
+      <title>LeetCode-139: Word Break</title>
+      <link href="/blog/leetcode-139-word-break/"/>
+      <url>/blog/leetcode-139-word-break/</url>
+      
+        <content type="html"><![CDATA[<h2 id="word-break"><ahref="https://leetcode.com/problems/word-break/description/?envType=study-plan-v2&amp;envId=top-interview-150">139.Word Break</a></h2><ul><li><strong>Goal</strong>: Determine if a string <code>s</code> can besegmented into a space-separated sequence of one or more dictionarywords from <code>wordDict</code>.</li><li><strong>Constraints</strong>:<ul><li><code>1 &lt;= s.length &lt;= 300</code></li><li><code>1 &lt;= wordDict.length &lt;= 1000</code></li><li><code>1 &lt;= wordDict[i].length &lt;= 20</code></li><li><code>s</code> and <code>wordDict[i]</code> consist of onlylowercase English letters.</li><li>All the strings of <code>wordDict</code> are unique.</li></ul></li></ul><h3 id="understanding-the-problem">Understanding the Problem</h3><p>Given a string <code>s</code> and a list of words<code>wordDict</code>, we need to check if <code>s</code> can be brokendown into a sequence of one or more words from <code>wordDict</code>.The same word from the dictionary can be used multiple times.</p><h4 id="analogy-puzzle-pieces">Analogy: Puzzle Pieces</h4><ul><li><strong>String <code>s</code></strong>: Think of <code>s</code> as along puzzle strip.</li><li><strong>Dictionary Words (<code>wordDict</code>)</strong>: Each wordis like a puzzle piece.</li><li><strong>Goal</strong>: Use the puzzle pieces to completely cover thepuzzle strip without gaps or overlaps.</li></ul><h3 id="example">Example</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Input: s = &quot;leetcode&quot;, wordDict = [&quot;leet&quot;, &quot;code&quot;]</span><br><span class="line">Output: true</span><br><span class="line"></span><br><span class="line">Explanation:</span><br><span class="line">We can segment &quot;leetcode&quot; as &quot;leet code&quot;.</span><br></pre></td></tr></table></figure><hr /><h2 id="quick-steps-for-solving-the-problem">Quick Steps for Solving theProblem</h2><h3 id="use-dynamic-programming-dp">1. Use Dynamic Programming (DP)</h3><ul><li><strong>Define Subproblems</strong>: Determine if substrings<code>s[0..i]</code> can be segmented using <code>wordDict</code>.</li><li><strong>DP Array (<code>dp</code>)</strong>: Create an array<code>dp</code> where <code>dp[i]</code> is <code>true</code> if<code>s[0..i-1]</code> can be segmented.</li></ul><h3 id="initialise-the-dp-array">2. Initialise the DP Array</h3><ul><li>Set <code>dp[0] = true</code> since an empty string can always besegmented.</li></ul><h3 id="fill-the-dp-array">3. Fill the DP Array</h3><ul><li>For each position <code>i</code> from <code>1</code> to<code>s.length</code>:<ul><li>For each <code>j</code> from <code>max(0, i - maxWordLength)</code>to <code>i</code>:<ul><li>If <code>dp[j]</code> is <code>true</code> and<code>s[j..i-1]</code> is in <code>wordDict</code>, set<code>dp[i] = true</code> and break the inner loop.</li></ul></li></ul></li></ul><blockquote><p><code>maxWordLength</code> is a way to optimise - without it, youinner loop can go over longest length from dict.</p></blockquote><h3 id="return-the-result">4. Return the Result</h3><ul><li>Return <code>dp[s.length]</code>, which indicates whether<code>s</code> can be segmented.</li></ul><hr /><h2 id="step-by-step-implementation">Step-by-Step Implementation</h2><h3 id="initialise-variables">1. Initialise Variables</h3><ul><li><strong><code>N</code></strong>: Length of the string<code>s</code>.</li><li><strong><code>wordSet</code></strong>: A <code>Set</code> containingwords from <code>wordDict</code> for efficient lookup.</li><li><strong><code>maxWordLength</code></strong>: The maximum length ofwords in <code>wordDict</code> (denoted as<strong><code>L</code></strong>).</li></ul><h3 id="compute-maxwordlength">2. Compute<code>maxWordLength</code></h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> maxWordLength = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">const</span> word <span class="keyword">of</span> wordDict) &#123;</span><br><span class="line">  maxWordLength = <span class="title class_">Math</span>.<span class="title function_">max</span>(maxWordLength, word.<span class="property">length</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="initialise-dp-array">3. Initialise DP Array</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> dp = <span class="keyword">new</span> <span class="title class_">Array</span>(N + <span class="number">1</span>).<span class="title function_">fill</span>(<span class="literal">false</span>);</span><br><span class="line">dp[<span class="number">0</span>] = <span class="literal">true</span>; <span class="comment">// Base case: empty string</span></span><br></pre></td></tr></table></figure><h3 id="fill-the-dp-array-using-dp-algorithm">4. Fill the DP Array UsingDP Algorithm</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">1</span>; i &lt;= N; i++) &#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> j = <span class="title class_">Math</span>.<span class="title function_">max</span>(<span class="number">0</span>, i - maxWordLength); j &lt; i; j++) &#123; <span class="comment">// Directly starts off from j where fits the max word length</span></span><br><span class="line">    <span class="keyword">if</span> (dp[j] &amp;&amp; wordSet.<span class="title function_">has</span>(s.<span class="title function_">substring</span>(j, i))) &#123;</span><br><span class="line">      dp[i] = <span class="literal">true</span>;</span><br><span class="line">      <span class="keyword">break</span>; <span class="comment">// Early exit for efficiency</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>// TODO: explain more later on why exit early is better</p><h3 id="return-the-result-1">5. Return the Result</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">return</span> dp[N];</span><br></pre></td></tr></table></figure><hr /><h2 id="javascript-implementation">JavaScript Implementation</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">string</span>&#125; <span class="variable">s</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">string[]</span>&#125; <span class="variable">wordDict</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">boolean</span>&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> wordBreak = <span class="keyword">function</span> (<span class="params">s, wordDict</span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> N = s.<span class="property">length</span>;</span><br><span class="line">  <span class="keyword">const</span> wordSet = <span class="keyword">new</span> <span class="title class_">Set</span>(wordDict);</span><br><span class="line"></span><br><span class="line">  <span class="comment">// Step 2: Compute maxWordLength</span></span><br><span class="line">  <span class="keyword">let</span> maxWordLength = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">const</span> word <span class="keyword">of</span> wordDict) &#123;</span><br><span class="line">    maxWordLength = <span class="title class_">Math</span>.<span class="title function_">max</span>(maxWordLength, word.<span class="property">length</span>);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// Step 3: Initialize DP array</span></span><br><span class="line">  <span class="keyword">const</span> dp = <span class="keyword">new</span> <span class="title class_">Array</span>(N + <span class="number">1</span>).<span class="title function_">fill</span>(<span class="literal">false</span>);</span><br><span class="line">  dp[<span class="number">0</span>] = <span class="literal">true</span>; <span class="comment">// Empty string can be segmented</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">// Step 4: Fill the DP array</span></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">1</span>; i &lt;= N; i++) &#123;</span><br><span class="line">    <span class="comment">// Limit the inner loop to maxWordLength</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> j = <span class="title class_">Math</span>.<span class="title function_">max</span>(<span class="number">0</span>, i - maxWordLength); j &lt; i; j++) &#123;</span><br><span class="line">      <span class="keyword">if</span> (dp[j] &amp;&amp; wordSet.<span class="title function_">has</span>(s.<span class="title function_">substring</span>(j, i))) &#123;</span><br><span class="line">        dp[i] = <span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">break</span>; <span class="comment">// Early exit for efficiency</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// Step 5: Return the result</span></span><br><span class="line">  <span class="keyword">return</span> dp[N];</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><h3 id="time-space-complexity-expressions">Time &amp; space complexityexpressions:</h3><ul><li><strong>O(N * L)</strong>:<ul><li><strong>N</strong>: The length of the input string<code>s</code>.</li><li><strong>L</strong>: The maximum length of the words in thedictionary <code>wordDict</code>.</li></ul></li><li><strong>O(N + W)</strong>:<ul><li><strong>N</strong>: The length of the input string<code>s</code>.</li><li><strong>W</strong>: The total number of words in<code>wordDict</code>.</li></ul></li></ul><hr /><h2 id="detailed-explanation">Detailed Explanation</h2><h3 id="understanding-the-dp-array-dp">Understanding the DP Array(<code>dp</code>)</h3><ul><li><strong><code>dp[i]</code></strong>: A boolean value indicatingwhether the substring <code>s[0..i-1]</code> can be segmented into wordsfrom <code>wordDict</code>.</li></ul><h3 id="why-use-maxwordlength">Why Use <code>maxWordLength</code>?</h3><ul><li><strong>Purpose</strong>: To optimize the inner loop by limiting therange of <code>j</code>.</li><li><strong>Effect</strong>: Reduces the number of iterations, improvingthe time complexity.</li><li><strong>Definition of <code>L</code></strong>: The maximum length ofwords in <code>wordDict</code>.</li></ul><h3 id="time-and-space-complexity">Time and Space Complexity</h3><ul><li><strong>Time Complexity</strong>: O(N * L), where:<ul><li><strong>N</strong>: Length of the string <code>s</code>.</li><li><strong>L</strong>: Maximum length of the words in<code>wordDict</code>.</li></ul></li><li><strong>Space Complexity</strong>: O(N + W), where:<ul><li><strong>N</strong>: Length of the string <code>s</code> (for the<code>dp</code> array).</li><li><strong>W</strong>: Total number of words in <code>wordDict</code>(for the <code>wordSet</code>).</li></ul></li></ul><hr /><h2 id="example-walkthrough">Example Walkthrough</h2><h3 id="example-s-leetcode-worddict-leet-code">Example:<code>s = "leetcode"</code>,<code>wordDict = ["leet", "code"]</code></h3><h4 id="initialisation">Initialisation</h4><ul><li><code>N = 8</code> (length of "leetcode")</li><li><code>maxWordLength = 4</code> (max length of words in<code>wordDict</code>)</li><li><code>dp = [true, false, false, false, false, false, false, false, false]</code></li></ul><h4 id="filling-the-dp-array">Filling the DP Array</h4><ol type="1"><li><strong>i = 4</strong><ul><li><strong>j from max(0, 4 - 4) = 0 to 3</strong><ul><li><strong>j = 0</strong>: <code>s[0:4] = "leet"</code> is in<code>wordDict</code>, and <code>dp[0]</code> is <code>true</code>.</li><li>Set <code>dp[4] = true</code> and break.</li></ul></li></ul></li><li><strong>i = 8</strong><ul><li><strong>j from max(0, 8 - 4) = 4 to 7</strong><ul><li><strong>j = 4</strong>: <code>s[4:8] = "code"</code> is in<code>wordDict</code>, and <code>dp[4]</code> is <code>true</code>.</li><li>Set <code>dp[8] = true</code> and break.</li></ul></li></ul></li></ol><h4 id="final-dp-array">Final DP Array</h4><p><code>dp = [true, false, false, false, true, false, false, false, true]</code></p><h4 id="result">Result</h4><p>Since <code>dp[8] = true</code>, the string "leetcode" can besegmented.</p><hr /><h2 id="additional-notes">Additional Notes</h2><h3 id="why-use-break-in-the-inner-loop">Why Use <code>break</code> inthe Inner Loop?</h3><ul><li><strong>Efficiency</strong>: Once we find a valid segmentation atposition <code>i</code>, there's no need to check further.</li><li><strong>Early Termination</strong>: Improves performance by reducingunnecessary iterations.</li></ul><h3 id="handling-edge-cases">Handling Edge Cases</h3><ul><li><strong>Empty String</strong>: <code>dp[0] = true</code> ensuresthat we can handle an empty string.</li><li><strong>Words Longer Than <code>maxWordLength</code></strong>: Theinner loop accounts for this by starting from<code>max(0, i - maxWordLength)</code>.</li></ul><hr /><h2 id="summary">Summary</h2><ul><li><strong>Dynamic Programming</strong>: An effective approach forsolving the Word Break problem by breaking it down intosubproblems.</li><li><strong>Optimization with <code>maxWordLength</code></strong>:Limits the inner loop iterations, improving time complexity.</li><li><strong>Time Complexity</strong>: <span class="math inline">\(O(N *L)\)</span>, efficient for the given constraints; <spanclass="math inline">\(L\)</span>: The maximum length of the words in thedictionary wordDict.</li><li><strong>Space Complexity</strong>: <span class="math inline">\(O(N +W)\)</span>, acceptable given the problem size; <spanclass="math inline">\(W\)</span>: The total number of words inwordDict.</li></ul><hr /><h2 id="conclusion">Conclusion</h2><p>By understanding the dynamics of the problem and applying dynamicprogramming with appropriate optimisations, we can efficiently solve theWord Break problem. Remember to:</p><ul><li><strong>Define the DP State Clearly</strong>: Know what each elementin your DP array represents.</li><li><strong>Optimise Loops</strong>: Use variables like<code>maxWordLength</code> to reduce unnecessary computations.</li><li><strong>Practice</strong>: Apply similar strategies to other DPproblems to reinforce your understanding.</li></ul><h3 id="reminder-from-gpt">Reminder from GPT:</h3><p>Dynamic Programming (DP) is a powerful tool for solving problems withoverlapping subproblems and optimal substructure, like the Word Breakproblem. By meticulously defining subproblems, optimising iterations,and utilising appropriate data structures, you can craft efficient andeffective solutions.</p><ul><li><strong>Define Clear States</strong>: Understand what each state inyour DP array represents. Optimise Loops: Use constraints like<code>maxWordLength</code> to limit unnecessary computations.</li><li><strong>Early Exits</strong>: Implement break statements whereapplicable to enhance performance.</li><li>Keep practicing similar DP problems to reinforce these concepts, andyou'll gain deeper intuition and mastery over such algorithms.</li></ul><hr /><h2 id="practice-problems">Practice Problems</h2><p>To strengthen your understanding, consider practicing these relatedproblems:</p><ul><li><strong>LeetCode 140</strong>: Word Break II</li><li><strong>LeetCode 472</strong>: Concatenated Words</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Software Engineering </category>
+          
+          <category> Coding Problems </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> algorithm </tag>
+            
+            <tag> javascript </tag>
+            
+            <tag> leetcode </tag>
+            
+            <tag> leetcode-medium </tag>
+            
+            <tag> dynamic-programming </tag>
+            
+            <tag> interview-preparation </tag>
+            
+            <tag> top-interview-150 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>LeetCode-97: Interleaving String</title>
       <link href="/blog/leetcode-97-interleaving-string/"/>
       <url>/blog/leetcode-97-interleaving-string/</url>
@@ -30,9 +69,9 @@
             
             <tag> leetcode-medium </tag>
             
-            <tag> interview-preparation </tag>
-            
             <tag> dynamic-programming </tag>
+            
+            <tag> interview-preparation </tag>
             
         </tags>
       
@@ -292,13 +331,13 @@
             
             <tag> leetcode-medium </tag>
             
+            <tag> dynamic-programming </tag>
+            
             <tag> interview-preparation </tag>
             
             <tag> min-heap </tag>
             
             <tag> priority-queue </tag>
-            
-            <tag> dynamic-programming </tag>
             
         </tags>
       
@@ -616,6 +655,8 @@
             
             <tag> interview-preparation </tag>
             
+            <tag> top-interview-150 </tag>
+            
             <tag> topological-sort </tag>
             
             <tag> queue </tag>
@@ -623,8 +664,6 @@
             <tag> adjacency-list </tag>
             
             <tag> indegree </tag>
-            
-            <tag> top-interview-150 </tag>
             
         </tags>
       
@@ -655,9 +694,9 @@
             
             <tag> interview-preparation </tag>
             
-            <tag> leetcode-easy </tag>
-            
             <tag> bash </tag>
+            
+            <tag> leetcode-easy </tag>
             
         </tags>
       
@@ -789,8 +828,6 @@
             
             <tag> leetcode </tag>
             
-            <tag> tiktok </tag>
-            
             <tag> site-reliability-engineer </tag>
             
             <tag> sre </tag>
@@ -800,6 +837,8 @@
             <tag> coding-interview </tag>
             
             <tag> job-interview </tag>
+            
+            <tag> tiktok </tag>
             
         </tags>
       
@@ -830,6 +869,8 @@
             
             <tag> leetcode </tag>
             
+            <tag> google </tag>
+            
             <tag> site-reliability-engineer </tag>
             
             <tag> sre </tag>
@@ -839,8 +880,6 @@
             <tag> coding-interview </tag>
             
             <tag> job-interview </tag>
-            
-            <tag> google </tag>
             
         </tags>
       
