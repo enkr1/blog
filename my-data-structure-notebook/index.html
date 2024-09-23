@@ -31,7 +31,7 @@
 <meta property="og:description" content="Delve into the core concepts, practical implementations, and advanced techniques of essential data structures. This notebook covers topics like Union-Find, path compression, union by rank, and more, p">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2024-08-29T15:56:49.000Z">
-<meta property="article:modified_time" content="2024-09-22T02:08:26.771Z">
+<meta property="article:modified_time" content="2024-09-22T05:20:13.424Z">
 <meta property="article:author" content="Jing Hui PANG | 彭竞辉 | ENKR">
 <meta property="article:tag" content="note">
 <meta property="article:tag" content="programming">
@@ -199,7 +199,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/blog/archives/" rel="section"><i class="fa fa-history fa-fw"></i>Archives<span class="badge">65</span></a>
+    <a href="/blog/archives/" rel="section"><i class="fa fa-history fa-fw"></i>Archives<span class="badge">67</span></a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -298,7 +298,7 @@ NOTE: created_at
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: Sun 22 September 2024 10:08:26 AM" itemprop="dateModified" datetime="2024-09-22T10:08:26+08:00">Sun 22 September 2024</time>
+                <time title="Modified: Sun 22 September 2024 13:20:13 PM" itemprop="dateModified" datetime="2024-09-22T13:20:13+08:00">Sun 22 September 2024</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -323,13 +323,13 @@ NOTE: created_at
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-              <span>1.7k</span>
+              <span>2.7k</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
-              <span>6 mins.</span>
+              <span>10 mins.</span>
             </span>
 
 <!--
@@ -390,26 +390,25 @@ target="_blank" rel="noopener" href="https://leetcode.com/problems/most-stones-r
 Stones Removed with Same Row or Column</a> problem.</p>
 <h3 id="components-of-union-find">Components of Union-Find</h3>
 <ul>
-<li><p>The <strong>Parent Array/Map</strong> keeps track of the
+<li>The <strong>Parent Array/Map</strong> keeps track of the
 "root/leader" or <strong>representative</strong> of each set. Initially,
 every element is its own parent, meaning every element is in its own
 distinct set. As sets are merged (unioned), this array/map is updated to
-reflect which elements share the same representative.</p></li>
-<li><p><strong>Path Compression</strong>: While performing
+reflect which elements share the same representative.</li>
+<li><strong>Path Compression</strong>: While performing
 <code>find</code>, we make the structure flatter by making each node
 point directly to the root. This significantly speeds up future
 operations, reducing the tree height and making the amortized time
 complexity of both <code>find</code> and <code>union</code> nearly
 constant, i.e., <span class="math inline">\(O(\alpha(n))\)</span>, where
 <span class="math inline">\(\alpha\)</span> is the inverse Ackermann
-function.</p></li>
-<li><p><strong>Union by Rank/Size</strong>: To keep the tree shallow and
+function.</li>
+<li><strong>Union by Rank/Size</strong>: To keep the tree shallow and
 operations fast, the smaller tree (in terms of rank or size) is usually
 attached under the root of the larger tree. <strong>Rank</strong> refers
 to an approximate measure of tree depth, while <strong>Size</strong>
 refers to the number of elements in the tree. This ensures that the tree
-does not grow too deep, which would slow down future
-operations.</p></li>
+does not grow too deep, which would slow down future operations.</li>
 </ul>
 <h3 id="implementing-union-find">Implementing Union-Find</h3>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">UnionFind</span> &#123;</span><br><span class="line">  <span class="title function_">constructor</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">parent</span> = <span class="keyword">new</span> <span class="title class_">Map</span>();</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">rank</span> = <span class="keyword">new</span> <span class="title class_">Map</span>();</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Initial parent map:&quot;</span>, <span class="title class_">JSON</span>.<span class="title function_">stringify</span>([...<span class="variable language_">this</span>.<span class="property">parent</span>]));</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Initial rank map:&quot;</span>, <span class="title class_">JSON</span>.<span class="title function_">stringify</span>([...<span class="variable language_">this</span>.<span class="property">rank</span>]));</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="title function_">add</span>(<span class="params">x</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="variable language_">this</span>.<span class="property">parent</span>.<span class="title function_">has</span>(x)) <span class="keyword">return</span>;</span><br><span class="line"></span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">parent</span>.<span class="title function_">set</span>(x, x);</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">rank</span>.<span class="title function_">set</span>(x, <span class="number">1</span>);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="title function_">find</span>(<span class="params">x</span>) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">`~~&gt; Find(<span class="subst">$&#123;x&#125;</span>)`</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Find the root of the element x</span></span><br><span class="line">    <span class="keyword">if</span> (<span class="variable language_">this</span>.<span class="property">parent</span>.<span class="title function_">get</span>(x) !== x) &#123;</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">`Path compression for element <span class="subst">$&#123;x&#125;</span>`</span>);</span><br><span class="line">      <span class="variable language_">this</span>.<span class="property">parent</span>.<span class="title function_">set</span>(x, <span class="variable language_">this</span>.<span class="title function_">find</span>(<span class="variable language_">this</span>.<span class="property">parent</span>.<span class="title function_">get</span>(x))); <span class="comment">// Path compression</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">`Find(<span class="subst">$&#123;x&#125;</span>) -&gt; Root is <span class="subst">$&#123;<span class="variable language_">this</span>.parent.get(x)&#125;</span>`</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="variable language_">this</span>.<span class="property">parent</span>.<span class="title function_">get</span>(x);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="title function_">union</span>(<span class="params">x, y</span>) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">`\nUnion(<span class="subst">$&#123;x&#125;</span>, <span class="subst">$&#123;y&#125;</span>)`</span>);</span><br><span class="line"></span><br><span class="line">    <span class="variable language_">this</span>.<span class="title function_">add</span>(x);</span><br><span class="line">    <span class="variable language_">this</span>.<span class="title function_">add</span>(y);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Find the roots of x and y</span></span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">`~&gt; before find:`</span>, <span class="title class_">JSON</span>.<span class="title function_">stringify</span>([...<span class="variable language_">this</span>.<span class="property">parent</span>]));</span><br><span class="line">    <span class="keyword">let</span> rootX = <span class="variable language_">this</span>.<span class="title function_">find</span>(x);</span><br><span class="line">    <span class="keyword">let</span> rootY = <span class="variable language_">this</span>.<span class="title function_">find</span>(y);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (rootX !== rootY) &#123;</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">`Union(<span class="subst">$&#123;x&#125;</span>, <span class="subst">$&#123;y&#125;</span>) -&gt; Already in the same set`</span>);</span><br><span class="line">      <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">let</span> rankX = <span class="variable language_">this</span>.<span class="property">rank</span>.<span class="title function_">get</span>(rootX);</span><br><span class="line">    <span class="keyword">let</span> rankY = <span class="variable language_">this</span>.<span class="property">rank</span>.<span class="title function_">get</span>(rootY);</span><br><span class="line"></span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">`rootX: <span class="subst">$&#123;rootX&#125;</span>, \nrootY: <span class="subst">$&#123;rootY&#125;</span>, \nrankX: <span class="subst">$&#123;rankX&#125;</span>, \nrankY: <span class="subst">$&#123;rankY&#125;</span>`</span>);</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">`~~~&gt; after find:`</span>, <span class="title class_">JSON</span>.<span class="title function_">stringify</span>([...<span class="variable language_">this</span>.<span class="property">parent</span>]));</span><br><span class="line"></span><br><span class="line">    <span class="comment">// If they have different roots, perform union</span></span><br><span class="line">    <span class="keyword">if</span> (rankX &gt; rankY) &#123;</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">`(x &lt;- y) -&gt; Root of <span class="subst">$&#123;y&#125;</span> (root <span class="subst">$&#123;rootY&#125;</span>) attached to root <span class="subst">$&#123;rootX&#125;</span>`</span>);</span><br><span class="line">      <span class="variable language_">this</span>.<span class="property">parent</span>.<span class="title function_">set</span>(rootY, rootX);</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (rankX &lt; rankY) &#123;</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">`(x -&gt; y) -&gt; Root of <span class="subst">$&#123;x&#125;</span> (root <span class="subst">$&#123;rootX&#125;</span>) attached to root <span class="subst">$&#123;rootY&#125;</span>`</span>);</span><br><span class="line">      <span class="variable language_">this</span>.<span class="property">parent</span>.<span class="title function_">set</span>(rootX, rootY);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">`(x &lt;- y) -&gt; Roots are equal, root <span class="subst">$&#123;rootY&#125;</span> attached to root <span class="subst">$&#123;rootX&#125;</span>`</span>);</span><br><span class="line">      <span class="variable language_">this</span>.<span class="property">parent</span>.<span class="title function_">set</span>(rootY, rootX);</span><br><span class="line">      <span class="variable language_">this</span>.<span class="property">rank</span>.<span class="title function_">set</span>(rootX, rankX + <span class="number">1</span>); <span class="comment">// ONLY increase the rank of the new root</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">`parent:  <span class="subst">$&#123;<span class="built_in">JSON</span>.stringify([...<span class="variable language_">this</span>.parent])&#125;</span>`</span>);</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">`rank:    <span class="subst">$&#123;<span class="built_in">JSON</span>.stringify([...<span class="variable language_">this</span>.rank])&#125;</span>`</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -531,12 +530,314 @@ related to connectivity, such as Kruskal's algorithm for finding minimum
 spanning trees, finding cycles in graphs, and solving the "Most Stones
 Removed with Same Row or Column" problem.</li>
 </ul>
-<h2 id="references">References</h2>
+<h3 id="references">References</h3>
 <ul>
 <li><a
 target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=utDu3Q7Flrw&amp;list=PLot-Xpze53ldBT_7QA8NVot219jFNr_GI">Top
 5 Most Common Graph Algorithms for Coding Interviews</a></li>
 </ul>
+<hr />
+<h2 id="linked-list">Linked List</h2>
+<h3 id="types-of-linked-list">Types of Linked List</h3>
+<ol type="1">
+<li><strong>Singly Linked List</strong></li>
+<li><strong>Doubly Linked List</strong></li>
+<li><strong>Circular Linked List</strong></li>
+<li>Doubly Circular Linked List</li>
+<li>Skip List</li>
+<li>Unrolled Linked List</li>
+<li>Multi-linked List</li>
+<li>XOR Linked List</li>
+<li>Self-Organizing Linked List</li>
+<li>Tail-Linked List</li>
+<li>Lock-Free Linked List</li>
+<li>Multi-Level Linked List</li>
+</ol>
+<h4 id="singly-linked-list">Singly Linked List</h4>
+<p>A <strong>singly linked list</strong> is the simplest form of a
+linked list where each node contains: - <strong>Data</strong>: The value
+or information stored. - <strong>Next Pointer
+(<code>next</code>)</strong>: A reference to the next node in the
+sequence.</p>
+<h5 id="characteristics">Characteristics</h5>
+<ul>
+<li><strong>Unidirectional Traversal</strong>: Can only be traversed in
+one direction, from head to tail.</li>
+<li><strong>Simple Structure</strong>: Easier to implement due to having
+only one pointer per node.</li>
+</ul>
+<h5 id="visual-representation">Visual Representation</h5>
+<figure class="highlight coq"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">  [Head]</span><br><span class="line">    |</span><br><span class="line">    <span class="type">v</span></span><br><span class="line">[<span class="number">1</span> | <span class="type">Next</span>] -&gt; [<span class="number">2</span> | <span class="type">Next</span>] -&gt; [<span class="number">3</span> | <span class="type">Next</span>] -&gt; null</span><br></pre></td></tr></table></figure>
+<figure class="highlight coq"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[ <span class="number">1</span> | <span class="type">[ 2</span> | <span class="type">[ 3</span> | <span class="type">null</span> ] ] ]</span><br></pre></td></tr></table></figure>
+<h5 id="operations">Operations</h5>
+<p><strong>Insertion at Head</strong>:</p>
+<ul>
+<li>Create a new node.</li>
+<li>Set its <code>next</code> to the current head.</li>
+<li>Update head to the new node.</li>
+</ul>
+<p><strong>Insertion at Tail</strong>:</p>
+<ul>
+<li>Traverse to the last node.</li>
+<li>Set its <code>next</code> to the new node.</li>
+</ul>
+<p><strong>Deletion</strong>:</p>
+<ul>
+<li>To delete a node, update the <code>next</code> pointer of the
+preceding node to skip the deleted node.</li>
+</ul>
+<h5 id="use-cases">Use Cases</h5>
+<ul>
+<li>Implementing simple data structures like <strong>stacks</strong> and
+<strong>queues</strong>.</li>
+<li>Scenarios where backward traversal isn't required.</li>
+</ul>
+<h5 id="pros-and-cons">Pros and Cons</h5>
+<ul>
+<li><strong>Pros</strong>:
+<ul>
+<li>Minimal memory usage per node (only one pointer).</li>
+<li>Simple to implement and understand.</li>
+</ul></li>
+<li><strong>Cons</strong>:
+<ul>
+<li>Inefficient for operations that require backward traversal.</li>
+<li>Searching for an element takes <span
+class="math inline">\(O(n)\)</span> time.</li>
+</ul></li>
+</ul>
+<hr />
+<h4 id="doubly-linked-list">Doubly Linked List</h4>
+<p>A <strong>doubly linked list</strong> enhances the singly linked list
+by adding a <strong>previous pointer (<code>prev</code>)</strong> to
+each node.</p>
+<h5 id="characteristics-1">Characteristics</h5>
+<ul>
+<li><strong>Bidirectional Traversal</strong>: Can traverse the list both
+forward and backward.</li>
+<li><strong>More Flexible Operations</strong>: Easier to delete nodes
+without traversing from the head.</li>
+</ul>
+<h5 id="visual-representation-1">Visual Representation</h5>
+<figure class="highlight coq"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">null &lt;- [<span class="number">1</span> | <span class="type">Prev</span> | <span class="type">Next</span>] &lt;-&gt; [<span class="number">2</span> | <span class="type">Prev</span> | <span class="type">Next</span>] &lt;-&gt; [<span class="number">3</span> | <span class="type">Prev</span> | <span class="type">Next</span>] -&gt; null</span><br></pre></td></tr></table></figure>
+<h5 id="operations-1">Operations</h5>
+<ul>
+<li><strong>Insertion</strong>:
+<ul>
+<li>Similar to singly linked lists but also update the <code>prev</code>
+pointer of the succeeding node.</li>
+</ul></li>
+<li><strong>Deletion</strong>:
+<ul>
+<li>Update both <code>next</code> and <code>prev</code> pointers of
+adjacent nodes to exclude the target node.</li>
+</ul></li>
+<li><strong>Traversal</strong>:
+<ul>
+<li>Can start from head and move forward or start from tail and move
+backward.</li>
+</ul></li>
+</ul>
+<h5 id="use-cases-1">Use Cases</h5>
+<ul>
+<li>Implementing <strong>browser history</strong> (back and forward
+navigation).</li>
+<li>Applications requiring frequent insertions and deletions from both
+ends.</li>
+</ul>
+<h5 id="pros-and-cons-1">Pros and Cons</h5>
+<ul>
+<li><strong>Pros</strong>:
+<ul>
+<li>Efficient in both directions.</li>
+<li>Easier node deletion with a reference to the node.</li>
+</ul></li>
+<li><strong>Cons</strong>:
+<ul>
+<li>Uses more memory per node (two pointers).</li>
+<li>Slightly more complex to implement compared to singly linked
+lists.</li>
+</ul></li>
+</ul>
+<hr />
+<h4 id="circular-linked-list">Circular Linked List</h4>
+<p>A <strong>circular linked list</strong> connects the last node back
+to the first node, forming a circle. It can be implemented as either
+singly or doubly linked.</p>
+<h5 id="types">Types</h5>
+<ol type="1">
+<li><strong>Singly Circular Linked List</strong></li>
+<li><strong>Doubly Circular Linked List</strong></li>
+</ol>
+<h5 id="characteristics-2">Characteristics</h5>
+<ul>
+<li><strong>No <code>null</code> Terminator</strong>: The last node
+points back to the first node.</li>
+<li><strong>Continuous Traversal</strong>: Can cycle through the list
+indefinitely.</li>
+</ul>
+<h5 id="operations-2">Operations</h5>
+<ul>
+<li><strong>Insertion</strong>:
+<ul>
+<li>Similar to singly or doubly linked lists but ensures the last node
+points to the head.</li>
+</ul></li>
+<li><strong>Deletion</strong>:
+<ul>
+<li>Requires updating pointers to maintain the circular nature.</li>
+</ul></li>
+<li><strong>Traversal</strong>:
+<ul>
+<li>Start at any node and continue indefinitely; often requires a
+stopping condition to prevent infinite loops.</li>
+</ul></li>
+</ul>
+<h5 id="use-cases-2">Use Cases</h5>
+<ul>
+<li>Implementing <strong>round-robin schedulers</strong>.</li>
+<li>Applications requiring cyclic traversal, like <strong>playlist
+players</strong> or <strong>game turns</strong>.</li>
+</ul>
+<h5 id="pros-and-cons-2">Pros and Cons</h5>
+<ul>
+<li><strong>Pros</strong>:
+<ul>
+<li>Seamless cycling through elements.</li>
+<li>Useful for applications needing continuous looping.</li>
+</ul></li>
+<li><strong>Cons</strong>:
+<ul>
+<li>More complex termination conditions.</li>
+<li>Potential for infinite loops if not handled carefully.</li>
+</ul></li>
+</ul>
+<hr />
+<h3 id="pros-on-using-linked-lists">Pros on using Linked Lists</h3>
+<ol type="1">
+<li><strong>Dynamic Size</strong>:
+<ul>
+<li><strong>Flexibility</strong>: Easily grow or shrink in size by
+adding or removing nodes.</li>
+<li><strong>Memory Efficiency</strong>: Allocate memory as needed, which
+can be more efficient for certain applications.</li>
+</ul></li>
+<li><strong>Ease of Insertion/Deletion</strong>:
+<ul>
+<li><strong>Efficient Operations</strong>: Insertions and deletions can
+be performed without shifting elements, unlike in arrays.</li>
+<li><strong>Constant Time Operations</strong>: If you have a
+pointer/reference to the node, operations can be done in constant time
+<span class="math inline">\(O(1)\)</span>.</li>
+</ul></li>
+</ol>
+<h3 id="use-cases-3">Use Cases:</h3>
+<ul>
+<li><strong>Dynamic Memory Allocation</strong>: When the number of
+elements is unpredictable.</li>
+<li><strong>Browser Navigation</strong>: Forward and backward traversal
+in web browsers.</li>
+<li><strong>Music Players</strong>: Playing songs in a playlist where
+you can add or remove songs easily.</li>
+</ul>
+<h3 id="comparing-linked-lists-with-arrays">Comparing Linked Lists with
+Arrays</h3>
+<table>
+<colgroup>
+<col style="width: 6%" />
+<col style="width: 41%" />
+<col style="width: 52%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Feature</strong></th>
+<th><strong>Linked List</strong></th>
+<th><strong>Array</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Size</strong></td>
+<td><strong>Dynamic</strong>: Can grow or shrink as needed without
+reallocating memory.</td>
+<td><strong>Fixed Size</strong>: Typically has a predetermined size,
+especially in static arrays.</td>
+</tr>
+<tr class="even">
+<td><strong>Memory Allocation</strong></td>
+<td><strong>Non-Contiguous</strong>: Each element (node) is allocated
+separately in memory.</td>
+<td><strong>Contiguous</strong>: All elements are stored in consecutive
+memory locations.</td>
+</tr>
+<tr class="odd">
+<td><strong>Access Time</strong></td>
+<td><strong>Sequential Access</strong>: Accessing the nth element
+requires traversing from the head, resulting in <span
+class="math inline">\(O(n)\)</span> time complexity.</td>
+<td><strong>Random Access</strong>: Directly access any element by index
+in <span class="math inline">\(O(1)\)</span> time.</td>
+</tr>
+<tr class="even">
+<td><strong>Insertion/Deletion</strong></td>
+<td><strong>Efficient</strong>: Adding or removing elements is <span
+class="math inline">\(O(1)\)</span> if the position is known (i.e., you
+have a reference to the node). Especially efficient at the beginning or
+middle.</td>
+<td><strong>Inefficient</strong>: Inserting or deleting elements (except
+at the end in dynamic arrays) requires shifting subsequent elements,
+leading to <span class="math inline">\(O(n)\)</span> time
+complexity.</td>
+</tr>
+<tr class="odd">
+<td><strong>Memory Overhead</strong></td>
+<td><strong>Extra Memory</strong>: Requires additional memory for
+storing pointers (e.g., <code>next</code> and/or <code>prev</code>
+references) in each node.</td>
+<td><strong>Minimal Overhead</strong>: No extra memory is needed beyond
+storing the actual elements.</td>
+</tr>
+<tr class="even">
+<td><strong>Traversal</strong></td>
+<td><strong>Flexible</strong>: Can easily traverse in one direction
+(singly linked) or both directions (doubly linked).</td>
+<td><strong>Single Direction</strong>: Traversal is typically linear
+from start to end.</td>
+</tr>
+<tr class="odd">
+<td><strong>Cache Performance</strong></td>
+<td><strong>Poor</strong>: Non-contiguous memory allocation can lead to
+cache misses, making traversal slower due to scattered memory
+access.</td>
+<td><strong>Excellent</strong>: Contiguous memory allocation enhances
+cache locality, resulting in faster traversal and access times.</td>
+</tr>
+<tr class="even">
+<td><strong>Implementation Complexity</strong></td>
+<td><strong>Higher</strong>: More complex to implement due to the need
+to manage pointers/references and handle edge cases (e.g., inserting at
+the head or tail).</td>
+<td><strong>Lower</strong>: Simpler to implement, especially in
+languages with built-in array support.</td>
+</tr>
+<tr class="odd">
+<td><strong>Use Cases</strong></td>
+<td>- Implementing <strong>Stacks</strong> and
+<strong>Queues</strong><br>- <strong>Dynamic Memory Allocation</strong>
+scenarios<br>- <strong>Graph Representations</strong> (e.g., adjacency
+lists)<br>- <strong>Undo/Redo</strong> functionality in
+applications</td>
+<td>- Situations requiring <strong>fast random access</strong> (e.g.,
+lookup tables)<br>- <strong>Static datasets</strong> where size doesn't
+change<br>- <strong>Matrix and multidimensional data
+storage</strong><br>- <strong>Implementing other data
+structures</strong> like heaps and hash tables</td>
+</tr>
+</tbody>
+</table>
+<h3 id="example-in-code">Example in Code</h3>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">ListNode</span> &#123;</span><br><span class="line">    <span class="title function_">constructor</span>(<span class="params">val = <span class="number">0</span>, next = <span class="literal">null</span></span>) &#123;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">val</span> = val;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">next</span> = next;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Definition of a Singly Linked List</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">LinkedList</span> &#123;</span><br><span class="line">    <span class="title function_">constructor</span>(<span class="params"></span>) &#123;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">head</span> = <span class="literal">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Insert a new node at the beginning</span></span><br><span class="line">    <span class="title function_">insertAtHead</span>(<span class="params">val</span>) &#123;</span><br><span class="line">        <span class="keyword">const</span> newNode = <span class="keyword">new</span> <span class="title class_">ListNode</span>(val, <span class="variable language_">this</span>.<span class="property">head</span>);</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">head</span> = newNode;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Print the list</span></span><br><span class="line">    <span class="title function_">printList</span>(<span class="params"></span>) &#123;</span><br><span class="line">        <span class="keyword">let</span> current = <span class="variable language_">this</span>.<span class="property">head</span>;</span><br><span class="line">        <span class="keyword">let</span> list = <span class="string">&#x27;&#x27;</span>;</span><br><span class="line">        <span class="keyword">while</span> (current) &#123;</span><br><span class="line">            list += current.<span class="property">val</span> + <span class="string">&#x27; -&gt; &#x27;</span>;</span><br><span class="line">            current = current.<span class="property">next</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        list += <span class="string">&#x27;null&#x27;</span>;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(list);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Usage</span></span><br><span class="line"><span class="keyword">const</span> list = <span class="keyword">new</span> <span class="title class_">LinkedList</span>();</span><br><span class="line">list.<span class="title function_">insertAtHead</span>(<span class="number">3</span>);</span><br><span class="line">list.<span class="title function_">insertAtHead</span>(<span class="number">2</span>);</span><br><span class="line">list.<span class="title function_">insertAtHead</span>(<span class="number">1</span>);</span><br><span class="line">list.<span class="title function_">printList</span>(); <span class="comment">// Output: 1 -&gt; 2 -&gt; 3 -&gt; null</span></span><br></pre></td></tr></table></figure>
+<hr />
 <h2 id="todos">TODOs</h2>
 <ul>
 <li><a
@@ -552,6 +853,9 @@ target="_blank" rel="noopener" href="https://www.geeksforgeeks.org/trie-insert-a
   <div class="popular-posts-header">Related Posts</div>
   <ul class="popular-posts">
     <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="/blog/my-notebook-reversing-a-singly-linked-list/" rel="bookmark">My Notebook: Reversing a Singly Linked List</a></div>
+    </li>
+    <li class="popular-posts-item">
       <div class="popular-posts-title"><a href="/blog/my-journey-with-hexo-building-a-blog-from-scratch/" rel="bookmark">My Journey with Hexo - Building a Blog from Scratch</a></div>
     </li>
     <li class="popular-posts-item">
@@ -562,9 +866,6 @@ target="_blank" rel="noopener" href="https://www.geeksforgeeks.org/trie-insert-a
     </li>
     <li class="popular-posts-item">
       <div class="popular-posts-title"><a href="/blog/my-elixir-notebook/" rel="bookmark">My Elixir Notebook</a></div>
-    </li>
-    <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="/blog/my-python-notebook/" rel="bookmark">My Python Notebook</a></div>
     </li>
   </ul>
 <div class="post-widgets">
@@ -671,7 +972,8 @@ target="_blank" rel="noopener" href="https://www.geeksforgeeks.org/trie-insert-a
 of Islands</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#applications-of-union-find"><span class="nav-number">1.5.</span> <span class="nav-text">Applications of Union-Find</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#practice-with-simple-problems"><span class="nav-number">1.6.</span> <span class="nav-text">Practice with Simple
 Problems</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#applying-union-find-to-the-most-stones-removed-with-same-row-or-column-problem"><span class="nav-number">1.7.</span> <span class="nav-text">Applying
 Union-Find to the &quot;Most Stones Removed with Same Row or Column&quot;
-Problem</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#conclusion"><span class="nav-number">1.8.</span> <span class="nav-text">Conclusion</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#summary"><span class="nav-number">1.9.</span> <span class="nav-text">Summary</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#references"><span class="nav-number">2.</span> <span class="nav-text">References</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#todos"><span class="nav-number">3.</span> <span class="nav-text">TODOs</span></a></li></ol></div>
+Problem</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#conclusion"><span class="nav-number">1.8.</span> <span class="nav-text">Conclusion</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#summary"><span class="nav-number">1.9.</span> <span class="nav-text">Summary</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#references"><span class="nav-number">1.10.</span> <span class="nav-text">References</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#linked-list"><span class="nav-number">2.</span> <span class="nav-text">Linked List</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#types-of-linked-list"><span class="nav-number">2.1.</span> <span class="nav-text">Types of Linked List</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#singly-linked-list"><span class="nav-number">2.1.1.</span> <span class="nav-text">Singly Linked List</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#characteristics"><span class="nav-number">2.1.1.1.</span> <span class="nav-text">Characteristics</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#visual-representation"><span class="nav-number">2.1.1.2.</span> <span class="nav-text">Visual Representation</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#operations"><span class="nav-number">2.1.1.3.</span> <span class="nav-text">Operations</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#use-cases"><span class="nav-number">2.1.1.4.</span> <span class="nav-text">Use Cases</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#pros-and-cons"><span class="nav-number">2.1.1.5.</span> <span class="nav-text">Pros and Cons</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#doubly-linked-list"><span class="nav-number">2.1.2.</span> <span class="nav-text">Doubly Linked List</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#characteristics-1"><span class="nav-number">2.1.2.1.</span> <span class="nav-text">Characteristics</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#visual-representation-1"><span class="nav-number">2.1.2.2.</span> <span class="nav-text">Visual Representation</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#operations-1"><span class="nav-number">2.1.2.3.</span> <span class="nav-text">Operations</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#use-cases-1"><span class="nav-number">2.1.2.4.</span> <span class="nav-text">Use Cases</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#pros-and-cons-1"><span class="nav-number">2.1.2.5.</span> <span class="nav-text">Pros and Cons</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#circular-linked-list"><span class="nav-number">2.1.3.</span> <span class="nav-text">Circular Linked List</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#types"><span class="nav-number">2.1.3.1.</span> <span class="nav-text">Types</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#characteristics-2"><span class="nav-number">2.1.3.2.</span> <span class="nav-text">Characteristics</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#operations-2"><span class="nav-number">2.1.3.3.</span> <span class="nav-text">Operations</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#use-cases-2"><span class="nav-number">2.1.3.4.</span> <span class="nav-text">Use Cases</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#pros-and-cons-2"><span class="nav-number">2.1.3.5.</span> <span class="nav-text">Pros and Cons</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pros-on-using-linked-lists"><span class="nav-number">2.2.</span> <span class="nav-text">Pros on using Linked Lists</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#use-cases-3"><span class="nav-number">2.3.</span> <span class="nav-text">Use Cases:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#comparing-linked-lists-with-arrays"><span class="nav-number">2.4.</span> <span class="nav-text">Comparing Linked Lists with
+Arrays</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#example-in-code"><span class="nav-number">2.5.</span> <span class="nav-text">Example in Code</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#todos"><span class="nav-number">3.</span> <span class="nav-text">TODOs</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -685,7 +987,7 @@ Problem</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href
       <div class="site-state-item site-state-posts">
           <a href="/blog/archives/">
         
-          <span class="site-state-item-count">65</span>
+          <span class="site-state-item-count">67</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -740,12 +1042,12 @@ Problem</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="Symbols count total">51k</span>
+    <span title="Symbols count total">54k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">3:06</span>
+    <span title="Reading time total">3:15</span>
 </div>
 
         
