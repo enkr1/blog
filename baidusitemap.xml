@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://enkr1.github.io/blog/blog/achieving-my-ambitious-goals-in-2024/</loc>
+    <lastmod>2024-09-29</lastmod>
+  </url>
+  <url>
     <loc>https://enkr1.github.io/blog/blog/journal-week-10/</loc>
     <lastmod>2024-09-29</lastmod>
   </url>
@@ -131,10 +135,6 @@
   <url>
     <loc>https://enkr1.github.io/blog/blog/manacher-s-algorithm-fast-and-efficient-palindrome-detection/</loc>
     <lastmod>2024-09-02</lastmod>
-  </url>
-  <url>
-    <loc>https://enkr1.github.io/blog/blog/achieving-my-ambitious-goals-in-2024/</loc>
-    <lastmod>2024-08-28</lastmod>
   </url>
   <url>
     <loc>https://enkr1.github.io/blog/blog/leetcode-192-word-frequency/</loc>
