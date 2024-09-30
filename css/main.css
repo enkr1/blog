@@ -1374,7 +1374,7 @@ p {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #c3b69a;
+  background: #ff11ed;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -1760,7 +1760,7 @@ p {
   position: absolute;
   display: inline-block;
   transform: rotate(30deg) scale(0.8);
-  opacity: 0.3;
+  opacity: 0.6;
   right: -1.5rem;
   top: -0.8rem;
   color: #c60000;
@@ -1773,8 +1773,8 @@ p {
 }
 @media (max-width: 767px) {
   .post-sticky-flag {
-    right: -0.2rem;
-    top: -0.6rem;
+    top: -0.5rem;
+    right: -1rem;
   }
 }
 .post-button {
@@ -3093,7 +3093,7 @@ mjx-container + br {
     border-radius: 1.4rem;
     box-shadow: 0.3rem 0.3rem 0.8rem 0rem rgba(0,0,0,0.1);
     min-height: auto;
-    padding: 0.8rem 2.5rem 2.8rem;
+    padding: 0.8rem 2rem 2.3rem;
   }
   .post-block+.post-block {
     margin-top: 1rem;
