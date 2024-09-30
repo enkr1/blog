@@ -44,9 +44,9 @@
           
           <category> Software Engineering </category>
           
-          <category> Data Structures &amp; Algorithms </category>
-          
           <category> My Notes </category>
+          
+          <category> Data Structures &amp; Algorithms </category>
           
       </categories>
       
@@ -113,15 +113,15 @@
             
             <tag> algorithm </tag>
             
-            <tag> leetcode </tag>
-            
             <tag> javascript </tag>
+            
+            <tag> leetcode </tag>
             
             <tag> leetcode-medium </tag>
             
-            <tag> interview-preparation </tag>
-            
             <tag> dynamic-programming </tag>
+            
+            <tag> interview-preparation </tag>
             
             <tag> top-interview-150 </tag>
             
@@ -152,15 +152,15 @@
             
             <tag> algorithm </tag>
             
-            <tag> leetcode </tag>
-            
             <tag> javascript </tag>
+            
+            <tag> leetcode </tag>
             
             <tag> leetcode-medium </tag>
             
-            <tag> interview-preparation </tag>
-            
             <tag> dynamic-programming </tag>
+            
+            <tag> interview-preparation </tag>
             
         </tags>
       
@@ -247,9 +247,9 @@
             
             <tag> algorithm </tag>
             
-            <tag> leetcode </tag>
-            
             <tag> javascript </tag>
+            
+            <tag> leetcode </tag>
             
             <tag> interview-preparation </tag>
             
@@ -370,9 +370,9 @@
           
           <category> Software Engineering </category>
           
-          <category> Data Structures &amp; Algorithms </category>
-          
           <category> My Notes </category>
+          
+          <category> Data Structures &amp; Algorithms </category>
           
       </categories>
       
@@ -410,19 +410,19 @@
             
             <tag> algorithm </tag>
             
-            <tag> leetcode </tag>
-            
             <tag> javascript </tag>
             
+            <tag> leetcode </tag>
+            
             <tag> leetcode-medium </tag>
+            
+            <tag> dynamic-programming </tag>
             
             <tag> interview-preparation </tag>
             
             <tag> min-heap </tag>
             
             <tag> priority-queue </tag>
-            
-            <tag> dynamic-programming </tag>
             
         </tags>
       
@@ -451,9 +451,9 @@
             
             <tag> algorithm </tag>
             
-            <tag> leetcode </tag>
-            
             <tag> javascript </tag>
+            
+            <tag> leetcode </tag>
             
             <tag> interview-preparation </tag>
             
@@ -732,13 +732,15 @@
             
             <tag> algorithm </tag>
             
-            <tag> leetcode </tag>
-            
             <tag> javascript </tag>
+            
+            <tag> leetcode </tag>
             
             <tag> leetcode-medium </tag>
             
             <tag> interview-preparation </tag>
+            
+            <tag> top-interview-150 </tag>
             
             <tag> topological-sort </tag>
             
@@ -747,8 +749,6 @@
             <tag> adjacency-list </tag>
             
             <tag> indegree </tag>
-            
-            <tag> top-interview-150 </tag>
             
         </tags>
       
@@ -1291,11 +1291,11 @@
           
           <category> Software Engineering </category>
           
+          <category> My Notes </category>
+          
           <category> Software Engineering Best Practices </category>
           
           <category> Career Development </category>
-          
-          <category> My Notes </category>
           
           <category> Interviews </category>
           
@@ -1388,9 +1388,9 @@
           
           <category> Software Engineering </category>
           
-          <category> Computer Networking </category>
-          
           <category> My Notes </category>
+          
+          <category> Computer Networking </category>
           
       </categories>
       
@@ -1815,9 +1815,9 @@
           
           <category> Software Engineering </category>
           
-          <category> Personal Development </category>
-          
           <category> My Notes </category>
+          
+          <category> Personal Development </category>
           
           <category> Online Courses </category>
           
@@ -1889,9 +1889,9 @@
           
           <category> Software Engineering </category>
           
-          <category> Personal Development </category>
-          
           <category> My Notes </category>
+          
+          <category> Personal Development </category>
           
           <category> Online Courses </category>
           
@@ -1932,9 +1932,9 @@
           
           <category> Software Engineering </category>
           
-          <category> Personal Development </category>
-          
           <category> My Notes </category>
+          
+          <category> Personal Development </category>
           
           <category> Online Courses </category>
           
@@ -1975,9 +1975,9 @@
           
           <category> Software Engineering </category>
           
-          <category> Personal Development </category>
-          
           <category> My Notes </category>
+          
+          <category> Personal Development </category>
           
           <category> Online Courses </category>
           
@@ -2018,9 +2018,9 @@
           
           <category> Software Engineering </category>
           
-          <category> Personal Development </category>
-          
           <category> My Notes </category>
+          
+          <category> Personal Development </category>
           
           <category> Online Courses </category>
           
@@ -2055,9 +2055,9 @@
           
           <category> Software Engineering </category>
           
-          <category> Personal Development </category>
-          
           <category> My Notes </category>
+          
+          <category> Personal Development </category>
           
           <category> Online Courses </category>
           
@@ -2098,9 +2098,9 @@
           
           <category> Software Engineering </category>
           
-          <category> Personal Development </category>
-          
           <category> My Notes </category>
+          
+          <category> Personal Development </category>
           
           <category> Online Courses </category>
           
@@ -2141,9 +2141,9 @@
           
           <category> Software Engineering </category>
           
-          <category> Personal Development </category>
-          
           <category> My Notes </category>
+          
+          <category> Personal Development </category>
           
           <category> Online Courses </category>
           
@@ -2285,9 +2285,9 @@
       
       <categories>
           
-          <category> Personal Development </category>
-          
           <category> My Notes </category>
+          
+          <category> Personal Development </category>
           
           <category> Online Courses </category>
           

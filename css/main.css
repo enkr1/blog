@@ -1374,7 +1374,7 @@ p {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #38ffb3;
+  background: #d646e0;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2533,7 +2533,7 @@ ul.breadcrumb li + li:last-child {
   width: var(--search-popup-width);
   z-index: 1500;
   overflow: hidden;
-  opacity: 0.9;
+  opacity: 0.83;
 }
 .search-active .search-popup {
   transform: scale(1);
