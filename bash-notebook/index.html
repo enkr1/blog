@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 7.2.0">
+<meta name="generator" content="Hexo 7.3.0">
 <meta name="google-site-verification" content="wSUWWkv_QhNXB_N6r3rOSU2YlmmWxYBk6UWVlgu1q94" />
   <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/logo.gif">
@@ -184,19 +184,19 @@
     <a href="/blog/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
 
   </li>
-        <li class="menu-item menu-item-my-notes">
-
-    <a href="/blog/categories/My-Notes/" rel="section"><i class="fa fa-book fa-fw"></i>My Notes</a>
-
-  </li>
         <li class="menu-item menu-item-about">
 
     <a href="/blog/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
 
   </li>
-        <li class="menu-item menu-item-platforms">
+        <li class="menu-item menu-item-notebooks">
 
-    <a href="https://enkr1.github.io/platforms/" rel="section"><i class="fa fa-link fa-fw"></i>Platforms</a>
+    <a href="/blog/categories/My-Notes/" rel="section"><i class="fa fa-bookmark fa-fw"></i>Notebooks</a>
+
+  </li>
+        <li class="menu-item menu-item-journals">
+
+    <a href="/blog/categories/About-Me/Journals/" rel="section"><i class="fa fa-book fa-fw"></i>Journals</a>
 
   </li>
         <li class="menu-item menu-item-tags">
@@ -206,12 +206,17 @@
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/blog/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">48</span></a>
+    <a href="/blog/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">47</span></a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/blog/archives/" rel="section"><i class="fa fa-history fa-fw"></i>Archives<span class="badge">69</span></a>
+    <a href="/blog/archives/" rel="section"><i class="fa fa-history fa-fw"></i>Archives<span class="badge">70</span></a>
+
+  </li>
+        <li class="menu-item menu-item-platforms">
+
+    <a href="https://enkr1.github.io/platforms/" rel="section"><i class="fa fa-link fa-fw"></i>Platforms</a>
 
   </li>
         <li class="menu-item menu-item-connect-with-me">
@@ -327,11 +332,11 @@ NOTE: created_at
                 </span>
                   , 
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/My-Notes/" itemprop="url" rel="index"><span itemprop="name">My Notes</span></a>
+                  <a href="/blog/categories/Software-Engineering/Programming-Languages/" itemprop="url" rel="index"><span itemprop="name">Programming Languages</span></a>
                 </span>
                   , 
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Software-Engineering/Programming-Languages/" itemprop="url" rel="index"><span itemprop="name">Programming Languages</span></a>
+                  <a href="/blog/categories/My-Notes/" itemprop="url" rel="index"><span itemprop="name">My Notes</span></a>
                 </span>
                   , 
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
@@ -706,9 +711,9 @@ together</li>
 </ul>
 <h4 id="how-to-update---yum">How to Update - <code>yum</code>:</h4>
 <ol type="1">
-<li><strong>Check for Updates:</strong> <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum check-update</span><br></pre></td></tr></table></figure></li>
-<li><strong>Apply Updates:</strong> <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum update -y</span><br></pre></td></tr></table></figure></li>
-<li><strong>Reboot if Required:</strong> <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo needs-restarting -r</span><br></pre></td></tr></table></figure></li>
+<li><strong>Check for Updates:</strong> <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> yum check-update</span><br></pre></td></tr></table></figure></li>
+<li><strong>Apply Updates:</strong> <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> yum update -y</span><br></pre></td></tr></table></figure></li>
+<li><strong>Reboot if Required:</strong> <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> needs-restarting -r</span><br></pre></td></tr></table></figure></li>
 </ol>
 <h4 id="tips">Tips:</h4>
 <ul>
@@ -983,7 +988,7 @@ webpdf</p>
 <img data-src="/blog/bash-notebook/dig-output.png" class="no-shadow" title="Output">
 <h2 id="symlink">symlink</h2>
 <p>To create a new symlink (will fail if symlink exists already):
-<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">ln</span> -s /path/<span class="built_in">to</span>/<span class="built_in">file</span> /path/<span class="built_in">to</span>/symlink</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ln -s /<span class="selector-tag">path</span>/<span class="selector-tag">to</span>/file /<span class="selector-tag">path</span>/<span class="selector-tag">to</span>/symlink</span><br></pre></td></tr></table></figure></p>
 <p>To create or update a symlink: <figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ln</span> -<span class="keyword">sf</span> /path/<span class="keyword">to</span>/<span class="keyword">file</span> /path/<span class="keyword">to</span>/symlink</span><br></pre></td></tr></table></figure></p>
 <h2 id="ps---check-processes">ps - Check Processes</h2>
 <p>The <code>ps</code> command in Unix-based systems is used to list the
@@ -1082,7 +1087,7 @@ options: <figure class="highlight bash"><table><tr><td class="gutter"><pre><span
 <h2 id="wifi-password">WiFi password</h2>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">security find-generic-password -wa wifi-name</span><br><span class="line">security find-generic-password -wa <span class="string">&quot;Starbucks&quot;</span> | pbcopy</span><br></pre></td></tr></table></figure>
 <h2 id="touch-id-forever">Touch ID forever!</h2>
-<p>vim here &amp; enter password for one last time: <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/pam.d/sudo</span><br></pre></td></tr></table></figure></p>
+<p>vim here &amp; enter password for one last time: <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> vim /etc/pam.d/sudo</span><br></pre></td></tr></table></figure></p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># sudo: auth account password session</span></span><br><span class="line">auth       sufficient     pam_tid.so <span class="comment"># This is what we need</span></span><br><span class="line">auth       sufficient     pam_smartcard.so</span><br><span class="line">auth       required       pam_opendirectory.so</span><br><span class="line">account    required       pam_permit.so</span><br><span class="line">password   required       pam_deny.so</span><br><span class="line">session    required       pam_permit.so</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>Done! You can now unlock sudo with Touch ID like a ninja!</p>
@@ -1350,14 +1355,14 @@ notebook to specific file type</span></a></li></ol></li><li class="nav-item nav-
       <div class="site-state-item site-state-posts">
           <a href="/blog/archives/">
         
-          <span class="site-state-item-count">69</span>
+          <span class="site-state-item-count">70</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/blog/categories/">
           
-        <span class="site-state-item-count">48</span>
+        <span class="site-state-item-count">47</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
@@ -1405,12 +1410,12 @@ notebook to specific file type</span></a></li></ol></li><li class="nav-item nav-
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="Symbols count total">55k</span>
+    <span title="Symbols count total">56k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">3:21</span>
+    <span title="Reading time total">3:24</span>
 </div>
 
         

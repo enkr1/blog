@@ -1,8 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://enkr1.github.io/blog/blog/journal-week-11/</loc>
+    <lastmod>2024-10-05</lastmod>
+  </url>
+  <url>
+    <loc>https://enkr1.github.io/blog/blog/journal-week-8/</loc>
+    <lastmod>2024-10-05</lastmod>
+  </url>
+  <url>
+    <loc>https://enkr1.github.io/blog/blog/journal-week-10/</loc>
+    <lastmod>2024-10-05</lastmod>
+  </url>
+  <url>
+    <loc>https://enkr1.github.io/blog/blog/journal-week-6/</loc>
+    <lastmod>2024-10-05</lastmod>
+  </url>
+  <url>
+    <loc>https://enkr1.github.io/blog/blog/journal-week-9/</loc>
+    <lastmod>2024-10-05</lastmod>
+  </url>
+  <url>
+    <loc>https://enkr1.github.io/blog/blog/journal-week-4/</loc>
+    <lastmod>2024-10-05</lastmod>
+  </url>
+  <url>
+    <loc>https://enkr1.github.io/blog/blog/journal-week-5/</loc>
+    <lastmod>2024-10-05</lastmod>
+  </url>
+  <url>
+    <loc>https://enkr1.github.io/blog/blog/journal-week-7/</loc>
+    <lastmod>2024-10-05</lastmod>
+  </url>
+  <url>
+    <loc>https://enkr1.github.io/blog/blog/journal-week-3/</loc>
+    <lastmod>2024-10-05</lastmod>
+  </url>
+  <url>
+    <loc>https://enkr1.github.io/blog/blog/journal-week-2/</loc>
+    <lastmod>2024-10-05</lastmod>
+  </url>
+  <url>
+    <loc>https://enkr1.github.io/blog/blog/journal-week-1/</loc>
+    <lastmod>2024-10-05</lastmod>
+  </url>
+  <url>
     <loc>https://enkr1.github.io/blog/blog/leetcode-notebook/</loc>
-    <lastmod>2024-10-01</lastmod>
+    <lastmod>2024-10-05</lastmod>
+  </url>
+  <url>
+    <loc>https://enkr1.github.io/blog/blog/leetcode-210-course-schedule-ii/</loc>
+    <lastmod>2024-10-05</lastmod>
+  </url>
+  <url>
+    <loc>https://enkr1.github.io/blog/blog/learning-from-lim-hock-chee-life-and-business-insights-from-the-ceo-of-sheng-siong/</loc>
+    <lastmod>2024-10-05</lastmod>
   </url>
   <url>
     <loc>https://enkr1.github.io/blog/blog/javascript-notebook/</loc>
@@ -133,47 +185,7 @@
     <lastmod>2024-09-30</lastmod>
   </url>
   <url>
-    <loc>https://enkr1.github.io/blog/blog/journal-week-1/</loc>
-    <lastmod>2024-09-30</lastmod>
-  </url>
-  <url>
-    <loc>https://enkr1.github.io/blog/blog/journal-week-2/</loc>
-    <lastmod>2024-09-30</lastmod>
-  </url>
-  <url>
-    <loc>https://enkr1.github.io/blog/blog/journal-week-3/</loc>
-    <lastmod>2024-09-30</lastmod>
-  </url>
-  <url>
-    <loc>https://enkr1.github.io/blog/blog/journal-week-4/</loc>
-    <lastmod>2024-09-30</lastmod>
-  </url>
-  <url>
-    <loc>https://enkr1.github.io/blog/blog/journal-week-6/</loc>
-    <lastmod>2024-09-30</lastmod>
-  </url>
-  <url>
-    <loc>https://enkr1.github.io/blog/blog/journal-week-5/</loc>
-    <lastmod>2024-09-30</lastmod>
-  </url>
-  <url>
-    <loc>https://enkr1.github.io/blog/blog/journal-week-7/</loc>
-    <lastmod>2024-09-30</lastmod>
-  </url>
-  <url>
-    <loc>https://enkr1.github.io/blog/blog/journal-week-8/</loc>
-    <lastmod>2024-09-30</lastmod>
-  </url>
-  <url>
-    <loc>https://enkr1.github.io/blog/blog/journal-week-9/</loc>
-    <lastmod>2024-09-30</lastmod>
-  </url>
-  <url>
     <loc>https://enkr1.github.io/blog/blog/achieving-my-ambitious-goals-in-2024/</loc>
-    <lastmod>2024-09-29</lastmod>
-  </url>
-  <url>
-    <loc>https://enkr1.github.io/blog/blog/journal-week-10/</loc>
     <lastmod>2024-09-29</lastmod>
   </url>
   <url>
@@ -233,10 +245,6 @@
     <lastmod>2024-08-28</lastmod>
   </url>
   <url>
-    <loc>https://enkr1.github.io/blog/blog/leetcode-210-course-schedule-ii/</loc>
-    <lastmod>2024-08-28</lastmod>
-  </url>
-  <url>
     <loc>https://enkr1.github.io/blog/blog/my-domain-setup-dynadot/</loc>
     <lastmod>2024-08-13</lastmod>
   </url>
@@ -263,10 +271,6 @@
   <url>
     <loc>https://enkr1.github.io/blog/blog/my-journey-in-elixir-phoenix/</loc>
     <lastmod>2024-05-20</lastmod>
-  </url>
-  <url>
-    <loc>https://enkr1.github.io/blog/blog/learning-from-lim-hock-chee-life-and-business-insights-from-the-ceo-of-sheng-siong/</loc>
-    <lastmod>2024-05-18</lastmod>
   </url>
   <url>
     <loc>https://enkr1.github.io/blog/blog/decoding-dunbar-s-number-the-limits-of-social-connections/</loc>
