@@ -1374,7 +1374,7 @@ p {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #f12ef2;
+  background: #55be26;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2066,7 +2066,7 @@ p {
 .posts-expand.index .fancybox img {
   border-radius: 1.4rem;
   box-shadow: 0.3rem 0.3rem 0.8rem 0rem rgba(0,0,0,0.1);
-  max-height: 25rem;
+  max-height: 60rem;
   width: 100%;
   object-fit: cover;
 }
