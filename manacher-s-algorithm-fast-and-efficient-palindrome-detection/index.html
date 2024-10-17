@@ -42,6 +42,8 @@
 <link rel="canonical" href="https://enkr1.github.io/blog/manacher-s-algorithm-fast-and-efficient-palindrome-detection/">
 
 
+
+
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
@@ -51,6 +53,8 @@
     lang   : 'en'
   };
 </script>
+
+
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-4N4L18VB12"></script>
@@ -62,7 +66,10 @@
   gtag('config', 'G-4N4L18VB12');
 </script>
 
+
+
 <!-- Firebase -->
+<!-- enkr1.github.io -->
 <script type="module">
   // Import the functions you need from the SDKs you need
   import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
@@ -80,6 +87,35 @@
     messagingSenderId: "71411607593",
     appId: "1:71411607593:web:d0fb244020c34c5895d438",
     measurementId: "G-TJPENBTDNS"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
+
+
+
+<!-- Firebase -->
+<!-- enkr1.com -->
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "firebase/app";
+  import { getAnalytics } from "firebase/analytics";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyBxexVzGzOqDUGFzHVT_-oYxkqAetlFUSo",
+    authDomain: "hexo-blog-9ccea.firebaseapp.com",
+    databaseURL: "https://hexo-blog-9ccea-default-rtdb.firebaseio.com",
+    projectId: "hexo-blog-9ccea",
+    storageBucket: "hexo-blog-9ccea.appspot.com",
+    messagingSenderId: "71411607593",
+    appId: "1:71411607593:web:c6388e0599aa336d95d438",
+    measurementId: "G-84NB2XE4XN"
   };
 
   // Initialize Firebase
@@ -486,13 +522,13 @@ Algorithm 100% Beat<i class="fa fa-external-link-alt"></i></span></li>
       <div class="popular-posts-title"><a href="/blog/boyer-moore-voting-algorithm-finding-the-majority-element/" rel="bookmark">Boyer-Moore Voting Algorithm: Finding the Majority Element</a></div>
     </li>
     <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="/blog/floyd-warshall-algorithm-comprehensive-guide-to-all-pairs-shortest-paths/" rel="bookmark">Floyd-Warshall Algorithm: Comprehensive Guide to All-Pairs Shortest Paths</a></div>
-    </li>
-    <li class="popular-posts-item">
       <div class="popular-posts-title"><a href="/blog/dijkstra-s-algorithm-efficient-shortest-path-finding-in-graphs/" rel="bookmark">Dijkstra's Algorithm: Efficient Shortest Path Finding in Graphs</a></div>
     </li>
     <li class="popular-posts-item">
       <div class="popular-posts-title"><a href="/blog/euclidean-algorithm-finding-the-greatest-common-divisor-gcd/" rel="bookmark">Euclidean Algorithm: Finding the Greatest Common Divisor (GCD)</a></div>
+    </li>
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="/blog/floyd-warshall-algorithm-comprehensive-guide-to-all-pairs-shortest-paths/" rel="bookmark">Floyd-Warshall Algorithm: Comprehensive Guide to All-Pairs Shortest Paths</a></div>
     </li>
     <li class="popular-posts-item">
       <div class="popular-posts-title"><a href="/blog/greedy-algorithm-optimal-solutions-for-local-decisions/" rel="bookmark">Greedy Algorithm: Optimal Solutions for Local Decisions</a></div>

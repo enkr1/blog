@@ -44,6 +44,8 @@
 <link rel="canonical" href="https://enkr1.github.io/blog/boyer-moore-voting-algorithm-finding-the-majority-element/">
 
 
+
+
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
@@ -53,6 +55,8 @@
     lang   : 'en'
   };
 </script>
+
+
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-4N4L18VB12"></script>
@@ -64,7 +68,10 @@
   gtag('config', 'G-4N4L18VB12');
 </script>
 
+
+
 <!-- Firebase -->
+<!-- enkr1.github.io -->
 <script type="module">
   // Import the functions you need from the SDKs you need
   import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
@@ -82,6 +89,35 @@
     messagingSenderId: "71411607593",
     appId: "1:71411607593:web:d0fb244020c34c5895d438",
     measurementId: "G-TJPENBTDNS"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
+
+
+
+<!-- Firebase -->
+<!-- enkr1.com -->
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "firebase/app";
+  import { getAnalytics } from "firebase/analytics";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyBxexVzGzOqDUGFzHVT_-oYxkqAetlFUSo",
+    authDomain: "hexo-blog-9ccea.firebaseapp.com",
+    databaseURL: "https://hexo-blog-9ccea-default-rtdb.firebaseio.com",
+    projectId: "hexo-blog-9ccea",
+    storageBucket: "hexo-blog-9ccea.appspot.com",
+    messagingSenderId: "71411607593",
+    appId: "1:71411607593:web:c6388e0599aa336d95d438",
+    measurementId: "G-84NB2XE4XN"
   };
 
   // Initialize Firebase
@@ -436,19 +472,19 @@ Time Majority Vote Algorithm<i class="fa fa-external-link-alt"></i></span></li>
   <div class="popular-posts-header">Related Posts</div>
   <ul class="popular-posts">
     <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="/blog/leetcode-139-word-break/" rel="bookmark">LeetCode-139: Word Break</a></div>
-    </li>
-    <li class="popular-posts-item">
       <div class="popular-posts-title"><a href="/blog/leetcode-1642-furthest-building-you-can-reach/" rel="bookmark">LeetCode-1642: Furthest Building You Can Reach</a></div>
     </li>
     <li class="popular-posts-item">
       <div class="popular-posts-title"><a href="/blog/leetcode-189-rotate-array/" rel="bookmark">LeetCode-189: Rotate Array</a></div>
     </li>
     <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="/blog/leetcode-704-binary-search/" rel="bookmark">LeetCode-704: Binary Search</a></div>
+      <div class="popular-posts-title"><a href="/blog/leetcode-139-word-break/" rel="bookmark">LeetCode-139: Word Break</a></div>
     </li>
     <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="/blog/leetcode-97-interleaving-string/" rel="bookmark">LeetCode-97: Interleaving String</a></div>
+      <div class="popular-posts-title"><a href="/blog/leetcode-210-course-schedule-ii/" rel="bookmark">LeetCode-210: Course Schedule II</a></div>
+    </li>
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="/blog/leetcode-704-binary-search/" rel="bookmark">LeetCode-704: Binary Search</a></div>
     </li>
   </ul>
 <div class="post-widgets">
