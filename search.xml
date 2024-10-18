@@ -184,13 +184,13 @@
             
             <tag> algorithm </tag>
             
-            <tag> javascript </tag>
-            
             <tag> leetcode </tag>
             
             <tag> leetcode-medium </tag>
             
             <tag> interview-preparation </tag>
+            
+            <tag> javascript </tag>
             
             <tag> dynamic-programming </tag>
             
@@ -223,13 +223,13 @@
             
             <tag> algorithm </tag>
             
-            <tag> javascript </tag>
-            
             <tag> leetcode </tag>
             
             <tag> leetcode-medium </tag>
             
             <tag> interview-preparation </tag>
+            
+            <tag> javascript </tag>
             
             <tag> dynamic-programming </tag>
             
@@ -318,13 +318,13 @@
             
             <tag> algorithm </tag>
             
-            <tag> javascript </tag>
-            
             <tag> leetcode </tag>
             
             <tag> interview-preparation </tag>
             
             <tag> leetcode-easy </tag>
+            
+            <tag> javascript </tag>
             
             <tag> array-manipulation </tag>
             
@@ -384,9 +384,9 @@
             
             <tag> algorithm </tag>
             
-            <tag> array </tag>
-            
             <tag> javascript </tag>
+            
+            <tag> array </tag>
             
             <tag> majority-element </tag>
             
@@ -481,13 +481,13 @@
             
             <tag> algorithm </tag>
             
-            <tag> javascript </tag>
-            
             <tag> leetcode </tag>
             
             <tag> leetcode-medium </tag>
             
             <tag> interview-preparation </tag>
+            
+            <tag> javascript </tag>
             
             <tag> min-heap </tag>
             
@@ -522,13 +522,13 @@
             
             <tag> algorithm </tag>
             
-            <tag> javascript </tag>
-            
             <tag> leetcode </tag>
             
             <tag> interview-preparation </tag>
             
             <tag> leetcode-easy </tag>
+            
+            <tag> javascript </tag>
             
             <tag> binary-search </tag>
             
@@ -801,13 +801,13 @@
             
             <tag> algorithm </tag>
             
-            <tag> javascript </tag>
-            
             <tag> leetcode </tag>
             
             <tag> leetcode-medium </tag>
             
             <tag> interview-preparation </tag>
+            
+            <tag> javascript </tag>
             
             <tag> top-interview-150 </tag>
             
@@ -1553,9 +1553,9 @@
       
         <tags>
             
-            <tag> beatbox </tag>
-            
             <tag> hobby </tag>
+            
+            <tag> beatbox </tag>
             
             <tag> stage-performance </tag>
             
@@ -1674,9 +1674,9 @@
           
           <category> Personal Development </category>
           
-          <category> Life Lessons </category>
-          
           <category> Career Development </category>
+          
+          <category> Life Lessons </category>
           
           <category> Project Management </category>
           
