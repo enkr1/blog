@@ -6,27 +6,27 @@
 <meta name="theme-color" content="#222">
 <meta name="generator" content="Hexo 7.3.0">
 <meta name="google-site-verification" content="wSUWWkv_QhNXB_N6r3rOSU2YlmmWxYBk6UWVlgu1q94" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/logo.gif">
-  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/logo.gif">
-  <link rel="mask-icon" href="/blog/images/logo.svg" color="#222">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/logo.gif">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/logo.gif">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
   <meta name="google-site-verification" content="google295e26d511c4c6ad.html">
 
-<link rel="stylesheet" href="/blog/css/main.css">
+<link rel="stylesheet" href="/css/main.css">
 
 
-<link rel="stylesheet" href="/blog/lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"enkr1.github.io","root":"/blog/","scheme":"Gemini","version":"7.8.0","exturl":true,"sidebar":{"position":"left","width":300,"display":"post","padding":0,"offset":0,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"buttons","active":"disqus","storage":true,"lazyload":true,"nav":null,"activeClass":"disqus"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":-1,"unescape":true,"preload":true},"motion":{"enable":true,"async":false,"transition":{"post_block":"slideDownBigIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"blog.enkr1.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":true,"sidebar":{"position":"left","width":300,"display":"post","padding":0,"offset":0,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"buttons","active":"disqus","storage":true,"lazyload":true,"nav":null,"activeClass":"disqus"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":-1,"unescape":true,"preload":true},"motion":{"enable":true,"async":false,"transition":{"post_block":"slideDownBigIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="Insights and beats at the intersection of technology and artistry by Jing Hui PANG, also known as ENKR. Discover programming tips, beatbox tutorials, and more.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="ENKR&#39;s Blog">
-<meta property="og:url" content="https://enkr1.github.io/blog/index.html">
+<meta property="og:url" content="https://blog.enkr1.com/index.html">
 <meta property="og:site_name" content="ENKR&#39;s Blog">
 <meta property="og:description" content="Insights and beats at the intersection of technology and artistry by Jing Hui PANG, also known as ENKR. Discover programming tips, beatbox tutorials, and more.">
 <meta property="og:locale" content="en_US">
@@ -76,7 +76,7 @@
 <meta property="article:tag" content="Professional development in tech">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://enkr1.github.io/blog/">
+<link rel="canonical" href="https://blog.enkr1.com/">
 
 
 
@@ -117,6 +117,8 @@
   // Your web app's Firebase configuration
   // For Firebase JS SDK v7.20.0 and later, measurementId is optional
   const firebaseConfig = {
+    // Update this to your new domain
+    authDomain: "enkr1.com",
     apiKey: "AIzaSyBxexVzGzOqDUGFzHVT_-oYxkqAetlFUSo",
     authDomain: "hexo-blog-9ccea.firebaseapp.com",
     projectId: "hexo-blog-9ccea",
@@ -213,7 +215,7 @@
   </style>
 </noscript>
 
-<link rel="alternate" href="/blog/atom.xml" title="ENKR's Blog" type="application/atom+xml">
+<link rel="alternate" href="/atom.xml" title="ENKR's Blog" type="application/atom+xml">
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -232,7 +234,7 @@
 
   <div class="site-meta">
 
-    <a href="/blog/" class="brand" rel="start">
+    <a href="/" class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
       <h1 class="site-title">ENKR's Blog</h1>
       <span class="logo-line-after"><i></i></span>
@@ -254,42 +256,42 @@
   <ul id="menu" class="main-menu menu">
         <li class="menu-item menu-item-home">
 
-    <a href="/blog/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
 
   </li>
         <li class="menu-item menu-item-about">
 
-    <a href="/blog/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
 
   </li>
         <li class="menu-item menu-item-notebooks">
 
-    <a href="/blog/categories/My-Notes/" rel="section"><i class="fa fa-bookmark fa-fw"></i>Notebooks</a>
+    <a href="/categories/My-Notes/" rel="section"><i class="fa fa-bookmark fa-fw"></i>Notebooks</a>
 
   </li>
         <li class="menu-item menu-item-journals">
 
-    <a href="/blog/categories/About-Me/Journals/" rel="section"><i class="fa fa-book fa-fw"></i>Journals</a>
+    <a href="/categories/About-Me/Journals/" rel="section"><i class="fa fa-book fa-fw"></i>Journals</a>
 
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/blog/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">106</span></a>
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">106</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/blog/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">47</span></a>
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">47</span></a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/blog/archives/" rel="section"><i class="fa fa-history fa-fw"></i>Archives<span class="badge">71</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-history fa-fw"></i>Archives<span class="badge">71</span></a>
 
   </li>
         <li class="menu-item menu-item-platforms">
 
-    <a href="https://enkr1.github.io/platforms/" rel="section"><i class="fa fa-link fa-fw"></i>Platforms</a>
+    <span class="exturl" data-url="aHR0cHM6Ly9lbmtyMS5naXRodWIuaW8vcGxhdGZvcm1zLw=="><i class="fa fa-link fa-fw"></i>Platforms</span>
 
   </li>
         <li class="menu-item menu-item-connect-with-me">
@@ -352,10 +354,10 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://enkr1.github.io/blog/achieving-my-ambitious-goals-in-2024/">
+    <link itemprop="mainEntityOfPage" href="https://blog.enkr1.com/achieving-my-ambitious-goals-in-2024/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="Jing Hui PANG | 彭竞辉 | ENKR">
       <meta itemprop="description" content="Insights and beats at the intersection of technology and artistry by Jing Hui PANG, also known as ENKR. Discover programming tips, beatbox tutorials, and more.">
     </span>
@@ -369,7 +371,7 @@
               <span class="post-sticky-flag" title="Sticky">
                 <i class="fa fa-thumbtack"></i>
               </span>
-            <a href="/blog/achieving-my-ambitious-goals-in-2024/" class="post-title-link" itemprop="url">Achieving My Ambitious Goals in 2024</a>
+            <a href="/achieving-my-ambitious-goals-in-2024/" class="post-title-link" itemprop="url">Achieving My Ambitious Goals in 2024</a>
         </h2>
 
         <div class="post-meta">
@@ -404,15 +406,15 @@ NOTE: created_at
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/About-Me/" itemprop="url" rel="index"><span itemprop="name">About Me</span></a>
+                  <a href="/categories/About-Me/" itemprop="url" rel="index"><span itemprop="name">About Me</span></a>
                 </span>
                   , 
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/About-Me/Journals/" itemprop="url" rel="index"><span itemprop="name">Journals</span></a>
+                  <a href="/categories/About-Me/Journals/" itemprop="url" rel="index"><span itemprop="name">Journals</span></a>
                 </span>
                   , 
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/About-Me/Journals/2024/" itemprop="url" rel="index"><span itemprop="name">2024</span></a>
+                  <a href="/categories/About-Me/Journals/2024/" itemprop="url" rel="index"><span itemprop="name">2024</span></a>
                 </span>
             </span>
 
@@ -421,13 +423,13 @@ NOTE: created_at
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-              <span>6.7k</span>
+              <span>1.3k</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
-              <span>6 mins.</span>
+              <span>5 mins.</span>
             </span>
 
 <!--
@@ -459,7 +461,7 @@ NOTE: views count
           <p>Discover my ambitious goals for 2024: pursuing a Computer Science degree, excelling at ByteDance, achieving financial growth, reading new books, rekindling my passion for beatboxing, and exploring music production and bodybuilding. Follow my journey towards personal and professional development.</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/blog/achieving-my-ambitious-goals-in-2024/">
+              <a class="btn" href="/achieving-my-ambitious-goals-in-2024/">
                 Read more &raquo;
               </a>
             </div>
@@ -485,10 +487,10 @@ NOTE: views count
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://enkr1.github.io/blog/my-beatbox-journey-from-solitude-to-the-stage/">
+    <link itemprop="mainEntityOfPage" href="https://blog.enkr1.com/my-beatbox-journey-from-solitude-to-the-stage/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="Jing Hui PANG | 彭竞辉 | ENKR">
       <meta itemprop="description" content="Insights and beats at the intersection of technology and artistry by Jing Hui PANG, also known as ENKR. Discover programming tips, beatbox tutorials, and more.">
     </span>
@@ -502,7 +504,7 @@ NOTE: views count
               <span class="post-sticky-flag" title="Sticky">
                 <i class="fa fa-thumbtack"></i>
               </span>
-            <a href="/blog/my-beatbox-journey-from-solitude-to-the-stage/" class="post-title-link" itemprop="url">My Beatbox Journey: From Solitude to the Stage</a>
+            <a href="/my-beatbox-journey-from-solitude-to-the-stage/" class="post-title-link" itemprop="url">My Beatbox Journey: From Solitude to the Stage</a>
         </h2>
 
         <div class="post-meta">
@@ -537,15 +539,15 @@ NOTE: created_at
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/About-Me/" itemprop="url" rel="index"><span itemprop="name">About Me</span></a>
+                  <a href="/categories/About-Me/" itemprop="url" rel="index"><span itemprop="name">About Me</span></a>
                 </span>
                   , 
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/About-Me/Hobbies/" itemprop="url" rel="index"><span itemprop="name">Hobbies</span></a>
+                  <a href="/categories/About-Me/Hobbies/" itemprop="url" rel="index"><span itemprop="name">Hobbies</span></a>
                 </span>
                   , 
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/About-Me/Hobbies/Beatboxing/" itemprop="url" rel="index"><span itemprop="name">Beatboxing</span></a>
+                  <a href="/categories/About-Me/Hobbies/Beatboxing/" itemprop="url" rel="index"><span itemprop="name">Beatboxing</span></a>
                 </span>
             </span>
 
@@ -554,13 +556,13 @@ NOTE: created_at
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-              <span>18k</span>
+              <span>5.8k</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
-              <span>16 mins.</span>
+              <span>21 mins.</span>
             </span>
 
 <!--
@@ -574,7 +576,7 @@ NOTE: disqus
       </span>
       <span class="post-meta-item-text">Disqus: </span>
     
-    <a title="disqus" href="/blog/my-beatbox-journey-from-solitude-to-the-stage/#disqus_thread" itemprop="discussionUrl">
+    <a title="disqus" href="/my-beatbox-journey-from-solitude-to-the-stage/#disqus_thread" itemprop="discussionUrl">
       <span class="post-comments-count disqus-comment-count" data-disqus-identifier="my-beatbox-journey-from-solitude-to-the-stage/" itemprop="commentCount"></span>
     </a>
   </span>
@@ -604,7 +606,7 @@ NOTE: views count
           <p>Discover beatbox journey of Jing Hui PANG (ENKR) from solitude to stage performance. Learn about the personal growth, technical skills, and inspiring moments that defined this musical transformation. Share your own musical journey and join the discussion!</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/blog/my-beatbox-journey-from-solitude-to-the-stage/">
+              <a class="btn" href="/my-beatbox-journey-from-solitude-to-the-stage/">
                 Read more &raquo;
               </a>
             </div>
@@ -630,10 +632,10 @@ NOTE: views count
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://enkr1.github.io/blog/my-leetcode-journey-from-novice-to-bytedance-software-engineer/">
+    <link itemprop="mainEntityOfPage" href="https://blog.enkr1.com/my-leetcode-journey-from-novice-to-bytedance-software-engineer/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="Jing Hui PANG | 彭竞辉 | ENKR">
       <meta itemprop="description" content="Insights and beats at the intersection of technology and artistry by Jing Hui PANG, also known as ENKR. Discover programming tips, beatbox tutorials, and more.">
     </span>
@@ -647,7 +649,7 @@ NOTE: views count
               <span class="post-sticky-flag" title="Sticky">
                 <i class="fa fa-thumbtack"></i>
               </span>
-            <a href="/blog/my-leetcode-journey-from-novice-to-bytedance-software-engineer/" class="post-title-link" itemprop="url">My LeetCode Journey: From Novice to ByteDance Software Engineer</a>
+            <a href="/my-leetcode-journey-from-novice-to-bytedance-software-engineer/" class="post-title-link" itemprop="url">My LeetCode Journey: From Novice to ByteDance Software Engineer</a>
         </h2>
 
         <div class="post-meta">
@@ -682,15 +684,15 @@ NOTE: created_at
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Career-Development/" itemprop="url" rel="index"><span itemprop="name">Career Development</span></a>
+                  <a href="/categories/Career-Development/" itemprop="url" rel="index"><span itemprop="name">Career Development</span></a>
                 </span>
                   , 
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Career-Development/Interviews/" itemprop="url" rel="index"><span itemprop="name">Interviews</span></a>
+                  <a href="/categories/Career-Development/Interviews/" itemprop="url" rel="index"><span itemprop="name">Interviews</span></a>
                 </span>
                   , 
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Career-Development/Interviews/Technical-Coding-Interviews/" itemprop="url" rel="index"><span itemprop="name">Technical Coding Interviews</span></a>
+                  <a href="/categories/Career-Development/Interviews/Technical-Coding-Interviews/" itemprop="url" rel="index"><span itemprop="name">Technical Coding Interviews</span></a>
                 </span>
             </span>
 
@@ -699,13 +701,13 @@ NOTE: created_at
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-              <span>7.4k</span>
+              <span>1.5k</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
-              <span>7 mins.</span>
+              <span>5 mins.</span>
             </span>
 
 <!--
@@ -719,7 +721,7 @@ NOTE: disqus
       </span>
       <span class="post-meta-item-text">Disqus: </span>
     
-    <a title="disqus" href="/blog/my-leetcode-journey-from-novice-to-bytedance-software-engineer/#disqus_thread" itemprop="discussionUrl">
+    <a title="disqus" href="/my-leetcode-journey-from-novice-to-bytedance-software-engineer/#disqus_thread" itemprop="discussionUrl">
       <span class="post-comments-count disqus-comment-count" data-disqus-identifier="my-leetcode-journey-from-novice-to-bytedance-software-engineer/" itemprop="commentCount"></span>
     </a>
   </span>
@@ -749,7 +751,7 @@ NOTE: views count
           <p>Embark on my personal odyssey as I navigate the challenging world of coding interviews through LeetCode. Uncover the strategies that propelled me to secure a coveted position at ByteDance, learn from my journey's ups and downs, and gather actionable tips to boost your own performance in coding interviews.</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/blog/my-leetcode-journey-from-novice-to-bytedance-software-engineer/">
+              <a class="btn" href="/my-leetcode-journey-from-novice-to-bytedance-software-engineer/">
                 Read more &raquo;
               </a>
             </div>
@@ -775,10 +777,10 @@ NOTE: views count
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://enkr1.github.io/blog/a-collection-of-inspirational-mottos-that-guide-my-life/">
+    <link itemprop="mainEntityOfPage" href="https://blog.enkr1.com/a-collection-of-inspirational-mottos-that-guide-my-life/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="Jing Hui PANG | 彭竞辉 | ENKR">
       <meta itemprop="description" content="Insights and beats at the intersection of technology and artistry by Jing Hui PANG, also known as ENKR. Discover programming tips, beatbox tutorials, and more.">
     </span>
@@ -792,7 +794,7 @@ NOTE: views count
               <span class="post-sticky-flag" title="Sticky">
                 <i class="fa fa-thumbtack"></i>
               </span>
-            <a href="/blog/a-collection-of-inspirational-mottos-that-guide-my-life/" class="post-title-link" itemprop="url">A Collection of Inspirational Mottos That Guide My Life</a>
+            <a href="/a-collection-of-inspirational-mottos-that-guide-my-life/" class="post-title-link" itemprop="url">A Collection of Inspirational Mottos That Guide My Life</a>
         </h2>
 
         <div class="post-meta">
@@ -827,11 +829,11 @@ NOTE: created_at
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Personal-Development/" itemprop="url" rel="index"><span itemprop="name">Personal Development</span></a>
+                  <a href="/categories/Personal-Development/" itemprop="url" rel="index"><span itemprop="name">Personal Development</span></a>
                 </span>
                   , 
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Personal-Development/Inspirational-Insights/" itemprop="url" rel="index"><span itemprop="name">Inspirational Insights</span></a>
+                  <a href="/categories/Personal-Development/Inspirational-Insights/" itemprop="url" rel="index"><span itemprop="name">Inspirational Insights</span></a>
                 </span>
             </span>
 
@@ -840,7 +842,7 @@ NOTE: created_at
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-              <span>2.6k</span>
+              <span>528</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
@@ -860,7 +862,7 @@ NOTE: disqus
       </span>
       <span class="post-meta-item-text">Disqus: </span>
     
-    <a title="disqus" href="/blog/a-collection-of-inspirational-mottos-that-guide-my-life/#disqus_thread" itemprop="discussionUrl">
+    <a title="disqus" href="/a-collection-of-inspirational-mottos-that-guide-my-life/#disqus_thread" itemprop="discussionUrl">
       <span class="post-comments-count disqus-comment-count" data-disqus-identifier="a-collection-of-inspirational-mottos-that-guide-my-life/" itemprop="commentCount"></span>
     </a>
   </span>
@@ -890,7 +892,7 @@ NOTE: views count
           <p>Explore the powerful mottos and sayings that have shaped my outlook and driven my decisions throughout life. This collection of inspirational mottos is not just phrases to read but lessons to live by, each with a story and a profound impact on personal development. Join me as we delve into these empowering words, and maybe find a motto that resonates with your journey.</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/blog/a-collection-of-inspirational-mottos-that-guide-my-life/">
+              <a class="btn" href="/a-collection-of-inspirational-mottos-that-guide-my-life/">
                 Read more &raquo;
               </a>
             </div>
@@ -916,10 +918,10 @@ NOTE: views count
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://enkr1.github.io/blog/my-first-ever-interview-experience-software-engineer-general-gcloud-tech-infra-24x7-site-reliability/">
+    <link itemprop="mainEntityOfPage" href="https://blog.enkr1.com/my-first-ever-interview-experience-software-engineer-general-gcloud-tech-infra-24x7-site-reliability/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="Jing Hui PANG | 彭竞辉 | ENKR">
       <meta itemprop="description" content="Insights and beats at the intersection of technology and artistry by Jing Hui PANG, also known as ENKR. Discover programming tips, beatbox tutorials, and more.">
     </span>
@@ -933,7 +935,7 @@ NOTE: views count
               <span class="post-sticky-flag" title="Sticky">
                 <i class="fa fa-thumbtack"></i>
               </span>
-            <a href="/blog/my-first-ever-interview-experience-software-engineer-general-gcloud-tech-infra-24x7-site-reliability/" class="post-title-link" itemprop="url">My First Ever Interview Experience: Software Engineer, General (GCloud Tech Infra 24x7 (Site Reliability))</a>
+            <a href="/my-first-ever-interview-experience-software-engineer-general-gcloud-tech-infra-24x7-site-reliability/" class="post-title-link" itemprop="url">My First Ever Interview Experience: Software Engineer, General (GCloud Tech Infra 24x7 (Site Reliability))</a>
         </h2>
 
         <div class="post-meta">
@@ -968,15 +970,15 @@ NOTE: created_at
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Career-Development/" itemprop="url" rel="index"><span itemprop="name">Career Development</span></a>
+                  <a href="/categories/Career-Development/" itemprop="url" rel="index"><span itemprop="name">Career Development</span></a>
                 </span>
                   , 
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Career-Development/Interviews/" itemprop="url" rel="index"><span itemprop="name">Interviews</span></a>
+                  <a href="/categories/Career-Development/Interviews/" itemprop="url" rel="index"><span itemprop="name">Interviews</span></a>
                 </span>
                   , 
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Career-Development/Interviews/Technical-Coding-Interviews/" itemprop="url" rel="index"><span itemprop="name">Technical Coding Interviews</span></a>
+                  <a href="/categories/Career-Development/Interviews/Technical-Coding-Interviews/" itemprop="url" rel="index"><span itemprop="name">Technical Coding Interviews</span></a>
                 </span>
             </span>
 
@@ -985,7 +987,7 @@ NOTE: created_at
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-              <span>7.1k</span>
+              <span>1.5k</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
@@ -1005,7 +1007,7 @@ NOTE: disqus
       </span>
       <span class="post-meta-item-text">Disqus: </span>
     
-    <a title="disqus" href="/blog/my-first-ever-interview-experience-software-engineer-general-gcloud-tech-infra-24x7-site-reliability/#disqus_thread" itemprop="discussionUrl">
+    <a title="disqus" href="/my-first-ever-interview-experience-software-engineer-general-gcloud-tech-infra-24x7-site-reliability/#disqus_thread" itemprop="discussionUrl">
       <span class="post-comments-count disqus-comment-count" data-disqus-identifier="my-first-ever-interview-experience-software-engineer-general-gcloud-tech-infra-24x7-site-reliability/" itemprop="commentCount"></span>
     </a>
   </span>
@@ -1035,7 +1037,7 @@ NOTE: views count
           <p>Explore my personal experience interviewing for a Site Reliability Engineer (SRE) role at Google, my first ever job interview. Follow my journey from the initial HR call to the technical interview rounds, including valuable insights, challenges, and key takeaways.</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/blog/my-first-ever-interview-experience-software-engineer-general-gcloud-tech-infra-24x7-site-reliability/">
+              <a class="btn" href="/my-first-ever-interview-experience-software-engineer-general-gcloud-tech-infra-24x7-site-reliability/">
                 Read more &raquo;
               </a>
             </div>
@@ -1061,10 +1063,10 @@ NOTE: views count
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://enkr1.github.io/blog/my-interview-experience-site-reliability-engineer-at-tiktok-applied-machine-learning/">
+    <link itemprop="mainEntityOfPage" href="https://blog.enkr1.com/my-interview-experience-site-reliability-engineer-at-tiktok-applied-machine-learning/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="Jing Hui PANG | 彭竞辉 | ENKR">
       <meta itemprop="description" content="Insights and beats at the intersection of technology and artistry by Jing Hui PANG, also known as ENKR. Discover programming tips, beatbox tutorials, and more.">
     </span>
@@ -1078,7 +1080,7 @@ NOTE: views count
               <span class="post-sticky-flag" title="Sticky">
                 <i class="fa fa-thumbtack"></i>
               </span>
-            <a href="/blog/my-interview-experience-site-reliability-engineer-at-tiktok-applied-machine-learning/" class="post-title-link" itemprop="url">My Interview Experience: Site Reliability Engineer at TikTok Applied Machine Learning</a>
+            <a href="/my-interview-experience-site-reliability-engineer-at-tiktok-applied-machine-learning/" class="post-title-link" itemprop="url">My Interview Experience: Site Reliability Engineer at TikTok Applied Machine Learning</a>
         </h2>
 
         <div class="post-meta">
@@ -1113,15 +1115,15 @@ NOTE: created_at
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Career-Development/" itemprop="url" rel="index"><span itemprop="name">Career Development</span></a>
+                  <a href="/categories/Career-Development/" itemprop="url" rel="index"><span itemprop="name">Career Development</span></a>
                 </span>
                   , 
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Career-Development/Interviews/" itemprop="url" rel="index"><span itemprop="name">Interviews</span></a>
+                  <a href="/categories/Career-Development/Interviews/" itemprop="url" rel="index"><span itemprop="name">Interviews</span></a>
                 </span>
                   , 
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Career-Development/Interviews/Technical-Coding-Interviews/" itemprop="url" rel="index"><span itemprop="name">Technical Coding Interviews</span></a>
+                  <a href="/categories/Career-Development/Interviews/Technical-Coding-Interviews/" itemprop="url" rel="index"><span itemprop="name">Technical Coding Interviews</span></a>
                 </span>
             </span>
 
@@ -1130,13 +1132,13 @@ NOTE: created_at
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-              <span>5.1k</span>
+              <span>1.1k</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
-              <span>5 mins.</span>
+              <span>4 mins.</span>
             </span>
 
 <!--
@@ -1150,7 +1152,7 @@ NOTE: disqus
       </span>
       <span class="post-meta-item-text">Disqus: </span>
     
-    <a title="disqus" href="/blog/my-interview-experience-site-reliability-engineer-at-tiktok-applied-machine-learning/#disqus_thread" itemprop="discussionUrl">
+    <a title="disqus" href="/my-interview-experience-site-reliability-engineer-at-tiktok-applied-machine-learning/#disqus_thread" itemprop="discussionUrl">
       <span class="post-comments-count disqus-comment-count" data-disqus-identifier="my-interview-experience-site-reliability-engineer-at-tiktok-applied-machine-learning/" itemprop="commentCount"></span>
     </a>
   </span>
@@ -1180,7 +1182,7 @@ NOTE: views count
           <p>Read about my experience interviewing for a Site Reliability Engineer role at TikTok. Learn from my mistakes, discover key insights, and get valuable tips for your own job search.</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/blog/my-interview-experience-site-reliability-engineer-at-tiktok-applied-machine-learning/">
+              <a class="btn" href="/my-interview-experience-site-reliability-engineer-at-tiktok-applied-machine-learning/">
                 Read more &raquo;
               </a>
             </div>
@@ -1206,10 +1208,10 @@ NOTE: views count
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://enkr1.github.io/blog/journal-week-12/">
+    <link itemprop="mainEntityOfPage" href="https://blog.enkr1.com/journal-week-12/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="Jing Hui PANG | 彭竞辉 | ENKR">
       <meta itemprop="description" content="Insights and beats at the intersection of technology and artistry by Jing Hui PANG, also known as ENKR. Discover programming tips, beatbox tutorials, and more.">
     </span>
@@ -1220,7 +1222,7 @@ NOTE: views count
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/blog/journal-week-12/" class="post-title-link" itemprop="url">Journal: Week 12</a>
+            <a href="/journal-week-12/" class="post-title-link" itemprop="url">Journal: Week 12</a>
         </h2>
 
         <div class="post-meta">
@@ -1249,15 +1251,15 @@ NOTE: created_at
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/About-Me/" itemprop="url" rel="index"><span itemprop="name">About Me</span></a>
+                  <a href="/categories/About-Me/" itemprop="url" rel="index"><span itemprop="name">About Me</span></a>
                 </span>
                   , 
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/About-Me/Journals/" itemprop="url" rel="index"><span itemprop="name">Journals</span></a>
+                  <a href="/categories/About-Me/Journals/" itemprop="url" rel="index"><span itemprop="name">Journals</span></a>
                 </span>
                   , 
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/About-Me/Journals/2024/" itemprop="url" rel="index"><span itemprop="name">2024</span></a>
+                  <a href="/categories/About-Me/Journals/2024/" itemprop="url" rel="index"><span itemprop="name">2024</span></a>
                 </span>
             </span>
 
@@ -1266,13 +1268,13 @@ NOTE: created_at
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-              <span>3.7k</span>
+              <span>1.1k</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
-              <span>3 mins.</span>
+              <span>4 mins.</span>
             </span>
 
 <!--
@@ -1378,29 +1380,29 @@ every day, even when it's tough.</strong> 🧠</p>
 <p>"Being selective about how you spend your time, and who you spend
 your time with, is the greatest sign of self-respect."</p>
 <h2 id="memories">Memories</h2>
-<img data-src="/blog/journal-week-12/0BA961D3-FECB-40C6-A4D0-F58B9298374D.JPG" class="large" title="mcd seaweed shaker fries is back!">
-<img data-src="/blog/journal-week-12/IMG_4996.jpeg" class="large" title="sharpening a variety of complementary and rare skills that industry values - become the kind of talent competitor cannot ignore.">
-<img data-src="/blog/journal-week-12/IMG_4998.jpeg" class="large" title="fueling up for the day with theseee">
-<img data-src="/blog/journal-week-12/IMG_5003.jpeg" class="large">
-<img data-src="/blog/journal-week-12/IMG_5016.jpeg" class="large" title="my duckies">
-<img data-src="/blog/journal-week-12/IMG_5021.jpeg" class="large" title="Maki-San bento - was straight up a bomb, no joke">
-<img data-src="/blog/journal-week-12/IMG_5055.jpeg" class="large">
-<img data-src="/blog/journal-week-12/IMG_5062.jpeg" class="large">
-<img data-src="/blog/journal-week-12/IMG_5071.jpeg" class="large" title="post-gym session w ino - this time, it was my treat. cant believe its been over a year since we performed for Pop Toy. nostalgic">
-<img data-src="/blog/journal-week-12/IMG_5075.jpeg" class="large" title="be selective.">
-<img data-src="/blog/journal-week-12/IMG_5079.jpeg" class="large" title="pulut hitam snacks!? and its product of malaysia HA">
-<img data-src="/blog/journal-week-12/IMG_5080.jpeg" class="large">
-<img data-src="/blog/journal-week-12/IMG_5083.jpeg" class="large">
-<img data-src="/blog/journal-week-12/IMG_5088.jpeg" class="large" title="once in a while">
-<img data-src="/blog/journal-week-12/IMG_5093.jpeg" class="large" title="caifan mMmm">
-<img data-src="/blog/journal-week-12/IMG_5096.jpeg" class="large" title="honoured to judge at Ignition 2024! 🔥">
-<img data-src="/blog/journal-week-12/IMG_5106.jpeg" class="large" title="after the show, we returned to our old 555 hangout spot from the covid days 🥺 it was like a flood of memories rushing back">
-<img data-src="/blog/journal-week-12/IMG_5119.PNG" class="large" title="one of the best moments from the battle by Javier vs Kambing 😭">
-<img data-src="/blog/journal-week-12/IMG_5134.PNG" class="large" title="huge congratulations to Rae for taking 1st place; Henzi came in 2nd and Javier took 3rd - what an incredible competition.">
-<img data-src="/blog/journal-week-12/IMG_5107.jpeg" class="large" title="bugis AF be wilding... look at this deco 💀">
-<img data-src="/blog/journal-week-12/IMG_5126.jpeg" class="large" title="the most confusing machine i have ever seen">
-<img data-src="/blog/journal-week-12/IMG_5139.jpeg" class="large" title="555 AF club">
-<img data-src="/blog/journal-week-12/IMG_5140.jpeg" class="large" title="$9 - recommended by Henzi, honestly one of the solid ones out there, soup was thicc and mee pok sauce was flavourful - worth a try!">
+<img data-src="/journal-week-12/0BA961D3-FECB-40C6-A4D0-F58B9298374D.JPG" class="large" title="mcd seaweed shaker fries is back!">
+<img data-src="/journal-week-12/IMG_4996.jpeg" class="large" title="sharpening a variety of complementary and rare skills that industry values - become the kind of talent competitor cannot ignore.">
+<img data-src="/journal-week-12/IMG_4998.jpeg" class="large" title="fueling up for the day with theseee">
+<img data-src="/journal-week-12/IMG_5003.jpeg" class="large">
+<img data-src="/journal-week-12/IMG_5016.jpeg" class="large" title="my duckies">
+<img data-src="/journal-week-12/IMG_5021.jpeg" class="large" title="Maki-San bento - was straight up a bomb, no joke">
+<img data-src="/journal-week-12/IMG_5055.jpeg" class="large">
+<img data-src="/journal-week-12/IMG_5062.jpeg" class="large">
+<img data-src="/journal-week-12/IMG_5071.jpeg" class="large" title="post-gym session w ino - this time, it was my treat. cant believe its been over a year since we performed for Pop Toy. nostalgic">
+<img data-src="/journal-week-12/IMG_5075.jpeg" class="large" title="be selective.">
+<img data-src="/journal-week-12/IMG_5079.jpeg" class="large" title="pulut hitam snacks!? and its product of malaysia HA">
+<img data-src="/journal-week-12/IMG_5080.jpeg" class="large">
+<img data-src="/journal-week-12/IMG_5083.jpeg" class="large">
+<img data-src="/journal-week-12/IMG_5088.jpeg" class="large" title="once in a while">
+<img data-src="/journal-week-12/IMG_5093.jpeg" class="large" title="caifan mMmm">
+<img data-src="/journal-week-12/IMG_5096.jpeg" class="large" title="honoured to judge at Ignition 2024! 🔥">
+<img data-src="/journal-week-12/IMG_5106.jpeg" class="large" title="after the show, we returned to our old 555 hangout spot from the covid days 🥺 it was like a flood of memories rushing back">
+<img data-src="/journal-week-12/IMG_5119.PNG" class="large" title="one of the best moments from the battle by Javier vs Kambing 😭">
+<img data-src="/journal-week-12/IMG_5134.PNG" class="large" title="huge congratulations to Rae for taking 1st place; Henzi came in 2nd and Javier took 3rd - what an incredible competition.">
+<img data-src="/journal-week-12/IMG_5107.jpeg" class="large" title="bugis AF be wilding... look at this deco 💀">
+<img data-src="/journal-week-12/IMG_5126.jpeg" class="large" title="the most confusing machine i have ever seen">
+<img data-src="/journal-week-12/IMG_5139.jpeg" class="large" title="555 AF club">
+<img data-src="/journal-week-12/IMG_5140.jpeg" class="large" title="$9 - recommended by Henzi, honestly one of the solid ones out there, soup was thicc and mee pok sauce was flavourful - worth a try!">
 
       
     </div>
@@ -1422,10 +1424,10 @@ your time with, is the greatest sign of self-respect."</p>
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://enkr1.github.io/blog/journal-week-11/">
+    <link itemprop="mainEntityOfPage" href="https://blog.enkr1.com/journal-week-11/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="Jing Hui PANG | 彭竞辉 | ENKR">
       <meta itemprop="description" content="Insights and beats at the intersection of technology and artistry by Jing Hui PANG, also known as ENKR. Discover programming tips, beatbox tutorials, and more.">
     </span>
@@ -1436,7 +1438,7 @@ your time with, is the greatest sign of self-respect."</p>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/blog/journal-week-11/" class="post-title-link" itemprop="url">Journal: Week 11</a>
+            <a href="/journal-week-11/" class="post-title-link" itemprop="url">Journal: Week 11</a>
         </h2>
 
         <div class="post-meta">
@@ -1471,15 +1473,15 @@ NOTE: created_at
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/About-Me/" itemprop="url" rel="index"><span itemprop="name">About Me</span></a>
+                  <a href="/categories/About-Me/" itemprop="url" rel="index"><span itemprop="name">About Me</span></a>
                 </span>
                   , 
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/About-Me/Journals/" itemprop="url" rel="index"><span itemprop="name">Journals</span></a>
+                  <a href="/categories/About-Me/Journals/" itemprop="url" rel="index"><span itemprop="name">Journals</span></a>
                 </span>
                   , 
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/About-Me/Journals/2024/" itemprop="url" rel="index"><span itemprop="name">2024</span></a>
+                  <a href="/categories/About-Me/Journals/2024/" itemprop="url" rel="index"><span itemprop="name">2024</span></a>
                 </span>
             </span>
 
@@ -1488,13 +1490,13 @@ NOTE: created_at
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-              <span>2.6k</span>
+              <span>833</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
-              <span>2 mins.</span>
+              <span>3 mins.</span>
             </span>
 
 <!--
@@ -1586,37 +1588,37 @@ with negativity – equips us with the wisdom, fortitude and foresight to
 forge a more successful path forward."</strong></p></li>
 </ol>
 <h2 id="memories">Memories</h2>
-<img data-src="/blog/journal-week-11/8df6f5df-1ed8-4364-a45b-b090321aade3.JPG" class="large" title="妈咪生日快乐 ❤️ 24.10.02">
-<img data-src="/blog/journal-week-11/IMG_4879.jpeg" class="large">
-<img data-src="/blog/journal-week-11/IMG_4881.jpeg" class="large" title="back to this breakfast combo i had everyday when i first joined bd, cept that they used to have better fruits ...">
-<img data-src="/blog/journal-week-11/IMG_4883.jpeg" class="large">
-<img data-src="/blog/journal-week-11/IMG_4891.jpeg" class="large" title="3-day free trial session at Fitness First!">
-<img data-src="/blog/journal-week-11/IMG_4900.JPG" class="large" title="mcd as supper">
-<img data-src="/blog/journal-week-11/IMG_4901.jpeg" class="large">
-<img data-src="/blog/journal-week-11/IMG_4902.jpg" class="large" title="got a random compliment out of the blue from one of my best friends on my personal portfolio that i built from scratch">
-<img data-src="/blog/journal-week-11/IMG_4903.jpeg" class="large">
-<img data-src="/blog/journal-week-11/IMG_4906.jpeg" class="large" title="boditrax">
-<img data-src="/blog/journal-week-11/IMG_4907.jpeg" class="large">
-<img data-src="/blog/journal-week-11/IMG_4908.jpeg" class="large">
-<img data-src="/blog/journal-week-11/IMG_4909.jpeg" class="large">
-<img data-src="/blog/journal-week-11/IMG_4910.jpeg" class="large">
-<img data-src="/blog/journal-week-11/IMG_4912.jpeg" class="large" title="Lucky number?!">
-<img data-src="/blog/journal-week-11/IMG_4915.jpeg" class="large" title="刀削面 by daidai. i didnt know instant noodles can be this scrumptious ... 🥺">
-<img data-src="/blog/journal-week-11/IMG_4917.jpeg" class="large" title="a book that daidai has, from his leader, the title already got me - immediately added to my to-read list">
-<img data-src="/blog/journal-week-11/IMG_4919.jpeg" class="large" title="a kyushu white instant noodle to start my friday ...">
-<img data-src="/blog/journal-week-11/IMG_4920.jpeg" class="large">
-<img data-src="/blog/journal-week-11/IMG_4924.jpeg" class="large">
-<img data-src="/blog/journal-week-11/IMG_4932.jpeg" class="large" title="supper at Lau Pa Sat">
-<img data-src="/blog/journal-week-11/IMG_4933.jpeg" class="large" title="but i was eating the extra bento that i got from lunch">
-<img data-src="/blog/journal-week-11/IMG_4935.jpeg" class="large" title="last day of the 3-day free trial - amazing experience">
-<img data-src="/blog/journal-week-11/IMG_4939.jpeg" class="large" title="first time visiting Octobox (1)">
-<img data-src="/blog/journal-week-11/IMG_4942.jpeg" class="large" title="the snack i like the most at bd costs $1.10?!">
-<img data-src="/blog/journal-week-11/IMG_4944.jpeg" class="large" title="they got most of the day-to-day things you need!">
-<img data-src="/blog/journal-week-11/IMG_4945.jpeg" class="large" title="impressed.">
-<img data-src="/blog/journal-week-11/IMG_4946.jpeg" class="large" title="my lunch before my saturday workout!">
-<img data-src="/blog/journal-week-11/IMG_4947.jpeg" class="large" title="push day let" alt="s go! 🔥">
-<img data-src="/blog/journal-week-11/IMG_4958.jpg" class="large" title="resonated. (2)">
-<img data-src="/blog/journal-week-11/IMG_4972.jpeg" class="large">
+<img data-src="/journal-week-11/8df6f5df-1ed8-4364-a45b-b090321aade3.JPG" class="large" title="妈咪生日快乐 ❤️ 24.10.02">
+<img data-src="/journal-week-11/IMG_4879.jpeg" class="large">
+<img data-src="/journal-week-11/IMG_4881.jpeg" class="large" title="back to this breakfast combo i had everyday when i first joined bd, cept that they used to have better fruits ...">
+<img data-src="/journal-week-11/IMG_4883.jpeg" class="large">
+<img data-src="/journal-week-11/IMG_4891.jpeg" class="large" title="3-day free trial session at Fitness First!">
+<img data-src="/journal-week-11/IMG_4900.JPG" class="large" title="mcd as supper">
+<img data-src="/journal-week-11/IMG_4901.jpeg" class="large">
+<img data-src="/journal-week-11/IMG_4902.jpg" class="large" title="got a random compliment out of the blue from one of my best friends on my personal portfolio that i built from scratch">
+<img data-src="/journal-week-11/IMG_4903.jpeg" class="large">
+<img data-src="/journal-week-11/IMG_4906.jpeg" class="large" title="boditrax">
+<img data-src="/journal-week-11/IMG_4907.jpeg" class="large">
+<img data-src="/journal-week-11/IMG_4908.jpeg" class="large">
+<img data-src="/journal-week-11/IMG_4909.jpeg" class="large">
+<img data-src="/journal-week-11/IMG_4910.jpeg" class="large">
+<img data-src="/journal-week-11/IMG_4912.jpeg" class="large" title="Lucky number?!">
+<img data-src="/journal-week-11/IMG_4915.jpeg" class="large" title="刀削面 by daidai. i didnt know instant noodles can be this scrumptious ... 🥺">
+<img data-src="/journal-week-11/IMG_4917.jpeg" class="large" title="a book that daidai has, from his leader, the title already got me - immediately added to my to-read list">
+<img data-src="/journal-week-11/IMG_4919.jpeg" class="large" title="a kyushu white instant noodle to start my friday ...">
+<img data-src="/journal-week-11/IMG_4920.jpeg" class="large">
+<img data-src="/journal-week-11/IMG_4924.jpeg" class="large">
+<img data-src="/journal-week-11/IMG_4932.jpeg" class="large" title="supper at Lau Pa Sat">
+<img data-src="/journal-week-11/IMG_4933.jpeg" class="large" title="but i was eating the extra bento that i got from lunch">
+<img data-src="/journal-week-11/IMG_4935.jpeg" class="large" title="last day of the 3-day free trial - amazing experience">
+<img data-src="/journal-week-11/IMG_4939.jpeg" class="large" title="first time visiting Octobox (1)">
+<img data-src="/journal-week-11/IMG_4942.jpeg" class="large" title="the snack i like the most at bd costs $1.10?!">
+<img data-src="/journal-week-11/IMG_4944.jpeg" class="large" title="they got most of the day-to-day things you need!">
+<img data-src="/journal-week-11/IMG_4945.jpeg" class="large" title="impressed.">
+<img data-src="/journal-week-11/IMG_4946.jpeg" class="large" title="my lunch before my saturday workout!">
+<img data-src="/journal-week-11/IMG_4947.jpeg" class="large" title="push day let" alt="s go! 🔥">
+<img data-src="/journal-week-11/IMG_4958.jpg" class="large" title="resonated. (2)">
+<img data-src="/journal-week-11/IMG_4972.jpeg" class="large">
 <h2 id="references">References</h2>
 <ol type="1">
 <li><a
@@ -1646,10 +1648,10 @@ is a Privilege</a></li>
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://enkr1.github.io/blog/leetcode-notebook/">
+    <link itemprop="mainEntityOfPage" href="https://blog.enkr1.com/leetcode-notebook/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="Jing Hui PANG | 彭竞辉 | ENKR">
       <meta itemprop="description" content="Insights and beats at the intersection of technology and artistry by Jing Hui PANG, also known as ENKR. Discover programming tips, beatbox tutorials, and more.">
     </span>
@@ -1660,7 +1662,7 @@ is a Privilege</a></li>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/blog/leetcode-notebook/" class="post-title-link" itemprop="url">LeetCode Notebook</a>
+            <a href="/leetcode-notebook/" class="post-title-link" itemprop="url">LeetCode Notebook</a>
         </h2>
 
         <div class="post-meta">
@@ -1695,13 +1697,13 @@ NOTE: created_at
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-              <span>6k</span>
+              <span>1.1k</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
-              <span>5 mins.</span>
+              <span>4 mins.</span>
             </span>
 
 <!--
@@ -1715,7 +1717,7 @@ NOTE: disqus
       </span>
       <span class="post-meta-item-text">Disqus: </span>
     
-    <a title="disqus" href="/blog/leetcode-notebook/#disqus_thread" itemprop="discussionUrl">
+    <a title="disqus" href="/leetcode-notebook/#disqus_thread" itemprop="discussionUrl">
       <span class="post-comments-count disqus-comment-count" data-disqus-identifier="leetcode-notebook/" itemprop="commentCount"></span>
     </a>
   </span>
@@ -1748,7 +1750,7 @@ Snakes and Ladders</a></h2>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[ <span class="number">0</span>, -<span class="number">1</span>, <span class="number">15</span>, -<span class="number">1</span>, -<span class="number">1</span>, -<span class="number">1</span>, -<span class="number">1</span>, -<span class="number">1</span>, -<span class="number">1</span>, -<span class="number">1</span>, -<span class="number">1</span>, -<span class="number">1</span>, -<span class="number">1</span>, -<span class="number">1</span>, <span class="number">35</span>, -<span class="number">1</span>, -<span class="number">1</span>, <span class="number">13</span>, -<span class="number">1</span>, -<span class="number">1</span>, -<span class="number">1</span>, -<span class="number">1</span>, -<span class="number">1</span>, -<span class="number">1</span>, -<span class="number">1</span>, -<span class="number">1</span>, -<span class="number">1</span>, -<span class="number">1</span>, -<span class="number">1</span>, -<span class="number">1</span>, -<span class="number">1</span>, -<span class="number">1</span>, -<span class="number">1</span>, -<span class="number">1</span>, -<span class="number">1</span>, -<span class="number">1</span>, -<span class="number">1</span> ]</span><br></pre></td></tr></table></figure>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/blog/leetcode-notebook/#more" rel="contents">
+              <a class="btn" href="/leetcode-notebook/#more" rel="contents">
                 Read more &raquo;
               </a>
             </div>
@@ -1774,10 +1776,10 @@ Snakes and Ladders</a></h2>
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://enkr1.github.io/blog/journal-week-10/">
+    <link itemprop="mainEntityOfPage" href="https://blog.enkr1.com/journal-week-10/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="Jing Hui PANG | 彭竞辉 | ENKR">
       <meta itemprop="description" content="Insights and beats at the intersection of technology and artistry by Jing Hui PANG, also known as ENKR. Discover programming tips, beatbox tutorials, and more.">
     </span>
@@ -1788,7 +1790,7 @@ Snakes and Ladders</a></h2>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/blog/journal-week-10/" class="post-title-link" itemprop="url">Journal: Week 10</a>
+            <a href="/journal-week-10/" class="post-title-link" itemprop="url">Journal: Week 10</a>
         </h2>
 
         <div class="post-meta">
@@ -1823,15 +1825,15 @@ NOTE: created_at
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/About-Me/" itemprop="url" rel="index"><span itemprop="name">About Me</span></a>
+                  <a href="/categories/About-Me/" itemprop="url" rel="index"><span itemprop="name">About Me</span></a>
                 </span>
                   , 
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/About-Me/Journals/" itemprop="url" rel="index"><span itemprop="name">Journals</span></a>
+                  <a href="/categories/About-Me/Journals/" itemprop="url" rel="index"><span itemprop="name">Journals</span></a>
                 </span>
                   , 
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/About-Me/Journals/2024/" itemprop="url" rel="index"><span itemprop="name">2024</span></a>
+                  <a href="/categories/About-Me/Journals/2024/" itemprop="url" rel="index"><span itemprop="name">2024</span></a>
                 </span>
             </span>
 
@@ -1840,7 +1842,7 @@ NOTE: created_at
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-              <span>2k</span>
+              <span>593</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
@@ -1921,31 +1923,31 @@ growth, choose the challenge."</strong> choosing challenges over comfort
 is what leads to real growth.</li>
 </ol>
 <h2 id="memories">Memories</h2>
-<img data-src="/blog/journal-week-10/IMG_4686.jpeg" class="large">
-<img data-src="/blog/journal-week-10/IMG_4687.jpeg" class="large">
-<img data-src="/blog/journal-week-10/IMG_4689.jpeg" class="large" title="grateful 🥺">
-<img data-src="/blog/journal-week-10/IMG_4690.jpeg" class="large" title="fit check">
-<img data-src="/blog/journal-week-10/IMG_4695.jpeg" class="large" title="company dinner at Keng Eng Kee Seafood @ Alexandra Village">
-<img data-src="/blog/journal-week-10/IMG_4699.jpeg" class="large" title="this is bomb!">
-<img data-src="/blog/journal-week-10/IMG_4700.jpeg" class="large">
-<img data-src="/blog/journal-week-10/IMG_4701.jpeg" class="large">
-<img data-src="/blog/journal-week-10/IMG_4703.jpeg" class="large">
-<img data-src="/blog/journal-week-10/IMG_4704.jpeg" class="large" title="first time visiting terminal 2 at changi - sending my sis off for her business trip">
-<img data-src="/blog/journal-week-10/IMG_4705.jpeg" class="large">
-<img data-src="/blog/journal-week-10/IMG_4706.jpeg" class="large">
-<img data-src="/blog/journal-week-10/IMG_4707.jpeg" class="large">
-<img data-src="/blog/journal-week-10/IMG_4708.jpeg" class="large">
-<img data-src="/blog/journal-week-10/IMG_4723.jpeg" class="large" title="was not as impressive, but still, wow.">
-<img data-src="/blog/journal-week-10/IMG_4742.jpeg" class="large" title="damn.">
-<img data-src="/blog/journal-week-10/IMG_4743.jpeg" class="large">
-<img data-src="/blog/journal-week-10/IMG_4775.jpeg" class="large">
-<img data-src="/blog/journal-week-10/IMG_4776.jpeg" class="large">
-<img data-src="/blog/journal-week-10/IMG_4778.jpeg" class="large">
-<img data-src="/blog/journal-week-10/IMG_4779.jpeg" class="large">
-<img data-src="/blog/journal-week-10/IMG_4780.jpeg" class="large">
-<img data-src="/blog/journal-week-10/IMG_4782.jpeg" class="large" title="home sweet home ❤️">
-<img data-src="/blog/journal-week-10/IMG_4783.jpeg" class="large" title="a birthday gift for my grandpa ❤️">
-<img data-src="/blog/journal-week-10/IMG_4784.jpeg" class="large">
+<img data-src="/journal-week-10/IMG_4686.jpeg" class="large">
+<img data-src="/journal-week-10/IMG_4687.jpeg" class="large">
+<img data-src="/journal-week-10/IMG_4689.jpeg" class="large" title="grateful 🥺">
+<img data-src="/journal-week-10/IMG_4690.jpeg" class="large" title="fit check">
+<img data-src="/journal-week-10/IMG_4695.jpeg" class="large" title="company dinner at Keng Eng Kee Seafood @ Alexandra Village">
+<img data-src="/journal-week-10/IMG_4699.jpeg" class="large" title="this is bomb!">
+<img data-src="/journal-week-10/IMG_4700.jpeg" class="large">
+<img data-src="/journal-week-10/IMG_4701.jpeg" class="large">
+<img data-src="/journal-week-10/IMG_4703.jpeg" class="large">
+<img data-src="/journal-week-10/IMG_4704.jpeg" class="large" title="first time visiting terminal 2 at changi - sending my sis off for her business trip">
+<img data-src="/journal-week-10/IMG_4705.jpeg" class="large">
+<img data-src="/journal-week-10/IMG_4706.jpeg" class="large">
+<img data-src="/journal-week-10/IMG_4707.jpeg" class="large">
+<img data-src="/journal-week-10/IMG_4708.jpeg" class="large">
+<img data-src="/journal-week-10/IMG_4723.jpeg" class="large" title="was not as impressive, but still, wow.">
+<img data-src="/journal-week-10/IMG_4742.jpeg" class="large" title="damn.">
+<img data-src="/journal-week-10/IMG_4743.jpeg" class="large">
+<img data-src="/journal-week-10/IMG_4775.jpeg" class="large">
+<img data-src="/journal-week-10/IMG_4776.jpeg" class="large">
+<img data-src="/journal-week-10/IMG_4778.jpeg" class="large">
+<img data-src="/journal-week-10/IMG_4779.jpeg" class="large">
+<img data-src="/journal-week-10/IMG_4780.jpeg" class="large">
+<img data-src="/journal-week-10/IMG_4782.jpeg" class="large" title="home sweet home ❤️">
+<img data-src="/journal-week-10/IMG_4783.jpeg" class="large" title="a birthday gift for my grandpa ❤️">
+<img data-src="/journal-week-10/IMG_4784.jpeg" class="large">
 
       
     </div>
@@ -1967,10 +1969,10 @@ is what leads to real growth.</li>
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://enkr1.github.io/blog/linked-list-notebook/">
+    <link itemprop="mainEntityOfPage" href="https://blog.enkr1.com/linked-list-notebook/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="Jing Hui PANG | 彭竞辉 | ENKR">
       <meta itemprop="description" content="Insights and beats at the intersection of technology and artistry by Jing Hui PANG, also known as ENKR. Discover programming tips, beatbox tutorials, and more.">
     </span>
@@ -1981,7 +1983,7 @@ is what leads to real growth.</li>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/blog/linked-list-notebook/" class="post-title-link" itemprop="url">Linked List Notebook</a>
+            <a href="/linked-list-notebook/" class="post-title-link" itemprop="url">Linked List Notebook</a>
         </h2>
 
         <div class="post-meta">
@@ -2016,15 +2018,15 @@ NOTE: created_at
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Software-Engineering/" itemprop="url" rel="index"><span itemprop="name">Software Engineering</span></a>
+                  <a href="/categories/Software-Engineering/" itemprop="url" rel="index"><span itemprop="name">Software Engineering</span></a>
                 </span>
                   , 
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Software-Engineering/Data-Structures-Algorithms/" itemprop="url" rel="index"><span itemprop="name">Data Structures & Algorithms</span></a>
+                  <a href="/categories/My-Notes/" itemprop="url" rel="index"><span itemprop="name">My Notes</span></a>
                 </span>
                   , 
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/My-Notes/" itemprop="url" rel="index"><span itemprop="name">My Notes</span></a>
+                  <a href="/categories/Software-Engineering/Data-Structures-Algorithms/" itemprop="url" rel="index"><span itemprop="name">Data Structures & Algorithms</span></a>
                 </span>
             </span>
 
@@ -2033,13 +2035,13 @@ NOTE: created_at
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-              <span>4.8k</span>
+              <span>863</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
-              <span>4 mins.</span>
+              <span>3 mins.</span>
             </span>
 
 <!--
@@ -2053,7 +2055,7 @@ NOTE: disqus
       </span>
       <span class="post-meta-item-text">Disqus: </span>
     
-    <a title="disqus" href="/blog/linked-list-notebook/#disqus_thread" itemprop="discussionUrl">
+    <a title="disqus" href="/linked-list-notebook/#disqus_thread" itemprop="discussionUrl">
       <span class="post-comments-count disqus-comment-count" data-disqus-identifier="linked-list-notebook/" itemprop="commentCount"></span>
     </a>
   </span>
@@ -2083,7 +2085,7 @@ NOTE: views count
           <p>In this note, I walk through how I reverse a singly linked list using a dummy node in JavaScript. Sharing my thought process and a step-by-step breakdown, this guide is for anyone looking to understand the logic behind linked list reversal with clear, visual examples.</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/blog/linked-list-notebook/">
+              <a class="btn" href="/linked-list-notebook/">
                 Read more &raquo;
               </a>
             </div>
@@ -2109,10 +2111,10 @@ NOTE: views count
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://enkr1.github.io/blog/journal-week-9/">
+    <link itemprop="mainEntityOfPage" href="https://blog.enkr1.com/journal-week-9/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="Jing Hui PANG | 彭竞辉 | ENKR">
       <meta itemprop="description" content="Insights and beats at the intersection of technology and artistry by Jing Hui PANG, also known as ENKR. Discover programming tips, beatbox tutorials, and more.">
     </span>
@@ -2123,7 +2125,7 @@ NOTE: views count
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/blog/journal-week-9/" class="post-title-link" itemprop="url">Journal: Week 9</a>
+            <a href="/journal-week-9/" class="post-title-link" itemprop="url">Journal: Week 9</a>
         </h2>
 
         <div class="post-meta">
@@ -2158,15 +2160,15 @@ NOTE: created_at
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/About-Me/" itemprop="url" rel="index"><span itemprop="name">About Me</span></a>
+                  <a href="/categories/About-Me/" itemprop="url" rel="index"><span itemprop="name">About Me</span></a>
                 </span>
                   , 
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/About-Me/Journals/" itemprop="url" rel="index"><span itemprop="name">Journals</span></a>
+                  <a href="/categories/About-Me/Journals/" itemprop="url" rel="index"><span itemprop="name">Journals</span></a>
                 </span>
                   , 
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/About-Me/Journals/2024/" itemprop="url" rel="index"><span itemprop="name">2024</span></a>
+                  <a href="/categories/About-Me/Journals/2024/" itemprop="url" rel="index"><span itemprop="name">2024</span></a>
                 </span>
             </span>
 
@@ -2175,7 +2177,7 @@ NOTE: created_at
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-              <span>731</span>
+              <span>298</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
@@ -2227,22 +2229,22 @@ beatboxing, is focusing on the smallest details. the moments when i step
 back and refine those tiny things are what push my skills to the next
 level.</p>
 <h2 id="memories">Memories</h2>
-<img data-src="/blog/journal-week-9/IMG_4592.jpeg" class="large" title="Facts.">
-<img data-src="/blog/journal-week-9/IMG_4578.jpeg" class="large" title="和亲戚庆祝中秋 🎑">
-<img data-src="/blog/journal-week-9/IMG_4579.jpeg" class="large">
-<img data-src="/blog/journal-week-9/IMG_4580.jpeg" class="large">
-<img data-src="/blog/journal-week-9/IMG_4570.jpeg" class="large" title="同事从北京带回来的手信 🥺">
-<img data-src="/blog/journal-week-9/IMG_4574.jpeg" class="large" title="可爱的蜡笔小新！">
-<img data-src="/blog/journal-week-9/IMG_4637.jpeg" class="large" title="啊啊啊啊 🔥">
-<img data-src="/blog/journal-week-9/IMG_4618.jpeg" class="large" title="午饭后、休息休息">
-<img data-src="/blog/journal-week-9/IMG_4623.jpeg" class="large" title="Back to 135kg per side.">
-<img data-src="/blog/journal-week-9/IMG_4634.jpeg" class="large" title="OT...">
-<img data-src="/blog/journal-week-9/IMG_4601.jpeg" class="large" title="同事从上海带回来的字节月饼啊啊啊 🥮 ❤️">
-<img data-src="/blog/journal-week-9/IMG_4593.jpeg" class="large" title="好精致！">
-<img data-src="/blog/journal-week-9/IMG_4599.jpeg" class="large" title="字在时光 月伴好梦">
-<img data-src="/blog/journal-week-9/IMG_4629.jpeg" class="large">
-<img data-src="/blog/journal-week-9/IMG_4646.jpeg" class="large" title="saturday is meant for sleep in!">
-<img data-src="/blog/journal-week-9/IMG_4668.jpeg" class="large">
+<img data-src="/journal-week-9/IMG_4592.jpeg" class="large" title="Facts.">
+<img data-src="/journal-week-9/IMG_4578.jpeg" class="large" title="和亲戚庆祝中秋 🎑">
+<img data-src="/journal-week-9/IMG_4579.jpeg" class="large">
+<img data-src="/journal-week-9/IMG_4580.jpeg" class="large">
+<img data-src="/journal-week-9/IMG_4570.jpeg" class="large" title="同事从北京带回来的手信 🥺">
+<img data-src="/journal-week-9/IMG_4574.jpeg" class="large" title="可爱的蜡笔小新！">
+<img data-src="/journal-week-9/IMG_4637.jpeg" class="large" title="啊啊啊啊 🔥">
+<img data-src="/journal-week-9/IMG_4618.jpeg" class="large" title="午饭后、休息休息">
+<img data-src="/journal-week-9/IMG_4623.jpeg" class="large" title="Back to 135kg per side.">
+<img data-src="/journal-week-9/IMG_4634.jpeg" class="large" title="OT...">
+<img data-src="/journal-week-9/IMG_4601.jpeg" class="large" title="同事从上海带回来的字节月饼啊啊啊 🥮 ❤️">
+<img data-src="/journal-week-9/IMG_4593.jpeg" class="large" title="好精致！">
+<img data-src="/journal-week-9/IMG_4599.jpeg" class="large" title="字在时光 月伴好梦">
+<img data-src="/journal-week-9/IMG_4629.jpeg" class="large">
+<img data-src="/journal-week-9/IMG_4646.jpeg" class="large" title="saturday is meant for sleep in!">
+<img data-src="/journal-week-9/IMG_4668.jpeg" class="large">
 
       
     </div>
@@ -2264,10 +2266,10 @@ level.</p>
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://enkr1.github.io/blog/leetcode-139-word-break/">
+    <link itemprop="mainEntityOfPage" href="https://blog.enkr1.com/leetcode-139-word-break/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="Jing Hui PANG | 彭竞辉 | ENKR">
       <meta itemprop="description" content="Insights and beats at the intersection of technology and artistry by Jing Hui PANG, also known as ENKR. Discover programming tips, beatbox tutorials, and more.">
     </span>
@@ -2278,7 +2280,7 @@ level.</p>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/blog/leetcode-139-word-break/" class="post-title-link" itemprop="url">LeetCode-139: Word Break</a>
+            <a href="/leetcode-139-word-break/" class="post-title-link" itemprop="url">LeetCode-139: Word Break</a>
         </h2>
 
         <div class="post-meta">
@@ -2313,11 +2315,11 @@ NOTE: created_at
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Software-Engineering/" itemprop="url" rel="index"><span itemprop="name">Software Engineering</span></a>
+                  <a href="/categories/Software-Engineering/" itemprop="url" rel="index"><span itemprop="name">Software Engineering</span></a>
                 </span>
                   , 
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Software-Engineering/Coding-Problems/" itemprop="url" rel="index"><span itemprop="name">Coding Problems</span></a>
+                  <a href="/categories/Software-Engineering/Coding-Problems/" itemprop="url" rel="index"><span itemprop="name">Coding Problems</span></a>
                 </span>
             </span>
 
@@ -2326,13 +2328,13 @@ NOTE: created_at
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-              <span>7k</span>
+              <span>1.3k</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
-              <span>6 mins.</span>
+              <span>5 mins.</span>
             </span>
 
 <!--
@@ -2346,7 +2348,7 @@ NOTE: disqus
       </span>
       <span class="post-meta-item-text">Disqus: </span>
     
-    <a title="disqus" href="/blog/leetcode-139-word-break/#disqus_thread" itemprop="discussionUrl">
+    <a title="disqus" href="/leetcode-139-word-break/#disqus_thread" itemprop="discussionUrl">
       <span class="post-comments-count disqus-comment-count" data-disqus-identifier="leetcode-139-word-break/" itemprop="commentCount"></span>
     </a>
   </span>
@@ -2376,7 +2378,7 @@ NOTE: views count
           <p>An in-depth guide to solving LeetCode 139 with Dynamic Programming. Understand the problem, approach, and implementation step by step with detailed explanations and examples.</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/blog/leetcode-139-word-break/">
+              <a class="btn" href="/leetcode-139-word-break/">
                 Read more &raquo;
               </a>
             </div>
@@ -2402,10 +2404,10 @@ NOTE: views count
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://enkr1.github.io/blog/leetcode-97-interleaving-string/">
+    <link itemprop="mainEntityOfPage" href="https://blog.enkr1.com/leetcode-97-interleaving-string/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="Jing Hui PANG | 彭竞辉 | ENKR">
       <meta itemprop="description" content="Insights and beats at the intersection of technology and artistry by Jing Hui PANG, also known as ENKR. Discover programming tips, beatbox tutorials, and more.">
     </span>
@@ -2416,7 +2418,7 @@ NOTE: views count
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/blog/leetcode-97-interleaving-string/" class="post-title-link" itemprop="url">LeetCode-97: Interleaving String</a>
+            <a href="/leetcode-97-interleaving-string/" class="post-title-link" itemprop="url">LeetCode-97: Interleaving String</a>
         </h2>
 
         <div class="post-meta">
@@ -2445,11 +2447,11 @@ NOTE: created_at
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Software-Engineering/" itemprop="url" rel="index"><span itemprop="name">Software Engineering</span></a>
+                  <a href="/categories/Software-Engineering/" itemprop="url" rel="index"><span itemprop="name">Software Engineering</span></a>
                 </span>
                   , 
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Software-Engineering/Coding-Problems/" itemprop="url" rel="index"><span itemprop="name">Coding Problems</span></a>
+                  <a href="/categories/Software-Engineering/Coding-Problems/" itemprop="url" rel="index"><span itemprop="name">Coding Problems</span></a>
                 </span>
             </span>
 
@@ -2458,13 +2460,13 @@ NOTE: created_at
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-              <span>6.6k</span>
+              <span>1.5k</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
-              <span>6 mins.</span>
+              <span>5 mins.</span>
             </span>
 
 <!--
@@ -2478,7 +2480,7 @@ NOTE: disqus
       </span>
       <span class="post-meta-item-text">Disqus: </span>
     
-    <a title="disqus" href="/blog/leetcode-97-interleaving-string/#disqus_thread" itemprop="discussionUrl">
+    <a title="disqus" href="/leetcode-97-interleaving-string/#disqus_thread" itemprop="discussionUrl">
       <span class="post-comments-count disqus-comment-count" data-disqus-identifier="leetcode-97-interleaving-string/" itemprop="commentCount"></span>
     </a>
   </span>
@@ -2508,7 +2510,7 @@ NOTE: views count
           <p>An in-depth guide to solving LeetCode 97 with 2D Dynamic Programming. Understand the key concepts, step-by-step implementation, and analogies to master the problem.</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/blog/leetcode-97-interleaving-string/">
+              <a class="btn" href="/leetcode-97-interleaving-string/">
                 Read more &raquo;
               </a>
             </div>
@@ -2534,10 +2536,10 @@ NOTE: views count
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://enkr1.github.io/blog/journal-week-8/">
+    <link itemprop="mainEntityOfPage" href="https://blog.enkr1.com/journal-week-8/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="Jing Hui PANG | 彭竞辉 | ENKR">
       <meta itemprop="description" content="Insights and beats at the intersection of technology and artistry by Jing Hui PANG, also known as ENKR. Discover programming tips, beatbox tutorials, and more.">
     </span>
@@ -2548,7 +2550,7 @@ NOTE: views count
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/blog/journal-week-8/" class="post-title-link" itemprop="url">Journal: Week 8</a>
+            <a href="/journal-week-8/" class="post-title-link" itemprop="url">Journal: Week 8</a>
         </h2>
 
         <div class="post-meta">
@@ -2583,15 +2585,15 @@ NOTE: created_at
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/About-Me/" itemprop="url" rel="index"><span itemprop="name">About Me</span></a>
+                  <a href="/categories/About-Me/" itemprop="url" rel="index"><span itemprop="name">About Me</span></a>
                 </span>
                   , 
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/About-Me/Journals/" itemprop="url" rel="index"><span itemprop="name">Journals</span></a>
+                  <a href="/categories/About-Me/Journals/" itemprop="url" rel="index"><span itemprop="name">Journals</span></a>
                 </span>
                   , 
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/About-Me/Journals/2024/" itemprop="url" rel="index"><span itemprop="name">2024</span></a>
+                  <a href="/categories/About-Me/Journals/2024/" itemprop="url" rel="index"><span itemprop="name">2024</span></a>
                 </span>
             </span>
 
@@ -2600,7 +2602,7 @@ NOTE: created_at
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-              <span>1.9k</span>
+              <span>454</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
@@ -2678,11 +2680,11 @@ alive. it's a reminder that even when passions evolve, <strong>it's
 important to hold on to the spark that started it all.</strong></p></li>
 </ol>
 <h2 id="visuals-of-the-week">Visuals of the Week:</h2>
-<img data-src="/blog/journal-week-8/IMG_4523.jpeg" class="large">
-<img data-src="/blog/journal-week-8/IMG_4547.jpeg" class="large">
-<img data-src="/blog/journal-week-8/IMG_4548.heic.jpeg" class="large">
+<img data-src="/journal-week-8/IMG_4523.jpeg" class="large">
+<img data-src="/journal-week-8/IMG_4547.jpeg" class="large">
+<img data-src="/journal-week-8/IMG_4548.heic.jpeg" class="large">
 
-<img data-src="/blog/journal-week-8/IMG_4554.jpeg" class="large">
+<img data-src="/journal-week-8/IMG_4554.jpeg" class="large">
 
       
     </div>
@@ -2704,10 +2706,10 @@ important to hold on to the spark that started it all.</strong></p></li>
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://enkr1.github.io/blog/greedy-algorithm-optimal-solutions-for-local-decisions/">
+    <link itemprop="mainEntityOfPage" href="https://blog.enkr1.com/greedy-algorithm-optimal-solutions-for-local-decisions/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="Jing Hui PANG | 彭竞辉 | ENKR">
       <meta itemprop="description" content="Insights and beats at the intersection of technology and artistry by Jing Hui PANG, also known as ENKR. Discover programming tips, beatbox tutorials, and more.">
     </span>
@@ -2718,7 +2720,7 @@ important to hold on to the spark that started it all.</strong></p></li>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/blog/greedy-algorithm-optimal-solutions-for-local-decisions/" class="post-title-link" itemprop="url">Greedy Algorithm: Optimal Solutions for Local Decisions</a>
+            <a href="/greedy-algorithm-optimal-solutions-for-local-decisions/" class="post-title-link" itemprop="url">Greedy Algorithm: Optimal Solutions for Local Decisions</a>
         </h2>
 
         <div class="post-meta">
@@ -2753,11 +2755,11 @@ NOTE: created_at
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Software-Engineering/" itemprop="url" rel="index"><span itemprop="name">Software Engineering</span></a>
+                  <a href="/categories/Software-Engineering/" itemprop="url" rel="index"><span itemprop="name">Software Engineering</span></a>
                 </span>
                   , 
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Software-Engineering/Data-Structures-Algorithms/" itemprop="url" rel="index"><span itemprop="name">Data Structures & Algorithms</span></a>
+                  <a href="/categories/Software-Engineering/Data-Structures-Algorithms/" itemprop="url" rel="index"><span itemprop="name">Data Structures & Algorithms</span></a>
                 </span>
             </span>
 
@@ -2766,13 +2768,13 @@ NOTE: created_at
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-              <span>11k</span>
+              <span>2.1k</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
-              <span>10 mins.</span>
+              <span>8 mins.</span>
             </span>
 
 <!--
@@ -2786,7 +2788,7 @@ NOTE: disqus
       </span>
       <span class="post-meta-item-text">Disqus: </span>
     
-    <a title="disqus" href="/blog/greedy-algorithm-optimal-solutions-for-local-decisions/#disqus_thread" itemprop="discussionUrl">
+    <a title="disqus" href="/greedy-algorithm-optimal-solutions-for-local-decisions/#disqus_thread" itemprop="discussionUrl">
       <span class="post-comments-count disqus-comment-count" data-disqus-identifier="greedy-algorithm-optimal-solutions-for-local-decisions/" itemprop="commentCount"></span>
     </a>
   </span>
@@ -2816,7 +2818,7 @@ NOTE: views count
           <p>A comprehensive guide to understanding greedy algorithms and how they provide efficient, optimal solutions by making locally optimal choices. Explore key concepts, implementation examples, and applications in real-world problem-solving scenarios.</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/blog/greedy-algorithm-optimal-solutions-for-local-decisions/">
+              <a class="btn" href="/greedy-algorithm-optimal-solutions-for-local-decisions/">
                 Read more &raquo;
               </a>
             </div>
@@ -2842,10 +2844,10 @@ NOTE: views count
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://enkr1.github.io/blog/leetcode-189-rotate-array/">
+    <link itemprop="mainEntityOfPage" href="https://blog.enkr1.com/leetcode-189-rotate-array/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="Jing Hui PANG | 彭竞辉 | ENKR">
       <meta itemprop="description" content="Insights and beats at the intersection of technology and artistry by Jing Hui PANG, also known as ENKR. Discover programming tips, beatbox tutorials, and more.">
     </span>
@@ -2856,7 +2858,7 @@ NOTE: views count
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/blog/leetcode-189-rotate-array/" class="post-title-link" itemprop="url">LeetCode-189: Rotate Array</a>
+            <a href="/leetcode-189-rotate-array/" class="post-title-link" itemprop="url">LeetCode-189: Rotate Array</a>
         </h2>
 
         <div class="post-meta">
@@ -2891,11 +2893,11 @@ NOTE: created_at
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Software-Engineering/" itemprop="url" rel="index"><span itemprop="name">Software Engineering</span></a>
+                  <a href="/categories/Software-Engineering/" itemprop="url" rel="index"><span itemprop="name">Software Engineering</span></a>
                 </span>
                   , 
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Software-Engineering/Coding-Problems/" itemprop="url" rel="index"><span itemprop="name">Coding Problems</span></a>
+                  <a href="/categories/Software-Engineering/Coding-Problems/" itemprop="url" rel="index"><span itemprop="name">Coding Problems</span></a>
                 </span>
             </span>
 
@@ -2904,7 +2906,7 @@ NOTE: created_at
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-              <span>723</span>
+              <span>117</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
@@ -2924,7 +2926,7 @@ NOTE: disqus
       </span>
       <span class="post-meta-item-text">Disqus: </span>
     
-    <a title="disqus" href="/blog/leetcode-189-rotate-array/#disqus_thread" itemprop="discussionUrl">
+    <a title="disqus" href="/leetcode-189-rotate-array/#disqus_thread" itemprop="discussionUrl">
       <span class="post-comments-count disqus-comment-count" data-disqus-identifier="leetcode-189-rotate-array/" itemprop="commentCount"></span>
     </a>
   </span>
@@ -2954,7 +2956,7 @@ NOTE: views count
           <p>Learn how to solve LeetCode 189 using an efficient in-place array manipulation approach. This solution explores array rotation with optimal time complexity using the reverse method.</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/blog/leetcode-189-rotate-array/">
+              <a class="btn" href="/leetcode-189-rotate-array/">
                 Read more &raquo;
               </a>
             </div>
@@ -2980,10 +2982,10 @@ NOTE: views count
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://enkr1.github.io/blog/journal-week-7/">
+    <link itemprop="mainEntityOfPage" href="https://blog.enkr1.com/journal-week-7/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="Jing Hui PANG | 彭竞辉 | ENKR">
       <meta itemprop="description" content="Insights and beats at the intersection of technology and artistry by Jing Hui PANG, also known as ENKR. Discover programming tips, beatbox tutorials, and more.">
     </span>
@@ -2994,7 +2996,7 @@ NOTE: views count
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/blog/journal-week-7/" class="post-title-link" itemprop="url">Journal: Week 7</a>
+            <a href="/journal-week-7/" class="post-title-link" itemprop="url">Journal: Week 7</a>
         </h2>
 
         <div class="post-meta">
@@ -3029,15 +3031,15 @@ NOTE: created_at
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/About-Me/" itemprop="url" rel="index"><span itemprop="name">About Me</span></a>
+                  <a href="/categories/About-Me/" itemprop="url" rel="index"><span itemprop="name">About Me</span></a>
                 </span>
                   , 
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/About-Me/Journals/" itemprop="url" rel="index"><span itemprop="name">Journals</span></a>
+                  <a href="/categories/About-Me/Journals/" itemprop="url" rel="index"><span itemprop="name">Journals</span></a>
                 </span>
                   , 
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/About-Me/Journals/2024/" itemprop="url" rel="index"><span itemprop="name">2024</span></a>
+                  <a href="/categories/About-Me/Journals/2024/" itemprop="url" rel="index"><span itemprop="name">2024</span></a>
                 </span>
             </span>
 
@@ -3046,7 +3048,7 @@ NOTE: created_at
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-              <span>858</span>
+              <span>408</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
@@ -3102,28 +3104,28 @@ i already have a few good ones that will help me get closer to my
 beatboxing goals, and i couldn't be more excited!</li>
 </ul>
 <h2 id="memories">Memories</h2>
-<img data-src="/blog/journal-week-7/IMG_4278.jpeg" class="large">
-<img data-src="/blog/journal-week-7/IMG_4282.jpeg" class="large" title="a finely-aged 10-year whisky, with a hint of oak and a nice, warm finish. just the right amount of smokiness to keep it interesting. 🤌🏼👌🏼">
-<img data-src="/blog/journal-week-7/IMG_4284.jpeg" class="large">
-<img data-src="/blog/journal-week-7/IMG_4285.jpeg" class="large">
-<img data-src="/blog/journal-week-7/IMG_4286.jpeg" class="large">
-<img data-src="/blog/journal-week-7/IMG_4288.jpeg" class="large">
-<img data-src="/blog/journal-week-7/IMG_4289.jpeg" class="large">
-<img data-src="/blog/journal-week-7/IMG_4294.jpeg" class="large">
-<img data-src="/blog/journal-week-7/IMG_4297.jpeg" class="large">
-<img data-src="/blog/journal-week-7/IMG_4300.jpeg" class="large" title="二姑做的~">
-<img data-src="/blog/journal-week-7/IMG_4301.jpeg" class="large" title="竞贤送的~">
-<img data-src="/blog/journal-week-7/IMG_4302.jpeg" class="large" title="装饰品很美 - 但是好像是可以泡茶的哈哈哈">
-<img data-src="/blog/journal-week-7/IMG_4304.jpeg" class="large" title="时间过得最快的一晚，未尽的温馨与不舍，难以言表 😭">
-<img data-src="/blog/journal-week-7/IMG_4307.jpeg" class="large" title="1st thing to do when i arrive to the office heehee">
-<img data-src="/blog/journal-week-7/IMG_4313.JPG" class="large" title="some biscuits 🥱">
-<img data-src="/blog/journal-week-7/IMG_4314.JPG" class="large" title="no appetite for lunch :&#x2F;">
-<img data-src="/blog/journal-week-7/IMG_4315.jpeg" class="large" title="同事业务方送月饼给我们团队 🥺">
-<img data-src="/blog/journal-week-7/IMG_4318.jpeg" class="large" title="my typical supper post-gym">
-<img data-src="/blog/journal-week-7/IMG_4322.jpeg" class="large" title="me otw to work">
-<img data-src="/blog/journal-week-7/IMG_4324.jpeg" class="large" title="first course of action at work, coffee!">
-<img data-src="/blog/journal-week-7/IMG_4366.PNG" class="large" title="us saying goodbyes - me in the gym">
-<img data-src="/blog/journal-week-7/IMG_4375.jpeg" class="large" title="just another normal weekend of me heading to the gym">
+<img data-src="/journal-week-7/IMG_4278.jpeg" class="large">
+<img data-src="/journal-week-7/IMG_4282.jpeg" class="large" title="a finely-aged 10-year whisky, with a hint of oak and a nice, warm finish. just the right amount of smokiness to keep it interesting. 🤌🏼👌🏼">
+<img data-src="/journal-week-7/IMG_4284.jpeg" class="large">
+<img data-src="/journal-week-7/IMG_4285.jpeg" class="large">
+<img data-src="/journal-week-7/IMG_4286.jpeg" class="large">
+<img data-src="/journal-week-7/IMG_4288.jpeg" class="large">
+<img data-src="/journal-week-7/IMG_4289.jpeg" class="large">
+<img data-src="/journal-week-7/IMG_4294.jpeg" class="large">
+<img data-src="/journal-week-7/IMG_4297.jpeg" class="large">
+<img data-src="/journal-week-7/IMG_4300.jpeg" class="large" title="二姑做的~">
+<img data-src="/journal-week-7/IMG_4301.jpeg" class="large" title="竞贤送的~">
+<img data-src="/journal-week-7/IMG_4302.jpeg" class="large" title="装饰品很美 - 但是好像是可以泡茶的哈哈哈">
+<img data-src="/journal-week-7/IMG_4304.jpeg" class="large" title="时间过得最快的一晚，未尽的温馨与不舍，难以言表 😭">
+<img data-src="/journal-week-7/IMG_4307.jpeg" class="large" title="1st thing to do when i arrive to the office heehee">
+<img data-src="/journal-week-7/IMG_4313.JPG" class="large" title="some biscuits 🥱">
+<img data-src="/journal-week-7/IMG_4314.JPG" class="large" title="no appetite for lunch :&#x2F;">
+<img data-src="/journal-week-7/IMG_4315.jpeg" class="large" title="同事业务方送月饼给我们团队 🥺">
+<img data-src="/journal-week-7/IMG_4318.jpeg" class="large" title="my typical supper post-gym">
+<img data-src="/journal-week-7/IMG_4322.jpeg" class="large" title="me otw to work">
+<img data-src="/journal-week-7/IMG_4324.jpeg" class="large" title="first course of action at work, coffee!">
+<img data-src="/journal-week-7/IMG_4366.PNG" class="large" title="us saying goodbyes - me in the gym">
+<img data-src="/journal-week-7/IMG_4375.jpeg" class="large" title="just another normal weekend of me heading to the gym">
 
       
     </div>
@@ -3145,10 +3147,10 @@ beatboxing goals, and i couldn't be more excited!</li>
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://enkr1.github.io/blog/boyer-moore-voting-algorithm-finding-the-majority-element/">
+    <link itemprop="mainEntityOfPage" href="https://blog.enkr1.com/boyer-moore-voting-algorithm-finding-the-majority-element/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="Jing Hui PANG | 彭竞辉 | ENKR">
       <meta itemprop="description" content="Insights and beats at the intersection of technology and artistry by Jing Hui PANG, also known as ENKR. Discover programming tips, beatbox tutorials, and more.">
     </span>
@@ -3159,7 +3161,7 @@ beatboxing goals, and i couldn't be more excited!</li>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/blog/boyer-moore-voting-algorithm-finding-the-majority-element/" class="post-title-link" itemprop="url">Boyer-Moore Voting Algorithm: Finding the Majority Element</a>
+            <a href="/boyer-moore-voting-algorithm-finding-the-majority-element/" class="post-title-link" itemprop="url">Boyer-Moore Voting Algorithm: Finding the Majority Element</a>
         </h2>
 
         <div class="post-meta">
@@ -3194,11 +3196,11 @@ NOTE: created_at
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Software-Engineering/" itemprop="url" rel="index"><span itemprop="name">Software Engineering</span></a>
+                  <a href="/categories/Software-Engineering/" itemprop="url" rel="index"><span itemprop="name">Software Engineering</span></a>
                 </span>
                   , 
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Software-Engineering/Data-Structures-Algorithms/" itemprop="url" rel="index"><span itemprop="name">Data Structures & Algorithms</span></a>
+                  <a href="/categories/Software-Engineering/Data-Structures-Algorithms/" itemprop="url" rel="index"><span itemprop="name">Data Structures & Algorithms</span></a>
                 </span>
             </span>
 
@@ -3207,7 +3209,7 @@ NOTE: created_at
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-              <span>2.5k</span>
+              <span>481</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
@@ -3227,7 +3229,7 @@ NOTE: disqus
       </span>
       <span class="post-meta-item-text">Disqus: </span>
     
-    <a title="disqus" href="/blog/boyer-moore-voting-algorithm-finding-the-majority-element/#disqus_thread" itemprop="discussionUrl">
+    <a title="disqus" href="/boyer-moore-voting-algorithm-finding-the-majority-element/#disqus_thread" itemprop="discussionUrl">
       <span class="post-comments-count disqus-comment-count" data-disqus-identifier="boyer-moore-voting-algorithm-finding-the-majority-element/" itemprop="commentCount"></span>
     </a>
   </span>
@@ -3257,7 +3259,7 @@ NOTE: views count
           <p>Discover the Boyer-Moore Voting Algorithm, an efficient method to find the majority element in a linear time and constant space solution. This guide includes a step-by-step explanation and JavaScript implementation.</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/blog/boyer-moore-voting-algorithm-finding-the-majority-element/">
+              <a class="btn" href="/boyer-moore-voting-algorithm-finding-the-majority-element/">
                 Read more &raquo;
               </a>
             </div>
@@ -3283,10 +3285,10 @@ NOTE: views count
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://enkr1.github.io/blog/journal-week-6/">
+    <link itemprop="mainEntityOfPage" href="https://blog.enkr1.com/journal-week-6/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="Jing Hui PANG | 彭竞辉 | ENKR">
       <meta itemprop="description" content="Insights and beats at the intersection of technology and artistry by Jing Hui PANG, also known as ENKR. Discover programming tips, beatbox tutorials, and more.">
     </span>
@@ -3297,7 +3299,7 @@ NOTE: views count
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/blog/journal-week-6/" class="post-title-link" itemprop="url">Journal: Week 6</a>
+            <a href="/journal-week-6/" class="post-title-link" itemprop="url">Journal: Week 6</a>
         </h2>
 
         <div class="post-meta">
@@ -3332,15 +3334,15 @@ NOTE: created_at
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/About-Me/" itemprop="url" rel="index"><span itemprop="name">About Me</span></a>
+                  <a href="/categories/About-Me/" itemprop="url" rel="index"><span itemprop="name">About Me</span></a>
                 </span>
                   , 
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/About-Me/Journals/" itemprop="url" rel="index"><span itemprop="name">Journals</span></a>
+                  <a href="/categories/About-Me/Journals/" itemprop="url" rel="index"><span itemprop="name">Journals</span></a>
                 </span>
                   , 
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/About-Me/Journals/2024/" itemprop="url" rel="index"><span itemprop="name">2024</span></a>
+                  <a href="/categories/About-Me/Journals/2024/" itemprop="url" rel="index"><span itemprop="name">2024</span></a>
                 </span>
             </span>
 
@@ -3349,7 +3351,7 @@ NOTE: created_at
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-              <span>1.1k</span>
+              <span>330</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
@@ -3411,17 +3413,17 @@ first. it was absolutely confusing and challenging, but by immersing
 myself in it, i not only learnt how that part of the business functions
 but also developed a new approach to problem-solving.</p>
 <h2 id="memories">Memories</h2>
-<img data-src="/blog/journal-week-6/IMG_4003.jpeg" class="large" title="CHIJMES">
-<img data-src="/blog/journal-week-6/IMG_4005.jpeg" class="large">
-<img data-src="/blog/journal-week-6/IMG_4014.jpeg" class="large" title="CHIJMES Hall">
-<img data-src="/blog/journal-week-6/IMG_4144.jpeg" class="large" title="Trying Arabica Coffee for the first time!">
-<img data-src="/blog/journal-week-6/IMG_4145.jpeg" class="large">
-<img data-src="/blog/journal-week-6/IMG_4152.jpeg" class="large" title="The Diary of a CEO">
-<img data-src="/blog/journal-week-6/IMG_4153.jpeg" class="large" title="The Diary of a CEO">
-<img data-src="/blog/journal-week-6/IMG_4177.jpeg" class="large" title="When my watch is not with me ...">
-<img data-src="/blog/journal-week-6/IMG_4183.jpeg" class="large" title="Walking by, thinking about it has already been 9 months? wow ...">
-<img data-src="/blog/journal-week-6/IMG_4218.jpeg" class="large">
-<img data-src="/blog/journal-week-6/IMG_4229.jpeg" class="large" title="Kiang Kee Bak Kut Teh - Kampung Haji Mohd Jambi, Kota Tinggi 81900 Malaysia">
+<img data-src="/journal-week-6/IMG_4003.jpeg" class="large" title="CHIJMES">
+<img data-src="/journal-week-6/IMG_4005.jpeg" class="large">
+<img data-src="/journal-week-6/IMG_4014.jpeg" class="large" title="CHIJMES Hall">
+<img data-src="/journal-week-6/IMG_4144.jpeg" class="large" title="Trying Arabica Coffee for the first time!">
+<img data-src="/journal-week-6/IMG_4145.jpeg" class="large">
+<img data-src="/journal-week-6/IMG_4152.jpeg" class="large" title="The Diary of a CEO">
+<img data-src="/journal-week-6/IMG_4153.jpeg" class="large" title="The Diary of a CEO">
+<img data-src="/journal-week-6/IMG_4177.jpeg" class="large" title="When my watch is not with me ...">
+<img data-src="/journal-week-6/IMG_4183.jpeg" class="large" title="Walking by, thinking about it has already been 9 months? wow ...">
+<img data-src="/journal-week-6/IMG_4218.jpeg" class="large">
+<img data-src="/journal-week-6/IMG_4229.jpeg" class="large" title="Kiang Kee Bak Kut Teh - Kampung Haji Mohd Jambi, Kota Tinggi 81900 Malaysia">
 
       
     </div>
@@ -3443,10 +3445,10 @@ but also developed a new approach to problem-solving.</p>
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://enkr1.github.io/blog/data-structure-notebook/">
+    <link itemprop="mainEntityOfPage" href="https://blog.enkr1.com/data-structure-notebook/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="Jing Hui PANG | 彭竞辉 | ENKR">
       <meta itemprop="description" content="Insights and beats at the intersection of technology and artistry by Jing Hui PANG, also known as ENKR. Discover programming tips, beatbox tutorials, and more.">
     </span>
@@ -3457,7 +3459,7 @@ but also developed a new approach to problem-solving.</p>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/blog/data-structure-notebook/" class="post-title-link" itemprop="url">Data Structure Notebook</a>
+            <a href="/data-structure-notebook/" class="post-title-link" itemprop="url">Data Structure Notebook</a>
         </h2>
 
         <div class="post-meta">
@@ -3492,15 +3494,15 @@ NOTE: created_at
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Software-Engineering/" itemprop="url" rel="index"><span itemprop="name">Software Engineering</span></a>
+                  <a href="/categories/Software-Engineering/" itemprop="url" rel="index"><span itemprop="name">Software Engineering</span></a>
                 </span>
                   , 
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Software-Engineering/Data-Structures-Algorithms/" itemprop="url" rel="index"><span itemprop="name">Data Structures & Algorithms</span></a>
+                  <a href="/categories/My-Notes/" itemprop="url" rel="index"><span itemprop="name">My Notes</span></a>
                 </span>
                   , 
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/My-Notes/" itemprop="url" rel="index"><span itemprop="name">My Notes</span></a>
+                  <a href="/categories/Software-Engineering/Data-Structures-Algorithms/" itemprop="url" rel="index"><span itemprop="name">Data Structures & Algorithms</span></a>
                 </span>
             </span>
 
@@ -3509,13 +3511,13 @@ NOTE: created_at
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-              <span>16k</span>
+              <span>2.7k</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
-              <span>14 mins.</span>
+              <span>10 mins.</span>
             </span>
 
 <!--
@@ -3529,7 +3531,7 @@ NOTE: disqus
       </span>
       <span class="post-meta-item-text">Disqus: </span>
     
-    <a title="disqus" href="/blog/data-structure-notebook/#disqus_thread" itemprop="discussionUrl">
+    <a title="disqus" href="/data-structure-notebook/#disqus_thread" itemprop="discussionUrl">
       <span class="post-comments-count disqus-comment-count" data-disqus-identifier="data-structure-notebook/" itemprop="commentCount"></span>
     </a>
   </span>
@@ -3559,7 +3561,7 @@ NOTE: views count
           <p>Delve into the core concepts, practical implementations, and advanced techniques of essential data structures. This notebook covers topics like Union-Find, path compression, union by rank, and more, providing developers with the knowledge to tackle complex algorithmic challenges. Ideal for those looking to deepen their understanding of data structures and their applications in solving diverse problems.</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/blog/data-structure-notebook/">
+              <a class="btn" href="/data-structure-notebook/">
                 Read more &raquo;
               </a>
             </div>
@@ -3585,10 +3587,10 @@ NOTE: views count
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://enkr1.github.io/blog/leetcode-1642-furthest-building-you-can-reach/">
+    <link itemprop="mainEntityOfPage" href="https://blog.enkr1.com/leetcode-1642-furthest-building-you-can-reach/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="Jing Hui PANG | 彭竞辉 | ENKR">
       <meta itemprop="description" content="Insights and beats at the intersection of technology and artistry by Jing Hui PANG, also known as ENKR. Discover programming tips, beatbox tutorials, and more.">
     </span>
@@ -3599,7 +3601,7 @@ NOTE: views count
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/blog/leetcode-1642-furthest-building-you-can-reach/" class="post-title-link" itemprop="url">LeetCode-1642: Furthest Building You Can Reach</a>
+            <a href="/leetcode-1642-furthest-building-you-can-reach/" class="post-title-link" itemprop="url">LeetCode-1642: Furthest Building You Can Reach</a>
         </h2>
 
         <div class="post-meta">
@@ -3634,11 +3636,11 @@ NOTE: created_at
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Software-Engineering/" itemprop="url" rel="index"><span itemprop="name">Software Engineering</span></a>
+                  <a href="/categories/Software-Engineering/" itemprop="url" rel="index"><span itemprop="name">Software Engineering</span></a>
                 </span>
                   , 
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Software-Engineering/Coding-Problems/" itemprop="url" rel="index"><span itemprop="name">Coding Problems</span></a>
+                  <a href="/categories/Software-Engineering/Coding-Problems/" itemprop="url" rel="index"><span itemprop="name">Coding Problems</span></a>
                 </span>
             </span>
 
@@ -3647,7 +3649,7 @@ NOTE: created_at
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-              <span>1.1k</span>
+              <span>171</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
@@ -3667,7 +3669,7 @@ NOTE: disqus
       </span>
       <span class="post-meta-item-text">Disqus: </span>
     
-    <a title="disqus" href="/blog/leetcode-1642-furthest-building-you-can-reach/#disqus_thread" itemprop="discussionUrl">
+    <a title="disqus" href="/leetcode-1642-furthest-building-you-can-reach/#disqus_thread" itemprop="discussionUrl">
       <span class="post-comments-count disqus-comment-count" data-disqus-identifier="leetcode-1642-furthest-building-you-can-reach/" itemprop="commentCount"></span>
     </a>
   </span>
@@ -3697,7 +3699,7 @@ NOTE: views count
           <p>A detailed guide to solving LeetCode 1642 using a min-heap for optimal resource management. Learn how to reach the furthest building with given bricks and ladders.</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/blog/leetcode-1642-furthest-building-you-can-reach/">
+              <a class="btn" href="/leetcode-1642-furthest-building-you-can-reach/">
                 Read more &raquo;
               </a>
             </div>
@@ -3723,10 +3725,10 @@ NOTE: views count
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://enkr1.github.io/blog/leetcode-704-binary-search/">
+    <link itemprop="mainEntityOfPage" href="https://blog.enkr1.com/leetcode-704-binary-search/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="Jing Hui PANG | 彭竞辉 | ENKR">
       <meta itemprop="description" content="Insights and beats at the intersection of technology and artistry by Jing Hui PANG, also known as ENKR. Discover programming tips, beatbox tutorials, and more.">
     </span>
@@ -3737,7 +3739,7 @@ NOTE: views count
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/blog/leetcode-704-binary-search/" class="post-title-link" itemprop="url">LeetCode-704: Binary Search</a>
+            <a href="/leetcode-704-binary-search/" class="post-title-link" itemprop="url">LeetCode-704: Binary Search</a>
         </h2>
 
         <div class="post-meta">
@@ -3772,11 +3774,11 @@ NOTE: created_at
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Software-Engineering/" itemprop="url" rel="index"><span itemprop="name">Software Engineering</span></a>
+                  <a href="/categories/Software-Engineering/" itemprop="url" rel="index"><span itemprop="name">Software Engineering</span></a>
                 </span>
                   , 
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Software-Engineering/Coding-Problems/" itemprop="url" rel="index"><span itemprop="name">Coding Problems</span></a>
+                  <a href="/categories/Software-Engineering/Coding-Problems/" itemprop="url" rel="index"><span itemprop="name">Coding Problems</span></a>
                 </span>
             </span>
 
@@ -3785,7 +3787,7 @@ NOTE: created_at
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-              <span>1k</span>
+              <span>186</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
@@ -3805,7 +3807,7 @@ NOTE: disqus
       </span>
       <span class="post-meta-item-text">Disqus: </span>
     
-    <a title="disqus" href="/blog/leetcode-704-binary-search/#disqus_thread" itemprop="discussionUrl">
+    <a title="disqus" href="/leetcode-704-binary-search/#disqus_thread" itemprop="discussionUrl">
       <span class="post-comments-count disqus-comment-count" data-disqus-identifier="leetcode-704-binary-search/" itemprop="commentCount"></span>
     </a>
   </span>
@@ -3835,7 +3837,7 @@ NOTE: views count
           <p>A concise guide to solving LeetCode 704 using Binary Search. Understand the key steps and implementation in a simplified manner.</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/blog/leetcode-704-binary-search/">
+              <a class="btn" href="/leetcode-704-binary-search/">
                 Read more &raquo;
               </a>
             </div>
@@ -3861,10 +3863,10 @@ NOTE: views count
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://enkr1.github.io/blog/journal-week-5/">
+    <link itemprop="mainEntityOfPage" href="https://blog.enkr1.com/journal-week-5/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="Jing Hui PANG | 彭竞辉 | ENKR">
       <meta itemprop="description" content="Insights and beats at the intersection of technology and artistry by Jing Hui PANG, also known as ENKR. Discover programming tips, beatbox tutorials, and more.">
     </span>
@@ -3875,7 +3877,7 @@ NOTE: views count
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/blog/journal-week-5/" class="post-title-link" itemprop="url">Journal: Week 5</a>
+            <a href="/journal-week-5/" class="post-title-link" itemprop="url">Journal: Week 5</a>
         </h2>
 
         <div class="post-meta">
@@ -3910,15 +3912,15 @@ NOTE: created_at
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/About-Me/" itemprop="url" rel="index"><span itemprop="name">About Me</span></a>
+                  <a href="/categories/About-Me/" itemprop="url" rel="index"><span itemprop="name">About Me</span></a>
                 </span>
                   , 
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/About-Me/Journals/" itemprop="url" rel="index"><span itemprop="name">Journals</span></a>
+                  <a href="/categories/About-Me/Journals/" itemprop="url" rel="index"><span itemprop="name">Journals</span></a>
                 </span>
                   , 
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/About-Me/Journals/2024/" itemprop="url" rel="index"><span itemprop="name">2024</span></a>
+                  <a href="/categories/About-Me/Journals/2024/" itemprop="url" rel="index"><span itemprop="name">2024</span></a>
                 </span>
             </span>
 
@@ -3927,7 +3929,7 @@ NOTE: created_at
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-              <span>728</span>
+              <span>155</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
@@ -4001,10 +4003,10 @@ learning and embracing the journey are key to growth.</p>
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://enkr1.github.io/blog/journal-week-4/">
+    <link itemprop="mainEntityOfPage" href="https://blog.enkr1.com/journal-week-4/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="Jing Hui PANG | 彭竞辉 | ENKR">
       <meta itemprop="description" content="Insights and beats at the intersection of technology and artistry by Jing Hui PANG, also known as ENKR. Discover programming tips, beatbox tutorials, and more.">
     </span>
@@ -4015,7 +4017,7 @@ learning and embracing the journey are key to growth.</p>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/blog/journal-week-4/" class="post-title-link" itemprop="url">Journal: Week 4</a>
+            <a href="/journal-week-4/" class="post-title-link" itemprop="url">Journal: Week 4</a>
         </h2>
 
         <div class="post-meta">
@@ -4050,15 +4052,15 @@ NOTE: created_at
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/About-Me/" itemprop="url" rel="index"><span itemprop="name">About Me</span></a>
+                  <a href="/categories/About-Me/" itemprop="url" rel="index"><span itemprop="name">About Me</span></a>
                 </span>
                   , 
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/About-Me/Journals/" itemprop="url" rel="index"><span itemprop="name">Journals</span></a>
+                  <a href="/categories/About-Me/Journals/" itemprop="url" rel="index"><span itemprop="name">Journals</span></a>
                 </span>
                   , 
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/About-Me/Journals/2024/" itemprop="url" rel="index"><span itemprop="name">2024</span></a>
+                  <a href="/categories/About-Me/Journals/2024/" itemprop="url" rel="index"><span itemprop="name">2024</span></a>
                 </span>
             </span>
 
@@ -4067,7 +4069,7 @@ NOTE: created_at
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-              <span>587</span>
+              <span>129</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
@@ -4139,10 +4141,10 @@ life. it was recommended by my previous leader, Lio!</p>
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://enkr1.github.io/blog/journal-week-3/">
+    <link itemprop="mainEntityOfPage" href="https://blog.enkr1.com/journal-week-3/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="Jing Hui PANG | 彭竞辉 | ENKR">
       <meta itemprop="description" content="Insights and beats at the intersection of technology and artistry by Jing Hui PANG, also known as ENKR. Discover programming tips, beatbox tutorials, and more.">
     </span>
@@ -4153,7 +4155,7 @@ life. it was recommended by my previous leader, Lio!</p>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/blog/journal-week-3/" class="post-title-link" itemprop="url">Journal: Week 3</a>
+            <a href="/journal-week-3/" class="post-title-link" itemprop="url">Journal: Week 3</a>
         </h2>
 
         <div class="post-meta">
@@ -4188,15 +4190,15 @@ NOTE: created_at
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/About-Me/" itemprop="url" rel="index"><span itemprop="name">About Me</span></a>
+                  <a href="/categories/About-Me/" itemprop="url" rel="index"><span itemprop="name">About Me</span></a>
                 </span>
                   , 
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/About-Me/Journals/" itemprop="url" rel="index"><span itemprop="name">Journals</span></a>
+                  <a href="/categories/About-Me/Journals/" itemprop="url" rel="index"><span itemprop="name">Journals</span></a>
                 </span>
                   , 
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/About-Me/Journals/2024/" itemprop="url" rel="index"><span itemprop="name">2024</span></a>
+                  <a href="/categories/About-Me/Journals/2024/" itemprop="url" rel="index"><span itemprop="name">2024</span></a>
                 </span>
             </span>
 
@@ -4205,7 +4207,7 @@ NOTE: created_at
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-              <span>1.4k</span>
+              <span>293</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
@@ -4291,10 +4293,10 @@ and is easy to digest for others.</p>
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://enkr1.github.io/blog/my-domain-setup-dynadot/">
+    <link itemprop="mainEntityOfPage" href="https://blog.enkr1.com/my-domain-setup-dynadot/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="Jing Hui PANG | 彭竞辉 | ENKR">
       <meta itemprop="description" content="Insights and beats at the intersection of technology and artistry by Jing Hui PANG, also known as ENKR. Discover programming tips, beatbox tutorials, and more.">
     </span>
@@ -4305,7 +4307,7 @@ and is easy to digest for others.</p>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/blog/my-domain-setup-dynadot/" class="post-title-link" itemprop="url">My Domain Setup: Dynadot</a>
+            <a href="/my-domain-setup-dynadot/" class="post-title-link" itemprop="url">My Domain Setup: Dynadot</a>
         </h2>
 
         <div class="post-meta">
@@ -4340,15 +4342,15 @@ NOTE: created_at
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Software-Engineering/" itemprop="url" rel="index"><span itemprop="name">Software Engineering</span></a>
+                  <a href="/categories/Software-Engineering/" itemprop="url" rel="index"><span itemprop="name">Software Engineering</span></a>
                 </span>
                   , 
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Software-Engineering/Configurations/" itemprop="url" rel="index"><span itemprop="name">Configurations</span></a>
+                  <a href="/categories/Software-Engineering/Configurations/" itemprop="url" rel="index"><span itemprop="name">Configurations</span></a>
                 </span>
                   , 
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Software-Engineering/Configurations/DNS/" itemprop="url" rel="index"><span itemprop="name">DNS</span></a>
+                  <a href="/categories/Software-Engineering/Configurations/DNS/" itemprop="url" rel="index"><span itemprop="name">DNS</span></a>
                 </span>
             </span>
 
@@ -4357,7 +4359,7 @@ NOTE: created_at
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-              <span>344</span>
+              <span>226</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
@@ -4395,7 +4397,7 @@ NOTE: views count
           <p>A detailed guide on how to configure a custom domain from Dynadot with GitHub Pages. Learn how to manage DNS settings and integrate your domain with Hexo for seamless website hosting.</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/blog/my-domain-setup-dynadot/">
+              <a class="btn" href="/my-domain-setup-dynadot/">
                 Read more &raquo;
               </a>
             </div>
@@ -4421,10 +4423,10 @@ NOTE: views count
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://enkr1.github.io/blog/memories-new-mini-launch-2024/">
+    <link itemprop="mainEntityOfPage" href="https://blog.enkr1.com/memories-new-mini-launch-2024/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="Jing Hui PANG | 彭竞辉 | ENKR">
       <meta itemprop="description" content="Insights and beats at the intersection of technology and artistry by Jing Hui PANG, also known as ENKR. Discover programming tips, beatbox tutorials, and more.">
     </span>
@@ -4435,7 +4437,7 @@ NOTE: views count
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/blog/memories-new-mini-launch-2024/" class="post-title-link" itemprop="url">Memories: New MINI Launch 2024</a>
+            <a href="/memories-new-mini-launch-2024/" class="post-title-link" itemprop="url">Memories: New MINI Launch 2024</a>
         </h2>
 
         <div class="post-meta">
@@ -4464,11 +4466,11 @@ NOTE: created_at
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/About-Me/" itemprop="url" rel="index"><span itemprop="name">About Me</span></a>
+                  <a href="/categories/About-Me/" itemprop="url" rel="index"><span itemprop="name">About Me</span></a>
                 </span>
                   , 
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/About-Me/Photography/" itemprop="url" rel="index"><span itemprop="name">Photography</span></a>
+                  <a href="/categories/About-Me/Photography/" itemprop="url" rel="index"><span itemprop="name">Photography</span></a>
                 </span>
             </span>
 
@@ -4477,7 +4479,7 @@ NOTE: created_at
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-              <span>174</span>
+              <span>246</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
@@ -4497,7 +4499,7 @@ NOTE: disqus
       </span>
       <span class="post-meta-item-text">Disqus: </span>
     
-    <a title="disqus" href="/blog/memories-new-mini-launch-2024/#disqus_thread" itemprop="discussionUrl">
+    <a title="disqus" href="/memories-new-mini-launch-2024/#disqus_thread" itemprop="discussionUrl">
       <span class="post-comments-count disqus-comment-count" data-disqus-identifier="memories-new-mini-launch-2024/" itemprop="commentCount"></span>
     </a>
   </span>
@@ -4527,7 +4529,7 @@ NOTE: views count
           <p>Explore the captured moments from the new MINI launch event. Photos taken by the Mini photography team, featuring highlights of the launch and behind-the-scenes glimpses.</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/blog/memories-new-mini-launch-2024/">
+              <a class="btn" href="/memories-new-mini-launch-2024/">
                 Read more &raquo;
               </a>
             </div>
@@ -4553,10 +4555,10 @@ NOTE: views count
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://enkr1.github.io/blog/journal-week-2/">
+    <link itemprop="mainEntityOfPage" href="https://blog.enkr1.com/journal-week-2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="Jing Hui PANG | 彭竞辉 | ENKR">
       <meta itemprop="description" content="Insights and beats at the intersection of technology and artistry by Jing Hui PANG, also known as ENKR. Discover programming tips, beatbox tutorials, and more.">
     </span>
@@ -4567,7 +4569,7 @@ NOTE: views count
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/blog/journal-week-2/" class="post-title-link" itemprop="url">Journal: Week 2</a>
+            <a href="/journal-week-2/" class="post-title-link" itemprop="url">Journal: Week 2</a>
         </h2>
 
         <div class="post-meta">
@@ -4602,15 +4604,15 @@ NOTE: created_at
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/About-Me/" itemprop="url" rel="index"><span itemprop="name">About Me</span></a>
+                  <a href="/categories/About-Me/" itemprop="url" rel="index"><span itemprop="name">About Me</span></a>
                 </span>
                   , 
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/About-Me/Journals/" itemprop="url" rel="index"><span itemprop="name">Journals</span></a>
+                  <a href="/categories/About-Me/Journals/" itemprop="url" rel="index"><span itemprop="name">Journals</span></a>
                 </span>
                   , 
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/About-Me/Journals/2024/" itemprop="url" rel="index"><span itemprop="name">2024</span></a>
+                  <a href="/categories/About-Me/Journals/2024/" itemprop="url" rel="index"><span itemprop="name">2024</span></a>
                 </span>
             </span>
 
@@ -4619,7 +4621,7 @@ NOTE: created_at
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-              <span>1.4k</span>
+              <span>364</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
@@ -4685,11 +4687,11 @@ background. that's strange, isn't it? and yes, i still made those
 mistakes. but after listening to him, i tried to use my product and
 realised, wow, he was totally right. this is a solid point and something
 to always remember as a developer, project manager, or leader.</p>
-<img data-src="/blog/journal-week-2/IMG_3473.png" class="large">
+<img data-src="/journal-week-2/IMG_3473.png" class="large">
 <video width="auto" height="auto" controls>
 <source src="/blog/journal-week-2/IMG_3476_compressed.mp4" type="video/mp4">
 </video>
-<img data-src="/blog/journal-week-2/IMG_3482.png" class="large">
+<img data-src="/journal-week-2/IMG_3482.png" class="large">
 <video width="auto" height="auto" controls>
 <source src="/blog/journal-week-2/IMG_3483_compressed.mp4" type="video/mp4">
 </video>
@@ -4715,10 +4717,10 @@ to always remember as a developer, project manager, or leader.</p>
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://enkr1.github.io/blog/journal-week-1/">
+    <link itemprop="mainEntityOfPage" href="https://blog.enkr1.com/journal-week-1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="Jing Hui PANG | 彭竞辉 | ENKR">
       <meta itemprop="description" content="Insights and beats at the intersection of technology and artistry by Jing Hui PANG, also known as ENKR. Discover programming tips, beatbox tutorials, and more.">
     </span>
@@ -4729,7 +4731,7 @@ to always remember as a developer, project manager, or leader.</p>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/blog/journal-week-1/" class="post-title-link" itemprop="url">Journal: Week 1</a>
+            <a href="/journal-week-1/" class="post-title-link" itemprop="url">Journal: Week 1</a>
         </h2>
 
         <div class="post-meta">
@@ -4764,15 +4766,15 @@ NOTE: created_at
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/About-Me/" itemprop="url" rel="index"><span itemprop="name">About Me</span></a>
+                  <a href="/categories/About-Me/" itemprop="url" rel="index"><span itemprop="name">About Me</span></a>
                 </span>
                   , 
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/About-Me/Journals/" itemprop="url" rel="index"><span itemprop="name">Journals</span></a>
+                  <a href="/categories/About-Me/Journals/" itemprop="url" rel="index"><span itemprop="name">Journals</span></a>
                 </span>
                   , 
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/About-Me/Journals/2024/" itemprop="url" rel="index"><span itemprop="name">2024</span></a>
+                  <a href="/categories/About-Me/Journals/2024/" itemprop="url" rel="index"><span itemprop="name">2024</span></a>
                 </span>
             </span>
 
@@ -4781,7 +4783,7 @@ NOTE: created_at
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-              <span>759</span>
+              <span>158</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
@@ -4856,7 +4858,7 @@ direction. so, thinking out loud is good but always clarify first.</p>
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/blog/page/2/">2</a><a class="page-number" href="/blog/page/3/">3</a><a class="extend next" rel="next" href="/blog/page/2/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 
@@ -4920,20 +4922,20 @@ direction. so, thinking out loud is good but always clarify first.</p>
 <div class="site-state-wrap motion-element">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
-          <a href="/blog/archives/">
+          <a href="/archives/">
         
           <span class="site-state-item-count">71</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
-            <a href="/blog/categories/">
+            <a href="/categories/">
           
         <span class="site-state-item-count">47</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
-            <a href="/blog/tags/">
+            <a href="/tags/">
           
         <span class="site-state-item-count">106</span>
         <span class="site-state-item-name">tags</span></a>
@@ -4977,12 +4979,12 @@ direction. so, thinking out loud is good but always clarify first.</p>
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="Symbols count total">284k</span>
+    <span title="Symbols count total">57k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">4:18</span>
+    <span title="Reading time total">3:28</span>
 </div>
 
         
@@ -5070,22 +5072,22 @@ direction. so, thinking out loud is good but always clarify first.</p>
   </div>
 
   
-  <script src="/blog/lib/anime.min.js"></script>
+  <script src="/lib/anime.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
   <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
-  <script src="/blog/lib/velocity/velocity.min.js"></script>
-  <script src="/blog/lib/velocity/velocity.ui.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
 
-<script src="/blog/js/utils.js"></script>
+<script src="/js/utils.js"></script>
 
-<script src="/blog/js/motion.js"></script>
-
-
-<script src="/blog/js/schemes/pisces.js"></script>
+<script src="/js/motion.js"></script>
 
 
-<script src="/blog/js/next-boot.js"></script>
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
 
 
 
@@ -5121,7 +5123,7 @@ direction. so, thinking out loud is good but always clarify first.</p>
 
 
   
-<script src="/blog/js/local-search.js"></script>
+<script src="/js/local-search.js"></script>
 
 
 

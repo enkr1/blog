@@ -6,27 +6,27 @@
 <meta name="theme-color" content="#222">
 <meta name="generator" content="Hexo 7.3.0">
 <meta name="google-site-verification" content="wSUWWkv_QhNXB_N6r3rOSU2YlmmWxYBk6UWVlgu1q94" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/logo.gif">
-  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/logo.gif">
-  <link rel="mask-icon" href="/blog/images/logo.svg" color="#222">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/logo.gif">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/logo.gif">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
   <meta name="google-site-verification" content="google295e26d511c4c6ad.html">
 
-<link rel="stylesheet" href="/blog/css/main.css">
+<link rel="stylesheet" href="/css/main.css">
 
 
-<link rel="stylesheet" href="/blog/lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"enkr1.github.io","root":"/blog/","scheme":"Gemini","version":"7.8.0","exturl":true,"sidebar":{"position":"left","width":300,"display":"post","padding":0,"offset":0,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"buttons","active":"disqus","storage":true,"lazyload":true,"nav":null,"activeClass":"disqus"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":-1,"unescape":true,"preload":true},"motion":{"enable":true,"async":false,"transition":{"post_block":"slideDownBigIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"blog.enkr1.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":true,"sidebar":{"position":"left","width":300,"display":"post","padding":0,"offset":0,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"buttons","active":"disqus","storage":true,"lazyload":true,"nav":null,"activeClass":"disqus"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":-1,"unescape":true,"preload":true},"motion":{"enable":true,"async":false,"transition":{"post_block":"slideDownBigIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="My notes on solving LeetCode Problem 210: Course Schedule II using Topological Sort. This guide includes the problem statement, approach, and code implementation.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="LeetCode-210: Course Schedule II">
-<meta property="og:url" content="https://enkr1.github.io/blog/leetcode-210-course-schedule-ii/index.html">
+<meta property="og:url" content="https://blog.enkr1.com/leetcode-210-course-schedule-ii/index.html">
 <meta property="og:site_name" content="ENKR&#39;s Blog">
 <meta property="og:description" content="My notes on solving LeetCode Problem 210: Course Schedule II using Topological Sort. This guide includes the problem statement, approach, and code implementation.">
 <meta property="og:locale" content="en_US">
@@ -45,7 +45,7 @@
 <meta property="article:tag" content="indegree">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://enkr1.github.io/blog/leetcode-210-course-schedule-ii/">
+<link rel="canonical" href="https://blog.enkr1.com/leetcode-210-course-schedule-ii/">
 
 
 
@@ -86,6 +86,8 @@
   // Your web app's Firebase configuration
   // For Firebase JS SDK v7.20.0 and later, measurementId is optional
   const firebaseConfig = {
+    // Update this to your new domain
+    authDomain: "enkr1.com",
     apiKey: "AIzaSyBxexVzGzOqDUGFzHVT_-oYxkqAetlFUSo",
     authDomain: "hexo-blog-9ccea.firebaseapp.com",
     projectId: "hexo-blog-9ccea",
@@ -182,7 +184,7 @@
   </style>
 </noscript>
 
-<link rel="alternate" href="/blog/atom.xml" title="ENKR's Blog" type="application/atom+xml">
+<link rel="alternate" href="/atom.xml" title="ENKR's Blog" type="application/atom+xml">
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -201,7 +203,7 @@
 
   <div class="site-meta">
 
-    <a href="/blog/" class="brand" rel="start">
+    <a href="/" class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
       <h1 class="site-title">ENKR's Blog</h1>
       <span class="logo-line-after"><i></i></span>
@@ -223,42 +225,42 @@
   <ul id="menu" class="main-menu menu">
         <li class="menu-item menu-item-home">
 
-    <a href="/blog/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
 
   </li>
         <li class="menu-item menu-item-about">
 
-    <a href="/blog/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
 
   </li>
         <li class="menu-item menu-item-notebooks">
 
-    <a href="/blog/categories/My-Notes/" rel="section"><i class="fa fa-bookmark fa-fw"></i>Notebooks</a>
+    <a href="/categories/My-Notes/" rel="section"><i class="fa fa-bookmark fa-fw"></i>Notebooks</a>
 
   </li>
         <li class="menu-item menu-item-journals">
 
-    <a href="/blog/categories/About-Me/Journals/" rel="section"><i class="fa fa-book fa-fw"></i>Journals</a>
+    <a href="/categories/About-Me/Journals/" rel="section"><i class="fa fa-book fa-fw"></i>Journals</a>
 
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/blog/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">106</span></a>
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">106</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/blog/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">47</span></a>
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">47</span></a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/blog/archives/" rel="section"><i class="fa fa-history fa-fw"></i>Archives<span class="badge">71</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-history fa-fw"></i>Archives<span class="badge">71</span></a>
 
   </li>
         <li class="menu-item menu-item-platforms">
 
-    <a href="https://enkr1.github.io/platforms/" rel="section"><i class="fa fa-link fa-fw"></i>Platforms</a>
+    <span class="exturl" data-url="aHR0cHM6Ly9lbmtyMS5naXRodWIuaW8vcGxhdGZvcm1zLw=="><i class="fa fa-link fa-fw"></i>Platforms</span>
 
   </li>
         <li class="menu-item menu-item-connect-with-me">
@@ -322,10 +324,10 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://enkr1.github.io/blog/leetcode-210-course-schedule-ii/">
+    <link itemprop="mainEntityOfPage" href="https://blog.enkr1.com/leetcode-210-course-schedule-ii/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="Jing Hui PANG | 彭竞辉 | ENKR">
       <meta itemprop="description" content="Insights and beats at the intersection of technology and artistry by Jing Hui PANG, also known as ENKR. Discover programming tips, beatbox tutorials, and more.">
     </span>
@@ -370,11 +372,11 @@ NOTE: created_at
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Software-Engineering/" itemprop="url" rel="index"><span itemprop="name">Software Engineering</span></a>
+                  <a href="/categories/Software-Engineering/" itemprop="url" rel="index"><span itemprop="name">Software Engineering</span></a>
                 </span>
                   , 
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/Software-Engineering/Coding-Problems/" itemprop="url" rel="index"><span itemprop="name">Coding Problems</span></a>
+                  <a href="/categories/Software-Engineering/Coding-Problems/" itemprop="url" rel="index"><span itemprop="name">Coding Problems</span></a>
                 </span>
             </span>
 
@@ -383,13 +385,13 @@ NOTE: created_at
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-              <span>4.8k</span>
+              <span>861</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
-              <span>4 mins.</span>
+              <span>3 mins.</span>
             </span>
 
 <!--
@@ -403,7 +405,7 @@ NOTE: disqus
       </span>
       <span class="post-meta-item-text">Disqus: </span>
     
-    <a title="disqus" href="/blog/leetcode-210-course-schedule-ii/#disqus_thread" itemprop="discussionUrl">
+    <a title="disqus" href="/leetcode-210-course-schedule-ii/#disqus_thread" itemprop="discussionUrl">
       <span class="post-comments-count disqus-comment-count" data-disqus-identifier="leetcode-210-course-schedule-ii/" itemprop="commentCount"></span>
     </a>
   </span>
@@ -579,19 +581,19 @@ are met.</p>
   <div class="popular-posts-header">Related Posts</div>
   <ul class="popular-posts">
     <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="/blog/leetcode-139-word-break/" rel="bookmark">LeetCode-139: Word Break</a></div>
+      <div class="popular-posts-title"><a href="/leetcode-139-word-break/" rel="bookmark">LeetCode-139: Word Break</a></div>
     </li>
     <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="/blog/leetcode-1642-furthest-building-you-can-reach/" rel="bookmark">LeetCode-1642: Furthest Building You Can Reach</a></div>
+      <div class="popular-posts-title"><a href="/leetcode-1642-furthest-building-you-can-reach/" rel="bookmark">LeetCode-1642: Furthest Building You Can Reach</a></div>
     </li>
     <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="/blog/leetcode-97-interleaving-string/" rel="bookmark">LeetCode-97: Interleaving String</a></div>
+      <div class="popular-posts-title"><a href="/leetcode-97-interleaving-string/" rel="bookmark">LeetCode-97: Interleaving String</a></div>
     </li>
     <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="/blog/leetcode-189-rotate-array/" rel="bookmark">LeetCode-189: Rotate Array</a></div>
+      <div class="popular-posts-title"><a href="/leetcode-189-rotate-array/" rel="bookmark">LeetCode-189: Rotate Array</a></div>
     </li>
     <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="/blog/leetcode-704-binary-search/" rel="bookmark">LeetCode-704: Binary Search</a></div>
+      <div class="popular-posts-title"><a href="/leetcode-704-binary-search/" rel="bookmark">LeetCode-704: Binary Search</a></div>
     </li>
   </ul>
 <div class="post-widgets">
@@ -611,16 +613,16 @@ are met.</p>
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/blog/tags/algorithm/" rel="tag"># algorithm</a>
-              <a href="/blog/tags/javascript/" rel="tag"># javascript</a>
-              <a href="/blog/tags/leetcode/" rel="tag"># leetcode</a>
-              <a href="/blog/tags/leetcode-medium/" rel="tag"># leetcode-medium</a>
-              <a href="/blog/tags/interview-preparation/" rel="tag"># interview-preparation</a>
-              <a href="/blog/tags/top-interview-150/" rel="tag"># top-interview-150</a>
-              <a href="/blog/tags/topological-sort/" rel="tag"># topological-sort</a>
-              <a href="/blog/tags/queue/" rel="tag"># queue</a>
-              <a href="/blog/tags/adjacency-list/" rel="tag"># adjacency-list</a>
-              <a href="/blog/tags/indegree/" rel="tag"># indegree</a>
+              <a href="/tags/algorithm/" rel="tag"># algorithm</a>
+              <a href="/tags/javascript/" rel="tag"># javascript</a>
+              <a href="/tags/leetcode/" rel="tag"># leetcode</a>
+              <a href="/tags/leetcode-medium/" rel="tag"># leetcode-medium</a>
+              <a href="/tags/interview-preparation/" rel="tag"># interview-preparation</a>
+              <a href="/tags/top-interview-150/" rel="tag"># top-interview-150</a>
+              <a href="/tags/topological-sort/" rel="tag"># topological-sort</a>
+              <a href="/tags/queue/" rel="tag"># queue</a>
+              <a href="/tags/adjacency-list/" rel="tag"># adjacency-list</a>
+              <a href="/tags/indegree/" rel="tag"># indegree</a>
           </div>
 
         
@@ -629,11 +631,11 @@ are met.</p>
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/blog/leetcode-193-valid-phone-numbers/" rel="prev" title="LeetCode-193: Valid Phone Numbers">
+    <a href="/leetcode-193-valid-phone-numbers/" rel="prev" title="LeetCode-193: Valid Phone Numbers">
       <i class="fa fa-chevron-left"></i> LeetCode-193: Valid Phone Numbers
     </a></div>
       <div class="post-nav-item">
-    <a href="/blog/my-crew-beatbox-performance-a-memorable-experience-at-the-new-mini-family-launch/" rel="next" title="My Crew Beatbox Performance: A Memorable Experience at the New MINI Family Launch">
+    <a href="/my-crew-beatbox-performance-a-memorable-experience-at-the-new-mini-family-launch/" rel="next" title="My Crew Beatbox Performance: A Memorable Experience at the New MINI Family Launch">
       My Crew Beatbox Performance: A Memorable Experience at the New MINI Family Launch <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
@@ -716,20 +718,20 @@ Topological Sort to Course Schedule II:</span></a><ol class="nav-child"><li clas
 <div class="site-state-wrap motion-element">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
-          <a href="/blog/archives/">
+          <a href="/archives/">
         
           <span class="site-state-item-count">71</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
-            <a href="/blog/categories/">
+            <a href="/categories/">
           
         <span class="site-state-item-count">47</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
-            <a href="/blog/tags/">
+            <a href="/tags/">
           
         <span class="site-state-item-count">106</span>
         <span class="site-state-item-name">tags</span></a>
@@ -773,12 +775,12 @@ Topological Sort to Course Schedule II:</span></a><ol class="nav-child"><li clas
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="Symbols count total">284k</span>
+    <span title="Symbols count total">57k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">4:18</span>
+    <span title="Reading time total">3:28</span>
 </div>
 
         
@@ -866,22 +868,22 @@ Topological Sort to Course Schedule II:</span></a><ol class="nav-child"><li clas
   </div>
 
   
-  <script src="/blog/lib/anime.min.js"></script>
+  <script src="/lib/anime.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
   <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
-  <script src="/blog/lib/velocity/velocity.min.js"></script>
-  <script src="/blog/lib/velocity/velocity.ui.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
 
-<script src="/blog/js/utils.js"></script>
+<script src="/js/utils.js"></script>
 
-<script src="/blog/js/motion.js"></script>
-
-
-<script src="/blog/js/schemes/pisces.js"></script>
+<script src="/js/motion.js"></script>
 
 
-<script src="/blog/js/next-boot.js"></script>
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
 
 
 
@@ -917,7 +919,7 @@ Topological Sort to Course Schedule II:</span></a><ol class="nav-child"><li clas
 
 
   
-<script src="/blog/js/local-search.js"></script>
+<script src="/js/local-search.js"></script>
 
 
 
@@ -1002,7 +1004,7 @@ Topological Sort to Course Schedule II:</span></a><ol class="nav-child"><li clas
 </script>
 <script>
   var disqus_config = function() {
-    this.page.url = "https://enkr1.github.io/blog/leetcode-210-course-schedule-ii/";
+    this.page.url = "https://blog.enkr1.com/leetcode-210-course-schedule-ii/";
     this.page.identifier = "leetcode-210-course-schedule-ii/";
     this.page.title = "LeetCode-210: Course Schedule II";
     };
