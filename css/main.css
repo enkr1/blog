@@ -1343,6 +1343,7 @@ p {
 }
 .site-author {
   position: relative;
+  margin: 0.8rem 1rem 1.3rem;
 }
 .site-author .site-author-image {
   display: block;
@@ -1380,7 +1381,7 @@ p {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #a73b06;
+  background: #586e0f;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
