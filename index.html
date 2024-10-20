@@ -117,7 +117,6 @@
   // Your web app's Firebase configuration
   // For Firebase JS SDK v7.20.0 and later, measurementId is optional
   const firebaseConfig = {
-    // Update this to your new domain
     authDomain: "enkr1.com",
     apiKey: "AIzaSyBxexVzGzOqDUGFzHVT_-oYxkqAetlFUSo",
     authDomain: "hexo-blog-9ccea.firebaseapp.com",
@@ -132,41 +131,6 @@
   const app = initializeApp(firebaseConfig);
   const analytics = getAnalytics(app);
 </script>
-
-
-
-<!-- Firebase -->
-<!-- enkr1.com -->
-<!--
-<script type="module">
-  // Import the functions you need from the SDKs you need
-  // import { initializeApp } from "firebase/app";
-  // import { getAnalytics } from "firebase/analytics";
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-analytics.js";
-
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
-
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  const firebaseConfig = {
-    apiKey: "AIzaSyBxexVzGzOqDUGFzHVT_-oYxkqAetlFUSo",
-    authDomain: "hexo-blog-9ccea.firebaseapp.com",
-    databaseURL: "https://hexo-blog-9ccea-default-rtdb.firebaseio.com",
-    projectId: "hexo-blog-9ccea",
-    storageBucket: "hexo-blog-9ccea.appspot.com",
-    messagingSenderId: "71411607593",
-    appId: "1:71411607593:web:c571d8c78ff30e5f95d438",
-    measurementId: "G-6C3MKM8B5D"
-  };
-
-
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-</script>
--->
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/ilyabirman-likely@2/release/likely.min.css">
   <title>ENKR's Blog</title>
   
@@ -5481,6 +5445,8 @@ NOTE: views count
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
+
+    <!--
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
@@ -5493,6 +5459,17 @@ NOTE: views count
         <span class="site-state-item-count">106</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
+    -->
+
+
+<!--
+NEW: Visitor sum
+-->
+<div class="site-state-item site-state-visitor-sum">
+  <span id="visitor-count" class="site-state-item-count">Loading...</span>
+  <span class="site-state-item-name">visitors</span>
+</div>
+
   </nav>
 </div>
 
@@ -5501,6 +5478,54 @@ NOTE: views count
 <div class="globe-view-counter-container">
   <script type="text/javascript" src="//rf.revolvermaps.com/0/0/8.js?i=5uxj8a6ge7p&amp;m=1&amp;c=ff0000&amp;cr1=fff600&amp;f=ubuntu&amp;l=33" async="async"></script>
 </div>
+
+
+
+<script type="module">
+  console.debug(`[DEBUG] firestore visitor sum ...`);
+
+  // Import Firebase modules
+  import { initializeApp, getApps, getApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
+  import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js";
+
+  // Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyBxexVzGzOqDUGFzHVT_-oYxkqAetlFUSo",
+    authDomain: "enkr1.com",
+    projectId: "hexo-blog-9ccea",
+    storageBucket: "hexo-blog-9ccea.appspot.com",
+    messagingSenderId: "71411607593",
+    appId: "1:71411607593:web:d0fb244020c34c5895d438",
+    measurementId: "G-TJPENBTDNS"
+  };
+
+  // Check if Firebase has already been initialized
+  const app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
+
+  // Initialize Firestore
+  const db = getFirestore(app);
+
+  // Function to fetch the visitor count
+  async function fetchVisitorCount() {
+    try {
+      const articlesCollection = collection(db, 'articles');
+      const snapshot = await getDocs(articlesCollection);
+
+      let totalVisitors = 0;
+      snapshot.forEach(doc => {
+        totalVisitors += doc.data().count || 0;
+      });
+
+      // Inject visitor count into the HTML element
+      document.getElementById('visitor-count').innerText = totalVisitors;
+    } catch (error) {
+      console.error("Error fetching visitor count: ", error);
+    }
+  }
+
+  // Fetch visitor count when the page loads
+  fetchVisitorCount();
+</script>
 
       </div>
 
@@ -5641,6 +5666,7 @@ NOTE: views count
 
 
 <script src="/js/next-boot.js"></script>
+
 
 
 
