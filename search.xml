@@ -4,13 +4,37 @@
   
     
     <entry>
-      <title>Hexo: Configure Subdomain for GitHub Pages</title>
-      <link href="/hexo-configure-subdomain-for-github-pages/"/>
-      <url>/hexo-configure-subdomain-for-github-pages/</url>
+      <title>Hexo: How to Set Up a Subdomain on GitHub Pages and Fix CNAME Issues</title>
+      <link href="/hexo-how-to-set-up-a-subdomain-on-github-pages-and-fix-cname-issues/"/>
+      <url>/hexo-how-to-set-up-a-subdomain-on-github-pages-and-fix-cname-issues/</url>
       
         <content type="html"><![CDATA[<h2 id="introduction">Introduction:</h2><p>Running into the <code>InvalidDNSError</code> while trying to set upa subdomain on GitHub Pages? You're not alone! I recently faced thisissue when I tried to set up <code>blog.enkr1.com</code>. After a bit ofback and forth with DNS settings, I figured it out, and here's how youcan do it, too.</p><p>Why did I even bother? Well, it turns out that without setting up thesubdomain, Firestore's visitor tracking wasn't working properly due tocross-domain issues (which I only found out after <strong>sixmonths</strong> when I got an inactivity email from the database! 😂).So, here we go!</p><hr /><h2 id="steps-to-configure-a-subdomain-on-github-pages">Steps toConfigure a Subdomain on GitHub Pages</h2><h3 id="set-up-the-cname-record-in-your-dns-provider">1. Set Up theCNAME Record in Your DNS Provider</h3><p>The first thing you need to do is tell your DNS provider where tosend traffic for your subdomain. Here's how to add a CNAME record:</p><ul><li><p><strong>Log in to your DNS provider</strong> (Dynadot (I am usingthis), GoDaddy, Namecheap, Cloudflare, etc.).</p></li><li><p>Head to the <strong>DNS Management</strong> section for yourdomain (<code>enkr1.com</code>).</p></li><li><p><strong>Create a new CNAME record</strong> with thesedetails:</p><ul><li><strong>Type</strong>: CNAME</li><li><strong>Host</strong>: <code>blog</code> (this is yoursubdomain)</li><li><strong>Points to</strong>: <code>enkr1.github.io</code> (replace<code>enkr1</code> with your GitHub username if different)</li><li><strong>TTL</strong>: Leave it at the default setting (usually 1hour or automatic)</li></ul><p>Example: <figure class="highlight nestedtext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">Type</span><span class="punctuation">:</span> <span class="string">CNAME</span></span><br><span class="line"><span class="attribute">Host</span><span class="punctuation">:</span> <span class="string">blog</span></span><br><span class="line"><span class="attribute">Points to</span><span class="punctuation">:</span> <span class="string">enkr1.github.io</span></span><br></pre></td></tr></table></figure></p></li><li><p><strong>Save</strong> the record and wait for DNS propagation(anywhere from a few minutes to 24 hours, depending on yourprovider).</p></li></ul><hr /><h3 id="verify-the-dns-record">2. Verify the DNS Record</h3><p>Once you've set up the CNAME record, it's time to check if it'spointing in the right direction:</p><ul><li>Use <span class="exturl" data-url="aHR0cHM6Ly9kbnNjaGVja2VyLm9yZy8=">DNSChecker<i class="fa fa-external-link-alt"></i></span> (or a similartool).</li><li>Enter <code>blog.enkr1.com</code> and select<strong>CNAME</strong>.</li><li>Ensure it's correctly pointing to <code>enkr1.github.io</code>.</li></ul><p>If everything looks good, you're ready for the next step!</p><hr /><h3 id="configure-the-custom-domain-in-github-pages">3. Configure theCustom Domain in GitHub Pages</h3><p>Next, let GitHub know about your shiny new subdomain.</p><ul><li>Open the <strong>GitHub repository</strong> where your website ishosted (in my case, for <code>blog.enkr1.com</code>).</li><li>Go to <strong>Settings</strong> → <strong>Pages</strong>.</li><li>In the <strong>Custom Domain</strong> field, type<code>blog.enkr1.com</code> and click <strong>Save</strong>.</li></ul><p>This will create a <code>CNAME</code> file in your repository,linking your site to the subdomain.</p><hr /><h3id="enable-https-fixing-the-cname-issue-after-deploying-with-hexo">4.Enable HTTPS &amp; Fixing the CNAME Issue After Deploying with Hexo</h3><p>After the DNS propagation finishes (again, this could take up to 24hours), you'll want to secure your site with HTTPS.</p><ul><li>Return to <strong>Settings</strong> → <strong>Pages</strong> in yourGitHub repository.</li><li>Check the <strong>Enforce HTTPS</strong> option (if it'savailable).</li></ul><p>Once HTTPS is enforced, your site will load over a secureconnection.</p><p><strong>OR;</strong></p><p>If you’re using Hexo to deploy your site to GitHub Pages, you mightrun into an issue where the CNAME gets reset after every deployment,causing your custom domain to disappear from the GitHub Pages settings.I faced this issue as well, and here's a quick fix for it.</p><p>To prevent the CNAME from getting wiped during deployment, simplycreate a <code>CNAME</code> file in the <code>source/</code> folder ofyour Hexo project.</p><p>Here's how:</p><ol type="1"><li><p><strong>Navigate to your Hexo project's sourcedirectory</strong>: <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/hexo/source</span><br></pre></td></tr></table></figure></p></li><li><p><strong>Create a <code>CNAME</code> file</strong> in the<code>source/</code> directory: <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">&quot;blog.enkr1.com&quot;</span> &gt; CNAME</span><br></pre></td></tr></table></figure></p><p>Replace <code>blog.enkr1.com</code> with your custom domain.</p></li><li><p><strong>Deploy your Hexo site</strong>: Run your normal deploycommand: <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure></p></li></ol><p>Now, the <code>CNAME</code> file will be deployed along with yoursite, ensuring that your custom domain stays intact after eachdeployment.</p><hr /><h3 id="wait-for-propagation-and-test-your-subdomain">5. Wait forPropagation and Test Your Subdomain</h3><p>Now it's just a waiting game. Once DNS propagation is complete:</p><ul><li>Go to <code>https://blog.enkr1.com</code> and make sure your GitHubPages site loads correctly.</li><li>Double-check in <strong>Settings</strong> that HTTPS isenabled.</li></ul><p>If everything is working, congratulations—you've just set up asubdomain on GitHub Pages! 🎉</p><hr /><h2 id="troubleshooting">Troubleshooting</h2><p>Even if you follow the steps perfectly, there are always thoseannoying issues that can pop up. Here are a few possible solutions ifyou hit a roadblock:</p><ul><li><strong>InvalidDNSError</strong>:<ul><li>This usually means your CNAME record isn't configured correctly orhasn't propagated yet. Use tools like <strong>DNSChecker</strong> toensure that <code>blog.enkr1.com</code> points to<code>enkr1.github.io</code>.</li><li>Double-check the DNS entry at your domain provider—small typos orincorrect hostnames are common issues.</li><li>Make sure your GitHub Pages repository is <strong>public</strong>.Private repos won't work with custom domains unless you're on GitHub'spaid plan.</li></ul></li><li><strong>HTTPS Unavailable</strong>:<ul><li>If you can't enable HTTPS, it's likely that the DNS propagationhasn't completed. Give it a bit more time and check again.</li><li>If you're still having issues, make sure there aren't conflictingDNS records (like an A record) for the same subdomain.</li></ul></li><li><strong>Cross-Domain Issues with Firestore or OtherServices</strong>:<ul><li>Make sure you've correctly set up CORS (Cross-Origin ResourceSharing) in your Firestore rules to avoid visitor tracking issues.</li></ul></li></ul><hr /><h2 id="conclusion">Conclusion:</h2><p>Setting up a subdomain on GitHub Pages can feel a little frustratingat first—especially with DNS propagation times and potential errors—butit's all worth it in the end. I hope this guide helps you avoid the sameheadaches I had when setting up <code>blog.enkr1.com</code>. If you runinto any issues, don't hesitate to reach out, or check the official <ahref="https://docs.github.com/en/pages">GitHub Pagesdocumentation</a>.</p><p>Your site should now be live, secure, and ready to go! 🚀</p>]]></content>
       
       
+      <categories>
+          
+          <category> Software Engineering </category>
+          
+          <category> Configurations </category>
+          
+          <category> DNS </category>
+          
+          <category> Frameworks </category>
+          
+          <category> Hexo </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> dns </tag>
+            
+            <tag> hexo </tag>
+            
+            <tag> github-pages </tag>
+            
+        </tags>
       
     </entry>
     
@@ -663,7 +687,7 @@
             
             <tag> hexo </tag>
             
-            <tag> gitHub-pages </tag>
+            <tag> github-pages </tag>
             
         </tags>
       
@@ -995,6 +1019,8 @@
             
             <tag> leetcode </tag>
             
+            <tag> tiktok </tag>
+            
             <tag> site-reliability-engineer </tag>
             
             <tag> sre </tag>
@@ -1004,8 +1030,6 @@
             <tag> coding-interview </tag>
             
             <tag> job-interview </tag>
-            
-            <tag> tiktok </tag>
             
         </tags>
       
@@ -1036,8 +1060,6 @@
             
             <tag> leetcode </tag>
             
-            <tag> google </tag>
-            
             <tag> site-reliability-engineer </tag>
             
             <tag> sre </tag>
@@ -1047,6 +1069,8 @@
             <tag> coding-interview </tag>
             
             <tag> job-interview </tag>
+            
+            <tag> google </tag>
             
         </tags>
       
@@ -1221,9 +1245,9 @@
           
           <category> Programming Languages </category>
           
-          <category> My Notes </category>
-          
           <category> SQL </category>
+          
+          <category> My Notes </category>
           
       </categories>
       
@@ -1566,9 +1590,9 @@
       
         <tags>
             
-            <tag> beatbox </tag>
-            
             <tag> hobby </tag>
+            
+            <tag> beatbox </tag>
             
             <tag> stage-performance </tag>
             
@@ -1757,9 +1781,9 @@
           
           <category> Programming Languages </category>
           
-          <category> My Notes </category>
-          
           <category> SQL </category>
+          
+          <category> My Notes </category>
           
       </categories>
       

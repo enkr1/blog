@@ -23,60 +23,22 @@
     var CONFIG = {"hostname":"blog.enkr1.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":true,"sidebar":{"position":"left","width":300,"display":"post","padding":0,"offset":0,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"buttons","active":"disqus","storage":true,"lazyload":true,"nav":null,"activeClass":"disqus"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":-1,"unescape":true,"preload":true},"motion":{"enable":true,"async":false,"transition":{"post_block":"slideDownBigIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="Insights and beats at the intersection of technology and artistry by Jing Hui PANG, also known as ENKR. Discover programming tips, beatbox tutorials, and more.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="ENKR&#39;s Blog">
-<meta property="og:url" content="https://blog.enkr1.com/archives/2024/07/index.html">
+  <meta name="description" content="Learn how to configure a subdomain on GitHub Pages, troubleshoot CNAME issues, and ensure smooth deployment with Hexo. This guide simplifies the process to get your site up and running with a custom d">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo: How to Set Up a Subdomain on GitHub Pages and Fix CNAME Issues">
+<meta property="og:url" content="https://blog.enkr1.com/hexo-how-to-set-up-a-subdomain-on-github-pages-and-fix-cname-issues/index.html">
 <meta property="og:site_name" content="ENKR&#39;s Blog">
-<meta property="og:description" content="Insights and beats at the intersection of technology and artistry by Jing Hui PANG, also known as ENKR. Discover programming tips, beatbox tutorials, and more.">
+<meta property="og:description" content="Learn how to configure a subdomain on GitHub Pages, troubleshoot CNAME issues, and ensure smooth deployment with Hexo. This guide simplifies the process to get your site up and running with a custom d">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2024-10-20T13:35:20.000Z">
+<meta property="article:modified_time" content="2024-10-20T14:10:01.315Z">
 <meta property="article:author" content="Jing Hui PANG | 彭竞辉 | ENKR">
-<meta property="article:tag" content="ENKR">
-<meta property="article:tag" content="Jing Hui PANG">
-<meta property="article:tag" content="Pang Jing Hui">
-<meta property="article:tag" content="彭竞辉">
-<meta property="article:tag" content="Beatbox">
-<meta property="article:tag" content="ByteDance">
-<meta property="article:tag" content="ByteDancer">
-<meta property="article:tag" content="字节跳动">
-<meta property="article:tag" content="Beatboxing artist">
-<meta property="article:tag" content="Beatbox tutorials">
-<meta property="article:tag" content="Beatbox performances">
-<meta property="article:tag" content="Programming">
-<meta property="article:tag" content="Software Engineering">
-<meta property="article:tag" content="Full-Stack Development">
-<meta property="article:tag" content="Elixir programming">
-<meta property="article:tag" content="JavaScript">
-<meta property="article:tag" content="PHP">
-<meta property="article:tag" content="Singapore tech community">
-<meta property="article:tag" content="555 Beatbox Initiative">
-<meta property="article:tag" content="Beatbox battles">
-<meta property="article:tag" content="ByteDance engineer">
-<meta property="article:tag" content="Pixium Digital">
-<meta property="article:tag" content="Tech and music integration">
-<meta property="article:tag" content="Technology">
-<meta property="article:tag" content="Music">
-<meta property="article:tag" content="UI&#x2F;UX Design">
-<meta property="article:tag" content="Software projects">
-<meta property="article:tag" content="Beatbox techniques">
-<meta property="article:tag" content="Coding tutorials">
-<meta property="article:tag" content="Web development">
-<meta property="article:tag" content="DevOps">
-<meta property="article:tag" content="Cloud technologies">
-<meta property="article:tag" content="AWS">
-<meta property="article:tag" content="Terraform">
-<meta property="article:tag" content="MySQL">
-<meta property="article:tag" content="PostgreSQL">
-<meta property="article:tag" content="Personal growth through music">
-<meta property="article:tag" content="Beatbox community">
-<meta property="article:tag" content="Innovative web development">
-<meta property="article:tag" content="Rhythmic beatbox performances">
-<meta property="article:tag" content="Singapore beatboxer">
-<meta property="article:tag" content="Beatboxing events">
-<meta property="article:tag" content="Professional development in tech">
+<meta property="article:tag" content="dns">
+<meta property="article:tag" content="hexo">
+<meta property="article:tag" content="github-pages">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://blog.enkr1.com/archives/2024/07/">
+<link rel="canonical" href="https://blog.enkr1.com/hexo-how-to-set-up-a-subdomain-on-github-pages-and-fix-cname-issues/">
 
 
 
@@ -86,7 +48,7 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'en'
   };
 </script>
@@ -168,7 +130,7 @@
 </script>
 -->
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/ilyabirman-likely@2/release/likely.min.css">
-  <title>Archive | ENKR's Blog</title>
+  <title>Hexo: How to Set Up a Subdomain on GitHub Pages and Fix CNAME Issues | ENKR's Blog</title>
   
     <script>
       function sendPageView() {
@@ -284,9 +246,9 @@
     <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">47</span></a>
 
   </li>
-        <li class="menu-item menu-item-archives">
+        <li class="menu-item menu-item-history">
 
-    <a href="/archives/" rel="section"><i class="fa fa-history fa-fw"></i>Archives<span class="badge">72</span></a>
+    <a href="/history/" rel="section"><i class="fa fa-history fa-fw"></i>History</a>
 
   </li>
         <li class="menu-item menu-item-platforms">
@@ -348,79 +310,354 @@
         <div class="content-wrap">
           
 
-          <div class="content archive">
+          <div class="content post posts-expand">
             
 
+    
   
   
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://blog.enkr1.com/hexo-how-to-set-up-a-subdomain-on-github-pages-and-fix-cname-issues/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Jing Hui PANG | 彭竞辉 | ENKR">
+      <meta itemprop="description" content="Insights and beats at the intersection of technology and artistry by Jing Hui PANG, also known as ENKR. Discover programming tips, beatbox tutorials, and more.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ENKR's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Hexo: How to Set Up a Subdomain on GitHub Pages and Fix CNAME Issues
+        </h1>
+
+        <div class="post-meta">
+
+<!--
+NOTE: created_at
+-->
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: Sun 20 October 2024 21:35:20 PM / Modified: 22:10:01 PM" itemprop="dateCreated datePublished" datetime="2024-10-20T21:35:20+08:00">Sun 20 October 2024</time>
+            </span>
+
+<!--
+NOTE: created_at
+-->
+<!--
+-->
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Software-Engineering/" itemprop="url" rel="index"><span itemprop="name">Software Engineering</span></a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Software-Engineering/Configurations/" itemprop="url" rel="index"><span itemprop="name">Configurations</span></a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Software-Engineering/Configurations/DNS/" itemprop="url" rel="index"><span itemprop="name">DNS</span></a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Software-Engineering/Frameworks/" itemprop="url" rel="index"><span itemprop="name">Frameworks</span></a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Software-Engineering/Frameworks/Hexo/" itemprop="url" rel="index"><span itemprop="name">Hexo</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+              <span>852</span>
+            </span>
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+              <span>3 mins.</span>
+            </span>
+
+<!--
+NOTE: disqus
+-->
   
-  <div class="post-block">
-    <div class="posts-collapse">
-      <!--
-      <div class="collection-title">
-        
-        <span class="collection-header">Nice! 72 posts in total. Keep on posting.</span>
-      </div>
-      -->
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/hexo-how-to-set-up-a-subdomain-on-github-pages-and-fix-cname-issues/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="hexo-how-to-set-up-a-subdomain-on-github-pages-and-fix-cname-issues/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+<!--
+NOTE: views count
+-->
+            <span class="post-meta-item" title="Views">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-users"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <b><span class="firestore-visitors-count"></span></b>
+            </span>
+            <div class="post-description">Learn how to configure a subdomain on GitHub Pages, troubleshoot CNAME issues, and ensure smooth deployment with Hexo. This guide simplifies the process to get your site up and running with a custom domain.</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <span class="collection-header">2024</span>
+        <h2 id="introduction">Introduction:</h2>
+<p>Running into the <code>InvalidDNSError</code> while trying to set up
+a subdomain on GitHub Pages? You're not alone! I recently faced this
+issue when I tried to set up <code>blog.enkr1.com</code>. After a bit of
+back and forth with DNS settings, I figured it out, and here's how you
+can do it, too.</p>
+<p>Why did I even bother? Well, it turns out that without setting up the
+subdomain, Firestore's visitor tracking wasn't working properly due to
+cross-domain issues (which I only found out after <strong>six
+months</strong> when I got an inactivity email from the database! 😂).
+So, here we go!</p>
+<hr />
+<h2 id="steps-to-configure-a-subdomain-on-github-pages">Steps to
+Configure a Subdomain on GitHub Pages</h2>
+<h3 id="set-up-the-cname-record-in-your-dns-provider">1. Set Up the
+CNAME Record in Your DNS Provider</h3>
+<p>The first thing you need to do is tell your DNS provider where to
+send traffic for your subdomain. Here's how to add a CNAME record:</p>
+<ul>
+<li><p><strong>Log in to your DNS provider</strong> (Dynadot (I am using
+this), GoDaddy, Namecheap, Cloudflare, etc.).</p></li>
+<li><p>Head to the <strong>DNS Management</strong> section for your
+domain (<code>enkr1.com</code>).</p></li>
+<li><p><strong>Create a new CNAME record</strong> with these
+details:</p>
+<ul>
+<li><strong>Type</strong>: CNAME</li>
+<li><strong>Host</strong>: <code>blog</code> (this is your
+subdomain)</li>
+<li><strong>Points to</strong>: <code>enkr1.github.io</code> (replace
+<code>enkr1</code> with your GitHub username if different)</li>
+<li><strong>TTL</strong>: Leave it at the default setting (usually 1
+hour or automatic)</li>
+</ul>
+<p>Example: <figure class="highlight nestedtext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">Type</span><span class="punctuation">:</span> <span class="string">CNAME</span></span><br><span class="line"><span class="attribute">Host</span><span class="punctuation">:</span> <span class="string">blog</span></span><br><span class="line"><span class="attribute">Points to</span><span class="punctuation">:</span> <span class="string">enkr1.github.io</span></span><br></pre></td></tr></table></figure></p></li>
+<li><p><strong>Save</strong> the record and wait for DNS propagation
+(anywhere from a few minutes to 24 hours, depending on your
+provider).</p></li>
+</ul>
+<hr />
+<h3 id="verify-the-dns-record">2. Verify the DNS Record</h3>
+<p>Once you've set up the CNAME record, it's time to check if it's
+pointing in the right direction:</p>
+<ul>
+<li>Use <span class="exturl" data-url="aHR0cHM6Ly9kbnNjaGVja2VyLm9yZy8=">DNSChecker<i class="fa fa-external-link-alt"></i></span> (or a similar
+tool).</li>
+<li>Enter <code>blog.enkr1.com</code> and select
+<strong>CNAME</strong>.</li>
+<li>Ensure it's correctly pointing to <code>enkr1.github.io</code>.</li>
+</ul>
+<p>If everything looks good, you're ready for the next step!</p>
+<hr />
+<h3 id="configure-the-custom-domain-in-github-pages">3. Configure the
+Custom Domain in GitHub Pages</h3>
+<p>Next, let GitHub know about your shiny new subdomain.</p>
+<ul>
+<li>Open the <strong>GitHub repository</strong> where your website is
+hosted (in my case, for <code>blog.enkr1.com</code>).</li>
+<li>Go to <strong>Settings</strong> → <strong>Pages</strong>.</li>
+<li>In the <strong>Custom Domain</strong> field, type
+<code>blog.enkr1.com</code> and click <strong>Save</strong>.</li>
+</ul>
+<p>This will create a <code>CNAME</code> file in your repository,
+linking your site to the subdomain.</p>
+<hr />
+<h3
+id="enable-https-fixing-the-cname-issue-after-deploying-with-hexo">4.
+Enable HTTPS &amp; Fixing the CNAME Issue After Deploying with Hexo</h3>
+<p>After the DNS propagation finishes (again, this could take up to 24
+hours), you'll want to secure your site with HTTPS.</p>
+<ul>
+<li>Return to <strong>Settings</strong> → <strong>Pages</strong> in your
+GitHub repository.</li>
+<li>Check the <strong>Enforce HTTPS</strong> option (if it's
+available).</li>
+</ul>
+<p>Once HTTPS is enforced, your site will load over a secure
+connection.</p>
+<p><strong>OR;</strong></p>
+<p>If you’re using Hexo to deploy your site to GitHub Pages, you might
+run into an issue where the CNAME gets reset after every deployment,
+causing your custom domain to disappear from the GitHub Pages settings.
+I faced this issue as well, and here's a quick fix for it.</p>
+<p>To prevent the CNAME from getting wiped during deployment, simply
+create a <code>CNAME</code> file in the <code>source/</code> folder of
+your Hexo project.</p>
+<p>Here's how:</p>
+<ol type="1">
+<li><p><strong>Navigate to your Hexo project's source
+directory</strong>: <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/hexo/source</span><br></pre></td></tr></table></figure></p></li>
+<li><p><strong>Create a <code>CNAME</code> file</strong> in the
+<code>source/</code> directory: <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">&quot;blog.enkr1.com&quot;</span> &gt; CNAME</span><br></pre></td></tr></table></figure></p>
+<p>Replace <code>blog.enkr1.com</code> with your custom domain.</p></li>
+<li><p><strong>Deploy your Hexo site</strong>: Run your normal deploy
+command: <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure></p></li>
+</ol>
+<p>Now, the <code>CNAME</code> file will be deployed along with your
+site, ensuring that your custom domain stays intact after each
+deployment.</p>
+<hr />
+<h3 id="wait-for-propagation-and-test-your-subdomain">5. Wait for
+Propagation and Test Your Subdomain</h3>
+<p>Now it's just a waiting game. Once DNS propagation is complete:</p>
+<ul>
+<li>Go to <code>https://blog.enkr1.com</code> and make sure your GitHub
+Pages site loads correctly.</li>
+<li>Double-check in <strong>Settings</strong> that HTTPS is
+enabled.</li>
+</ul>
+<p>If everything is working, congratulations—you've just set up a
+subdomain on GitHub Pages! 🎉</p>
+<hr />
+<h2 id="troubleshooting">Troubleshooting</h2>
+<p>Even if you follow the steps perfectly, there are always those
+annoying issues that can pop up. Here are a few possible solutions if
+you hit a roadblock:</p>
+<ul>
+<li><strong>InvalidDNSError</strong>:
+<ul>
+<li>This usually means your CNAME record isn't configured correctly or
+hasn't propagated yet. Use tools like <strong>DNSChecker</strong> to
+ensure that <code>blog.enkr1.com</code> points to
+<code>enkr1.github.io</code>.</li>
+<li>Double-check the DNS entry at your domain provider—small typos or
+incorrect hostnames are common issues.</li>
+<li>Make sure your GitHub Pages repository is <strong>public</strong>.
+Private repos won't work with custom domains unless you're on GitHub's
+paid plan.</li>
+</ul></li>
+<li><strong>HTTPS Unavailable</strong>:
+<ul>
+<li>If you can't enable HTTPS, it's likely that the DNS propagation
+hasn't completed. Give it a bit more time and check again.</li>
+<li>If you're still having issues, make sure there aren't conflicting
+DNS records (like an A record) for the same subdomain.</li>
+</ul></li>
+<li><strong>Cross-Domain Issues with Firestore or Other
+Services</strong>:
+<ul>
+<li>Make sure you've correctly set up CORS (Cross-Origin Resource
+Sharing) in your Firestore rules to avoid visitor tracking issues.</li>
+</ul></li>
+</ul>
+<hr />
+<h2 id="conclusion">Conclusion:</h2>
+<p>Setting up a subdomain on GitHub Pages can feel a little frustrating
+at first—especially with DNS propagation times and potential errors—but
+it's all worth it in the end. I hope this guide helps you avoid the same
+headaches I had when setting up <code>blog.enkr1.com</code>. If you run
+into any issues, don't hesitate to reach out, or check the official <a
+target="_blank" rel="noopener" href="https://docs.github.com/en/pages">GitHub Pages
+documentation</a>.</p>
+<p>Your site should now be live, secure, and ready to go! 🚀</p>
+
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2024-07-28T07:10:05+08:00"
-              content="Sun 28 July 2024">
-          07-28
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/journal-week-1/" itemprop="url">
-            <span itemprop="name">Journal: Week 1</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2024-07-22T22:59:19+08:00"
-              content="Mon 22 July 2024">
-          07-22
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/my-crew-beatbox-performance-a-memorable-experience-at-the-new-mini-family-launch/" itemprop="url">
-            <span itemprop="name">My Crew Beatbox Performance: A Memorable Experience at the New MINI Family Launch</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-
+    
+    
+    
+      
+  <div class="popular-posts-header">Related Posts</div>
+  <ul class="popular-posts">
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="/my-domain-setup-dynadot/" rel="bookmark">My Domain Setup: Dynadot</a></div>
+    </li>
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="/my-journey-with-hexo-building-a-blog-from-scratch/" rel="bookmark">My Journey with Hexo - Building a Blog from Scratch</a></div>
+    </li>
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="/shoutout-to-stellar-hexo-blogs/" rel="bookmark">Shoutout to Stellar Hexo Blogs</a></div>
+    </li>
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="/hexo-notebook/" rel="bookmark">Hexo Notebook</a></div>
+    </li>
+  </ul>
+<div class="post-widgets">
+    <div class="likely">
+        <div class="twitter">Tweet</div>
+        <div class="facebook">Share</div>
+        <div class="linkedin">Link</div>
+        <div class="gplus">Plus</div>
+        <div class="vkontakte">Share</div>
+        <div class="odnoklassniki">Class</div>
+        <div class="telegram">Send</div>
+        <div class="whatsapp">Send</div>
+        <div class="pinterest">Pin</div>
     </div>
   </div>
-  
-  
-  
+  <script src="//cdn.jsdelivr.net/npm/ilyabirman-likely@2/release/likely.min.js"></script>
 
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/dns/" rel="tag"># dns</a>
+              <a href="/tags/hexo/" rel="tag"># hexo</a>
+              <a href="/tags/github-pages/" rel="tag"># github-pages</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/journal-week-12/" rel="prev" title="Journal: Week 12">
+      <i class="fa fa-chevron-left"></i> Journal: Week 12
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
   
 
 
 
           </div>
           
+    
+  <div class="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+  </div>
+  
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -467,6 +704,12 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#introduction"><span class="nav-number">1.</span> <span class="nav-text">Introduction:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#steps-to-configure-a-subdomain-on-github-pages"><span class="nav-number">2.</span> <span class="nav-text">Steps to
+Configure a Subdomain on GitHub Pages</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#set-up-the-cname-record-in-your-dns-provider"><span class="nav-number">2.1.</span> <span class="nav-text">1. Set Up the
+CNAME Record in Your DNS Provider</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#verify-the-dns-record"><span class="nav-number">2.2.</span> <span class="nav-text">2. Verify the DNS Record</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#configure-the-custom-domain-in-github-pages"><span class="nav-number">2.3.</span> <span class="nav-text">3. Configure the
+Custom Domain in GitHub Pages</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#enable-https-fixing-the-cname-issue-after-deploying-with-hexo"><span class="nav-number">2.4.</span> <span class="nav-text">4.
+Enable HTTPS &amp; Fixing the CNAME Issue After Deploying with Hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#wait-for-propagation-and-test-your-subdomain"><span class="nav-number">2.5.</span> <span class="nav-text">5. Wait for
+Propagation and Test Your Subdomain</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#troubleshooting"><span class="nav-number">3.</span> <span class="nav-text">Troubleshooting</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#conclusion"><span class="nav-number">4.</span> <span class="nav-text">Conclusion:</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -478,8 +721,7 @@
 <div class="site-state-wrap motion-element">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
+          <a href="/history">
           <span class="site-state-item-count">72</span>
           <span class="site-state-item-name">posts</span>
         </a>
@@ -761,6 +1003,26 @@
   }
   // defer loading until the whole page loading is completed
   window.addEventListener('load', loadCount, false);
+</script>
+<script>
+  var disqus_config = function() {
+    this.page.url = "https://blog.enkr1.com/hexo-how-to-set-up-a-subdomain-on-github-pages-and-fix-cname-issues/";
+    this.page.identifier = "hexo-how-to-set-up-a-subdomain-on-github-pages-and-fix-cname-issues/";
+    this.page.title = "Hexo: How to Set Up a Subdomain on GitHub Pages and Fix CNAME Issues";
+    };
+  NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
+    if (window.DISQUS) {
+      DISQUS.reset({
+        reload: true,
+        config: disqus_config
+      });
+    } else {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://https-enkr1-github-io-blog.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', '' + +new Date());
+      (d.head || d.body).appendChild(s);
+    }
+  });
 </script>
 
 </body>

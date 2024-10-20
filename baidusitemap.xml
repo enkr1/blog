@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://blog.enkr1.com/hexo-configure-subdomain-for-github-pages/</loc>
+    <loc>https://blog.enkr1.com/hexo-how-to-set-up-a-subdomain-on-github-pages-and-fix-cname-issues/</loc>
+    <lastmod>2024-10-20</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.enkr1.com/my-domain-setup-dynadot/</loc>
     <lastmod>2024-10-20</lastmod>
   </url>
   <url>
@@ -255,10 +259,6 @@
   <url>
     <loc>https://blog.enkr1.com/leetcode-194-transpose-file/</loc>
     <lastmod>2024-08-28</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.enkr1.com/my-domain-setup-dynadot/</loc>
-    <lastmod>2024-08-13</lastmod>
   </url>
   <url>
     <loc>https://blog.enkr1.com/a-collection-of-inspirational-mottos-that-guide-my-life/</loc>
