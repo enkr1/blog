@@ -1994,47 +1994,63 @@ NEW: Prevent Quitting Before Request Completes
 -->
   <script>
     console.group(`[DEBUG] firestore.swig`)
-    let isRequestInProgress = false;
-    console.debug(`[DEBUG] isRequestInProgress: ${isRequestInProgress}`)
 
-    window.addEventListener('beforeunload', function (e) {
-      if (isRequestInProgress) {
-        // Display a warning message when the user attempts to leave the page
-        var confirmationMessage = `wait, are you sure you want to leave? we are almost done! 🥺`;
-        // alert(confirmationMessage);
-        e.returnValue = confirmationMessage; // For modern browsers
-        return confirmationMessage; // For legacy browsers
-      }
-    });
+    // let isRequestInProgress = false;
+    // console.debug(`[DEBUG] isRequestInProgress: ${isRequestInProgress}`)
+//
+    // window.addEventListener('beforeunload', function (e) {
+    //   console.debug(`[DEBUG] beforeunload ...`)
+    //   if (isRequestInProgress) {
+    //     // Display a warning message when the user attempts to leave the page
+    //     var confirmationMessage = `wait, are you sure you want to leave? we are almost done! 🥺`;
+    //     console.debug(`[DEBUG] confirmationMessage: ${confirmationMessage}`)
+    //     // alert(confirmationMessage);
+    //     e.returnValue = confirmationMessage; // For modern browsers
+    //     return confirmationMessage; // For legacy browsers
+    //   }
+    // });
   </script>
+
+
+
   <script>
+    console.group(`[DEBUG] firestore.swig`);
+
+    // Initialize Firebase
     firebase.initializeApp({
       apiKey   : 'AIzaSyBxexVzGzOqDUGFzHVT_-oYxkqAetlFUSo',
       projectId: 'hexo-blog-9ccea'
     });
 
-    function getCount(doc, increaseCount) {
+    let isRequestInProgress = false;
+
+    // Function to get count from Firestore
+    function getCount(doc, increaseCount, title) {
       // Mark the request as in progress
       isRequestInProgress = true;
 
-      // IncreaseCount will be false when not in article page
       return doc.get().then(d => {
-        var count = 0;
-        if (!d.exists) { // Has no data, initialize count
+        let count = 0;
+
+        if (!d.exists) {
+          // If there's no data and we need to increase the count
           if (increaseCount) {
-            doc.set({
-              count: 1
-            });
+            doc.set({ count: 1 });
             count = 1;
+
+            // Mark as visited in localStorage after successful Firestore write
+            localStorage.setItem(title, true);
           }
-        } else { // Has data
+        } else {
           count = d.data().count;
+
           if (increaseCount) {
-            // If first view this article
-            doc.set({ // Increase count
-              count: count + 1
-            });
+            // If first view this article, increase count
+            doc.set({ count: count + 1 });
             count++;
+
+            // Mark as visited in localStorage after successful Firestore write
+            localStorage.setItem(title, true);
           }
         }
 
@@ -2044,7 +2060,7 @@ NEW: Prevent Quitting Before Request Completes
         return count;
       }).catch(err => {
         console.error('Error getting document:', err);
-        isRequestInProgress = false; // Ensure to reset the flag even if an error occurs
+        isRequestInProgress = false; // Reset flag even on error
       });
     }
 
@@ -2054,28 +2070,36 @@ NEW: Prevent Quitting Before Request Completes
       }
     }
   </script>
+
+
+
   <script>
     (function() {
       var db = firebase.firestore();
       var articles = db.collection('articles');
 
-      if (CONFIG.page.isPost) { // Is article page
+      if (CONFIG.page.isPost) {
         var title = document.querySelector('.post-title').innerText.trim();
         var doc = articles.doc(title);
         var increaseCount = CONFIG.hostname === location.hostname;
+
+        // Check if the user has already visited the post (localStorage)
         if (localStorage.getItem(title)) {
           increaseCount = false;
-        } else {
-          // Mark as visited
-          localStorage.setItem(title, true);
         }
-        getCount(doc, increaseCount).then(appendCountTo(document.querySelector('.firestore-visitors-count')));
-      } else if (CONFIG.page.isHome) { // Is index page
+
+        // Fetch count and increase only if needed, then update localStorage
+        getCount(doc, increaseCount, title).then(appendCountTo(document.querySelector('.firestore-visitors-count')));
+
+      } else if (CONFIG.page.isHome) {
+        // On the homepage, get counts for all articles
         var promises = [...document.querySelectorAll('.post-title')].map(element => {
           var title = element.innerText.trim();
           var doc = articles.doc(title);
-          return getCount(doc);
+          return getCount(doc, false, title); // No need to increase count on home page
         });
+
+        // Update visitor counts on homepage
         Promise.all(promises).then(counts => {
           var metas = document.querySelectorAll('.firestore-visitors-count');
           counts.forEach((val, idx) => {
@@ -2085,7 +2109,7 @@ NEW: Prevent Quitting Before Request Completes
       }
     })();
 
-    console.groupEnd(`[DEBUG] firestore.swig`)
+    console.groupEnd(`[DEBUG] firestore.swig`);
   </script>
 
 
