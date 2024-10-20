@@ -6,7 +6,7 @@
   <link href="https://blog.enkr1.com/atom.xml" rel="self"/>
   
   <link href="https://blog.enkr1.com/"/>
-  <updated>2024-10-13T18:36:18.182Z</updated>
+  <updated>2024-10-20T13:44:58.843Z</updated>
   <id>https://blog.enkr1.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hexo: Configure Subdomain for GitHub Pages</title>
+    <link href="https://blog.enkr1.com/hexo-configure-subdomain-for-github-pages/"/>
+    <id>https://blog.enkr1.com/hexo-configure-subdomain-for-github-pages/</id>
+    <published>2024-10-20T13:35:20.000Z</published>
+    <updated>2024-10-20T13:44:58.843Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="introduction">Introduction:</h2><p>Running into the <code>InvalidDNSError</code> while trying to set upa subdomain on GitHub Pages? You're not alone! I recently faced thisissue when I tried to set up <code>blog.enkr1.com</code>. After a bit ofback and forth with DNS settings, I figured it out, and here's how youcan do it, too.</p><p>Why did I even bother? Well, it turns out that without setting up thesubdomain, Firestore's visitor tracking wasn't working properly due tocross-domain issues (which I only found out after <strong>sixmonths</strong> when I got an inactivity email from the database! 😂).So, here we go!</p><hr /><h2 id="steps-to-configure-a-subdomain-on-github-pages">Steps toConfigure a Subdomain on GitHub Pages</h2><h3 id="set-up-the-cname-record-in-your-dns-provider">1. Set Up theCNAME Record in Your DNS Provider</h3><p>The first thing you need to do is tell your DNS provider where tosend traffic for your subdomain. Here's how to add a CNAME record:</p><ul><li><p><strong>Log in to your DNS provider</strong> (Dynadot (I am usingthis), GoDaddy, Namecheap, Cloudflare, etc.).</p></li><li><p>Head to the <strong>DNS Management</strong> section for yourdomain (<code>enkr1.com</code>).</p></li><li><p><strong>Create a new CNAME record</strong> with thesedetails:</p><ul><li><strong>Type</strong>: CNAME</li><li><strong>Host</strong>: <code>blog</code> (this is yoursubdomain)</li><li><strong>Points to</strong>: <code>enkr1.github.io</code> (replace<code>enkr1</code> with your GitHub username if different)</li><li><strong>TTL</strong>: Leave it at the default setting (usually 1hour or automatic)</li></ul><p>Example: <figure class="highlight nestedtext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">Type</span><span class="punctuation">:</span> <span class="string">CNAME</span></span><br><span class="line"><span class="attribute">Host</span><span class="punctuation">:</span> <span class="string">blog</span></span><br><span class="line"><span class="attribute">Points to</span><span class="punctuation">:</span> <span class="string">enkr1.github.io</span></span><br></pre></td></tr></table></figure></p></li><li><p><strong>Save</strong> the record and wait for DNS propagation(anywhere from a few minutes to 24 hours, depending on yourprovider).</p></li></ul><hr /><h3 id="verify-the-dns-record">2. Verify the DNS Record</h3><p>Once you've set up the CNAME record, it's time to check if it'spointing in the right direction:</p><ul><li>Use <span class="exturl" data-url="aHR0cHM6Ly9kbnNjaGVja2VyLm9yZy8=">DNSChecker<i class="fa fa-external-link-alt"></i></span> (or a similartool).</li><li>Enter <code>blog.enkr1.com</code> and select<strong>CNAME</strong>.</li><li>Ensure it's correctly pointing to <code>enkr1.github.io</code>.</li></ul><p>If everything looks good, you're ready for the next step!</p><hr /><h3 id="configure-the-custom-domain-in-github-pages">3. Configure theCustom Domain in GitHub Pages</h3><p>Next, let GitHub know about your shiny new subdomain.</p><ul><li>Open the <strong>GitHub repository</strong> where your website ishosted (in my case, for <code>blog.enkr1.com</code>).</li><li>Go to <strong>Settings</strong> → <strong>Pages</strong>.</li><li>In the <strong>Custom Domain</strong> field, type<code>blog.enkr1.com</code> and click <strong>Save</strong>.</li></ul><p>This will create a <code>CNAME</code> file in your repository,linking your site to the subdomain.</p><hr /><h3 id="enable-https">4. Enable HTTPS</h3><p>After the DNS propagation finishes (again, this could take up to 24hours), you'll want to secure your site with HTTPS.</p><ul><li>Return to <strong>Settings</strong> → <strong>Pages</strong> in yourGitHub repository.</li><li>Check the <strong>Enforce HTTPS</strong> option (if it'savailable).</li></ul><p>Once HTTPS is enforced, your site will load over a secureconnection.</p><hr /><h3 id="wait-for-propagation-and-test-your-subdomain">5. Wait forPropagation and Test Your Subdomain</h3><p>Now it's just a waiting game. Once DNS propagation is complete:</p><ul><li>Go to <code>https://blog.enkr1.com</code> and make sure your GitHubPages site loads correctly.</li><li>Double-check in <strong>Settings</strong> that HTTPS isenabled.</li></ul><p>If everything is working, congratulations—you've just set up asubdomain on GitHub Pages! 🎉</p><hr /><h2 id="troubleshooting">Troubleshooting</h2><p>Even if you follow the steps perfectly, there are always thoseannoying issues that can pop up. Here are a few possible solutions ifyou hit a roadblock:</p><ul><li><strong>InvalidDNSError</strong>:<ul><li>This usually means your CNAME record isn't configured correctly orhasn't propagated yet. Use tools like <strong>DNSChecker</strong> toensure that <code>blog.enkr1.com</code> points to<code>enkr1.github.io</code>.</li><li>Double-check the DNS entry at your domain provider—small typos orincorrect hostnames are common issues.</li><li>Make sure your GitHub Pages repository is <strong>public</strong>.Private repos won't work with custom domains unless you're on GitHub'spaid plan.</li></ul></li><li><strong>HTTPS Unavailable</strong>:<ul><li>If you can't enable HTTPS, it's likely that the DNS propagationhasn't completed. Give it a bit more time and check again.</li><li>If you're still having issues, make sure there aren't conflictingDNS records (like an A record) for the same subdomain.</li></ul></li><li><strong>Cross-Domain Issues with Firestore or OtherServices</strong>:<ul><li>Make sure you've correctly set up CORS (Cross-Origin ResourceSharing) in your Firestore rules to avoid visitor tracking issues.</li></ul></li></ul><hr /><h2 id="conclusion">Conclusion:</h2><p>Setting up a subdomain on GitHub Pages can feel a little frustratingat first—especially with DNS propagation times and potential errors—butit's all worth it in the end. I hope this guide helps you avoid the sameheadaches I had when setting up <code>blog.enkr1.com</code>. If you runinto any issues, don't hesitate to reach out, or check the official <ahref="https://docs.github.com/en/pages">GitHub Pagesdocumentation</a>.</p><p>Your site should now be live, secure, and ready to go! 🚀</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;introduction&quot;&gt;Introduction:&lt;/h2&gt;
+&lt;p&gt;Running into the &lt;code&gt;InvalidDNSError&lt;/code&gt; while trying to set up
+a subdomain on GitHub Pages</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Journal: Week 12</title>
@@ -578,37 +600,6 @@ some </summary>
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Work:&lt;/strong&gt; full productivity at work, got a lot of todos
 do</summary>
-      
-    
-    
-    
-    <category term="About Me" scheme="https://blog.enkr1.com/categories/About-Me/"/>
-    
-    <category term="Journals" scheme="https://blog.enkr1.com/categories/About-Me/Journals/"/>
-    
-    <category term="2024" scheme="https://blog.enkr1.com/categories/About-Me/Journals/2024/"/>
-    
-    
-    <category term="journal" scheme="https://blog.enkr1.com/tags/journal/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Journal: Week 3</title>
-    <link href="https://blog.enkr1.com/journal-week-3/"/>
-    <id>https://blog.enkr1.com/journal-week-3/</id>
-    <published>2024-08-11T19:30:11.000Z</published>
-    <updated>2024-10-05T19:28:46.415Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="highlights-of-the-week">Highlights of the Week</h2><ul><li><p><strong>Family Time:</strong> my brother came back from Spainthis week, and it was both great and challenging to reconnect. he'sevolved in many ways—he's grown, learnt, and become a better version ofhimself. however, we also noticed a bit of arrogance and ego creepingin, which made our interactions a bit tense. we wanted to help him seesome of these changes, but our approach came off more like an attackthan a helpful conversation. It reminded me that even with goodintentions, the way you frame your words really matters.</p></li><li><p><strong>Communication Insight:</strong> this week, i reallylearnt the importance of how you frame what you say. It's not just abouthaving good intentions or the right message—it's about delivering thatmessage in a way that others can easily digest and understand. if youframe things poorly, you might convey the wrong meaning, leading toconfusion or even conflict. This idea resonated with me deeply,especially in the context of my work where communication and structuringinformation are crucial, just like how a well-structured JSON makes lifeeasier for the backend developers.</p></li></ul><h2 id="little-lesson">Little Lesson</h2><p>this week i was reminded that communication isn't just about what yousay but how you say it. when you frame your thoughts well, you make iteasier for others to understand and engage with your ideas. this is truein personal conversations, like the ones i had with my brother, and it'salso true in professional settings. just as a well-structured dataobject streamlines coding; clear and thoughtful communication smoothsthe path in life. it's not about giving vague, surface-levelinformation, but about sharing your thoughts in a way that makes senseand is easy to digest for others.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;highlights-of-the-week&quot;&gt;Highlights of the Week&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Family Time:&lt;/strong&gt; my brother came back from Spain
-this w</summary>
       
     
     

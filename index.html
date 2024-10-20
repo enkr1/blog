@@ -286,7 +286,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-history fa-fw"></i>Archives<span class="badge">71</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-history fa-fw"></i>Archives<span class="badge">72</span></a>
 
   </li>
         <li class="menu-item menu-item-platforms">
@@ -1188,6 +1188,247 @@ NOTE: views count
             </div>
           <!--/noindex-->
         
+      
+    </div>
+
+    
+    
+    
+      
+
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://blog.enkr1.com/hexo-configure-subdomain-for-github-pages/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Jing Hui PANG | 彭竞辉 | ENKR">
+      <meta itemprop="description" content="Insights and beats at the intersection of technology and artistry by Jing Hui PANG, also known as ENKR. Discover programming tips, beatbox tutorials, and more.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ENKR's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/hexo-configure-subdomain-for-github-pages/" class="post-title-link" itemprop="url">Hexo: Configure Subdomain for GitHub Pages</a>
+        </h2>
+
+        <div class="post-meta">
+
+<!--
+NOTE: created_at
+-->
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: Sun 20 October 2024 21:35:20 PM / Modified: 21:44:58 PM" itemprop="dateCreated datePublished" datetime="2024-10-20T21:35:20+08:00">Sun 20 October 2024</time>
+            </span>
+
+<!--
+NOTE: created_at
+-->
+<!--
+-->
+
+          
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+              <span>703</span>
+            </span>
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+              <span>3 mins.</span>
+            </span>
+
+<!--
+NOTE: disqus
+-->
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/hexo-configure-subdomain-for-github-pages/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="hexo-configure-subdomain-for-github-pages/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+<!--
+NOTE: views count
+-->
+            <span class="post-meta-item" title="Views">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-users"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <b><span class="firestore-visitors-count"></span></b>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="introduction">Introduction:</h2>
+<p>Running into the <code>InvalidDNSError</code> while trying to set up
+a subdomain on GitHub Pages? You're not alone! I recently faced this
+issue when I tried to set up <code>blog.enkr1.com</code>. After a bit of
+back and forth with DNS settings, I figured it out, and here's how you
+can do it, too.</p>
+<p>Why did I even bother? Well, it turns out that without setting up the
+subdomain, Firestore's visitor tracking wasn't working properly due to
+cross-domain issues (which I only found out after <strong>six
+months</strong> when I got an inactivity email from the database! 😂).
+So, here we go!</p>
+<hr />
+<h2 id="steps-to-configure-a-subdomain-on-github-pages">Steps to
+Configure a Subdomain on GitHub Pages</h2>
+<h3 id="set-up-the-cname-record-in-your-dns-provider">1. Set Up the
+CNAME Record in Your DNS Provider</h3>
+<p>The first thing you need to do is tell your DNS provider where to
+send traffic for your subdomain. Here's how to add a CNAME record:</p>
+<ul>
+<li><p><strong>Log in to your DNS provider</strong> (Dynadot (I am using
+this), GoDaddy, Namecheap, Cloudflare, etc.).</p></li>
+<li><p>Head to the <strong>DNS Management</strong> section for your
+domain (<code>enkr1.com</code>).</p></li>
+<li><p><strong>Create a new CNAME record</strong> with these
+details:</p>
+<ul>
+<li><strong>Type</strong>: CNAME</li>
+<li><strong>Host</strong>: <code>blog</code> (this is your
+subdomain)</li>
+<li><strong>Points to</strong>: <code>enkr1.github.io</code> (replace
+<code>enkr1</code> with your GitHub username if different)</li>
+<li><strong>TTL</strong>: Leave it at the default setting (usually 1
+hour or automatic)</li>
+</ul>
+<p>Example: <figure class="highlight nestedtext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">Type</span><span class="punctuation">:</span> <span class="string">CNAME</span></span><br><span class="line"><span class="attribute">Host</span><span class="punctuation">:</span> <span class="string">blog</span></span><br><span class="line"><span class="attribute">Points to</span><span class="punctuation">:</span> <span class="string">enkr1.github.io</span></span><br></pre></td></tr></table></figure></p></li>
+<li><p><strong>Save</strong> the record and wait for DNS propagation
+(anywhere from a few minutes to 24 hours, depending on your
+provider).</p></li>
+</ul>
+<hr />
+<h3 id="verify-the-dns-record">2. Verify the DNS Record</h3>
+<p>Once you've set up the CNAME record, it's time to check if it's
+pointing in the right direction:</p>
+<ul>
+<li>Use <span class="exturl" data-url="aHR0cHM6Ly9kbnNjaGVja2VyLm9yZy8=">DNSChecker<i class="fa fa-external-link-alt"></i></span> (or a similar
+tool).</li>
+<li>Enter <code>blog.enkr1.com</code> and select
+<strong>CNAME</strong>.</li>
+<li>Ensure it's correctly pointing to <code>enkr1.github.io</code>.</li>
+</ul>
+<p>If everything looks good, you're ready for the next step!</p>
+<hr />
+<h3 id="configure-the-custom-domain-in-github-pages">3. Configure the
+Custom Domain in GitHub Pages</h3>
+<p>Next, let GitHub know about your shiny new subdomain.</p>
+<ul>
+<li>Open the <strong>GitHub repository</strong> where your website is
+hosted (in my case, for <code>blog.enkr1.com</code>).</li>
+<li>Go to <strong>Settings</strong> → <strong>Pages</strong>.</li>
+<li>In the <strong>Custom Domain</strong> field, type
+<code>blog.enkr1.com</code> and click <strong>Save</strong>.</li>
+</ul>
+<p>This will create a <code>CNAME</code> file in your repository,
+linking your site to the subdomain.</p>
+<hr />
+<h3 id="enable-https">4. Enable HTTPS</h3>
+<p>After the DNS propagation finishes (again, this could take up to 24
+hours), you'll want to secure your site with HTTPS.</p>
+<ul>
+<li>Return to <strong>Settings</strong> → <strong>Pages</strong> in your
+GitHub repository.</li>
+<li>Check the <strong>Enforce HTTPS</strong> option (if it's
+available).</li>
+</ul>
+<p>Once HTTPS is enforced, your site will load over a secure
+connection.</p>
+<hr />
+<h3 id="wait-for-propagation-and-test-your-subdomain">5. Wait for
+Propagation and Test Your Subdomain</h3>
+<p>Now it's just a waiting game. Once DNS propagation is complete:</p>
+<ul>
+<li>Go to <code>https://blog.enkr1.com</code> and make sure your GitHub
+Pages site loads correctly.</li>
+<li>Double-check in <strong>Settings</strong> that HTTPS is
+enabled.</li>
+</ul>
+<p>If everything is working, congratulations—you've just set up a
+subdomain on GitHub Pages! 🎉</p>
+<hr />
+<h2 id="troubleshooting">Troubleshooting</h2>
+<p>Even if you follow the steps perfectly, there are always those
+annoying issues that can pop up. Here are a few possible solutions if
+you hit a roadblock:</p>
+<ul>
+<li><strong>InvalidDNSError</strong>:
+<ul>
+<li>This usually means your CNAME record isn't configured correctly or
+hasn't propagated yet. Use tools like <strong>DNSChecker</strong> to
+ensure that <code>blog.enkr1.com</code> points to
+<code>enkr1.github.io</code>.</li>
+<li>Double-check the DNS entry at your domain provider—small typos or
+incorrect hostnames are common issues.</li>
+<li>Make sure your GitHub Pages repository is <strong>public</strong>.
+Private repos won't work with custom domains unless you're on GitHub's
+paid plan.</li>
+</ul></li>
+<li><strong>HTTPS Unavailable</strong>:
+<ul>
+<li>If you can't enable HTTPS, it's likely that the DNS propagation
+hasn't completed. Give it a bit more time and check again.</li>
+<li>If you're still having issues, make sure there aren't conflicting
+DNS records (like an A record) for the same subdomain.</li>
+</ul></li>
+<li><strong>Cross-Domain Issues with Firestore or Other
+Services</strong>:
+<ul>
+<li>Make sure you've correctly set up CORS (Cross-Origin Resource
+Sharing) in your Firestore rules to avoid visitor tracking issues.</li>
+</ul></li>
+</ul>
+<hr />
+<h2 id="conclusion">Conclusion:</h2>
+<p>Setting up a subdomain on GitHub Pages can feel a little frustrating
+at first—especially with DNS propagation times and potential errors—but
+it's all worth it in the end. I hope this guide helps you avoid the same
+headaches I had when setting up <code>blog.enkr1.com</code>. If you run
+into any issues, don't hesitate to reach out, or check the official <a
+target="_blank" rel="noopener" href="https://docs.github.com/en/pages">GitHub Pages
+documentation</a>.</p>
+<p>Your site should now be live, secure, and ready to go! 🚀</p>
+
       
     </div>
 
@@ -4719,148 +4960,6 @@ to always remember as a developer, project manager, or leader.</p>
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://blog.enkr1.com/journal-week-1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Jing Hui PANG | 彭竞辉 | ENKR">
-      <meta itemprop="description" content="Insights and beats at the intersection of technology and artistry by Jing Hui PANG, also known as ENKR. Discover programming tips, beatbox tutorials, and more.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ENKR's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/journal-week-1/" class="post-title-link" itemprop="url">Journal: Week 1</a>
-        </h2>
-
-        <div class="post-meta">
-
-<!--
-NOTE: created_at
--->
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: Sun 28 July 2024 07:10:05 AM" itemprop="dateCreated datePublished" datetime="2024-07-28T07:10:05+08:00">Sun 28 July 2024</time>
-            </span>
-
-<!--
-NOTE: created_at
--->
-<!--
--->
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: Sun 6 October 2024 03:28:37 AM" itemprop="dateModified" datetime="2024-10-06T03:28:37+08:00">Sun 6 October 2024</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/About-Me/" itemprop="url" rel="index"><span itemprop="name">About Me</span></a>
-                </span>
-                  , 
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/About-Me/Journals/" itemprop="url" rel="index"><span itemprop="name">Journals</span></a>
-                </span>
-                  , 
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/About-Me/Journals/2024/" itemprop="url" rel="index"><span itemprop="name">2024</span></a>
-                </span>
-            </span>
-
-          
-            <span class="post-meta-item" title="Symbols count in article">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-              <span>158</span>
-            </span>
-            <span class="post-meta-item" title="Reading time">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-              <span>1 mins.</span>
-            </span>
-
-<!--
-NOTE: disqus
--->
-  
-  
-
-<!--
-NOTE: views count
--->
-            <span class="post-meta-item" title="Views">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-users"></i>
-              </span>
-              <span class="post-meta-item-text">Views: </span>
-              <b><span class="firestore-visitors-count"></span></b>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>i'm starting a new adventure: journalling! i want to jot down the
-interesting things i learn and experience every week. hopefully, this
-will become a habit, and maybe i'll even start doing it daily.</p>
-<p>why am i doing this? honestly, i'm not sure. but i feel like sharing
-my weekly and daily discoveries with everyone could be fun and
-insightful. let's see where this journey takes us!</p>
-<h2 id="highlights-of-the-week">Highlights of the Week</h2>
-<ul>
-<li><strong>Beatboxing</strong>: got back into beatboxing. it felt so
-good to practise again.</li>
-<li><strong>Quality Time</strong>: caught up with an old friend and
-spent some cherished moments with family.</li>
-<li><strong>Work</strong>: Productive week, amazing session and great
-ideas are brewing!</li>
-</ul>
-<h2 id="little-lesson">Little Lesson</h2>
-<p>this week i learnt from my sister that when you want to convince
-someone on a specific topic, don't straight up jump into the concept you
-think they'll agree on. first, ask if they're thinking in that
-direction. so, thinking out loud is good but always clarify first.</p>
-
-      
-    </div>
-
-    
-    
-    
-      
-
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -4930,7 +5029,7 @@ direction. so, thinking out loud is good but always clarify first.</p>
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">71</span>
+          <span class="site-state-item-count">72</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -4985,12 +5084,12 @@ direction. so, thinking out loud is good but always clarify first.</p>
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="Symbols count total">57k</span>
+    <span title="Symbols count total">58k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">3:28</span>
+    <span title="Reading time total">3:31</span>
 </div>
 
         
