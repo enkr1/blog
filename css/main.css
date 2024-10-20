@@ -1374,7 +1374,7 @@ p {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #a3ff38;
+  background: #cf95ff;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2249,8 +2249,12 @@ p {
 }
 .post-widgets {
   border-top: 1px solid #eee;
-  margin-top: 15px;
+  margin: 3rem 0 0;
   text-align: center;
+}
+.post-widgets .likely {
+  padding: 2rem 0 0;
+  margin: 0;
 }
 .wp_rating {
   height: 20px;

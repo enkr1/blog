@@ -31,7 +31,7 @@
 <meta property="og:description" content="Introduction: Running into the InvalidDNSError while trying to set up a subdomain on GitHub Pages? You&#39;re not alone! I recently faced this issue when I tried to set up blog.enkr1.com. After a bit of b">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2024-10-20T13:35:20.000Z">
-<meta property="article:modified_time" content="2024-10-20T13:44:58.843Z">
+<meta property="article:modified_time" content="2024-10-20T13:56:39.597Z">
 <meta property="article:author" content="Jing Hui PANG | 彭竞辉 | ENKR">
 <meta property="article:tag" content="ENKR">
 <meta property="article:tag" content="Jing Hui PANG">
@@ -385,7 +385,7 @@ NOTE: created_at
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: Sun 20 October 2024 21:35:20 PM / Modified: 21:44:58 PM" itemprop="dateCreated datePublished" datetime="2024-10-20T21:35:20+08:00">Sun 20 October 2024</time>
+              <time title="Created: Sun 20 October 2024 21:35:20 PM / Modified: 21:56:39 PM" itemprop="dateCreated datePublished" datetime="2024-10-20T21:35:20+08:00">Sun 20 October 2024</time>
             </span>
 
 <!--
@@ -399,7 +399,7 @@ NOTE: created_at
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-              <span>703</span>
+              <span>852</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
@@ -511,7 +511,9 @@ hosted (in my case, for <code>blog.enkr1.com</code>).</li>
 <p>This will create a <code>CNAME</code> file in your repository,
 linking your site to the subdomain.</p>
 <hr />
-<h3 id="enable-https">4. Enable HTTPS</h3>
+<h3
+id="enable-https-fixing-the-cname-issue-after-deploying-with-hexo">4.
+Enable HTTPS &amp; Fixing the CNAME Issue After Deploying with Hexo</h3>
 <p>After the DNS propagation finishes (again, this could take up to 24
 hours), you'll want to secure your site with HTTPS.</p>
 <ul>
@@ -522,6 +524,27 @@ available).</li>
 </ul>
 <p>Once HTTPS is enforced, your site will load over a secure
 connection.</p>
+<p><strong>OR;</strong></p>
+<p>If you’re using Hexo to deploy your site to GitHub Pages, you might
+run into an issue where the CNAME gets reset after every deployment,
+causing your custom domain to disappear from the GitHub Pages settings.
+I faced this issue as well, and here's a quick fix for it.</p>
+<p>To prevent the CNAME from getting wiped during deployment, simply
+create a <code>CNAME</code> file in the <code>source/</code> folder of
+your Hexo project.</p>
+<p>Here's how:</p>
+<ol type="1">
+<li><p><strong>Navigate to your Hexo project's source
+directory</strong>: <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/hexo/source</span><br></pre></td></tr></table></figure></p></li>
+<li><p><strong>Create a <code>CNAME</code> file</strong> in the
+<code>source/</code> directory: <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">&quot;blog.enkr1.com&quot;</span> &gt; CNAME</span><br></pre></td></tr></table></figure></p>
+<p>Replace <code>blog.enkr1.com</code> with your custom domain.</p></li>
+<li><p><strong>Deploy your Hexo site</strong>: Run your normal deploy
+command: <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure></p></li>
+</ol>
+<p>Now, the <code>CNAME</code> file will be deployed along with your
+site, ensuring that your custom domain stays intact after each
+deployment.</p>
 <hr />
 <h3 id="wait-for-propagation-and-test-your-subdomain">5. Wait for
 Propagation and Test Your Subdomain</h3>
@@ -678,7 +701,8 @@ documentation</a>.</p>
           <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#introduction"><span class="nav-number">1.</span> <span class="nav-text">Introduction:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#steps-to-configure-a-subdomain-on-github-pages"><span class="nav-number">2.</span> <span class="nav-text">Steps to
 Configure a Subdomain on GitHub Pages</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#set-up-the-cname-record-in-your-dns-provider"><span class="nav-number">2.1.</span> <span class="nav-text">1. Set Up the
 CNAME Record in Your DNS Provider</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#verify-the-dns-record"><span class="nav-number">2.2.</span> <span class="nav-text">2. Verify the DNS Record</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#configure-the-custom-domain-in-github-pages"><span class="nav-number">2.3.</span> <span class="nav-text">3. Configure the
-Custom Domain in GitHub Pages</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#enable-https"><span class="nav-number">2.4.</span> <span class="nav-text">4. Enable HTTPS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#wait-for-propagation-and-test-your-subdomain"><span class="nav-number">2.5.</span> <span class="nav-text">5. Wait for
+Custom Domain in GitHub Pages</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#enable-https-fixing-the-cname-issue-after-deploying-with-hexo"><span class="nav-number">2.4.</span> <span class="nav-text">4.
+Enable HTTPS &amp; Fixing the CNAME Issue After Deploying with Hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#wait-for-propagation-and-test-your-subdomain"><span class="nav-number">2.5.</span> <span class="nav-text">5. Wait for
 Propagation and Test Your Subdomain</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#troubleshooting"><span class="nav-number">3.</span> <span class="nav-text">Troubleshooting</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#conclusion"><span class="nav-number">4.</span> <span class="nav-text">Conclusion:</span></a></li></ol></div>
       </div>
       <!--/noindex-->

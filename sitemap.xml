@@ -764,28 +764,21 @@
   </url>
   
   <url>
-    <loc>https://blog.enkr1.com/tags/math/</loc>
+    <loc>https://blog.enkr1.com/tags/database-design/</loc>
     <lastmod>2024-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog.enkr1.com/tags/java/</loc>
+    <loc>https://blog.enkr1.com/tags/backend/</loc>
     <lastmod>2024-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog.enkr1.com/tags/gcd/</loc>
-    <lastmod>2024-10-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.enkr1.com/tags/greatest-common-divisor/</loc>
+    <loc>https://blog.enkr1.com/tags/sql/</loc>
     <lastmod>2024-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -827,21 +820,28 @@
   </url>
   
   <url>
-    <loc>https://blog.enkr1.com/tags/database-design/</loc>
+    <loc>https://blog.enkr1.com/tags/math/</loc>
     <lastmod>2024-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog.enkr1.com/tags/backend/</loc>
+    <loc>https://blog.enkr1.com/tags/java/</loc>
     <lastmod>2024-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog.enkr1.com/tags/sql/</loc>
+    <loc>https://blog.enkr1.com/tags/gcd/</loc>
+    <lastmod>2024-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.enkr1.com/tags/greatest-common-divisor/</loc>
     <lastmod>2024-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -849,27 +849,6 @@
   
   <url>
     <loc>https://blog.enkr1.com/tags/dynamic-programming/</loc>
-    <lastmod>2024-10-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.enkr1.com/tags/greedy-algorithm/</loc>
-    <lastmod>2024-10-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.enkr1.com/tags/two-pointer/</loc>
-    <lastmod>2024-10-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.enkr1.com/tags/technical-interview-prep/</loc>
     <lastmod>2024-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -911,6 +890,13 @@
   </url>
   
   <url>
+    <loc>https://blog.enkr1.com/tags/technical-interview-prep/</loc>
+    <lastmod>2024-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.enkr1.com/tags/dns/</loc>
     <lastmod>2024-10-20</lastmod>
     <changefreq>weekly</changefreq>
@@ -932,6 +918,20 @@
   </url>
   
   <url>
+    <loc>https://blog.enkr1.com/tags/greedy-algorithm/</loc>
+    <lastmod>2024-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.enkr1.com/tags/two-pointer/</loc>
+    <lastmod>2024-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.enkr1.com/tags/programming/</loc>
     <lastmod>2024-10-20</lastmod>
     <changefreq>weekly</changefreq>
@@ -940,6 +940,13 @@
   
   <url>
     <loc>https://blog.enkr1.com/tags/data-structures/</loc>
+    <lastmod>2024-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.enkr1.com/tags/interesting/</loc>
     <lastmod>2024-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -988,13 +995,6 @@
   </url>
   
   <url>
-    <loc>https://blog.enkr1.com/tags/tiktok/</loc>
-    <lastmod>2024-10-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.enkr1.com/tags/journal/</loc>
     <lastmod>2024-10-20</lastmod>
     <changefreq>weekly</changefreq>
@@ -1002,7 +1002,7 @@
   </url>
   
   <url>
-    <loc>https://blog.enkr1.com/tags/interesting/</loc>
+    <loc>https://blog.enkr1.com/tags/tiktok/</loc>
     <lastmod>2024-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1016,6 +1016,13 @@
   </url>
   
   <url>
+    <loc>https://blog.enkr1.com/tags/dynamic-programming/</loc>
+    <lastmod>2024-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.enkr1.com/tags/interview-preparation/</loc>
     <lastmod>2024-10-20</lastmod>
     <changefreq>weekly</changefreq>
@@ -1023,21 +1030,7 @@
   </url>
   
   <url>
-    <loc>https://blog.enkr1.com/tags/min-heap/</loc>
-    <lastmod>2024-10-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.enkr1.com/tags/priority-queue/</loc>
-    <lastmod>2024-10-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.enkr1.com/tags/dynamic-programming/</loc>
+    <loc>https://blog.enkr1.com/tags/top-interview-150/</loc>
     <lastmod>2024-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1058,28 +1051,21 @@
   </url>
   
   <url>
+    <loc>https://blog.enkr1.com/tags/min-heap/</loc>
+    <lastmod>2024-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.enkr1.com/tags/priority-queue/</loc>
+    <lastmod>2024-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.enkr1.com/tags/bash/</loc>
-    <lastmod>2024-10-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.enkr1.com/tags/beatbox/</loc>
-    <lastmod>2024-10-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.enkr1.com/tags/beatbox-crew/</loc>
-    <lastmod>2024-10-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.enkr1.com/tags/learning/</loc>
     <lastmod>2024-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1121,7 +1107,21 @@
   </url>
   
   <url>
-    <loc>https://blog.enkr1.com/tags/top-interview-150/</loc>
+    <loc>https://blog.enkr1.com/tags/beatbox/</loc>
+    <lastmod>2024-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.enkr1.com/tags/beatbox-crew/</loc>
+    <lastmod>2024-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.enkr1.com/tags/learning/</loc>
     <lastmod>2024-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1142,14 +1142,21 @@
   </url>
   
   <url>
-    <loc>https://blog.enkr1.com/tags/bytedance/</loc>
+    <loc>https://blog.enkr1.com/tags/personal-goals/</loc>
     <lastmod>2024-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog.enkr1.com/tags/software-engineering/</loc>
+    <loc>https://blog.enkr1.com/tags/career-development/</loc>
+    <lastmod>2024-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.enkr1.com/tags/professional-growth/</loc>
     <lastmod>2024-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1233,21 +1240,14 @@
   </url>
   
   <url>
-    <loc>https://blog.enkr1.com/tags/personal-goals/</loc>
+    <loc>https://blog.enkr1.com/tags/bytedance/</loc>
     <lastmod>2024-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog.enkr1.com/tags/career-development/</loc>
-    <lastmod>2024-10-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.enkr1.com/tags/professional-growth/</loc>
+    <loc>https://blog.enkr1.com/tags/software-engineering/</loc>
     <lastmod>2024-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1289,6 +1289,62 @@
   </url>
   
   <url>
+    <loc>https://blog.enkr1.com/tags/unsupervised-learning/</loc>
+    <lastmod>2024-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.enkr1.com/tags/clustering/</loc>
+    <lastmod>2024-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.enkr1.com/tags/dimensionality-reduction/</loc>
+    <lastmod>2024-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.enkr1.com/tags/mini/</loc>
+    <lastmod>2024-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.enkr1.com/tags/photography/</loc>
+    <lastmod>2024-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.enkr1.com/tags/event/</loc>
+    <lastmod>2024-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.enkr1.com/tags/mysql/</loc>
+    <lastmod>2024-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.enkr1.com/tags/postgresql/</loc>
+    <lastmod>2024-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.enkr1.com/tags/tips-and-tricks/</loc>
     <lastmod>2024-10-20</lastmod>
     <changefreq>weekly</changefreq>
@@ -1317,27 +1373,6 @@
   </url>
   
   <url>
-    <loc>https://blog.enkr1.com/tags/mini/</loc>
-    <lastmod>2024-10-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.enkr1.com/tags/photography/</loc>
-    <lastmod>2024-10-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.enkr1.com/tags/event/</loc>
-    <lastmod>2024-10-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.enkr1.com/tags/coding-styles/</loc>
     <lastmod>2024-10-20</lastmod>
     <changefreq>weekly</changefreq>
@@ -1345,21 +1380,14 @@
   </url>
   
   <url>
-    <loc>https://blog.enkr1.com/tags/mysql/</loc>
+    <loc>https://blog.enkr1.com/tags/designing/</loc>
     <lastmod>2024-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog.enkr1.com/tags/postgresql/</loc>
-    <lastmod>2024-10-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.enkr1.com/tags/book/</loc>
+    <loc>https://blog.enkr1.com/tags/frontend/</loc>
     <lastmod>2024-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1401,41 +1429,6 @@
   </url>
   
   <url>
-    <loc>https://blog.enkr1.com/tags/unsupervised-learning/</loc>
-    <lastmod>2024-10-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.enkr1.com/tags/clustering/</loc>
-    <lastmod>2024-10-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.enkr1.com/tags/dimensionality-reduction/</loc>
-    <lastmod>2024-10-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.enkr1.com/tags/designing/</loc>
-    <lastmod>2024-10-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.enkr1.com/tags/frontend/</loc>
-    <lastmod>2024-10-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.enkr1.com/tags/vim/</loc>
     <lastmod>2024-10-20</lastmod>
     <changefreq>weekly</changefreq>
@@ -1463,17 +1456,17 @@
     <priority>0.2</priority>
   </url>
   
-
-  
   <url>
-    <loc>https://blog.enkr1.com/categories/Software-Engineering/</loc>
+    <loc>https://blog.enkr1.com/tags/book/</loc>
     <lastmod>2024-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
+
+  
   <url>
-    <loc>https://blog.enkr1.com/categories/Software-Engineering/Programming-Languages/</loc>
+    <loc>https://blog.enkr1.com/categories/Software-Engineering/</loc>
     <lastmod>2024-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1487,7 +1480,7 @@
   </url>
   
   <url>
-    <loc>https://blog.enkr1.com/categories/Software-Engineering/Software-Engineering-Best-Practices/</loc>
+    <loc>https://blog.enkr1.com/categories/Software-Engineering/Programming-Languages/</loc>
     <lastmod>2024-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1501,14 +1494,7 @@
   </url>
   
   <url>
-    <loc>https://blog.enkr1.com/categories/Software-Engineering/Configurations/</loc>
-    <lastmod>2024-10-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.enkr1.com/categories/Software-Engineering/Programming-Languages/SQL/</loc>
+    <loc>https://blog.enkr1.com/categories/Software-Engineering/Software-Engineering-Best-Practices/</loc>
     <lastmod>2024-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1516,6 +1502,20 @@
   
   <url>
     <loc>https://blog.enkr1.com/categories/Software-Engineering/Computer-Networking/</loc>
+    <lastmod>2024-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.enkr1.com/categories/Software-Engineering/Configurations/</loc>
+    <lastmod>2024-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.enkr1.com/categories/Other/</loc>
     <lastmod>2024-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1543,7 +1543,7 @@
   </url>
   
   <url>
-    <loc>https://blog.enkr1.com/categories/Other/</loc>
+    <loc>https://blog.enkr1.com/categories/Software-Engineering/Programming-Languages/SQL/</loc>
     <lastmod>2024-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1557,13 +1557,6 @@
   </url>
   
   <url>
-    <loc>https://blog.enkr1.com/categories/Software-Engineering/Coding-Problems/</loc>
-    <lastmod>2024-10-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.enkr1.com/categories/Software-Engineering/Configurations/DNS/</loc>
     <lastmod>2024-10-20</lastmod>
     <changefreq>weekly</changefreq>
@@ -1571,14 +1564,7 @@
   </url>
   
   <url>
-    <loc>https://blog.enkr1.com/categories/Career-Development/Interviews/</loc>
-    <lastmod>2024-10-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.enkr1.com/categories/About-Me/Journals/</loc>
+    <loc>https://blog.enkr1.com/categories/Software-Engineering/Coding-Problems/</loc>
     <lastmod>2024-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1592,7 +1578,7 @@
   </url>
   
   <url>
-    <loc>https://blog.enkr1.com/categories/Career-Development/Project-Management/</loc>
+    <loc>https://blog.enkr1.com/categories/Career-Development/Interviews/</loc>
     <lastmod>2024-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1606,35 +1592,7 @@
   </url>
   
   <url>
-    <loc>https://blog.enkr1.com/categories/Career-Development/Interviews/Technical-Coding-Interviews/</loc>
-    <lastmod>2024-10-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.enkr1.com/categories/About-Me/Journals/2024/</loc>
-    <lastmod>2024-10-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.enkr1.com/categories/Career-Development/Interviews/Interview-Preparation/</loc>
-    <lastmod>2024-10-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.enkr1.com/categories/Career-Development/Project-Management/Leadership-Skills/</loc>
-    <lastmod>2024-10-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.enkr1.com/categories/About-Me/Hobbies/Beatboxing/</loc>
+    <loc>https://blog.enkr1.com/categories/About-Me/Journals/</loc>
     <lastmod>2024-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1648,14 +1606,7 @@
   </url>
   
   <url>
-    <loc>https://blog.enkr1.com/categories/Software-Engineering/Frameworks/Hexo/</loc>
-    <lastmod>2024-10-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.enkr1.com/categories/Software-Engineering/Frameworks/Phoenix/</loc>
+    <loc>https://blog.enkr1.com/categories/Personal-Development/Inspirational-Insights/</loc>
     <lastmod>2024-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1669,13 +1620,6 @@
   </url>
   
   <url>
-    <loc>https://blog.enkr1.com/categories/Personal-Development/Inspirational-Insights/</loc>
-    <lastmod>2024-10-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.enkr1.com/categories/Personal-Development/Online-Courses/</loc>
     <lastmod>2024-10-20</lastmod>
     <changefreq>weekly</changefreq>
@@ -1683,7 +1627,42 @@
   </url>
   
   <url>
-    <loc>https://blog.enkr1.com/categories/Personal-Development/Online-Courses/MIT-IDSS-AI-ML/</loc>
+    <loc>https://blog.enkr1.com/categories/Career-Development/Project-Management/</loc>
+    <lastmod>2024-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.enkr1.com/categories/Career-Development/Interviews/Technical-Coding-Interviews/</loc>
+    <lastmod>2024-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.enkr1.com/categories/About-Me/Hobbies/Beatboxing/</loc>
+    <lastmod>2024-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.enkr1.com/categories/About-Me/Journals/2024/</loc>
+    <lastmod>2024-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.enkr1.com/categories/Software-Engineering/Frameworks/Phoenix/</loc>
+    <lastmod>2024-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.enkr1.com/categories/Software-Engineering/Frameworks/Hexo/</loc>
     <lastmod>2024-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1697,14 +1676,28 @@
   </url>
   
   <url>
-    <loc>https://blog.enkr1.com/categories/Software-Engineering/Programming-Languages/Bash/</loc>
+    <loc>https://blog.enkr1.com/categories/Personal-Development/Online-Courses/MIT-IDSS-AI-ML/</loc>
     <lastmod>2024-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog.enkr1.com/categories/Software-Engineering/Programming-Languages/Elixir/</loc>
+    <loc>https://blog.enkr1.com/categories/Career-Development/Project-Management/Leadership-Skills/</loc>
+    <lastmod>2024-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.enkr1.com/categories/Career-Development/Interviews/Interview-Preparation/</loc>
+    <lastmod>2024-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.enkr1.com/categories/Software-Engineering/Machine-Learning-AI/</loc>
     <lastmod>2024-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1718,7 +1711,28 @@
   </url>
   
   <url>
+    <loc>https://blog.enkr1.com/categories/Software-Engineering/Programming-Languages/Elixir/</loc>
+    <lastmod>2024-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.enkr1.com/categories/Software-Engineering/Programming-Languages/Java/</loc>
+    <lastmod>2024-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.enkr1.com/categories/Software-Engineering/Programming-Languages/JavaScript/</loc>
+    <lastmod>2024-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.enkr1.com/categories/Software-Engineering/Programming-Languages/Bash/</loc>
     <lastmod>2024-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1739,7 +1753,7 @@
   </url>
   
   <url>
-    <loc>https://blog.enkr1.com/categories/Personal-Development/Reading-Materials/</loc>
+    <loc>https://blog.enkr1.com/categories/Software-Engineering/Web-Development/</loc>
     <lastmod>2024-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1753,20 +1767,6 @@
   </url>
   
   <url>
-    <loc>https://blog.enkr1.com/categories/Software-Engineering/Web-Development/</loc>
-    <lastmod>2024-10-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.enkr1.com/categories/Software-Engineering/Machine-Learning-AI/</loc>
-    <lastmod>2024-10-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.enkr1.com/categories/Software-Engineering/Web-Development/Front-end/</loc>
     <lastmod>2024-10-20</lastmod>
     <changefreq>weekly</changefreq>
@@ -1774,14 +1774,14 @@
   </url>
   
   <url>
-    <loc>https://blog.enkr1.com/categories/Software-Engineering/Programming-Languages/JavaScript/</loc>
+    <loc>https://blog.enkr1.com/categories/Software-Engineering/Development-Tools/</loc>
     <lastmod>2024-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog.enkr1.com/categories/Software-Engineering/Development-Tools/</loc>
+    <loc>https://blog.enkr1.com/categories/Personal-Development/Reading-Materials/</loc>
     <lastmod>2024-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
