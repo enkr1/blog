@@ -201,11 +201,11 @@
             
             <tag> leetcode </tag>
             
+            <tag> interview-preparation </tag>
+            
             <tag> leetcode-medium </tag>
             
             <tag> dynamic-programming </tag>
-            
-            <tag> interview-preparation </tag>
             
             <tag> top-interview-150 </tag>
             
@@ -240,11 +240,11 @@
             
             <tag> leetcode </tag>
             
+            <tag> interview-preparation </tag>
+            
             <tag> leetcode-medium </tag>
             
             <tag> dynamic-programming </tag>
-            
-            <tag> interview-preparation </tag>
             
         </tags>
       
@@ -335,9 +335,9 @@
             
             <tag> leetcode </tag>
             
-            <tag> interview-preparation </tag>
-            
             <tag> leetcode-easy </tag>
+            
+            <tag> interview-preparation </tag>
             
             <tag> array-manipulation </tag>
             
@@ -498,11 +498,11 @@
             
             <tag> leetcode </tag>
             
+            <tag> interview-preparation </tag>
+            
             <tag> leetcode-medium </tag>
             
             <tag> dynamic-programming </tag>
-            
-            <tag> interview-preparation </tag>
             
             <tag> min-heap </tag>
             
@@ -539,9 +539,9 @@
             
             <tag> leetcode </tag>
             
-            <tag> interview-preparation </tag>
-            
             <tag> leetcode-easy </tag>
+            
+            <tag> interview-preparation </tag>
             
             <tag> binary-search </tag>
             
@@ -818,9 +818,9 @@
             
             <tag> leetcode </tag>
             
-            <tag> leetcode-medium </tag>
-            
             <tag> interview-preparation </tag>
+            
+            <tag> leetcode-medium </tag>
             
             <tag> top-interview-150 </tag>
             
@@ -859,11 +859,11 @@
             
             <tag> leetcode </tag>
             
+            <tag> leetcode-easy </tag>
+            
             <tag> interview-preparation </tag>
             
             <tag> bash </tag>
-            
-            <tag> leetcode-easy </tag>
             
         </tags>
       
@@ -892,9 +892,9 @@
             
             <tag> leetcode </tag>
             
-            <tag> leetcode-medium </tag>
-            
             <tag> interview-preparation </tag>
+            
+            <tag> leetcode-medium </tag>
             
             <tag> bash </tag>
             
@@ -925,9 +925,9 @@
             
             <tag> leetcode </tag>
             
-            <tag> leetcode-medium </tag>
-            
             <tag> interview-preparation </tag>
+            
+            <tag> leetcode-medium </tag>
             
             <tag> bash </tag>
             
@@ -995,6 +995,8 @@
             
             <tag> leetcode </tag>
             
+            <tag> tiktok </tag>
+            
             <tag> site-reliability-engineer </tag>
             
             <tag> sre </tag>
@@ -1004,8 +1006,6 @@
             <tag> coding-interview </tag>
             
             <tag> job-interview </tag>
-            
-            <tag> tiktok </tag>
             
         </tags>
       
@@ -1036,8 +1036,6 @@
             
             <tag> leetcode </tag>
             
-            <tag> google </tag>
-            
             <tag> site-reliability-engineer </tag>
             
             <tag> sre </tag>
@@ -1047,6 +1045,8 @@
             <tag> coding-interview </tag>
             
             <tag> job-interview </tag>
+            
+            <tag> google </tag>
             
         </tags>
       
@@ -1373,11 +1373,11 @@
           
           <category> Software Engineering </category>
           
+          <category> My Notes </category>
+          
           <category> Software Engineering Best Practices </category>
           
           <category> Career Development </category>
-          
-          <category> My Notes </category>
           
           <category> Interviews </category>
           
@@ -1470,9 +1470,9 @@
           
           <category> Software Engineering </category>
           
-          <category> Computer Networking </category>
-          
           <category> My Notes </category>
+          
+          <category> Computer Networking </category>
           
       </categories>
       
@@ -1895,9 +1895,9 @@
           
           <category> Software Engineering </category>
           
-          <category> Personal Development </category>
-          
           <category> My Notes </category>
+          
+          <category> Personal Development </category>
           
           <category> Online Courses </category>
           
@@ -1969,9 +1969,9 @@
           
           <category> Software Engineering </category>
           
-          <category> Personal Development </category>
-          
           <category> My Notes </category>
+          
+          <category> Personal Development </category>
           
           <category> Online Courses </category>
           
@@ -2012,9 +2012,9 @@
           
           <category> Software Engineering </category>
           
-          <category> Personal Development </category>
-          
           <category> My Notes </category>
+          
+          <category> Personal Development </category>
           
           <category> Online Courses </category>
           
@@ -2055,9 +2055,9 @@
           
           <category> Software Engineering </category>
           
-          <category> Personal Development </category>
-          
           <category> My Notes </category>
+          
+          <category> Personal Development </category>
           
           <category> Online Courses </category>
           
@@ -2098,9 +2098,9 @@
           
           <category> Software Engineering </category>
           
-          <category> Personal Development </category>
-          
           <category> My Notes </category>
+          
+          <category> Personal Development </category>
           
           <category> Online Courses </category>
           
@@ -2135,9 +2135,9 @@
           
           <category> Software Engineering </category>
           
-          <category> Personal Development </category>
-          
           <category> My Notes </category>
+          
+          <category> Personal Development </category>
           
           <category> Online Courses </category>
           
@@ -2178,9 +2178,9 @@
           
           <category> Software Engineering </category>
           
-          <category> Personal Development </category>
-          
           <category> My Notes </category>
+          
+          <category> Personal Development </category>
           
           <category> Online Courses </category>
           
@@ -2221,9 +2221,9 @@
           
           <category> Software Engineering </category>
           
-          <category> Personal Development </category>
-          
           <category> My Notes </category>
+          
+          <category> Personal Development </category>
           
           <category> Online Courses </category>
           
@@ -2365,9 +2365,9 @@
       
       <categories>
           
-          <category> Personal Development </category>
-          
           <category> My Notes </category>
+          
+          <category> Personal Development </category>
           
           <category> Online Courses </category>
           
