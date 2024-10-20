@@ -556,7 +556,7 @@ improving!</p>
       <div class="popular-posts-title"><a href="/leetcode-139-word-break/" rel="bookmark">LeetCode-139: Word Break</a></div>
     </li>
     <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="/leetcode-1642-furthest-building-you-can-reach/" rel="bookmark">LeetCode-1642: Furthest Building You Can Reach</a></div>
+      <div class="popular-posts-title"><a href="/leetcode-189-rotate-array/" rel="bookmark">LeetCode-189: Rotate Array</a></div>
     </li>
   </ul>
 <div class="post-widgets">
@@ -851,7 +851,8 @@ NEW: Prevent Quitting Before Request Completes
         if (!d.exists) {
           // If there's no data and we need to increase the count
           if (increaseCount) {
-            doc.set({ count: 1 });
+            // NOTE: https://firebase.google.com/docs/firestore/manage-data/add-data
+            await doc.set({ count: 1 });
             count = 1;
 
             // Mark as visited in localStorage after successful Firestore write
@@ -862,7 +863,7 @@ NEW: Prevent Quitting Before Request Completes
 
           if (increaseCount) {
             // If first view this article, increase count
-            doc.set({ count: count + 1 });
+            await doc.set({ count: count + 1 });
             count++;
 
             // Mark as visited in localStorage after successful Firestore write

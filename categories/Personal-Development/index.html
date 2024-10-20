@@ -833,7 +833,8 @@ NEW: Prevent Quitting Before Request Completes
         if (!d.exists) {
           // If there's no data and we need to increase the count
           if (increaseCount) {
-            doc.set({ count: 1 });
+            // NOTE: https://firebase.google.com/docs/firestore/manage-data/add-data
+            await doc.set({ count: 1 });
             count = 1;
 
             // Mark as visited in localStorage after successful Firestore write
@@ -844,7 +845,7 @@ NEW: Prevent Quitting Before Request Completes
 
           if (increaseCount) {
             // If first view this article, increase count
-            doc.set({ count: count + 1 });
+            await doc.set({ count: count + 1 });
             count++;
 
             // Mark as visited in localStorage after successful Firestore write
