@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://blog.enkr1.com/my-leetcode-journey-from-novice-to-bytedance-software-engineer/</loc>
+    <lastmod>2024-10-22</lastmod>
+  </url>
+  <url>
     <loc>https://blog.enkr1.com/design-inspirations/</loc>
     <lastmod>2024-10-22</lastmod>
   </url>
@@ -251,10 +255,6 @@
   <url>
     <loc>https://blog.enkr1.com/leetcode-189-rotate-array/</loc>
     <lastmod>2024-09-15</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.enkr1.com/my-leetcode-journey-from-novice-to-bytedance-software-engineer/</loc>
-    <lastmod>2024-09-02</lastmod>
   </url>
   <url>
     <loc>https://blog.enkr1.com/my-first-ever-interview-experience-software-engineer-general-gcloud-tech-infra-24x7-site-reliability/</loc>

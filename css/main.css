@@ -1381,7 +1381,7 @@ p {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #1b32ff;
+  background: #21ed1c;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2128,18 +2128,17 @@ p {
   font-size: 2.2rem;
 }
 .posts-expand .post-title-link::before {
-  background: var(--link-color);
+  background: #c60000;
   bottom: 0;
   content: '';
-  height: 2px;
+  height: 1px;
   left: 0;
   position: absolute;
   transform: scaleX(0);
   visibility: hidden;
   width: 100%;
-  transition-delay: 0s;
-  transition-duration: 0.2s;
-  transition-timing-function: ease-in-out;
+  transition: all 0.3s ease-in-out;
+  opacity: 0.5;
 }
 .posts-expand .post-title-link:hover::before {
   transform: scaleX(1);
@@ -2153,13 +2152,13 @@ p {
   color: #999;
   font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
   font-size: 1.1rem;
-  margin: 1rem 0 2.4rem;
+  margin: 1rem 0 1.8rem;
   text-align: center;
 }
 .posts-expand .post-meta .post-description {
-  font-size: 1.3rem;
-  margin-top: 2px;
+  font-size: 1.2rem;
   text-align: justify;
+  margin: 1.3rem 0 0;
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .posts-expand .post-meta .post-description {
