@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://blog.enkr1.com/a-collection-of-inspirational-mottos-that-guide-my-life/</loc>
+    <lastmod>2024-10-22</lastmod>
+  </url>
+  <url>
     <loc>https://blog.enkr1.com/javascript-notebook/</loc>
     <lastmod>2024-10-22</lastmod>
   </url>
@@ -57,19 +61,19 @@
     <lastmod>2024-10-05</lastmod>
   </url>
   <url>
-    <loc>https://blog.enkr1.com/journal-week-6/</loc>
-    <lastmod>2024-10-05</lastmod>
-  </url>
-  <url>
     <loc>https://blog.enkr1.com/journal-week-9/</loc>
     <lastmod>2024-10-05</lastmod>
   </url>
   <url>
-    <loc>https://blog.enkr1.com/journal-week-4/</loc>
+    <loc>https://blog.enkr1.com/journal-week-6/</loc>
     <lastmod>2024-10-05</lastmod>
   </url>
   <url>
     <loc>https://blog.enkr1.com/journal-week-5/</loc>
+    <lastmod>2024-10-05</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.enkr1.com/journal-week-4/</loc>
     <lastmod>2024-10-05</lastmod>
   </url>
   <url>
@@ -263,10 +267,6 @@
   <url>
     <loc>https://blog.enkr1.com/leetcode-194-transpose-file/</loc>
     <lastmod>2024-08-28</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.enkr1.com/a-collection-of-inspirational-mottos-that-guide-my-life/</loc>
-    <lastmod>2024-08-07</lastmod>
   </url>
   <url>
     <loc>https://blog.enkr1.com/personal-note-the-7-habits-of-highly-effective-people-by-stephen-covey/</loc>
