@@ -6,7 +6,7 @@
   <link href="https://blog.enkr1.com/atom.xml" rel="self"/>
   
   <link href="https://blog.enkr1.com/"/>
-  <updated>2024-10-20T17:57:59.219Z</updated>
+  <updated>2024-10-22T19:18:08.875Z</updated>
   <id>https://blog.enkr1.com/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Design Inspirations</title>
+    <link href="https://blog.enkr1.com/design-inspirations/"/>
+    <id>https://blog.enkr1.com/design-inspirations/</id>
+    <published>2024-10-22T19:07:26.000Z</published>
+    <updated>2024-10-22T19:18:08.875Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="source-awwwards.com">Source: <ahref="https://www.awwwards.com/">awwwards.com</a></h2><p>Let's be real, nothing beats scrolling through a perfectly craftedwebsite that just flows. Whether it's the insane animation, killertypography, or smooth transitions that make you think, <em>wow, i needto step up my design game</em>—this is where i dump all those gems istumble upon.</p><p>Here's a list of websites that completely blew me away. 💻✨</p><blockquote><p>ain't too formal, just a place for me to keep track of designs thatspark creativity.</p></blockquote><hr /><h2 id="camichan---camille-mormal">Camichan - <ahref="https://camillemormal.com/">Camille Mormal</a></h2><p>An absolute <strong>masterpiece of animation</strong>! Thetransitions and fluid motion throughout the site make you feel likeyou're gliding. Every scroll feels like a mini work of art. Just<em>wow</em> ... 💫</p><hr /><p>as i keep finding more of these gems, i will throw them here. thisspace is a work in progress, and i will probably keep adding notes onwhat makes each site so sick, whether it's the animations, colourpalettes, or just that overall vibe.</p>]]></content>
+    
+    
+    <summary type="html">A personal stash of websites with jaw-dropping animations, smooth UX, and creative design ideas to inspire your next project.</summary>
+    
+    
+    
+    <category term="Software Engineering" scheme="https://blog.enkr1.com/categories/Software-Engineering/"/>
+    
+    <category term="Web Development" scheme="https://blog.enkr1.com/categories/Software-Engineering/Web-Development/"/>
+    
+    <category term="Front-end" scheme="https://blog.enkr1.com/categories/Software-Engineering/Web-Development/Front-end/"/>
+    
+    <category term="Design" scheme="https://blog.enkr1.com/categories/Software-Engineering/Web-Development/Front-end/Design/"/>
+    
+    
+    <category term="idea" scheme="https://blog.enkr1.com/tags/idea/"/>
+    
+    <category term="design" scheme="https://blog.enkr1.com/tags/design/"/>
+    
+    <category term="web-design" scheme="https://blog.enkr1.com/tags/web-design/"/>
+    
+  </entry>
   
   <entry>
     <title>Journal: Week 13</title>
@@ -273,9 +304,9 @@ mid-autumn fe</summary>
     
     <category term="leetcode-medium" scheme="https://blog.enkr1.com/tags/leetcode-medium/"/>
     
-    <category term="dynamic-programming" scheme="https://blog.enkr1.com/tags/dynamic-programming/"/>
-    
     <category term="interview-preparation" scheme="https://blog.enkr1.com/tags/interview-preparation/"/>
+    
+    <category term="dynamic-programming" scheme="https://blog.enkr1.com/tags/dynamic-programming/"/>
     
     <category term="top-interview-150" scheme="https://blog.enkr1.com/tags/top-interview-150/"/>
     
@@ -308,9 +339,9 @@ mid-autumn fe</summary>
     
     <category term="leetcode-medium" scheme="https://blog.enkr1.com/tags/leetcode-medium/"/>
     
-    <category term="dynamic-programming" scheme="https://blog.enkr1.com/tags/dynamic-programming/"/>
-    
     <category term="interview-preparation" scheme="https://blog.enkr1.com/tags/interview-preparation/"/>
+    
+    <category term="dynamic-programming" scheme="https://blog.enkr1.com/tags/dynamic-programming/"/>
     
   </entry>
   
@@ -551,13 +582,13 @@ with f</summary>
     
     <category term="leetcode-medium" scheme="https://blog.enkr1.com/tags/leetcode-medium/"/>
     
-    <category term="dynamic-programming" scheme="https://blog.enkr1.com/tags/dynamic-programming/"/>
-    
     <category term="interview-preparation" scheme="https://blog.enkr1.com/tags/interview-preparation/"/>
     
     <category term="min-heap" scheme="https://blog.enkr1.com/tags/min-heap/"/>
     
     <category term="priority-queue" scheme="https://blog.enkr1.com/tags/priority-queue/"/>
+    
+    <category term="dynamic-programming" scheme="https://blog.enkr1.com/tags/dynamic-programming/"/>
     
   </entry>
   
@@ -591,37 +622,6 @@ with f</summary>
     <category term="leetcode-easy" scheme="https://blog.enkr1.com/tags/leetcode-easy/"/>
     
     <category term="binary-search" scheme="https://blog.enkr1.com/tags/binary-search/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Journal: Week 5</title>
-    <link href="https://blog.enkr1.com/journal-week-5/"/>
-    <id>https://blog.enkr1.com/journal-week-5/</id>
-    <published>2024-08-25T07:24:28.000Z</published>
-    <updated>2024-10-05T19:29:18.263Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="highlights-of-the-week">Highlights of the Week</h2><ul><li><strong>Elixir Exploration:</strong> this week, i dived back intosome elixir topics and even tried deploying my app on fly.io. i'm reallyseeing the potential in elixir and its famous phoenix framework. i'mexcited to start a side project with it and relearn everything i knowabout elixir!</li><li><strong>Reading:</strong> i've been reading <em>The Diary of aCEO</em> by Steven Bartlett. one quote that really resonated with me is:"Do the thing you fear, and keep on doing it. that is the quickest andsurest way ever yet discovered to conquer fear." it's been on my mindall week and has inspired me to push through my own fears.</li></ul><h2 id="little-lesson">Little Lesson</h2><p>this week reminded me of the importance of revisiting foundationalknowledge. whether it's with elixir or in life, going back to the basicscan open up new perspectives and reignite your passion. continuouslearning and embracing the journey are key to growth.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;highlights-of-the-week&quot;&gt;Highlights of the Week&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Elixir Exploration:&lt;/strong&gt; this week, i dived back into
-some </summary>
-      
-    
-    
-    
-    <category term="About Me" scheme="https://blog.enkr1.com/categories/About-Me/"/>
-    
-    <category term="Journals" scheme="https://blog.enkr1.com/categories/About-Me/Journals/"/>
-    
-    <category term="2024" scheme="https://blog.enkr1.com/categories/About-Me/Journals/2024/"/>
-    
-    
-    <category term="journal" scheme="https://blog.enkr1.com/tags/journal/"/>
     
   </entry>
   

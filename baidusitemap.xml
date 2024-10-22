@@ -1,16 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://blog.enkr1.com/design-inspirations/</loc>
+    <lastmod>2024-10-22</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.enkr1.com/achieving-my-ambitious-goals-in-2024/</loc>
+    <lastmod>2024-10-22</lastmod>
+  </url>
+  <url>
     <loc>https://blog.enkr1.com/a-collection-of-inspirational-mottos-that-guide-my-life/</loc>
+    <lastmod>2024-10-22</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.enkr1.com/my-interview-experience-site-reliability-engineer-at-tiktok-applied-machine-learning/</loc>
+    <lastmod>2024-10-22</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.enkr1.com/my-beatbox-journey-from-solitude-to-the-stage/</loc>
     <lastmod>2024-10-22</lastmod>
   </url>
   <url>
     <loc>https://blog.enkr1.com/javascript-notebook/</loc>
     <lastmod>2024-10-22</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.enkr1.com/achieving-my-ambitious-goals-in-2024/</loc>
-    <lastmod>2024-10-21</lastmod>
   </url>
   <url>
     <loc>https://blog.enkr1.com/journal-week-13/</loc>
@@ -26,10 +38,6 @@
   </url>
   <url>
     <loc>https://blog.enkr1.com/elixir-notebook/</loc>
-    <lastmod>2024-10-18</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.enkr1.com/my-beatbox-journey-from-solitude-to-the-stage/</loc>
     <lastmod>2024-10-18</lastmod>
   </url>
   <url>
@@ -250,10 +258,6 @@
   </url>
   <url>
     <loc>https://blog.enkr1.com/my-first-ever-interview-experience-software-engineer-general-gcloud-tech-infra-24x7-site-reliability/</loc>
-    <lastmod>2024-09-02</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.enkr1.com/my-interview-experience-site-reliability-engineer-at-tiktok-applied-machine-learning/</loc>
     <lastmod>2024-09-02</lastmod>
   </url>
   <url>
