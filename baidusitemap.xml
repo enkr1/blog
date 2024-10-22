@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://blog.enkr1.com/javascript-notebook/</loc>
+    <lastmod>2024-10-22</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.enkr1.com/achieving-my-ambitious-goals-in-2024/</loc>
+    <lastmod>2024-10-21</lastmod>
+  </url>
+  <url>
     <loc>https://blog.enkr1.com/journal-week-13/</loc>
     <lastmod>2024-10-20</lastmod>
   </url>
@@ -87,10 +95,6 @@
   <url>
     <loc>https://blog.enkr1.com/learning-from-lim-hock-chee-life-and-business-insights-from-the-ceo-of-sheng-siong/</loc>
     <lastmod>2024-10-05</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.enkr1.com/javascript-notebook/</loc>
-    <lastmod>2024-09-30</lastmod>
   </url>
   <url>
     <loc>https://blog.enkr1.com/python-notebook/</loc>
@@ -211,10 +215,6 @@
   <url>
     <loc>https://blog.enkr1.com/demystifying-database-design-a-dive-into-3nf-and-bcnf/</loc>
     <lastmod>2024-09-30</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.enkr1.com/achieving-my-ambitious-goals-in-2024/</loc>
-    <lastmod>2024-09-29</lastmod>
   </url>
   <url>
     <loc>https://blog.enkr1.com/leetcode-139-word-break/</loc>
