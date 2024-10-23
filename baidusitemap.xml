@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://blog.enkr1.com/goals-2024/</loc>
+    <lastmod>2024-10-23</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.enkr1.com/leetcode-704-binary-search/</loc>
+    <lastmod>2024-10-23</lastmod>
+  </url>
+  <url>
     <loc>https://blog.enkr1.com/my-leetcode-journey-from-novice-to-bytedance-software-engineer/</loc>
     <lastmod>2024-10-22</lastmod>
   </url>
   <url>
     <loc>https://blog.enkr1.com/design-inspirations/</loc>
-    <lastmod>2024-10-22</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.enkr1.com/achieving-my-ambitious-goals-in-2024/</loc>
     <lastmod>2024-10-22</lastmod>
   </url>
   <url>
@@ -242,10 +246,6 @@
   </url>
   <url>
     <loc>https://blog.enkr1.com/leetcode-97-interleaving-string/</loc>
-    <lastmod>2024-09-17</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.enkr1.com/leetcode-704-binary-search/</loc>
     <lastmod>2024-09-17</lastmod>
   </url>
   <url>

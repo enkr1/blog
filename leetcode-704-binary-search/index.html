@@ -31,11 +31,11 @@
 <meta property="og:description" content="A concise guide to solving LeetCode 704 using Binary Search. Understand the key steps and implementation in a simplified manner.">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2024-08-25T15:44:12.000Z">
-<meta property="article:modified_time" content="2024-09-17T19:08:00.888Z">
+<meta property="article:modified_time" content="2024-10-23T19:19:50.546Z">
 <meta property="article:author" content="Jing Hui PANG | 彭竞辉 | ENKR">
 <meta property="article:tag" content="algorithm">
-<meta property="article:tag" content="javascript">
 <meta property="article:tag" content="leetcode">
+<meta property="article:tag" content="javascript">
 <meta property="article:tag" content="interview-preparation">
 <meta property="article:tag" content="leetcode-easy">
 <meta property="article:tag" content="binary-search">
@@ -320,7 +320,7 @@ NOTE: created_at
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: Wed 18 September 2024 03:08:00 AM" itemprop="dateModified" datetime="2024-09-18T03:08:00+08:00">Wed 18 September 2024</time>
+                <time title="Modified: Thu 24 October 2024 03:19:50 AM" itemprop="dateModified" datetime="2024-10-24T03:19:50+08:00">Thu 24 October 2024</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -353,7 +353,7 @@ NOTE: word count
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-              <span>186</span>
+              <span>1.1k</span>
             </span>
 
 <!--
@@ -455,6 +455,12 @@ search space.</li>
 find the target in <span class="math inline">\(O(log n)\)</span>
 time.</li>
 </ul>
+<h2 id="references">References</h2>
+<ul>
+<li><a
+target="_blank" rel="noopener" href="https://leetcode.com/problems/search-a-2d-matrix/submissions/1431714521/?envType=study-plan-v2&amp;envId=top-interview-150">74.
+Search a 2D Matrix</a></li>
+</ul>
 
     </div>
 
@@ -468,9 +474,6 @@ time.</li>
       <div class="popular-posts-title"><a href="/leetcode-189-rotate-array/" rel="bookmark">LeetCode-189: Rotate Array</a></div>
     </li>
     <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="/leetcode-139-word-break/" rel="bookmark">LeetCode-139: Word Break</a></div>
-    </li>
-    <li class="popular-posts-item">
       <div class="popular-posts-title"><a href="/leetcode-1642-furthest-building-you-can-reach/" rel="bookmark">LeetCode-1642: Furthest Building You Can Reach</a></div>
     </li>
     <li class="popular-posts-item">
@@ -478,6 +481,9 @@ time.</li>
     </li>
     <li class="popular-posts-item">
       <div class="popular-posts-title"><a href="/leetcode-97-interleaving-string/" rel="bookmark">LeetCode-97: Interleaving String</a></div>
+    </li>
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="/leetcode-139-word-break/" rel="bookmark">LeetCode-139: Word Break</a></div>
     </li>
   </ul>
 <div class="post-widgets">
@@ -498,8 +504,8 @@ time.</li>
       <footer class="post-footer">
           <div class="post-tags">
               <a href="/tags/algorithm/" rel="tag"># algorithm</a>
-              <a href="/tags/javascript/" rel="tag"># javascript</a>
               <a href="/tags/leetcode/" rel="tag"># leetcode</a>
+              <a href="/tags/javascript/" rel="tag"># javascript</a>
               <a href="/tags/interview-preparation/" rel="tag"># interview-preparation</a>
               <a href="/tags/leetcode-easy/" rel="tag"># leetcode-easy</a>
               <a href="/tags/binary-search/" rel="tag"># binary-search</a>
@@ -585,7 +591,7 @@ time.</li>
       <div class="post-toc-wrap sidebar-panel">
           <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#binary-search"><span class="nav-number">1.</span> <span class="nav-text">704.
 Binary Search</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#example"><span class="nav-number">1.1.</span> <span class="nav-text">Example</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#quick-steps-for-binary-search"><span class="nav-number">2.</span> <span class="nav-text">Quick Steps for Binary
-Search</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#initial-setup"><span class="nav-number">2.1.</span> <span class="nav-text">Initial Setup</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#middle-calculation"><span class="nav-number">2.2.</span> <span class="nav-text">Middle Calculation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#comparison"><span class="nav-number">2.3.</span> <span class="nav-text">Comparison</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#repeat"><span class="nav-number">2.4.</span> <span class="nav-text">Repeat</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#return"><span class="nav-number">2.5.</span> <span class="nav-text">Return</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#javascript-implementation"><span class="nav-number">3.</span> <span class="nav-text">JavaScript Implementation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#summary"><span class="nav-number">4.</span> <span class="nav-text">Summary</span></a></li></ol></div>
+Search</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#initial-setup"><span class="nav-number">2.1.</span> <span class="nav-text">Initial Setup</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#middle-calculation"><span class="nav-number">2.2.</span> <span class="nav-text">Middle Calculation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#comparison"><span class="nav-number">2.3.</span> <span class="nav-text">Comparison</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#repeat"><span class="nav-number">2.4.</span> <span class="nav-text">Repeat</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#return"><span class="nav-number">2.5.</span> <span class="nav-text">Return</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#javascript-implementation"><span class="nav-number">3.</span> <span class="nav-text">JavaScript Implementation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#summary"><span class="nav-number">4.</span> <span class="nav-text">Summary</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#references"><span class="nav-number">5.</span> <span class="nav-text">References</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -709,12 +715,12 @@ NEW: Visitor sum
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="Symbols count total">59k</span>
+    <span title="Symbols count total">290k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">3:34</span>
+    <span title="Reading time total">4:24</span>
 </div>
 
         

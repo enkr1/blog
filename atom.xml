@@ -298,15 +298,15 @@ mid-autumn fe</summary>
     
     <category term="algorithm" scheme="https://blog.enkr1.com/tags/algorithm/"/>
     
-    <category term="javascript" scheme="https://blog.enkr1.com/tags/javascript/"/>
-    
     <category term="leetcode" scheme="https://blog.enkr1.com/tags/leetcode/"/>
+    
+    <category term="javascript" scheme="https://blog.enkr1.com/tags/javascript/"/>
     
     <category term="leetcode-medium" scheme="https://blog.enkr1.com/tags/leetcode-medium/"/>
     
-    <category term="dynamic-programming" scheme="https://blog.enkr1.com/tags/dynamic-programming/"/>
-    
     <category term="interview-preparation" scheme="https://blog.enkr1.com/tags/interview-preparation/"/>
+    
+    <category term="dynamic-programming" scheme="https://blog.enkr1.com/tags/dynamic-programming/"/>
     
     <category term="top-interview-150" scheme="https://blog.enkr1.com/tags/top-interview-150/"/>
     
@@ -333,15 +333,15 @@ mid-autumn fe</summary>
     
     <category term="algorithm" scheme="https://blog.enkr1.com/tags/algorithm/"/>
     
-    <category term="javascript" scheme="https://blog.enkr1.com/tags/javascript/"/>
-    
     <category term="leetcode" scheme="https://blog.enkr1.com/tags/leetcode/"/>
+    
+    <category term="javascript" scheme="https://blog.enkr1.com/tags/javascript/"/>
     
     <category term="leetcode-medium" scheme="https://blog.enkr1.com/tags/leetcode-medium/"/>
     
-    <category term="dynamic-programming" scheme="https://blog.enkr1.com/tags/dynamic-programming/"/>
-    
     <category term="interview-preparation" scheme="https://blog.enkr1.com/tags/interview-preparation/"/>
+    
+    <category term="dynamic-programming" scheme="https://blog.enkr1.com/tags/dynamic-programming/"/>
     
   </entry>
   
@@ -421,9 +421,9 @@ the surfac</summary>
     
     <category term="algorithm" scheme="https://blog.enkr1.com/tags/algorithm/"/>
     
-    <category term="javascript" scheme="https://blog.enkr1.com/tags/javascript/"/>
-    
     <category term="leetcode" scheme="https://blog.enkr1.com/tags/leetcode/"/>
+    
+    <category term="javascript" scheme="https://blog.enkr1.com/tags/javascript/"/>
     
     <category term="interview-preparation" scheme="https://blog.enkr1.com/tags/interview-preparation/"/>
     
@@ -576,19 +576,19 @@ with f</summary>
     
     <category term="algorithm" scheme="https://blog.enkr1.com/tags/algorithm/"/>
     
-    <category term="javascript" scheme="https://blog.enkr1.com/tags/javascript/"/>
-    
     <category term="leetcode" scheme="https://blog.enkr1.com/tags/leetcode/"/>
     
-    <category term="leetcode-medium" scheme="https://blog.enkr1.com/tags/leetcode-medium/"/>
+    <category term="javascript" scheme="https://blog.enkr1.com/tags/javascript/"/>
     
-    <category term="dynamic-programming" scheme="https://blog.enkr1.com/tags/dynamic-programming/"/>
+    <category term="leetcode-medium" scheme="https://blog.enkr1.com/tags/leetcode-medium/"/>
     
     <category term="interview-preparation" scheme="https://blog.enkr1.com/tags/interview-preparation/"/>
     
     <category term="min-heap" scheme="https://blog.enkr1.com/tags/min-heap/"/>
     
     <category term="priority-queue" scheme="https://blog.enkr1.com/tags/priority-queue/"/>
+    
+    <category term="dynamic-programming" scheme="https://blog.enkr1.com/tags/dynamic-programming/"/>
     
   </entry>
   
@@ -597,9 +597,9 @@ with f</summary>
     <link href="https://blog.enkr1.com/leetcode-704-binary-search/"/>
     <id>https://blog.enkr1.com/leetcode-704-binary-search/</id>
     <published>2024-08-25T15:44:12.000Z</published>
-    <updated>2024-09-17T19:08:00.888Z</updated>
+    <updated>2024-10-23T19:19:50.546Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="binary-search"><ahref="https://leetcode.com/problems/binary-search/description/?envType=study-plan-v2&amp;envId=binary-search">704.Binary Search</a></h2><ul><li><strong>Goal</strong>: Search for a <code>target</code> in a sortedarray <code>nums</code>. Return its index, or <code>-1</code> if notfound.</li><li><strong>Constraint</strong>: Must achieve <spanclass="math inline">\(O(log n)\)</span> time complexity.</li></ul><h3 id="example">Example</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: nums = [-1, 0, 3, 5, 9, 12], target = 9</span><br><span class="line">Output: 4</span><br></pre></td></tr></table></figure><h2 id="quick-steps-for-binary-search">Quick Steps for BinarySearch</h2><h3 id="initial-setup">Initial Setup</h3><ul><li>Set <code>left = 0</code>,<code>right = nums.length - 1</code>.</li></ul><h3 id="middle-calculation">Middle Calculation</h3><ul><li>Compute <code>mid = Math.floor((left + right) / 2)</code>.</li></ul><h3 id="comparison">Comparison</h3><ul><li>If <code>nums[mid] == target</code>: Return <code>mid</code>.</li><li>If <code>nums[mid] &lt; target</code>: Move <code>left</code> to<code>mid + 1</code>.</li><li>If <code>nums[mid] &gt; target</code>: Move <code>right</code> to<code>mid - 1</code>.</li></ul><h3 id="repeat">Repeat</h3><ul><li>Continue until <code>left &gt; right</code>.</li></ul><h3 id="return">Return</h3><ul><li>If found, return the index; else, return <code>-1</code>.</li></ul><h2 id="javascript-implementation">JavaScript Implementation</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">number[]</span>&#125; <span class="variable">nums</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">number</span>&#125; <span class="variable">target</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">number</span>&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> search = <span class="keyword">function</span> (<span class="params">nums, target</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> N = nums.<span class="property">length</span>;</span><br><span class="line">    <span class="keyword">let</span> l = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">let</span> r = N - <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">let</span> mid = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (l &lt;= r) &#123;</span><br><span class="line">        mid = <span class="title class_">Math</span>.<span class="title function_">floor</span>((r + l) / <span class="number">2</span>);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (nums[mid] === target) <span class="keyword">return</span> mid;</span><br><span class="line">        <span class="keyword">if</span> (nums[mid] &lt; target) &#123;</span><br><span class="line">            l = mid + <span class="number">1</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            r = mid - <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><h2 id="summary">Summary</h2><ul><li><strong>Binary Search</strong>: Divide and conquer by halving thesearch space.</li><li><strong>Key Points</strong>: Efficiently narrows down the search tofind the target in <span class="math inline">\(O(log n)\)</span>time.</li></ul>]]></content>
+    <content type="html"><![CDATA[<h2 id="binary-search"><ahref="https://leetcode.com/problems/binary-search/description/?envType=study-plan-v2&amp;envId=binary-search">704.Binary Search</a></h2><ul><li><strong>Goal</strong>: Search for a <code>target</code> in a sortedarray <code>nums</code>. Return its index, or <code>-1</code> if notfound.</li><li><strong>Constraint</strong>: Must achieve <spanclass="math inline">\(O(log n)\)</span> time complexity.</li></ul><h3 id="example">Example</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: nums = [-1, 0, 3, 5, 9, 12], target = 9</span><br><span class="line">Output: 4</span><br></pre></td></tr></table></figure><h2 id="quick-steps-for-binary-search">Quick Steps for BinarySearch</h2><h3 id="initial-setup">Initial Setup</h3><ul><li>Set <code>left = 0</code>,<code>right = nums.length - 1</code>.</li></ul><h3 id="middle-calculation">Middle Calculation</h3><ul><li>Compute <code>mid = Math.floor((left + right) / 2)</code>.</li></ul><h3 id="comparison">Comparison</h3><ul><li>If <code>nums[mid] == target</code>: Return <code>mid</code>.</li><li>If <code>nums[mid] &lt; target</code>: Move <code>left</code> to<code>mid + 1</code>.</li><li>If <code>nums[mid] &gt; target</code>: Move <code>right</code> to<code>mid - 1</code>.</li></ul><h3 id="repeat">Repeat</h3><ul><li>Continue until <code>left &gt; right</code>.</li></ul><h3 id="return">Return</h3><ul><li>If found, return the index; else, return <code>-1</code>.</li></ul><h2 id="javascript-implementation">JavaScript Implementation</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">number[]</span>&#125; <span class="variable">nums</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">number</span>&#125; <span class="variable">target</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">number</span>&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> search = <span class="keyword">function</span> (<span class="params">nums, target</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> N = nums.<span class="property">length</span>;</span><br><span class="line">    <span class="keyword">let</span> l = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">let</span> r = N - <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">let</span> mid = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (l &lt;= r) &#123;</span><br><span class="line">        mid = <span class="title class_">Math</span>.<span class="title function_">floor</span>((r + l) / <span class="number">2</span>);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (nums[mid] === target) <span class="keyword">return</span> mid;</span><br><span class="line">        <span class="keyword">if</span> (nums[mid] &lt; target) &#123;</span><br><span class="line">            l = mid + <span class="number">1</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            r = mid - <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><h2 id="summary">Summary</h2><ul><li><strong>Binary Search</strong>: Divide and conquer by halving thesearch space.</li><li><strong>Key Points</strong>: Efficiently narrows down the search tofind the target in <span class="math inline">\(O(log n)\)</span>time.</li></ul><h2 id="references">References</h2><ul><li><ahref="https://leetcode.com/problems/search-a-2d-matrix/submissions/1431714521/?envType=study-plan-v2&amp;envId=top-interview-150">74.Search a 2D Matrix</a></li></ul>]]></content>
     
     
     <summary type="html">A concise guide to solving LeetCode 704 using Binary Search. Understand the key steps and implementation in a simplified manner.</summary>
@@ -613,9 +613,9 @@ with f</summary>
     
     <category term="algorithm" scheme="https://blog.enkr1.com/tags/algorithm/"/>
     
-    <category term="javascript" scheme="https://blog.enkr1.com/tags/javascript/"/>
-    
     <category term="leetcode" scheme="https://blog.enkr1.com/tags/leetcode/"/>
+    
+    <category term="javascript" scheme="https://blog.enkr1.com/tags/javascript/"/>
     
     <category term="interview-preparation" scheme="https://blog.enkr1.com/tags/interview-preparation/"/>
     
