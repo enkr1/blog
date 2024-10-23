@@ -1,6 +1,106 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://blog.enkr1.com/design-inspirations/</loc>
+    <lastmod>2024-10-23</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.enkr1.com/linked-list-notebook/</loc>
+    <lastmod>2024-10-23</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.enkr1.com/python-notebook/</loc>
+    <lastmod>2024-10-23</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.enkr1.com/data-structure-notebook/</loc>
+    <lastmod>2024-10-23</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.enkr1.com/my-journey-with-hexo-building-a-blog-from-scratch/</loc>
+    <lastmod>2024-10-23</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.enkr1.com/my-scss-css-tips-tricks-for-streamlined-web-design/</loc>
+    <lastmod>2024-10-23</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.enkr1.com/my-vim-journey-essential-commands-and-tricks-for-developers/</loc>
+    <lastmod>2024-10-23</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.enkr1.com/hexo-notebook/</loc>
+    <lastmod>2024-10-23</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.enkr1.com/big-o-notation-notebook/</loc>
+    <lastmod>2024-10-23</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.enkr1.com/24-hours-harvard-cs50-by-david-malan/</loc>
+    <lastmod>2024-10-23</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.enkr1.com/regression-prediction/</loc>
+    <lastmod>2024-10-23</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.enkr1.com/deep-learning/</loc>
+    <lastmod>2024-10-23</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.enkr1.com/regression-hypothesis-testing/</loc>
+    <lastmod>2024-10-23</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.enkr1.com/elixir-notebook/</loc>
+    <lastmod>2024-10-23</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.enkr1.com/sql-notebook/</loc>
+    <lastmod>2024-10-23</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.enkr1.com/demystifying-database-design-a-dive-into-3nf-and-bcnf/</loc>
+    <lastmod>2024-10-23</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.enkr1.com/computer-networking-notebook/</loc>
+    <lastmod>2024-10-23</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.enkr1.com/pre-work-introduction-to-data-science-ai/</loc>
+    <lastmod>2024-10-23</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.enkr1.com/making-sense-of-unstructured-data-a-dive-into-clustering-and-dimensionality-reduction/</loc>
+    <lastmod>2024-10-23</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.enkr1.com/foundations-of-data-science-navigating-through-inferential-statistics/</loc>
+    <lastmod>2024-10-23</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.enkr1.com/java-notebook/</loc>
+    <lastmod>2024-10-23</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.enkr1.com/bash-notebook/</loc>
+    <lastmod>2024-10-23</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.enkr1.com/javascript-notebook/</loc>
+    <lastmod>2024-10-23</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.enkr1.com/networking-graphical-models/</loc>
+    <lastmod>2024-10-23</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.enkr1.com/recommendation-systems/</loc>
+    <lastmod>2024-10-23</lastmod>
+  </url>
+  <url>
     <loc>https://blog.enkr1.com/goals-2024/</loc>
     <lastmod>2024-10-23</lastmod>
   </url>
@@ -10,10 +110,6 @@
   </url>
   <url>
     <loc>https://blog.enkr1.com/my-leetcode-journey-from-novice-to-bytedance-software-engineer/</loc>
-    <lastmod>2024-10-22</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.enkr1.com/design-inspirations/</loc>
     <lastmod>2024-10-22</lastmod>
   </url>
   <url>
@@ -29,10 +125,6 @@
     <lastmod>2024-10-22</lastmod>
   </url>
   <url>
-    <loc>https://blog.enkr1.com/javascript-notebook/</loc>
-    <lastmod>2024-10-22</lastmod>
-  </url>
-  <url>
     <loc>https://blog.enkr1.com/journal-week-13/</loc>
     <lastmod>2024-10-20</lastmod>
   </url>
@@ -43,10 +135,6 @@
   <url>
     <loc>https://blog.enkr1.com/my-domain-setup-dynadot/</loc>
     <lastmod>2024-10-20</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.enkr1.com/elixir-notebook/</loc>
-    <lastmod>2024-10-18</lastmod>
   </url>
   <url>
     <loc>https://blog.enkr1.com/memories-new-mini-launch-2024/</loc>
@@ -117,91 +205,7 @@
     <lastmod>2024-10-05</lastmod>
   </url>
   <url>
-    <loc>https://blog.enkr1.com/python-notebook/</loc>
-    <lastmod>2024-09-30</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.enkr1.com/sql-notebook/</loc>
-    <lastmod>2024-09-30</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.enkr1.com/java-notebook/</loc>
-    <lastmod>2024-09-30</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.enkr1.com/bash-notebook/</loc>
-    <lastmod>2024-09-30</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.enkr1.com/linked-list-notebook/</loc>
-    <lastmod>2024-09-30</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.enkr1.com/hexo-notebook/</loc>
-    <lastmod>2024-09-30</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.enkr1.com/data-structure-notebook/</loc>
-    <lastmod>2024-09-30</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.enkr1.com/computer-networking-notebook/</loc>
-    <lastmod>2024-09-30</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.enkr1.com/big-o-notation-notebook/</loc>
-    <lastmod>2024-09-30</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.enkr1.com/my-scss-css-tips-tricks-for-streamlined-web-design/</loc>
-    <lastmod>2024-09-30</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.enkr1.com/my-vim-journey-essential-commands-and-tricks-for-developers/</loc>
-    <lastmod>2024-09-30</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.enkr1.com/regression-prediction/</loc>
-    <lastmod>2024-09-30</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.enkr1.com/networking-graphical-models/</loc>
-    <lastmod>2024-09-30</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.enkr1.com/recommendation-systems/</loc>
-    <lastmod>2024-09-30</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.enkr1.com/deep-learning/</loc>
-    <lastmod>2024-09-30</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.enkr1.com/regression-hypothesis-testing/</loc>
-    <lastmod>2024-09-30</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.enkr1.com/making-sense-of-unstructured-data-a-dive-into-clustering-and-dimensionality-reduction/</loc>
-    <lastmod>2024-09-30</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.enkr1.com/foundations-of-data-science-navigating-through-inferential-statistics/</loc>
-    <lastmod>2024-09-30</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.enkr1.com/pre-work-introduction-to-data-science-ai/</loc>
-    <lastmod>2024-09-30</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.enkr1.com/24-hours-harvard-cs50-by-david-malan/</loc>
-    <lastmod>2024-09-30</lastmod>
-  </url>
-  <url>
     <loc>https://blog.enkr1.com/shoutout-to-stellar-hexo-blogs/</loc>
-    <lastmod>2024-09-30</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.enkr1.com/my-journey-with-hexo-building-a-blog-from-scratch/</loc>
     <lastmod>2024-09-30</lastmod>
   </url>
   <url>
@@ -230,10 +234,6 @@
   </url>
   <url>
     <loc>https://blog.enkr1.com/boyer-moore-voting-algorithm-finding-the-majority-element/</loc>
-    <lastmod>2024-09-30</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.enkr1.com/demystifying-database-design-a-dive-into-3nf-and-bcnf/</loc>
     <lastmod>2024-09-30</lastmod>
   </url>
   <url>

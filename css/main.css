@@ -1381,7 +1381,7 @@ p {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #f4ffbe;
+  background: #4d73ff;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2084,8 +2084,16 @@ p {
     max-height: unset;
   }
 }
+.posts-expand.index article {
+  border: 1px solid transparent;
+  transition: 0.3s all ease-in-out;
+}
 .posts-expand.index article .post-meta .post-meta-item::nth-child(2) {
   display: none !important;
+}
+.posts-expand.index article:hover {
+  border: 1px solid #c60000;
+  box-shadow: 0rem 0rem 1.3rem 0rem rgba(198,0,0,0.3);
 }
 .posts-expand .post-header {
   font-size: 1.8rem;
