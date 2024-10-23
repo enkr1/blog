@@ -351,7 +351,7 @@ NOTE: word count
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-              <span>506</span>
+              <span>2.7k</span>
             </span>
 
 <!--
@@ -513,10 +513,10 @@ Statements</h4>
       <div class="popular-posts-title"><a href="/leetcode-1642-furthest-building-you-can-reach/" rel="bookmark">LeetCode-1642: Furthest Building You Can Reach</a></div>
     </li>
     <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="/leetcode-210-course-schedule-ii/" rel="bookmark">LeetCode-210: Course Schedule II</a></div>
+      <div class="popular-posts-title"><a href="/leetcode-193-valid-phone-numbers/" rel="bookmark">LeetCode-193: Valid Phone Numbers</a></div>
     </li>
     <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="/leetcode-97-interleaving-string/" rel="bookmark">LeetCode-97: Interleaving String</a></div>
+      <div class="popular-posts-title"><a href="/leetcode-210-course-schedule-ii/" rel="bookmark">LeetCode-210: Course Schedule II</a></div>
     </li>
   </ul>
 <div class="post-widgets">
@@ -749,12 +749,12 @@ NEW: Visitor sum
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="Symbols count total">59k</span>
+    <span title="Symbols count total">290k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">3:34</span>
+    <span title="Reading time total">4:24</span>
 </div>
 
         
@@ -839,38 +839,58 @@ NEW: Prevent Quitting Before Request Completes
 
 
   <script>
-    // NEW: Function to add unique visitor by IP
+    // NEW: Function to add unique visitor by IP with more detailed tracking
+    const hashIP = (ip) => {
+      const encoder = new TextEncoder();
+      return crypto.subtle.digest('SHA-256', encoder.encode(ip))
+        .then(hash => {
+          return Array.from(new Uint8Array(hash)).map(b => b.toString(16).padStart(2, '0')).join('');
+        });
+    }
 
-    // Fetch the user's IP address using an external API
-    async function getVisitorIP() {
+    const getVisitorIP = async () => {
       try {
         const response = await fetch('https://ipinfo.io/json');
         const data = await response.json();
-        return data.ip;
+        return {
+          ip: data.ip,
+          city: data.city,
+          country: data.country
+        };
       } catch (err) {
         console.error("Failed to fetch IP address:", err);
+        return null;
       }
     }
 
-    async function trackUniqueVisitor() {
+    const trackUniqueVisitor = async () => {
       console.group(`[DEBUG] firestore.swig - trackUniqueVisitor`);
 
       try {
-        const userIp = await getVisitorIP();
-        console.debug(`[DEBUG] User IP: ${userIp}`);
-
-        if (!userIp) {
-          console.debug(`[DEBUG] ab blockers? - skipping as fetch failed, etc.`)
+        const visitorData = await getVisitorIP();
+        if (!visitorData) {
+          console.debug(`[DEBUG] Skipping visitor tracking due to failed IP fetch.`);
           return;
         }
 
+        const userIp = visitorData.ip;
+        console.debug(`[DEBUG] User IP: ${userIp}`);
+
+        // Hash the IP for privacy reasons (optional)
+        const hashedIp = await hashIP(userIp); // Future-proof for privacy compliance
+        console.debug(`[DEBUG] Hashed User IP: ${hashedIp}`);
+
         const ipCollection = firebase.firestore().collection('unique_visitors');
-        const ipDoc = ipCollection.doc(userIp); // Use IP as document ID
+        const ipDoc = ipCollection.doc(hashedIp); // Use hashed IP as document ID
         const docSnapshot = await ipDoc.get();
 
         if (!docSnapshot.exists) {
           // If this IP is not already recorded, create a new entry
-          await ipDoc.set({ timestamp: new Date() });
+          await ipDoc.set({
+            timestamp: new Date(),
+            geolocation: `${visitorData.city}, ${visitorData.country}`, // Store geolocation info
+            userAgent: navigator.userAgent // Store user agent info for additional tracking
+          });
 
           // Increment the total unique IP visitor count
           const totalIpDoc = firebase.firestore().collection('visitor_stats').doc('total_ip_visitors');
@@ -885,9 +905,9 @@ NEW: Prevent Quitting Before Request Completes
       } catch (err) {
         console.error('Error tracking unique visitor:', err);
       }
-    }
 
-    console.groupEnd(`[DEBUG] firestore.swig - trackUniqueVisitor`);
+      console.groupEnd(`[DEBUG] firestore.swig - trackUniqueVisitor`);
+    }
   </script>
 
 
