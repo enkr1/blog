@@ -34,8 +34,8 @@
 <meta property="article:modified_time" content="2024-08-28T15:37:08.556Z">
 <meta property="article:author" content="Jing Hui PANG | 彭竞辉 | ENKR">
 <meta property="article:tag" content="leetcode">
-<meta property="article:tag" content="interview-preparation">
 <meta property="article:tag" content="leetcode-medium">
+<meta property="article:tag" content="interview-preparation">
 <meta property="article:tag" content="bash">
 <meta name="twitter:card" content="summary">
 
@@ -523,10 +523,10 @@ frequency.</td>
       <div class="popular-posts-title"><a href="/leetcode-1642-furthest-building-you-can-reach/" rel="bookmark">LeetCode-1642: Furthest Building You Can Reach</a></div>
     </li>
     <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="/leetcode-193-valid-phone-numbers/" rel="bookmark">LeetCode-193: Valid Phone Numbers</a></div>
+      <div class="popular-posts-title"><a href="/leetcode-210-course-schedule-ii/" rel="bookmark">LeetCode-210: Course Schedule II</a></div>
     </li>
     <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="/leetcode-210-course-schedule-ii/" rel="bookmark">LeetCode-210: Course Schedule II</a></div>
+      <div class="popular-posts-title"><a href="/leetcode-97-interleaving-string/" rel="bookmark">LeetCode-97: Interleaving String</a></div>
     </li>
   </ul>
 <div class="post-widgets">
@@ -547,8 +547,8 @@ frequency.</td>
       <footer class="post-footer">
           <div class="post-tags">
               <a href="/tags/leetcode/" rel="tag"># leetcode</a>
-              <a href="/tags/interview-preparation/" rel="tag"># interview-preparation</a>
               <a href="/tags/leetcode-medium/" rel="tag"># leetcode-medium</a>
+              <a href="/tags/interview-preparation/" rel="tag"># interview-preparation</a>
               <a href="/tags/bash/" rel="tag"># bash</a>
           </div>
 
@@ -842,6 +842,62 @@ NEW: Prevent Quitting Before Request Completes
     }
   </script>
 
+
+
+  <script>
+    // NEW: Function to add unique visitor by IP
+
+    // Fetch the user's IP address using an external API
+    async function getVisitorIP() {
+      try {
+        const response = await fetch('https://ipinfo.io/json');
+        const data = await response.json();
+        return data.ip;
+      } catch (err) {
+        console.error("Failed to fetch IP address:", err);
+      }
+    }
+
+    async function trackUniqueVisitor() {
+      console.group(`[DEBUG] firestore.swig - trackUniqueVisitor`);
+
+      try {
+        const userIp = await getVisitorIP();
+        console.debug(`[DEBUG] User IP: ${userIp}`);
+
+        if (!userIp) {
+          console.debug(`[DEBUG] ab blockers? - skipping as fetch failed, etc.`)
+          return;
+        }
+
+        const ipCollection = firebase.firestore().collection('unique_visitors');
+        const ipDoc = ipCollection.doc(userIp); // Use IP as document ID
+        const docSnapshot = await ipDoc.get();
+
+        if (!docSnapshot.exists) {
+          // If this IP is not already recorded, create a new entry
+          await ipDoc.set({ timestamp: new Date() });
+
+          // Increment the total unique IP visitor count
+          const totalIpDoc = firebase.firestore().collection('visitor_stats').doc('total_ip_visitors');
+          await totalIpDoc.set({
+            count: firebase.firestore.FieldValue.increment(1)
+          }, { merge: true });
+
+          console.debug(`[DEBUG] New visitor: IP ${userIp} recorded.`);
+        } else {
+          console.debug(`[DEBUG] Returning visitor: IP ${userIp} already recorded.`);
+        }
+      } catch (err) {
+        console.error('Error tracking unique visitor:', err);
+      }
+    }
+
+    console.groupEnd(`[DEBUG] firestore.swig - trackUniqueVisitor`);
+  </script>
+
+
+
   <script>
     (function() {
       console.debug(`[DEBUG] firestore pjax`);
@@ -854,6 +910,10 @@ NEW: Prevent Quitting Before Request Completes
       }
 
       var articles = db.collection('articles');
+
+      // NEW: Track unique visitor by IP when the page loads
+      trackUniqueVisitor();
+
 
       if (CONFIG.page.isPost) {
         console.debug(`[DEBUG] isPost.`);

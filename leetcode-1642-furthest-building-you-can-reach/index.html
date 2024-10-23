@@ -36,8 +36,8 @@
 <meta property="article:tag" content="algorithm">
 <meta property="article:tag" content="javascript">
 <meta property="article:tag" content="leetcode">
-<meta property="article:tag" content="interview-preparation">
 <meta property="article:tag" content="leetcode-medium">
+<meta property="article:tag" content="interview-preparation">
 <meta property="article:tag" content="dynamic-programming">
 <meta property="article:tag" content="min-heap">
 <meta property="article:tag" content="priority-queue">
@@ -458,8 +458,8 @@ Furthest Building You Can Reach</a></h2>
               <a href="/tags/algorithm/" rel="tag"># algorithm</a>
               <a href="/tags/javascript/" rel="tag"># javascript</a>
               <a href="/tags/leetcode/" rel="tag"># leetcode</a>
-              <a href="/tags/interview-preparation/" rel="tag"># interview-preparation</a>
               <a href="/tags/leetcode-medium/" rel="tag"># leetcode-medium</a>
+              <a href="/tags/interview-preparation/" rel="tag"># interview-preparation</a>
               <a href="/tags/dynamic-programming/" rel="tag"># dynamic-programming</a>
               <a href="/tags/min-heap/" rel="tag"># min-heap</a>
               <a href="/tags/priority-queue/" rel="tag"># priority-queue</a>
@@ -755,6 +755,62 @@ NEW: Prevent Quitting Before Request Completes
     }
   </script>
 
+
+
+  <script>
+    // NEW: Function to add unique visitor by IP
+
+    // Fetch the user's IP address using an external API
+    async function getVisitorIP() {
+      try {
+        const response = await fetch('https://ipinfo.io/json');
+        const data = await response.json();
+        return data.ip;
+      } catch (err) {
+        console.error("Failed to fetch IP address:", err);
+      }
+    }
+
+    async function trackUniqueVisitor() {
+      console.group(`[DEBUG] firestore.swig - trackUniqueVisitor`);
+
+      try {
+        const userIp = await getVisitorIP();
+        console.debug(`[DEBUG] User IP: ${userIp}`);
+
+        if (!userIp) {
+          console.debug(`[DEBUG] ab blockers? - skipping as fetch failed, etc.`)
+          return;
+        }
+
+        const ipCollection = firebase.firestore().collection('unique_visitors');
+        const ipDoc = ipCollection.doc(userIp); // Use IP as document ID
+        const docSnapshot = await ipDoc.get();
+
+        if (!docSnapshot.exists) {
+          // If this IP is not already recorded, create a new entry
+          await ipDoc.set({ timestamp: new Date() });
+
+          // Increment the total unique IP visitor count
+          const totalIpDoc = firebase.firestore().collection('visitor_stats').doc('total_ip_visitors');
+          await totalIpDoc.set({
+            count: firebase.firestore.FieldValue.increment(1)
+          }, { merge: true });
+
+          console.debug(`[DEBUG] New visitor: IP ${userIp} recorded.`);
+        } else {
+          console.debug(`[DEBUG] Returning visitor: IP ${userIp} already recorded.`);
+        }
+      } catch (err) {
+        console.error('Error tracking unique visitor:', err);
+      }
+    }
+
+    console.groupEnd(`[DEBUG] firestore.swig - trackUniqueVisitor`);
+  </script>
+
+
+
   <script>
     (function() {
       console.debug(`[DEBUG] firestore pjax`);
@@ -767,6 +823,10 @@ NEW: Prevent Quitting Before Request Completes
       }
 
       var articles = db.collection('articles');
+
+      // NEW: Track unique visitor by IP when the page loads
+      trackUniqueVisitor();
+
 
       if (CONFIG.page.isPost) {
         console.debug(`[DEBUG] isPost.`);

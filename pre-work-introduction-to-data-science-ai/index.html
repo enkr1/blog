@@ -496,16 +496,16 @@ keep making learning an adventure!</p>
       <div class="popular-posts-title"><a href="/kicking-off-my-ml-ai-journey-with-mit-idss-and-great-learning/" rel="bookmark">Kicking Off My ML & AI Journey with MIT IDSS and Great Learning</a></div>
     </li>
     <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="/foundations-of-data-science-navigating-through-inferential-statistics/" rel="bookmark">Foundations of Data Science: Navigating Through Inferential Statistics</a></div>
-    </li>
-    <li class="popular-posts-item">
       <div class="popular-posts-title"><a href="/regression-hypothesis-testing/" rel="bookmark">Regression & Hypothesis Testing</a></div>
     </li>
     <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="/deep-learning/" rel="bookmark">Deep Learning</a></div>
+      <div class="popular-posts-title"><a href="/recommendation-systems/" rel="bookmark">Recommendation Systems</a></div>
     </li>
     <li class="popular-posts-item">
       <div class="popular-posts-title"><a href="/networking-graphical-models/" rel="bookmark">Networking & Graphical Models</a></div>
+    </li>
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="/deep-learning/" rel="bookmark">Deep Learning</a></div>
     </li>
   </ul>
 <div class="post-widgets">
@@ -816,6 +816,62 @@ NEW: Prevent Quitting Before Request Completes
     }
   </script>
 
+
+
+  <script>
+    // NEW: Function to add unique visitor by IP
+
+    // Fetch the user's IP address using an external API
+    async function getVisitorIP() {
+      try {
+        const response = await fetch('https://ipinfo.io/json');
+        const data = await response.json();
+        return data.ip;
+      } catch (err) {
+        console.error("Failed to fetch IP address:", err);
+      }
+    }
+
+    async function trackUniqueVisitor() {
+      console.group(`[DEBUG] firestore.swig - trackUniqueVisitor`);
+
+      try {
+        const userIp = await getVisitorIP();
+        console.debug(`[DEBUG] User IP: ${userIp}`);
+
+        if (!userIp) {
+          console.debug(`[DEBUG] ab blockers? - skipping as fetch failed, etc.`)
+          return;
+        }
+
+        const ipCollection = firebase.firestore().collection('unique_visitors');
+        const ipDoc = ipCollection.doc(userIp); // Use IP as document ID
+        const docSnapshot = await ipDoc.get();
+
+        if (!docSnapshot.exists) {
+          // If this IP is not already recorded, create a new entry
+          await ipDoc.set({ timestamp: new Date() });
+
+          // Increment the total unique IP visitor count
+          const totalIpDoc = firebase.firestore().collection('visitor_stats').doc('total_ip_visitors');
+          await totalIpDoc.set({
+            count: firebase.firestore.FieldValue.increment(1)
+          }, { merge: true });
+
+          console.debug(`[DEBUG] New visitor: IP ${userIp} recorded.`);
+        } else {
+          console.debug(`[DEBUG] Returning visitor: IP ${userIp} already recorded.`);
+        }
+      } catch (err) {
+        console.error('Error tracking unique visitor:', err);
+      }
+    }
+
+    console.groupEnd(`[DEBUG] firestore.swig - trackUniqueVisitor`);
+  </script>
+
+
+
   <script>
     (function() {
       console.debug(`[DEBUG] firestore pjax`);
@@ -828,6 +884,10 @@ NEW: Prevent Quitting Before Request Completes
       }
 
       var articles = db.collection('articles');
+
+      // NEW: Track unique visitor by IP when the page loads
+      trackUniqueVisitor();
+
 
       if (CONFIG.page.isPost) {
         console.debug(`[DEBUG] isPost.`);
