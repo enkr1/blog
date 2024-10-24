@@ -2605,7 +2605,7 @@ NOTE: views count
       <div class="site-state-item site-state-posts">
           <a href="/history">
           <span class="site-state-item-count">74</span>
-          <span class="site-state-item-name">posts</span>
+          <span class="site-state-item-name">Posts</span>
         </a>
       </div>
 
@@ -2626,11 +2626,17 @@ NOTE: views count
 
 
 <!--
-NEW: Visitor sum
+NEW: Readers & Total Views
 -->
-<div class="site-state-item site-state-visitor-sum">
-  <span id="visitor-count" class="site-state-item-count">loading ...</span>
-  <span class="site-state-item-name">total views</span>
+
+<div class="site-state-item site-state-readers">
+  <span id="unique-reader-count" class="site-state-item-count">loading ...</span>
+  <span class="site-state-item-name">Readers</span>
+</div>
+
+<div class="site-state-item site-state-total-views">
+  <span id="total-view-count" class="site-state-item-count">loading ...</span>
+  <span class="site-state-item-name">Total Views</span>
 </div>
 
   </nav>
@@ -2675,7 +2681,7 @@ NEW: Visitor sum
       console.groupEnd(`[DEBUG] totalVisitors`)
 
       // Inject visitor count into the HTML element
-      document.getElementById('visitor-count').innerText = totalVisitors;
+      document.getElementById('total-view-count').innerText = totalVisitors;
     } catch (error) {
       console.error("Error fetching visitor count: ", error);
     }
@@ -2683,6 +2689,28 @@ NEW: Visitor sum
 
   // Fetch visitor count when the page loads
   await fetchVisitorCount();
+
+    // Function to fetch the unique visitor count
+  async function fetchUniqueReaderCount() {
+    try {
+      // Reference to the 'unique_visitors' collection (assuming you're storing IPs in this collection)
+      const uniqueVisitorsCollection = collection(db, 'unique_visitors');
+      const snapshot = await getDocs(uniqueVisitorsCollection);
+
+      // The number of documents corresponds to the unique readers (IP addresses)
+      const uniqueReaderCount = snapshot.size;
+
+      console.debug(`[DEBUG] Unique readers count: ${uniqueReaderCount}`);
+
+      // Inject the unique reader count into the HTML element
+      document.getElementById('unique-reader-count').innerText = uniqueReaderCount;
+    } catch (error) {
+      console.error("Error fetching unique reader count: ", error);
+    }
+  }
+
+  // Fetch unique reader count when the page loads
+  fetchUniqueReaderCount();
 </script>
 
       </div>

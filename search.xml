@@ -287,9 +287,9 @@
             
             <tag> algorithm </tag>
             
-            <tag> javascript </tag>
-            
             <tag> leetcode </tag>
+            
+            <tag> javascript </tag>
             
             <tag> leetcode-medium </tag>
             
@@ -326,9 +326,9 @@
             
             <tag> algorithm </tag>
             
-            <tag> javascript </tag>
-            
             <tag> leetcode </tag>
+            
+            <tag> javascript </tag>
             
             <tag> leetcode-medium </tag>
             
@@ -421,9 +421,9 @@
             
             <tag> algorithm </tag>
             
-            <tag> javascript </tag>
-            
             <tag> leetcode </tag>
+            
+            <tag> javascript </tag>
             
             <tag> interview-preparation </tag>
             
@@ -584,9 +584,9 @@
             
             <tag> algorithm </tag>
             
-            <tag> javascript </tag>
-            
             <tag> leetcode </tag>
+            
+            <tag> javascript </tag>
             
             <tag> leetcode-medium </tag>
             
@@ -625,9 +625,9 @@
             
             <tag> algorithm </tag>
             
-            <tag> javascript </tag>
-            
             <tag> leetcode </tag>
+            
+            <tag> javascript </tag>
             
             <tag> interview-preparation </tag>
             
@@ -904,9 +904,9 @@
             
             <tag> algorithm </tag>
             
-            <tag> javascript </tag>
-            
             <tag> leetcode </tag>
+            
+            <tag> javascript </tag>
             
             <tag> leetcode-medium </tag>
             
@@ -1085,8 +1085,6 @@
             
             <tag> leetcode </tag>
             
-            <tag> tiktok </tag>
-            
             <tag> site-reliability-engineer </tag>
             
             <tag> sre </tag>
@@ -1096,6 +1094,8 @@
             <tag> coding-interview </tag>
             
             <tag> job-interview </tag>
+            
+            <tag> tiktok </tag>
             
         </tags>
       
@@ -1126,6 +1126,8 @@
             
             <tag> leetcode </tag>
             
+            <tag> google </tag>
+            
             <tag> site-reliability-engineer </tag>
             
             <tag> sre </tag>
@@ -1135,8 +1137,6 @@
             <tag> coding-interview </tag>
             
             <tag> job-interview </tag>
-            
-            <tag> google </tag>
             
         </tags>
       
@@ -1311,9 +1311,9 @@
           
           <category> Programming Languages </category>
           
-          <category> Notebooks </category>
-          
           <category> SQL </category>
+          
+          <category> Notebooks </category>
           
       </categories>
       
@@ -1847,9 +1847,9 @@
           
           <category> Programming Languages </category>
           
-          <category> Notebooks </category>
-          
           <category> SQL </category>
+          
+          <category> Notebooks </category>
           
       </categories>
       
