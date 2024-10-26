@@ -10,8 +10,14 @@ html {
   font-size: 62.5%;
   overflow-x: hidden;
 }
+.sidebar-inner,
+.header-inner,
+.content.index article,
+.post-block {
+  border: 0.9px solid #000;
+}
 :root {
-  --body-bg-color: #eee;
+  --body-bg-color: #fff;
   --content-bg-color: #fff;
   --card-bg-color: #f5f5f5;
   --text-color: #555;
@@ -1381,7 +1387,7 @@ p {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #2924c3;
+  background: #ff59ff;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2085,7 +2091,6 @@ p {
   }
 }
 .posts-expand.index article {
-  border: 1px solid transparent;
   transition: 0.3s all ease-in-out;
 }
 .posts-expand.index article .post-meta .post-meta-item::nth-child(2) {
@@ -3099,7 +3104,7 @@ mjx-container + br {
 }
 .post-body h3 {
   font-size: 1.8rem;
-  border-bottom: 1px dotted #eee;
+  border-bottom: 1px dotted #fff;
 }
 .post-body h4 {
   font-size: 1.6rem;
