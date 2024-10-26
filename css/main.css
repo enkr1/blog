@@ -1387,7 +1387,7 @@ p {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #004a34;
+  background: #f4ac41;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -1744,6 +1744,7 @@ p {
   position: relative;
   margin: 0 0.1rem 0 0;
   color: #c60000;
+  color: #fe0000;
   display: inline;
 }
 .post-body a:not(.fancybox):not(.category-list-link):not(.btn)::after {
@@ -1777,6 +1778,7 @@ p {
   right: -1.5rem;
   top: -0.8rem;
   color: #c60000;
+  transition: all 0.3s ease-in-out;
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .post-sticky-flag {
@@ -1795,10 +1797,11 @@ p {
   font-size: 1.1rem;
   width: fit-content;
   margin: 0 0 0 auto;
+  transition: all 0.3s ease-in-out;
 }
 @media (min-width: 992px) {
   .post-button {
-    opacity: 0.6;
+    opacity: 0.3;
   }
   .post-button:hover {
     opacity: 1;
@@ -2099,6 +2102,10 @@ p {
 .posts-expand.index article:hover {
   border: 0.9px solid #c60000;
   box-shadow: 0rem 0rem 1.3rem 0rem rgba(198,0,0,0.3);
+}
+.posts-expand.index article:hover .post-button,
+.posts-expand.index article:hover .post-sticky-flag {
+  opacity: 1;
 }
 .posts-expand .post-header {
   font-size: 1.8rem;
@@ -3089,7 +3096,8 @@ mjx-container + br {
 .post-body h2,
 .post-body h3,
 .post-body h4,
-.post-body h5 {
+.post-body h5,
+.post-body h6 {
   color: #c60000;
 }
 .post-body h1 {
@@ -3108,6 +3116,16 @@ mjx-container + br {
 }
 .post-body h4 {
   font-size: 1.6rem;
+}
+.post-body h2::before,
+.post-body h3::before,
+.post-body h4::before,
+.post-body h5::before,
+.post-body h6::before {
+  content: "►";
+  margin: 0 1rem 0 0;
+  color: #fe0000;
+  opacity: 0.13;
 }
 @media (max-width: 567px) {
   .post-body h1,

@@ -31,7 +31,7 @@
 <meta property="og:description" content="Delve into the core concepts, practical implementations, and advanced techniques of essential data structures. This notebook covers topics like Union-Find, path compression, union by rank, and more, p">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2024-08-29T15:56:49.000Z">
-<meta property="article:modified_time" content="2024-10-23T19:41:57.617Z">
+<meta property="article:modified_time" content="2024-10-26T08:48:54.898Z">
 <meta property="article:author" content="Jing Hui PANG | 彭竞辉 | ENKR">
 <meta property="article:tag" content="programming">
 <meta property="article:tag" content="data-structures">
@@ -192,12 +192,12 @@
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">110</span></a>
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">113</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-list fa-fw"></i>Categories<span class="badge">48</span></a>
+    <a href="/categories/" rel="section"><i class="fa fa-list fa-fw"></i>Categories<span class="badge">50</span></a>
 
   </li>
         <li class="menu-item menu-item-notebooks">
@@ -316,7 +316,7 @@ NOTE: created_at
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: Thu 24 October 2024 03:41:57 AM" itemprop="dateModified" datetime="2024-10-24T03:41:57+08:00">Thu 24 October 2024</time>
+                <time title="Modified: Sat 26 October 2024 16:48:54 PM" itemprop="dateModified" datetime="2024-10-26T16:48:54+08:00">Sat 26 October 2024</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -353,7 +353,7 @@ NOTE: word count
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-              <span>2.7k</span>
+              <span>3k</span>
             </span>
 
 <!--
@@ -363,7 +363,7 @@ NOTE: reading time
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
-              <span>10 mins.</span>
+              <span>11 mins.</span>
             </span>
 
 
@@ -872,6 +872,66 @@ structures</strong> like heaps and hash tables</td>
 </table>
 <h3 id="example-in-code">Example in Code</h3>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">ListNode</span> &#123;</span><br><span class="line">    <span class="title function_">constructor</span>(<span class="params">val = <span class="number">0</span>, next = <span class="literal">null</span></span>) &#123;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">val</span> = val;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">next</span> = next;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Definition of a Singly Linked List</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">LinkedList</span> &#123;</span><br><span class="line">    <span class="title function_">constructor</span>(<span class="params"></span>) &#123;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">head</span> = <span class="literal">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Insert a new node at the beginning</span></span><br><span class="line">    <span class="title function_">insertAtHead</span>(<span class="params">val</span>) &#123;</span><br><span class="line">        <span class="keyword">const</span> newNode = <span class="keyword">new</span> <span class="title class_">ListNode</span>(val, <span class="variable language_">this</span>.<span class="property">head</span>);</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">head</span> = newNode;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Print the list</span></span><br><span class="line">    <span class="title function_">printList</span>(<span class="params"></span>) &#123;</span><br><span class="line">        <span class="keyword">let</span> current = <span class="variable language_">this</span>.<span class="property">head</span>;</span><br><span class="line">        <span class="keyword">let</span> list = <span class="string">&#x27;&#x27;</span>;</span><br><span class="line">        <span class="keyword">while</span> (current) &#123;</span><br><span class="line">            list += current.<span class="property">val</span> + <span class="string">&#x27; -&gt; &#x27;</span>;</span><br><span class="line">            current = current.<span class="property">next</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        list += <span class="string">&#x27;null&#x27;</span>;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(list);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Usage</span></span><br><span class="line"><span class="keyword">const</span> list = <span class="keyword">new</span> <span class="title class_">LinkedList</span>();</span><br><span class="line">list.<span class="title function_">insertAtHead</span>(<span class="number">3</span>);</span><br><span class="line">list.<span class="title function_">insertAtHead</span>(<span class="number">2</span>);</span><br><span class="line">list.<span class="title function_">insertAtHead</span>(<span class="number">1</span>);</span><br><span class="line">list.<span class="title function_">printList</span>(); <span class="comment">// Output: 1 -&gt; 2 -&gt; 3 -&gt; null</span></span><br></pre></td></tr></table></figure>
+<h3 id="wip-partition-list-problem-simple-notes">WIP: Partition List
+Problem (Simple Notes)</h3>
+<h4 id="problem"><strong>Problem</strong>:</h4>
+<ul>
+<li><strong>Task</strong>: Split the linked list into two parts:
+<ol type="1">
+<li><strong>Smaller part</strong>: All nodes with values <strong>less
+than <code>x</code></strong>.</li>
+<li><strong>Larger part</strong>: All nodes with values <strong>greater
+than or equal to <code>x</code></strong>.</li>
+</ol></li>
+<li><strong>Goal</strong>:
+<ul>
+<li>Keep the <strong>relative order</strong> of the nodes in both
+parts.</li>
+<li>Join both parts into a single list.</li>
+</ul></li>
+</ul>
+<h4 id="solution-simple-story"><strong>Solution (Simple
+Story)</strong>:</h4>
+<ol type="1">
+<li><strong>Build two chains</strong>:
+<ul>
+<li>One for <strong>small nodes</strong> (less than
+<code>x</code>).</li>
+<li>One for <strong>big nodes</strong> (greater than or equal to
+<code>x</code>).</li>
+</ul></li>
+<li><strong>Process</strong>:
+<ul>
+<li><strong>Traverse</strong> the linked list.</li>
+<li><strong>Add nodes</strong> to the correct chain (either small or
+big).</li>
+</ul></li>
+<li><strong>At the end</strong>:
+<ul>
+<li><strong>Cut off</strong> the last node of the big list
+(<code>moreTail.next = null</code>), so there’s no cycle.</li>
+<li><strong>Join</strong> the big list to the <strong>end</strong> of
+the small list
+(<code>lessTail.next = equalOrMoreNodeList.next</code>).</li>
+</ul></li>
+<li><strong>Return</strong> the new head of the combined list.</li>
+</ol>
+<h4 id="story-for-easy-recall"><strong>Story for easy
+recall</strong>:</h4>
+<ul>
+<li><strong>Think of it like making two chains of beads</strong>:
+<ul>
+<li>First chain for <strong>small beads</strong>.</li>
+<li>Second chain for <strong>big beads</strong>.</li>
+</ul></li>
+<li>When you're done, you <strong>cut the big chain</strong> so it
+doesn’t continue, then you <strong>attach the big chain</strong> to the
+end of the small one.</li>
+<li>Now you have <strong>one long chain</strong> with all the small
+beads at the front, and the big ones at the end!</li>
+</ul>
+<h4 id="key-code"><strong>Key Code</strong>:</h4>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> partition = <span class="keyword">function</span> (<span class="params">head, x</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> lessNodeList = <span class="keyword">new</span> <span class="title class_">ListNode</span>(<span class="number">0</span>); <span class="comment">// Chain for smaller values</span></span><br><span class="line">    <span class="keyword">let</span> equalOrMoreNodeList = <span class="keyword">new</span> <span class="title class_">ListNode</span>(<span class="number">0</span>); <span class="comment">// Chain for larger or equal values</span></span><br><span class="line">    <span class="keyword">let</span> lessTail = lessNodeList;</span><br><span class="line">    <span class="keyword">let</span> moreTail = equalOrMoreNodeList;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (head !== <span class="literal">null</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (head.<span class="property">val</span> &lt; x) &#123;</span><br><span class="line">            lessTail.<span class="property">next</span> = head;</span><br><span class="line">            lessTail = lessTail.<span class="property">next</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            moreTail.<span class="property">next</span> = head;</span><br><span class="line">            moreTail = moreTail.<span class="property">next</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        head = head.<span class="property">next</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    moreTail.<span class="property">next</span> = <span class="literal">null</span>; <span class="comment">// End the big chain</span></span><br><span class="line">    lessTail.<span class="property">next</span> = equalOrMoreNodeList.<span class="property">next</span>; <span class="comment">// Attach the big chain to the small chain</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> lessNodeList.<span class="property">next</span>; <span class="comment">// Return the head of the new list</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <hr />
 <h2 id="todos">TODOs</h2>
 <ul>
@@ -895,12 +955,6 @@ target="_blank" rel="noopener" href="https://www.geeksforgeeks.org/trie-insert-a
     </li>
     <li class="popular-posts-item">
       <div class="popular-posts-title"><a href="/24-hours-harvard-cs50-by-david-malan/" rel="bookmark">24 Hours Harvard CS50 By David Malan</a></div>
-    </li>
-    <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="/bash-notebook/" rel="bookmark">Bash Notebook</a></div>
-    </li>
-    <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="/java-notebook/" rel="bookmark">Java Notebook</a></div>
     </li>
   </ul>
 <div class="post-widgets">
@@ -1007,7 +1061,10 @@ of Islands</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="n
 Problems</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#applying-union-find-to-the-most-stones-removed-with-same-row-or-column-problem"><span class="nav-number">1.7.</span> <span class="nav-text">Applying
 Union-Find to the &quot;Most Stones Removed with Same Row or Column&quot;
 Problem</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#conclusion"><span class="nav-number">1.8.</span> <span class="nav-text">Conclusion</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#summary"><span class="nav-number">1.9.</span> <span class="nav-text">Summary</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#references"><span class="nav-number">1.10.</span> <span class="nav-text">References</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#linked-list"><span class="nav-number">2.</span> <span class="nav-text">Linked List</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#types-of-linked-list"><span class="nav-number">2.1.</span> <span class="nav-text">Types of Linked List</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#singly-linked-list"><span class="nav-number">2.1.1.</span> <span class="nav-text">Singly Linked List</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#characteristics"><span class="nav-number">2.1.1.1.</span> <span class="nav-text">Characteristics</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#visual-representation"><span class="nav-number">2.1.1.2.</span> <span class="nav-text">Visual Representation</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#operations"><span class="nav-number">2.1.1.3.</span> <span class="nav-text">Operations</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#use-cases"><span class="nav-number">2.1.1.4.</span> <span class="nav-text">Use Cases</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#pros-and-cons"><span class="nav-number">2.1.1.5.</span> <span class="nav-text">Pros and Cons</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#doubly-linked-list"><span class="nav-number">2.1.2.</span> <span class="nav-text">Doubly Linked List</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#characteristics-1"><span class="nav-number">2.1.2.1.</span> <span class="nav-text">Characteristics</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#visual-representation-1"><span class="nav-number">2.1.2.2.</span> <span class="nav-text">Visual Representation</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#operations-1"><span class="nav-number">2.1.2.3.</span> <span class="nav-text">Operations</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#use-cases-1"><span class="nav-number">2.1.2.4.</span> <span class="nav-text">Use Cases</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#pros-and-cons-1"><span class="nav-number">2.1.2.5.</span> <span class="nav-text">Pros and Cons</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#circular-linked-list"><span class="nav-number">2.1.3.</span> <span class="nav-text">Circular Linked List</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#types"><span class="nav-number">2.1.3.1.</span> <span class="nav-text">Types</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#characteristics-2"><span class="nav-number">2.1.3.2.</span> <span class="nav-text">Characteristics</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#operations-2"><span class="nav-number">2.1.3.3.</span> <span class="nav-text">Operations</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#use-cases-2"><span class="nav-number">2.1.3.4.</span> <span class="nav-text">Use Cases</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#pros-and-cons-2"><span class="nav-number">2.1.3.5.</span> <span class="nav-text">Pros and Cons</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pros-on-using-linked-lists"><span class="nav-number">2.2.</span> <span class="nav-text">Pros on using Linked Lists</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#use-cases-3"><span class="nav-number">2.3.</span> <span class="nav-text">Use Cases:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#comparing-linked-lists-with-arrays"><span class="nav-number">2.4.</span> <span class="nav-text">Comparing Linked Lists with
-Arrays</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#example-in-code"><span class="nav-number">2.5.</span> <span class="nav-text">Example in Code</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#todos"><span class="nav-number">3.</span> <span class="nav-text">TODOs</span></a></li></ol></div>
+Arrays</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#example-in-code"><span class="nav-number">2.5.</span> <span class="nav-text">Example in Code</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#wip-partition-list-problem-simple-notes"><span class="nav-number">2.6.</span> <span class="nav-text">WIP: Partition List
+Problem (Simple Notes)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#problem"><span class="nav-number">2.6.1.</span> <span class="nav-text">Problem:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#solution-simple-story"><span class="nav-number">2.6.2.</span> <span class="nav-text">Solution (Simple
+Story):</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#story-for-easy-recall"><span class="nav-number">2.6.3.</span> <span class="nav-text">Story for easy
+recall:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#key-code"><span class="nav-number">2.6.4.</span> <span class="nav-text">Key Code:</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#todos"><span class="nav-number">3.</span> <span class="nav-text">TODOs</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -1020,7 +1077,7 @@ Arrays</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href=
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/history">
-          <span class="site-state-item-count">74</span>
+          <span class="site-state-item-count">75</span>
           <span class="site-state-item-name">Posts</span>
         </a>
       </div>
@@ -1029,13 +1086,13 @@ Arrays</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href=
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">48</span>
+        <span class="site-state-item-count">50</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">110</span>
+        <span class="site-state-item-count">113</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
     -->
@@ -1164,7 +1221,7 @@ NEW: Readers & Total Views
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">3:34</span>
+    <span title="Reading time total">3:36</span>
 </div>
 
         
