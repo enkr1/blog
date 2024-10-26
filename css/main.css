@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -14,10 +15,10 @@ html {
 .header-inner,
 .content.index article,
 .post-block {
-  border: 0.9px solid #000;
+  border: 1px solid #000;
 }
 :root {
-  --body-bg-color: #f5f7f9;
+  --body-bg-color: #fff;
   --content-bg-color: #fff;
   --card-bg-color: #f5f5f5;
   --text-color: #555;
@@ -1115,6 +1116,7 @@ pre .javascript .function {
   font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
   font-size: 1.375em;
   font-weight: normal;
+  font-family: "Bona Nova SC", serif;
   margin: 0;
 }
 .site-subtitle {
@@ -1387,7 +1389,7 @@ p {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #ff44db;
+  background: #2a3738;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -1746,6 +1748,7 @@ p {
   color: #c60000;
   color: #fe0000;
   display: inline;
+  transition: all 0.3s ease-in-out;
 }
 .post-body a:not(.fancybox):not(.category-list-link):not(.btn)::after {
   font-family: 'Font Awesome 5 Free';
@@ -2100,7 +2103,7 @@ p {
   display: none !important;
 }
 .posts-expand.index article:hover {
-  border: 0.9px solid #c60000;
+  border: 1px solid #c60000;
   box-shadow: 0rem 0rem 1.3rem 0rem rgba(198,0,0,0.3);
 }
 .posts-expand.index article:hover .post-button,
@@ -3112,7 +3115,7 @@ mjx-container + br {
 }
 .post-body h3 {
   font-size: 1.8rem;
-  border-bottom: 1px dotted #f5f7f9;
+  border-bottom: 1px dotted #fff;
 }
 .post-body h4 {
   font-size: 1.6rem;

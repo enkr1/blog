@@ -48,9 +48,9 @@
           
           <category> Software Engineering </category>
           
-          <category> Web Development </category>
-          
           <category> Notebooks </category>
+          
+          <category> Web Development </category>
           
           <category> Front-end </category>
           
@@ -1118,8 +1118,6 @@
             
             <tag> leetcode </tag>
             
-            <tag> tiktok </tag>
-            
             <tag> site-reliability-engineer </tag>
             
             <tag> sre </tag>
@@ -1129,6 +1127,8 @@
             <tag> coding-interview </tag>
             
             <tag> job-interview </tag>
+            
+            <tag> tiktok </tag>
             
         </tags>
       
@@ -1159,6 +1159,8 @@
             
             <tag> leetcode </tag>
             
+            <tag> google </tag>
+            
             <tag> site-reliability-engineer </tag>
             
             <tag> sre </tag>
@@ -1168,8 +1170,6 @@
             <tag> coding-interview </tag>
             
             <tag> job-interview </tag>
-            
-            <tag> google </tag>
             
         </tags>
       
@@ -1344,9 +1344,9 @@
           
           <category> Programming Languages </category>
           
-          <category> Notebooks </category>
-          
           <category> SQL </category>
+          
+          <category> Notebooks </category>
           
       </categories>
       
@@ -1496,9 +1496,9 @@
           
           <category> Software Engineering </category>
           
-          <category> Software Engineering Best Practices </category>
-          
           <category> Notebooks </category>
+          
+          <category> Software Engineering Best Practices </category>
           
           <category> Career Development </category>
           
@@ -1593,9 +1593,9 @@
           
           <category> Software Engineering </category>
           
-          <category> Computer Networking </category>
-          
           <category> Notebooks </category>
+          
+          <category> Computer Networking </category>
           
       </categories>
       
@@ -1689,9 +1689,9 @@
       
         <tags>
             
-            <tag> hobby </tag>
-            
             <tag> beatbox </tag>
+            
+            <tag> hobby </tag>
             
             <tag> stage-performance </tag>
             
@@ -1880,9 +1880,9 @@
           
           <category> Programming Languages </category>
           
-          <category> Notebooks </category>
-          
           <category> SQL </category>
+          
+          <category> Notebooks </category>
           
       </categories>
       
@@ -1913,9 +1913,9 @@
           
           <category> Software Engineering </category>
           
-          <category> Web Development </category>
-          
           <category> Notebooks </category>
+          
+          <category> Web Development </category>
           
           <category> Front-end </category>
           
@@ -2020,9 +2020,9 @@
           
           <category> Software Engineering </category>
           
-          <category> Personal Development </category>
-          
           <category> Notebooks </category>
+          
+          <category> Personal Development </category>
           
           <category> Online Courses </category>
           
@@ -2094,9 +2094,9 @@
           
           <category> Software Engineering </category>
           
-          <category> Personal Development </category>
-          
           <category> Notebooks </category>
+          
+          <category> Personal Development </category>
           
           <category> Online Courses </category>
           
@@ -2137,9 +2137,9 @@
           
           <category> Software Engineering </category>
           
-          <category> Personal Development </category>
-          
           <category> Notebooks </category>
+          
+          <category> Personal Development </category>
           
           <category> Online Courses </category>
           
@@ -2180,9 +2180,9 @@
           
           <category> Software Engineering </category>
           
-          <category> Personal Development </category>
-          
           <category> Notebooks </category>
+          
+          <category> Personal Development </category>
           
           <category> Online Courses </category>
           
@@ -2223,9 +2223,9 @@
           
           <category> Software Engineering </category>
           
-          <category> Personal Development </category>
-          
           <category> Notebooks </category>
+          
+          <category> Personal Development </category>
           
           <category> Online Courses </category>
           
@@ -2260,9 +2260,9 @@
           
           <category> Software Engineering </category>
           
-          <category> Personal Development </category>
-          
           <category> Notebooks </category>
+          
+          <category> Personal Development </category>
           
           <category> Online Courses </category>
           
@@ -2303,9 +2303,9 @@
           
           <category> Software Engineering </category>
           
-          <category> Personal Development </category>
-          
           <category> Notebooks </category>
+          
+          <category> Personal Development </category>
           
           <category> Online Courses </category>
           
@@ -2346,9 +2346,9 @@
           
           <category> Software Engineering </category>
           
-          <category> Personal Development </category>
-          
           <category> Notebooks </category>
+          
+          <category> Personal Development </category>
           
           <category> Online Courses </category>
           
@@ -2490,9 +2490,9 @@
       
       <categories>
           
-          <category> Personal Development </category>
-          
           <category> Notebooks </category>
+          
+          <category> Personal Development </category>
           
           <category> Online Courses </category>
           
