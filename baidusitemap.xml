@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://blog.enkr1.com/journal-week-14/</loc>
+    <lastmod>2024-10-27</lastmod>
+  </url>
+  <url>
     <loc>https://blog.enkr1.com/building-a-dynamic-and-smooth-progress-bar-for-web-loading/</loc>
-    <lastmod>2024-10-26</lastmod>
+    <lastmod>2024-10-27</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.enkr1.com/goals-2024/</loc>
+    <lastmod>2024-10-27</lastmod>
   </url>
   <url>
     <loc>https://blog.enkr1.com/my-reading-collection/</loc>
@@ -53,19 +61,19 @@
     <lastmod>2024-10-23</lastmod>
   </url>
   <url>
-    <loc>https://blog.enkr1.com/regression-hypothesis-testing/</loc>
-    <lastmod>2024-10-23</lastmod>
-  </url>
-  <url>
     <loc>https://blog.enkr1.com/deep-learning/</loc>
     <lastmod>2024-10-23</lastmod>
   </url>
   <url>
-    <loc>https://blog.enkr1.com/sql-notebook/</loc>
+    <loc>https://blog.enkr1.com/regression-hypothesis-testing/</loc>
     <lastmod>2024-10-23</lastmod>
   </url>
   <url>
     <loc>https://blog.enkr1.com/elixir-notebook/</loc>
+    <lastmod>2024-10-23</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.enkr1.com/sql-notebook/</loc>
     <lastmod>2024-10-23</lastmod>
   </url>
   <url>
@@ -85,11 +93,11 @@
     <lastmod>2024-10-23</lastmod>
   </url>
   <url>
-    <loc>https://blog.enkr1.com/java-notebook/</loc>
+    <loc>https://blog.enkr1.com/making-sense-of-unstructured-data-a-dive-into-clustering-and-dimensionality-reduction/</loc>
     <lastmod>2024-10-23</lastmod>
   </url>
   <url>
-    <loc>https://blog.enkr1.com/making-sense-of-unstructured-data-a-dive-into-clustering-and-dimensionality-reduction/</loc>
+    <loc>https://blog.enkr1.com/java-notebook/</loc>
     <lastmod>2024-10-23</lastmod>
   </url>
   <url>
@@ -106,10 +114,6 @@
   </url>
   <url>
     <loc>https://blog.enkr1.com/recommendation-systems/</loc>
-    <lastmod>2024-10-23</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.enkr1.com/goals-2024/</loc>
     <lastmod>2024-10-23</lastmod>
   </url>
   <url>
