@@ -384,15 +384,15 @@
             
             <tag> algorithm </tag>
             
-            <tag> leetcode </tag>
-            
             <tag> javascript </tag>
+            
+            <tag> leetcode </tag>
             
             <tag> leetcode-medium </tag>
             
-            <tag> interview-preparation </tag>
-            
             <tag> dynamic-programming </tag>
+            
+            <tag> interview-preparation </tag>
             
             <tag> top-interview-150 </tag>
             
@@ -423,15 +423,15 @@
             
             <tag> algorithm </tag>
             
-            <tag> leetcode </tag>
-            
             <tag> javascript </tag>
+            
+            <tag> leetcode </tag>
             
             <tag> leetcode-medium </tag>
             
-            <tag> interview-preparation </tag>
-            
             <tag> dynamic-programming </tag>
+            
+            <tag> interview-preparation </tag>
             
         </tags>
       
@@ -518,9 +518,9 @@
             
             <tag> algorithm </tag>
             
-            <tag> leetcode </tag>
-            
             <tag> javascript </tag>
+            
+            <tag> leetcode </tag>
             
             <tag> interview-preparation </tag>
             
@@ -681,19 +681,19 @@
             
             <tag> algorithm </tag>
             
-            <tag> leetcode </tag>
-            
             <tag> javascript </tag>
             
+            <tag> leetcode </tag>
+            
             <tag> leetcode-medium </tag>
+            
+            <tag> dynamic-programming </tag>
             
             <tag> interview-preparation </tag>
             
             <tag> min-heap </tag>
             
             <tag> priority-queue </tag>
-            
-            <tag> dynamic-programming </tag>
             
         </tags>
       
@@ -722,9 +722,9 @@
             
             <tag> algorithm </tag>
             
-            <tag> leetcode </tag>
-            
             <tag> javascript </tag>
+            
+            <tag> leetcode </tag>
             
             <tag> interview-preparation </tag>
             
@@ -1001,13 +1001,15 @@
             
             <tag> algorithm </tag>
             
-            <tag> leetcode </tag>
-            
             <tag> javascript </tag>
+            
+            <tag> leetcode </tag>
             
             <tag> leetcode-medium </tag>
             
             <tag> interview-preparation </tag>
+            
+            <tag> top-interview-150 </tag>
             
             <tag> topological-sort </tag>
             
@@ -1016,8 +1018,6 @@
             <tag> adjacency-list </tag>
             
             <tag> indegree </tag>
-            
-            <tag> top-interview-150 </tag>
             
         </tags>
       
@@ -1048,9 +1048,9 @@
             
             <tag> interview-preparation </tag>
             
-            <tag> leetcode-easy </tag>
-            
             <tag> bash </tag>
+            
+            <tag> leetcode-easy </tag>
             
         </tags>
       
@@ -1753,9 +1753,9 @@
       
         <tags>
             
-            <tag> hobby </tag>
-            
             <tag> beatbox </tag>
+            
+            <tag> hobby </tag>
             
             <tag> stage-performance </tag>
             
@@ -1874,9 +1874,9 @@
           
           <category> Personal Development </category>
           
-          <category> Life Lessons </category>
-          
           <category> Career Development </category>
+          
+          <category> Life Lessons </category>
           
           <category> Project Management </category>
           
@@ -2598,9 +2598,9 @@
       
         <tags>
             
-            <tag> hexo </tag>
-            
             <tag> programming </tag>
+            
+            <tag> hexo </tag>
             
         </tags>
       

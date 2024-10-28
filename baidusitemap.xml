@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://blog.enkr1.com/journal-week-14/</loc>
-    <lastmod>2024-10-27</lastmod>
+    <lastmod>2024-10-28</lastmod>
   </url>
   <url>
     <loc>https://blog.enkr1.com/building-a-dynamic-and-smooth-progress-bar-for-web-loading/</loc>
@@ -65,11 +65,11 @@
     <lastmod>2024-10-23</lastmod>
   </url>
   <url>
-    <loc>https://blog.enkr1.com/deep-learning/</loc>
+    <loc>https://blog.enkr1.com/elixir-notebook/</loc>
     <lastmod>2024-10-23</lastmod>
   </url>
   <url>
-    <loc>https://blog.enkr1.com/elixir-notebook/</loc>
+    <loc>https://blog.enkr1.com/deep-learning/</loc>
     <lastmod>2024-10-23</lastmod>
   </url>
   <url>
@@ -78,14 +78,6 @@
   </url>
   <url>
     <loc>https://blog.enkr1.com/demystifying-database-design-a-dive-into-3nf-and-bcnf/</loc>
-    <lastmod>2024-10-23</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.enkr1.com/computer-networking-notebook/</loc>
-    <lastmod>2024-10-23</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.enkr1.com/pre-work-introduction-to-data-science-ai/</loc>
     <lastmod>2024-10-23</lastmod>
   </url>
   <url>
@@ -98,6 +90,14 @@
   </url>
   <url>
     <loc>https://blog.enkr1.com/java-notebook/</loc>
+    <lastmod>2024-10-23</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.enkr1.com/computer-networking-notebook/</loc>
+    <lastmod>2024-10-23</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.enkr1.com/pre-work-introduction-to-data-science-ai/</loc>
     <lastmod>2024-10-23</lastmod>
   </url>
   <url>
@@ -185,11 +185,11 @@
     <lastmod>2024-10-05</lastmod>
   </url>
   <url>
-    <loc>https://blog.enkr1.com/journal-week-5/</loc>
+    <loc>https://blog.enkr1.com/journal-week-4/</loc>
     <lastmod>2024-10-05</lastmod>
   </url>
   <url>
-    <loc>https://blog.enkr1.com/journal-week-4/</loc>
+    <loc>https://blog.enkr1.com/journal-week-5/</loc>
     <lastmod>2024-10-05</lastmod>
   </url>
   <url>
