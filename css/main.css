@@ -1393,7 +1393,7 @@ p {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #8ae9ac;
+  background: #937c6b;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2129,7 +2129,7 @@ p {
 }
 .posts-expand.index article:hover {
   border: 1px solid #c60000;
-  box-shadow: 0rem 0rem 1.3rem 0rem rgba(198,0,0,0.3);
+  box-shadow: 0rem 0rem 1.3rem 0rem rgba(198,0,0,0.1);
 }
 .posts-expand.index article:hover .post-button,
 .posts-expand.index article:hover .post-sticky-flag {
