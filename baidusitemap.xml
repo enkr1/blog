@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://blog.enkr1.com/insights-and-reflections-on-the-7-habits-of-highly-effective-people-by-stephen-covey/</loc>
+    <lastmod>2024-11-03</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.enkr1.com/my-reading-collection/</loc>
+    <lastmod>2024-11-03</lastmod>
+  </url>
+  <url>
     <loc>https://blog.enkr1.com/journal-week-15/</loc>
     <lastmod>2024-11-03</lastmod>
   </url>
@@ -25,10 +33,6 @@
     <lastmod>2024-10-27</lastmod>
   </url>
   <url>
-    <loc>https://blog.enkr1.com/my-reading-collection/</loc>
-    <lastmod>2024-10-26</lastmod>
-  </url>
-  <url>
     <loc>https://blog.enkr1.com/design-inspirations/</loc>
     <lastmod>2024-10-23</lastmod>
   </url>
@@ -45,11 +49,11 @@
     <lastmod>2024-10-23</lastmod>
   </url>
   <url>
-    <loc>https://blog.enkr1.com/my-vim-journey-essential-commands-and-tricks-for-developers/</loc>
+    <loc>https://blog.enkr1.com/my-scss-css-tips-tricks-for-streamlined-web-design/</loc>
     <lastmod>2024-10-23</lastmod>
   </url>
   <url>
-    <loc>https://blog.enkr1.com/my-scss-css-tips-tricks-for-streamlined-web-design/</loc>
+    <loc>https://blog.enkr1.com/my-vim-journey-essential-commands-and-tricks-for-developers/</loc>
     <lastmod>2024-10-23</lastmod>
   </url>
   <url>
@@ -69,11 +73,11 @@
     <lastmod>2024-10-23</lastmod>
   </url>
   <url>
-    <loc>https://blog.enkr1.com/deep-learning/</loc>
+    <loc>https://blog.enkr1.com/regression-prediction/</loc>
     <lastmod>2024-10-23</lastmod>
   </url>
   <url>
-    <loc>https://blog.enkr1.com/regression-prediction/</loc>
+    <loc>https://blog.enkr1.com/deep-learning/</loc>
     <lastmod>2024-10-23</lastmod>
   </url>
   <url>
@@ -97,11 +101,11 @@
     <lastmod>2024-10-23</lastmod>
   </url>
   <url>
-    <loc>https://blog.enkr1.com/making-sense-of-unstructured-data-a-dive-into-clustering-and-dimensionality-reduction/</loc>
+    <loc>https://blog.enkr1.com/foundations-of-data-science-navigating-through-inferential-statistics/</loc>
     <lastmod>2024-10-23</lastmod>
   </url>
   <url>
-    <loc>https://blog.enkr1.com/foundations-of-data-science-navigating-through-inferential-statistics/</loc>
+    <loc>https://blog.enkr1.com/making-sense-of-unstructured-data-a-dive-into-clustering-and-dimensionality-reduction/</loc>
     <lastmod>2024-10-23</lastmod>
   </url>
   <url>
@@ -189,11 +193,11 @@
     <lastmod>2024-10-05</lastmod>
   </url>
   <url>
-    <loc>https://blog.enkr1.com/journal-week-4/</loc>
+    <loc>https://blog.enkr1.com/journal-week-5/</loc>
     <lastmod>2024-10-05</lastmod>
   </url>
   <url>
-    <loc>https://blog.enkr1.com/journal-week-5/</loc>
+    <loc>https://blog.enkr1.com/journal-week-4/</loc>
     <lastmod>2024-10-05</lastmod>
   </url>
   <url>
@@ -287,10 +291,6 @@
   <url>
     <loc>https://blog.enkr1.com/leetcode-194-transpose-file/</loc>
     <lastmod>2024-08-28</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.enkr1.com/personal-note-the-7-habits-of-highly-effective-people-by-stephen-covey/</loc>
-    <lastmod>2024-06-23</lastmod>
   </url>
   <url>
     <loc>https://blog.enkr1.com/urgent-seeking-a-room-for-rent-in-singapore-for-two-by-july-2024/</loc>

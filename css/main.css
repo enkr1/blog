@@ -1393,7 +1393,7 @@ p {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #937c6b;
+  background: #c814c7;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -3134,9 +3134,10 @@ mjx-container + br {
 .post-body h5::before,
 .post-body h6::before {
   content: "►";
-  margin: 0 1rem 0 0;
+  margin: 0 0.6rem 0 0;
   color: #fe0000;
   opacity: 0.13;
+  font-size: 80%;
 }
 @media (max-width: 567px) {
   .post-body h1,
