@@ -141,9 +141,9 @@
       
       <categories>
           
-          <category> Personal Development </category>
-          
           <category> Notebooks </category>
+          
+          <category> Personal Development </category>
           
           <category> Collections </category>
           
@@ -154,9 +154,9 @@
       
         <tags>
             
-            <tag> ebooks </tag>
-            
             <tag> reading </tag>
+            
+            <tag> ebooks </tag>
             
             <tag> resources </tag>
             
@@ -178,9 +178,9 @@
           
           <category> Software Engineering </category>
           
-          <category> Web Development </category>
-          
           <category> Notebooks </category>
+          
+          <category> Web Development </category>
           
           <category> Front-end </category>
           
@@ -381,9 +381,9 @@
           
           <category> Software Engineering </category>
           
-          <category> Data Structures &amp; Algorithms </category>
-          
           <category> Notebooks </category>
+          
+          <category> Data Structures &amp; Algorithms </category>
           
       </categories>
       
@@ -456,9 +456,9 @@
             
             <tag> leetcode-medium </tag>
             
-            <tag> interview-preparation </tag>
-            
             <tag> dynamic-programming </tag>
+            
+            <tag> interview-preparation </tag>
             
             <tag> top-interview-150 </tag>
             
@@ -495,9 +495,9 @@
             
             <tag> leetcode-medium </tag>
             
-            <tag> interview-preparation </tag>
-            
             <tag> dynamic-programming </tag>
+            
+            <tag> interview-preparation </tag>
             
         </tags>
       
@@ -707,9 +707,9 @@
           
           <category> Software Engineering </category>
           
-          <category> Data Structures &amp; Algorithms </category>
-          
           <category> Notebooks </category>
+          
+          <category> Data Structures &amp; Algorithms </category>
           
       </categories>
       
@@ -753,13 +753,13 @@
             
             <tag> leetcode-medium </tag>
             
+            <tag> dynamic-programming </tag>
+            
             <tag> interview-preparation </tag>
             
             <tag> min-heap </tag>
             
             <tag> priority-queue </tag>
-            
-            <tag> dynamic-programming </tag>
             
         </tags>
       
@@ -1114,9 +1114,9 @@
             
             <tag> interview-preparation </tag>
             
-            <tag> bash </tag>
-            
             <tag> leetcode-easy </tag>
+            
+            <tag> bash </tag>
             
         </tags>
       
@@ -1248,8 +1248,6 @@
             
             <tag> leetcode </tag>
             
-            <tag> tiktok </tag>
-            
             <tag> site-reliability-engineer </tag>
             
             <tag> sre </tag>
@@ -1259,6 +1257,8 @@
             <tag> coding-interview </tag>
             
             <tag> job-interview </tag>
+            
+            <tag> tiktok </tag>
             
         </tags>
       
@@ -1289,6 +1289,8 @@
             
             <tag> leetcode </tag>
             
+            <tag> google </tag>
+            
             <tag> site-reliability-engineer </tag>
             
             <tag> sre </tag>
@@ -1298,8 +1300,6 @@
             <tag> coding-interview </tag>
             
             <tag> job-interview </tag>
-            
-            <tag> google </tag>
             
         </tags>
       
@@ -1626,11 +1626,11 @@
           
           <category> Software Engineering </category>
           
+          <category> Notebooks </category>
+          
           <category> Software Engineering Best Practices </category>
           
           <category> Career Development </category>
-          
-          <category> Notebooks </category>
           
           <category> Interviews </category>
           
@@ -1723,9 +1723,9 @@
           
           <category> Software Engineering </category>
           
-          <category> Computer Networking </category>
-          
           <category> Notebooks </category>
+          
+          <category> Computer Networking </category>
           
       </categories>
       
@@ -1750,9 +1750,9 @@
       
       <categories>
           
-          <category> Personal Development </category>
-          
           <category> Notebooks </category>
+          
+          <category> Personal Development </category>
           
           <category> Collections </category>
           
@@ -1767,9 +1767,9 @@
       
         <tags>
             
-            <tag> reading </tag>
-            
             <tag> physical-book </tag>
+            
+            <tag> reading </tag>
             
         </tags>
       
@@ -1950,9 +1950,9 @@
           
           <category> Personal Development </category>
           
-          <category> Career Development </category>
-          
           <category> Life Lessons </category>
+          
+          <category> Career Development </category>
           
           <category> Project Management </category>
           
@@ -2053,9 +2053,9 @@
           
           <category> Software Engineering </category>
           
-          <category> Web Development </category>
-          
           <category> Notebooks </category>
+          
+          <category> Web Development </category>
           
           <category> Front-end </category>
           
@@ -2160,9 +2160,9 @@
           
           <category> Software Engineering </category>
           
-          <category> Personal Development </category>
-          
           <category> Notebooks </category>
+          
+          <category> Personal Development </category>
           
           <category> Online Courses </category>
           
@@ -2234,9 +2234,9 @@
           
           <category> Software Engineering </category>
           
-          <category> Personal Development </category>
-          
           <category> Notebooks </category>
+          
+          <category> Personal Development </category>
           
           <category> Online Courses </category>
           
@@ -2277,9 +2277,9 @@
           
           <category> Software Engineering </category>
           
-          <category> Personal Development </category>
-          
           <category> Notebooks </category>
+          
+          <category> Personal Development </category>
           
           <category> Online Courses </category>
           
@@ -2320,9 +2320,9 @@
           
           <category> Software Engineering </category>
           
-          <category> Personal Development </category>
-          
           <category> Notebooks </category>
+          
+          <category> Personal Development </category>
           
           <category> Online Courses </category>
           
@@ -2363,9 +2363,9 @@
           
           <category> Software Engineering </category>
           
-          <category> Personal Development </category>
-          
           <category> Notebooks </category>
+          
+          <category> Personal Development </category>
           
           <category> Online Courses </category>
           
@@ -2400,9 +2400,9 @@
           
           <category> Software Engineering </category>
           
-          <category> Personal Development </category>
-          
           <category> Notebooks </category>
+          
+          <category> Personal Development </category>
           
           <category> Online Courses </category>
           
@@ -2443,9 +2443,9 @@
           
           <category> Software Engineering </category>
           
-          <category> Personal Development </category>
-          
           <category> Notebooks </category>
+          
+          <category> Personal Development </category>
           
           <category> Online Courses </category>
           
@@ -2486,9 +2486,9 @@
           
           <category> Software Engineering </category>
           
-          <category> Personal Development </category>
-          
           <category> Notebooks </category>
+          
+          <category> Personal Development </category>
           
           <category> Online Courses </category>
           
@@ -2630,9 +2630,9 @@
       
       <categories>
           
-          <category> Personal Development </category>
-          
           <category> Notebooks </category>
+          
+          <category> Personal Development </category>
           
           <category> Online Courses </category>
           
@@ -2674,9 +2674,9 @@
       
         <tags>
             
-            <tag> hexo </tag>
-            
             <tag> programming </tag>
+            
+            <tag> hexo </tag>
             
         </tags>
       

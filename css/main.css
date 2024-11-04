@@ -1108,7 +1108,7 @@ pre .javascript .function {
   border-bottom: none;
   color: var(--brand-color);
   display: inline-block;
-  line-height: 1.375em;
+  line-height: 1.6rem;
   padding: 0 40px;
   position: relative;
 }
@@ -1117,7 +1117,7 @@ pre .javascript .function {
 }
 .site-title {
   font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
-  font-size: 1.375em;
+  font-size: 1.6rem;
   font-weight: normal;
   font-family: "Bona Nova SC", serif;
   margin: 0;
@@ -1310,7 +1310,7 @@ p {
   .menu .menu-item span.exturl:hover {
     background: unset;
     border-radius: 0.6rem;
-    border: 1px solid #999 !important;
+    border: 1px solid #000 !important;
     box-shadow: initial;
   }
 }
@@ -1393,7 +1393,7 @@ p {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #d17344;
+  background: #9934ff;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2362,6 +2362,11 @@ p {
 #qr p {
   text-align: center;
 }
+@media (max-width: 767px) {
+  .category-all-page {
+    padding: 0 0 3rem;
+  }
+}
 .category-all-page .category-all ul {
   list-style: none;
   margin: 0;
@@ -2377,6 +2382,11 @@ p {
   color: #555;
   display: block;
   padding: 0rem 0.3rem;
+}
+@media (max-width: 767px) {
+  .category-all-page .category-all .category-list .category-list-item .category-list-link {
+    padding: 0.3rem 0.3rem;
+  }
 }
 .category-all-page .category-all .category-list .category-list-item .category-list-link::before {
   content: "";
