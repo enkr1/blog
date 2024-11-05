@@ -1393,7 +1393,7 @@ p {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #9934ff;
+  background: #8ba7ff;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2362,11 +2362,6 @@ p {
 #qr p {
   text-align: center;
 }
-@media (max-width: 767px) {
-  .category-all-page {
-    padding: 0 0 3rem;
-  }
-}
 .category-all-page .category-all ul {
   list-style: none;
   margin: 0;
@@ -2897,7 +2892,7 @@ mjx-container + br {
 @media (max-width: 767px) {
   .menu .menu-item a,
   .menu .menu-item span.exturl {
-    padding: 0.5rem 1.2rem;
+    padding: 1.5rem 2.2rem;
     border: 1px solid transparent;
   }
 }
@@ -3038,7 +3033,7 @@ mjx-container + br {
 .content-wrap {
   background: initial;
   box-shadow: initial;
-  padding: 1rem 1.2rem;
+  padding: 1.3rem;
 }
 .post-block {
   background: var(--content-bg-color);
@@ -3166,7 +3161,7 @@ mjx-container + br {
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .content-wrap {
-    padding: 7.25rem 1rem 1rem;
+    padding: 7.77rem 1rem 1rem;
   }
   .posts-expand .post-button {
     margin-top: 20px;
@@ -3190,12 +3185,15 @@ mjx-container + br {
 }
 @media (max-width: 767px) {
   .content-wrap {
-    padding: 7.25rem 1rem 1rem;
+    padding: 7.77rem 1rem 1rem;
   }
   .post-block {
     border-radius: 1rem;
     box-shadow: initial;
     min-height: auto;
+    padding: 0.8rem 1rem 1.3rem;
+  }
+  .index .post-block {
     padding: 0.8rem 2rem 2.3rem;
   }
   .post-block+.post-block {
@@ -3251,6 +3249,12 @@ mjx-container + br {
 .tag-cloud {
   margin: -1.5rem 0 0;
   padding: 0 1rem 3rem;
+}
+@media (max-width: 767px) {
+  .category-all-page,
+  .tag-cloud {
+    padding: 0 1rem 1.3rem;
+  }
 }
 .category-all-page .category-all-title,
 .tag-cloud .category-all-title,
