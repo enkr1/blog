@@ -1393,7 +1393,7 @@ p {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #599f09;
+  background: #40e51d;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -3116,6 +3116,14 @@ mjx-container + br {
 .post-body h6 {
   color: #c60000;
 }
+.post-body h1 a,
+.post-body h2 a,
+.post-body h3 a,
+.post-body h4 a,
+.post-body h5 a,
+.post-body h6 a {
+  font-weight: 600;
+}
 .post-body h1 {
 /* border-bottom: 1px solid $body-bg-color; */
   border-bottom: 1px solid rgba(198,0,0,0.192);
@@ -3129,6 +3137,9 @@ mjx-container + br {
 .post-body h3 {
   font-size: 1.8rem;
   border-bottom: 1px dotted #fff;
+}
+.post-body h3 a {
+  font-size: 1.6rem;
 }
 .post-body h4 {
   font-size: 1.6rem;
