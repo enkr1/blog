@@ -228,9 +228,9 @@ the beatb</summary>
     
     <category term="Software Engineering" scheme="https://blog.enkr1.com/categories/Software-Engineering/"/>
     
-    <category term="Notebooks" scheme="https://blog.enkr1.com/categories/Notebooks/"/>
-    
     <category term="Web Development" scheme="https://blog.enkr1.com/categories/Software-Engineering/Web-Development/"/>
+    
+    <category term="Notebooks" scheme="https://blog.enkr1.com/categories/Notebooks/"/>
     
     <category term="Front-end" scheme="https://blog.enkr1.com/categories/Software-Engineering/Web-Development/Front-end/"/>
     
@@ -496,13 +496,13 @@ mid-autumn fe</summary>
     
     <category term="algorithm" scheme="https://blog.enkr1.com/tags/algorithm/"/>
     
-    <category term="leetcode" scheme="https://blog.enkr1.com/tags/leetcode/"/>
-    
     <category term="javascript" scheme="https://blog.enkr1.com/tags/javascript/"/>
     
-    <category term="leetcode-medium" scheme="https://blog.enkr1.com/tags/leetcode-medium/"/>
+    <category term="leetcode" scheme="https://blog.enkr1.com/tags/leetcode/"/>
     
     <category term="interview-preparation" scheme="https://blog.enkr1.com/tags/interview-preparation/"/>
+    
+    <category term="leetcode-medium" scheme="https://blog.enkr1.com/tags/leetcode-medium/"/>
     
     <category term="dynamic-programming" scheme="https://blog.enkr1.com/tags/dynamic-programming/"/>
     
@@ -531,13 +531,13 @@ mid-autumn fe</summary>
     
     <category term="algorithm" scheme="https://blog.enkr1.com/tags/algorithm/"/>
     
-    <category term="leetcode" scheme="https://blog.enkr1.com/tags/leetcode/"/>
-    
     <category term="javascript" scheme="https://blog.enkr1.com/tags/javascript/"/>
     
-    <category term="leetcode-medium" scheme="https://blog.enkr1.com/tags/leetcode-medium/"/>
+    <category term="leetcode" scheme="https://blog.enkr1.com/tags/leetcode/"/>
     
     <category term="interview-preparation" scheme="https://blog.enkr1.com/tags/interview-preparation/"/>
+    
+    <category term="leetcode-medium" scheme="https://blog.enkr1.com/tags/leetcode-medium/"/>
     
     <category term="dynamic-programming" scheme="https://blog.enkr1.com/tags/dynamic-programming/"/>
     
@@ -619,13 +619,13 @@ the surfac</summary>
     
     <category term="algorithm" scheme="https://blog.enkr1.com/tags/algorithm/"/>
     
-    <category term="leetcode" scheme="https://blog.enkr1.com/tags/leetcode/"/>
-    
     <category term="javascript" scheme="https://blog.enkr1.com/tags/javascript/"/>
     
-    <category term="interview-preparation" scheme="https://blog.enkr1.com/tags/interview-preparation/"/>
+    <category term="leetcode" scheme="https://blog.enkr1.com/tags/leetcode/"/>
     
     <category term="leetcode-easy" scheme="https://blog.enkr1.com/tags/leetcode-easy/"/>
+    
+    <category term="interview-preparation" scheme="https://blog.enkr1.com/tags/interview-preparation/"/>
     
     <category term="array-manipulation" scheme="https://blog.enkr1.com/tags/array-manipulation/"/>
     

@@ -1393,7 +1393,7 @@ p {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #40e51d;
+  background: #32ec4b;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -3292,4 +3292,7 @@ mjx-container + br {
   height: 100%;
   min-height: 50rem;
   width: 100%;
+}
+.disqus-item .post-meta-item-text {
+  display: none;
 }
