@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://blog.enkr1.com/journal-week-16/</loc>
+    <lastmod>2024-11-10</lastmod>
+  </url>
+  <url>
     <loc>https://blog.enkr1.com/scss-css-notebook/</loc>
     <lastmod>2024-11-05</lastmod>
   </url>
@@ -89,11 +93,11 @@
     <lastmod>2024-10-23</lastmod>
   </url>
   <url>
-    <loc>https://blog.enkr1.com/sql-notebook/</loc>
+    <loc>https://blog.enkr1.com/elixir-notebook/</loc>
     <lastmod>2024-10-23</lastmod>
   </url>
   <url>
-    <loc>https://blog.enkr1.com/elixir-notebook/</loc>
+    <loc>https://blog.enkr1.com/sql-notebook/</loc>
     <lastmod>2024-10-23</lastmod>
   </url>
   <url>
@@ -105,11 +109,11 @@
     <lastmod>2024-10-23</lastmod>
   </url>
   <url>
-    <loc>https://blog.enkr1.com/making-sense-of-unstructured-data-a-dive-into-clustering-and-dimensionality-reduction/</loc>
+    <loc>https://blog.enkr1.com/foundations-of-data-science-navigating-through-inferential-statistics/</loc>
     <lastmod>2024-10-23</lastmod>
   </url>
   <url>
-    <loc>https://blog.enkr1.com/foundations-of-data-science-navigating-through-inferential-statistics/</loc>
+    <loc>https://blog.enkr1.com/making-sense-of-unstructured-data-a-dive-into-clustering-and-dimensionality-reduction/</loc>
     <lastmod>2024-10-23</lastmod>
   </url>
   <url>
