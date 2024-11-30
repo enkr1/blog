@@ -249,9 +249,9 @@
       
         <tags>
             
-            <tag> reading </tag>
-            
             <tag> ebooks </tag>
+            
+            <tag> reading </tag>
             
             <tag> resources </tag>
             
@@ -354,9 +354,9 @@
             
             <tag> dns </tag>
             
-            <tag> github-pages </tag>
-            
             <tag> hexo </tag>
+            
+            <tag> github-pages </tag>
             
         </tags>
       
@@ -551,9 +551,9 @@
             
             <tag> leetcode-medium </tag>
             
-            <tag> dynamic-programming </tag>
-            
             <tag> interview-preparation </tag>
+            
+            <tag> dynamic-programming </tag>
             
             <tag> top-interview-150 </tag>
             
@@ -590,9 +590,9 @@
             
             <tag> leetcode-medium </tag>
             
-            <tag> dynamic-programming </tag>
-            
             <tag> interview-preparation </tag>
+            
+            <tag> dynamic-programming </tag>
             
         </tags>
       
@@ -848,13 +848,13 @@
             
             <tag> leetcode-medium </tag>
             
-            <tag> dynamic-programming </tag>
-            
             <tag> interview-preparation </tag>
             
             <tag> min-heap </tag>
             
             <tag> priority-queue </tag>
+            
+            <tag> dynamic-programming </tag>
             
         </tags>
       
@@ -1009,9 +1009,9 @@
             
             <tag> dns </tag>
             
-            <tag> github-pages </tag>
-            
             <tag> hexo </tag>
+            
+            <tag> github-pages </tag>
             
         </tags>
       
@@ -1862,9 +1862,9 @@
       
         <tags>
             
-            <tag> physical-book </tag>
-            
             <tag> reading </tag>
+            
+            <tag> physical-book </tag>
             
         </tags>
       
@@ -2045,9 +2045,9 @@
           
           <category> Personal Development </category>
           
-          <category> Life Lessons </category>
-          
           <category> Career Development </category>
+          
+          <category> Life Lessons </category>
           
           <category> Project Management </category>
           
