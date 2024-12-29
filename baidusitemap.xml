@@ -1,28 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://blog.enkr1.com/journal-week-18/</loc>
-    <lastmod>2024-12-01</lastmod>
+    <loc>https://blog.enkr1.com/journal-week-7/</loc>
+    <lastmod>2024-12-29</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.enkr1.com/journal-week-8/</loc>
+    <lastmod>2024-12-29</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.enkr1.com/journal-week-9/</loc>
+    <lastmod>2024-12-29</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.enkr1.com/journal-week-10/</loc>
+    <lastmod>2024-12-29</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.enkr1.com/journal-week-11/</loc>
+    <lastmod>2024-12-29</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.enkr1.com/journal-week-12/</loc>
+    <lastmod>2024-12-29</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.enkr1.com/journal-week-13/</loc>
+    <lastmod>2024-12-29</lastmod>
   </url>
   <url>
     <loc>https://blog.enkr1.com/journal-week-14/</loc>
-    <lastmod>2024-12-01</lastmod>
+    <lastmod>2024-12-29</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.enkr1.com/journal-week-15/</loc>
+    <lastmod>2024-12-29</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.enkr1.com/journal-week-16/</loc>
+    <lastmod>2024-12-29</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.enkr1.com/journal-week-17/</loc>
+    <lastmod>2024-12-29</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.enkr1.com/journal-week-18/</loc>
+    <lastmod>2024-12-29</lastmod>
   </url>
   <url>
     <loc>https://blog.enkr1.com/leetcode-192-word-frequency/</loc>
     <lastmod>2024-11-30</lastmod>
   </url>
   <url>
-    <loc>https://blog.enkr1.com/journal-week-17/</loc>
-    <lastmod>2024-11-28</lastmod>
-  </url>
-  <url>
     <loc>https://blog.enkr1.com/why-do-i-love-beatboxing/</loc>
     <lastmod>2024-11-28</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.enkr1.com/journal-week-16/</loc>
-    <lastmod>2024-11-12</lastmod>
   </url>
   <url>
     <loc>https://blog.enkr1.com/scss-css-notebook/</loc>
@@ -47,10 +79,6 @@
   <url>
     <loc>https://blog.enkr1.com/goals-2024/</loc>
     <lastmod>2024-11-05</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.enkr1.com/journal-week-15/</loc>
-    <lastmod>2024-11-03</lastmod>
   </url>
   <url>
     <loc>https://blog.enkr1.com/data-structure-notebook/</loc>
@@ -93,11 +121,11 @@
     <lastmod>2024-10-23</lastmod>
   </url>
   <url>
-    <loc>https://blog.enkr1.com/regression-hypothesis-testing/</loc>
+    <loc>https://blog.enkr1.com/regression-prediction/</loc>
     <lastmod>2024-10-23</lastmod>
   </url>
   <url>
-    <loc>https://blog.enkr1.com/regression-prediction/</loc>
+    <loc>https://blog.enkr1.com/regression-hypothesis-testing/</loc>
     <lastmod>2024-10-23</lastmod>
   </url>
   <url>
@@ -125,11 +153,11 @@
     <lastmod>2024-10-23</lastmod>
   </url>
   <url>
-    <loc>https://blog.enkr1.com/foundations-of-data-science-navigating-through-inferential-statistics/</loc>
+    <loc>https://blog.enkr1.com/making-sense-of-unstructured-data-a-dive-into-clustering-and-dimensionality-reduction/</loc>
     <lastmod>2024-10-23</lastmod>
   </url>
   <url>
-    <loc>https://blog.enkr1.com/making-sense-of-unstructured-data-a-dive-into-clustering-and-dimensionality-reduction/</loc>
+    <loc>https://blog.enkr1.com/foundations-of-data-science-navigating-through-inferential-statistics/</loc>
     <lastmod>2024-10-23</lastmod>
   </url>
   <url>
@@ -173,10 +201,6 @@
     <lastmod>2024-10-22</lastmod>
   </url>
   <url>
-    <loc>https://blog.enkr1.com/journal-week-13/</loc>
-    <lastmod>2024-10-20</lastmod>
-  </url>
-  <url>
     <loc>https://blog.enkr1.com/my-domain-setup-dynadot/</loc>
     <lastmod>2024-10-20</lastmod>
   </url>
@@ -193,31 +217,7 @@
     <lastmod>2024-10-18</lastmod>
   </url>
   <url>
-    <loc>https://blog.enkr1.com/journal-week-12/</loc>
-    <lastmod>2024-10-13</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.enkr1.com/journal-week-11/</loc>
-    <lastmod>2024-10-13</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.enkr1.com/journal-week-8/</loc>
-    <lastmod>2024-10-05</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.enkr1.com/journal-week-10/</loc>
-    <lastmod>2024-10-05</lastmod>
-  </url>
-  <url>
     <loc>https://blog.enkr1.com/journal-week-6/</loc>
-    <lastmod>2024-10-05</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.enkr1.com/journal-week-9/</loc>
-    <lastmod>2024-10-05</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.enkr1.com/journal-week-4/</loc>
     <lastmod>2024-10-05</lastmod>
   </url>
   <url>
@@ -225,7 +225,7 @@
     <lastmod>2024-10-05</lastmod>
   </url>
   <url>
-    <loc>https://blog.enkr1.com/journal-week-7/</loc>
+    <loc>https://blog.enkr1.com/journal-week-4/</loc>
     <lastmod>2024-10-05</lastmod>
   </url>
   <url>
