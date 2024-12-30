@@ -534,9 +534,9 @@
           
           <category> Software Engineering </category>
           
-          <category> Data Structures &amp; Algorithms </category>
-          
           <category> Notebooks </category>
+          
+          <category> Data Structures &amp; Algorithms </category>
           
       </categories>
       
@@ -603,15 +603,15 @@
             
             <tag> algorithm </tag>
             
+            <tag> leetcode </tag>
+            
             <tag> javascript </tag>
             
-            <tag> leetcode </tag>
+            <tag> interview-preparation </tag>
             
             <tag> leetcode-medium </tag>
             
             <tag> dynamic-programming </tag>
-            
-            <tag> interview-preparation </tag>
             
             <tag> top-interview-150 </tag>
             
@@ -642,15 +642,15 @@
             
             <tag> algorithm </tag>
             
+            <tag> leetcode </tag>
+            
             <tag> javascript </tag>
             
-            <tag> leetcode </tag>
+            <tag> interview-preparation </tag>
             
             <tag> leetcode-medium </tag>
             
             <tag> dynamic-programming </tag>
-            
-            <tag> interview-preparation </tag>
             
         </tags>
       
@@ -737,13 +737,13 @@
             
             <tag> algorithm </tag>
             
-            <tag> javascript </tag>
-            
             <tag> leetcode </tag>
             
-            <tag> interview-preparation </tag>
+            <tag> javascript </tag>
             
             <tag> leetcode-easy </tag>
+            
+            <tag> interview-preparation </tag>
             
             <tag> array-manipulation </tag>
             
@@ -860,9 +860,9 @@
           
           <category> Software Engineering </category>
           
-          <category> Data Structures &amp; Algorithms </category>
-          
           <category> Notebooks </category>
+          
+          <category> Data Structures &amp; Algorithms </category>
           
       </categories>
       
@@ -900,15 +900,15 @@
             
             <tag> algorithm </tag>
             
+            <tag> leetcode </tag>
+            
             <tag> javascript </tag>
             
-            <tag> leetcode </tag>
+            <tag> interview-preparation </tag>
             
             <tag> leetcode-medium </tag>
             
             <tag> dynamic-programming </tag>
-            
-            <tag> interview-preparation </tag>
             
             <tag> min-heap </tag>
             
@@ -941,13 +941,13 @@
             
             <tag> algorithm </tag>
             
-            <tag> javascript </tag>
-            
             <tag> leetcode </tag>
             
-            <tag> interview-preparation </tag>
+            <tag> javascript </tag>
             
             <tag> leetcode-easy </tag>
+            
+            <tag> interview-preparation </tag>
             
             <tag> binary-search </tag>
             
@@ -1220,13 +1220,13 @@
             
             <tag> algorithm </tag>
             
-            <tag> javascript </tag>
-            
             <tag> leetcode </tag>
             
-            <tag> leetcode-medium </tag>
+            <tag> javascript </tag>
             
             <tag> interview-preparation </tag>
+            
+            <tag> leetcode-medium </tag>
             
             <tag> top-interview-150 </tag>
             
@@ -1265,11 +1265,11 @@
             
             <tag> leetcode </tag>
             
+            <tag> leetcode-easy </tag>
+            
             <tag> interview-preparation </tag>
             
             <tag> bash </tag>
-            
-            <tag> leetcode-easy </tag>
             
         </tags>
       
@@ -1298,9 +1298,9 @@
             
             <tag> leetcode </tag>
             
-            <tag> leetcode-medium </tag>
-            
             <tag> interview-preparation </tag>
+            
+            <tag> leetcode-medium </tag>
             
             <tag> bash </tag>
             
@@ -1331,9 +1331,9 @@
             
             <tag> leetcode </tag>
             
-            <tag> leetcode-medium </tag>
-            
             <tag> interview-preparation </tag>
+            
+            <tag> leetcode-medium </tag>
             
             <tag> bash </tag>
             
@@ -1399,19 +1399,19 @@
       
         <tags>
             
-            <tag> tiktok </tag>
+            <tag> leetcode </tag>
             
             <tag> site-reliability-engineer </tag>
             
             <tag> sre </tag>
-            
-            <tag> leetcode </tag>
             
             <tag> interview-experience </tag>
             
             <tag> coding-interview </tag>
             
             <tag> job-interview </tag>
+            
+            <tag> tiktok </tag>
             
         </tags>
       
@@ -1440,19 +1440,19 @@
       
         <tags>
             
+            <tag> leetcode </tag>
+            
+            <tag> google </tag>
+            
             <tag> site-reliability-engineer </tag>
             
             <tag> sre </tag>
-            
-            <tag> leetcode </tag>
             
             <tag> interview-experience </tag>
             
             <tag> coding-interview </tag>
             
             <tag> job-interview </tag>
-            
-            <tag> google </tag>
             
         </tags>
       
@@ -1539,8 +1539,6 @@
             
             <tag> algorithm </tag>
             
-            <tag> leetcode </tag>
-            
             <tag> heap-map </tag>
             
             <tag> breadth-first-search </tag>
@@ -1548,6 +1546,8 @@
             <tag> shortest-path </tag>
             
             <tag> graph-algorithms </tag>
+            
+            <tag> leetcode </tag>
             
         </tags>
       
@@ -2103,9 +2103,9 @@
           
           <category> Personal Development </category>
           
-          <category> Career Development </category>
-          
           <category> Life Lessons </category>
+          
+          <category> Career Development </category>
           
           <category> Project Management </category>
           
