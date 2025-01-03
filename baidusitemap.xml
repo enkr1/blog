@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://blog.enkr1.com/reflections-2024/</loc>
+    <lastmod>2025-01-03</lastmod>
+  </url>
+  <url>
     <loc>https://blog.enkr1.com/goals-2025/</loc>
     <lastmod>2024-12-31</lastmod>
   </url>
@@ -13,10 +17,6 @@
     <lastmod>2024-12-30</lastmod>
   </url>
   <url>
-    <loc>https://blog.enkr1.com/journal-week-11/</loc>
-    <lastmod>2024-12-30</lastmod>
-  </url>
-  <url>
     <loc>https://blog.enkr1.com/journal-week-12/</loc>
     <lastmod>2024-12-30</lastmod>
   </url>
@@ -25,11 +25,15 @@
     <lastmod>2024-12-30</lastmod>
   </url>
   <url>
-    <loc>https://blog.enkr1.com/journal-week-16/</loc>
+    <loc>https://blog.enkr1.com/journal-week-11/</loc>
     <lastmod>2024-12-30</lastmod>
   </url>
   <url>
     <loc>https://blog.enkr1.com/journal-week-17/</loc>
+    <lastmod>2024-12-30</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.enkr1.com/journal-week-16/</loc>
     <lastmod>2024-12-30</lastmod>
   </url>
   <url>
@@ -77,11 +81,11 @@
     <lastmod>2024-12-30</lastmod>
   </url>
   <url>
-    <loc>https://blog.enkr1.com/journal-week-7/</loc>
+    <loc>https://blog.enkr1.com/journal-week-6/</loc>
     <lastmod>2024-12-30</lastmod>
   </url>
   <url>
-    <loc>https://blog.enkr1.com/journal-week-6/</loc>
+    <loc>https://blog.enkr1.com/journal-week-7/</loc>
     <lastmod>2024-12-30</lastmod>
   </url>
   <url>
@@ -153,15 +157,15 @@
     <lastmod>2024-10-23</lastmod>
   </url>
   <url>
-    <loc>https://blog.enkr1.com/deep-learning/</loc>
-    <lastmod>2024-10-23</lastmod>
-  </url>
-  <url>
     <loc>https://blog.enkr1.com/regression-hypothesis-testing/</loc>
     <lastmod>2024-10-23</lastmod>
   </url>
   <url>
     <loc>https://blog.enkr1.com/regression-prediction/</loc>
+    <lastmod>2024-10-23</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.enkr1.com/deep-learning/</loc>
     <lastmod>2024-10-23</lastmod>
   </url>
   <url>
