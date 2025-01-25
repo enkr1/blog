@@ -800,9 +800,9 @@
             
             <tag> leetcode-medium </tag>
             
-            <tag> interview-preparation </tag>
-            
             <tag> dynamic-programming </tag>
+            
+            <tag> interview-preparation </tag>
             
             <tag> top-interview-150 </tag>
             
@@ -839,9 +839,9 @@
             
             <tag> leetcode-medium </tag>
             
-            <tag> interview-preparation </tag>
-            
             <tag> dynamic-programming </tag>
+            
+            <tag> interview-preparation </tag>
             
         </tags>
       
@@ -1011,7 +1011,7 @@
       <link href="/journal-week-6/"/>
       <url>/journal-week-6/</url>
       
-        <content type="html"><![CDATA[<h2 id="highlights-of-the-week">Highlights of the Week</h2><ul><li><strong>Exploring New Experiences:</strong> this week was filledwith firsts—tried Arabica coffee for the first time, went to acandlelight concert, and spent quality time with my brother and his gf.and... it's already been 9 months at ByteDance, but it feels more than ayear, that's strange, time is quick and slow. time flies and drags atthe same time, but it also gives me a moment to reflect on how much i'vegrown.</li></ul><span id="more"></span><h2 id="little-lesson">Little Lesson</h2><p>this week, i really resonated with a couple of concepts from<strong>The Diary of a CEO</strong>. one of them is the idea of<strong>leaning into cognitive dissonance</strong>—when you experiencethat uncomfortable feeling of encountering something that doesn't alignwith what you know, instead of retreating, it's important to lean in andexplore it. this reminded me of how i've grown in my career,particularly at ByteDance. early on, i encountered a lot of situationswhere i felt out of my depth, but <strong>pushing through those momentsof discomfort is where the most growth happened</strong>. forinstance,</p><p>when i first started taking over a project that required a deepunderstanding of the business logic, it was unfamiliar and daunting atfirst. it was absolutely confusing and challenging, but by immersingmyself in it, i not only learnt how that part of the business functionsbut also developed a new approach to problem-solving.</p><h2 id="memories">Memories</h2>]]></content>
+        <content type="html"><![CDATA[<h2 id="highlights-of-the-week">Highlights of the Week</h2><ul><li><strong>Exploring New Experiences:</strong> this week was filledwith firsts—tried Arabica coffee for the first time, went to acandlelight concert, and spent quality time with my brother and his gf.and... it's already been 9 months at ByteDance, but it feels more than ayear, that's strange, time is quick and slow. time flies and drags atthe same time, but it also gives me a moment to reflect on how much i'vegrown.</li></ul><span id="more"></span><h2 id="little-lesson">Little Lesson</h2><p>this week, i really resonated with a couple of concepts from<strong>The Diary of a CEO</strong>. one of them is the idea of<strong>leaning into cognitive dissonance</strong>—when you experiencethat uncomfortable feeling of encountering something that doesn't alignwith what you know, instead of retreating, it's important to lean in andexplore it. this reminded me of how i've grown in my career,particularly at ByteDance. early on, i encountered a lot of situationswhere i felt out of my depth, but <strong>pushing through those momentsof discomfort is where the most growth happened</strong>. forinstance,</p><p>when i first started taking over a project that required a deepunderstanding of the business logic, it was unfamiliar and daunting atfirst. it was absolutely confusing and challenging, but by immersingmyself in it, i not only learnt how that part of the business functionsbut also developed a new approach to problem-solving.</p><h2 id="memories">Memories</h2><img data-src="/journal-week-6/IMG_4003.jpeg" class="large" title="CHIJMES"><img data-src="/journal-week-6/IMG_4005.jpeg" class="large"><img data-src="/journal-week-6/IMG_4014.jpeg" class="large" title="CHIJMES Hall"><img data-src="/journal-week-6/IMG_4144.jpeg" class="large" title="Trying Arabica Coffee for the first time!"><img data-src="/journal-week-6/IMG_4145.jpeg" class="large"><img data-src="/journal-week-6/IMG_4152.jpeg" class="large" title="The Diary of a CEO"><img data-src="/journal-week-6/IMG_4153.jpeg" class="large" title="The Diary of a CEO"><img data-src="/journal-week-6/IMG_4177.jpeg" class="large" title="When my watch is not with me ..."><img data-src="/journal-week-6/IMG_4183.jpeg" class="large" title="Walking by, thinking about it has already been 9 months? wow ..."><img data-src="/journal-week-6/IMG_4218.jpeg" class="large"><img data-src="/journal-week-6/IMG_4229.jpeg" class="large" title="Kiang Kee Bak Kut Teh - Kampung Haji Mohd Jambi, Kota Tinggi 81900 Malaysia">]]></content>
       
       
       <categories>
@@ -1091,13 +1091,13 @@
             
             <tag> leetcode-medium </tag>
             
+            <tag> dynamic-programming </tag>
+            
             <tag> interview-preparation </tag>
             
             <tag> min-heap </tag>
             
             <tag> priority-queue </tag>
-            
-            <tag> dynamic-programming </tag>
             
         </tags>
       
@@ -1292,7 +1292,7 @@
       <link href="/journal-week-2/"/>
       <url>/journal-week-2/</url>
       
-        <content type="html"><![CDATA[<h2 id="highlights-of-the-week">Highlights of the Week</h2><ul><li><strong>Personal update</strong>: this week was a busy week for meto migrate to my new place. renting a room in singapore is tough. i feellike a hermit crab... i skipped quite a few gym sessions because i hadto clean up and unpack stuff. from the lease that we just ended, mysister and i did not get the full deposit back, which was totallyridiculous. we were speechless but just let it go. (might update more onthis next time?)</li><li><strong>Beatboxing</strong>: oh dear, i had a bad flu this week :(didn't beat as much, but i've been progressing on my throat bass andvibration throat bass. i'm getting more and more comfortable withit!</li><li><strong>Work</strong>: i had my first ByteDance All-Hands in person!it was totally an eye-opening experience to hear the heads of eachdepartment talk about the updates of last quarter, their visions for thedepartments, products, and company.</li></ul><span id="more"></span><h2 id="little-lesson">Little Lesson</h2><p>this week i re-learnt that to have a solid and great product, youneed to be the user. you need to be in the user's shoes to actually seehow good or bad your product is. by doing this, you can get first-handfeedback and better understand your product and the overall experience,said Rubo Liang. i totally agree with this point. i learnt this keyconcept from Lio when i was working at Pixium Digital. he was my leaderand the CTO of the company. i used to build something inhuman when i wasin charge of my first few projects, even though i had a UX/UIbackground. that's strange, isn't it? and yes, i still made thosemistakes. but after listening to him, i tried to use my product andrealised, wow, he was totally right. this is a solid point and somethingto always remember as a developer, project manager, or leader.</p><video width="auto" height="auto" controls><source src="/journal-week-2/IMG_3476_compressed.mp4" type="video/mp4"></video><video width="auto" height="auto" controls><source src="/journal-week-2/IMG_3483_compressed.mp4" type="video/mp4"></video><!-- .post-body video -->]]></content>
+        <content type="html"><![CDATA[<h2 id="highlights-of-the-week">Highlights of the Week</h2><ul><li><strong>Personal update</strong>: this week was a busy week for meto migrate to my new place. renting a room in singapore is tough. i feellike a hermit crab... i skipped quite a few gym sessions because i hadto clean up and unpack stuff. from the lease that we just ended, mysister and i did not get the full deposit back, which was totallyridiculous. we were speechless but just let it go. (might update more onthis next time?)</li><li><strong>Beatboxing</strong>: oh dear, i had a bad flu this week :(didn't beat as much, but i've been progressing on my throat bass andvibration throat bass. i'm getting more and more comfortable withit!</li><li><strong>Work</strong>: i had my first ByteDance All-Hands in person!it was totally an eye-opening experience to hear the heads of eachdepartment talk about the updates of last quarter, their visions for thedepartments, products, and company.</li></ul><span id="more"></span><h2 id="little-lesson">Little Lesson</h2><p>this week i re-learnt that to have a solid and great product, youneed to be the user. you need to be in the user's shoes to actually seehow good or bad your product is. by doing this, you can get first-handfeedback and better understand your product and the overall experience,said Rubo Liang. i totally agree with this point. i learnt this keyconcept from Lio when i was working at Pixium Digital. he was my leaderand the CTO of the company. i used to build something inhuman when i wasin charge of my first few projects, even though i had a UX/UIbackground. that's strange, isn't it? and yes, i still made thosemistakes. but after listening to him, i tried to use my product andrealised, wow, he was totally right. this is a solid point and somethingto always remember as a developer, project manager, or leader.</p><img data-src="/journal-week-2/IMG_3473.png" class="large"><video width="auto" height="auto" controls><source src="/journal-week-2/IMG_3476_compressed.mp4" type="video/mp4"></video><img data-src="/journal-week-2/IMG_3482.png" class="large"><video width="auto" height="auto" controls><source src="/journal-week-2/IMG_3483_compressed.mp4" type="video/mp4"></video><!-- .post-body video -->]]></content>
       
       
       <categories>
@@ -2159,9 +2159,9 @@
       
         <tags>
             
-            <tag> beatbox </tag>
-            
             <tag> hobby </tag>
+            
+            <tag> beatbox </tag>
             
             <tag> stage-performance </tag>
             
@@ -3004,9 +3004,9 @@
       
         <tags>
             
-            <tag> hexo </tag>
-            
             <tag> programming </tag>
+            
+            <tag> hexo </tag>
             
         </tags>
       
