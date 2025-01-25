@@ -1,0 +1,1341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 7.3.0">
+<meta name="google-site-verification" content="wSUWWkv_QhNXB_N6r3rOSU2YlmmWxYBk6UWVlgu1q94" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/logo.gif">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/logo.gif">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta name="google-site-verification" content="google295e26d511c4c6ad.html">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"blog.enkr1.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":true,"sidebar":{"position":"left","width":300,"display":"post","padding":0,"offset":0,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"buttons","active":"disqus","storage":true,"lazyload":true,"nav":null,"activeClass":"disqus"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":-1,"unescape":true,"preload":true},"motion":{"enable":true,"async":false,"transition":{"post_block":"slideDownBigIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="An in-depth guide to solving LeetCode 97 with 2D Dynamic Programming. Understand the key concepts, step-by-step implementation, and analogies to master the problem.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="LeetCode-97: Interleaving String">
+<meta property="og:url" content="https://blog.enkr1.com/leetcode-97-interleaving-string/index.html">
+<meta property="og:site_name" content="ENKR&#39;s Blog | Jing Hui PANG">
+<meta property="og:description" content="An in-depth guide to solving LeetCode 97 with 2D Dynamic Programming. Understand the key concepts, step-by-step implementation, and analogies to master the problem.">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2024-09-17T18:35:00.000Z">
+<meta property="article:modified_time" content="2024-09-17T19:15:13.204Z">
+<meta property="article:author" content="Jing Hui PANG | 彭竞辉 | ENKR">
+<meta property="article:tag" content="algorithm">
+<meta property="article:tag" content="javascript">
+<meta property="article:tag" content="leetcode">
+<meta property="article:tag" content="interview-preparation">
+<meta property="article:tag" content="leetcode-medium">
+<meta property="article:tag" content="dynamic-programming">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://blog.enkr1.com/leetcode-97-interleaving-string/">
+
+
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4N4L18VB12"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-4N4L18VB12');
+</script>
+
+
+
+<!-- Firebase -->
+<!-- enkr1.github.io -->
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const _0x5ea0f9=_0x103b;function _0x103b(_0x53ae50,_0x59847d){const _0x2843ac=_0x1ad7();_0x103b=function(_0x55d786,_0x3cee64){_0x55d786=_0x55d786-(-0xcfb+0x1f9f+-0x1124);let _0x59a379=_0x2843ac[_0x55d786];return _0x59a379;};return _0x103b(_0x53ae50,_0x59847d);}function _0x1ad7(){const _0x1f01af=['G-TJPENBTD','AIzaSyBxex','17063YPgNxh','VzGzOqDUGF','1:71411607','216YlyPzv','hexo-blog-','7141160759','4c5895d438','16110beXadU','qAetlFUSo','548402cjqBQm','9ccea','zHVT_-oYxk','enkr1.com','10aKAiit','725816aYbUzX','38661mJjSzZ','fb244020c3','pot.com','5930586lHPClx','593:web:d0','52OsOUFf','9ccea.apps','1053695BAfudF'];_0x1ad7=function(){return _0x1f01af;};return _0x1ad7();}(function(_0x5f4332,_0x76084c){const _0x2e4582=_0x103b;const _0x2c9a86=_0x5f4332();while(!![]){try{const _0x40bc56=parseInt(_0x2e4582(0x184))/(-0x92c+-0x2f*-0x2+-0xcd*-0xb)+-parseInt(_0x2e4582(0x18d))/(-0xf68+-0x11*-0x1bb+-0xe01)+parseInt(_0x2e4582(0x18b))/(0x546+-0x4*-0x19b+-0xbaf)*(parseInt(_0x2e4582(0x198))/(-0x91*0x16+-0x215b*-0x1+-0x1*0x14e1))+-parseInt(_0x2e4582(0x181))/(0x181e+-0x295*0xd+0x978)+parseInt(_0x2e4582(0x187))/(-0x2*0x10ad+-0x14a9+0x3609)*(-parseInt(_0x2e4582(0x193))/(0x5*0x4e8+-0xc8d+0x5fa*-0x2))+parseInt(_0x2e4582(0x192))/(-0x1*0x621+0x1f*0x95+-0xbe2)+parseInt(_0x2e4582(0x196))/(-0x1494+-0x3*0x7ae+0x2ba7)*(parseInt(_0x2e4582(0x191))/(-0x1*0xec7+-0x5*-0x2cf+0xc6));if(_0x40bc56===_0x76084c){break;}else{_0x2c9a86['push'](_0x2c9a86['shift']());}}catch(_0x4baedd){_0x2c9a86['push'](_0x2c9a86['shift']());}}}(_0x1ad7,-0x1*0x1a731+-0x443d4+-0x1*-0x83fd7));const firebaseConfig={'apiKey':_0x5ea0f9(0x183)+_0x5ea0f9(0x185)+_0x5ea0f9(0x18f)+_0x5ea0f9(0x18c),'authDomain':_0x5ea0f9(0x190),'projectId':_0x5ea0f9(0x188)+_0x5ea0f9(0x18e),'storageBucket':_0x5ea0f9(0x188)+_0x5ea0f9(0x180)+_0x5ea0f9(0x195),'messagingSenderId':_0x5ea0f9(0x189)+'3','appId':_0x5ea0f9(0x186)+_0x5ea0f9(0x197)+_0x5ea0f9(0x194)+_0x5ea0f9(0x18a),'measurementId':_0x5ea0f9(0x182)+'NS'};
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/ilyabirman-likely@2/release/likely.min.css">
+  <title>LeetCode-97: Interleaving String | ENKR's Blog | Jing Hui PANG</title>
+  
+    <script>
+      function sendPageView() {
+        if (CONFIG.hostname !== location.hostname) return;
+        var uid = localStorage.getItem('uid') || (Math.random() + '.' + Math.random());
+        localStorage.setItem('uid', uid);
+        navigator.sendBeacon('https://www.google-analytics.com/collect', new URLSearchParams({
+          v  : 1,
+          tid: 'G-4N4L18VB12',
+          cid: uid,
+          t  : 'pageview',
+          dp : encodeURIComponent(location.pathname)
+        }));
+      }
+      document.addEventListener('pjax:complete', sendPageView);
+      sendPageView();
+    </script>
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="ENKR's Blog | Jing Hui PANG" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">ENKR's Blog | Jing Hui PANG</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Where code meets creativity.</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-about-me">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About Me</a>
+
+  </li>
+        <li class="menu-item menu-item-connect-with-me">
+
+    <span class="exturl" data-url="aHR0cHM6Ly9jYWwuY29tL2Vua3IxL2NvbGxhYm9yYXRpb25zP2xheW91dD1jb2x1bW5fdmlldw=="><i class="fa fa-calendar fa-fw"></i>Connect with Me</span>
+
+  </li>
+        <li class="menu-item menu-item-my-platforms">
+
+    <span class="exturl" data-url="aHR0cHM6Ly9lbmtyMS5naXRodWIuaW8vcGxhdGZvcm1zLw=="><i class="fa fa-link fa-fw"></i>My Platforms</span>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">125</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-list fa-fw"></i>Categories<span class="badge">56</span></a>
+
+  </li>
+        <li class="menu-item menu-item-notebooks">
+
+    <a href="/categories/Notebooks/" rel="section"><i class="fa fa-bookmark fa-fw"></i>Notebooks</a>
+
+  </li>
+        <li class="menu-item menu-item-journals">
+
+    <a href="/categories/About-Me/Journals/" rel="section"><i class="fa fa-book fa-fw"></i>Journals</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-history fa-fw"></i>Archives</a>
+
+  </li>
+        <li class="menu-item menu-item-sitemap">
+
+    <a href="/sitemap.txt" rel="section"><i class="fa fa-sitemap fa-fw"></i>Sitemap</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://blog.enkr1.com/leetcode-97-interleaving-string/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Jing Hui PANG | 彭竞辉 | ENKR">
+      <meta itemprop="description" content="Words for my future self—a space for insights and creativity. Along the way, I’ll be journaling my journey, diving into programming tips, beatboxing stories and sharing insights on fitness, music, and more to inspire anyone chasing their own path.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ENKR's Blog | Jing Hui PANG">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          LeetCode-97: Interleaving String
+        </h1>
+
+        <div class="post-meta">
+
+<!--
+NOTE: created_at
+-->
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: Wednesday, 18 September 2024 02:35:00 AM 02:35:00 AM" itemprop="dateCreated datePublished" datetime="2024-09-18T02:35:00+08:00">Wednesday, 18 September 2024 02:35:00 AM</time>
+            </span>
+
+<!--
+NOTE: created_at
+-->
+<!--
+-->
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: Wednesday, 18 September 2024 03:15:13 AM 03:15:13 AM" itemprop="dateModified" datetime="2024-09-18T03:15:13+08:00">Wednesday, 18 September 2024 03:15:13 AM</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Software-Engineering/" itemprop="url" rel="index"><span itemprop="name">Software Engineering</span></a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Software-Engineering/Coding-Problems/" itemprop="url" rel="index"><span itemprop="name">Coding Problems</span></a>
+                </span>
+            </span>
+
+          
+
+
+<!--
+NEW: Added a break after category
+-->
+
+  <br>
+
+
+<!--
+NOTE: word count
+-->
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+              <span>1.5k</span>
+            </span>
+
+<!--
+NOTE: reading time
+-->
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+              <span>5 mins.</span>
+            </span>
+
+
+<!--
+NOTE: disqus
+-->
+  
+  <span class="post-meta-item disqus-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/leetcode-97-interleaving-string/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="leetcode-97-interleaving-string/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+<!--
+NOTE: views count
+-->
+            <span class="post-meta-item" title="Views">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <!--
+              NOTE: Hide "Views: "
+              <span class="post-meta-item-text">Views: </span>
+              -->
+              <b><span class="firestore-visitors-count">loading ...</span></b>
+            </span>
+            <div class="post-description">An in-depth guide to solving LeetCode 97 with 2D Dynamic Programming. Understand the key concepts, step-by-step implementation, and analogies to master the problem.</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="interleaving-string"><a
+target="_blank" rel="noopener" href="https://leetcode.com/problems/interleaving-string/">97.
+Interleaving String</a></h2>
+<ul>
+<li><strong>Goal</strong>: Determine if string <code>s3</code> is formed
+by an <strong>interleaving</strong> of strings <code>s1</code> and
+<code>s2</code>. &gt; <strong>Interleaving</strong>: Combining two
+strings by merging their characters while preserving the original order
+of characters from each string.</li>
+<li><strong>Constraints</strong>:
+<ul>
+<li><code>0 &lt;= s1.length, s2.length &lt;= 100</code></li>
+<li><code>0 &lt;= s3.length &lt;= 200</code></li>
+<li>All strings consist of lowercase English letters.</li>
+</ul></li>
+<li><strong>Follow-up</strong>: Can you solve it using only O(s2.length)
+additional memory space?</li>
+</ul>
+<h3 id="understanding-the-problem">Understanding the Problem</h3>
+<p>Given three strings <code>s1</code>, <code>s2</code>, and
+<code>s3</code>, we need to check if <code>s3</code> can be formed by
+interleaving <code>s1</code> and <code>s2</code>. An
+<strong>interleaving</strong> means that we can shuffle <code>s1</code>
+and <code>s2</code> together, maintaining the order of characters in
+each string, to get <code>s3</code>.</p>
+<h4 id="key-points">Key Points:</h4>
+<ul>
+<li><strong>Order Preservation</strong>: The order of characters in
+<code>s1</code> and <code>s2</code> must be maintained in
+<code>s3</code>.</li>
+<li><strong>Interleaving</strong>: At each step, you can choose a
+character from either <code>s1</code> or <code>s2</code>.</li>
+</ul>
+<h3 id="example">Example</h3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">s1 = &quot;aabcc&quot;</span><br><span class="line">s2 = &quot;dbbca&quot;</span><br><span class="line">s3 = &quot;aadbbcbcac&quot;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>output: <code>true</code></p>
+</blockquote>
+<hr />
+<h2 id="quick-steps-for-solving-the-problem">Quick Steps for Solving the
+Problem</h2>
+<h3 id="check-lengths">1. Check Lengths</h3>
+<ul>
+<li><strong>Condition</strong>: If
+<code>s1.length + s2.length != s3.length</code>, return
+<code>false</code>.</li>
+<li><strong>Rationale</strong>: If the total length doesn't match, it's
+impossible for <code>s3</code> to be an interleaving of <code>s1</code>
+and <code>s2</code>.</li>
+</ul>
+<h3 id="initialise-a-2d-dp-table">2. Initialise a 2D DP Table</h3>
+<ul>
+<li><strong>Purpose</strong>: Use Dynamic Programming to store
+subproblem results.</li>
+<li><strong>Structure</strong>: Create a 2D array <code>dp</code> of
+size <code>(s1.length + 1) x (s2.length + 1)</code>.</li>
+<li><strong>Base Case</strong>: Set <code>dp[0][0] = true</code> (empty
+strings can form an empty string).</li>
+</ul>
+<h3 id="fill-the-first-row-and-first-column">3. Fill the First Row and
+First Column</h3>
+<ul>
+<li><strong>First Column (<code>dp[i][0]</code>)</strong>:
+<ul>
+<li><code>dp[i][0] = dp[i - 1][0] &amp;&amp; s1[i - 1] == s3[i - 1]</code></li>
+<li><strong>Meaning</strong>: Can <code>s3</code> up to length
+<code>i</code> be formed by <code>s1</code> up to length
+<code>i</code>?</li>
+</ul></li>
+<li><strong>First Row (<code>dp[0][j]</code>)</strong>:
+<ul>
+<li><code>dp[0][j] = dp[0][j - 1] &amp;&amp; s2[j - 1] == s3[j - 1]</code></li>
+<li><strong>Meaning</strong>: Can <code>s3</code> up to length
+<code>j</code> be formed by <code>s2</code> up to length
+<code>j</code>?</li>
+</ul></li>
+</ul>
+<h3 id="fill-the-rest-of-the-dp-table">4. Fill the Rest of the DP
+Table</h3>
+<ul>
+<li><strong>For Each Cell <code>dp[i][j]</code></strong>:
+<ul>
+<li><strong>Option 1</strong>: If <code>dp[i - 1][j]</code> is
+<code>true</code> and <code>s1[i - 1] == s3[i + j - 1]</code>, then
+<code>dp[i][j] = true</code>.
+<ul>
+<li><strong>Meaning</strong>: If we can form <code>s3</code> up to
+<code>i + j - 1</code> by adding <code>s1[i - 1]</code>.</li>
+</ul></li>
+<li><strong>Option 2</strong>: If <code>dp[i][j - 1]</code> is
+<code>true</code> and <code>s2[j - 1] == s3[i + j - 1]</code>, then
+<code>dp[i][j] = true</code>.
+<ul>
+<li><strong>Meaning</strong>: If we can form <code>s3</code> up to
+<code>i + j - 1</code> by adding <code>s2[j - 1]</code>.</li>
+</ul></li>
+<li><strong>Else</strong>: <code>dp[i][j] = false</code>.</li>
+</ul></li>
+</ul>
+<h3 id="return-the-result">5. Return the Result</h3>
+<ul>
+<li><strong>Answer</strong>: <code>dp[s1.length][s2.length]</code>
+<ul>
+<li><strong>Meaning</strong>: Whether <code>s3</code> can be formed by
+interleaving <code>s1</code> and <code>s2</code>.</li>
+</ul></li>
+</ul>
+<hr />
+<h2 id="analogy-to-simplify-understanding">Analogy to Simplify
+Understanding</h2>
+<p>Imagine you have two queues of characters:</p>
+<ul>
+<li><strong>Queue A (<code>s1</code>)</strong>: A line of people waiting
+in order.</li>
+<li><strong>Queue B (<code>s2</code>)</strong>: Another line of people
+waiting in order.</li>
+<li><strong>Goal</strong>: Form a new line (<code>s3</code>) by merging
+these two queues, taking one person at a time from either queue, without
+changing the order in each queue.</li>
+</ul>
+<p><strong>Rules</strong>:</p>
+<ul>
+<li>You can pick the next person from <strong>either</strong> Queue A or
+Queue B.</li>
+<li>You cannot skip or rearrange people within a queue.</li>
+<li>The final line (<code>s3</code>) must have everyone from both
+queues, in some order that respects the above rules.</li>
+</ul>
+<hr />
+<h2 id="step-by-step-implementation">Step-by-Step Implementation</h2>
+<h3 id="check-total-length">1. Check Total Length</h3>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (s1.<span class="property">length</span> + s2.<span class="property">length</span> !== s3.<span class="property">length</span>) <span class="keyword">return</span> <span class="literal">false</span>;</span><br></pre></td></tr></table></figure>
+<h3 id="initialise-dp-table">2. Initialise DP Table</h3>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> N = s1.<span class="property">length</span>;</span><br><span class="line"><span class="keyword">const</span> M = s2.<span class="property">length</span>;</span><br><span class="line"><span class="keyword">const</span> dp = <span class="title class_">Array</span>.<span class="title function_">from</span>(&#123; <span class="attr">length</span>: N + <span class="number">1</span> &#125;, <span class="function">() =&gt;</span> <span class="keyword">new</span> <span class="title class_">Array</span>(M + <span class="number">1</span>).<span class="title function_">fill</span>(<span class="literal">false</span>));</span><br><span class="line">dp[<span class="number">0</span>][<span class="number">0</span>] = <span class="literal">true</span>; <span class="comment">// Base case</span></span><br></pre></td></tr></table></figure>
+<h3 id="fill-first-row-and-first-column">3. Fill First Row and First
+Column</h3>
+<h4 id="fill-first-column-dpi0">Fill First Column
+(<code>dp[i][0]</code>)</h4>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">1</span>; i &lt;= N; i++) &#123;</span><br><span class="line">  dp[i][<span class="number">0</span>] = dp[i - <span class="number">1</span>][<span class="number">0</span>] &amp;&amp; s1[i - <span class="number">1</span>] === s3[i - <span class="number">1</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="fill-first-row-dp0j">Fill First Row (<code>dp[0][j]</code>)</h4>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> j = <span class="number">1</span>; j &lt;= M; j++) &#123;</span><br><span class="line">  dp[<span class="number">0</span>][j] = dp[<span class="number">0</span>][j - <span class="number">1</span>] &amp;&amp; s2[j - <span class="number">1</span>] === s3[j - <span class="number">1</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="fill-the-rest-of-the-dp-table-1">4. Fill the Rest of the DP
+Table</h3>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">1</span>; i &lt;= N; i++) &#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> j = <span class="number">1</span>; j &lt;= M; j++) &#123;</span><br><span class="line">    <span class="keyword">const</span> k = i + j - <span class="number">1</span>;</span><br><span class="line">    dp[i][j] =</span><br><span class="line">      (dp[i - <span class="number">1</span>][j] &amp;&amp; s1[i - <span class="number">1</span>] === s3[k]) ||</span><br><span class="line">      (dp[i][j - <span class="number">1</span>] &amp;&amp; s2[j - <span class="number">1</span>] === s3[k]);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="return-the-result-1">5. Return the Result</h3>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">return</span> dp[N][M];</span><br></pre></td></tr></table></figure>
+<hr />
+<h2 id="javascript-implementation">JavaScript Implementation</h2>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">string</span>&#125; <span class="variable">s1</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">string</span>&#125; <span class="variable">s2</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">string</span>&#125; <span class="variable">s3</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">boolean</span>&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> isInterleave = <span class="keyword">function</span> (<span class="params">s1, s2, s3</span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> N = s1.<span class="property">length</span>;</span><br><span class="line">  <span class="keyword">const</span> M = s2.<span class="property">length</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// Step 1: Check Lengths</span></span><br><span class="line">  <span class="keyword">if</span> (N + M !== s3.<span class="property">length</span>) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// Step 2: Initialise DP Table</span></span><br><span class="line">  <span class="keyword">const</span> dp = <span class="title class_">Array</span>.<span class="title function_">from</span>(&#123; <span class="attr">length</span>: N + <span class="number">1</span> &#125;, <span class="function">() =&gt;</span> <span class="keyword">new</span> <span class="title class_">Array</span>(M + <span class="number">1</span>).<span class="title function_">fill</span>(<span class="literal">false</span>));</span><br><span class="line">  dp[<span class="number">0</span>][<span class="number">0</span>] = <span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// Step 3: Fill First Row and First Column</span></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">1</span>; i &lt;= N; i++) &#123;</span><br><span class="line">    dp[i][<span class="number">0</span>] = dp[i - <span class="number">1</span>][<span class="number">0</span>] &amp;&amp; s1[i - <span class="number">1</span>] === s3[i - <span class="number">1</span>];</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> j = <span class="number">1</span>; j &lt;= M; j++) &#123;</span><br><span class="line">    dp[<span class="number">0</span>][j] = dp[<span class="number">0</span>][j - <span class="number">1</span>] &amp;&amp; s2[j - <span class="number">1</span>] === s3[j - <span class="number">1</span>];</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// Step 4: Fill the Rest of the DP Table</span></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">1</span>; i &lt;= N; i++) &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> j = <span class="number">1</span>; j &lt;= M; j++) &#123;</span><br><span class="line">      <span class="keyword">const</span> k = i + j - <span class="number">1</span>;</span><br><span class="line">      dp[i][j] =</span><br><span class="line">        (dp[i - <span class="number">1</span>][j] &amp;&amp; s1[i - <span class="number">1</span>] === s3[k]) ||</span><br><span class="line">        (dp[i][j - <span class="number">1</span>] &amp;&amp; s2[j - <span class="number">1</span>] === s3[k]);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// Step 5: Return the Result</span></span><br><span class="line">  <span class="keyword">return</span> dp[N][M];</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<hr />
+<h2 id="detailed-explanation">Detailed Explanation</h2>
+<h3 id="understanding-the-dp-table">Understanding the DP Table</h3>
+<ul>
+<li><strong>Dimensions</strong>:
+<code>(s1.length + 1) x (s2.length + 1)</code></li>
+<li><strong><code>dp[i][j]</code> Meaning</strong>: Whether
+<code>s3</code> up to length <code>i + j</code> can be formed by
+interleaving <code>s1</code> up to length <code>i</code> and
+<code>s2</code> up to length <code>j</code>.</li>
+</ul>
+<h3 id="base-cases">Base Cases</h3>
+<ul>
+<li><strong><code>dp[0][0] = true</code></strong>: Empty <code>s1</code>
+and <code>s2</code> can form empty <code>s3</code>.</li>
+<li><strong>First Row and Column</strong>:
+<ul>
+<li>We check if <code>s3</code> up to length <code>i</code> or
+<code>j</code> matches <code>s1</code> or <code>s2</code>
+respectively.</li>
+</ul></li>
+</ul>
+<h3 id="filling-the-dp-table">Filling the DP Table</h3>
+<p>At each cell <code>dp[i][j]</code>, we consider two
+possibilities:</p>
+<ol type="1">
+<li><strong>Taking a character from <code>s1</code></strong>:
+<ul>
+<li>If <code>dp[i - 1][j]</code> is <code>true</code> (we can form
+<code>s3</code> up to <code>i + j - 2</code> with
+<code>s1[0..i-2]</code> and <code>s2[0..j-1]</code>).</li>
+<li>And if <code>s1[i - 1]</code> matches
+<code>s3[i + j - 1]</code>.</li>
+</ul></li>
+<li><strong>Taking a character from <code>s2</code></strong>:
+<ul>
+<li>If <code>dp[i][j - 1]</code> is <code>true</code> (we can form
+<code>s3</code> up to <code>i + j - 2</code> with
+<code>s1[0..i-1]</code> and <code>s2[0..j-2]</code>).</li>
+<li>And if <code>s2[j - 1]</code> matches
+<code>s3[i + j - 1]</code>.</li>
+</ul></li>
+</ol>
+<p>If either possibility is <code>true</code>, we set
+<code>dp[i][j] = true</code>.</p>
+<h3 id="example-walkthrough">Example Walkthrough</h3>
+<p>Let's consider <code>s1 = "abc"</code>, <code>s2 = "def"</code>,
+<code>s3 = "adbcef"</code>.</p>
+<ul>
+<li><strong>dp[1][1]</strong>:
+<ul>
+<li><code>dp[0][1]</code> is <code>false</code>, so first condition
+fails.</li>
+<li><code>dp[1][0]</code> is <code>true</code> and
+<code>s1[0] == s3[1]</code> (<code>'a' == 'd'</code>) is
+<code>false</code>.</li>
+<li><code>dp[1][1]</code> remains <code>false</code>.</li>
+</ul></li>
+<li><strong>dp[1][2]</strong>:
+<ul>
+<li>Similar checks, <code>dp[1][2]</code> remains
+<code>false</code>.</li>
+</ul></li>
+<li><strong>dp[2][1]</strong>:
+<ul>
+<li><code>dp[1][1]</code> is <code>false</code>.</li>
+<li><code>dp[2][0]</code> is <code>false</code>.</li>
+<li><code>dp[2][1]</code> remains <code>false</code>.</li>
+</ul></li>
+<li><strong>dp[3][3]</strong>:
+<ul>
+<li><code>dp[2][3]</code> is <code>false</code>.</li>
+<li><code>dp[3][2]</code> is <code>true</code> and
+<code>s2[2] == s3[5]</code> (<code>'f' == 'f'</code>) is
+<code>true</code>.</li>
+<li>So, <code>dp[3][3] = true</code>.</li>
+</ul></li>
+</ul>
+<p><strong>Final Result</strong>: Since <code>dp[3][3] = true</code>,
+<code>s3</code> is an interleaving of <code>s1</code> and
+<code>s2</code>.</p>
+<hr />
+<h2 id="summary">Summary</h2>
+<ul>
+<li><strong>Dynamic Programming</strong>: We use a 2D DP table to keep
+track of possible interleavings up to each point in <code>s1</code> and
+<code>s2</code>.</li>
+<li><strong>Key Concepts</strong>:
+<ul>
+<li><strong>Preserving Order</strong>: We must maintain the sequence of
+characters in <code>s1</code> and <code>s2</code>.</li>
+<li><strong>State Transition</strong>: Each state depends on previous
+states, considering characters from <code>s1</code> and
+<code>s2</code>.</li>
+</ul></li>
+<li><strong>Analogy</strong>: Merging two queues without changing the
+order within each queue.</li>
+<li><strong>Time Complexity</strong>: O(N * M)</li>
+<li><strong>Space Complexity</strong>: O(N * M), can be optimised to
+O(M)</li>
+</ul>
+<hr />
+<h2 id="further-understanding-and-tips">Further Understanding and
+Tips</h2>
+<h3 id="why-use-dpij">Why Use <code>dp[i][j]</code>?</h3>
+<ul>
+<li><strong><code>dp[i][j]</code> represents a subproblem</strong>:
+Whether <code>s3</code> up to length <code>i + j</code> can be formed by
+interleaving <code>s1</code> up to length <code>i</code> and
+<code>s2</code> up to length <code>j</code>.</li>
+<li><strong>Breaking Down the Problem</strong>: By solving smaller
+subproblems, we build up to the final solution.</li>
+</ul>
+<h3 id="handling-edge-cases">Handling Edge Cases</h3>
+<ul>
+<li><strong>Empty Strings</strong>: If <code>s1</code> or
+<code>s2</code> is empty, we need to check if <code>s3</code> matches
+the other string.</li>
+<li><strong>Initialization</strong>: Properly initializing the first row
+and column is crucial for these cases.</li>
+</ul>
+<h3 id="visualization">Visualization</h3>
+<ul>
+<li><strong>DP Table as a Grid</strong>: Visualise the DP table as a
+grid where each cell represents a state.</li>
+<li><strong>Path Finding</strong>: Finding a path from
+<code>dp[0][0]</code> to <code>dp[N][M]</code> corresponds to
+interleaving <code>s1</code> and <code>s2</code> to form
+<code>s3</code>.</li>
+</ul>
+<hr />
+<h2 id="practice-problems-for-2d-dynamic-programming">Practice Problems
+for 2D Dynamic Programming</h2>
+<p>To strengthen your understanding of 2D DP, consider practicing the
+following problems:</p>
+<ul>
+<li><strong>LeetCode 62</strong>: Unique Paths</li>
+<li><strong>LeetCode 1143</strong>: Longest Common Subsequence</li>
+<li><strong>LeetCode 221</strong>: Maximal Square</li>
+<li><strong>LeetCode 72</strong>: Edit Distance</li>
+</ul>
+<hr />
+<h2 id="final-thoughts">Final Thoughts</h2>
+<p>Dynamic Programming can be challenging, but breaking down the problem
+into subproblems and understanding the state transitions makes it
+manageable. Remember to:</p>
+<ul>
+<li><strong>Define the DP State Clearly</strong>: Know what each element
+in your DP table represents.</li>
+<li><strong>Initialise Properly</strong>: Base cases are crucial for
+correct results.</li>
+<li><strong>Think Recursively</strong>: How can you build the current
+state from previous states?</li>
+<li><strong>Practice</strong>: The more problems you solve, the better
+you'll understand DP patterns.</li>
+</ul>
+<p>Happy coding!</p>
+
+    </div>
+
+    
+    
+    
+      
+  <div class="popular-posts-header">Related Posts</div>
+  <ul class="popular-posts">
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="/leetcode-139-word-break/" rel="bookmark">LeetCode-139: Word Break</a></div>
+    </li>
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="/leetcode-1642-furthest-building-you-can-reach/" rel="bookmark">LeetCode-1642: Furthest Building You Can Reach</a></div>
+    </li>
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="/leetcode-210-course-schedule-ii/" rel="bookmark">LeetCode-210: Course Schedule II</a></div>
+    </li>
+  </ul>
+<div class="post-widgets">
+    <div class="likely">
+        <div class="twitter">Tweet</div>
+        <div class="facebook">Share</div>
+        <div class="linkedin">Link</div>
+        <div class="gplus">Plus</div>
+        <div class="vkontakte">Share</div>
+        <div class="odnoklassniki">Class</div>
+        <div class="telegram">Send</div>
+        <div class="whatsapp">Send</div>
+        <div class="pinterest">Pin</div>
+    </div>
+  </div>
+  <script src="//cdn.jsdelivr.net/npm/ilyabirman-likely@2/release/likely.min.js"></script>
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/algorithm/" rel="tag"># algorithm</a>
+              <a href="/tags/javascript/" rel="tag"># javascript</a>
+              <a href="/tags/leetcode/" rel="tag"># leetcode</a>
+              <a href="/tags/interview-preparation/" rel="tag"># interview-preparation</a>
+              <a href="/tags/leetcode-medium/" rel="tag"># leetcode-medium</a>
+              <a href="/tags/dynamic-programming/" rel="tag"># dynamic-programming</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/journal-week-8/" rel="prev" title="Journal: Week 8">
+      <i class="fa fa-chevron-left"></i> Journal: Week 8
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/leetcode-139-word-break/" rel="next" title="LeetCode-139: Word Break">
+      LeetCode-139: Word Break <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    
+  <div class="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+  </div>
+  
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#interleaving-string"><span class="nav-number">1.</span> <span class="nav-text">97.
+Interleaving String</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#understanding-the-problem"><span class="nav-number">1.1.</span> <span class="nav-text">Understanding the Problem</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#key-points"><span class="nav-number">1.1.1.</span> <span class="nav-text">Key Points:</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#example"><span class="nav-number">1.2.</span> <span class="nav-text">Example</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#quick-steps-for-solving-the-problem"><span class="nav-number">2.</span> <span class="nav-text">Quick Steps for Solving the
+Problem</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#check-lengths"><span class="nav-number">2.1.</span> <span class="nav-text">1. Check Lengths</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#initialise-a-2d-dp-table"><span class="nav-number">2.2.</span> <span class="nav-text">2. Initialise a 2D DP Table</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#fill-the-first-row-and-first-column"><span class="nav-number">2.3.</span> <span class="nav-text">3. Fill the First Row and
+First Column</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#fill-the-rest-of-the-dp-table"><span class="nav-number">2.4.</span> <span class="nav-text">4. Fill the Rest of the DP
+Table</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#return-the-result"><span class="nav-number">2.5.</span> <span class="nav-text">5. Return the Result</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#analogy-to-simplify-understanding"><span class="nav-number">3.</span> <span class="nav-text">Analogy to Simplify
+Understanding</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#step-by-step-implementation"><span class="nav-number">4.</span> <span class="nav-text">Step-by-Step Implementation</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#check-total-length"><span class="nav-number">4.1.</span> <span class="nav-text">1. Check Total Length</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#initialise-dp-table"><span class="nav-number">4.2.</span> <span class="nav-text">2. Initialise DP Table</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#fill-first-row-and-first-column"><span class="nav-number">4.3.</span> <span class="nav-text">3. Fill First Row and First
+Column</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#fill-first-column-dpi0"><span class="nav-number">4.3.1.</span> <span class="nav-text">Fill First Column
+(dp[i][0])</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#fill-first-row-dp0j"><span class="nav-number">4.3.2.</span> <span class="nav-text">Fill First Row (dp[0][j])</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#fill-the-rest-of-the-dp-table-1"><span class="nav-number">4.4.</span> <span class="nav-text">4. Fill the Rest of the DP
+Table</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#return-the-result-1"><span class="nav-number">4.5.</span> <span class="nav-text">5. Return the Result</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#javascript-implementation"><span class="nav-number">5.</span> <span class="nav-text">JavaScript Implementation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#detailed-explanation"><span class="nav-number">6.</span> <span class="nav-text">Detailed Explanation</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#understanding-the-dp-table"><span class="nav-number">6.1.</span> <span class="nav-text">Understanding the DP Table</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#base-cases"><span class="nav-number">6.2.</span> <span class="nav-text">Base Cases</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#filling-the-dp-table"><span class="nav-number">6.3.</span> <span class="nav-text">Filling the DP Table</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#example-walkthrough"><span class="nav-number">6.4.</span> <span class="nav-text">Example Walkthrough</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#summary"><span class="nav-number">7.</span> <span class="nav-text">Summary</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#further-understanding-and-tips"><span class="nav-number">8.</span> <span class="nav-text">Further Understanding and
+Tips</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#why-use-dpij"><span class="nav-number">8.1.</span> <span class="nav-text">Why Use dp[i][j]?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#handling-edge-cases"><span class="nav-number">8.2.</span> <span class="nav-text">Handling Edge Cases</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#visualization"><span class="nav-number">8.3.</span> <span class="nav-text">Visualization</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#practice-problems-for-2d-dynamic-programming"><span class="nav-number">9.</span> <span class="nav-text">Practice Problems
+for 2D Dynamic Programming</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#final-thoughts"><span class="nav-number">10.</span> <span class="nav-text">Final Thoughts</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Jing Hui PANG | 彭竞辉 | ENKR</p>
+  <div class="site-description" itemprop="description">Words for my future self—a space for insights and creativity. Along the way, I’ll be journaling my journey, diving into programming tips, beatboxing stories and sharing insights on fitness, music, and more to inspire anyone chasing their own path.</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+    <div class="site-state-item site-state-posts">
+        <a href="/archives">
+          <span class="site-state-item-count">91</span>
+          <span class="site-state-item-name">Posts</span>
+        </a>
+    </div>
+
+    <!--
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">56</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">125</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+    -->
+
+
+    <!--
+NEW: Readers & Total Views
+-->
+
+    <div class="site-state-item site-state-readers">
+      <span id="unique-reader-count" class="site-state-item-count">loading ...</span>
+      <span class="site-state-item-name">Readers</span>
+    </div>
+
+    <div class="site-state-item site-state-total-views">
+      <span id="total-view-count" class="site-state-item-count">loading ...</span>
+      <span class="site-state-item-name">Total Views</span>
+    </div>
+
+  </nav>
+</div>
+
+
+
+<div class="globe-view-counter-container">
+  <script type="text/javascript"
+    src="//rf.revolvermaps.com/0/0/8.js?i=5uxj8a6ge7p&amp;m=1&amp;c=ff0000&amp;cr1=fff600&amp;f=ubuntu&amp;l=33"
+    async="async"></script>
+</div>
+
+
+
+<script type="module">
+  console.group(`[DEBUG] site-overview.swig`);
+
+  console.debug(`[DEBUG] firestore visitor sum ...`);
+
+  // Import Firebase modules
+  import { initializeApp, getApps, getApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
+  import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js";
+
+  // Firebase configuration
+  const _0x5ea0f9 = _0x103b; function _0x103b(_0x53ae50, _0x59847d) { const _0x2843ac = _0x1ad7(); _0x103b = function (_0x55d786, _0x3cee64) { _0x55d786 = _0x55d786 - (-0xcfb + 0x1f9f + -0x1124); let _0x59a379 = _0x2843ac[_0x55d786]; return _0x59a379; }; return _0x103b(_0x53ae50, _0x59847d); } function _0x1ad7() { const _0x1f01af = ['G-TJPENBTD', 'AIzaSyBxex', '17063YPgNxh', 'VzGzOqDUGF', '1:71411607', '216YlyPzv', 'hexo-blog-', '7141160759', '4c5895d438', '16110beXadU', 'qAetlFUSo', '548402cjqBQm', '9ccea', 'zHVT_-oYxk', 'enkr1.com', '10aKAiit', '725816aYbUzX', '38661mJjSzZ', 'fb244020c3', 'pot.com', '5930586lHPClx', '593:web:d0', '52OsOUFf', '9ccea.apps', '1053695BAfudF']; _0x1ad7 = function () { return _0x1f01af; }; return _0x1ad7(); } (function (_0x5f4332, _0x76084c) { const _0x2e4582 = _0x103b; const _0x2c9a86 = _0x5f4332(); while (!![]) { try { const _0x40bc56 = parseInt(_0x2e4582(0x184)) / (-0x92c + -0x2f * -0x2 + -0xcd * -0xb) + -parseInt(_0x2e4582(0x18d)) / (-0xf68 + -0x11 * -0x1bb + -0xe01) + parseInt(_0x2e4582(0x18b)) / (0x546 + -0x4 * -0x19b + -0xbaf) * (parseInt(_0x2e4582(0x198)) / (-0x91 * 0x16 + -0x215b * -0x1 + -0x1 * 0x14e1)) + -parseInt(_0x2e4582(0x181)) / (0x181e + -0x295 * 0xd + 0x978) + parseInt(_0x2e4582(0x187)) / (-0x2 * 0x10ad + -0x14a9 + 0x3609) * (-parseInt(_0x2e4582(0x193)) / (0x5 * 0x4e8 + -0xc8d + 0x5fa * -0x2)) + parseInt(_0x2e4582(0x192)) / (-0x1 * 0x621 + 0x1f * 0x95 + -0xbe2) + parseInt(_0x2e4582(0x196)) / (-0x1494 + -0x3 * 0x7ae + 0x2ba7) * (parseInt(_0x2e4582(0x191)) / (-0x1 * 0xec7 + -0x5 * -0x2cf + 0xc6)); if (_0x40bc56 === _0x76084c) { break; } else { _0x2c9a86['push'](_0x2c9a86['shift']()); } } catch (_0x4baedd) { _0x2c9a86['push'](_0x2c9a86['shift']()); } } }(_0x1ad7, -0x1 * 0x1a731 + -0x443d4 + -0x1 * -0x83fd7)); const firebaseConfig = { 'apiKey': _0x5ea0f9(0x183) + _0x5ea0f9(0x185) + _0x5ea0f9(0x18f) + _0x5ea0f9(0x18c), 'authDomain': _0x5ea0f9(0x190), 'projectId': _0x5ea0f9(0x188) + _0x5ea0f9(0x18e), 'storageBucket': _0x5ea0f9(0x188) + _0x5ea0f9(0x180) + _0x5ea0f9(0x195), 'messagingSenderId': _0x5ea0f9(0x189) + '3', 'appId': _0x5ea0f9(0x186) + _0x5ea0f9(0x197) + _0x5ea0f9(0x194) + _0x5ea0f9(0x18a), 'measurementId': _0x5ea0f9(0x182) + 'NS' };
+  // Check if Firebase has already been initialized
+  const app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
+
+  // Initialize Firestore
+  const db = getFirestore(app);
+
+  // Function to fetch the visitor count
+  async function fetchVisitorCount() {
+
+    try {
+      const articlesCollection = collection(db, 'articles');
+      const snapshot = await getDocs(articlesCollection);
+
+      let totalVisitors = 0;
+      console.group(`[DEBUG] totalVisitors - bef`, totalVisitors)
+      snapshot.forEach(doc => {
+        let visitorByDoc = doc.data().count || 0;
+        totalVisitors += visitorByDoc;
+        // console.debug(`[DEBUG] each doc visitors: ${visitorByDoc}`)
+      });
+      console.groupEnd(`[DEBUG] totalVisitors - aft`, totalVisitors)
+
+      // Inject visitor count into the HTML element
+      document.getElementById('total-view-count').innerText = totalVisitors;
+    } catch (error) {
+      console.error("Error fetching visitor count: ", error);
+    }
+  }
+
+  // Function to fetch the unique visitor count
+  async function fetchUniqueReaderCount() {
+    try {
+      // Reference to the 'unique_visitors' collection (assuming you're storing IPs in this collection)
+      const uniqueVisitorsCollection = collection(db, 'unique_visitors');
+      const snapshot = await getDocs(uniqueVisitorsCollection);
+
+      // The number of documents corresponds to the unique readers (IP addresses)
+      const uniqueReaderCount = snapshot.size;
+
+      console.debug(`[DEBUG] Unique readers count:`, uniqueReaderCount);
+
+      // Inject the unique reader count into the HTML element
+      document.getElementById('unique-reader-count').innerText = uniqueReaderCount;
+    } catch (error) {
+      console.error("Error fetching unique reader count: ", error);
+    }
+  }
+
+  // Check if the current environment is localhost
+  if (window.location.hostname === "localhost") {
+    console.debug(`[DEBUG] Skipping Firestore requests in local development.`);
+  } else {
+    // Fetch unique reader count when the page loads
+    await fetchUniqueReaderCount();
+    // Fetch visitor count when the page loads
+    await fetchVisitorCount();
+  }
+
+  console.groupEnd(`[DEBUG] site-overview.swig`);
+
+</script>
+
+      </div>
+
+    </div>
+
+
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 2023 – 
+  <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class=""></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Jing Hui PANG | 彭竞辉 | ENKR</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="Symbols count total">73k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="Reading time total">4:25</span>
+</div>
+
+        
+
+
+
+
+  <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-firestore.js"></script>
+
+  <script type="module">
+    import { initializeApp, getApps, getApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
+    import { getFirestore, doc, collection, getDoc, setDoc, FieldValue } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js";
+
+    console.group(`[DEBUG] firestore.swig`);
+
+    // Firebase configuration
+    const _0x5ea0f9=_0x103b;function _0x103b(_0x53ae50,_0x59847d){const _0x2843ac=_0x1ad7();_0x103b=function(_0x55d786,_0x3cee64){_0x55d786=_0x55d786-(-0xcfb+0x1f9f+-0x1124);let _0x59a379=_0x2843ac[_0x55d786];return _0x59a379;};return _0x103b(_0x53ae50,_0x59847d);}function _0x1ad7(){const _0x1f01af=['G-TJPENBTD','AIzaSyBxex','17063YPgNxh','VzGzOqDUGF','1:71411607','216YlyPzv','hexo-blog-','7141160759','4c5895d438','16110beXadU','qAetlFUSo','548402cjqBQm','9ccea','zHVT_-oYxk','enkr1.com','10aKAiit','725816aYbUzX','38661mJjSzZ','fb244020c3','pot.com','5930586lHPClx','593:web:d0','52OsOUFf','9ccea.apps','1053695BAfudF'];_0x1ad7=function(){return _0x1f01af;};return _0x1ad7();}(function(_0x5f4332,_0x76084c){const _0x2e4582=_0x103b;const _0x2c9a86=_0x5f4332();while(!![]){try{const _0x40bc56=parseInt(_0x2e4582(0x184))/(-0x92c+-0x2f*-0x2+-0xcd*-0xb)+-parseInt(_0x2e4582(0x18d))/(-0xf68+-0x11*-0x1bb+-0xe01)+parseInt(_0x2e4582(0x18b))/(0x546+-0x4*-0x19b+-0xbaf)*(parseInt(_0x2e4582(0x198))/(-0x91*0x16+-0x215b*-0x1+-0x1*0x14e1))+-parseInt(_0x2e4582(0x181))/(0x181e+-0x295*0xd+0x978)+parseInt(_0x2e4582(0x187))/(-0x2*0x10ad+-0x14a9+0x3609)*(-parseInt(_0x2e4582(0x193))/(0x5*0x4e8+-0xc8d+0x5fa*-0x2))+parseInt(_0x2e4582(0x192))/(-0x1*0x621+0x1f*0x95+-0xbe2)+parseInt(_0x2e4582(0x196))/(-0x1494+-0x3*0x7ae+0x2ba7)*(parseInt(_0x2e4582(0x191))/(-0x1*0xec7+-0x5*-0x2cf+0xc6));if(_0x40bc56===_0x76084c){break;}else{_0x2c9a86['push'](_0x2c9a86['shift']());}}catch(_0x4baedd){_0x2c9a86['push'](_0x2c9a86['shift']());}}}(_0x1ad7,-0x1*0x1a731+-0x443d4+-0x1*-0x83fd7));const firebaseConfig={'apiKey':_0x5ea0f9(0x183)+_0x5ea0f9(0x185)+_0x5ea0f9(0x18f)+_0x5ea0f9(0x18c),'authDomain':_0x5ea0f9(0x190),'projectId':_0x5ea0f9(0x188)+_0x5ea0f9(0x18e),'storageBucket':_0x5ea0f9(0x188)+_0x5ea0f9(0x180)+_0x5ea0f9(0x195),'messagingSenderId':_0x5ea0f9(0x189)+'3','appId':_0x5ea0f9(0x186)+_0x5ea0f9(0x197)+_0x5ea0f9(0x194)+_0x5ea0f9(0x18a),'measurementId':_0x5ea0f9(0x182)+'NS'};
+    const app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
+    const db = getFirestore(app);
+
+    let isRequestInProgress = false;
+
+    async function getCount(docRef, increaseCount, title) {
+      try {
+        isRequestInProgress = true;
+        const d = await getDoc(docRef);
+
+        let count = 0;
+        if (!d.exists()) {
+          if (increaseCount) {
+            await setDoc(docRef, { count: 1 });
+            count = 1;
+            localStorage.setItem(title, true); // Mark as visited
+          }
+        } else {
+          count = d.data().count;
+          if (increaseCount) {
+            await setDoc(docRef, { count: count + 1 });
+            count++;
+            localStorage.setItem(title, true); // Mark as visited
+          }
+        }
+
+        isRequestInProgress = false;
+        return count;
+      } catch (err) {
+        console.error('Error getting document:', err);
+        isRequestInProgress = false;
+      }
+    }
+
+    async function getVisitorIP() {
+      try {
+        const response = await fetch('https://ipapi.co/json/');
+        if (!response.ok) {
+          throw new Error('Failed to fetch visitor IP');
+        }
+        const data = await response.json();
+        // Example response: { ip: "8.8.8.8", city: "Mountain View", country: "US", ... }
+        return data;
+      } catch (error) {
+        console.error('Error fetching visitor IP:', error);
+        return null; // Return null if the API fails
+      }
+    }
+
+    async function hashIP(ip) {
+      const msgUint8 = new TextEncoder().encode(ip); // Convert IP to UTF-8
+      const hashBuffer = await crypto.subtle.digest('SHA-256', msgUint8); // Hash it
+      const hashArray = Array.from(new Uint8Array(hashBuffer)); // Convert to byte array
+      return hashArray.map(b => b.toString(16).padStart(2, '0')).join(''); // Convert to hex
+    }
+
+    async function trackUniqueVisitor() {
+      console.debug(`[DEBUG] Tracking unique visitor`);
+
+      const visitorData = await getVisitorIP(); // Fetch IP and geolocation
+      if (!visitorData) {
+        console.warn(`[DEBUG] Skipping visitor tracking as no IP data is available.`);
+        return; // Exit if no IP data
+      }
+
+      const hashedIp = await hashIP(visitorData.ip); // Hash the IP for privacy
+      console.debug(`[DEBUG] Hashed IP:`, hashedIp);
+
+      const ipCollection = collection(db, 'unique_visitors'); // Firestore collection
+      const ipDoc = doc(ipCollection, hashedIp);
+      const docSnapshot = await getDoc(ipDoc);
+
+      if (!docSnapshot.exists()) {
+        console.debug(`[DEBUG] New visitor detected`);
+        await setDoc(ipDoc, {
+          ip: visitorData.ip,
+          timestamp: new Date(),
+          geolocation: `${visitorData.city}, ${visitorData.country}`,
+          userAgent: navigator.userAgent
+        });
+
+        // Increment the total visitor count
+        const totalIpDoc = doc(db, 'visitor_stats', 'total_ip_visitors');
+        await setDoc(totalIpDoc, { count: FieldValue.increment(1) }, { merge: true });
+
+        console.debug(`[DEBUG] Visitor data recorded: IP ${visitorData.ip}`);
+      } else {
+        console.debug(`[DEBUG] Returning visitor: IP ${visitorData.ip} already recorded.`);
+      }
+    }
+    const appendCountTo = (el) => {
+      return count => {
+        el.innerText = count;
+      }
+    }
+
+    if (window.location.hostname === "localhost") {
+      console.debug(`[DEBUG] Skipping Firestore requests in local development.`);
+
+    } else {
+
+      trackUniqueVisitor();
+
+      if (CONFIG.page.isPost) {
+        console.debug(`[DEBUG] isPost.`);
+        const title = document.querySelector('.post-title').innerText.trim();
+        const docRef = doc(db, 'articles', title);
+        let increaseCount = CONFIG.hostname === location.hostname;
+
+        // Check if the user has already visited the post (localStorage)
+        if (localStorage.getItem(title)) {
+          console.debug(`[DEBUG] visited -> ${title}`);
+          increaseCount = false;
+        }
+
+        // Fetch count and increase only if needed, then update localStorage
+        getCount(docRef, increaseCount, title).then(
+          appendCountTo(document.querySelector('.firestore-visitors-count'))
+        );
+      } else if (CONFIG.page.isHome) {
+        // On the homepage, get counts for all articles
+        const promises = [...document.querySelectorAll('.post-title')].map(element => {
+          const title = element.innerText.trim();
+          const docRef = doc(db, 'articles', title);
+          return getCount(docRef, false, title);  // No need to increase count on home page
+        });
+
+        // Update visitor counts on homepage
+        Promise.all(promises).then(counts => {
+          const metas = document.querySelectorAll('.firestore-visitors-count');
+          counts.forEach((val, idx) => appendCountTo(metas[idx])(val));
+        });
+      }
+
+    }
+    console.groupEnd(`[DEBUG] firestore.swig`);
+  </script>
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+
+  
+  <script>
+    (function(){
+      var canonicalURL, curProtocol;
+      //Get the <link> tag
+      var x=document.getElementsByTagName("link");
+		//Find the last canonical URL
+		if(x.length > 0){
+			for (i=0;i<x.length;i++){
+				if(x[i].rel.toLowerCase() == 'canonical' && x[i].href){
+					canonicalURL=x[i].href;
+				}
+			}
+		}
+    //Get protocol
+	    if (!canonicalURL){
+	    	curProtocol = window.location.protocol.split(':')[0];
+	    }
+	    else{
+	    	curProtocol = canonicalURL.split(':')[0];
+	    }
+      //Get current URL if the canonical URL does not exist
+	    if (!canonicalURL) canonicalURL = window.location.href;
+	    //Assign script content. Replace current URL with the canonical URL
+      !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=canonicalURL,t=document.referrer;if(!e.test(r)){var n=(String(curProtocol).toLowerCase() === 'https')?"https://sp0.baidu.com/9_Q4simg2RQJ8t7jm9iCKT-xh_/s.gif":"//api.share.baidu.com/s.gif";t?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var i=new Image;i.src=n}}(window);})();
+  </script>
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+<script>
+  function loadCount() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://https-enkr1-github-io-blog.disqus.com/count.js';
+    s.id = 'dsq-count-scr';
+    (d.head || d.body).appendChild(s);
+  }
+  // defer loading until the whole page loading is completed
+  window.addEventListener('load', loadCount, false);
+</script>
+<script>
+  var disqus_config = function() {
+    this.page.url = "https://blog.enkr1.com/leetcode-97-interleaving-string/";
+    this.page.identifier = "leetcode-97-interleaving-string/";
+    this.page.title = "LeetCode-97: Interleaving String";
+    };
+  NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
+    if (window.DISQUS) {
+      DISQUS.reset({
+        reload: true,
+        config: disqus_config
+      });
+    } else {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://https-enkr1-github-io-blog.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', '' + +new Date());
+      (d.head || d.body).appendChild(s);
+    }
+  });
+</script>
+
+</body>
+</html>

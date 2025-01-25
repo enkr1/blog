@@ -1,0 +1,1856 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 7.3.0">
+<meta name="google-site-verification" content="wSUWWkv_QhNXB_N6r3rOSU2YlmmWxYBk6UWVlgu1q94" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/logo.gif">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/logo.gif">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta name="google-site-verification" content="google295e26d511c4c6ad.html">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"blog.enkr1.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":true,"sidebar":{"position":"left","width":300,"display":"post","padding":0,"offset":0,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"buttons","active":"disqus","storage":true,"lazyload":true,"nav":null,"activeClass":"disqus"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":-1,"unescape":true,"preload":true},"motion":{"enable":true,"async":false,"transition":{"post_block":"slideDownBigIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="Welcome to My Bash Notebook! Discover essential Bash tips and tricks in this comprehensive guide. Whether you&#39;re starting or looking to deepen your command line skills, find advanced techniques and ea">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Bash Notebook">
+<meta property="og:url" content="https://blog.enkr1.com/bash-notebook/index.html">
+<meta property="og:site_name" content="ENKR&#39;s Blog | Jing Hui PANG">
+<meta property="og:description" content="Welcome to My Bash Notebook! Discover essential Bash tips and tricks in this comprehensive guide. Whether you&#39;re starting or looking to deepen your command line skills, find advanced techniques and ea">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://blog.enkr1.com/bash-notebook/terminal.png">
+<meta property="og:image" content="https://blog.enkr1.com/bash-notebook/dig-output.png">
+<meta property="og:image" content="https://blog.enkr1.com/bash-notebook/brew-1.png">
+<meta property="article:published_time" content="2024-04-11T20:14:20.000Z">
+<meta property="article:modified_time" content="2025-01-23T19:35:31.282Z">
+<meta property="article:author" content="Jing Hui PANG | 彭竞辉 | ENKR">
+<meta property="article:tag" content="programming">
+<meta property="article:tag" content="bash">
+<meta property="article:tag" content="tips-and-tricks">
+<meta property="article:tag" content="command-line">
+<meta property="article:tag" content="linux">
+<meta property="article:tag" content="scripting">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://blog.enkr1.com/bash-notebook/terminal.png">
+
+<link rel="canonical" href="https://blog.enkr1.com/bash-notebook/">
+
+
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4N4L18VB12"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-4N4L18VB12');
+</script>
+
+
+
+<!-- Firebase -->
+<!-- enkr1.github.io -->
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const _0x5ea0f9=_0x103b;function _0x103b(_0x53ae50,_0x59847d){const _0x2843ac=_0x1ad7();_0x103b=function(_0x55d786,_0x3cee64){_0x55d786=_0x55d786-(-0xcfb+0x1f9f+-0x1124);let _0x59a379=_0x2843ac[_0x55d786];return _0x59a379;};return _0x103b(_0x53ae50,_0x59847d);}function _0x1ad7(){const _0x1f01af=['G-TJPENBTD','AIzaSyBxex','17063YPgNxh','VzGzOqDUGF','1:71411607','216YlyPzv','hexo-blog-','7141160759','4c5895d438','16110beXadU','qAetlFUSo','548402cjqBQm','9ccea','zHVT_-oYxk','enkr1.com','10aKAiit','725816aYbUzX','38661mJjSzZ','fb244020c3','pot.com','5930586lHPClx','593:web:d0','52OsOUFf','9ccea.apps','1053695BAfudF'];_0x1ad7=function(){return _0x1f01af;};return _0x1ad7();}(function(_0x5f4332,_0x76084c){const _0x2e4582=_0x103b;const _0x2c9a86=_0x5f4332();while(!![]){try{const _0x40bc56=parseInt(_0x2e4582(0x184))/(-0x92c+-0x2f*-0x2+-0xcd*-0xb)+-parseInt(_0x2e4582(0x18d))/(-0xf68+-0x11*-0x1bb+-0xe01)+parseInt(_0x2e4582(0x18b))/(0x546+-0x4*-0x19b+-0xbaf)*(parseInt(_0x2e4582(0x198))/(-0x91*0x16+-0x215b*-0x1+-0x1*0x14e1))+-parseInt(_0x2e4582(0x181))/(0x181e+-0x295*0xd+0x978)+parseInt(_0x2e4582(0x187))/(-0x2*0x10ad+-0x14a9+0x3609)*(-parseInt(_0x2e4582(0x193))/(0x5*0x4e8+-0xc8d+0x5fa*-0x2))+parseInt(_0x2e4582(0x192))/(-0x1*0x621+0x1f*0x95+-0xbe2)+parseInt(_0x2e4582(0x196))/(-0x1494+-0x3*0x7ae+0x2ba7)*(parseInt(_0x2e4582(0x191))/(-0x1*0xec7+-0x5*-0x2cf+0xc6));if(_0x40bc56===_0x76084c){break;}else{_0x2c9a86['push'](_0x2c9a86['shift']());}}catch(_0x4baedd){_0x2c9a86['push'](_0x2c9a86['shift']());}}}(_0x1ad7,-0x1*0x1a731+-0x443d4+-0x1*-0x83fd7));const firebaseConfig={'apiKey':_0x5ea0f9(0x183)+_0x5ea0f9(0x185)+_0x5ea0f9(0x18f)+_0x5ea0f9(0x18c),'authDomain':_0x5ea0f9(0x190),'projectId':_0x5ea0f9(0x188)+_0x5ea0f9(0x18e),'storageBucket':_0x5ea0f9(0x188)+_0x5ea0f9(0x180)+_0x5ea0f9(0x195),'messagingSenderId':_0x5ea0f9(0x189)+'3','appId':_0x5ea0f9(0x186)+_0x5ea0f9(0x197)+_0x5ea0f9(0x194)+_0x5ea0f9(0x18a),'measurementId':_0x5ea0f9(0x182)+'NS'};
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/ilyabirman-likely@2/release/likely.min.css">
+  <title>Bash Notebook | ENKR's Blog | Jing Hui PANG</title>
+  
+    <script>
+      function sendPageView() {
+        if (CONFIG.hostname !== location.hostname) return;
+        var uid = localStorage.getItem('uid') || (Math.random() + '.' + Math.random());
+        localStorage.setItem('uid', uid);
+        navigator.sendBeacon('https://www.google-analytics.com/collect', new URLSearchParams({
+          v  : 1,
+          tid: 'G-4N4L18VB12',
+          cid: uid,
+          t  : 'pageview',
+          dp : encodeURIComponent(location.pathname)
+        }));
+      }
+      document.addEventListener('pjax:complete', sendPageView);
+      sendPageView();
+    </script>
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="ENKR's Blog | Jing Hui PANG" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">ENKR's Blog | Jing Hui PANG</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Where code meets creativity.</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-about-me">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About Me</a>
+
+  </li>
+        <li class="menu-item menu-item-connect-with-me">
+
+    <span class="exturl" data-url="aHR0cHM6Ly9jYWwuY29tL2Vua3IxL2NvbGxhYm9yYXRpb25zP2xheW91dD1jb2x1bW5fdmlldw=="><i class="fa fa-calendar fa-fw"></i>Connect with Me</span>
+
+  </li>
+        <li class="menu-item menu-item-my-platforms">
+
+    <span class="exturl" data-url="aHR0cHM6Ly9lbmtyMS5naXRodWIuaW8vcGxhdGZvcm1zLw=="><i class="fa fa-link fa-fw"></i>My Platforms</span>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">125</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-list fa-fw"></i>Categories<span class="badge">56</span></a>
+
+  </li>
+        <li class="menu-item menu-item-notebooks">
+
+    <a href="/categories/Notebooks/" rel="section"><i class="fa fa-bookmark fa-fw"></i>Notebooks</a>
+
+  </li>
+        <li class="menu-item menu-item-journals">
+
+    <a href="/categories/About-Me/Journals/" rel="section"><i class="fa fa-book fa-fw"></i>Journals</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-history fa-fw"></i>Archives</a>
+
+  </li>
+        <li class="menu-item menu-item-sitemap">
+
+    <a href="/sitemap.txt" rel="section"><i class="fa fa-sitemap fa-fw"></i>Sitemap</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://blog.enkr1.com/bash-notebook/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Jing Hui PANG | 彭竞辉 | ENKR">
+      <meta itemprop="description" content="Words for my future self—a space for insights and creativity. Along the way, I’ll be journaling my journey, diving into programming tips, beatboxing stories and sharing insights on fitness, music, and more to inspire anyone chasing their own path.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ENKR's Blog | Jing Hui PANG">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Bash Notebook
+        </h1>
+
+        <div class="post-meta">
+
+<!--
+NOTE: created_at
+-->
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: Friday, 12 April 2024 04:14:20 AM 04:14:20 AM" itemprop="dateCreated datePublished" datetime="2024-04-12T04:14:20+08:00">Friday, 12 April 2024 04:14:20 AM</time>
+            </span>
+
+<!--
+NOTE: created_at
+-->
+<!--
+-->
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: Friday, 24 January 2025 03:35:31 AM 03:35:31 AM" itemprop="dateModified" datetime="2025-01-24T03:35:31+08:00">Friday, 24 January 2025 03:35:31 AM</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Software-Engineering/" itemprop="url" rel="index"><span itemprop="name">Software Engineering</span></a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Software-Engineering/Programming-Languages/" itemprop="url" rel="index"><span itemprop="name">Programming Languages</span></a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Notebooks/" itemprop="url" rel="index"><span itemprop="name">Notebooks</span></a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Software-Engineering/Programming-Languages/Bash/" itemprop="url" rel="index"><span itemprop="name">Bash</span></a>
+                </span>
+            </span>
+
+          
+
+
+<!--
+NEW: Added a break after category
+-->
+
+  <br>
+
+
+<!--
+NOTE: word count
+-->
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+              <span>4.7k</span>
+            </span>
+
+<!--
+NOTE: reading time
+-->
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+              <span>17 mins.</span>
+            </span>
+
+
+<!--
+NOTE: disqus
+-->
+  
+  <span class="post-meta-item disqus-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/bash-notebook/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="bash-notebook/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+<!--
+NOTE: views count
+-->
+            <span class="post-meta-item" title="Views">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <!--
+              NOTE: Hide "Views: "
+              <span class="post-meta-item-text">Views: </span>
+              -->
+              <b><span class="firestore-visitors-count">loading ...</span></b>
+            </span>
+            <div class="post-description">Welcome to My Bash Notebook! Discover essential Bash tips and tricks in this comprehensive guide. Whether you're starting or looking to deepen your command line skills, find advanced techniques and easy-to-follow insights to boost your Bash efficiency.</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <!--
+
+Getting Started with Bash
+Intermediate Techniques
+Advanced Bash Scripts and Tricks
+
+-->
+<img data-src="/bash-notebook/terminal.png" class="large no-shadow">
+<p>Through this post, I aim to share some of the tips and tricks I have
+gathered along my journey with Bash. I am not an expert, my experiences
+have taught me valuable lessons that I believe can benefit others, and
+I'm excited to share them with you! Whether you're a Bash beginner or
+have some fundamentals under your belt, I hope you'll find something
+here that enhances your command line prowess. And, of course, I invite
+you to share your own insights and experiences in the comments
+below—let's learn from each other and grow together!</p>
+<span id="more"></span>
+<hr />
+<h2 id="what-is-bash">What is Bash?</h2>
+<p>When we speak of the <strong>command line</strong>, we are really
+referring to the shell. The shell is a program that takes keyboard
+commands and passes them to the operating system to carry out. Almost
+all Linux distributions supply a shell program from the GNU Project
+called <code>bash</code>. The name is an acronym for
+<code>bourne-again shell</code>, a reference to the fact that Bash is an
+enhanced replacement for <code>sh</code>, the original Unix shell
+program written by <a
+target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Stephen_R._Bourne">Steve R.
+Bourne</a>.</p>
+<p>In the realm of software engineering, the command line holds a
+special place. It's the backbone of automation, the gateway to system
+administration, and the tool of choice for the discerning developer.
+Among the various shells available, Bash stands out as a symbol of
+<strong>efficiency</strong> and <strong>flexibility</strong>. As someone
+deeply enamored with the elegance of Bash, I have embarked on a journey
+to explore its depths and harness its potential.</p>
+<p>To me, Bash is more than just a tool; it's the soul of the computer.
+It's where magic happens, where commands come to life, and where true
+power resides. With just a few keystrokes and the mighty
+<code>sudo</code>, one can orchestrate the symphony of the system, all
+<em>without the need for a mouse</em>. It's this simplicity and potency
+that have made me a fervent advocate of Bash.</p>
+<h2 id="efficiency-is-key">Efficiency is key!</h2>
+<p>As someone who values efficiency (lazy person... in short :D), I
+often look for "shortcuts" to streamline my workflow. In the world of
+bash scripting, these shortcuts are known as <code>alias</code>. They
+allow you to abbreviate long commands or frequently used command
+sequences into simple, memorable shortcuts.</p>
+<p>Here's how you can set up your own aliases to enhance productivity,
+especially when you find yourself repeatedly typing the same
+commands:</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Basics</span></span><br><span class="line"><span class="built_in">alias</span> h=<span class="string">&quot;history&quot;</span></span><br><span class="line"><span class="built_in">alias</span> ?=<span class="string">&quot;pwd&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># show everything in that directory // list long format including hidden files</span></span><br><span class="line"><span class="built_in">alias</span> ll=<span class="string">&quot;ls -rslah&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># You can use the ls command to create an alias to help you find where you left off:</span></span><br><span class="line"><span class="built_in">alias</span> left=<span class="string">&#x27;ls -t -1&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Stole it from Lionel (ex-company&#x27;s leader HAHA!)</span></span><br><span class="line"><span class="built_in">alias</span> ,=<span class="string">&quot;cd ..&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">alias</span> wt=<span class="string">&quot;curl wttr.in/Singapore?FQ&quot;</span> <span class="comment"># A nerdy way to check the weather ...</span></span><br><span class="line"><span class="built_in">alias</span> listen=<span class="string">&quot;sudo lsof -i -P -n | grep LISTEN&quot;</span></span><br><span class="line"><span class="comment"># My IP in the network</span></span><br><span class="line"><span class="built_in">alias</span> ip=<span class="string">&quot;ipconfig getifaddr en0 | tee &gt;(pbcopy)&quot;</span></span><br><span class="line"><span class="comment"># Router IP address</span></span><br><span class="line"><span class="built_in">alias</span> routerip=<span class="string">&quot;curl ipecho.net/plain ; echo&quot;</span></span><br><span class="line"><span class="comment"># List all open files and network connections that are in a listening state on your system.</span></span><br><span class="line"><span class="built_in">alias</span> listen=<span class="string">&quot;sudo lsof -nP -iTCP -sTCP:LISTEN&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># You may also:</span></span><br><span class="line"><span class="comment"># Apache&#x27;s</span></span><br><span class="line"><span class="built_in">alias</span> res=<span class="string">&quot;sudo apachectl restart&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Elixir&#x27;s</span></span><br><span class="line"><span class="built_in">alias</span> <span class="built_in">log</span>=<span class="string">&quot;tail -f /var/app/xxx_releases/<span class="variable">$RELEASE</span>/tmp/log/erlang.log.1&quot;</span></span><br><span class="line"><span class="built_in">alias</span> remote=<span class="string">&quot;/var/app/xxx_releases/<span class="variable">$RELEASE</span>/bin/xxx remote&quot;</span></span><br><span class="line"><span class="built_in">alias</span> deploy=<span class="string">&quot;sudo killall beam.smp &amp;&amp; /var/app/xxx/_deploy/update_prod&quot;</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>These are my most used commands on a daily basis</p>
+</blockquote>
+<p>To make these aliases permanent, add them to your
+<code>.bashrc</code> or <code>.bash_profile</code> file, taking
+<code>.bash_profile</code> as an example, you may: <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim ~/.bash_profile</span><br></pre></td></tr></table></figure></p>
+<p>OR, personally I prefer to just open it on my visual studio code:
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">code ~/.bash_profile</span><br></pre></td></tr></table></figure></p>
+<p>With these simple steps, you can greatly reduce the number of
+keystrokes needed in your daily tasks and focus more on your development
+work. I believe having aliases set is the smart way to work efficiently
+in the command line!</p>
+<h3 id="ls---options">ls - Options:</h3>
+<table>
+<colgroup>
+<col style="width: 7%" />
+<col style="width: 92%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Option</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>-r</code></td>
+<td>Reverses the order of the sort, oldest first.</td>
+</tr>
+<tr class="even">
+<td><code>-s</code></td>
+<td>Displays the block size of each file in units.</td>
+</tr>
+<tr class="odd">
+<td><code>-l</code></td>
+<td>Uses a long listing format, showing detailed information about each
+file.</td>
+</tr>
+<tr class="even">
+<td><code>-a</code></td>
+<td>Lists all entries including those starting with a dot (hidden
+files).</td>
+</tr>
+<tr class="odd">
+<td><code>-i</code></td>
+<td>Displays the inode number of each file.</td>
+</tr>
+<tr class="even">
+<td><code>-h</code></td>
+<td>Human-readable format, shows file sizes in KB, MB, etc.</td>
+</tr>
+<tr class="odd">
+<td><code>-t</code></td>
+<td>Sorts the output by modification time, newest first (last
+modified).</td>
+</tr>
+<tr class="even">
+<td><code>-R</code></td>
+<td>Lists directories and their contents recursively.</td>
+</tr>
+<tr class="odd">
+<td><code>-d</code></td>
+<td>Lists directories themselves, not their contents.</td>
+</tr>
+</tbody>
+</table>
+<p>These options can be mixed and matched to create a command that fits
+exactly what you need.</p>
+<h3 id="history">history</h3>
+<ul>
+<li><code>history</code> stores up to 1k commands by default.</li>
+</ul>
+<h2 id="reading-the-manual">Reading the Manual</h2>
+<p>Just use <code>man</code> followed by the command you want to learn
+about. The <code>man</code> command, short for
+"<strong>manual</strong>," is a powerful tool available in Unix and
+Unix-like systems such as Linux and macOS. It provides detailed
+documentation on a wide range of system commands, utilities, and more.
+Here's how to use it: <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">man &lt;<span class="built_in">command</span>&gt;</span><br></pre></td></tr></table></figure></p>
+<p>For example, to get more information about the <code>ls</code>
+command, you would type: <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">man <span class="built_in">ls</span></span><br><span class="line">man git</span><br><span class="line">man grep</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>This command will display a comprehensive manual page for
+<code>ls</code>, covering its usage, options, and examples.
+<code>man</code> covers most of the commands you'll use in the terminal,
+offering a great way to dive deeper into commands such as
+<code>grep</code>, <code>awk</code>, <code>systemctl</code>, and many
+others.</p>
+</blockquote>
+<p><strong>Remember:</strong> - Not every tool or script has a
+<code>man</code> page, especially those that are user-installed. -
+Sometimes, the documentation might lag behind the latest updates of
+software versions. - The depth of information can be daunting at first
+but becomes an indispensable resource with familiarity.</p>
+<h2 id="tips-in-linux-understand-your-server">Tips in Linux: Understand
+Your Server</h2>
+<p>Bash and Linux are two different things that are often used
+together.</p>
+<p>Linux is a free and open-source operating system that is based on the
+Unix operating system. It is widely used in servers, supercomputers, and
+embedded systems, and is popular among developers, system
+administrators, and other IT professionals.</p>
+<p>Bash, on the other hand, is a shell program that runs on top of Linux
+(and other Unix-like systems) and provides a command-line interface for
+users to interact with the system. It is also a scripting language that
+allows users to write scripts to automate tasks and perform complex
+operations.</p>
+<h3 id="here-are-some-differences-between-bash-and-linux">Here are some
+differences between Bash and Linux:</h3>
+<ol type="1">
+<li>Bash is a program, while Linux is an operating system. Bash runs on
+top of Linux (or other Unix-like systems) to provide a command-line
+interface for users to interact with the system.</li>
+<li>Bash is a shell program that provides a command-line interface and
+scripting language, while Linux provides the underlying operating system
+services such as memory management, process scheduling, and device
+drivers.</li>
+<li>Bash is one of several shell programs available on Linux. Other
+shell programs include sh, csh, and zsh. Users can choose the shell
+program that best suits their needs.</li>
+<li>Linux is an operating system that comes in different distributions,
+such as Ubuntu, Fedora, and Debian. Each distribution provides a
+different set of tools, software, and user interfaces. Bash, on the
+other hand, is available on all distributions of Linux.</li>
+<li>Bash is a powerful scripting language that can be used to automate
+tasks and perform complex operations. It can also be used to write
+programs and perform system administration tasks. Linux provides a wide
+range of system administration tools and utilities that can be used in
+conjunction with Bash scripts.</li>
+</ol>
+<blockquote>
+<p>Overall, Bash and Linux are two different things that work together
+to provide a powerful and flexible system for users to interact with and
+manage.</p>
+</blockquote>
+<table>
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 94%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>whoami</td>
+<td>Displays current username.</td>
+</tr>
+<tr class="even">
+<td>id</td>
+<td>Returns users identity</td>
+</tr>
+<tr class="odd">
+<td>hostname</td>
+<td>Sets or prints the name of current host system.</td>
+</tr>
+<tr class="even">
+<td>uname</td>
+<td>Prints basic information about the operating system name and system
+hardware.</td>
+</tr>
+<tr class="odd">
+<td>pwd</td>
+<td>Returns working directory name.</td>
+</tr>
+<tr class="even">
+<td>ifconfig</td>
+<td>The ifconfig utility is used to assign or to view an address to a
+network interface and/or configure network interface parameters.</td>
+</tr>
+<tr class="odd">
+<td>ip</td>
+<td>Ip is a utility to show or manipulate routing, network devices,
+interfaces and tunnels.</td>
+</tr>
+<tr class="even">
+<td>netstat</td>
+<td>Shows network status.</td>
+</tr>
+<tr class="odd">
+<td>ss</td>
+<td>Another utility to investigate sockets.</td>
+</tr>
+<tr class="even">
+<td>ps</td>
+<td>Shows process status.</td>
+</tr>
+<tr class="odd">
+<td>who</td>
+<td>Displays who is logged in.</td>
+</tr>
+<tr class="even">
+<td>env</td>
+<td>Prints environment or sets and executes command.</td>
+</tr>
+<tr class="odd">
+<td>lsblk</td>
+<td>Lists block devices.</td>
+</tr>
+<tr class="even">
+<td>lsusb</td>
+<td>Lists USB devices</td>
+</tr>
+<tr class="odd">
+<td>lsof</td>
+<td>Lists opened files.</td>
+</tr>
+<tr class="even">
+<td>lspci</td>
+<td>Lists PCI devices.</td>
+</tr>
+</tbody>
+</table>
+<p>With three years of experience (only...) digging into server
+maintenance and troubleshooting, I have amassed a collection of
+essential commands that are indispensable for anyone managing
+servers.</p>
+<p>Whether you're setting up, maintaining, or troubleshooting, these
+commands are likely to be some of your most used tools, I might be wrong
+please leave a comment below for your favourite commands you used when
+troubleshooting!</p>
+<p>Whether you're setting up, maintaining, or troubleshooting, these
+commands might just become your new go-to tools—though I could be wrong!
+Everyone has their favorites, right? I'd love to hear about your
+favourite set of commands . Drop your top picks in the comments below
+and let's swap some server-savvy secrets! HAHA!</p>
+<p>Here's a deeper look into each one and why you should know them:</p>
+<h3 id="os-details-check">OS Details Check</h3>
+<p>Discover what's running under the hood: <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cat</span> /etc/os-release</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>Output: <figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">NAME=&quot;Amazon Linux&quot;</span><br><span class="line">VERSION=&quot;2023&quot;</span><br><span class="line">ID=&quot;amzn&quot;</span><br><span class="line">ID_LIKE=&quot;fedora&quot;</span><br><span class="line">VERSION_ID=&quot;2023&quot;</span><br><span class="line">PLATFORM_ID=&quot;platform:al2023&quot;</span><br><span class="line">PRETTY_NAME=&quot;Amazon Linux 2023&quot;</span><br><span class="line">ANSI_COLOR=&quot;0;33&quot;</span><br><span class="line">CPE_NAME=&quot;cpe:2.3:o:amazon:amazon_linux:2023&quot;</span><br><span class="line">HOME_URL=&quot;https://aws.amazon.com/linux/&quot;</span><br><span class="line">BUG_REPORT_URL=&quot;https://github.com/amazonlinux/amazon-linux-2023&quot;</span><br><span class="line">SUPPORT_END=&quot;2028-03-01&quot;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<p>This command provides key details about your Linux
+distribution—essential for compatibility and troubleshooting.</p>
+<h3 id="kernel-version">Kernel Version</h3>
+<p>Check your core: <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">man <span class="built_in">uname</span> <span class="comment"># Read manual as always</span></span><br><span class="line"><span class="built_in">uname</span></span><br><span class="line"><span class="built_in">uname</span> -a</span><br><span class="line"><span class="built_in">uname</span> -v <span class="comment"># Get kernel version</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="cpu-info">CPU Info</h3>
+<p>Understand your processor that reveals the CPU architecture,
+capabilities and for performance tuning: <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lscpu</span><br></pre></td></tr></table></figure></p>
+<h3 id="memory-info">Memory Info</h3>
+<p>Monitor your RAM usage: <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">free -h</span><br></pre></td></tr></table></figure></p>
+<h3 id="disk-space">Disk Space</h3>
+<p>Keep an eye on storage: <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">df</span> -h</span><br></pre></td></tr></table></figure></p>
+<h3 id="network-interfaces">Network Interfaces</h3>
+<p>List all network interfaces and IP addresses to ensure your network
+settings are correct: <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ip addr</span><br></pre></td></tr></table></figure></p>
+<h3 id="system-services">System Services</h3>
+<p>Manage background processes: <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl status</span><br></pre></td></tr></table></figure></p>
+<h3 id="reminder-system-update">Reminder: System Update</h3>
+<h4 id="why-update">Why Update?</h4>
+<ul>
+<li><strong>Security:</strong> Patch vulnerabilities</li>
+<li><strong>Stability:</strong> Fix bugs</li>
+<li><strong>Performance:</strong> Enhance speed</li>
+<li><strong>Compatibility:</strong> Ensure software works well
+together</li>
+</ul>
+<h4 id="how-to-update---yum">How to Update - <code>yum</code>:</h4>
+<ol type="1">
+<li><strong>Check for Updates:</strong> <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> yum check-update</span><br></pre></td></tr></table></figure></li>
+<li><strong>Apply Updates:</strong> <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> yum update -y</span><br></pre></td></tr></table></figure></li>
+<li><strong>Reboot if Required:</strong> <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> needs-restarting -r</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h4 id="tips">Tips:</h4>
+<ul>
+<li><strong>Regular Checks:</strong> Weekly checks or automated
+alerts</li>
+<li><strong>Backups:</strong> <em>Always back up data before
+updates</em></li>
+<li><strong>Post-Update Monitoring:</strong> Check for any issues after
+updates</li>
+</ul>
+<p>This concise guide covers the essentials of why and how to keep your
+system updated using <code>yum</code>.</p>
+<blockquote>
+<p><em>What are your go-to tools for server management?</em></p>
+</blockquote>
+<h2 id="z---powerful-navigator">z - Powerful navigator</h2>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3J1cGEveg==">Z<i class="fa fa-external-link-alt"></i></span> is a powerful script that
+speeds up your directory navigation more than you could imagine!</p>
+<h3 id="installation-set-up">Installation &amp; Set-up</h3>
+<ol type="1">
+<li><p>Download the <code>z.sh</code> script using <code>wget</code>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https://raw.githubusercontent.com/rupa/z/master/z.sh -O ~/z.sh <span class="comment"># output to ~/z.sh</span></span><br></pre></td></tr></table></figure></p></li>
+<li><p>Initialise Z Add the following lines to your bash profile fille
+to initialise the script every time a shell opens:</p>
+<p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">printf</span> <span class="string">&quot;\n\n#initialize Z (https://github.com/rupa/z) \n. ~/z.sh \n\n&quot;</span> &gt;&gt; ~/.bashrc</span><br></pre></td></tr></table></figure></p>
+<p>OR, directly on your profile:</p>
+<p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># run z.sh by default</span></span><br><span class="line"><span class="keyword">if</span> [ -f ~/z.sh ]; <span class="keyword">then</span></span><br><span class="line">  . ~/z.sh</span><br><span class="line"><span class="keyword">fi</span></span><br></pre></td></tr></table></figure></p></li>
+<li><p>Reload the Shell Apply the changes by sourcing your profile</p>
+<p>For example: <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> ~/.bashrc</span><br></pre></td></tr></table></figure></p></li>
+</ol>
+<p>That's it! These steps should make navigating directories quicker and
+more intuitive like so:</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">z myfold <span class="comment"># Even tho your folder is named my_folder_xxx, it will always match with the top used directory</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>Meaning, you have to somehow have some data by using a few times of
+<code>cd</code> before using it.</p>
+</blockquote>
+<p>In short, the more you use it, the better it gets. I hope this guide
+helps you as much as it has helped me! :D</p>
+<h2 id="grep">grep</h2>
+<p>One of the most basic command line you should already know! But I am
+leaving some notes here as I found interesting and useful.</p>
+<h3 id="simple-usage">Simple usage:</h3>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">anything | grep the-keyword</span><br></pre></td></tr></table></figure>
+<h3 id="insensitive-case">Insensitive case:</h3>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ll | grep -i <span class="string">&quot;things-u-wanna-find&quot;</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>SEARCH: How to show lines Before/After/Around the Match:</p>
+</blockquote>
+<p>more ...</p>
+<h3 id="sres-must-know">SRE's must know</h3>
+<p><strong>SRE Interview questions I got asked:</strong> Q2: Which
+command do you use to count all lines with ERROR keyword (case
+sensitive)? <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grep <span class="string">&quot;ERROR&quot;</span> ./stderr.log | <span class="built_in">wc</span> -l</span><br></pre></td></tr></table></figure></p>
+<p>Q3: Which command do you use to display 5 lines before and 5 lines
+after the line with ERROR keyword and line numbers as well?
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grep -A 5 -B 5 -n <span class="string">&quot;ERROR&quot;</span> stderr.log</span><br></pre></td></tr></table></figure></p>
+<h3 id="some-notes">Some notes</h3>
+<p><code>^</code> is the start-of-line anchor, it matches the beginning
+of a line.</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grep ^Host ~/.ssh/config</span><br></pre></td></tr></table></figure>
+<p>This command is searching for lines in the
+<strong><code>~/.ssh/config</code></strong> file that
+<strong>start</strong> with the word "Host".</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grep ^Host ~/.ssh/config | awk <span class="string">&#x27;&#123;print $2&#125;&#x27;</span></span><br></pre></td></tr></table></figure>
+<h2 id="awk">awk</h2>
+<p><code>awk</code> is a powerful text processing tool that's commonly
+used in UNIX-like operating systems. It excels at column-based
+operations, making it ideal for data extraction and reporting from
+structured text data. <code>awk</code> is not just a command; it's an
+entire programming language designed for text processing.</p>
+<h3 id="basics-of-awk">Basics of <code>awk</code></h3>
+<p>The basic syntax of <code>awk</code> is: <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">awk <span class="string">&#x27;pattern &#123; action &#125;&#x27;</span> file</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li><strong><code>pattern</code></strong>: This specifies the condition
+for which the <strong><code>action</code></strong> should be executed.
+If no pattern is provided, the action is executed for every line.</li>
+<li><strong><code>action</code></strong>: This is
+what <strong><code>awk</code></strong> does when the pattern matches.
+Actions are enclosed in <strong><code>&#123; &#125;</code></strong>.</li>
+<li><strong><code>file</code></strong>: The file you want to process. If
+no file is specified, <strong><code>awk</code></strong> reads from the
+standard input.</li>
+</ul>
+<h2 id="wc---word-count">wc - Word Count</h2>
+<ul>
+<li>https://linuxhint.com/wc-command-bash/</li>
+</ul>
+<p>Get wordcount from a log text file: <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cat</span> log.txt | <span class="built_in">wc</span> -l</span><br></pre></td></tr></table></figure></p>
+<p>Get total occurrences of the word "ERROR" case insensitively and by
+line: <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cat</span> log.txt | grep -io <span class="string">&quot;ERROR&quot;</span>  | <span class="built_in">wc</span> -l</span><br></pre></td></tr></table></figure></p>
+<h3 id="wc---options">wc - Options:</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Option</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>-l</code></td>
+<td>Count the number of lines in the input.</td>
+</tr>
+<tr class="even">
+<td><code>-L</code></td>
+<td>Display the length of the longest line.</td>
+</tr>
+<tr class="odd">
+<td><code>-w</code></td>
+<td>Count the number of words in the input.</td>
+</tr>
+<tr class="even">
+<td><code>-c</code></td>
+<td>Count the number of bytes in the input.</td>
+</tr>
+<tr class="odd">
+<td><code>-m</code></td>
+<td>Count the number of characters in the input.</td>
+</tr>
+</tbody>
+</table>
+<p>wip ...</p>
+<h2 id="ssh">SSH</h2>
+<h3 id="genkey">genkey</h3>
+<p>Keys will be created (id_rsa and id_rsa.pub) under ~/.ssh:
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -b 2048</span><br><span class="line">ssh-keygen -t rsa</span><br></pre></td></tr></table></figure></p>
+<h3 id="pbcopy-key">pbcopy key</h3>
+<ul>
+<li>https://stackoverflow.com/a/2643584/13677125 Copy ~/.ssh/id_rsa.pub
+to the clipboard: <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cat</span> ~/.ssh/id_rsa.pub | pbcopy</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="scp">scp</h3>
+<p>ssh cp into your local folder: <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scp ec2-user@www.test.com:/var/app/project_name/_tmp/xxx.log ~/Downloads/xxx-copy.log</span><br></pre></td></tr></table></figure></p>
+<h2 id="mkdir">mkdir</h2>
+<h3 id="recursively">recursively</h3>
+<p>You can create nested directories recursively using the
+<strong><code>-p</code></strong> flag with the
+<strong><code>mkdir</code></strong> command. The
+<strong><code>-p</code></strong> flag ensures that each directory is
+created if it doesn't exist, and it won't return an error if the
+directory already exists. <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> -p ./folder-a/folder-b</span><br></pre></td></tr></table></figure></p>
+<h2 id="as-known-as-source"><code>.</code> as known as
+<code>source</code></h2>
+<p>A dot in that context means to "source" the contents of that file
+into the current shell. With <a
+target="_blank" rel="noopener" href="http://ss64.com/bash/source.html">source</a> itself being a shell
+builtin command. And <code>source</code> and the <code>.</code> operator
+being synonyms.</p>
+<p>Files such as this are often used to incorporate setup commands such
+as adding things to ones environment variables, e.g.
+<code>addvars.sh</code>: <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> VAR1=<span class="string">&quot;some var1 string&quot;</span></span><br><span class="line"><span class="built_in">export</span> VAR2=<span class="string">&quot;some var2 string&quot;</span></span><br></pre></td></tr></table></figure></p>
+<p>Notice that I don't have any variables in my current shell's
+environment. <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">env</span> | grep VAR</span><br></pre></td></tr></table></figure></p>
+<p>Now when I source this file: <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">. addvars.sh</span><br></pre></td></tr></table></figure></p>
+<p>OK, doesn't seem like it did anything, but when we check the
+<code>env</code> variables again: <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">env</span> | grep VAR</span><br><span class="line"><span class="built_in">env</span> -0 | <span class="built_in">sort</span> -z | <span class="built_in">tr</span> <span class="string">&#x27;\0&#x27;</span> <span class="string">&#x27;\n&#x27;</span></span><br></pre></td></tr></table></figure> output: &gt; VAR1=some
+var1 string &gt; VAR2=some var2 string</p>
+<p>OR, you may check all env by doing: <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">printenv</span></span><br><span class="line"><span class="built_in">printenv</span> | <span class="built_in">sort</span></span><br></pre></td></tr></table></figure></p>
+<p>wip ...</p>
+<h2 id="curl">curl</h2>
+<p>wip ...</p>
+<h2 id="chmod">chmod</h2>
+<ul>
+<li>https://chmod-calculator.com/</li>
+</ul>
+<p>The <code>chmod 777</code> command in Linux is used to set the
+permissions of a file or directory to be fully open. Specifically, it
+permits read, write, and execute permissions for the owner, the group,
+and others. Here's how it breaks down:</p>
+<ul>
+<li>The first <code>7</code> sets the owner's permissions to
+<code>read(4) + write(2) + execute(1) = 7</code></li>
+<li>The second <code>7</code> sets the group's permissions to
+<code>read(4) + write(2) + execute(1) = 7</code></li>
+<li>The third <code>7</code> sets the permissions for others to
+<code>read(4) + write(2) + execute(1) = 7</code></li>
+</ul>
+<p>So, a <code>chmod 777</code> on a file means that anyone can read,
+write, and execute the file. For a directory, it means anyone can view,
+modify, or enter the directory. This is usually considered insecure for
+most cases because it allows anyone to modify the file or directory.</p>
+<p>The <code>-R</code> option stands for "recursive." When used with
+<code>chmod</code>, it applies the permission change to the directory
+and also to all files and subdirectories contained in the directory. For
+example:</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">chmod</span> -R 755 /path/to/directory</span><br></pre></td></tr></table></figure>
+<p>This will set the directory and all its contents to be readable,
+writable, and executable by the owner, and readable and executable by
+everyone else. Subdirectories will also have the same permissions set
+recursively.</p>
+<p>Understanding the implications of different permission settings is
+vital, especially given your role in managing web applications and
+DevOps. Incorrectly set permissions can be a security risk or can
+prevent applications from functioning correctly. Therefore, it's usually
+best to give the minimum necessary permissions for operation.</p>
+<p>Would you like to know more about Linux file permissions, or is there
+something else you'd like to inquire about?</p>
+<h2 id="gs-ghostscript">gs — GhostScript</h2>
+<ul>
+<li>Merge PDFs — https://stackoverflow.com/a/19358402</li>
+</ul>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=merged.pdf 2023-*</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=merged.pdf 2023-05.pdf 2023-06.pdf</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=PandJingHui_3months_payslips.pdf 2023-07.pdf 2023-08.pdf 2023-09.pdf</span><br></pre></td></tr></table></figure>
+<h2 id="unzip">unzip</h2>
+<h3 id="unzip-every-zipped-folder-in-a-directory">Unzip every zipped
+folder in a directory</h3>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">unzip \*.zip</span><br></pre></td></tr></table></figure>
+<h2 id="convert">convert</h2>
+<p><strong>ImageMagick (Convert)</strong></p>
+<ul>
+<li><strong>Primary Use</strong>: Specifically designed for image
+processing. It's primarily used for creating, editing, composing, or
+converting bitmap images.</li>
+<li><strong>Capabilities</strong>: Offers a wide range of options for
+image manipulations such as resizing, flipping, mirroring, rotating,
+distorting, shearing, transforming, and more. It also supports a vast
+number of image formats.</li>
+<li><strong>Simplicity for Images</strong>: Generally provides simpler
+and more direct commands for image manipulation and conversion, making
+it more suitable for tasks that solely involve images.</li>
+</ul>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> file <span class="keyword">in</span> *.JPG; <span class="keyword">do</span></span><br><span class="line">  convert <span class="string">&quot;<span class="variable">$file</span>&quot;</span> <span class="string">&quot;<span class="variable">$&#123;file%.jpg&#125;</span>.jpeg&quot;</span></span><br><span class="line"><span class="keyword">done</span></span><br></pre></td></tr></table></figure>
+<h3 id="ffmpeg">1. <strong>FFmpeg</strong></h3>
+<ul>
+<li><strong>Primary Use</strong>: Primarily designed for video and audio
+processing. It excels at handling multimedia data streams and complex
+encoding and decoding processes.</li>
+<li><strong>Capabilities</strong>: Can handle batch processing of video
+and audio files, applying filters, changing codecs, and modifying
+multimedia files in various ways.</li>
+<li><strong>Complexity</strong>: Typically offers more complex and
+detailed command-line options for video and audio processing, which
+might be overkill or less efficient for simple image conversions.</li>
+</ul>
+<h3 id="imagemagick-convert">2. <strong>ImageMagick
+(Convert)</strong></h3>
+<ul>
+<li><strong>Primary Use</strong>: Specifically designed for image
+processing. It's primarily used for creating, editing, composing, or
+converting bitmap images.</li>
+<li><strong>Capabilities</strong>: Offers a wide range of options for
+image manipulations such as resizing, flipping, mirroring, rotating,
+distorting, shearing, transforming, and more. It also supports a vast
+number of image formats.</li>
+<li><strong>Simplicity for Images</strong>: Generally provides simpler
+and more direct commands for image manipulation and conversion, making
+it more suitable for tasks that solely involve images.</li>
+</ul>
+<h3 id="practical-differences-in-usage">Practical Differences in
+Usage</h3>
+<ul>
+<li><strong>Efficiency</strong>: For image file conversions, ImageMagick
+is generally more efficient and provides tools better suited for the job
+with less overhead compared to FFmpeg.</li>
+<li><strong>Functionality</strong>: FFmpeg is more powerful for any
+media format conversion or processing that includes video or audio.
+However, for straight image-to-image conversion, ImageMagick is usually
+preferred due to its optimization for images.</li>
+</ul>
+<p>In your case, using <code>convert</code> from ImageMagick for
+converting HEIC to JPEG is more straightforward and efficient, given
+that <code>convert</code> is optimized for image operations.</p>
+<p>[WIP]</p>
+<h2 id="nbconvert">nbconvert</h2>
+<h3 id="convert-jupyter-notebook-to-specific-file-type">Convert Jupyter
+notebook to specific file type</h3>
+<p>Convert Jupyter to ... <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">! jupyter nbconvert --to filetype <span class="string">&#x27;filename.ipynb&#x27;</span></span><br></pre></td></tr></table></figure></p>
+<p>Example: <figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">! jupyter nbconvert <span class="attr">--to</span> md xxx<span class="selector-class">.ipynb</span></span><br><span class="line">! jupyter nbconvert <span class="attr">--to</span> <span class="selector-tag">html</span> xxx<span class="selector-class">.ipynb</span></span><br><span class="line">! jupyter nbconvert <span class="attr">--to</span> <span class="selector-tag">html</span> xxx.ipynb</span><br></pre></td></tr></table></figure> &gt; filetype: asciidoc, custom, html, latex,
+markdown, notebook, pdf, python, qtpdf, qtpng, rst, script, slides,
+webpdf</p>
+<h2 id="dig---dns-of-a-website">dig - DNS of a website</h2>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dig https://enkr1.github.io/blog/</span><br></pre></td></tr></table></figure>
+<img data-src="/bash-notebook/dig-output.png" class="no-shadow" title="Output">
+<h2 id="symlink">symlink</h2>
+<p>To create a new symlink (will fail if symlink exists already):
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ln -s /<span class="selector-tag">path</span>/<span class="selector-tag">to</span>/file /<span class="selector-tag">path</span>/<span class="selector-tag">to</span>/symlink</span><br></pre></td></tr></table></figure></p>
+<p>To create or update a symlink: <figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ln</span> -<span class="keyword">sf</span> /path/<span class="keyword">to</span>/<span class="keyword">file</span> /path/<span class="keyword">to</span>/symlink</span><br></pre></td></tr></table></figure></p>
+<h2 id="ps---check-processes">ps - Check Processes</h2>
+<p>The <code>ps</code> command in Unix-based systems is used to list the
+currently running processes.</p>
+<h3 id="basic-usage">Basic Usage</h3>
+<p>Displays processes associated with the current terminal.</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ps</span><br></pre></td></tr></table></figure>
+<h3 id="extended-usage">Extended Usage</h3>
+<ul>
+<li><strong><code>-a</code></strong>: Show processes for all users.</li>
+<li><strong><code>-x</code></strong>: Include processes without a
+controlling terminal.</li>
+</ul>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ps -ax</span><br></pre></td></tr></table></figure>
+<p>This combination (<code>-ax</code>) provides a comprehensive view of
+all active processes on the system, which is useful for full system
+monitoring or debugging purposes.</p>
+<h3 id="examples">Examples</h3>
+<ul>
+<li>To see all processes in a detailed format: <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ps aux</span><br></pre></td></tr></table></figure></li>
+<li>To sort processes by memory usage: <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ps aux --<span class="built_in">sort</span>=-%mem <span class="comment"># on Linux</span></span><br><span class="line">ps aux | <span class="built_in">sort</span> -rnk 4 <span class="comment"># on Mac</span></span><br></pre></td></tr></table></figure></li>
+<li>To search for a specific process, such as Apache:
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ps aux | grep apache</span><br></pre></td></tr></table></figure></li>
+</ul>
+<blockquote>
+<p>This utility is essential for system administration, allowing you to
+monitor and manage running processes effectively.</p>
+</blockquote>
+<h2 id="traceroute">traceroute</h2>
+<p><code>traceroute</code> is a network diagnostic tool that tracks the
+path data packets take from your computer to a destination host, showing
+each hop and the time taken for each hop.</p>
+<h3 id="why-using-it">Why using it?</h3>
+<ul>
+<li><strong>Diagnose Network Issues:</strong> Identify where delays or
+packet loss occur.</li>
+<li><strong>Network Bottlenecks:</strong> Pinpoint problematic segments
+in the network.</li>
+<li><strong>Understand Network Topology:</strong> Gain insights into
+routing paths and network structure.</li>
+<li><strong>ISP Troubleshooting:</strong> Determine if connectivity
+issues are local or beyond your ISP.</li>
+<li><strong>Verify Network Configuration:</strong> Ensure routing paths
+are correctly configured.</li>
+<li><strong>Debug DNS Issues:</strong> Check if domain names resolve
+correctly and trace the path to the destination.</li>
+</ul>
+<h3 id="when-to-use-it">When to use it?</h3>
+<ul>
+<li><strong>Slow Internet Speeds:</strong> Determine where latency is
+introduced.</li>
+<li><strong>Connectivity Problems:</strong> Identify if the issue is
+within the local network or external.</li>
+<li><strong>Network Performance Issues:</strong> Locate bottlenecks
+causing slowdowns.</li>
+<li><strong>Troubleshooting Remote Servers:</strong> Diagnose access
+issues to remote servers.</li>
+<li><strong>Verifying Network Changes:</strong> Confirm that new
+configurations work as intended.</li>
+</ul>
+<h3 id="how-to-use-it">How to use it:</h3>
+<ol type="1">
+<li><p><strong>Run <code>traceroute</code>:</strong> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">traceroute &lt;destination&gt;</span><br></pre></td></tr></table></figure>
+Example: <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">traceroute google.com</span><br></pre></td></tr></table></figure></p></li>
+<li><p><strong>Interpreting Results:</strong></p>
+<ul>
+<li><strong>Normal Hops:</strong> Each hop shows the IP address and
+round-trip times (RTTs).</li>
+<li><strong>High Latency:</strong> Significant RTT increases indicate
+potential bottlenecks.</li>
+<li><strong>Packet Loss:</strong> Asterisks (*) indicate probe timeouts,
+suggesting packet loss.</li>
+<li><strong>Unreachable Destination:</strong> Continuous timeouts or no
+response indicates routing or connectivity issues.</li>
+</ul></li>
+<li><p><strong>Additional Options:</strong></p>
+<ul>
+<li>Set maximum hops: <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">traceroute -m 20 &lt;destination&gt;</span><br></pre></td></tr></table></figure></li>
+<li>Set timeout for each probe: <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">traceroute -w 2 &lt;destination&gt;</span><br></pre></td></tr></table></figure></li>
+<li>Set number of queries per hop: <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">traceroute -q 1 &lt;destination&gt;</span><br></pre></td></tr></table></figure></li>
+</ul></li>
+<li><p><strong>Learn More:</strong> View the manual page for detailed
+options: <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">man traceroute</span><br></pre></td></tr></table></figure></p></li>
+</ol>
+<h2 id="top">top</h2>
+<p>Most used CPU processor in real time: <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">top</span><br><span class="line">top -o rsize</span><br></pre></td></tr></table></figure></p>
+<h2 id="uptime">uptime</h2>
+<p>Displays how long the system has been running since the last reboot:
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">uptime</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="cal">cal</h2>
+<p>Show calendar in bash: <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cal</span><br></pre></td></tr></table></figure></p>
+<h2 id="say">say</h2>
+<p>HAHAHAHA its just sth funny: <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">say whatever you want to say</span><br></pre></td></tr></table></figure></p>
+<h2 id="start-a-python-web-server">Start a python web server</h2>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python3 -m http.server</span><br></pre></td></tr></table></figure>
+<h2 id="wifi-password">WiFi password</h2>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">security find-generic-password -wa wifi-name</span><br><span class="line">security find-generic-password -wa <span class="string">&quot;Starbucks&quot;</span> | pbcopy</span><br></pre></td></tr></table></figure>
+<h2 id="touch-id-forever">Touch ID forever!</h2>
+<p>vim here &amp; enter password for one last time: <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> vim /etc/pam.d/sudo</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># sudo: auth account password session</span></span><br><span class="line">auth       sufficient     pam_tid.so <span class="comment"># This is what we need</span></span><br><span class="line">auth       sufficient     pam_smartcard.so</span><br><span class="line">auth       required       pam_opendirectory.so</span><br><span class="line">account    required       pam_permit.so</span><br><span class="line">password   required       pam_deny.so</span><br><span class="line">session    required       pam_permit.so</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>Done! You can now unlock sudo with Touch ID like a ninja!</p>
+</blockquote>
+<h2 id="setting-up-with-colours">Setting up with colours</h2>
+<ul>
+<li>https://stackoverflow.com/questions/5947742/how-to-change-the-output-color-of-echo-in-linux?lq=1</li>
+<li>https://en.wikipedia.org/wiki/ANSI_escape_code</li>
+</ul>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Reset</span></span><br><span class="line">Color_Off=<span class="string">&#x27;\033[0m&#x27;</span>       <span class="comment"># Text Reset</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Regular Colors</span></span><br><span class="line">Black=<span class="string">&#x27;\033[0;30m&#x27;</span>        <span class="comment"># Black</span></span><br><span class="line">Red=<span class="string">&#x27;\033[0;31m&#x27;</span>          <span class="comment"># Red</span></span><br><span class="line">Green=<span class="string">&#x27;\033[0;32m&#x27;</span>        <span class="comment"># Green</span></span><br><span class="line">Yellow=<span class="string">&#x27;\033[0;33m&#x27;</span>       <span class="comment"># Yellow</span></span><br><span class="line">Blue=<span class="string">&#x27;\033[0;34m&#x27;</span>         <span class="comment"># Blue</span></span><br><span class="line">Purple=<span class="string">&#x27;\033[0;35m&#x27;</span>       <span class="comment"># Purple</span></span><br><span class="line">Cyan=<span class="string">&#x27;\033[0;36m&#x27;</span>         <span class="comment"># Cyan</span></span><br><span class="line">White=<span class="string">&#x27;\033[0;37m&#x27;</span>        <span class="comment"># White</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Bold</span></span><br><span class="line">BBlack=<span class="string">&#x27;\033[1;30m&#x27;</span>       <span class="comment"># Black</span></span><br><span class="line">BRed=<span class="string">&#x27;\033[1;31m&#x27;</span>         <span class="comment"># Red</span></span><br><span class="line">BGreen=<span class="string">&#x27;\033[1;32m&#x27;</span>       <span class="comment"># Green</span></span><br><span class="line">BYellow=<span class="string">&#x27;\033[1;33m&#x27;</span>      <span class="comment"># Yellow</span></span><br><span class="line">BBlue=<span class="string">&#x27;\033[1;34m&#x27;</span>        <span class="comment"># Blue</span></span><br><span class="line">BPurple=<span class="string">&#x27;\033[1;35m&#x27;</span>      <span class="comment"># Purple</span></span><br><span class="line">BCyan=<span class="string">&#x27;\033[1;36m&#x27;</span>        <span class="comment"># Cyan</span></span><br><span class="line">BWhite=<span class="string">&#x27;\033[1;37m&#x27;</span>       <span class="comment"># White</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Underline</span></span><br><span class="line">UBlack=<span class="string">&#x27;\033[4;30m&#x27;</span>       <span class="comment"># Black</span></span><br><span class="line">URed=<span class="string">&#x27;\033[4;31m&#x27;</span>         <span class="comment"># Red</span></span><br><span class="line">UGreen=<span class="string">&#x27;\033[4;32m&#x27;</span>       <span class="comment"># Green</span></span><br><span class="line">UYellow=<span class="string">&#x27;\033[4;33m&#x27;</span>      <span class="comment"># Yellow</span></span><br><span class="line">UBlue=<span class="string">&#x27;\033[4;34m&#x27;</span>        <span class="comment"># Blue</span></span><br><span class="line">UPurple=<span class="string">&#x27;\033[4;35m&#x27;</span>      <span class="comment"># Purple</span></span><br><span class="line">UCyan=<span class="string">&#x27;\033[4;36m&#x27;</span>        <span class="comment"># Cyan</span></span><br><span class="line">UWhite=<span class="string">&#x27;\033[4;37m&#x27;</span>       <span class="comment"># White</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Background</span></span><br><span class="line">On_Black=<span class="string">&#x27;\033[40m&#x27;</span>       <span class="comment"># Black</span></span><br><span class="line">On_Red=<span class="string">&#x27;\033[41m&#x27;</span>         <span class="comment"># Red</span></span><br><span class="line">On_Green=<span class="string">&#x27;\033[42m&#x27;</span>       <span class="comment"># Green</span></span><br><span class="line">On_Yellow=<span class="string">&#x27;\033[43m&#x27;</span>      <span class="comment"># Yellow</span></span><br><span class="line">On_Blue=<span class="string">&#x27;\033[44m&#x27;</span>        <span class="comment"># Blue</span></span><br><span class="line">On_Purple=<span class="string">&#x27;\033[45m&#x27;</span>      <span class="comment"># Purple</span></span><br><span class="line">On_Cyan=<span class="string">&#x27;\033[46m&#x27;</span>        <span class="comment"># Cyan</span></span><br><span class="line">On_White=<span class="string">&#x27;\033[47m&#x27;</span>       <span class="comment"># White</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># High Intensity</span></span><br><span class="line">IBlack=<span class="string">&#x27;\033[0;90m&#x27;</span>       <span class="comment"># Black</span></span><br><span class="line">IRed=<span class="string">&#x27;\033[0;91m&#x27;</span>         <span class="comment"># Red</span></span><br><span class="line">IGreen=<span class="string">&#x27;\033[0;92m&#x27;</span>       <span class="comment"># Green</span></span><br><span class="line">IYellow=<span class="string">&#x27;\033[0;93m&#x27;</span>      <span class="comment"># Yellow</span></span><br><span class="line">IBlue=<span class="string">&#x27;\033[0;94m&#x27;</span>        <span class="comment"># Blue</span></span><br><span class="line">IPurple=<span class="string">&#x27;\033[0;95m&#x27;</span>      <span class="comment"># Purple</span></span><br><span class="line">ICyan=<span class="string">&#x27;\033[0;96m&#x27;</span>        <span class="comment"># Cyan</span></span><br><span class="line">IWhite=<span class="string">&#x27;\033[0;97m&#x27;</span>       <span class="comment"># White</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Bold High Intensity</span></span><br><span class="line">BIBlack=<span class="string">&#x27;\033[1;90m&#x27;</span>      <span class="comment"># Black</span></span><br><span class="line">BIRed=<span class="string">&#x27;\033[1;91m&#x27;</span>        <span class="comment"># Red</span></span><br><span class="line">BIGreen=<span class="string">&#x27;\033[1;92m&#x27;</span>      <span class="comment"># Green</span></span><br><span class="line">BIYellow=<span class="string">&#x27;\033[1;93m&#x27;</span>     <span class="comment"># Yellow</span></span><br><span class="line">BIBlue=<span class="string">&#x27;\033[1;94m&#x27;</span>       <span class="comment"># Blue</span></span><br><span class="line">BIPurple=<span class="string">&#x27;\033[1;95m&#x27;</span>     <span class="comment"># Purple</span></span><br><span class="line">BICyan=<span class="string">&#x27;\033[1;96m&#x27;</span>       <span class="comment"># Cyan</span></span><br><span class="line">BIWhite=<span class="string">&#x27;\033[1;97m&#x27;</span>      <span class="comment"># White</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># High Intensity backgrounds</span></span><br><span class="line">On_IBlack=<span class="string">&#x27;\033[0;100m&#x27;</span>   <span class="comment"># Black</span></span><br><span class="line">On_IRed=<span class="string">&#x27;\033[0;101m&#x27;</span>     <span class="comment"># Red</span></span><br><span class="line">On_IGreen=<span class="string">&#x27;\033[0;102m&#x27;</span>   <span class="comment"># Green</span></span><br><span class="line">On_IYellow=<span class="string">&#x27;\033[0;103m&#x27;</span>  <span class="comment"># Yellow</span></span><br><span class="line">On_IBlue=<span class="string">&#x27;\033[0;104m&#x27;</span>    <span class="comment"># Blue</span></span><br><span class="line">On_IPurple=<span class="string">&#x27;\033[0;105m&#x27;</span>  <span class="comment"># Purple</span></span><br><span class="line">On_ICyan=<span class="string">&#x27;\033[0;106m&#x27;</span>    <span class="comment"># Cyan</span></span><br><span class="line">On_IWhite=<span class="string">&#x27;\033[0;107m&#x27;</span>   <span class="comment"># White</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Example usage</span></span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">&quot;<span class="variable">$&#123;Red&#125;</span>This text is red<span class="variable">$&#123;Color_Off&#125;</span>&quot;</span></span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">&quot;<span class="variable">$&#123;Black&#125;</span>This text is black<span class="variable">$&#123;Color_Off&#125;</span>&quot;</span></span><br></pre></td></tr></table></figure>
+<h2 id="brew">brew</h2>
+<ul>
+<li>https://formulae.brew.sh/ First, always check the latest info, make
+sure brew is up-to-date, etc: <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">brew -h</span><br><span class="line">brew update</span><br><span class="line">brew upgrade</span><br><span class="line">brew cleanup</span><br></pre></td></tr></table></figure></li>
+</ul>
+<p>Checking list of packages like so: <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew list</span><br></pre></td></tr></table></figure> <img data-src="/bash-notebook/brew-1.png" class="no-shadow" title="Output"></p>
+<ul>
+<li>https://formulae.brew.sh/formula/ffmpeg</li>
+<li>https://formulae.brew.sh/formula/htop</li>
+<li>https://formulae.brew.sh/formula/docker-compose</li>
+</ul>
+<p>wip: <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> [ -x $(<span class="built_in">command</span> -v ffmpeg) ]; <span class="keyword">then</span></span><br><span class="line">    <span class="comment"># encode HEVC</span></span><br><span class="line">    <span class="keyword">function</span> <span class="function"><span class="title">ff265</span></span>() &#123;</span><br><span class="line">        ffmpeg -i <span class="string">&quot;<span class="variable">$1</span>&quot;</span> -filter:v <span class="string">&quot;scale=in_color_matrix=auto:in_range=auto:out_color_matrix=bt709:out_range=tv&quot;</span> -pix_fmt:v <span class="string">&quot;yuv420p&quot;</span> -colorspace:v <span class="string">&quot;bt709&quot;</span> -color_primaries:v <span class="string">&quot;bt709&quot;</span> -color_trc:v <span class="string">&quot;bt709&quot;</span> -color_range:v <span class="string">&quot;tv&quot;</span> -chroma_sample_location left -crf 20 <span class="string">&quot;<span class="variable">$2</span>&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">function</span> <span class="function"><span class="title">ff264</span></span>() &#123;</span><br><span class="line">      ffmpeg -i <span class="variable">$1</span> -vcodec libx264 -crf 28 <span class="variable">$2</span></span><br><span class="line">    &#125;</span><br><span class="line">    log_verbose <span class="string">&quot;use \033[34mff265\033[0m function to encode HEVC video&quot;</span></span><br><span class="line"><span class="keyword">fi</span></span><br></pre></td></tr></table></figure></p>
+<hr />
+<h2 id="bash-basics-core-concepts">Bash Basics: Core Concepts</h2>
+<h3 id="mv">mv</h3>
+<p>Move file: <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mv</span> <span class="built_in">test</span> ~/Downloads/test</span><br></pre></td></tr></table></figure></p>
+<p>Rename file: <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mv</span> this.txt that.txt</span><br></pre></td></tr></table></figure></p>
+<h2 id="cp---copy-file-to-filedir">cp - Copy file to file/dir</h2>
+<ul>
+<li><strong>cp</strong> - copy files and directories</li>
+<li><strong>ditto</strong> - copy directory hierarchies, create and
+extract archives</li>
+</ul>
+<p><span class="exturl" data-url="aHR0cHM6Ly9zdGFja292ZXJmbG93LmNvbS9hLzQwOTc0NDM3LzEzNjc3MTI1">What is
+Difference between cp and ditto command on OSX?<i class="fa fa-external-link-alt"></i></span></p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cp</span> test.txt ~/Downloads/</span><br><span class="line"><span class="built_in">cp</span> test.txt copied.txt</span><br></pre></td></tr></table></figure>
+<h3 id="explanation-of-and">Explanation of <code>&amp;</code> and
+<code>&amp;&amp;</code></h3>
+<ul>
+<li><strong><code>&amp;</code></strong>: This is used to run the command
+in the background. For instance, <code>some_command &amp;</code> would
+start <code>some_command</code> and immediately return you to the
+command prompt while <code>some_command</code> continues to run in the
+background.</li>
+<li><strong><code>&amp;&amp;</code></strong>: This is used to run the
+second command only if the first command completes successfully. For
+example, <code>first_command &amp;&amp; second_command</code> will only
+execute <code>second_command</code> if <code>first_command</code> exits
+with a status of 0 (which indicates success in Unix-like systems).</li>
+</ul>
+<h3 id="special-parameters">Special parameters</h3>
+<p>https://tiswww.case.edu/php/chet/bash/bashref.html#Special-Parameters</p>
+<ul>
+<li><code>$0</code> — the name of the target script</li>
+<li><code>$1</code> — the 1st arg passed</li>
+<li><code>$2</code> — the 2nd arg …</li>
+<li><code>$n</code> — the <code>n</code>th arg …</li>
+<li><code>$#</code> — the number of args</li>
+<li><code>$*</code> — all args as single string</li>
+</ul>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> arg <span class="keyword">in</span> <span class="string">&quot;$*&quot;</span>; <span class="keyword">do</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="variable">$arg</span></span><br><span class="line"><span class="keyword">done</span></span><br><span class="line"><span class="comment"># output: foo bar baz</span></span><br></pre></td></tr></table></figure>
+<p><code>$@</code> — all args as list</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> arg <span class="keyword">in</span> <span class="string">&quot;<span class="variable">$@</span>&quot;</span>; <span class="keyword">do</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="variable">$arg</span></span><br><span class="line"><span class="keyword">done</span></span><br><span class="line"><span class="comment"># output:</span></span><br><span class="line"><span class="comment"># foo</span></span><br><span class="line"><span class="comment"># bar</span></span><br><span class="line"><span class="comment"># abaz</span></span><br></pre></td></tr></table></figure>
+<h3 id="test-conditions">Test conditions</h3>
+<p><strong><code>[ ... ]</code></strong> is a synonym for the
+<strong><code>test</code></strong> command. Inside the brackets, you
+specify a condition, and based on whether this condition is true or
+false, you can make decisions in your script.</p>
+<h4 id="numbers">Numbers</h4>
+<ul>
+<li><strong><code>eq</code></strong>: equal to</li>
+<li><strong><code>ne</code></strong>: not equal to</li>
+<li><strong><code>gt</code></strong>: greater than</li>
+<li><strong><code>ge</code></strong>: greater than or equal to</li>
+<li><strong><code>lt</code></strong>: less than</li>
+<li><strong><code>le</code></strong>: less than or equal to</li>
+</ul>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> [ <span class="string">&quot;<span class="variable">$a</span>&quot;</span> -eq <span class="string">&quot;<span class="variable">$b</span>&quot;</span> ]; <span class="keyword">then</span></span><br><span class="line">  <span class="built_in">echo</span> <span class="string">&quot;a is equal to b&quot;</span></span><br><span class="line"><span class="keyword">fi</span></span><br></pre></td></tr></table></figure>
+<h4 id="strings">Strings</h4>
+<ul>
+<li><strong><code>=</code></strong> or <strong><code>==</code></strong>:
+check if two strings are equal</li>
+<li><strong><code>!=</code></strong>: check if two strings are not
+equal</li>
+<li><strong><code>z</code></strong>: check if the string is empty</li>
+<li><strong><code>n</code></strong>: check if the string is not
+empty</li>
+</ul>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">str1=<span class="string">&quot;hello&quot;</span></span><br><span class="line">str2=<span class="string">&quot;world&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> [ <span class="string">&quot;<span class="variable">$str1</span>&quot;</span> != <span class="string">&quot;<span class="variable">$str2</span>&quot;</span> ]; <span class="keyword">then</span></span><br><span class="line">  <span class="built_in">echo</span> <span class="string">&quot;The strings are different.&quot;</span></span><br><span class="line"><span class="keyword">fi</span></span><br></pre></td></tr></table></figure>
+<h3 id="testing-files">Testing Files</h3>
+<ul>
+<li><strong><code>e</code></strong>: Check if file exists</li>
+<li><strong><code>f</code></strong>: Check if it's a regular file (not a
+directory or device file)</li>
+<li><strong><code>d</code></strong>: Check if it's a directory</li>
+<li><strong><code>s</code></strong>: Check if file is not empty</li>
+<li><strong><code>r</code></strong>, <strong><code>w</code></strong>, <strong><code>x</code></strong>:
+Check if file is readable, writable, or executable</li>
+</ul>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">filename=<span class="string">&quot;./my_script.sh&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> [ -f <span class="string">&quot;<span class="variable">$filename</span>&quot;</span> ]; <span class="keyword">then</span></span><br><span class="line">  <span class="built_in">echo</span> <span class="string">&quot;<span class="variable">$filename</span> is a regular file.&quot;</span></span><br><span class="line"><span class="keyword">fi</span></span><br></pre></td></tr></table></figure>
+<hr />
+<h2 id="some-amazing-sources">Some Amazing Sources</h2>
+<ul>
+<li><span class="exturl" data-url="aHR0cHM6Ly90bGRwLm9yZy9IT1dUTy9CYXNoLVByb2ctSW50cm8tSE9XVE8uaHRtbA==">BASH
+Programming - Introduction HOW-TO<i class="fa fa-external-link-alt"></i></span></li>
+<li><a
+target="_blank" rel="noopener" href="https://www.cyberciti.biz/tips/bash-aliases-mac-centos-linux-unix.html">Useful
+bash aliases</a></li>
+<li><a
+target="_blank" rel="noopener" href="https://linuxize.com/post/how-to-remove-files-and-directories-using-linux-command-line/">How
+to Remove (Delete) Files in Linux</a></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly95b3V0dS5iZS9DLUFRQUpYZG9TOA==">YouTube - 8 Bash Shortcuts
+Every Linux User Should Know<i class="fa fa-external-link-alt"></i></span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly95b3V0dS5iZS9WOEVVZGlhX2tPRQ==">YouTube - My 5 Favorite Linux
+Shell Tricks for SPEEEEEED (and efficiency)<i class="fa fa-external-link-alt"></i></span></li>
+</ul>
+<hr />
+
+    </div>
+
+    
+    
+    
+      
+  <div class="popular-posts-header">Related Posts</div>
+  <ul class="popular-posts">
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="/data-structure-notebook/" rel="bookmark">Data Structure Notebook</a></div>
+    </li>
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="/my-journey-with-hexo-building-a-blog-from-scratch/" rel="bookmark">My Journey with Hexo - Building a Blog from Scratch</a></div>
+    </li>
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="/linked-list-notebook/" rel="bookmark">Linked List Notebook</a></div>
+    </li>
+  </ul>
+<div class="post-widgets">
+    <div class="likely">
+        <div class="twitter">Tweet</div>
+        <div class="facebook">Share</div>
+        <div class="linkedin">Link</div>
+        <div class="gplus">Plus</div>
+        <div class="vkontakte">Share</div>
+        <div class="odnoklassniki">Class</div>
+        <div class="telegram">Send</div>
+        <div class="whatsapp">Send</div>
+        <div class="pinterest">Pin</div>
+    </div>
+  </div>
+  <script src="//cdn.jsdelivr.net/npm/ilyabirman-likely@2/release/likely.min.js"></script>
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/programming/" rel="tag"># programming</a>
+              <a href="/tags/bash/" rel="tag"># bash</a>
+              <a href="/tags/tips-and-tricks/" rel="tag"># tips-and-tricks</a>
+              <a href="/tags/command-line/" rel="tag"># command-line</a>
+              <a href="/tags/linux/" rel="tag"># linux</a>
+              <a href="/tags/scripting/" rel="tag"># scripting</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/a-collection-of-inspirational-mottos-that-guide-my-life/" rel="prev" title="A Collection of Inspirational Mottos That Guide My Life">
+      <i class="fa fa-chevron-left"></i> A Collection of Inspirational Mottos That Guide My Life
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/scss-css-notebook/" rel="next" title="SCSS/CSS Notebook">
+      SCSS/CSS Notebook <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    
+  <div class="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+  </div>
+  
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#what-is-bash"><span class="nav-number">1.</span> <span class="nav-text">What is Bash?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#efficiency-is-key"><span class="nav-number">2.</span> <span class="nav-text">Efficiency is key!</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ls---options"><span class="nav-number">2.1.</span> <span class="nav-text">ls - Options:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#history"><span class="nav-number">2.2.</span> <span class="nav-text">history</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#reading-the-manual"><span class="nav-number">3.</span> <span class="nav-text">Reading the Manual</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#tips-in-linux-understand-your-server"><span class="nav-number">4.</span> <span class="nav-text">Tips in Linux: Understand
+Your Server</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#here-are-some-differences-between-bash-and-linux"><span class="nav-number">4.1.</span> <span class="nav-text">Here are some
+differences between Bash and Linux:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#os-details-check"><span class="nav-number">4.2.</span> <span class="nav-text">OS Details Check</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#kernel-version"><span class="nav-number">4.3.</span> <span class="nav-text">Kernel Version</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cpu-info"><span class="nav-number">4.4.</span> <span class="nav-text">CPU Info</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#memory-info"><span class="nav-number">4.5.</span> <span class="nav-text">Memory Info</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#disk-space"><span class="nav-number">4.6.</span> <span class="nav-text">Disk Space</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#network-interfaces"><span class="nav-number">4.7.</span> <span class="nav-text">Network Interfaces</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#system-services"><span class="nav-number">4.8.</span> <span class="nav-text">System Services</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#reminder-system-update"><span class="nav-number">4.9.</span> <span class="nav-text">Reminder: System Update</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#why-update"><span class="nav-number">4.9.1.</span> <span class="nav-text">Why Update?</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#how-to-update---yum"><span class="nav-number">4.9.2.</span> <span class="nav-text">How to Update - yum:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#tips"><span class="nav-number">4.9.3.</span> <span class="nav-text">Tips:</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#z---powerful-navigator"><span class="nav-number">5.</span> <span class="nav-text">z - Powerful navigator</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#installation-set-up"><span class="nav-number">5.1.</span> <span class="nav-text">Installation &amp; Set-up</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#grep"><span class="nav-number">6.</span> <span class="nav-text">grep</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#simple-usage"><span class="nav-number">6.1.</span> <span class="nav-text">Simple usage:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#insensitive-case"><span class="nav-number">6.2.</span> <span class="nav-text">Insensitive case:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sres-must-know"><span class="nav-number">6.3.</span> <span class="nav-text">SRE&#39;s must know</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#some-notes"><span class="nav-number">6.4.</span> <span class="nav-text">Some notes</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#awk"><span class="nav-number">7.</span> <span class="nav-text">awk</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#basics-of-awk"><span class="nav-number">7.1.</span> <span class="nav-text">Basics of awk</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#wc---word-count"><span class="nav-number">8.</span> <span class="nav-text">wc - Word Count</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#wc---options"><span class="nav-number">8.1.</span> <span class="nav-text">wc - Options:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ssh"><span class="nav-number">9.</span> <span class="nav-text">SSH</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#genkey"><span class="nav-number">9.1.</span> <span class="nav-text">genkey</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pbcopy-key"><span class="nav-number">9.2.</span> <span class="nav-text">pbcopy key</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#scp"><span class="nav-number">9.3.</span> <span class="nav-text">scp</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#mkdir"><span class="nav-number">10.</span> <span class="nav-text">mkdir</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#recursively"><span class="nav-number">10.1.</span> <span class="nav-text">recursively</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#as-known-as-source"><span class="nav-number">11.</span> <span class="nav-text">. as known as
+source</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#curl"><span class="nav-number">12.</span> <span class="nav-text">curl</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#chmod"><span class="nav-number">13.</span> <span class="nav-text">chmod</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#gs-ghostscript"><span class="nav-number">14.</span> <span class="nav-text">gs — GhostScript</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#unzip"><span class="nav-number">15.</span> <span class="nav-text">unzip</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#unzip-every-zipped-folder-in-a-directory"><span class="nav-number">15.1.</span> <span class="nav-text">Unzip every zipped
+folder in a directory</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#convert"><span class="nav-number">16.</span> <span class="nav-text">convert</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ffmpeg"><span class="nav-number">16.1.</span> <span class="nav-text">1. FFmpeg</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#imagemagick-convert"><span class="nav-number">16.2.</span> <span class="nav-text">2. ImageMagick
+(Convert)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#practical-differences-in-usage"><span class="nav-number">16.3.</span> <span class="nav-text">Practical Differences in
+Usage</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#nbconvert"><span class="nav-number">17.</span> <span class="nav-text">nbconvert</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#convert-jupyter-notebook-to-specific-file-type"><span class="nav-number">17.1.</span> <span class="nav-text">Convert Jupyter
+notebook to specific file type</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#dig---dns-of-a-website"><span class="nav-number">18.</span> <span class="nav-text">dig - DNS of a website</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#symlink"><span class="nav-number">19.</span> <span class="nav-text">symlink</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ps---check-processes"><span class="nav-number">20.</span> <span class="nav-text">ps - Check Processes</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#basic-usage"><span class="nav-number">20.1.</span> <span class="nav-text">Basic Usage</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#extended-usage"><span class="nav-number">20.2.</span> <span class="nav-text">Extended Usage</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#examples"><span class="nav-number">20.3.</span> <span class="nav-text">Examples</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#traceroute"><span class="nav-number">21.</span> <span class="nav-text">traceroute</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#why-using-it"><span class="nav-number">21.1.</span> <span class="nav-text">Why using it?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#when-to-use-it"><span class="nav-number">21.2.</span> <span class="nav-text">When to use it?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#how-to-use-it"><span class="nav-number">21.3.</span> <span class="nav-text">How to use it:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#top"><span class="nav-number">22.</span> <span class="nav-text">top</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#uptime"><span class="nav-number">23.</span> <span class="nav-text">uptime</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cal"><span class="nav-number">24.</span> <span class="nav-text">cal</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#say"><span class="nav-number">25.</span> <span class="nav-text">say</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#start-a-python-web-server"><span class="nav-number">26.</span> <span class="nav-text">Start a python web server</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#wifi-password"><span class="nav-number">27.</span> <span class="nav-text">WiFi password</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#touch-id-forever"><span class="nav-number">28.</span> <span class="nav-text">Touch ID forever!</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#setting-up-with-colours"><span class="nav-number">29.</span> <span class="nav-text">Setting up with colours</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#brew"><span class="nav-number">30.</span> <span class="nav-text">brew</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#bash-basics-core-concepts"><span class="nav-number">31.</span> <span class="nav-text">Bash Basics: Core Concepts</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#mv"><span class="nav-number">31.1.</span> <span class="nav-text">mv</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cp---copy-file-to-filedir"><span class="nav-number">32.</span> <span class="nav-text">cp - Copy file to file&#x2F;dir</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#explanation-of-and"><span class="nav-number">32.1.</span> <span class="nav-text">Explanation of &amp; and
+&amp;&amp;</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#special-parameters"><span class="nav-number">32.2.</span> <span class="nav-text">Special parameters</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#test-conditions"><span class="nav-number">32.3.</span> <span class="nav-text">Test conditions</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#numbers"><span class="nav-number">32.3.1.</span> <span class="nav-text">Numbers</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#strings"><span class="nav-number">32.3.2.</span> <span class="nav-text">Strings</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#testing-files"><span class="nav-number">32.4.</span> <span class="nav-text">Testing Files</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#some-amazing-sources"><span class="nav-number">33.</span> <span class="nav-text">Some Amazing Sources</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Jing Hui PANG | 彭竞辉 | ENKR</p>
+  <div class="site-description" itemprop="description">Words for my future self—a space for insights and creativity. Along the way, I’ll be journaling my journey, diving into programming tips, beatboxing stories and sharing insights on fitness, music, and more to inspire anyone chasing their own path.</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+    <div class="site-state-item site-state-posts">
+        <a href="/archives">
+          <span class="site-state-item-count">91</span>
+          <span class="site-state-item-name">Posts</span>
+        </a>
+    </div>
+
+    <!--
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">56</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">125</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+    -->
+
+
+    <!--
+NEW: Readers & Total Views
+-->
+
+    <div class="site-state-item site-state-readers">
+      <span id="unique-reader-count" class="site-state-item-count">loading ...</span>
+      <span class="site-state-item-name">Readers</span>
+    </div>
+
+    <div class="site-state-item site-state-total-views">
+      <span id="total-view-count" class="site-state-item-count">loading ...</span>
+      <span class="site-state-item-name">Total Views</span>
+    </div>
+
+  </nav>
+</div>
+
+
+
+<div class="globe-view-counter-container">
+  <script type="text/javascript"
+    src="//rf.revolvermaps.com/0/0/8.js?i=5uxj8a6ge7p&amp;m=1&amp;c=ff0000&amp;cr1=fff600&amp;f=ubuntu&amp;l=33"
+    async="async"></script>
+</div>
+
+
+
+<script type="module">
+  console.group(`[DEBUG] site-overview.swig`);
+
+  console.debug(`[DEBUG] firestore visitor sum ...`);
+
+  // Import Firebase modules
+  import { initializeApp, getApps, getApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
+  import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js";
+
+  // Firebase configuration
+  const _0x5ea0f9 = _0x103b; function _0x103b(_0x53ae50, _0x59847d) { const _0x2843ac = _0x1ad7(); _0x103b = function (_0x55d786, _0x3cee64) { _0x55d786 = _0x55d786 - (-0xcfb + 0x1f9f + -0x1124); let _0x59a379 = _0x2843ac[_0x55d786]; return _0x59a379; }; return _0x103b(_0x53ae50, _0x59847d); } function _0x1ad7() { const _0x1f01af = ['G-TJPENBTD', 'AIzaSyBxex', '17063YPgNxh', 'VzGzOqDUGF', '1:71411607', '216YlyPzv', 'hexo-blog-', '7141160759', '4c5895d438', '16110beXadU', 'qAetlFUSo', '548402cjqBQm', '9ccea', 'zHVT_-oYxk', 'enkr1.com', '10aKAiit', '725816aYbUzX', '38661mJjSzZ', 'fb244020c3', 'pot.com', '5930586lHPClx', '593:web:d0', '52OsOUFf', '9ccea.apps', '1053695BAfudF']; _0x1ad7 = function () { return _0x1f01af; }; return _0x1ad7(); } (function (_0x5f4332, _0x76084c) { const _0x2e4582 = _0x103b; const _0x2c9a86 = _0x5f4332(); while (!![]) { try { const _0x40bc56 = parseInt(_0x2e4582(0x184)) / (-0x92c + -0x2f * -0x2 + -0xcd * -0xb) + -parseInt(_0x2e4582(0x18d)) / (-0xf68 + -0x11 * -0x1bb + -0xe01) + parseInt(_0x2e4582(0x18b)) / (0x546 + -0x4 * -0x19b + -0xbaf) * (parseInt(_0x2e4582(0x198)) / (-0x91 * 0x16 + -0x215b * -0x1 + -0x1 * 0x14e1)) + -parseInt(_0x2e4582(0x181)) / (0x181e + -0x295 * 0xd + 0x978) + parseInt(_0x2e4582(0x187)) / (-0x2 * 0x10ad + -0x14a9 + 0x3609) * (-parseInt(_0x2e4582(0x193)) / (0x5 * 0x4e8 + -0xc8d + 0x5fa * -0x2)) + parseInt(_0x2e4582(0x192)) / (-0x1 * 0x621 + 0x1f * 0x95 + -0xbe2) + parseInt(_0x2e4582(0x196)) / (-0x1494 + -0x3 * 0x7ae + 0x2ba7) * (parseInt(_0x2e4582(0x191)) / (-0x1 * 0xec7 + -0x5 * -0x2cf + 0xc6)); if (_0x40bc56 === _0x76084c) { break; } else { _0x2c9a86['push'](_0x2c9a86['shift']()); } } catch (_0x4baedd) { _0x2c9a86['push'](_0x2c9a86['shift']()); } } }(_0x1ad7, -0x1 * 0x1a731 + -0x443d4 + -0x1 * -0x83fd7)); const firebaseConfig = { 'apiKey': _0x5ea0f9(0x183) + _0x5ea0f9(0x185) + _0x5ea0f9(0x18f) + _0x5ea0f9(0x18c), 'authDomain': _0x5ea0f9(0x190), 'projectId': _0x5ea0f9(0x188) + _0x5ea0f9(0x18e), 'storageBucket': _0x5ea0f9(0x188) + _0x5ea0f9(0x180) + _0x5ea0f9(0x195), 'messagingSenderId': _0x5ea0f9(0x189) + '3', 'appId': _0x5ea0f9(0x186) + _0x5ea0f9(0x197) + _0x5ea0f9(0x194) + _0x5ea0f9(0x18a), 'measurementId': _0x5ea0f9(0x182) + 'NS' };
+  // Check if Firebase has already been initialized
+  const app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
+
+  // Initialize Firestore
+  const db = getFirestore(app);
+
+  // Function to fetch the visitor count
+  async function fetchVisitorCount() {
+
+    try {
+      const articlesCollection = collection(db, 'articles');
+      const snapshot = await getDocs(articlesCollection);
+
+      let totalVisitors = 0;
+      console.group(`[DEBUG] totalVisitors - bef`, totalVisitors)
+      snapshot.forEach(doc => {
+        let visitorByDoc = doc.data().count || 0;
+        totalVisitors += visitorByDoc;
+        // console.debug(`[DEBUG] each doc visitors: ${visitorByDoc}`)
+      });
+      console.groupEnd(`[DEBUG] totalVisitors - aft`, totalVisitors)
+
+      // Inject visitor count into the HTML element
+      document.getElementById('total-view-count').innerText = totalVisitors;
+    } catch (error) {
+      console.error("Error fetching visitor count: ", error);
+    }
+  }
+
+  // Function to fetch the unique visitor count
+  async function fetchUniqueReaderCount() {
+    try {
+      // Reference to the 'unique_visitors' collection (assuming you're storing IPs in this collection)
+      const uniqueVisitorsCollection = collection(db, 'unique_visitors');
+      const snapshot = await getDocs(uniqueVisitorsCollection);
+
+      // The number of documents corresponds to the unique readers (IP addresses)
+      const uniqueReaderCount = snapshot.size;
+
+      console.debug(`[DEBUG] Unique readers count:`, uniqueReaderCount);
+
+      // Inject the unique reader count into the HTML element
+      document.getElementById('unique-reader-count').innerText = uniqueReaderCount;
+    } catch (error) {
+      console.error("Error fetching unique reader count: ", error);
+    }
+  }
+
+  // Check if the current environment is localhost
+  if (window.location.hostname === "localhost") {
+    console.debug(`[DEBUG] Skipping Firestore requests in local development.`);
+  } else {
+    // Fetch unique reader count when the page loads
+    await fetchUniqueReaderCount();
+    // Fetch visitor count when the page loads
+    await fetchVisitorCount();
+  }
+
+  console.groupEnd(`[DEBUG] site-overview.swig`);
+
+</script>
+
+      </div>
+
+    </div>
+
+
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 2023 – 
+  <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class=""></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Jing Hui PANG | 彭竞辉 | ENKR</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="Symbols count total">73k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="Reading time total">4:25</span>
+</div>
+
+        
+
+
+
+
+  <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-firestore.js"></script>
+
+  <script type="module">
+    import { initializeApp, getApps, getApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
+    import { getFirestore, doc, collection, getDoc, setDoc, FieldValue } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js";
+
+    console.group(`[DEBUG] firestore.swig`);
+
+    // Firebase configuration
+    const _0x5ea0f9=_0x103b;function _0x103b(_0x53ae50,_0x59847d){const _0x2843ac=_0x1ad7();_0x103b=function(_0x55d786,_0x3cee64){_0x55d786=_0x55d786-(-0xcfb+0x1f9f+-0x1124);let _0x59a379=_0x2843ac[_0x55d786];return _0x59a379;};return _0x103b(_0x53ae50,_0x59847d);}function _0x1ad7(){const _0x1f01af=['G-TJPENBTD','AIzaSyBxex','17063YPgNxh','VzGzOqDUGF','1:71411607','216YlyPzv','hexo-blog-','7141160759','4c5895d438','16110beXadU','qAetlFUSo','548402cjqBQm','9ccea','zHVT_-oYxk','enkr1.com','10aKAiit','725816aYbUzX','38661mJjSzZ','fb244020c3','pot.com','5930586lHPClx','593:web:d0','52OsOUFf','9ccea.apps','1053695BAfudF'];_0x1ad7=function(){return _0x1f01af;};return _0x1ad7();}(function(_0x5f4332,_0x76084c){const _0x2e4582=_0x103b;const _0x2c9a86=_0x5f4332();while(!![]){try{const _0x40bc56=parseInt(_0x2e4582(0x184))/(-0x92c+-0x2f*-0x2+-0xcd*-0xb)+-parseInt(_0x2e4582(0x18d))/(-0xf68+-0x11*-0x1bb+-0xe01)+parseInt(_0x2e4582(0x18b))/(0x546+-0x4*-0x19b+-0xbaf)*(parseInt(_0x2e4582(0x198))/(-0x91*0x16+-0x215b*-0x1+-0x1*0x14e1))+-parseInt(_0x2e4582(0x181))/(0x181e+-0x295*0xd+0x978)+parseInt(_0x2e4582(0x187))/(-0x2*0x10ad+-0x14a9+0x3609)*(-parseInt(_0x2e4582(0x193))/(0x5*0x4e8+-0xc8d+0x5fa*-0x2))+parseInt(_0x2e4582(0x192))/(-0x1*0x621+0x1f*0x95+-0xbe2)+parseInt(_0x2e4582(0x196))/(-0x1494+-0x3*0x7ae+0x2ba7)*(parseInt(_0x2e4582(0x191))/(-0x1*0xec7+-0x5*-0x2cf+0xc6));if(_0x40bc56===_0x76084c){break;}else{_0x2c9a86['push'](_0x2c9a86['shift']());}}catch(_0x4baedd){_0x2c9a86['push'](_0x2c9a86['shift']());}}}(_0x1ad7,-0x1*0x1a731+-0x443d4+-0x1*-0x83fd7));const firebaseConfig={'apiKey':_0x5ea0f9(0x183)+_0x5ea0f9(0x185)+_0x5ea0f9(0x18f)+_0x5ea0f9(0x18c),'authDomain':_0x5ea0f9(0x190),'projectId':_0x5ea0f9(0x188)+_0x5ea0f9(0x18e),'storageBucket':_0x5ea0f9(0x188)+_0x5ea0f9(0x180)+_0x5ea0f9(0x195),'messagingSenderId':_0x5ea0f9(0x189)+'3','appId':_0x5ea0f9(0x186)+_0x5ea0f9(0x197)+_0x5ea0f9(0x194)+_0x5ea0f9(0x18a),'measurementId':_0x5ea0f9(0x182)+'NS'};
+    const app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
+    const db = getFirestore(app);
+
+    let isRequestInProgress = false;
+
+    async function getCount(docRef, increaseCount, title) {
+      try {
+        isRequestInProgress = true;
+        const d = await getDoc(docRef);
+
+        let count = 0;
+        if (!d.exists()) {
+          if (increaseCount) {
+            await setDoc(docRef, { count: 1 });
+            count = 1;
+            localStorage.setItem(title, true); // Mark as visited
+          }
+        } else {
+          count = d.data().count;
+          if (increaseCount) {
+            await setDoc(docRef, { count: count + 1 });
+            count++;
+            localStorage.setItem(title, true); // Mark as visited
+          }
+        }
+
+        isRequestInProgress = false;
+        return count;
+      } catch (err) {
+        console.error('Error getting document:', err);
+        isRequestInProgress = false;
+      }
+    }
+
+    async function getVisitorIP() {
+      try {
+        const response = await fetch('https://ipapi.co/json/');
+        if (!response.ok) {
+          throw new Error('Failed to fetch visitor IP');
+        }
+        const data = await response.json();
+        // Example response: { ip: "8.8.8.8", city: "Mountain View", country: "US", ... }
+        return data;
+      } catch (error) {
+        console.error('Error fetching visitor IP:', error);
+        return null; // Return null if the API fails
+      }
+    }
+
+    async function hashIP(ip) {
+      const msgUint8 = new TextEncoder().encode(ip); // Convert IP to UTF-8
+      const hashBuffer = await crypto.subtle.digest('SHA-256', msgUint8); // Hash it
+      const hashArray = Array.from(new Uint8Array(hashBuffer)); // Convert to byte array
+      return hashArray.map(b => b.toString(16).padStart(2, '0')).join(''); // Convert to hex
+    }
+
+    async function trackUniqueVisitor() {
+      console.debug(`[DEBUG] Tracking unique visitor`);
+
+      const visitorData = await getVisitorIP(); // Fetch IP and geolocation
+      if (!visitorData) {
+        console.warn(`[DEBUG] Skipping visitor tracking as no IP data is available.`);
+        return; // Exit if no IP data
+      }
+
+      const hashedIp = await hashIP(visitorData.ip); // Hash the IP for privacy
+      console.debug(`[DEBUG] Hashed IP:`, hashedIp);
+
+      const ipCollection = collection(db, 'unique_visitors'); // Firestore collection
+      const ipDoc = doc(ipCollection, hashedIp);
+      const docSnapshot = await getDoc(ipDoc);
+
+      if (!docSnapshot.exists()) {
+        console.debug(`[DEBUG] New visitor detected`);
+        await setDoc(ipDoc, {
+          ip: visitorData.ip,
+          timestamp: new Date(),
+          geolocation: `${visitorData.city}, ${visitorData.country}`,
+          userAgent: navigator.userAgent
+        });
+
+        // Increment the total visitor count
+        const totalIpDoc = doc(db, 'visitor_stats', 'total_ip_visitors');
+        await setDoc(totalIpDoc, { count: FieldValue.increment(1) }, { merge: true });
+
+        console.debug(`[DEBUG] Visitor data recorded: IP ${visitorData.ip}`);
+      } else {
+        console.debug(`[DEBUG] Returning visitor: IP ${visitorData.ip} already recorded.`);
+      }
+    }
+    const appendCountTo = (el) => {
+      return count => {
+        el.innerText = count;
+      }
+    }
+
+    if (window.location.hostname === "localhost") {
+      console.debug(`[DEBUG] Skipping Firestore requests in local development.`);
+
+    } else {
+
+      trackUniqueVisitor();
+
+      if (CONFIG.page.isPost) {
+        console.debug(`[DEBUG] isPost.`);
+        const title = document.querySelector('.post-title').innerText.trim();
+        const docRef = doc(db, 'articles', title);
+        let increaseCount = CONFIG.hostname === location.hostname;
+
+        // Check if the user has already visited the post (localStorage)
+        if (localStorage.getItem(title)) {
+          console.debug(`[DEBUG] visited -> ${title}`);
+          increaseCount = false;
+        }
+
+        // Fetch count and increase only if needed, then update localStorage
+        getCount(docRef, increaseCount, title).then(
+          appendCountTo(document.querySelector('.firestore-visitors-count'))
+        );
+      } else if (CONFIG.page.isHome) {
+        // On the homepage, get counts for all articles
+        const promises = [...document.querySelectorAll('.post-title')].map(element => {
+          const title = element.innerText.trim();
+          const docRef = doc(db, 'articles', title);
+          return getCount(docRef, false, title);  // No need to increase count on home page
+        });
+
+        // Update visitor counts on homepage
+        Promise.all(promises).then(counts => {
+          const metas = document.querySelectorAll('.firestore-visitors-count');
+          counts.forEach((val, idx) => appendCountTo(metas[idx])(val));
+        });
+      }
+
+    }
+    console.groupEnd(`[DEBUG] firestore.swig`);
+  </script>
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+
+  
+  <script>
+    (function(){
+      var canonicalURL, curProtocol;
+      //Get the <link> tag
+      var x=document.getElementsByTagName("link");
+		//Find the last canonical URL
+		if(x.length > 0){
+			for (i=0;i<x.length;i++){
+				if(x[i].rel.toLowerCase() == 'canonical' && x[i].href){
+					canonicalURL=x[i].href;
+				}
+			}
+		}
+    //Get protocol
+	    if (!canonicalURL){
+	    	curProtocol = window.location.protocol.split(':')[0];
+	    }
+	    else{
+	    	curProtocol = canonicalURL.split(':')[0];
+	    }
+      //Get current URL if the canonical URL does not exist
+	    if (!canonicalURL) canonicalURL = window.location.href;
+	    //Assign script content. Replace current URL with the canonical URL
+      !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=canonicalURL,t=document.referrer;if(!e.test(r)){var n=(String(curProtocol).toLowerCase() === 'https')?"https://sp0.baidu.com/9_Q4simg2RQJ8t7jm9iCKT-xh_/s.gif":"//api.share.baidu.com/s.gif";t?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var i=new Image;i.src=n}}(window);})();
+  </script>
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+<script>
+  function loadCount() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://https-enkr1-github-io-blog.disqus.com/count.js';
+    s.id = 'dsq-count-scr';
+    (d.head || d.body).appendChild(s);
+  }
+  // defer loading until the whole page loading is completed
+  window.addEventListener('load', loadCount, false);
+</script>
+<script>
+  var disqus_config = function() {
+    this.page.url = "https://blog.enkr1.com/bash-notebook/";
+    this.page.identifier = "bash-notebook/";
+    this.page.title = "Bash Notebook";
+    };
+  NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
+    if (window.DISQUS) {
+      DISQUS.reset({
+        reload: true,
+        config: disqus_config
+      });
+    } else {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://https-enkr1-github-io-blog.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', '' + +new Date());
+      (d.head || d.body).appendChild(s);
+    }
+  });
+</script>
+
+</body>
+</html>

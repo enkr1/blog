@@ -1,0 +1,758 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>ENKR&#39;s Blog | Jing Hui PANG</title>
+  
+  <subtitle>Where code meets creativity.</subtitle>
+  <link href="https://blog.enkr1.com/atom.xml" rel="self"/>
+  
+  <link href="https://blog.enkr1.com/"/>
+  <updated>2025-01-23T19:29:19.657Z</updated>
+  <id>https://blog.enkr1.com/</id>
+  
+  <author>
+    <name>Jing Hui PANG | 彭竞辉 | ENKR</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Journal: Week 22</title>
+    <link href="https://blog.enkr1.com/journal-week-22/"/>
+    <id>https://blog.enkr1.com/journal-week-22/</id>
+    <published>2025-01-19T19:04:07.000Z</published>
+    <updated>2025-01-23T19:29:19.657Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="highlights-of-the-week">Highlights of the Week</h2><p>i haven't been so busy for quite a while, damn, it was such aproductive week! a few nights, i stayed up alone in the office, pouringin some extra effort just to complete things. one of the biggestaccomplishments was finishing my self-review for 2024. writing downreflections on each project i worked on really made me pause and thinkdeeply.</p><p>while writing my self-review on key outputs, i realised how much i'veparticipated in, but at the same time, i can't help but feel like icould have done more. it wasn't about slacking off, but how some tasksseemed almost too easy compared to my past experiences. don't get mewrong though—what i mean by "easy" is that it was less challenging interms of technical knowledge.</p><p>thinking back to project H (let's keep it hashed forconfidentiality), i remember how overwhelming it was at the start. therequirements were straightforward when i look at them now, but backthen? oh boy, it was another story entirely. the business chinesejargon? it felt like my brain hit a complete blank.</p><p>as someone raised in malaysia, speaking chinese, switching to malayin secondary school, and then studying in singapore for three yearsbefore settling here for over seven... let's just say my language systemgot a serious workout. juggling those languages while trying to graspthe project requirements? yeah, it was intense. i felt so out of mydepth.</p><p>when i look back at it now, (yes, i'm smiling 🥹), jinghui, you’vecome so far. you did so well! even those late nights staying up until4am, panicking about whether you'd make the deadline... you still madeit. all the mistakes you made during each project? they're the reasonyou are where you are today.</p><p>that realisation hit me deeply this week. it's moments like thesethat remind me of why i push myself—to grow, to overcome, and to keepbuilding my confidence.</p><span id="more"></span><h2 id="memories">Memories</h2><blockquote><p>my note: after keeping my photos here i will be deleting most of themon my phone teeheee</p></blockquote>]]></content>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;highlights-of-the-week&quot;&gt;Highlights of the Week&lt;/h2&gt;
+&lt;p&gt;i haven&#39;t been so busy for quite a while, damn, it was such a
+productive week! a few nights, i stayed up alone in the office, pouring
+in some extra effort just to complete things. one of the biggest
+accomplishments was finishing my self-review for 2024. writing down
+reflections on each project i worked on really made me pause and think
+deeply.&lt;/p&gt;
+&lt;p&gt;while writing my self-review on key outputs, i realised how much i&#39;ve
+participated in, but at the same time, i can&#39;t help but feel like i
+could have done more. it wasn&#39;t about slacking off, but how some tasks
+seemed almost too easy compared to my past experiences. don&#39;t get me
+wrong though—what i mean by &quot;easy&quot; is that it was less challenging in
+terms of technical knowledge.&lt;/p&gt;
+&lt;p&gt;thinking back to project H (let&#39;s keep it hashed for
+confidentiality), i remember how overwhelming it was at the start. the
+requirements were straightforward when i look at them now, but back
+then? oh boy, it was another story entirely. the business chinese
+jargon? it felt like my brain hit a complete blank.&lt;/p&gt;
+&lt;p&gt;as someone raised in malaysia, speaking chinese, switching to malay
+in secondary school, and then studying in singapore for three years
+before settling here for over seven... let&#39;s just say my language system
+got a serious workout. juggling those languages while trying to grasp
+the project requirements? yeah, it was intense. i felt so out of my
+depth.&lt;/p&gt;
+&lt;p&gt;when i look back at it now, (yes, i&#39;m smiling 🥹), jinghui, you’ve
+come so far. you did so well! even those late nights staying up until
+4am, panicking about whether you&#39;d make the deadline... you still made
+it. all the mistakes you made during each project? they&#39;re the reason
+you are where you are today.&lt;/p&gt;
+&lt;p&gt;that realisation hit me deeply this week. it&#39;s moments like these
+that remind me of why i push myself—to grow, to overcome, and to keep
+building my confidence.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="About Me" scheme="https://blog.enkr1.com/categories/About-Me/"/>
+    
+    <category term="Journals" scheme="https://blog.enkr1.com/categories/About-Me/Journals/"/>
+    
+    
+    <category term="journal" scheme="https://blog.enkr1.com/tags/journal/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Journal: Week 21</title>
+    <link href="https://blog.enkr1.com/journal-week-21/"/>
+    <id>https://blog.enkr1.com/journal-week-21/</id>
+    <published>2025-01-12T19:04:19.000Z</published>
+    <updated>2025-01-12T21:49:19.985Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="highlights-of-the-week">Highlights of the Week</h2><p>this week i made a conscious effort to be more productive at work-notjust to compensate for the time spent on my beijing trip, but also tochallenge myself. i wanted to prove that with the right mindset, i couldpush my limits and achieve so much more. it's all about mentalresilience. at work, i've been handling a requirement with manageablecomplexity, but it demands a critical focus on detail. as part of mygoal this year, i'm striving to do things <strong>well</strong>, notjust get them done. it's about adopting the mindset of <ahref="/goals-2025#:~:text=Done%20vs%20Done%20Well">Done vs DoneWell</a>, and this task is no exception. i've been taking my time,ensuring that the quality of my work aligns with that principle. it'sbeen challenging, but i'm enjoying the process of learning and growingin this area. 🎯</p><span id="more"></span><p>as for the weekend, it was nothing short of amazing! i had the chanceto gather with my relatives for an earlier Lo Hey (捞鱼生) @ <ahref="https://g.co/kgs/egQyvhv">TungLok Peking Duck Novena</a>! it feltso good to reconnect with them after such a long time, and it was agreat way to kick off the lunar new year celebrations! 🧧 on top ofthat, it happened to be my aunty's birthday (肥肥妈妈). i surprised herwith a cake, and the restaraunt went extra mile-they presented the cakeon a large plate with dry ice underneath, creating an amazing fogeffect. to top it off, they played some chinese EDM birthday songs,adding to the festive vibe HAHA! loved it so much, it was such a fun andheartwarming moment. big up to 同乐 for making the celebration sospecial!</p><h2 id="reading-insights">Reading Insights</h2><p>as i have been kind of like relearning from the book of <ahref="/never-split-the-difference-by-chris-voss/">Never Split theDifferences by Chris Voss</a>, i have been trying to revise and applysome of the negotiation tactics in my daily life. it's been quiteinteresting to see how these strategies can be used in varioussituations, not just in business or high-stakes scenarios. i'm stillworking on mastering the art of tactical empathy and calibrated "no,"but i'm excited to see how these skills evolve over time. 📚</p><p>i have been utilising these methods in my conversations withcolleagues and friends, and it's been fascinating to observe the subtleshifts in dynamics and outcomes. i'm also trying to be more mindful ofmy body language and tone of voice, as these non-verbal cues play asignificant role in communication. it's a work in progress, but i'menjoying the process of learning and growing in this area. 💬</p><p>SO! i was randomly cleaning up my Spotify's playlist and saw that ihave been following The Diary Of A CEO with Steven Bartlett podcast!which i planned to listen but always forgot to... so i clicked on it andsaw a topic just caught my eye! <ahref="https://youtu.be/VHUrdELKjDw?si=6QJh_KsPTkIMvgxP">Body LanguageExpert: Stop Using This, It’s Making People Dislike You, So Are TheseSubtle Mistakes!</a> and i was like, "ok, that sounds interesting!" so iclicked on it and started listening to it. it was quite an insightfulepisode, and i learned a lot about the importance of body language incommunication, she called it the language of cues. i've always beenfascinated by the power of non-verbal cues, and this podcast episodereinforced the idea that our body language can speak volumes about ourthoughts and emotions. it's a reminder to be more aware of how i presentmyself in different situations and how i can use body language toenhance my communication skills at work and in my personal life!</p><ul><li><span class="exturl" data-url="aHR0cHM6Ly9saW5rdHIuZWUvZGlhcnlvZmFjZW9zdHVkaWVz">The Diary Of A CEOLinks - Vanessa Van Edwards<i class="fa fa-external-link-alt"></i></span></li></ul><h2 id="memories">Memories</h2>]]></content>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;highlights-of-the-week&quot;&gt;Highlights of the Week&lt;/h2&gt;
+&lt;p&gt;this week i made a conscious effort to be more productive at work-not
+just to compensate for the time spent on my beijing trip, but also to
+challenge myself. i wanted to prove that with the right mindset, i could
+push my limits and achieve so much more. it&#39;s all about mental
+resilience. at work, i&#39;ve been handling a requirement with manageable
+complexity, but it demands a critical focus on detail. as part of my
+goal this year, i&#39;m striving to do things &lt;strong&gt;well&lt;/strong&gt;, not
+just get them done. it&#39;s about adopting the mindset of &lt;a
+href=&quot;/goals-2025#:~:text=Done%20vs%20Done%20Well&quot;&gt;Done vs Done
+Well&lt;/a&gt;, and this task is no exception. i&#39;ve been taking my time,
+ensuring that the quality of my work aligns with that principle. it&#39;s
+been challenging, but i&#39;m enjoying the process of learning and growing
+in this area. 🎯&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="About Me" scheme="https://blog.enkr1.com/categories/About-Me/"/>
+    
+    <category term="Journals" scheme="https://blog.enkr1.com/categories/About-Me/Journals/"/>
+    
+    
+    <category term="journal" scheme="https://blog.enkr1.com/tags/journal/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Journal: Week 20</title>
+    <link href="https://blog.enkr1.com/journal-week-20/"/>
+    <id>https://blog.enkr1.com/journal-week-20/</id>
+    <published>2025-01-05T15:42:45.000Z</published>
+    <updated>2025-01-12T22:56:10.149Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="highlights-of-the-week">Highlights of the Week</h2><p>the first part of the week was packed with practices and preparationfor the countdown performance. since i had just returned from my beijingtrip, i was a bit behind on the crew's routines and didn't get a chanceto practise with them earlier. it felt like i had to play catch-up, so iput in extra effort to get back on track. despite the challenges, wepulled it off, and the performance went really well. the fireworks werelovely, and the energy of the crowd was incredible. being part of theteam and performing on stage was such a rewarding experience, and wereally really did so well! so proud of us! 🎉</p><p>even after the performance, i managed to squeeze in some gymtime—because dedication doesn't take a break! the rest of the week wasabout catching up on sleep and easing back into my usual routine of workand gym.</p><p>i also started a loading phase of ~20g of creatine per day for 7days, beginning on 3rd january 2025. on top of that, i tried a newprotein shake flavour (surprisingly good) and treated myself to alate-night mcd's supper—it's all about balance, right? 🙊</p><p>overall, it was a short but fulfilling week, blending beatboxing,fitness, and a bit of relaxation. can't wait to see what the next weekbrings!</p><span id="more"></span><h2 id="memories">Memories</h2>]]></content>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;highlights-of-the-week&quot;&gt;Highlights of the Week&lt;/h2&gt;
+&lt;p&gt;the first part of the week was packed with practices and preparation
+for the countdown performance. since i had just returned from my beijing
+trip, i was a bit behind on the crew&#39;s routines and didn&#39;t get a chance
+to practise with them earlier. it felt like i had to play catch-up, so i
+put in extra effort to get back on track. despite the challenges, we
+pulled it off, and the performance went really well. the fireworks were
+lovely, and the energy of the crowd was incredible. being part of the
+team and performing on stage was such a rewarding experience, and we
+really really did so well! so proud of us! 🎉&lt;/p&gt;
+&lt;p&gt;even after the performance, i managed to squeeze in some gym
+time—because dedication doesn&#39;t take a break! the rest of the week was
+about catching up on sleep and easing back into my usual routine of work
+and gym.&lt;/p&gt;
+&lt;p&gt;i also started a loading phase of ~20g of creatine per day for 7
+days, beginning on 3rd january 2025. on top of that, i tried a new
+protein shake flavour (surprisingly good) and treated myself to a
+late-night mcd&#39;s supper—it&#39;s all about balance, right? 🙊&lt;/p&gt;
+&lt;p&gt;overall, it was a short but fulfilling week, blending beatboxing,
+fitness, and a bit of relaxation. can&#39;t wait to see what the next week
+brings!&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="About Me" scheme="https://blog.enkr1.com/categories/About-Me/"/>
+    
+    <category term="Journals" scheme="https://blog.enkr1.com/categories/About-Me/Journals/"/>
+    
+    
+    <category term="journal" scheme="https://blog.enkr1.com/tags/journal/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Never Split The Difference by Chris Voss</title>
+    <link href="https://blog.enkr1.com/never-split-the-difference-by-chris-voss/"/>
+    <id>https://blog.enkr1.com/never-split-the-difference-by-chris-voss/</id>
+    <published>2025-01-04T23:41:37.000Z</published>
+    <updated>2025-01-04T23:49:58.599Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="negotiating-as-if-your-life-depended-on-it">Negotiating As IfYour Life Depended On It</h2><p>"Never Split the Difference" is a book by Chris Voss, a former FBIhostage negotiator, that offers negotiation advice you can use in dailylife. The book is centered around the idea that traditional negotiationstrategies, like "splitting the difference," are often ineffective. Vossprovides a range of psychological strategies and tactics to use innegotiations, derived from his experience in dealing with criminals,terrorists, and other high-stakes situations. Key concepts from the bookinclude:</p><ol type="1"><li><strong>Mirroring</strong>: Mimicking the other person's languageand behavior to build rapport.</li><li><strong>Labeling</strong>: Verbally acknowledging the other person'ssituation, feelings, or viewpoints.</li><li><strong>The "Accusation Audit"</strong>: Preemptively addressing allof the other party's potential accusations and concerns.</li><li><strong>Tactical Empathy</strong>: Understanding the feelings andmindset of another in the moment and also hearing what is behind thosefeelings so you increase your influence in all the moments thatfollow.</li><li><strong>The "Calibrated 'No'"</strong>: Saying "No" in a way thatinvites more discussion, as opposed to shutting it down.</li><li><strong>Bargaining Strategies</strong>: Like setting an "AnchorPrice" or using odd numbers to make a price seem more exact.</li><li><strong>The "Black Swan" Rule</strong>: The idea that there areunknown, unpredictable elements in every negotiation that can be used toyour advantage.</li></ol><hr /><p><strong>Life is negotiation.</strong></p><p>The majority of the interactions we have at work and at home arenegotiations that boil down to the expression of a simple, animalisticurge: I want.</p><p>“I want you to free the hostages,” is a very relevant one to thisbook, of course.</p><p>But so is:</p><p>“I want you to accept that $1 million contract.”</p><p>“I want to pay $20,000 for that car.”</p><p>“I want you to give me a 10 percent raise.” and</p><p>“I want you to go to sleep at 9 p.m.”</p><p>Negotiation serves two distinct, vital life functions—informationgathering and behaviour influencing—and includes almost any interactionwhere each party wants something from the other side.</p><hr />]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;negotiating-as-if-your-life-depended-on-it&quot;&gt;Negotiating As If
+Your Life Depended On It&lt;/h2&gt;
+&lt;p&gt;&quot;Never Split the Difference&quot; is a boo</summary>
+      
+    
+    
+    
+    <category term="Personal Development" scheme="https://blog.enkr1.com/categories/Personal-Development/"/>
+    
+    <category term="Notebooks" scheme="https://blog.enkr1.com/categories/Notebooks/"/>
+    
+    <category term="Collections" scheme="https://blog.enkr1.com/categories/Personal-Development/Collections/"/>
+    
+    <category term="Reading" scheme="https://blog.enkr1.com/categories/Personal-Development/Collections/Reading/"/>
+    
+    <category term="Book" scheme="https://blog.enkr1.com/categories/Personal-Development/Collections/Reading/Book/"/>
+    
+    <category term="Christopher Voss" scheme="https://blog.enkr1.com/categories/Personal-Development/Collections/Reading/Book/Christopher-Voss/"/>
+    
+    
+    <category term="reading" scheme="https://blog.enkr1.com/tags/reading/"/>
+    
+    <category term="ebook" scheme="https://blog.enkr1.com/tags/ebook/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Resolution 2025: GPT&#39;s Brutally Honest Advice</title>
+    <link href="https://blog.enkr1.com/resolution-2025-gpt-s-brutally-honest-advice/"/>
+    <id>https://blog.enkr1.com/resolution-2025-gpt-s-brutally-honest-advice/</id>
+    <published>2025-01-03T20:21:42.000Z</published>
+    <updated>2025-01-05T17:24:02.726Z</updated>
+    
+    <content type="html"><![CDATA[<img data-src="/resolution-2025-gpt-s-brutally-honest-advice/IMG_1240.jpg" class="large"><hr /><p>the question i asked: <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Based on everything you know about me, what should my resolutions be for the new year? Be brutally honest</span><br></pre></td></tr></table></figure></p><hr /><h2 id="chatgpt-4o">ChatGPT 4o</h2><p>Here are some tailored resolutions for the new year, based on yourprofile and goals. They aim to address growth opportunities, refine yourstrengths, and challenge your limitations:</p><ol type="1"><li><p>Sharpen Focus on Long-Term Career Goals</p><p>• <strong>Why?</strong> You have a strong technical foundation andleadership experience, but you're still seeking alignment between yourcurrent work and the broader industry.</p><p>• <strong>Action:</strong> Set a clear 5-year plan and evaluate eachproject for its relevance to your ultimate goals (e.g., transitioning toa dream company like Google or excelling in high-impact roles likeProduction Engineer). Prioritise skills and projects that bring youcloser to these goals.</p></li><li><p>Build Depth in Key Technologies</p><p>• <strong>Why?</strong> Your expertise spans a wide array of toolsand platforms, but depth in fewer cutting-edge technologies (e.g.,Elixir or advanced DevOps practices) can set you apart.</p><p>• <strong>Action</strong>: Commit to mastering one high-demandtechnology. Build a side project that demonstrates your expertise, withthe goal of open-sourcing it or presenting it at a techconference.</p></li><li><p>Elevate Your Personal Brand</p><p>• <strong>Why?</strong> Your personal website and online presence arestrong, but refining them with the modern polish and interactivity youaim for can elevate your visibility.</p><p>• <strong>Action</strong>: Finish the v4 of your website, ensuring itreflects your skills dynamically (e.g., interactive portfolios, engagingvisuals, and a story-driven “About Me”). Incorporate beatboxing toshowcase your unique personality alongside professionalachievements.</p></li><li><p>Prioritise Consistency Over Intensity</p><p>• <strong>Why?</strong> Your projects often reflect deep effort butsuffer from scope creep and delayed timelines. This pattern could affectperception of reliability in team or stakeholder settings.</p><p>• <strong>Action</strong>: Break big goals into manageable,measurable chunks. Use tools like OKRs to stay consistent and realisticabout deliverables. Document progress clearly to manageexpectations.</p></li><li><p>Embrace Vulnerability and Human Connection</p><p>• <strong>Why?</strong> Your focus on professionalism sometimesovershadows the emotional authenticity that builds deeper relationships.This may affect personal and professional connections.</p><p>• <strong>Action</strong>: Let go of perfectionism in relationships(both personal and professional). Share your challenges, seek genuinefeedback, and make room for imperfections in others as well.</p></li><li><p>Balance Hectic with Holistic</p><p>• <strong>Why?</strong> Your gym schedule and work ethic arecommendable but seem to leave little room for reflection and emotionalrecharge.</p><p>• <strong>Action</strong>: Integrate mindfulness or journaling intoyour routine. Dedicate one day a month to complete disconnection—nocoding, no emails, no gym. Use it for rest, reading, or exploringsomething entirely new.</p></li><li><p>Date with Clarity and Confidence</p><p>• <strong>Why?</strong> Your reflections on past dates show emotionaldepth but a tendency to overanalyse.</p><p>• <strong>Action</strong>: Approach dating as an opportunity to learnand enjoy, not as a test. Set clear boundaries and communicate yourintentions upfront. Trust your instincts to know when someone isn't theright fit.</p></li><li><p>Invest in Financial Literacy</p><p>• <strong>Why?</strong> You've shown interest in investments likefractional stocks, but expanding financial acumen could offer long-termstability and freedom.</p><p>• <strong>Action</strong>: Dive deeper into investment strategies.Consider automating contributions to ETFs like VOO, learning aboutREITs, or exploring small-scale entrepreneurial ventures like owning anAnytime Fitness gym.</p></li><li><p>Advocate for Yourself and Your Team</p><p>• <strong>Why?</strong> You're often focused on solutions andprojects, but advocating for your team's or your own success couldposition you as a stronger leader.</p><p>• <strong>Action</strong>: Practice self-promotion withouthesitation. Document team wins and challenges, and share them openlywith stakeholders to highlight value and leadership.</p></li><li><p>Let Go of ‘What Ifs'</p><p>• <strong>Why?</strong> Reflections on relationships, misseddeadlines, or professional missteps sometimes hold you back.</p><p>• <strong>Action</strong>: Embrace a growth mindset. Celebrate thelessons from failures without overanalysing what could have been.Channel this into actionable steps for the future.</p></li></ol><p>Would you like me to help break down any of these resolutions intospecific actions?</p><hr /><h2 id="chatgpt-1o">ChatGPT 1o</h2><p>Below are several suggestions for your New Year's resolutions,tailored to what I understand are your aspirations and experiences. Ihave endeavoured to be frank yet constructive, and I hope these ideaswill provide a solid foundation for the year ahead.</p><ol type="1"><li>Pursue Further Education with Purpose</li></ol><blockquote><p>You have mentioned an interest in obtaining a part-time degree. Bebrutally honest with yourself about which area of study will bestcomplement both your technical and managerial career path. If you areconvinced a degree is necessary, commit wholeheartedly: map out adetailed plan of how you'll balance work, study, and personal life. Ifnot, channel the same drive into pursuing targeted professionalcertifications in cloud architecture, data engineering, or evenexecutive leadership.</p></blockquote><p><strong>Example Resolution</strong>: “I will decide on a specificprogramme or certification by 1 March and formalise my enrolment orstudy schedule by the following month.”</p><ol start="2" type="1"><li>Hone Your Leadership Skills</li></ol><blockquote><p>You are already adept at managing teams and liaising with clients,but leadership is a lifelong pursuit of refinement. Focus on areas youmay find challenging—maybe delegation, conflict resolution, or inspiringinnovative thinking. Solicit candid feedback from peers, subordinates,and mentors; it might be uncomfortable, but that's where growthhappens.</p></blockquote><p><strong>Example Resolution</strong>: “I will organise quarterly‘listening sessions' with my team to gather honest feedback on myleadership style and commit to implementing at least one suggestedimprovement each quarter.”</p><ol start="3" type="1"><li>Strengthen Your Technical Core</li></ol><blockquote><p>Although you are already highly competent in multiple codinglanguages, take a brutally honest look at your ‘weak links'—the newertechnologies or deeper aspects of a technology you use daily but haven'ttruly mastered. It might be advanced concepts in Elixir or leveragingthe full potential of Terraform for large-scale infrastructure. Even thestrongest technical leads are never done learning.</p></blockquote><p><strong>Example Resolution</strong>: “I will complete a hands-onproject or course in a cutting-edge framework (e.g., a new dataprocessing tool or advanced AWS service) and share the results with myteam by mid-year.”</p><ol start="4" type="1"><li>Pay Attention to Work–Life Balance</li></ol><blockquote><p>While you are clearly industrious, burnout is a real risk. Whetherit's allocating time for fitness, mindfulness, or creative hobbies,ensure you are not running on fumes. Consistency here is key; commit toa routine that supports your mental and physical well-being.</p></blockquote><p><strong>Example Resolution</strong>: “I will take two 20-minutebreaks per workday for a brisk walk or short workout session, ensuring Ilog these activities to keep track of my consistency.”</p><ol start="5" type="1"><li>Expand Your Global Perspective</li></ol><blockquote><p>With your multilingual abilities, you have a strong base forintercultural communication. If you feel comfortable in your currentlanguages, consider brushing up on business-level proficiency or divinginto a new language. Alternatively, explore the cultural nuances andglobal aspects of your field—understanding international markets anduser experiences could give you an edge in project management andproduct design.</p></blockquote><p><strong>Example Resolution</strong>: “I will read at least one bookor research paper every month on international tech markets orcross-cultural leadership, summarising the insights for my team.”</p><ol start="6" type="1"><li>Refine Your Personal Brand</li></ol><blockquote><p>Beyond simply doing great work, think about how you present yourexpertise and leadership. If you have not done so already, build orupdate a personal website or portfolio showcasing your codingcontributions, project management experience, and professionalphilosophy. Cultivate thoughtful social media posts or LinkedIn articleson your technical and managerial insights.</p></blockquote><p><strong>Example Resolution</strong>: “I will publish two in-deptharticles on LinkedIn or a personal blog this year, focusing on topicssuch as best practices in DevOps or effective client-stakeholdercommunication.”</p><ol start="7" type="1"><li>Continue Exploring New Ideas for Personal Growth</li></ol><blockquote><p>You've shown interest in seeking guidance and exploring lessconventional paths (such as consulting a fortune teller). Keep an openmind about any avenue that helps you clarify your goals. At the sametime, keep a healthy balance between external guidance and your ownintuition. Sometimes introspection—through journalling or speaking witha trusted mentor—can provide more practical clarity than you mightexpect.</p></blockquote><p><strong>Example Resolution</strong>: “I will commit to monthlypersonal reflection sessions—whether that's with a mentor, aprofessional counsellor, or through a structured journaling process—toensure I'm aligning my professional and personal objectives.”</p><p>Extra Topics You Might Enjoy Exploring Further</p><ol type="1"><li><p>Open-Source Leadership</p><p>• Investigate how contributing to or initiating open-source projectscan sharpen your technical and collaboration skills.</p></li><li><p>Emerging Tech for Sustainability</p><p>• Explore how technology can tackle environmental challenges; yourbackground could be pivotal in making a positive impact in green techinitiatives.</p></li><li><p>Behavioural Economics in Tech</p><p>• Delve into how user behaviour and decision-making can influenceproduct design, enhancing your UI/UX expertise.</p></li><li><p>Philosophies in Leadership</p><p>• Read about Stoicism or other schools of thought, seeing how theymight inform steadier, more empathetic leadership styles.</p></li></ol><p><strong>Conclusion</strong></p><p>In being brutally honest, the main point is not to overcommit. Ahandful of well-chosen resolutions—executed thoroughly—will accomplishmore than a grand wish-list you cannot realistically maintain. Eachresolution should serve a clear purpose: professional advancement,well-being, or personal fulfilment. By staying true to your vision,proactively seeking feedback, and broadening your expertise, you'll befar better positioned to navigate the coming year with confidence.</p><p>I wish you every success in following through with your goals, and Ihope these resolutions provide some direction for a fulfilling andimpactful new year.</p><hr /><h2 id="reflections-on-the-advice">Reflections on the Advice</h2><p>wow... i'm speechless... the advice from both ChatGPT 4o and 1o isincredibly insightful and thought-provoking. it's like they've seenthrough my facade and pinpointed areas where i need to grow, improve,and take action. i have so much to digest and reflect on. i will keepupdating this post as i work on these resolutions and share my progress.here's to a year of growth, challenges, and transformation. 🌟</p>]]></content>
+    
+    
+    <summary type="html">I asked two AI models, &#39;What should my resolutions be for the new year? Be brutally honest.&#39; Their responses were eye-opening. This post explores the candid insights and how I&#39;m putting them into action.</summary>
+    
+    
+    
+    <category term="About Me" scheme="https://blog.enkr1.com/categories/About-Me/"/>
+    
+    <category term="Personal Growth" scheme="https://blog.enkr1.com/categories/About-Me/Personal-Growth/"/>
+    
+    
+    <category term="ai" scheme="https://blog.enkr1.com/tags/ai/"/>
+    
+    <category term="self-improvement" scheme="https://blog.enkr1.com/tags/self-improvement/"/>
+    
+    <category term="resolutions" scheme="https://blog.enkr1.com/tags/resolutions/"/>
+    
+    <category term="gpt" scheme="https://blog.enkr1.com/tags/gpt/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Reflections 2024</title>
+    <link href="https://blog.enkr1.com/reflections-2024/"/>
+    <id>https://blog.enkr1.com/reflections-2024/</id>
+    <published>2025-01-01T12:42:35.000Z</published>
+    <updated>2025-01-03T20:12:18.868Z</updated>
+    
+    <content type="html"><![CDATA[<p>jing hui, i'm so damn proud of you. 🥺🌟 seriously, look at how faryou've come in 2024. it's been a hell of a ride, and you've grown somuch in ways you probably never thought possible. let's take a moment toreally celebrate this year.</p><p>in 2024, you:</p><span id="more"></span><ul><li>completed the MIT IDSS Data Science and Machine Learning programme,a huge milestone that adds so much value to your journey. you didn'tjust do it—you crushed it. i did not regret taking up this course at allas i got to know more about AI and statistics which i have always beeninterested in.</li><li>stayed consistent with journaling. i'm talking week after week, pageafter page, capturing life's tiny details. one day, your grandkids willbe flipping through those pages, laughing and learning from yourhustle.</li><li>navigated the house-hunting game with your sister and came outcloser than ever. zero drama, 100% teamwork.</li><li>kept your gym routine alive and thriving-no excuses, even when workand life were chaotic, or even sick. progress in your fitness journey?earned. max respect to you!</li><li>forced yourself to read in the mornings, even though some days youjust said, “nah, i'll skip.” but look at the bigger picture-you stilldid it more often than not, and it paid off.</li><li>judged a beatbox battle, which used to feel like a wild dream. nowit's part of your story. it even pushed you to level up your ownbeatboxing when you saw how crazy good others were.</li><li>invested time in researching universities—MIT, Harvard, NUS, NTU,SUSS. you finally chose NUS. that's a bold and intentional move towardyour future.</li><li>kept honing your beatboxing skills, despite juggling work, travel,and life. it might've felt slow, but real talk—you've improved and youknow it.</li><li>faced some insane challenges at ByteDance. let's be honest—therewere moments you felt like an impostor. but you stepped up, took on moreresponsibilities, and learned to own your space.</li><li>went to Beijing for work, navigating a different environment,proving to yourself you can handle solo travel like a champ. you alsolevelled up your communication skills, which you know damn well neededsome work!</li><li>built deeper connections with colleagues. shoutout to junjie forsorting out your flight and hotel details—seriously couldn't have doneit without him. plus, you made some sweet memories in Beijing, from workachievements to random solo adventures.</li></ul><p>i just want to take a moment to recognise the people who made 2024the memorable rollercoaster it was: <strong>my sister</strong>, forshowing me that sharing a roof can bring us closer instead of stirringup drama; <strong>my colleagues at ByteDance, especiallyjunjie</strong>, for helping me navigate everything from flights to lifeadvice; <strong>the beatbox community</strong>, for pushing me beyond mycomfort zone and reminding me why i started beatboxing in the firstplace: pure passion; <strong>my family</strong>, who always have myback, no matter how crazy my dreams get; and, of course,<strong>you</strong>, jing hui, for showing up every day and giving ityour all.</p><p>from all of you, i've learned that consistency wins. showing up everyday—whether it's journaling, hitting the gym, or practising thosebeats—really works. i've also realised it's okay to feel like animpostor sometimes. if you don't feel a little fear, you're probably notgrowing. lean into the discomfort, and embrace the fact that challengesare just stepping stones.</p><p>but let's be real for a second—2024 wasn't all sunshine and rainbows.there were moments when you doubted yourself, felt overwhelmed, andmaybe even wanted to give up. but you didn't. you kept showing up.that's the part i'm most proud of. resilience isn't flashy, but damn,it's powerful.</p><p>your biggest challenge was balancing the MIT course while deliveringat ByteDance—a juggling act that left you overloaded, stressed, and onthe brink of burnout more than once—but you persevered by radicallyrethinking your schedule and priorities.</p><p>you treated every piece of feedback like rocket fuel, knowing itwould only push you to grow. you stayed flexible and open-minded, evenwhen everything felt uncertain. you refused to be a passenger in yourown life—you took the wheel and floored it. that unstoppable mindset,that unwavering grit, will definitely send you soaring even higher in2025.</p><p>as we wrap up 2024, remember this: <em>you didn't just get throughthe year, you evolved. don't lose that drive. keep journaling, keepsweating it out in the gym, keep beatboxing until your lips go numb, andkeep taking risks—even if they scare you.</em></p><p>2025 is waiting for you, and i have no doubt it's gonna be bigger,crazier, and more fulfilling than ever. let's embrace whatever comes ourway. 🔥</p><p>i promise to stay curious, stay resilient, and keep growing—no matterwhat challenges pop up. 🎯</p><p>thank you, 2024—you were wild and sometimes brutal, but i'm gratefulfor every lesson.</p><p>you've got this, jing hui—2025 is yours to conquer. 💪🏼📈</p>]]></content>
+    
+    
+    <summary type="html">2024 was a year that tested my limits, brought unexpected milestones, and transformed my perspective. From completing the MIT IDSS programme and thriving in my role at ByteDance to judging beatbox battles and embarking on solo adventures, this year has been a whirlwind of growth, resilience, and unforgettable experiences. Here&#39;s a look back at my personal journey.</summary>
+    
+    
+    
+    <category term="About Me" scheme="https://blog.enkr1.com/categories/About-Me/"/>
+    
+    <category term="Reflections" scheme="https://blog.enkr1.com/categories/About-Me/Reflections/"/>
+    
+    
+    <category term="reflections" scheme="https://blog.enkr1.com/tags/reflections/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Goals 2025</title>
+    <link href="https://blog.enkr1.com/goals-2025/"/>
+    <id>https://blog.enkr1.com/goals-2025/</id>
+    <published>2024-12-30T21:29:49.000Z</published>
+    <updated>2025-01-12T20:35:14.476Z</updated>
+    
+    <content type="html"><![CDATA[<p>hellu readers,</p><p>i'm thrilled to map out my plans for 2025. i find that putting myambitions into words not only keeps me accountable but also invitesmeaningful conversations with those following along. if you'd like tosee how i did last year, feel free to check out <ahref="/goals-2024/">my previous year's goals</a>.</p><hr /><h2 id="recap-of-2024-goals">Recap of 2024 goals</h2><p><strong>&gt; Professional Goals</strong></p><p><strong>1. Degree Pursuit</strong></p><blockquote><p>i submitted my application for NUS's <ahref="https://scale.nus.edu.sg/programmes/undergraduate-programmes/bachelor-of-information-technology">Bachelorof Information Technology (BIT) programme</a> and am now eagerly waitingto hear back. diving deeper into formal computer science training was ahuge priority for me in 2024, and i'm excited to continue that journeythis year if all goes well. 🎯</p></blockquote><p><strong>2. Excellence at ByteDance</strong></p><blockquote><p>working at <strong>ByteDance</strong> has become more than just ajob—i've embraced it as part of my lifestyle. focusing onself-management and continuous learning helped me grow significantly in2024. i'm determined to carry that same drive into 2025 and explore newways to push my limits.</p></blockquote><p><strong>&gt; Personal Goals</strong></p><p><strong>1. Financial Growth</strong></p><blockquote><p>i made promising strides by diversifying my income, investing instocks, and exploring property opportunities. even though i'm stilllearning the ropes, i feel more confident about my path toward long-termfinancial security. <strong>2025 will be about building on thesefoundations and staying open to new strategies.</strong></p></blockquote><p><strong>2. Reading Three New Books</strong></p><blockquote><p>i kicked things off with <em>The 7 Habits of Highly EffectivePeople</em> by <strong>Stephen Covey</strong> and learned a lot abouthabit formation and mindset shifts. rather than rushing to finish acertain number of books, i'm focusing on <strong>quality overquantity</strong>. as <strong>Alex Hormozi</strong> said, "If it's worthdoing, do it well." i'll continue choosing titles that spark mycuriosity and contribute to my personal and professional growth.</p></blockquote><p><strong>3. Beatbox Battle Comeback</strong></p><blockquote><p>though i judged many local beatbox competitions in 2024, i didn'tactually make my way to compete... sadly 🥺 that said, my passion forbeatboxing isn't going anywhere! in 2025, i plan to get back onstage,sharpen my skills, and rediscover the thrill of live battles. if you'recurious about why i love beatboxing, you can read more <ahref="/why-do-i-love-beatboxing/">here</a>.</p></blockquote><hr /><h2 id="goals-for-2025">Goals for 2025</h2><h3 id="professional-goals">Professional Goals</h3><h4id="p0-ace-nus-bit-entrance-examination-bridgingpreparatory-courses">[P0]Ace NUS-BIT Entrance Examination &amp; Bridging/Preparatory Courses</h4><ol type="1"><li><strong>preparation</strong>: revise key concepts in mathematics,computer science, and programming to build a strong foundation for theentrance examination.</li><li><strong>exemptions</strong>: aim to earn credit exemptions forfundamental modules, streamlining the path to graduation. once thesebases are covered, focus on advanced core subjects to shorten theoverall degree timeline.</li><li><strong>networking</strong>: from the bridging phase onward, connectwith classmates, seniors, and professors to exchange experiences andinsights about upcoming modules. build valuable relationships thatsupport both learning and future career prospects in tech.</li></ol><h4 id="p0-excel-at-work">[P0] Excel at Work</h4><ol type="1"><li><strong>skill development</strong><ul><li>master JavaScript by producing well-structured, reusable code thatreduces future workload for both me and my team. pay special attentionto edge case thinking, efficiency and maintainability.</li><li>collaborate closely with my mentor to absorb their expertise inplanning, execution, and stakeholder management—enhancing my ability todeliver projects efficiently.</li></ul></li><li><strong>relationship building</strong><ul><li>foster strong connections with colleagues, clients, and stakeholdersthrough regular check-ins, feedback sessions, and knowledge-sharing(e.g., code reviews, mini workshops).</li><li>communicate proactively with clients, ensuring they understandgoals, timelines, and challenges—transparency is key, <strong>contextnot control</strong>!</li></ul></li><li><strong>performance &amp; growth</strong><ul><li>seek regular feedback from peers and supervisors, setting quarterlyKPIs (OKRs) to measure progress and refine strategies.</li><li>use clear metrics or dashboards to track milestones and makedata-driven adjustments. (THINK ABOUT HOW TO IMPLEMENT THIS, A EFFICIENTWAY)</li><li>outline specific learning goals (e.g., certifications, new languageskills) each quarter to maintain forward momentum.</li></ul></li></ol><blockquote><p>Done vs Done Well! 🚀</p></blockquote><h4 id="p1-improve-communication-skills">[P1] Improve CommunicationSkills</h4><blockquote><p>i've always believed that effective communication is crucial tosuccess, so i'm dedicating effort this year to strengthen my rapportwith colleagues, friends, and family. i also want to boost my EQ andactive listening skills. reading <em>Never Split the Difference</em> by<strong>Chris Voss</strong> really struck a chord—i tend to be more of a"win-win" person, but i'd love to adopt elements of "tactical empathy"to better understand others' perspectives.</p></blockquote><ol type="1"><li><strong>active listening</strong><ul><li>paraphrase what others say to confirm understanding, and askfollow-up questions showing genuine curiosity, helping the speaker feelheard and valued.</li><li>watch for non-verbal cues (e.g., facial expressions, tone) foremotional context—especially important in virtual interactions (focus onvoice modulation and tone).</li></ul></li><li><strong>daily application</strong><ul><li>apply "tactical empathy" in everyday conversations—by activelyacknowledging emotions (labeling, paraphrasing, open-ended questions) tobuild trust and guide discussions toward collaborative solutions.</li><li>keep a short journal for communication hurdles, noting what workedand what didn't.</li><li>Set mini-goals weekly ("i'll focus on not interrupting others" or"i'll give more specific praise") to build new habits gradually.</li></ul></li><li><strong>reading list</strong><ul><li>revisit <em>Never Split the Difference</em> periodically, practisingits techniques and adapting them to my personal style.</li><li>explore other communication books like <em>CrucialConversations</em> or <em>How to Win Friends &amp; InfluencePeople</em>, integrating insights into real-life interactions.</li></ul></li><li><strong>communication training</strong><ul><li>schedule regular feedback sessions with peers or mentors to pinpointstrengths and improvement areas.</li><li>attend workshops or online courses that focus on negotiation,conflict resolution, and emotional intelligence.</li><li>consider joining public speaking clubs (like <ahref="https://www.toastmasters.org/">Toastmasters</a>) to polishpresentation skills and manage nerves in front of an audience.</li></ul></li></ol><hr /><h3 id="personal-goals">Personal Goals</h3><h4 id="p0-bodybuilding">[P0] Bodybuilding</h4><blockquote><p>bodybuilding has been a big part of my life since 2022, and 2025 isthe year i'm planning to go all-in.</p></blockquote><ol type="1"><li><strong>serious bulking</strong>: invest time in creating a mealplan that helps me bulk up effectively (focusing on macros, caloricsurplus, etc.).</li><li><strong>research &amp; planning</strong>: keep learning newtechniques and verifying them with evidence-based fitness research(e.g., tracking progress, fine-tuning workout routines).</li><li><strong>consistency</strong>: maintain a well-structured workoutschedule and regularly track metrics (like weight, strength, and bodycomposition) to see where i can improve.</li></ol><h4 id="p2-music-production">[P2] Music Production</h4><blockquote><p>i've been itching to explore music production more seriously, and nowi have <strong>FL Studio</strong> and a solid pair of headphones readyto go.</p></blockquote><ol type="1"><li><strong>learning foundations</strong>: deepen my understanding ofdigital audio workstations (DAWs) and basic music theory (e.g., chordprogressions, arrangement techniques).</li><li><strong>creative projects</strong>: work on mini-tracks or remixes,gradually building a personal portfolio i can be proud of.</li><li><strong>collaboration opportunities</strong>: collaborate withfriends, fellow producers, or even beatboxers to keep the creativeenergy flowing and gain fresh perspectives.</li></ol>]]></content>
+    
+    
+    <summary type="html">Reflecting on 2024&#39;s achievements while aiming higher—i am humbly sharing my progress, hoping others find a spark of inspiration or glean insights for their own journey.</summary>
+    
+    
+    
+    <category term="About Me" scheme="https://blog.enkr1.com/categories/About-Me/"/>
+    
+    <category term="Goals" scheme="https://blog.enkr1.com/categories/About-Me/Goals/"/>
+    
+    
+    <category term="goals" scheme="https://blog.enkr1.com/tags/goals/"/>
+    
+    <category term="professional-goals" scheme="https://blog.enkr1.com/tags/professional-goals/"/>
+    
+    <category term="personal-goals" scheme="https://blog.enkr1.com/tags/personal-goals/"/>
+    
+    <category term="career-development" scheme="https://blog.enkr1.com/tags/career-development/"/>
+    
+    <category term="professional-growth" scheme="https://blog.enkr1.com/tags/professional-growth/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Journal: Week 19</title>
+    <link href="https://blog.enkr1.com/journal-week-19/"/>
+    <id>https://blog.enkr1.com/journal-week-19/</id>
+    <published>2024-12-29T18:54:21.000Z</published>
+    <updated>2024-12-30T22:39:03.256Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="my-last-journal-of-2024">my last journal of 2024 🫶🏻</h2><p>hello, dear reader!</p><p>it's been a while since my last journal, and now, here we are—daysaway from 2025. this marks my final journal entry for 2024, and there'sso much i want to share!</p><p>december has been an intense month. so much has happened that i'm noteven sure where to start. but let's take it one story at a time.</p><span id="more"></span><p>on the 6th of december, friday, i received some shockingannouncements at work (the details are confidential, so i can't sharemuch here). at that moment, i was completely thrown off—stunned andunsure how to react. you know those moments when life blindsides you?this was one of them. i didn't know how to process it, but i toldmyself, "what's done is done. all you can do now is focus on how yourespond." so that's what i tried to do.</p><p>on the bright side, one part of the announcement i can share is thati got the opportunity to go on a solo business trip for a project i wasresponsible for! honestly, it was nerve-wracking—my first time travelingalone for work, handling everything by myself. i was unprepared,worried, and unsure. but looking back, i think i did okay. the triptaught me a lot, and after reflecting on it, i know there's still somuch room for growth.</p><p>that friday was a blur. after the announcement, i had no time toprocess anything before rushing off to grab a quick lunch betweenmeetings. it was a whirlwind of emotions—shock, confusion, gratitude,and everything in between. but amidst the chaos, my amazing team gave mea sweet moment to pause. they surprised me with a cake and coffee for mybirthday! 🥺 they're honestly the best, and i felt so touched that theyremembered despite how busy everything was. it was a reminder of howlucky i am to work with such thoughtful people. 😭</p><p>of course, there was no time to rest. meetings filled up the rest ofthe day. but shoutout to my colleague, <strong>junjie</strong>, whohelped me sort out logistics like drafting my business travel letter. hemade my life so much easier, and i'm super grateful for hiskindness.</p><hr /><p>now, about the trip—Beijing was incredible! i finally got to visitByteDance's headquarters at 大钟侍 and another office at 融中心. the16-day business trip was a whirlwind of productivity and newexperiences. my primary objective was to oversee the UAT process andensure a successful project delivery. while the workload was intense,meeting colleagues and stakeholders in person brought a refreshing humanconnection that had been missing during months of remote collaboration.being on-site allowed me to dive deeper into project challenges,brainstorm solutions face-to-face, and even build stronger rapport withthe team. honestly, it was more than just a work trip—it felt like anopportunity to grow both professionally and personally.</p><p><strong>融中心</strong>:</p><p><strong>大钟侍</strong>:</p><video width="auto" height="auto" controls><source src="/journal-week-19/IMG_9275_compressed.mp4" type="video/mp4"></video><p><strong>curious about what my ByteDance life looks like, especiallyduring my time in the Beijing offices?</strong></p><p>i've captured some highlights and behind-the-scenes moments from myjourney in a special Instagram highlight titled <strong>ByteDance2</strong> &amp; <strong>ByteDance 2.1</strong>. feel free to check itout <span class="exturl" data-url="aHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbS9lbmtyMS8=">here<i class="fa fa-external-link-alt"></i></span>—you might justcatch a glimpse of my day-to-day adventures, the breathtaking officeviews, and the vibrant city life! 😊</p><hr /><p>the weekends in Beijing were magical. i went on solo adventures,ticking off places i'd always wanted to visit. walking through thehistorical 胡同s, soaking in the vibe of the city—it felt like steppinginto a movie. 🥺</p><p>one of my first stops was 天坛公园. i was in awe of the ancientchinese architecture—it's just so majestic and grand. every detail ofthe buildings felt like a glimpse into the past, and i couldn't help butadmire how much history they carry.</p><p>then, there was the 故宫—absolutely speechless. i mean, this was oncethe emperor's home... the sheer size of it left me in disbelief. i foundmyself wandering through the halls, just imagining what life must havebeen like back then.</p><p>another highlight was finally trying 四季民福. i've seen it all over小红书, and i can confirm—it totally lives up to the hype. the food wasamazing, and it was such a treat to tick it off my list.</p><p>i also spent some time at 颐和园 and 圆明园, two parks that couldn'tbe more different but both so special in their own way. 颐和园 was sopeaceful and relaxing, a perfect place to just slow down and take abreath. meanwhile, the ruins at 圆明园 felt like a quiet reminder ofhistory, bittersweet yet humbling to see in person.</p><p>南锣鼓巷 was another favourite. i caught the sunset here, and let metell you, it was breathtaking. Beijing's winter sunsets hitdifferently—so early, around 4pm, but the glow it left in the sky wasunforgettable. 🌅</p><p>and, of course, i couldn't miss 什刹海, strolling by the lakes,surrounded by locals and tourists alike. it had such a vibrant energy,yet it felt calming at the same time.</p><p>these moments brought me so much joy. every place i visited left animpression, and i know i'll carry these memories with me forever.Beijing really has a charm that's hard to put into words—it's a mix ofhistory, culture, and just pure magic. 🥺🫶🏻</p><hr /><p>but as december went on, it wasn't all smooth sailing. just a weekafter the initial announcement, my leader shared that the decision hadbeen cancelled. i hadn't even fully processed the first news when thesecond hit. it was an emotional rollercoaster—relief, confusion, andgratitude all at once. but i reminded myself: <strong>What lies behindus and what lies before us are tiny matters compared to what lies withinus.</strong> life is unpredictable, and sometimes all you can do isadapt and move forward.</p><hr /><p>as the year-end approached, i took some much-needed leaves. ioriginally planned a trip to phuket in mid-december, but with thebusiness travel and the critical project release, i had to cancel it.instead, i used the time to rest, recharge, and reflect. honestly, itturned out to be a blessing in disguise—having that "me time" wasexactly what i needed.</p><p>before closing the year, my crew, Obelisk, and i worked on acountdown beatbox performance for the new year's eve celebration. it wassuch a fun project, and i'm so excited to see how it turns out on the31st! 🎉</p><p>thank you for being part of my journey this year. ❤️</p><p>this isn't a full reflection of 2024—i'll save that for my next blog.but for now, here's to closing the year on a hopeful note.</p><p>bring it on, 2025! 🎯</p>]]></content>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;my-last-journal-of-2024&quot;&gt;my last journal of 2024 🫶🏻&lt;/h2&gt;
+&lt;p&gt;hello, dear reader!&lt;/p&gt;
+&lt;p&gt;it&#39;s been a while since my last journal, and now, here we are—days
+away from 2025. this marks my final journal entry for 2024, and there&#39;s
+so much i want to share!&lt;/p&gt;
+&lt;p&gt;december has been an intense month. so much has happened that i&#39;m not
+even sure where to start. but let&#39;s take it one story at a time.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="About Me" scheme="https://blog.enkr1.com/categories/About-Me/"/>
+    
+    <category term="Journals" scheme="https://blog.enkr1.com/categories/About-Me/Journals/"/>
+    
+    
+    <category term="journal" scheme="https://blog.enkr1.com/tags/journal/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Journal: Week 18</title>
+    <link href="https://blog.enkr1.com/journal-week-18/"/>
+    <id>https://blog.enkr1.com/journal-week-18/</id>
+    <published>2024-12-01T19:44:06.000Z</published>
+    <updated>2025-01-04T13:38:46.503Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="highlights-of-the-week">Highlights of the Week</h2><p>i lost my voice the very day i planned to record the voices beatboxwildcard. it was like universe was playing a cruel joke on me.</p><p>honestly, my routine wasn't 100% ready, but losing my voice madeeverything feel worse... 😔 i still don't know what caused it, but itwas the first time in my life that i almost completely lost myvoice.</p><p>so, instead of giving up, i threw together a freestyle beat in theoffice-a routine i literally came up with in like an hour... i recordedit, posted it, and hoped for the best.</p><p>unfortunately, my impromptu routine didn't pass the wildcardselection. and yeah, i was so mad at myself. 😤 firstly, i could'veprepared and recorded earlier instead of leaving it until the lastminute; secondly, i knew deep down that i didn't put in the effort ishould've. i'm really disappointed in myself, but i also know this is alesson to carry forward. 🥺😭</p><span id="more"></span><h2 id="reading-insights">Reading Insights</h2><p>this week, i fully immersed myself in Atomic Habits by James Clear.as i delved into it, i realised just how much the ideas resonate withme. some of the principles, like focusing on small changes, are thingsi've unconsciously applied in my life. but this book made me aware ofhow i can refine and strengthen those actions to create a more effective"system" for myself. it's genuinely inspiring and i can already feel itreshaping my mindset.</p><p>here are some key highlights from Chapter 1 that struck a chord withme:</p><ul><li><p>“improving by 1 percent isn't particularly notable—sometimes itisn't even noticeable—but it can be far more meaningful, especially inthe long run. The difference a tiny improvement can make over time isastounding. Here's how the math works out: if you can get 1 percentbetter each day for one year, you'll end up thirty-seven times better bythe time you're done. Conversely, if you get 1 percent worse each dayfor one year, you'll decline nearly down to zero. What starts as a smallwin or a minor setback accumulates into something much more.”</p></li><li><p>“Habits are the compound interest of self-improvement.”</p></li><li><p>“a slight change in your daily habits can guide your life to avery different destination.”</p></li><li><p>“Tiny battles like these are the ones that will define yourfuture self.”</p></li><li><p>“Breakthrough moments are often the result of many previousactions, which build up the potential required to unleash a majorchange.”</p></li><li><p>“habits often appear to make no difference until you cross acritical threshold and unlock a new level of performance. In the earlyand middle stages of any quest, there is often a Valley ofDisappointment. You expect to make progress in a linear fashion and it'sfrustrating how ineffective changes can seem during the first days,weeks, and even months. It doesn't feel like you are going anywhere.It's a hallmark of any compounding process: the most powerful outcomesare delayed.”</p></li><li><p>“A handful of problems arise when you spend too much timethinking about your goals and not enough time designing yoursystems.”</p></li><li><p>“We think we need to change our results, but the results are notthe problem. What we really need to change are the systems that causethose results.”</p></li><li><p>“A systems-first mentality provides the antidote. When you fallin love with the process rather than the product, you don't have to waitto give yourself permission to be happy. You can be satisfied anytimeyour system is running. And a system can be successful in many differentforms, not just the one you first envision.”</p></li><li><p>“The purpose of building systems is to continue playing the game.True long-term thinking is goal-less thinking. It's not about any singleaccomplishment. It is about the cycle of endless refinement andcontinuous improvement. Ultimately, it is your commitment to the processthat will determine your progress.”</p></li></ul><p>Chapter Summary</p><ul><li>Habits are the compound interest of self-improvement. Getting 1percent better every day counts for a lot in the long-run.</li><li>Habits are a double-edged sword. They can work for you or againstyou, which is why understanding the details is essential.</li><li>Small changes often appear to make no difference until you cross acritical threshold. The most powerful outcomes of any compoundingprocess are delayed. You need to be patient.</li><li>An atomic habit is a little habit that is part of a larger system.Just as atoms are the building blocks of molecules, atomic habits arethe building blocks of remarkable results.</li><li>If you want better results, then forget about setting goals. Focuson your system instead.</li><li>You do not rise to the level of your goals. You fall to the level ofyour systems.</li></ul><blockquote><p>Excerpt From Atomic Habits: Tiny Changes, Remarkable Results JamesClear - This material may be protected by copyright.</p></blockquote><p>it's really all about the systems—this line hit me the hardest: youdo not rise to the level of your goals. you fall to the level of yoursystems. looking at my own life, i realise how much my systems needimprovement, and i feel motivated to start making these 1% changes, evenif they seem small right now.</p><h2 id="memories">Memories</h2>]]></content>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;highlights-of-the-week&quot;&gt;Highlights of the Week&lt;/h2&gt;
+&lt;p&gt;i lost my voice the very day i planned to record the voices beatbox
+wildcard. it was like universe was playing a cruel joke on me.&lt;/p&gt;
+&lt;p&gt;honestly, my routine wasn&#39;t 100% ready, but losing my voice made
+everything feel worse... 😔 i still don&#39;t know what caused it, but it
+was the first time in my life that i almost completely lost my
+voice.&lt;/p&gt;
+&lt;p&gt;so, instead of giving up, i threw together a freestyle beat in the
+office-a routine i literally came up with in like an hour... i recorded
+it, posted it, and hoped for the best.&lt;/p&gt;
+&lt;p&gt;unfortunately, my impromptu routine didn&#39;t pass the wildcard
+selection. and yeah, i was so mad at myself. 😤 firstly, i could&#39;ve
+prepared and recorded earlier instead of leaving it until the last
+minute; secondly, i knew deep down that i didn&#39;t put in the effort i
+should&#39;ve. i&#39;m really disappointed in myself, but i also know this is a
+lesson to carry forward. 🥺😭&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="About Me" scheme="https://blog.enkr1.com/categories/About-Me/"/>
+    
+    <category term="Journals" scheme="https://blog.enkr1.com/categories/About-Me/Journals/"/>
+    
+    
+    <category term="journal" scheme="https://blog.enkr1.com/tags/journal/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Journal: Week 17</title>
+    <link href="https://blog.enkr1.com/journal-week-17/"/>
+    <id>https://blog.enkr1.com/journal-week-17/</id>
+    <published>2024-11-28T16:38:24.000Z</published>
+    <updated>2024-12-30T22:39:03.279Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="highlights-of-the-week">Highlights of the Week</h2><p>i went on a trip to China for the first time! omg, i don't know whereto start... it was amazing. honestly, i don't think i can put in intowords, ok, so i'll let the pictures do the talking this time. picturesspeak a thousand words, right? 🥹</p><blockquote><p>i will just attach some of my favourite pictures later~</p></blockquote><p>on a less cheerful note, i came back with a really really bad sorethroat back that i completely lost my voice halfway through the day atwork. 😭 thank god for the clinic right next to our office that'scovered by insurance-it was so convenient. i literally just gave em myname, talked to the doc, grabbed my meds and left.</p><p>the doc gave me 2 days of mc, but i still went to work the next day.idk, maybe i was just feeling guilty about taking a day off, buthonestly, my body was sreaming at me to rest. so the day after, ifinally listened. ended up sleeping for 11 hours straight... and omg,that was the rest i needed! felt so much better afterwards! FULLRECHARGED! 🔋</p><p>but my voice still... and my beatbox competition is approaching😭</p><span id="more"></span><h2 id="reading-insights">Reading Insights</h2><p>AND i finally started reading <strong>Atomic Habits: An Easy &amp;Proven Way to Build Good Habits &amp; Break Bad Ones by JamesClear</strong>! it's been on my reading list for ages, and i am soexcited to dive into it. just flipping through the first few pages hasalready given me a glimpse of how impactful this book could be formaking lasting changes. i can't wait to apply these principles to mydaily life!</p><h2 id="memories">Memories</h2><p>...</p>]]></content>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;highlights-of-the-week&quot;&gt;Highlights of the Week&lt;/h2&gt;
+&lt;p&gt;i went on a trip to China for the first time! omg, i don&#39;t know where
+to start... it was amazing. honestly, i don&#39;t think i can put in into
+words, ok, so i&#39;ll let the pictures do the talking this time. pictures
+speak a thousand words, right? 🥹&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;i will just attach some of my favourite pictures later~&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;on a less cheerful note, i came back with a really really bad sore
+throat back that i completely lost my voice halfway through the day at
+work. 😭 thank god for the clinic right next to our office that&#39;s
+covered by insurance-it was so convenient. i literally just gave em my
+name, talked to the doc, grabbed my meds and left.&lt;/p&gt;
+&lt;p&gt;the doc gave me 2 days of mc, but i still went to work the next day.
+idk, maybe i was just feeling guilty about taking a day off, but
+honestly, my body was sreaming at me to rest. so the day after, i
+finally listened. ended up sleeping for 11 hours straight... and omg,
+that was the rest i needed! felt so much better afterwards! FULL
+RECHARGED! 🔋&lt;/p&gt;
+&lt;p&gt;but my voice still... and my beatbox competition is approaching
+😭&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="About Me" scheme="https://blog.enkr1.com/categories/About-Me/"/>
+    
+    <category term="Journals" scheme="https://blog.enkr1.com/categories/About-Me/Journals/"/>
+    
+    
+    <category term="journal" scheme="https://blog.enkr1.com/tags/journal/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Journal: Week 16</title>
+    <link href="https://blog.enkr1.com/journal-week-16/"/>
+    <id>https://blog.enkr1.com/journal-week-16/</id>
+    <published>2024-11-10T18:15:10.000Z</published>
+    <updated>2024-12-30T22:39:03.279Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="highlights-of-the-week">Highlights of the Week</h2><p>this week was intense... a full 7/7 work grind 😔 by friday nightm iwas so wiped out that i just passed out like that and slept for morethan 9 hours straight! woke up and barely had time to catch my breathbefore rushing off to work again.</p><p>even though it was hectic, i found a bit of thrill in the unknownchallenges and a sense of satisfaction in pushing through. 🎯💪🏼🔥</p><p>AND guess what! F26 canteen is gonna reopen next week! OMG finally!😭🤞🏼</p><p>for my beatboxing practice, with 25 days until the comp and 14 daysleft to finish my wildcard, i'm giving it my all. i'm trusting theprocess, feeling like i'm hitting a low right before the climb. it'sthat moment when u're going down the hill, but i'm so ready to rise anytime! 🔥</p><p>watch me.</p><span id="more"></span><h2 id="reading-insights">Reading Insights</h2><p>i have been revisiting the book <em>Never Split the Difference</em>by Christopher Voss, a book that's almost become a life strategy guidefor me. i know relying heavily on one book isn't ideal, but i findmyself <strong>taking the parts that resonate, filtering what feelsright, and testing out those ideas in real life</strong>. some of thetechniques? they actually work wonders in human interactions—it'sfascinating.</p><p>rereading has been a refreshing way to catch details i might havemissed the first time. it's funny how information can just slip throughur mind without u even noticing, so a good review always feelsworthwhile. 📝</p><h2 id="memories">Memories</h2><video width="auto" height="auto" controls><source src="/journal-week-16/IMG_5699_compressed.mp4" type="video/mp4"></video><video width="auto" height="auto" controls><source src="/journal-week-16/IMG_5728_compressed.mp4" type="video/mp4"></video>]]></content>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;highlights-of-the-week&quot;&gt;Highlights of the Week&lt;/h2&gt;
+&lt;p&gt;this week was intense... a full 7/7 work grind 😔 by friday nightm i
+was so wiped out that i just passed out like that and slept for more
+than 9 hours straight! woke up and barely had time to catch my breath
+before rushing off to work again.&lt;/p&gt;
+&lt;p&gt;even though it was hectic, i found a bit of thrill in the unknown
+challenges and a sense of satisfaction in pushing through. 🎯💪🏼🔥&lt;/p&gt;
+&lt;p&gt;AND guess what! F26 canteen is gonna reopen next week! OMG finally!
+😭🤞🏼&lt;/p&gt;
+&lt;p&gt;for my beatboxing practice, with 25 days until the comp and 14 days
+left to finish my wildcard, i&#39;m giving it my all. i&#39;m trusting the
+process, feeling like i&#39;m hitting a low right before the climb. it&#39;s
+that moment when u&#39;re going down the hill, but i&#39;m so ready to rise any
+time! 🔥&lt;/p&gt;
+&lt;p&gt;watch me.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="About Me" scheme="https://blog.enkr1.com/categories/About-Me/"/>
+    
+    <category term="Journals" scheme="https://blog.enkr1.com/categories/About-Me/Journals/"/>
+    
+    
+    <category term="journal" scheme="https://blog.enkr1.com/tags/journal/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>The Diary of A CEO by Steven Bartlett</title>
+    <link href="https://blog.enkr1.com/the-diary-of-a-ceo-by-steven-bartlett/"/>
+    <id>https://blog.enkr1.com/the-diary-of-a-ceo-by-steven-bartlett/</id>
+    <published>2024-11-05T18:39:11.000Z</published>
+    <updated>2025-01-23T19:10:05.192Z</updated>
+    
+    <content type="html"><![CDATA[<p>wip ...</p><h2 id="law-1-fill-the-5-buckets-in-the-right-order">Law 1: Fill the 5buckets in the right order</h2><p>“THE FIVE BUCKETS 1. What you know (your knowledge) 2. What you cando (your skills) 3. Who you know (your network) 4. What you have (yourresources) 5. What the world thinks of you (your reputation)”</p><hr /><p>tbc:</p><ul><li>https://stevenbartlett.com/doac/</li><li>https://www.youtube.com/watch?v=hCW2NHbWNwA</li></ul><hr /><blockquote><p>Texts Above Excerpt From The Diary of a CEO - Steven Bartlett Thismaterial may be protected by copyright.</p></blockquote>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;wip ...&lt;/p&gt;
+&lt;h2 id=&quot;law-1-fill-the-5-buckets-in-the-right-order&quot;&gt;Law 1: Fill the 5
+buckets in the right order&lt;/h2&gt;
+&lt;p&gt;“THE FIVE BUCKETS 1</summary>
+      
+    
+    
+    
+    <category term="Personal Development" scheme="https://blog.enkr1.com/categories/Personal-Development/"/>
+    
+    <category term="Notebooks" scheme="https://blog.enkr1.com/categories/Notebooks/"/>
+    
+    <category term="Collections" scheme="https://blog.enkr1.com/categories/Personal-Development/Collections/"/>
+    
+    <category term="Reading" scheme="https://blog.enkr1.com/categories/Personal-Development/Collections/Reading/"/>
+    
+    <category term="Book" scheme="https://blog.enkr1.com/categories/Personal-Development/Collections/Reading/Book/"/>
+    
+    <category term="Steven Bartlett" scheme="https://blog.enkr1.com/categories/Personal-Development/Collections/Reading/Book/Steven-Bartlett/"/>
+    
+    
+    <category term="reading" scheme="https://blog.enkr1.com/tags/reading/"/>
+    
+    <category term="ebook" scheme="https://blog.enkr1.com/tags/ebook/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Why Do I Love Beatboxing?</title>
+    <link href="https://blog.enkr1.com/why-do-i-love-beatboxing/"/>
+    <id>https://blog.enkr1.com/why-do-i-love-beatboxing/</id>
+    <published>2024-11-04T17:50:52.000Z</published>
+    <updated>2024-12-30T22:02:21.281Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="why-do-i-love-beatboxing">Why do i love beatboxing?</h2><p>lately, i've been feeling so demotivated, stuck in a loop of the sameold beats without anything fresh or creative coming out, i've beentrying-forcing myself, even-but nothing feels right, it's honestlyfrustrating. 😭</p><p>i trust the process and i know i won't give up, but right now i'mjust mad at myself hitting this wall.</p><p>out of nowhere, i decided to reach out to <ahref="https://www.instagram.com/artsybeatbox">Artsy</a>—a beatboxer i'velooked up to for a long time. he's one of the beatboxers who inspired mea lot as i started my beatboxing journey, and until now his beats stillblow my mind. so i messaged him and asked, <em>"hey bro, i'm preppingfor Voices-the upcoming beatbox competition-but i'm really struggling tocome up with anything new. i keep falling back on my old stuff. how doyou stay at the top and keep creating new, next-level shit?"</em></p><p>after a long talk with him, he left me with something that hit mehard: <em>"Have some patience and try to approach beatboxing in a humblemanner, and really go back to your root—like why did you lovebeatboxing?"</em></p><p>that question got me thinking deeply about my roots in beatboxing,and that's why i am here, writing this reflection on: <strong>why do ilove beatboxing?</strong></p><blockquote><p>the competition is just 31 days away as i write this ... (assumingthat i win the wildcard)</p></blockquote><hr /><h3 id="section">2024.11.05</h3><p>why?</p><p>what does it actually give me?</p><p>does beatboxing still make me happy?</p><p>how do i feel when i beatbox?</p><p>...</p><p>i loved beatboxing.</p><p>i loved the thrill of seeing people move to my beats.</p><p>i loved the freedom in creating music on my own terms.</p><p>i loved the inspiration and creativity it sparked in me-it used tobring so much joy.</p><p>so why am i losing this feeling now?</p><p>how do i find my way back?</p><p>...</p><hr /><h3 id="section-1">2024.11.28</h3><p>i think i've figured out why i love beatboxing...</p><p>it's the reaction.</p><p>i love seeing how people light up when they hear my beats, the waythey react-whether it's suprise, excitement, or awe.</p><p>i love it when i hear people saying good things about my beatboxing,and yeah, maybe it's a bit of attention seeking. but i've realised thatthis drive, this need to connect with others through my art is what mademe who i am today.</p><p>when i first started beatboxing, i didn't just keep it to myself. iimmediately signed up for my school's talent show. the stage, the crowd,the energy-it was unforgettable. i ended up winning the competition twoyears in a row, and the attention i got was unreal.</p><p>suddenly, i had all these new friends. some of them, i'll admit,probably just wanna be friends with me because i was the "cool kid" inshcool or whatever. but still, it felt so good to be seen, to berecognised for something i LOVE doing.</p><p>idk</p><p>realising that this was my drive-connecting with people, making animpact-i just wanted to write this down, so i don't forget.</p><p>it's a part of me.</p><hr />]]></content>
+    
+    
+    <summary type="html">After a deep conversation with Malaysian beatbox legend Artsy, I am reflecting on why beatboxing has been such a big part of my life. This is my journey to rediscovering the roots of my passion and reconnecting with what made me love beatboxing in the first place.</summary>
+    
+    
+    
+    <category term="About Me" scheme="https://blog.enkr1.com/categories/About-Me/"/>
+    
+    <category term="Hobbies" scheme="https://blog.enkr1.com/categories/About-Me/Hobbies/"/>
+    
+    <category term="Beatboxing" scheme="https://blog.enkr1.com/categories/About-Me/Hobbies/Beatboxing/"/>
+    
+    
+    <category term="journal" scheme="https://blog.enkr1.com/tags/journal/"/>
+    
+    <category term="reflection" scheme="https://blog.enkr1.com/tags/reflection/"/>
+    
+    <category term="beatboxing" scheme="https://blog.enkr1.com/tags/beatboxing/"/>
+    
+    <category term="deep-thoughts" scheme="https://blog.enkr1.com/tags/deep-thoughts/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Journal: Week 15</title>
+    <link href="https://blog.enkr1.com/journal-week-15/"/>
+    <id>https://blog.enkr1.com/journal-week-15/</id>
+    <published>2024-11-03T15:43:11.000Z</published>
+    <updated>2024-12-30T22:39:03.256Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="highlights-of-the-week">Highlights of the Week</h2><p>this week, i felt super productive at work, managing to wrap up mostof my tasks right on time or even ahead of schedule.</p><p>each day had a familiar rhythm—get up, commute with a good book,work, hit the gym, beatbox practice, unwind with some me-time, thensleep. it may have been routine, but there's a sense of calm in theconsistency.</p><p>i also decided to head back to malaysia to spend time with my family.my mum recently hurt her lower back, and i could feel the urge to beclose, to share some quality time and be there for her. this time withfamily, no matter how brief, always feels grounding. ❤️</p><p>another bright spot was reconnecting with my friends from secondaryschool. these are people who have been part of my journey for years, andcatching up with them brought back so many good memories. seeing themdoing so well made me genuinely happy, and i'm just grateful to havethese friendships still going strong.</p><p>普普通通 平平淡淡的一周</p><p>但是又觉得很充实 💪🏼</p><span id="more"></span><h2 id="reading-insights">Reading Insights</h2><h3 id="the-law-leverage-the-power-of-progress">THE LAW: LEVERAGE THEPOWER OF PROGRESS</h3><p>To solve problems, encourage and celebrate small wins. This providescontinuous forward momentum, which creates an atmosphere of success anda positive sense that a team is moving towards their bigger goals.Employees are most motivated when they are engaged with the work thatthey're doing, and feel like they are making a difference.</p><blockquote><p>“The most professionally rewarding feeling in the world is a sense offorward motion.”</p></blockquote><h3 id="the-law-you-must-be-an-inconsistent-leader">THE LAW: YOU MUST BEAN INCONSISTENT LEADER</h3><p>It is impossible to seamlessly blend into a team as a jigsaw pieceunless you comprehend the unique shape of each of your team members. SirAlex Ferguson's acumen in this regard was legendary, as attested to byhis former players and staff, and even rival managers. He possessed anencyclopedic knowledge of everything from the hobbies of his players'wives to the names of their pets, and as Rio Ferdinand told me, eventheir grandfathers' preferred brand of whisky. More significantly, heknew that every member of his team was propelled by vastly differentmotivators. While one player may have thrived under Ferguson's infamous‘hairdryer' treatment (where he would shout angrily at them in thedressing room or on the training ground), another may have required amore compassionate approach, and still another may have been motivatedby a more hands-off approach. This is why Ferguson didn't have to be thetactical mastermind that many assume he must have been, but rather anemotional savant. When you're in the business of motivating people,<strong>emotional management is everything.</strong></p><blockquote><p>Great leaders are fluid, flexible, and full of fluctuation. They arewhatever shape they need to be, to complete your motivation.</p></blockquote><p><em>Excerpt From The Diary of a CEO - Steven Bartlett</em></p><h2 id="memories">Memories</h2><video width="auto" height="auto" controls><source src="/journal-week-15/IMG_5447_compressed.mp4" type="video/mp4"></video>]]></content>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;highlights-of-the-week&quot;&gt;Highlights of the Week&lt;/h2&gt;
+&lt;p&gt;this week, i felt super productive at work, managing to wrap up most
+of my tasks right on time or even ahead of schedule.&lt;/p&gt;
+&lt;p&gt;each day had a familiar rhythm—get up, commute with a good book,
+work, hit the gym, beatbox practice, unwind with some me-time, then
+sleep. it may have been routine, but there&#39;s a sense of calm in the
+consistency.&lt;/p&gt;
+&lt;p&gt;i also decided to head back to malaysia to spend time with my family.
+my mum recently hurt her lower back, and i could feel the urge to be
+close, to share some quality time and be there for her. this time with
+family, no matter how brief, always feels grounding. ❤️&lt;/p&gt;
+&lt;p&gt;another bright spot was reconnecting with my friends from secondary
+school. these are people who have been part of my journey for years, and
+catching up with them brought back so many good memories. seeing them
+doing so well made me genuinely happy, and i&#39;m just grateful to have
+these friendships still going strong.&lt;/p&gt;
+&lt;p&gt;普普通通 平平淡淡的一周&lt;/p&gt;
+&lt;p&gt;但是又觉得很充实 💪🏼&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="About Me" scheme="https://blog.enkr1.com/categories/About-Me/"/>
+    
+    <category term="Journals" scheme="https://blog.enkr1.com/categories/About-Me/Journals/"/>
+    
+    
+    <category term="journal" scheme="https://blog.enkr1.com/tags/journal/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Journal: Week 14</title>
+    <link href="https://blog.enkr1.com/journal-week-14/"/>
+    <id>https://blog.enkr1.com/journal-week-14/</id>
+    <published>2024-10-27T18:18:26.000Z</published>
+    <updated>2024-12-30T22:39:03.256Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="highlights-of-the-week">Highlights of the Week</h2><p>this week, my priorities were on: work, gym and prepping myself forthe beatbox competition i'm planning to participate. to top it off...6th december is my birthday too! UGH</p><p>it's been over 3 years since i last battled, and i can't even beginto explain how much i miss it—the rush of adrenaline when you're onstage, the energy from the crowd, and the vibe from all the otherbeatboxers. it's not just the competition; it's the whole experiencethat i miss so much.</p><p>i've been putting in a lot of effort lately, but, to be honest, itstill feels like i could do more... but, balancing everything—work, gym,and beatboxing—is tough. after a long day at work, it's straight to thegym, and only after that do i get the time to practise beatboxing. but iknow it's all about mental. the grind never stops, and i have to pushthrough it.</p><p>my biggest challenge right now is breaking out of my usual beats andtrying to create something new. it's been about 20 days of trying, andi'm still struggling to come up with fresh routines. it's frustrating,but i know this is the part of the process where many people give up.this feeling of being stuck—that's the moment when you're on the vergeof a breakthrough. if i can just push past this, i know success is justaround the corner.</p><p>i got this. 🙌</p><span id="more"></span><h2 id="reading-insights">Reading Insights</h2><blockquote><p>"The sole reason of why people procrastinate is because they'retrying to avoid some form of ‘psyhological discomfort' in their life.The bigger the task and the less competent we feel about accomplishingit, the greater the procrastination."</p></blockquote><p>this quote really struck me. i could feel it resonate in my dailylife, especially when it comes to things like hitting the snooze buttonin the morning or mindlessly scrolling through 抖音 and instagram reels.it's like i'm delaying that sense of discomfort, avoiding the challengeahead, even though i know it's not helping me in the long run.</p><p>i know i am not alone in this, and that gives me a bit of comfort.but i also know this is a process, one that takes time andself-awareness. i'm working on it—slowly, but surely. recognising thispsychological discomfort as the root of procrastination is already astep forward for me. the next step is taking action, even when i don'tfeel ready, and learning to push through that initial resistance. it's ajourney of self-discipline and growth.</p><p>i'm not perfect—there are still days when i fall into old habits, butunderstanding why i procrastinate has shifted my mindset. i've come torealise that it's not about eliminating procrastination overnight, butabout <strong>improving little by little</strong>, showing up even onthe hard days, and building momentum. one small victory at a time.🌱</p><p>at the end of the day, <strong>progress over perfection</strong> iswhat really matters. so, while i might still have moments of distractionor hesitation, i'm committed to pushing through and becoming the bestversion of myself, one day at a time.</p><h2 id="memories">Memories</h2><video width="auto" height="auto" controls><source src="/journal-week-14/IMG_5270_compressed.mp4" type="video/mp4"></video><video width="auto" height="auto" controls><source src="/journal-week-14/IMG_5309_compressed.mp4" type="video/mp4"></video>]]></content>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;highlights-of-the-week&quot;&gt;Highlights of the Week&lt;/h2&gt;
+&lt;p&gt;this week, my priorities were on: work, gym and prepping myself for
+the beatbox competition i&#39;m planning to participate. to top it off...
+6th december is my birthday too! UGH&lt;/p&gt;
+&lt;p&gt;it&#39;s been over 3 years since i last battled, and i can&#39;t even begin
+to explain how much i miss it—the rush of adrenaline when you&#39;re on
+stage, the energy from the crowd, and the vibe from all the other
+beatboxers. it&#39;s not just the competition; it&#39;s the whole experience
+that i miss so much.&lt;/p&gt;
+&lt;p&gt;i&#39;ve been putting in a lot of effort lately, but, to be honest, it
+still feels like i could do more... but, balancing everything—work, gym,
+and beatboxing—is tough. after a long day at work, it&#39;s straight to the
+gym, and only after that do i get the time to practise beatboxing. but i
+know it&#39;s all about mental. the grind never stops, and i have to push
+through it.&lt;/p&gt;
+&lt;p&gt;my biggest challenge right now is breaking out of my usual beats and
+trying to create something new. it&#39;s been about 20 days of trying, and
+i&#39;m still struggling to come up with fresh routines. it&#39;s frustrating,
+but i know this is the part of the process where many people give up.
+this feeling of being stuck—that&#39;s the moment when you&#39;re on the verge
+of a breakthrough. if i can just push past this, i know success is just
+around the corner.&lt;/p&gt;
+&lt;p&gt;i got this. 🙌&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="About Me" scheme="https://blog.enkr1.com/categories/About-Me/"/>
+    
+    <category term="Journals" scheme="https://blog.enkr1.com/categories/About-Me/Journals/"/>
+    
+    
+    <category term="journal" scheme="https://blog.enkr1.com/tags/journal/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Building a Dynamic and Smooth Progress Bar for Web Loading</title>
+    <link href="https://blog.enkr1.com/building-a-dynamic-and-smooth-progress-bar-for-web-loading/"/>
+    <id>https://blog.enkr1.com/building-a-dynamic-and-smooth-progress-bar-for-web-loading/</id>
+    <published>2024-10-26T19:42:23.000Z</published>
+    <updated>2024-10-27T17:36:43.715Z</updated>
+    
+    <content type="html"><![CDATA[<p>While developing the my <ahref="https://enkr1.github.io/platforms/">platforms (my version oflinktree)</a>, I realised my initial loading mechanism, which relied onmy customised <code>docReady</code>, was not cutting it. It missed outon crucial elements like external images and API calls, leading to aninconsistent loading experience. I knew I needed a more comprehensivesolution—one that would track every resource seamlessly, ensuring usersexperience a smooth, uninterrupted progress bar.</p><hr /><h2 id="step-by-step-breakdown-of-the-solution">Step-by-Step Breakdownof the Solution</h2><h3 id="dynamically-track-all-resources-images-and-apis">1. DynamicallyTrack All Resources: Images and APIs</h3><p>The first thing I addressed was dynamically collecting all resourcesthat needed to load—images, API calls, and any external assets.</p><p><strong>Code Snippet:</strong> <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">getAllImages</span> = (<span class="params"></span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">return</span> [...<span class="variable language_">document</span>.<span class="title function_">querySelectorAll</span>(<span class="string">&#x27;img&#x27;</span>)].<span class="title function_">map</span>(<span class="function"><span class="params">img</span> =&gt;</span> img.<span class="property">src</span>);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure> This snippet collectsall the images on the page dynamically and ensures that every image istracked for loading.</p><h3 id="incremental-progress-calculation">2. Incremental ProgressCalculation</h3><p>To ensure smooth progress tracking, I calculated the progresspercentage based on the total number of resources (images + API calls).For every loaded resource, the progress is updated.</p><p><strong>Key Concept:</strong></p><ul><li><strong>Total Resources:</strong> Total number of images + APIcalls.</li><li><strong>Loaded Items:</strong> Track loaded resources and update thepercentage accordingly.</li></ul><p><strong>Code Snippet:</strong> <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">updateLoadingProgress</span> = (<span class="params"></span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">const</span> percent = (loadedItems / totalItems) * <span class="number">100</span>;</span><br><span class="line">  <span class="title function_">updateLoadingProgressSmoothly</span>(percent);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure> This ensures that everytime a resource is loaded, the percentage updates progressively.</p><h3 id="smooth-progress-with-delays">3. Smooth Progress with Delays</h3><p>For a polished user experience, I added delays and smaller steps tothe progress increments. This ensures that even with a fast network, thebar doesn't jump directly to 100%.</p><p><strong>Key Concept:</strong> Adjust the delay based onprogress—slower increments at the start, faster towards the end, butalways smooth.</p><p><strong>Code Snippet:</strong> <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">updateLoadingProgressSmoothly</span> = (<span class="params">targetPercent, delay = <span class="number">50</span></span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">const</span> step = (targetPercent - currentPercent) / <span class="number">100</span>;</span><br><span class="line">  <span class="keyword">const</span> interval = <span class="built_in">setInterval</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (currentPercent &lt; targetPercent) &#123;</span><br><span class="line">      currentPercent += step;</span><br><span class="line">      <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;loading-bar&#x27;</span>).<span class="property">style</span>.<span class="property">width</span> = <span class="string">`<span class="subst">$&#123;currentPercent&#125;</span>%`</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="built_in">clearInterval</span>(interval);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;, delay);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure> This snippet ensuresthat the progress bar moves smoothly, even for faster connections.</p><h3 id="tracking-api-calls">4. Tracking API Calls</h3><p>In addition to images, I also needed to track API calls. Iimplemented a simple wrapper around <code>fetch()</code> to ensure eachcall was accounted for in the progress.</p><p><strong>Code Snippet:</strong> <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">trackedFetch</span> = <span class="keyword">async</span> (<span class="params">url</span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">const</span> apiPromise = <span class="title function_">fetch</span>(url);</span><br><span class="line">  <span class="keyword">await</span> apiPromise;</span><br><span class="line">  loadedItems++;</span><br><span class="line">  <span class="title function_">updateLoadingProgress</span>();</span><br><span class="line">  <span class="keyword">return</span> apiPromise;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure> This function trackseach API call and updates the progress bar as soon as the response isreceived.</p><h3 id="debugging-for-accurate-progress-tracking">5. Debugging forAccurate Progress Tracking</h3><p>Throughout the implementation, I used logging to debug issues likeovershooting the progress (going beyond 100%) or not reaching 100%.Debugging helped fine-tune the logic for a more reliable progressbar.</p><p><strong>Code Snippet:</strong> <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">log</span>(<span class="string">`<span class="subst">$&#123;loadedItems&#125;</span>/<span class="subst">$&#123;totalItems&#125;</span> - Loading progress: <span class="subst">$&#123;percent&#125;</span>%`</span>);</span><br></pre></td></tr></table></figure> Logging every resourceloaded gave me insight into the progress flow and helped eliminateinaccuracies.</p><h3 id="hiding-the-loading-screen">6. Hiding the Loading Screen</h3><p>Once all resources are loaded and the progress bar reaches 100%, Ismoothly hide the loading screen to reveal the page.</p><p><strong>Code Snippet:</strong> <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (currentPercent &gt;= <span class="number">100</span>) &#123;</span><br><span class="line">  <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;loading-screen&#x27;</span>).<span class="property">style</span>.<span class="property">opacity</span> = <span class="string">&quot;0&quot;</span>;</span><br><span class="line">    <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;loading-screen&#x27;</span>).<span class="property">style</span>.<span class="property">zIndex</span> = <span class="string">&quot;-999&quot;</span>;</span><br><span class="line">  &#125;, <span class="number">300</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure> This adds a slight delaybefore removing the loading screen, giving users a final touch ofpolish.</p><hr /><h2 id="my-code">My Code</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> loadedItems = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">let</span> totalItems = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">let</span> currentPercent = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> apiFetches = [</span><br><span class="line">    <span class="string">`<span class="subst">$&#123;ENDPOINT_DATA&#125;</span>/platform_obj.json`</span>,</span><br><span class="line">    <span class="string">`<span class="subst">$&#123;ENDPOINT_DATA&#125;</span>/profile.json`</span>,</span><br><span class="line">    <span class="comment">// Add more API URLs here</span></span><br><span class="line">];</span><br><span class="line"></span><br><span class="line"><span class="comment">// Smooth progress update with easing towards the end</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">updateLoadingProgressSmoothly</span> = (<span class="params">targetPercent, delay = <span class="number">50</span></span>) =&gt; &#123;</span><br><span class="line">    targetPercent = <span class="title class_">Math</span>.<span class="title function_">min</span>(targetPercent, <span class="number">100</span>); <span class="comment">// Cap at 100%</span></span><br><span class="line">    <span class="keyword">const</span> step = (targetPercent - currentPercent) / <span class="number">100</span>; <span class="comment">// Smaller step for smoother progress</span></span><br><span class="line">    <span class="title function_">log</span>(<span class="string">`Updating loading progress to <span class="subst">$&#123;targetPercent&#125;</span>%, step: <span class="subst">$&#123;step&#125;</span>`</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> interval = <span class="built_in">setInterval</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (currentPercent &lt; targetPercent) &#123;</span><br><span class="line">            currentPercent += step;</span><br><span class="line">            currentPercent = <span class="title class_">Math</span>.<span class="title function_">min</span>(currentPercent, targetPercent); <span class="comment">// Ensure it doesn&#x27;t overshoot</span></span><br><span class="line">            <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;loading-bar&#x27;</span>).<span class="property">style</span>.<span class="property">width</span> = <span class="string">`<span class="subst">$&#123;currentPercent&#125;</span>%`</span>;</span><br><span class="line">            <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;loading-text&#x27;</span>).<span class="property">innerText</span> = <span class="string">`<span class="subst">$&#123;<span class="built_in">Math</span>.floor(currentPercent)&#125;</span>%`</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="built_in">clearInterval</span>(interval);</span><br><span class="line"></span><br><span class="line">            <span class="comment">// Only hide the loading screen when 100% is reached</span></span><br><span class="line">            <span class="keyword">if</span> (currentPercent &gt;= <span class="number">100</span>) &#123;</span><br><span class="line">                <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">                    <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;loading-screen&#x27;</span>).<span class="property">style</span>.<span class="property">opacity</span> = <span class="string">&quot;0&quot;</span>;</span><br><span class="line">                    <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;loading-screen&#x27;</span>).<span class="property">style</span>.<span class="property">zIndex</span> = <span class="string">&quot;-999&quot;</span>;</span><br><span class="line">                &#125;, <span class="number">300</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;, delay);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Function to update loading progress</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">updateLoadingProgress</span> = (<span class="params"></span>) =&gt; &#123;</span><br><span class="line">    <span class="keyword">const</span> percent = (loadedItems / totalItems) * <span class="number">100</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Slow down the earlier progress increments</span></span><br><span class="line">    <span class="keyword">const</span> delay = percent &lt; <span class="number">50</span> ? <span class="number">1000</span> : percent &lt; <span class="number">90</span> ? <span class="number">500</span> : <span class="number">300</span>; <span class="comment">// Adjust delay based on current progress</span></span><br><span class="line"></span><br><span class="line">    <span class="title function_">log</span>(<span class="string">`<span class="subst">$&#123;loadedItems&#125;</span>/<span class="subst">$&#123;totalItems&#125;</span> - Loading progress: <span class="subst">$&#123;percent&#125;</span>%, delay: <span class="subst">$&#123;delay&#125;</span>ms`</span>);</span><br><span class="line"></span><br><span class="line">    <span class="title function_">updateLoadingProgressSmoothly</span>(percent, delay);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Dynamically fetch all images from the DOM</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">getAllImages</span> = (<span class="params"></span>) =&gt; &#123;</span><br><span class="line">    <span class="keyword">const</span> images = [...<span class="variable language_">document</span>.<span class="title function_">querySelectorAll</span>(<span class="string">&#x27;img&#x27;</span>)].<span class="title function_">map</span>(<span class="function"><span class="params">img</span> =&gt;</span> img.<span class="property">src</span>);</span><br><span class="line">    totalItems += images.<span class="property">length</span>; <span class="comment">// Increment totalItems dynamically</span></span><br><span class="line">    <span class="keyword">return</span> images;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Track image loading with promises</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">trackImageLoading</span> = (<span class="params">src</span>) =&gt; &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="function">(<span class="params">resolve</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">const</span> img = <span class="keyword">new</span> <span class="title class_">Image</span>();</span><br><span class="line">        img.<span class="property">src</span> = src;</span><br><span class="line">        img.<span class="property">onload</span> = img.<span class="property">onerror</span> = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">            loadedItems++;</span><br><span class="line">            <span class="title function_">log</span>(<span class="string">`<span class="subst">$&#123;loadedItems&#125;</span>/<span class="subst">$&#123;totalItems&#125;</span> - Image loaded: <span class="subst">$&#123;src&#125;</span>`</span>);</span><br><span class="line"></span><br><span class="line">            <span class="title function_">updateLoadingProgress</span>();</span><br><span class="line">            <span class="title function_">resolve</span>();</span><br><span class="line">        &#125;;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Track API loading and fetch</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">trackedFetch</span> = <span class="keyword">async</span> (<span class="params">url</span>) =&gt; &#123;</span><br><span class="line">    totalItems++; <span class="comment">// Increment totalItems dynamically</span></span><br><span class="line">    <span class="keyword">const</span> apiPromise = <span class="title function_">fetch</span>(url);</span><br><span class="line">    <span class="keyword">await</span> apiPromise;</span><br><span class="line">    loadedItems++;</span><br><span class="line">    <span class="title function_">log</span>(<span class="string">`[DEBUG] <span class="subst">$&#123;loadedItems&#125;</span>/<span class="subst">$&#123;totalItems&#125;</span> - API loaded: <span class="subst">$&#123;url&#125;</span>`</span>);</span><br><span class="line">    <span class="title function_">updateLoadingProgress</span>();</span><br><span class="line">    <span class="keyword">return</span> apiPromise;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Start tracking resources (images and API calls)</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">startTrackingResources</span> = <span class="keyword">async</span> (<span class="params"></span>) =&gt; &#123;</span><br><span class="line">    <span class="keyword">const</span> images = <span class="title function_">getAllImages</span>(); <span class="comment">// Automatically fetch all images from the DOM</span></span><br><span class="line"></span><br><span class="line">    <span class="title function_">log</span>(<span class="string">`[DEBUG] Total initial resources to load: <span class="subst">$&#123;totalItems&#125;</span> (Images: <span class="subst">$&#123;images.length&#125;</span>, APIs: <span class="subst">$&#123;apiFetches.length&#125;</span>)`</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> imagePromises = images.<span class="title function_">map</span>(trackImageLoading);</span><br><span class="line">    <span class="keyword">const</span> fetchPromises = apiFetches.<span class="title function_">map</span>(trackedFetch);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">await</span> <span class="title class_">Promise</span>.<span class="title function_">all</span>([...imagePromises, ...fetchPromises]);</span><br><span class="line">    <span class="title function_">updateLoadingProgress</span>(); <span class="comment">// Final call to ensure progress reaches 100%</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Start tracking resources when DOM is ready</span></span><br><span class="line"><span class="variable language_">document</span>.<span class="title function_">addEventListener</span>(<span class="string">&#x27;DOMContentLoaded&#x27;</span>, startTrackingResources);</span><br></pre></td></tr></table></figure><hr /><h2 id="preview">Preview</h2><img data-src="/building-a-dynamic-and-smooth-progress-bar-for-web-loading/20241027-041546.gif" class=""><hr /><h2 id="final-thoughts">Final Thoughts</h2><p>Creating a dynamic loading bar might seem like a small detail, butI've found that it makes a <strong>huge difference</strong> in howsmooth and polished the overall experience feels for users. Whether it'stracking images, API calls, or other external assets, having everythingrun seamlessly creates that subtle, yet important, sense of reliabilityand care.</p><p>Of course, this is just one approach, and I know it's definitely<strong>NOT</strong> the best or only way to do it. I'm always learning,and I'm open to feedback from anyone who's more experienced! 🙌</p><p>I'm sure there are tons of ways to make this even better, and I'dlove to hear how the pros out there tackle similar challenges.</p><p>If you've done something similar or have tips to share, feel free todrop a comment below. Let's learn from each other and keep improving ourcraft! 🤩</p><hr /><h2 id="references">References</h2><ul><li>https://gsap.com/community/forums/topic/12201-draw-svg-plugin-to-animate-a-dashed-line/</li><li>https://codepen.io/MAW/pen/zGXvWW</li></ul>]]></content>
+    
+    
+    <summary type="html">Learn how to build a robust and interactive loading progress bar that tracks images, API calls, and other assets to deliver a seamless user experience.</summary>
+    
+    
+    
+    <category term="Software Engineering" scheme="https://blog.enkr1.com/categories/Software-Engineering/"/>
+    
+    <category term="Web Development" scheme="https://blog.enkr1.com/categories/Software-Engineering/Web-Development/"/>
+    
+    <category term="Front-end" scheme="https://blog.enkr1.com/categories/Software-Engineering/Web-Development/Front-end/"/>
+    
+    <category term="UI/UX" scheme="https://blog.enkr1.com/categories/Software-Engineering/Web-Development/Front-end/UI-UX/"/>
+    
+    
+    <category term="javascript" scheme="https://blog.enkr1.com/tags/javascript/"/>
+    
+    <category term="css" scheme="https://blog.enkr1.com/tags/css/"/>
+    
+    <category term="html5" scheme="https://blog.enkr1.com/tags/html5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>My Reading Collection</title>
+    <link href="https://blog.enkr1.com/my-reading-collection/"/>
+    <id>https://blog.enkr1.com/my-reading-collection/</id>
+    <published>2024-10-26T08:49:19.000Z</published>
+    <updated>2025-01-12T21:47:36.265Z</updated>
+    
+    <content type="html"><![CDATA[<hr /><p><em>Welcome to my reading collection! 📚</em></p><p>if you are a tech enthusiast, avid reader, or just someone eager todive into a treasure trove of knowledge, you have come to the rightplace! here, i have curated a growing collection of books, eBooks, andinsightful articles that i have either read, plan to read, or stumbledupon during my online explorations. this collection is ever-evolving, somake sure to check back frequently for new additions and discoveries!🚀📚✨</p><hr /><h2 id="github-repositories">GitHub Repositories</h2><h3 id="books-by-eyeke04"><ahref="https://github.com/eyeke04/Books">Books by <span class="citation"data-cites="eyeke04">@eyeke04</span></a></h3><p>A massive collection of personal development books here.</p><h3 id="mybooks-by-shamaugale"><ahref="https://github.com/ShamaUgale/myBooks">myBooks by <spanclass="citation" data-cites="ShamaUgale">@ShamaUgale</span></a></h3><p>Including Google Leetcode Question, SWE's interview prep books,etc.</p><hr /><h2 id="ebooks">eBooks</h2><blockquote><p>Inspirational Reads</p></blockquote><h3id="never-split-the-difference-negotiating-as-if-your-life-depended-on-it-by-christopher-voss">NeverSplit the Difference: Negotiating As If Your Life Depended On It byChristopher Voss</h3><p>...</p><h3 id="the-7-habits-of-highly-effective-people-by-stephen-covey"><ahref="/insights-and-reflections-on-the-7-habits-of-highly-effective-people-by-stephen-covey/">The7 Habits of Highly Effective People by Stephen Covey</a></h3><p>A classic read on <strong>personal development</strong>, offeringtimeless principles to help you live more effectively and achievesuccess in all areas of life.</p><h3 id="the-diary-of-a-ceo-by-steven-bartlett"><ahref="/insights-and-reflections-on-the-diary-of-a-ceo-by-steven-bartlett/">TheDiary of a CEO by Steven Bartlett</a></h3><h3 id="cues-master-the-secret-language-of-charismatic-communication"><ahref="/https://www.amazon.co.uk/Cues-Master-Language-Charismatic-Communication/dp/0241554934?&amp;linkCode=sl1&amp;tag=diaryofaceo0c-21&amp;linkId=0484728d5a239add83d9ebd1de90e1c2&amp;language=en_GB&amp;ref_=as_li_ss_tl">Cues:Master the Secret Language of Charismatic Communication</a></h3><hr /><h2 id="to-read">To read</h2><h3 id="atomic-habits-by-james-clear"><ahref="https://www.amazon.com/Atomic-Habits-James-Clear/dp/0735211299">AtomicHabits by James Clear</a></h3><p>One of the best books on <strong>habit formation</strong>. Learn howto build good habits, break bad ones, and master the small changes thatcan transform your life.</p><h3 id="deep-work-by-cal-newport"><ahref="https://www.calnewport.com/books/deep-work/">Deep Work by CalNewport</a></h3><p>Learn how to focus without distraction on cognitively demanding tasksand produce high-quality work. A must-read for anyone aiming to enhancetheir productivity!</p><hr /><h2 id="want-to-share">Want to Share?</h2><p>This is a <strong>living collection</strong>, so if you have anyrecommendations, feel free to drop them in the comments! I would love tocheck them out and possibly add them to this list! 💡</p><p>Stay tuned for more updates! I am planning to add more categories andcurated reading lists as I continue my reading journey!</p><hr /><p>Thank you for visiting my collection—happy reading! 😊</p>]]></content>
+    
+    
+    <summary type="html">Explore my personal collection of ebooks and resources on topics ranging from technology and coding to self-development. This list evolves as I discover new reads and valuable insights.</summary>
+    
+    
+    
+    <category term="Personal Development" scheme="https://blog.enkr1.com/categories/Personal-Development/"/>
+    
+    <category term="Notebooks" scheme="https://blog.enkr1.com/categories/Notebooks/"/>
+    
+    <category term="Collections" scheme="https://blog.enkr1.com/categories/Personal-Development/Collections/"/>
+    
+    <category term="Reading" scheme="https://blog.enkr1.com/categories/Personal-Development/Collections/Reading/"/>
+    
+    
+    <category term="reading" scheme="https://blog.enkr1.com/tags/reading/"/>
+    
+    <category term="ebooks" scheme="https://blog.enkr1.com/tags/ebooks/"/>
+    
+    <category term="resources" scheme="https://blog.enkr1.com/tags/resources/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Design Inspirations</title>
+    <link href="https://blog.enkr1.com/design-inspirations/"/>
+    <id>https://blog.enkr1.com/design-inspirations/</id>
+    <published>2024-10-22T19:07:26.000Z</published>
+    <updated>2024-10-23T19:41:58.188Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="source-awwwards.com">Source: <ahref="https://www.awwwards.com/">awwwards.com</a></h2><p>Let's be real, nothing beats scrolling through a perfectly craftedwebsite that just flows. Whether it's the insane animation, killertypography, or smooth transitions that make you think, <em>wow, i needto step up my design game</em>—this is where i dump all those gems istumble upon.</p><p>Here's a list of websites that completely blew me away. 💻✨</p><blockquote><p>ain't too formal, just a place for me to keep track of designs thatspark creativity.</p></blockquote><hr /><h2 id="camichan---camille-mormal">Camichan - <ahref="https://camillemormal.com/">Camille Mormal</a></h2><p>An absolute <strong>masterpiece of animation</strong>! Thetransitions and fluid motion throughout the site make you feel likeyou're gliding. Every scroll feels like a mini work of art. Just<em>wow</em> ... 💫</p><hr /><p>as i keep finding more of these gems, i will throw them here. thisspace is a work in progress, and i will probably keep adding notes onwhat makes each site so sick, whether it's the animations, colourpalettes, or just that overall vibe.</p>]]></content>
+    
+    
+    <summary type="html">A personal stash of websites with jaw-dropping animations, smooth UX, and creative design ideas to inspire your next project.</summary>
+    
+    
+    
+    <category term="Software Engineering" scheme="https://blog.enkr1.com/categories/Software-Engineering/"/>
+    
+    <category term="Web Development" scheme="https://blog.enkr1.com/categories/Software-Engineering/Web-Development/"/>
+    
+    <category term="Notebooks" scheme="https://blog.enkr1.com/categories/Notebooks/"/>
+    
+    <category term="Front-end" scheme="https://blog.enkr1.com/categories/Software-Engineering/Web-Development/Front-end/"/>
+    
+    <category term="Design" scheme="https://blog.enkr1.com/categories/Software-Engineering/Web-Development/Front-end/Design/"/>
+    
+    
+    <category term="idea" scheme="https://blog.enkr1.com/tags/idea/"/>
+    
+    <category term="design" scheme="https://blog.enkr1.com/tags/design/"/>
+    
+    <category term="web-design" scheme="https://blog.enkr1.com/tags/web-design/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Journal: Week 13</title>
+    <link href="https://blog.enkr1.com/journal-week-13/"/>
+    <id>https://blog.enkr1.com/journal-week-13/</id>
+    <published>2024-10-20T14:27:42.000Z</published>
+    <updated>2024-12-30T22:39:03.279Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="highlights-of-the-week">Highlights of the Week</h2><p>i completely forgot to mention something from the previous week—itslipped my mind while writing! 💀 i guess the gym story took thespotlight for me.</p><p>i had the honour of being a judge at the <ahref="https://www.instagram.com/p/DAI7HN8IOxN/">Ignition Beatbox AcademyEvent</a> by the <span class="exturl" data-url="aHR0cHM6Ly81NTViZWF0Ym94c2luZ2Fwb3JlLmNvbS8=">555 BeatboxInitiative<i class="fa fa-external-link-alt"></i></span> on 12th October 2024. the judging panel includedClarkceds, Varen, and myself, and it was such a privilege to be a partof it. we judged the level 2 students' showcases and the level 3 battle.watching them perform was a proud moment. i still remember seeing someof these students on their first day, and now, to witness how farthey've come—it's honestly incredible.</p><p>okay, let's talk about this week!</p><p>this week was pretty chill overall. i had a few gym sessions withInovity, and honestly, having someone push you to failure just hitsdifferent! 🔥</p><p>seeing my coworkers travelling for business trips did make me feel alittle envious—i'd love to go on one soon. they've been travelling sooften, and i'm really happy for them! i'm just waiting for my chance andfeeling excited for whenever that happens, or maybe i will have to fightfor it? idk, it is a mix of feelings 🥹🤞🏼 but at the end of the day, iknow that everyone has their own timing. i will keep pushing myself anddoing my best, knowing that my opportunity will come when it is meantto. turning that envy into motivation is what keeps me going—i havelearned to celebrate others while still working towards my own goals.🫶🏻</p><p>on the work front, i've been feeling more motivated and superproductive. i made it a point to be proactive, asking more questions(not the dumb kind tho 😂). i always try things myself first beforeseeking help.</p><p>overall, this week was a productive one!</p><p>下周继续加油 竞辉！💪🏼</p><span id="more"></span><h2 id="memories">Memories</h2><video width="auto" height="auto" controls><source src="/journal-week-13/IMG_5188_compressed.mp4" type="video/mp4"></video><blockquote><p>i was really touched when i saw this security guard helping a ladywith her baby stroller on the escalator. she was holding a baby, withtwo other kids around, and this moment just felt so heartwarming. 🥺</p></blockquote><h2 id="credits">Credits</h2><ul><li>555 Pictures by <ahref="https://www.instagram.com/avariciously/">Kelvin Kek</a></li></ul>]]></content>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;highlights-of-the-week&quot;&gt;Highlights of the Week&lt;/h2&gt;
+&lt;p&gt;i completely forgot to mention something from the previous week—it
+slipped my mind while writing! 💀 i guess the gym story took the
+spotlight for me.&lt;/p&gt;
+&lt;p&gt;i had the honour of being a judge at the &lt;a
+href=&quot;https://www.instagram.com/p/DAI7HN8IOxN/&quot;&gt;Ignition Beatbox Academy
+Event&lt;/a&gt; by the &lt;a href=&quot;https://555beatboxsingapore.com/&quot;&gt;555 Beatbox
+Initiative&lt;/a&gt; on 12th October 2024. the judging panel included
+Clarkceds, Varen, and myself, and it was such a privilege to be a part
+of it. we judged the level 2 students&#39; showcases and the level 3 battle.
+watching them perform was a proud moment. i still remember seeing some
+of these students on their first day, and now, to witness how far
+they&#39;ve come—it&#39;s honestly incredible.&lt;/p&gt;
+&lt;p&gt;okay, let&#39;s talk about this week!&lt;/p&gt;
+&lt;p&gt;this week was pretty chill overall. i had a few gym sessions with
+Inovity, and honestly, having someone push you to failure just hits
+different! 🔥&lt;/p&gt;
+&lt;p&gt;seeing my coworkers travelling for business trips did make me feel a
+little envious—i&#39;d love to go on one soon. they&#39;ve been travelling so
+often, and i&#39;m really happy for them! i&#39;m just waiting for my chance and
+feeling excited for whenever that happens, or maybe i will have to fight
+for it? idk, it is a mix of feelings 🥹🤞🏼 but at the end of the day, i
+know that everyone has their own timing. i will keep pushing myself and
+doing my best, knowing that my opportunity will come when it is meant
+to. turning that envy into motivation is what keeps me going—i have
+learned to celebrate others while still working towards my own goals.
+🫶🏻&lt;/p&gt;
+&lt;p&gt;on the work front, i&#39;ve been feeling more motivated and super
+productive. i made it a point to be proactive, asking more questions
+(not the dumb kind tho 😂). i always try things myself first before
+seeking help.&lt;/p&gt;
+&lt;p&gt;overall, this week was a productive one!&lt;/p&gt;
+&lt;p&gt;下周继续加油 竞辉！💪🏼&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="About Me" scheme="https://blog.enkr1.com/categories/About-Me/"/>
+    
+    <category term="Journals" scheme="https://blog.enkr1.com/categories/About-Me/Journals/"/>
+    
+    
+    <category term="journal" scheme="https://blog.enkr1.com/tags/journal/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo: How to Set Up a Subdomain on GitHub Pages and Fix CNAME Issues</title>
+    <link href="https://blog.enkr1.com/hexo-how-to-set-up-a-subdomain-on-github-pages-and-fix-cname-issues/"/>
+    <id>https://blog.enkr1.com/hexo-how-to-set-up-a-subdomain-on-github-pages-and-fix-cname-issues/</id>
+    <published>2024-10-20T13:35:20.000Z</published>
+    <updated>2024-11-03T16:53:06.086Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="introduction">Introduction:</h2><p>Running into the <code>InvalidDNSError</code> while trying to set upa subdomain on GitHub Pages? You're not alone! I recently faced thisissue when I tried to set up <code>blog.enkr1.com</code>. After a bit ofback and forth with DNS settings, I figured it out, and here's how youcan do it, too.</p><p>Why did I even bother? Well, it turns out that without setting up thesubdomain, Firestore's visitor tracking wasn't working properly due tocross-domain issues (which I only found out after <strong>sixmonths</strong> when I got an inactivity email from the database! 😂).So, here we go!</p><hr /><h2 id="steps-to-configure-a-subdomain-on-github-pages">Steps toConfigure a Subdomain on GitHub Pages</h2><h3 id="set-up-the-cname-record-in-your-dns-provider">1. Set Up theCNAME Record in Your DNS Provider</h3><p>The first thing you need to do is tell your DNS provider where tosend traffic for your subdomain. Here's how to add a CNAME record:</p><ul><li><p><strong>Log in to your DNS provider</strong> (Dynadot (I am usingthis), GoDaddy, Namecheap, Cloudflare, etc.).</p></li><li><p>Head to the <strong>DNS Management</strong> section for yourdomain (<code>enkr1.com</code>).</p></li><li><p><strong>Create a new CNAME record</strong> with thesedetails:</p><ul><li><strong>Type</strong>: CNAME</li><li><strong>Host</strong>: <code>blog</code> (this is yoursubdomain)</li><li><strong>Points to</strong>: <code>enkr1.github.io</code> (replace<code>enkr1</code> with your GitHub username if different)</li><li><strong>TTL</strong>: Leave it at the default setting (usually 1hour or automatic)</li></ul><p>Example: <figure class="highlight nestedtext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">Type</span><span class="punctuation">:</span> <span class="string">CNAME</span></span><br><span class="line"><span class="attribute">Host</span><span class="punctuation">:</span> <span class="string">blog</span></span><br><span class="line"><span class="attribute">Points to</span><span class="punctuation">:</span> <span class="string">enkr1.github.io</span></span><br></pre></td></tr></table></figure></p></li><li><p><strong>Save</strong> the record and wait for DNS propagation(anywhere from a few minutes to 24 hours, depending on yourprovider).</p></li></ul><hr /><h3 id="verify-the-dns-record">2. Verify the DNS Record</h3><p>Once you've set up the CNAME record, it's time to check if it'spointing in the right direction:</p><ul><li>Use <span class="exturl" data-url="aHR0cHM6Ly9kbnNjaGVja2VyLm9yZy8=">DNSChecker<i class="fa fa-external-link-alt"></i></span> (or a similartool).</li><li>Enter <code>blog.enkr1.com</code> and select<strong>CNAME</strong>.</li><li>Ensure it's correctly pointing to <code>enkr1.github.io</code>.</li></ul><p>If everything looks good, you're ready for the next step!</p><hr /><h3 id="configure-the-custom-domain-in-github-pages">3. Configure theCustom Domain in GitHub Pages</h3><p>Next, let GitHub know about your shiny new subdomain.</p><ul><li>Open the <strong>GitHub repository</strong> where your website ishosted (in my case, for <code>blog.enkr1.com</code>).</li><li>Go to <strong>Settings</strong> → <strong>Pages</strong>.</li><li>In the <strong>Custom Domain</strong> field, type<code>blog.enkr1.com</code> and click <strong>Save</strong>.</li></ul><p>This will create a <code>CNAME</code> file in your repository,linking your site to the subdomain.</p><hr /><h3id="enable-https-fixing-the-cname-issue-after-deploying-with-hexo">4.Enable HTTPS &amp; Fixing the CNAME Issue After Deploying with Hexo</h3><p>After the DNS propagation finishes (again, this could take up to 24hours), you'll want to secure your site with HTTPS.</p><ul><li>Return to <strong>Settings</strong> → <strong>Pages</strong> in yourGitHub repository.</li><li>Check the <strong>Enforce HTTPS</strong> option (if it'savailable).</li></ul><p>Once HTTPS is enforced, your site will load over a secureconnection.</p><p><strong>OR;</strong></p><p>If you're using Hexo to deploy your site to GitHub Pages, you mightrun into an issue where the CNAME gets reset after every deployment,causing your custom domain to disappear from the GitHub Pages settings.I faced this issue as well, and here's a quick fix for it.</p><p>To prevent the CNAME from getting wiped during deployment, simplycreate a <code>CNAME</code> file in the <code>source/</code> folder ofyour Hexo project.</p><p>Here's how:</p><ol type="1"><li><p><strong>Navigate to your Hexo project's sourcedirectory</strong>: <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/hexo/source</span><br></pre></td></tr></table></figure></p></li><li><p><strong>Create a <code>CNAME</code> file</strong> in the<code>source/</code> directory: <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">&quot;blog.enkr1.com&quot;</span> &gt; CNAME</span><br></pre></td></tr></table></figure></p><p>Replace <code>blog.enkr1.com</code> with your custom domain.</p></li><li><p><strong>Deploy your Hexo site</strong>: Run your normal deploycommand: <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure></p></li></ol><p>Now, the <code>CNAME</code> file will be deployed along with yoursite, ensuring that your custom domain stays intact after eachdeployment.</p><hr /><h3 id="wait-for-propagation-and-test-your-subdomain">5. Wait forPropagation and Test Your Subdomain</h3><p>Now it's just a waiting game. Once DNS propagation is complete:</p><ul><li>Go to <code>https://blog.enkr1.com</code> and make sure your GitHubPages site loads correctly.</li><li>Double-check in <strong>Settings</strong> that HTTPS isenabled.</li></ul><p>If everything is working, congratulations—you've just set up asubdomain on GitHub Pages! 🎉</p><hr /><h2 id="troubleshooting">Troubleshooting</h2><p>Even if you follow the steps perfectly, there are always thoseannoying issues that can pop up. Here are a few possible solutions ifyou hit a roadblock:</p><ul><li><strong>InvalidDNSError</strong>:<ul><li>This usually means your CNAME record isn't configured correctly orhasn't propagated yet. Use tools like <strong>DNSChecker</strong> toensure that <code>blog.enkr1.com</code> points to<code>enkr1.github.io</code>.</li><li>Double-check the DNS entry at your domain provider—small typos orincorrect hostnames are common issues.</li><li>Make sure your GitHub Pages repository is <strong>public</strong>.Private repos won't work with custom domains unless you're on GitHub'spaid plan.</li></ul></li><li><strong>HTTPS Unavailable</strong>:<ul><li>If you can't enable HTTPS, it's likely that the DNS propagationhasn't completed. Give it a bit more time and check again.</li><li>If you're still having issues, make sure there aren't conflictingDNS records (like an A record) for the same subdomain.</li></ul></li><li><strong>Cross-Domain Issues with Firestore or OtherServices</strong>:<ul><li>Make sure you've correctly set up CORS (Cross-Origin ResourceSharing) in your Firestore rules to avoid visitor tracking issues.</li></ul></li></ul><hr /><h2 id="conclusion">Conclusion:</h2><p>Setting up a subdomain on GitHub Pages can feel a little frustratingat first—especially with DNS propagation times and potential errors—butit's all worth it in the end. I hope this guide helps you avoid the sameheadaches I had when setting up <code>blog.enkr1.com</code>. If you runinto any issues, don't hesitate to reach out, or check the official <ahref="https://docs.github.com/en/pages">GitHub Pagesdocumentation</a>.</p><p>Your site should now be live, secure, and ready to go! 🚀</p>]]></content>
+    
+    
+    <summary type="html">Learn how to configure a subdomain on GitHub Pages, troubleshoot CNAME issues, and ensure smooth deployment with Hexo. This guide simplifies the process to get your site up and running with a custom domain.</summary>
+    
+    
+    
+    <category term="Software Engineering" scheme="https://blog.enkr1.com/categories/Software-Engineering/"/>
+    
+    <category term="Configurations" scheme="https://blog.enkr1.com/categories/Software-Engineering/Configurations/"/>
+    
+    <category term="DNS" scheme="https://blog.enkr1.com/categories/Software-Engineering/Configurations/DNS/"/>
+    
+    <category term="Frameworks" scheme="https://blog.enkr1.com/categories/Software-Engineering/Frameworks/"/>
+    
+    <category term="Hexo" scheme="https://blog.enkr1.com/categories/Software-Engineering/Frameworks/Hexo/"/>
+    
+    
+    <category term="dns" scheme="https://blog.enkr1.com/tags/dns/"/>
+    
+    <category term="hexo" scheme="https://blog.enkr1.com/tags/hexo/"/>
+    
+    <category term="github-pages" scheme="https://blog.enkr1.com/tags/github-pages/"/>
+    
+  </entry>
+  
+</feed>
