@@ -111,9 +111,9 @@
       
         <tags>
             
-            <tag> reading </tag>
-            
             <tag> ebook </tag>
+            
+            <tag> reading </tag>
             
         </tags>
       
@@ -351,9 +351,9 @@
       
         <tags>
             
-            <tag> reading </tag>
-            
             <tag> ebook </tag>
+            
+            <tag> reading </tag>
             
         </tags>
       
@@ -794,15 +794,15 @@
             
             <tag> algorithm </tag>
             
-            <tag> leetcode </tag>
-            
             <tag> javascript </tag>
+            
+            <tag> leetcode </tag>
             
             <tag> leetcode-medium </tag>
             
-            <tag> dynamic-programming </tag>
-            
             <tag> interview-preparation </tag>
+            
+            <tag> dynamic-programming </tag>
             
             <tag> top-interview-150 </tag>
             
@@ -833,15 +833,15 @@
             
             <tag> algorithm </tag>
             
-            <tag> leetcode </tag>
-            
             <tag> javascript </tag>
+            
+            <tag> leetcode </tag>
             
             <tag> leetcode-medium </tag>
             
-            <tag> dynamic-programming </tag>
-            
             <tag> interview-preparation </tag>
+            
+            <tag> dynamic-programming </tag>
             
         </tags>
       
@@ -926,9 +926,9 @@
             
             <tag> algorithm </tag>
             
-            <tag> leetcode </tag>
-            
             <tag> javascript </tag>
+            
+            <tag> leetcode </tag>
             
             <tag> interview-preparation </tag>
             
@@ -1085,19 +1085,19 @@
             
             <tag> algorithm </tag>
             
-            <tag> leetcode </tag>
-            
             <tag> javascript </tag>
             
-            <tag> leetcode-medium </tag>
+            <tag> leetcode </tag>
             
-            <tag> dynamic-programming </tag>
+            <tag> leetcode-medium </tag>
             
             <tag> interview-preparation </tag>
             
             <tag> min-heap </tag>
             
             <tag> priority-queue </tag>
+            
+            <tag> dynamic-programming </tag>
             
         </tags>
       
@@ -1126,9 +1126,9 @@
             
             <tag> algorithm </tag>
             
-            <tag> leetcode </tag>
-            
             <tag> javascript </tag>
+            
+            <tag> leetcode </tag>
             
             <tag> interview-preparation </tag>
             
@@ -1395,9 +1395,9 @@
             
             <tag> algorithm </tag>
             
-            <tag> leetcode </tag>
-            
             <tag> javascript </tag>
+            
+            <tag> leetcode </tag>
             
             <tag> leetcode-medium </tag>
             
@@ -2097,9 +2097,9 @@
       
         <tags>
             
-            <tag> physical-book </tag>
-            
             <tag> reading </tag>
+            
+            <tag> physical-book </tag>
             
         </tags>
       
@@ -2159,9 +2159,9 @@
       
         <tags>
             
-            <tag> hobby </tag>
-            
             <tag> beatbox </tag>
+            
+            <tag> hobby </tag>
             
             <tag> stage-performance </tag>
             
