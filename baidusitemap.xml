@@ -1,6 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://blog.enkr1.com/journal-week-23/</loc>
+    <lastmod>2025-01-28</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.enkr1.com/journal-week-16/</loc>
+    <lastmod>2025-01-27</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.enkr1.com/journal-week-20/</loc>
+    <lastmod>2025-01-27</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.enkr1.com/never-split-the-difference-by-chris-voss/</loc>
+    <lastmod>2025-01-27</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.enkr1.com/the-diary-of-a-ceo-by-steven-bartlett/</loc>
+    <lastmod>2025-01-26</lastmod>
+  </url>
+  <url>
     <loc>https://blog.enkr1.com/reflections-2024/</loc>
     <lastmod>2025-01-26</lastmod>
   </url>
@@ -25,10 +45,6 @@
     <lastmod>2025-01-23</lastmod>
   </url>
   <url>
-    <loc>https://blog.enkr1.com/the-diary-of-a-ceo-by-steven-bartlett/</loc>
-    <lastmod>2025-01-23</lastmod>
-  </url>
-  <url>
     <loc>https://blog.enkr1.com/the-7-habits-of-highly-effective-people-by-stephen-covey/</loc>
     <lastmod>2025-01-23</lastmod>
   </url>
@@ -49,10 +65,6 @@
     <lastmod>2025-01-19</lastmod>
   </url>
   <url>
-    <loc>https://blog.enkr1.com/journal-week-20/</loc>
-    <lastmod>2025-01-12</lastmod>
-  </url>
-  <url>
     <loc>https://blog.enkr1.com/journal-week-21/</loc>
     <lastmod>2025-01-12</lastmod>
   </url>
@@ -69,20 +81,12 @@
     <lastmod>2025-01-05</lastmod>
   </url>
   <url>
-    <loc>https://blog.enkr1.com/never-split-the-difference-by-chris-voss/</loc>
-    <lastmod>2025-01-04</lastmod>
-  </url>
-  <url>
     <loc>https://blog.enkr1.com/24-hours-harvard-cs50-by-david-malan/</loc>
     <lastmod>2025-01-04</lastmod>
   </url>
   <url>
     <loc>https://blog.enkr1.com/journal-week-18/</loc>
     <lastmod>2025-01-04</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.enkr1.com/journal-week-13/</loc>
-    <lastmod>2024-12-30</lastmod>
   </url>
   <url>
     <loc>https://blog.enkr1.com/journal-week-11/</loc>
@@ -93,15 +97,11 @@
     <lastmod>2024-12-30</lastmod>
   </url>
   <url>
-    <loc>https://blog.enkr1.com/journal-week-16/</loc>
+    <loc>https://blog.enkr1.com/journal-week-13/</loc>
     <lastmod>2024-12-30</lastmod>
   </url>
   <url>
     <loc>https://blog.enkr1.com/journal-week-17/</loc>
-    <lastmod>2024-12-30</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.enkr1.com/journal-week-14/</loc>
     <lastmod>2024-12-30</lastmod>
   </url>
   <url>
@@ -110,6 +110,10 @@
   </url>
   <url>
     <loc>https://blog.enkr1.com/journal-week-19/</loc>
+    <lastmod>2024-12-30</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.enkr1.com/journal-week-14/</loc>
     <lastmod>2024-12-30</lastmod>
   </url>
   <url>
@@ -185,11 +189,11 @@
     <lastmod>2024-10-23</lastmod>
   </url>
   <url>
-    <loc>https://blog.enkr1.com/regression-prediction/</loc>
+    <loc>https://blog.enkr1.com/regression-hypothesis-testing/</loc>
     <lastmod>2024-10-23</lastmod>
   </url>
   <url>
-    <loc>https://blog.enkr1.com/regression-hypothesis-testing/</loc>
+    <loc>https://blog.enkr1.com/regression-prediction/</loc>
     <lastmod>2024-10-23</lastmod>
   </url>
   <url>
@@ -213,11 +217,11 @@
     <lastmod>2024-10-23</lastmod>
   </url>
   <url>
-    <loc>https://blog.enkr1.com/pre-work-introduction-to-data-science-ai/</loc>
+    <loc>https://blog.enkr1.com/foundations-of-data-science-navigating-through-inferential-statistics/</loc>
     <lastmod>2024-10-23</lastmod>
   </url>
   <url>
-    <loc>https://blog.enkr1.com/foundations-of-data-science-navigating-through-inferential-statistics/</loc>
+    <loc>https://blog.enkr1.com/pre-work-introduction-to-data-science-ai/</loc>
     <lastmod>2024-10-23</lastmod>
   </url>
   <url>
