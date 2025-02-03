@@ -1457,8 +1457,6 @@
             
             <tag> interview-preparation </tag>
             
-            <tag> top-interview-150 </tag>
-            
             <tag> topological-sort </tag>
             
             <tag> queue </tag>
@@ -1466,6 +1464,8 @@
             <tag> adjacency-list </tag>
             
             <tag> indegree </tag>
+            
+            <tag> top-interview-150 </tag>
             
         </tags>
       
@@ -1496,9 +1496,9 @@
             
             <tag> interview-preparation </tag>
             
-            <tag> bash </tag>
-            
             <tag> leetcode-easy </tag>
+            
+            <tag> bash </tag>
             
         </tags>
       
@@ -2107,9 +2107,9 @@
           
           <category> Software Engineering </category>
           
-          <category> Notebooks </category>
-          
           <category> Computer Networking </category>
+          
+          <category> Notebooks </category>
           
       </categories>
       
@@ -2213,9 +2213,9 @@
       
         <tags>
             
-            <tag> hobby </tag>
-            
             <tag> beatbox </tag>
+            
+            <tag> hobby </tag>
             
             <tag> stage-performance </tag>
             
@@ -2561,13 +2561,13 @@
             
             <tag> ai </tag>
             
-            <tag> data-science </tag>
-            
-            <tag> machine-learning </tag>
-            
             <tag> mit-idss </tag>
             
             <tag> self-study </tag>
+            
+            <tag> machine-learning </tag>
+            
+            <tag> data-science </tag>
             
         </tags>
       
@@ -2635,13 +2635,13 @@
             
             <tag> ai </tag>
             
-            <tag> data-science </tag>
-            
-            <tag> machine-learning </tag>
-            
             <tag> mit-idss </tag>
             
             <tag> self-study </tag>
+            
+            <tag> machine-learning </tag>
+            
+            <tag> data-science </tag>
             
         </tags>
       
@@ -2678,13 +2678,13 @@
             
             <tag> ai </tag>
             
-            <tag> data-science </tag>
-            
-            <tag> machine-learning </tag>
-            
             <tag> mit-idss </tag>
             
             <tag> self-study </tag>
+            
+            <tag> machine-learning </tag>
+            
+            <tag> data-science </tag>
             
         </tags>
       
@@ -2721,13 +2721,13 @@
             
             <tag> ai </tag>
             
-            <tag> data-science </tag>
-            
-            <tag> machine-learning </tag>
-            
             <tag> mit-idss </tag>
             
             <tag> self-study </tag>
+            
+            <tag> machine-learning </tag>
+            
+            <tag> data-science </tag>
             
         </tags>
       
@@ -2762,9 +2762,9 @@
       
         <tags>
             
-            <tag> data-science </tag>
-            
             <tag> machine-learning </tag>
+            
+            <tag> data-science </tag>
             
         </tags>
       
@@ -2799,9 +2799,9 @@
       
         <tags>
             
-            <tag> data-science </tag>
-            
             <tag> machine-learning </tag>
+            
+            <tag> data-science </tag>
             
             <tag> unsupervised-learning </tag>
             
@@ -2844,13 +2844,13 @@
             
             <tag> ai </tag>
             
-            <tag> data-science </tag>
-            
-            <tag> machine-learning </tag>
-            
             <tag> mit-idss </tag>
             
             <tag> self-study </tag>
+            
+            <tag> machine-learning </tag>
+            
+            <tag> data-science </tag>
             
         </tags>
       
@@ -2887,13 +2887,13 @@
             
             <tag> ai </tag>
             
-            <tag> data-science </tag>
-            
-            <tag> machine-learning </tag>
-            
             <tag> mit-idss </tag>
             
             <tag> self-study </tag>
+            
+            <tag> machine-learning </tag>
+            
+            <tag> data-science </tag>
             
         </tags>
       
@@ -2928,13 +2928,13 @@
             
             <tag> ai </tag>
             
-            <tag> data-science </tag>
-            
-            <tag> machine-learning </tag>
-            
             <tag> mit-idss </tag>
             
             <tag> self-study </tag>
+            
+            <tag> machine-learning </tag>
+            
+            <tag> data-science </tag>
             
         </tags>
       
@@ -3058,9 +3058,9 @@
       
         <tags>
             
-            <tag> hexo </tag>
-            
             <tag> programming </tag>
+            
+            <tag> hexo </tag>
             
         </tags>
       
