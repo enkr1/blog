@@ -34,8 +34,8 @@
 <meta property="article:modified_time" content="2024-11-03T16:53:06.086Z">
 <meta property="article:author" content="Jing Hui PANG | 彭竞辉 | ENKR">
 <meta property="article:tag" content="dns">
-<meta property="article:tag" content="hexo">
 <meta property="article:tag" content="github-pages">
+<meta property="article:tag" content="hexo">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="https://blog.enkr1.com/hexo-how-to-set-up-a-subdomain-on-github-pages-and-fix-cname-issues/">
@@ -362,7 +362,7 @@ NOTE: word count
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-              <span>852</span>
+              <span>4.2k</span>
             </span>
 
 <!--
@@ -372,7 +372,7 @@ NOTE: reading time
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
-              <span>3 mins.</span>
+              <span>4 mins.</span>
             </span>
 
 
@@ -584,10 +584,10 @@ documentation</a>.</p>
       <div class="popular-posts-title"><a href="/my-domain-setup-dynadot/" rel="bookmark">My Domain Setup: Dynadot</a></div>
     </li>
     <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="/hexo-notebook/" rel="bookmark">Hexo Notebook</a></div>
+      <div class="popular-posts-title"><a href="/my-journey-with-hexo-building-a-blog-from-scratch/" rel="bookmark">My Journey with Hexo - Building a Blog from Scratch</a></div>
     </li>
     <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="/my-journey-with-hexo-building-a-blog-from-scratch/" rel="bookmark">My Journey with Hexo - Building a Blog from Scratch</a></div>
+      <div class="popular-posts-title"><a href="/hexo-notebook/" rel="bookmark">Hexo Notebook</a></div>
     </li>
   </ul>
 <div class="post-widgets">
@@ -608,8 +608,8 @@ documentation</a>.</p>
       <footer class="post-footer">
           <div class="post-tags">
               <a href="/tags/dns/" rel="tag"># dns</a>
-              <a href="/tags/hexo/" rel="tag"># hexo</a>
               <a href="/tags/github-pages/" rel="tag"># github-pages</a>
+              <a href="/tags/hexo/" rel="tag"># hexo</a>
           </div>
 
         
@@ -708,7 +708,7 @@ Propagation and Test Your Subdomain</span></a></li></ol></li><li class="nav-item
   <nav class="site-state">
     <div class="site-state-item site-state-posts">
         <a href="/archives">
-          <span class="site-state-item-count">92</span>
+          <span class="site-state-item-count">93</span>
           <span class="site-state-item-name">Posts</span>
         </a>
     </div>
@@ -859,12 +859,12 @@ NEW: Readers & Total Views
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="Symbols count total">76k</span>
+    <span title="Symbols count total">358k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">4:35</span>
+    <span title="Reading time total">5:26</span>
 </div>
 
         
@@ -919,13 +919,17 @@ NEW: Readers & Total Views
 
     async function getVisitorIP() {
       try {
-        const response = await fetch('https://ipapi.co/json/');
-        if (!response.ok) {
-          throw new Error('Failed to fetch visitor IP');
-        }
-        const data = await response.json();
-        // Example response: { ip: "8.8.8.8", city: "Mountain View", country: "US", ... }
-        return data;
+        const response = await fetch('https://ipapi.co/json/')
+          .then(response => {
+            if (!response.ok) {
+              throw new Error('Failed to fetch visitor IP');
+            }
+            const data = await response.json();
+            // Example response: { ip: "8.8.8.8", city: "Mountain View", country: "US", ... }
+            return data;
+          })
+          .catch(error => console.error('Error:', error)); // Now this will catch HTTP errors
+
       } catch (error) {
         console.error('Error fetching visitor IP:', error);
         return null; // Return null if the API fails
@@ -979,7 +983,8 @@ NEW: Readers & Total Views
       }
     }
 
-    if (window.location.hostname === "localhost") {
+    // TODO: Make sure pusing with ===
+    if (window.location.hostname !== "localhost") {
       console.debug(`[DEBUG] Skipping Firestore requests in local development.`);
 
     } else {
