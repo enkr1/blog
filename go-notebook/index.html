@@ -23,20 +23,20 @@
     var CONFIG = {"hostname":"blog.enkr1.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":true,"sidebar":{"position":"left","width":300,"display":"post","padding":0,"offset":0,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"buttons","active":"disqus","storage":true,"lazyload":true,"nav":null,"activeClass":"disqus"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":-1,"unescape":true,"preload":true},"motion":{"enable":true,"async":false,"transition":{"post_block":"slideDownBigIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="A collection of notes and resources for Go programming language">
+  <meta name="description" content="Follow my hands-on Go learning journey through LeetCode solutions and real-world comparisons with JavaScript. Discover how Go&#39;s concurrency and memory efficiency solve problems where JS hits limits.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Go Notebook">
 <meta property="og:url" content="https://blog.enkr1.com/go-notebook/index.html">
 <meta property="og:site_name" content="ENKR&#39;s Blog | Jing Hui PANG">
-<meta property="og:description" content="A collection of notes and resources for Go programming language">
+<meta property="og:description" content="Follow my hands-on Go learning journey through LeetCode solutions and real-world comparisons with JavaScript. Discover how Go&#39;s concurrency and memory efficiency solve problems where JS hits limits.">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2025-02-08T11:05:55.000Z">
-<meta property="article:modified_time" content="2025-02-09T17:39:19.401Z">
+<meta property="article:modified_time" content="2025-02-11T17:42:22.857Z">
 <meta property="article:author" content="Jing Hui PANG | 彭竞辉 | ENKR">
 <meta property="article:tag" content="programming">
-<meta property="article:tag" content="notes">
 <meta property="article:tag" content="go">
 <meta property="article:tag" content="golang">
+<meta property="article:tag" content="notes">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="https://blog.enkr1.com/go-notebook/">
@@ -323,7 +323,7 @@ NOTE: created_at
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: Monday, 10 February 2025 01:39:19 AM 01:39:19 AM" itemprop="dateModified" datetime="2025-02-10T01:39:19+08:00">Monday, 10 February 2025 01:39:19 AM</time>
+                <time title="Modified: Wednesday, 12 February 2025 01:42:22 AM 01:42:22 AM" itemprop="dateModified" datetime="2025-02-12T01:42:22+08:00">Wednesday, 12 February 2025 01:42:22 AM</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -364,7 +364,7 @@ NOTE: word count
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-              <span>1.9k</span>
+              <span>2.1k</span>
             </span>
 
 <!--
@@ -374,7 +374,7 @@ NOTE: reading time
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
-              <span>7 mins.</span>
+              <span>8 mins.</span>
             </span>
 
 
@@ -409,7 +409,7 @@ NOTE: views count
               -->
               <b><span class="firestore-visitors-count">loading ...</span></b>
             </span>
-            <div class="post-description">A collection of notes and resources for Go programming language</div>
+            <div class="post-description">Follow my hands-on Go learning journey through LeetCode solutions and real-world comparisons with JavaScript. Discover how Go's concurrency and memory efficiency solve problems where JS hits limits.</div>
 
         </div>
       </header>
@@ -420,105 +420,165 @@ NOTE: views count
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>I am writing this notebook to help me learn Go by comparing it to
-JavaScript while doing LeetCode problems in Go. My goal is to be able to
-write Go code that is clean, readable, and efficient.</p>
-<h2 id="quick-comparison-table">🚀 Quick Comparison Table</h2>
+        <h2 id="intro">🚀 Intro</h2>
+<p>i'm diving into Go to add a new tool to my coding arsenal, aiming to
+harness its speed and efficiency for those times when JavaScript just
+can't keep up with massive datasets. By tackling LeetCode problems and
+comparing solutions with JS, i'm not just learning a new language—i'm
+preparing for real-world scenarios where Go's lightweight nature and
+concurrency shine. Whether it's crunching big data or optimising
+performance, having Go as an option means i'm ready for whatever coding
+challenges come my way. 🚀</p>
 <table>
 <colgroup>
-<col style="width: 9%" />
-<col style="width: 21%" />
-<col style="width: 68%" />
+<col style="width: 14%" />
+<col style="width: 48%" />
+<col style="width: 36%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Criteria</th>
+<th>Go 🦫</th>
+<th>JavaScript 🟨</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Speed</td>
+<td>5-10x faster for CPU tasks</td>
+<td>Slower, but adequate for most web apps</td>
+</tr>
+<tr class="even">
+<td>Memory Efficiency</td>
+<td>~1/3 JS usage, manual control</td>
+<td>Automatic, hits ~4GB limit</td>
+</tr>
+<tr class="odd">
+<td>Best For</td>
+<td>- Big data (&gt;1GB) <br> - High concurrency <br> - CLI tools</td>
+<td>- Web APIs <br> - UI apps <br> - Prototyping</td>
+</tr>
+<tr class="even">
+<td>Concurrency</td>
+<td>Goroutines (cheap, 1MB each)</td>
+<td>Worker threads (heavy, ~10MB)</td>
+</tr>
+<tr class="odd">
+<td>Ecosystem</td>
+<td>Growing stdlib, fewer libs</td>
+<td>Massive NPM ecosystem</td>
+</tr>
+<tr class="even">
+<td>Learning Curve</td>
+<td>Strict types, explicit error handling</td>
+<td>Familiar syntax, flexible types</td>
+</tr>
+<tr class="odd">
+<td>When to Use</td>
+<td>Data pipelines, microservices</td>
+<td>Full-stack apps, quick scripts</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Data Pipeline = A series of automated steps that collect, process,
+and move data from one system to another (e.g., CSV files → cleaned data
+→ database).</p>
+</blockquote>
+<p><strong>Decision Checklist</strong>:</p>
+<ol type="1">
+<li>Processing &gt;1GB data? → Go</li>
+<li>Need precise memory control? → Go &gt; Precise Memory Control = In
+Go, you manually manage memory allocation (e.g., buffer := make([]byte,
+0, 1024) pre-allocates 1KB), preventing unexpected memory spikes common
+in JS.</li>
+<li>Building UI/API? → JS</li>
+<li>Team knows JS better? → JS</li>
+<li>Need single binary? → Go (A self-contained executable with all
+dependencies packed in)</li>
+</ol>
+<hr />
+<h2 id="core-concepts">📌 Core Concepts</h2>
+<table>
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 30%" />
+<col style="width: 58%" />
 </colgroup>
 <thead>
 <tr class="header">
 <th>Concept</th>
-<th>JavaScript</th>
-<th>Go</th>
+<th>JavaScript Example</th>
+<th>Go Example &amp; Notes</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Logging</td>
-<td><code>console.log("Hello World")</code></td>
-<td><code>package main</code><br><code>import "fmt"</code><br><br><code>func main() &#123;</code><br><code>   fmt.Println("Hello World")</code><br><code>&#125;</code></td>
-</tr>
-<tr class="even">
-<td>Variables</td>
+<td><strong>Variables</strong></td>
 <td><code>let x = 10;</code></td>
-<td><code>x := 10</code></td>
-</tr>
-<tr class="odd">
-<td>Function</td>
-<td><code>function add(a, b) &#123; ... &#125;</code></td>
-<td><code>func add(a int, b int) int &#123; ... &#125;</code></td>
+<td><code>x := 10</code> (type inferred)<br><code>var y int = 20</code>
+(explicit)</td>
 </tr>
 <tr class="even">
-<td>Array</td>
-<td><code>const arr = [1, 2, 3];</code></td>
-<td><code>arr := []int&#123;1, 2, 3&#125;</code></td>
-</tr>
-<tr class="odd">
-<td>Object/Struct</td>
-<td><code>const obj = &#123; key: "value" &#125;;</code></td>
-<td><code>type Obj struct &#123; Key string &#125;</code><br><code>o := Obj&#123;Key: "value"&#125;</code></td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h2 id="core-concepts">📌 Core Concepts</h2>
-<h3 id="variables-types">Variables &amp; Types</h3>
-<table>
-<colgroup>
-<col style="width: 24%" />
-<col style="width: 28%" />
-<col style="width: 47%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Feature</th>
-<th>JavaScript</th>
-<th>Go</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Declaration</td>
-<td><code>let x = 10;</code></td>
-<td><code>x := 10</code></td>
-</tr>
-<tr class="even">
-<td>Constant Declaration</td>
+<td><strong>Constants</strong></td>
 <td><code>const PI = 3.14;</code></td>
-<td><code>const PI = 3.14</code></td>
+<td><code>const PI = 3.14</code>
+(untyped)<br><code>const (A=1; B=2)</code> (grouped)</td>
 </tr>
 <tr class="odd">
-<td>Global Variables</td>
-<td>Allowed but discouraged</td>
-<td>Not recommended, use <code>package main</code></td>
+<td><strong>Functions</strong></td>
+<td><code>function add(a, b) &#123; ... &#125;</code></td>
+<td><code>func add(a int, b int) int &#123; ... &#125;</code><br>Multiple returns:
+<code>(int, error)</code></td>
 </tr>
 <tr class="even">
-<td>Zero Values</td>
-<td><code>undefined</code>/<code>null</code></td>
+<td><strong>Data Types</strong></td>
+<td>Dynamic typing</td>
+<td>Static
+typing:<br><code>var s string = "text"</code><br><code>n := 3.14</code>
+(float64)</td>
+</tr>
+<tr class="odd">
+<td><strong>Collections</strong></td>
+<td><code>const arr = [1,2];</code><br><code>const obj = &#123;key:1&#125;;</code></td>
+<td><code>arr := []int&#123;1,2&#125;</code>
+(slice)<br><code>m := map[string]int&#123;"key":1&#125;</code><br><code>type S struct&#123;Key int&#125;</code></td>
+</tr>
+<tr class="even">
+<td><strong>Zero Values</strong></td>
+<td><code>undefined</code>, <code>null</code></td>
 <td><code>0</code>, <code>""</code>, <code>false</code>,
-<code>nil</code></td>
+<code>nil</code> (explicit defaults)</td>
 </tr>
 <tr class="odd">
-<td>Hoisting</td>
-<td>Exists (<code>var x</code>)</td>
-<td>No hoisting</td>
+<td><strong>Error Handling</strong></td>
+<td><code>try/catch</code></td>
+<td><code>if err != nil &#123; ... &#125;</code><br><code>val, err := someFunc()</code></td>
 </tr>
 <tr class="even">
-<td>Type Inference</td>
-<td>Dynamic</td>
-<td>Static (Go infers type when using <code>:=</code>)</td>
+<td><strong>Concurrency</strong></td>
+<td><code>Promise</code>, <code>async/await</code></td>
+<td><code>go func() &#123; ... &#125;</code>
+(goroutines)<br><code>ch := make(chan int)</code></td>
+</tr>
+<tr class="odd">
+<td><strong>Memory</strong></td>
+<td>Automatic GC</td>
+<td>Manual control:<br><code>buf := make([]byte, 0, 1024)</code>
+(pre-alloc)</td>
+</tr>
+<tr class="even">
+<td><strong>Build</strong></td>
+<td><code>node script.js</code></td>
+<td><code>go build</code> → single binary<br>No external runtime
+needed</td>
 </tr>
 </tbody>
 </table>
-<h4 id="code-examples">Code Examples</h4>
+<h3 id="code-examples">Code Examples</h3>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// JavaScript</span></span><br><span class="line"><span class="keyword">let</span> name = <span class="string">&quot;John&quot;</span>;</span><br><span class="line"><span class="keyword">let</span> age = <span class="number">30</span>;</span><br><span class="line"><span class="keyword">let</span> scores = [<span class="number">90</span>, <span class="number">85</span>, <span class="number">95</span>];</span><br></pre></td></tr></table></figure>
 <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Go</span></span><br><span class="line">name := <span class="string">&quot;John&quot;</span>          <span class="comment">// string</span></span><br><span class="line"><span class="keyword">var</span> age <span class="type">int</span> = <span class="number">30</span>        <span class="comment">// explicit type</span></span><br><span class="line">scores := []<span class="type">int</span>&#123;<span class="number">90</span>, <span class="number">85</span>, <span class="number">95</span>&#125;  <span class="comment">// slice</span></span><br></pre></td></tr></table></figure>
-<h4 id="common-questions">Common Questions</h4>
+<h3 id="common-questions">Common Questions</h3>
 <ol type="1">
 <li>What is <code>:=</code> in Go? → Short variable declaration (creates
 and assigns value at once).</li>
@@ -541,7 +601,7 @@ reference. (Need more explanation)</li>
 </ol></li>
 </ol>
 <hr />
-<h3 id="functions">Functions</h3>
+<h2 id="functions">⚙️ Functions</h2>
 <table>
 <colgroup>
 <col style="width: 18%" />
@@ -578,10 +638,10 @@ reference. (Need more explanation)</li>
 </tr>
 </tbody>
 </table>
-<h4 id="code-examples-1">Code Examples</h4>
+<h3 id="code-examples-1">Code Examples</h3>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// JavaScript</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">sum</span>(<span class="params">...nums</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> nums.<span class="title function_">reduce</span>(<span class="function">(<span class="params">a, b</span>) =&gt;</span> a + b, <span class="number">0</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Go</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">sum</span><span class="params">(nums ...<span class="type">int</span>)</span></span> <span class="type">int</span> &#123;</span><br><span class="line">    total := <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> _, num := <span class="keyword">range</span> nums &#123;</span><br><span class="line">        total += num</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> total</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Multiple return values</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">divide</span><span class="params">(a, b <span class="type">float64</span>)</span></span> (<span class="type">float64</span>, <span class="type">error</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span> b == <span class="number">0</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>, errors.New(<span class="string">&quot;division by zero&quot;</span>)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> a/b, <span class="literal">nil</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="common-questions-1">Common Questions</h4>
+<h3 id="common-questions-1">Common Questions</h3>
 <ol type="1">
 <li>Can functions return multiple values? → Yes,
 <code>return val1, val2</code>.</li>
@@ -664,8 +724,8 @@ structs in Go.</li>
 </tr>
 </tbody>
 </table>
-<h4 id="practical-example-collecting-1m-numbers">Practical Example:
-Collecting 1M Numbers</h4>
+<h4 id="wip-practical-example-collecting-1m-numbers">(WIP) Practical
+Example: Collecting 1M Numbers</h4>
 <h5 id="javascript-automatic">JavaScript (Automatic)</h5>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> numbers = [];</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; <span class="number">1000000</span>; i++) &#123;</span><br><span class="line">    numbers.<span class="title function_">push</span>(i); <span class="comment">// Engine handles everything</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h5 id="go-manual-control">Go (Manual Control)</h5>
@@ -698,9 +758,6 @@ simplicity</li>
 <li><strong>Best Practice</strong> - In Go, pre-allocate for known
 sizes, otherwise let <code>append</code> handle it</li>
 </ol>
-<p>You don't need to write both versions - use pre-allocation in Go when
-it provides clear benefits, otherwise let <code>append</code> handle
-growth automatically.</p>
 <h4 id="common-questions-2">Common Questions</h4>
 <ol type="1">
 <li>What is the difference between arrays and slices? → Arrays have
@@ -791,7 +848,7 @@ fixed sizes; slices are dynamic.</li>
 instead of maps for structured data.</li>
 </ol>
 <hr />
-<h2 id="error-handling">🚨 Error Handling</h2>
+<h2 id="error-handling-wip">🚨 Error Handling (WIP)</h2>
 <table>
 <colgroup>
 <col style="width: 18%" />
@@ -837,7 +894,7 @@ errors?</li>
 <code>errors.New("message")</code>.</li>
 </ol>
 <hr />
-<h2 id="concurrency-patterns">🔄 Concurrency Patterns</h2>
+<h2 id="concurrency-patterns-wip">🔄 Concurrency Patterns (WIP)</h2>
 <table>
 <thead>
 <tr class="header">
@@ -868,7 +925,7 @@ errors?</li>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// JavaScript</span></span><br><span class="line"><span class="keyword">async</span> <span class="keyword">function</span> <span class="title function_">fetchData</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> res = <span class="keyword">await</span> <span class="title function_">fetch</span>(url);</span><br><span class="line">    <span class="keyword">return</span> res.<span class="title function_">json</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Go</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">fetchData</span><span class="params">(url <span class="type">string</span>, ch <span class="keyword">chan</span>&lt;- Result)</span></span> &#123;</span><br><span class="line">    res, err := http.Get(url)</span><br><span class="line">    <span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">        ch &lt;- Result&#123;Error: err&#125;</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">    &#125;</span><br><span class="line">    ch &lt;- parseResponse(res)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">    ch := <span class="built_in">make</span>(<span class="keyword">chan</span> Result)</span><br><span class="line">    <span class="keyword">go</span> fetchData(<span class="string">&quot;https://api.example.com&quot;</span>, ch)</span><br><span class="line">    result := &lt;-ch</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <hr />
-<h2 id="best-practices">🏆 Best Practices</h2>
+<h2 id="best-practices-wip">🏆 Best Practices (WIP)</h2>
 <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1. Error Wrapping</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">processFile</span><span class="params">(path <span class="type">string</span>)</span></span> <span class="type">error</span> &#123;</span><br><span class="line">    f, err := os.Open(path)</span><br><span class="line">    <span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> fmt.Errorf(<span class="string">&quot;processFile: %w&quot;</span>, err)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">defer</span> f.Close()</span><br><span class="line">    <span class="comment">// ... file processing ...</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 2. Interface Design</span></span><br><span class="line"><span class="keyword">type</span> Writer <span class="keyword">interface</span> &#123;</span><br><span class="line">    Write([]<span class="type">byte</span>) (<span class="type">int</span>, <span class="type">error</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 3. Memory Management</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">processLargeData</span><span class="params">()</span></span> &#123;</span><br><span class="line">    data := <span class="built_in">make</span>([]<span class="type">byte</span>, <span class="number">0</span>, <span class="number">1e6</span>)  <span class="comment">// Pre-allocate</span></span><br><span class="line">    <span class="comment">// ... process data ...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <hr />
 <h2 id="python-vs-go-choosing-the-right-tool">📚 Python vs Go: Choosing
@@ -935,6 +992,9 @@ roles)</td>
 <h2 id="leetcode-roadmap-for-go">🚀 LeetCode Roadmap for Go</h2>
 <h3 id="phase-1-learning-go-basics-1-2-weeks">Phase 1: Learning Go
 Basics (1-2 Weeks)</h3>
+<blockquote>
+<p>Goal: Get comfortable with Go syntax and basic concepts.</p>
+</blockquote>
 <ul>
 <li>✅ Variables, Constants, and Types (<code>:=</code>,
 <code>var</code>, <code>const</code>)</li>
@@ -947,6 +1007,9 @@ Basics (1-2 Weeks)</h3>
 </ul>
 <h3 id="phase-2-easy-leetcode-questions-2-3-weeks">Phase 2: Easy
 LeetCode Questions (2-3 Weeks)</h3>
+<blockquote>
+<p>Goal: Manage to solve easy questions in Go without much help.</p>
+</blockquote>
 <ul>
 <li>✅ Arrays &amp; Strings</li>
 <li>✅ HashMaps &amp; Sets</li>
@@ -954,6 +1017,9 @@ LeetCode Questions (2-3 Weeks)</h3>
 </ul>
 <h3 id="phase-3-medium-leetcode-questions-3-5-weeks">Phase 3: Medium
 LeetCode Questions (3-5 Weeks)</h3>
+<blockquote>
+<p>Goal: Manage to solve medium questions in Go without much help.</p>
+</blockquote>
 <ul>
 <li>✅ Sorting &amp; Searching</li>
 <li>✅ Recursion &amp; Backtracking</li>
@@ -961,10 +1027,16 @@ LeetCode Questions (3-5 Weeks)</h3>
 </ul>
 <h3 id="phase-4-hard-leetcode-questions-ongoing">Phase 4: Hard LeetCode
 Questions (Ongoing)</h3>
+<blockquote>
+<p>Goal: Manage to solve hard questions in Go without much help.</p>
+</blockquote>
 <ul>
 <li>✅ Graphs &amp; Trees</li>
 </ul>
 <h3 id="phase-5-advanced-go-concepts">Phase 5: Advanced Go Concepts</h3>
+<blockquote>
+<p>Goal: Get comfortable with advanced Go concepts.</p>
+</blockquote>
 <ul>
 <li>✅ Goroutines &amp; Concurrency</li>
 <li>✅ Channels &amp; Select Statements</li>
@@ -980,95 +1052,8 @@ Search Insert Position</a></h3>
 the index if the target is found. If not, return the index where it
 would be if it were inserted in order. You must write an algorithm with
 <strong>O(log n)</strong> runtime complexity.</p>
-<hr />
 <h4 id="go-implementation">🚀 Go Implementation</h4>
 <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">searchInsert</span><span class="params">(nums []<span class="type">int</span>, target <span class="type">int</span>)</span></span> <span class="type">int</span> &#123;</span><br><span class="line">    left, right := <span class="number">0</span>, <span class="built_in">len</span>(nums)<span class="number">-1</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> left &lt;= right &#123;</span><br><span class="line">        mid := left + (right-left)/<span class="number">2</span></span><br><span class="line">        <span class="keyword">if</span> nums[mid] == target &#123;</span><br><span class="line">            <span class="keyword">return</span> mid</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> nums[mid] &lt; target &#123;</span><br><span class="line">            left = mid + <span class="number">1</span></span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            right = mid - <span class="number">1</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> left</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<hr />
-<h4 id="key-insights">🧠 Key Insights</h4>
-<ol type="1">
-<li><strong>Binary Search in Go</strong>:
-<ul>
-<li>Use <code>left</code> and <code>right</code> pointers to track the
-search range.</li>
-<li>Calculate <code>mid</code> using
-<code>mid := left + (right-left)/2</code> to avoid overflow.</li>
-</ul></li>
-<li><strong>Why Return <code>left</code></strong>:
-<ul>
-<li>When the loop ends, <code>left</code> points to the first index
-where <code>nums[left] &gt;= target</code>.</li>
-<li>If the target doesn’t exist, <code>left</code> is the correct
-insertion position.</li>
-</ul></li>
-<li><strong>No Floor/Ceiling Needed</strong>:
-<ul>
-<li>Go’s integer division <code>/</code> automatically floors the
-result.</li>
-<li>Example: <code>(3 - 0) / 2 = 1</code> (no explicit floor function
-needed).</li>
-</ul></li>
-<li><strong>Edge Cases</strong>:
-<ul>
-<li>Target smaller than all elements → Return <code>0</code>.</li>
-<li>Target larger than all elements → Return
-<code>len(nums)</code>.</li>
-<li>Target exists in the array → Return its index.</li>
-</ul></li>
-</ol>
-<hr />
-<h4 id="step-by-step-walkthrough">🔍 Step-by-Step Walkthrough</h4>
-<p>For <code>nums = [1, 3, 5, 6]</code>, <code>target = 2</code>:</p>
-<ol type="1">
-<li><strong>Step 1</strong>: <code>left = 0</code>,
-<code>right = 3</code>, <code>mid = 1</code> → <code>nums[1] = 3</code>
-&gt; <code>2</code> → <code>right = 0</code>.</li>
-<li><strong>Step 2</strong>: <code>left = 0</code>,
-<code>right = 0</code>, <code>mid = 0</code> → <code>nums[0] = 1</code>
-&lt; <code>2</code> → <code>left = 1</code>.</li>
-<li><strong>Step 3</strong>: <code>left = 1</code>,
-<code>right = 0</code> → Exit loop.</li>
-<li><strong>Result</strong>: Return <code>left = 1</code>.</li>
-</ol>
-<hr />
-<h4 id="common-pitfalls">⚠️ Common Pitfalls</h4>
-<ol type="1">
-<li><strong>Incorrect Mid Calculation</strong>:
-<ul>
-<li>Wrong: <code>mid := (left + right) / 2</code> (risk of
-overflow).</li>
-<li>Correct: <code>mid := left + (right-left)/2</code>.</li>
-</ul></li>
-<li><strong>Unnecessary Updates</strong>:
-<ul>
-<li>Avoid <code>left++</code> or <code>right--</code> in binary search.
-Only update <code>left = mid + 1</code> or
-<code>right = mid - 1</code>.</li>
-</ul></li>
-<li><strong>Variable Shadowing</strong>:
-<ul>
-<li>Don’t redeclare <code>mid</code> inside the loop if it’s already
-declared outside.</li>
-</ul></li>
-</ol>
-<hr />
-<h4 id="best-practices-1">🏆 Best Practices</h4>
-<ol type="1">
-<li><strong>Pre-allocate Variables</strong>:
-<ul>
-<li>Use <code>left</code>, <code>right</code>, and <code>mid</code> with
-clear initialization.</li>
-</ul></li>
-<li><strong>Keep It Simple</strong>:
-<ul>
-<li>Avoid complex logic inside the loop.</li>
-</ul></li>
-<li><strong>Test Edge Cases</strong>:
-<ul>
-<li>Test with targets smaller than the first element, larger than the
-last element, and exact matches.</li>
-</ul></li>
-</ol>
-<hr />
 <h4 id="differences-from-javascript">🔄 Differences from JavaScript</h4>
 <table>
 <colgroup>
@@ -1106,7 +1091,6 @@ last element, and exact matches.</li>
 </tr>
 </tbody>
 </table>
-<hr />
 <h4 id="example-edge-cases">🧪 Example Edge Cases</h4>
 <ol type="1">
 <li><strong>Target at Start</strong>:
@@ -1126,17 +1110,69 @@ last element, and exact matches.</li>
 </ul></li>
 </ol>
 <hr />
-<h2 id="wip-...">🚧 WIP ...</h2>
-<hr />
-<h2 id="resources">📚 Resources</h2>
+<h3 id="pascals-triangle"><a
+target="_blank" rel="noopener" href="https://leetcode.com/problems/pascals-triangle/">118. Pascal's
+Triangle</a></h3>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">generate</span><span class="params">(numRows <span class="type">int</span>)</span></span> [][]<span class="type">int</span> &#123;</span><br><span class="line">    res := <span class="built_in">make</span>([][]<span class="type">int</span>, numRows)</span><br><span class="line">    <span class="keyword">for</span> i := <span class="keyword">range</span> res &#123;</span><br><span class="line">        res[i] = <span class="built_in">make</span>([]<span class="type">int</span>, i+<span class="number">1</span>)</span><br><span class="line">        res[i][<span class="number">0</span>], res[i][i] = <span class="number">1</span>, <span class="number">1</span></span><br><span class="line">        <span class="keyword">for</span> j := <span class="number">1</span>; j &lt; i; j++ &#123;</span><br><span class="line">            res[i][j] = res[i<span class="number">-1</span>][j<span class="number">-1</span>] + res[i<span class="number">-1</span>][j]</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> res</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="key-insights">🔑 Key Insights</h4>
+<ul>
+<li><strong>Go Slices ≠ JS Arrays</strong>:
+<ul>
+<li><code>make([]int, n)</code> initializes with
+<strong>zeros</strong></li>
+<li>No native <code>fill(1)</code> → manually set endpoints</li>
+</ul></li>
+<li><strong>:= vs =</strong> <code>:=</code> declares+assigns (new
+vars), <code>=</code> reassigns</li>
+<li><strong>Pre-allocation</strong> <code>make([][]int, numRows)</code>
+first → O(n) space</li>
+</ul>
+<h4 id="go-vs-js">⚡ Go vs JS</h4>
+<table>
+<colgroup>
+<col style="width: 21%" />
+<col style="width: 36%" />
+<col style="width: 42%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Feature</th>
+<th>Go</th>
+<th>JavaScript</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Array Creation</td>
+<td><code>make([]int, n)</code> (zeros)</td>
+<td><code>new Array(n).fill(1)</code></td>
+</tr>
+<tr class="even">
+<td>Value Init</td>
+<td>Manual <code>[0], [i] = 1,1</code></td>
+<td>Auto-filled with constructor</td>
+</tr>
+<tr class="odd">
+<td>Matrix</td>
+<td><code>make([][]int, rows)</code></td>
+<td>Nested <code>Array()</code> calls</td>
+</tr>
+</tbody>
+</table>
+<h4 id="pitfalls">🚨 Pitfalls</h4>
 <ol type="1">
-<li><span class="exturl" data-url="aHR0cHM6Ly9nb2J5ZXhhbXBsZS5jb20v">Go by Example<i class="fa fa-external-link-alt"></i></span> - Practical
-code samples</li>
-<li><span class="exturl" data-url="aHR0cHM6Ly9nb2xhbmcub3JnL2RvYy9lZmZlY3RpdmVfZ28=">Effective Go<i class="fa fa-external-link-alt"></i></span> -
-Official style guide</li>
-<li><span class="exturl" data-url="aHR0cHM6Ly9wa2cuZ28uZGV2L3N0ZA==">Go Standard Library<i class="fa fa-external-link-alt"></i></span> - API
-documentation</li>
+<li>Forgetting to <code>make</code> inner slices</li>
+<li>Not manually setting first/last elements</li>
+<li>Index math errors in triangle pattern</li>
 </ol>
+<h4 id="best-practices">✅ Best Practices</h4>
+<ul>
+<li>Pre-allocate with <code>make</code></li>
+<li>Handle edge cases (numRows=0)</li>
+<li>Use range loops for clean iteration</li>
+</ul>
+<hr />
+<h2 id="wip-...">🚧 WIP ...</h2>
 
     </div>
 
@@ -1174,9 +1210,9 @@ documentation</li>
       <footer class="post-footer">
           <div class="post-tags">
               <a href="/tags/programming/" rel="tag"># programming</a>
-              <a href="/tags/notes/" rel="tag"># notes</a>
               <a href="/tags/go/" rel="tag"># go</a>
               <a href="/tags/golang/" rel="tag"># golang</a>
+              <a href="/tags/notes/" rel="tag"># notes</a>
           </div>
 
         
@@ -1257,14 +1293,15 @@ documentation</li>
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#quick-comparison-table"><span class="nav-number">1.</span> <span class="nav-text">🚀 Quick Comparison Table</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#core-concepts"><span class="nav-number">2.</span> <span class="nav-text">📌 Core Concepts</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#variables-types"><span class="nav-number">2.1.</span> <span class="nav-text">Variables &amp; Types</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#code-examples"><span class="nav-number">2.1.1.</span> <span class="nav-text">Code Examples</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#common-questions"><span class="nav-number">2.1.2.</span> <span class="nav-text">Common Questions</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#functions"><span class="nav-number">2.2.</span> <span class="nav-text">Functions</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#code-examples-1"><span class="nav-number">2.2.1.</span> <span class="nav-text">Code Examples</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#common-questions-1"><span class="nav-number">2.2.2.</span> <span class="nav-text">Common Questions</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#data-structures"><span class="nav-number">3.</span> <span class="nav-text">🛠 Data Structures</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#arraysslices-vs-js-arrays"><span class="nav-number">3.1.</span> <span class="nav-text">Arrays&#x2F;Slices vs JS Arrays</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#code-examples-2"><span class="nav-number">3.1.1.</span> <span class="nav-text">Code Examples</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#key-differences"><span class="nav-number">3.1.2.</span> <span class="nav-text">Key Differences</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#practical-example-collecting-1m-numbers"><span class="nav-number">3.1.3.</span> <span class="nav-text">Practical Example:
-Collecting 1M Numbers</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#javascript-automatic"><span class="nav-number">3.1.3.1.</span> <span class="nav-text">JavaScript (Automatic)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#go-manual-control"><span class="nav-number">3.1.3.2.</span> <span class="nav-text">Go (Manual Control)</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#when-to-pre-allocate-in-go"><span class="nav-number">3.1.4.</span> <span class="nav-text">When to Pre-allocate in Go</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#when-not-to-pre-allocate"><span class="nav-number">3.1.5.</span> <span class="nav-text">When Not to Pre-allocate</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#real-world-pattern"><span class="nav-number">3.1.6.</span> <span class="nav-text">Real-world Pattern</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#key-takeaways"><span class="nav-number">3.1.7.</span> <span class="nav-text">Key Takeaways</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#common-questions-2"><span class="nav-number">3.1.8.</span> <span class="nav-text">Common Questions</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#objects-vs-structs"><span class="nav-number">3.2.</span> <span class="nav-text">Objects vs Structs</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#code-examples-3"><span class="nav-number">3.2.1.</span> <span class="nav-text">Code Examples</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#js-maps-vs-go-maps"><span class="nav-number">3.3.</span> <span class="nav-text">JS Maps vs Go Maps</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#common-questions-3"><span class="nav-number">3.3.1.</span> <span class="nav-text">Common Questions</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#error-handling"><span class="nav-number">4.</span> <span class="nav-text">🚨 Error Handling</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#code-examples-4"><span class="nav-number">4.1.</span> <span class="nav-text">Code Examples</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#common-questions-4"><span class="nav-number">4.2.</span> <span class="nav-text">Common Questions</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#concurrency-patterns"><span class="nav-number">5.</span> <span class="nav-text">🔄 Concurrency Patterns</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#code-examples-5"><span class="nav-number">5.1.</span> <span class="nav-text">Code Examples</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#best-practices"><span class="nav-number">6.</span> <span class="nav-text">🏆 Best Practices</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#python-vs-go-choosing-the-right-tool"><span class="nav-number">7.</span> <span class="nav-text">📚 Python vs Go: Choosing
-the Right Tool</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#leetcode-roadmap-for-go"><span class="nav-number">8.</span> <span class="nav-text">🚀 LeetCode Roadmap for Go</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#phase-1-learning-go-basics-1-2-weeks"><span class="nav-number">8.1.</span> <span class="nav-text">Phase 1: Learning Go
-Basics (1-2 Weeks)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#phase-2-easy-leetcode-questions-2-3-weeks"><span class="nav-number">8.2.</span> <span class="nav-text">Phase 2: Easy
-LeetCode Questions (2-3 Weeks)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#phase-3-medium-leetcode-questions-3-5-weeks"><span class="nav-number">8.3.</span> <span class="nav-text">Phase 3: Medium
-LeetCode Questions (3-5 Weeks)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#phase-4-hard-leetcode-questions-ongoing"><span class="nav-number">8.4.</span> <span class="nav-text">Phase 4: Hard LeetCode
-Questions (Ongoing)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#phase-5-advanced-go-concepts"><span class="nav-number">8.5.</span> <span class="nav-text">Phase 5: Advanced Go Concepts</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#leetcode-practices"><span class="nav-number">9.</span> <span class="nav-text">🧩 LeetCode Practices</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#search-insert-position"><span class="nav-number">9.1.</span> <span class="nav-text">35.
-Search Insert Position</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#problem-description"><span class="nav-number">9.1.1.</span> <span class="nav-text">Problem Description</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#go-implementation"><span class="nav-number">9.1.2.</span> <span class="nav-text">🚀 Go Implementation</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#key-insights"><span class="nav-number">9.1.3.</span> <span class="nav-text">🧠 Key Insights</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#step-by-step-walkthrough"><span class="nav-number">9.1.4.</span> <span class="nav-text">🔍 Step-by-Step Walkthrough</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#common-pitfalls"><span class="nav-number">9.1.5.</span> <span class="nav-text">⚠️ Common Pitfalls</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#best-practices-1"><span class="nav-number">9.1.6.</span> <span class="nav-text">🏆 Best Practices</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#differences-from-javascript"><span class="nav-number">9.1.7.</span> <span class="nav-text">🔄 Differences from JavaScript</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#example-edge-cases"><span class="nav-number">9.1.8.</span> <span class="nav-text">🧪 Example Edge Cases</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#wip-..."><span class="nav-number">10.</span> <span class="nav-text">🚧 WIP ...</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#resources"><span class="nav-number">11.</span> <span class="nav-text">📚 Resources</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#intro"><span class="nav-number">1.</span> <span class="nav-text">🚀 Intro</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#core-concepts"><span class="nav-number">2.</span> <span class="nav-text">📌 Core Concepts</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#code-examples"><span class="nav-number">2.1.</span> <span class="nav-text">Code Examples</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#common-questions"><span class="nav-number">2.2.</span> <span class="nav-text">Common Questions</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#functions"><span class="nav-number">3.</span> <span class="nav-text">⚙️ Functions</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#code-examples-1"><span class="nav-number">3.1.</span> <span class="nav-text">Code Examples</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#common-questions-1"><span class="nav-number">3.2.</span> <span class="nav-text">Common Questions</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#data-structures"><span class="nav-number">4.</span> <span class="nav-text">🛠 Data Structures</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#arraysslices-vs-js-arrays"><span class="nav-number">4.1.</span> <span class="nav-text">Arrays&#x2F;Slices vs JS Arrays</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#code-examples-2"><span class="nav-number">4.1.1.</span> <span class="nav-text">Code Examples</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#key-differences"><span class="nav-number">4.1.2.</span> <span class="nav-text">Key Differences</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#wip-practical-example-collecting-1m-numbers"><span class="nav-number">4.1.3.</span> <span class="nav-text">(WIP) Practical
+Example: Collecting 1M Numbers</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#javascript-automatic"><span class="nav-number">4.1.3.1.</span> <span class="nav-text">JavaScript (Automatic)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#go-manual-control"><span class="nav-number">4.1.3.2.</span> <span class="nav-text">Go (Manual Control)</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#when-to-pre-allocate-in-go"><span class="nav-number">4.1.4.</span> <span class="nav-text">When to Pre-allocate in Go</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#when-not-to-pre-allocate"><span class="nav-number">4.1.5.</span> <span class="nav-text">When Not to Pre-allocate</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#real-world-pattern"><span class="nav-number">4.1.6.</span> <span class="nav-text">Real-world Pattern</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#key-takeaways"><span class="nav-number">4.1.7.</span> <span class="nav-text">Key Takeaways</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#common-questions-2"><span class="nav-number">4.1.8.</span> <span class="nav-text">Common Questions</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#objects-vs-structs"><span class="nav-number">4.2.</span> <span class="nav-text">Objects vs Structs</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#code-examples-3"><span class="nav-number">4.2.1.</span> <span class="nav-text">Code Examples</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#js-maps-vs-go-maps"><span class="nav-number">4.3.</span> <span class="nav-text">JS Maps vs Go Maps</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#common-questions-3"><span class="nav-number">4.3.1.</span> <span class="nav-text">Common Questions</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#error-handling-wip"><span class="nav-number">5.</span> <span class="nav-text">🚨 Error Handling (WIP)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#code-examples-4"><span class="nav-number">5.1.</span> <span class="nav-text">Code Examples</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#common-questions-4"><span class="nav-number">5.2.</span> <span class="nav-text">Common Questions</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#concurrency-patterns-wip"><span class="nav-number">6.</span> <span class="nav-text">🔄 Concurrency Patterns (WIP)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#code-examples-5"><span class="nav-number">6.1.</span> <span class="nav-text">Code Examples</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#best-practices-wip"><span class="nav-number">7.</span> <span class="nav-text">🏆 Best Practices (WIP)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#python-vs-go-choosing-the-right-tool"><span class="nav-number">8.</span> <span class="nav-text">📚 Python vs Go: Choosing
+the Right Tool</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#leetcode-roadmap-for-go"><span class="nav-number">9.</span> <span class="nav-text">🚀 LeetCode Roadmap for Go</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#phase-1-learning-go-basics-1-2-weeks"><span class="nav-number">9.1.</span> <span class="nav-text">Phase 1: Learning Go
+Basics (1-2 Weeks)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#phase-2-easy-leetcode-questions-2-3-weeks"><span class="nav-number">9.2.</span> <span class="nav-text">Phase 2: Easy
+LeetCode Questions (2-3 Weeks)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#phase-3-medium-leetcode-questions-3-5-weeks"><span class="nav-number">9.3.</span> <span class="nav-text">Phase 3: Medium
+LeetCode Questions (3-5 Weeks)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#phase-4-hard-leetcode-questions-ongoing"><span class="nav-number">9.4.</span> <span class="nav-text">Phase 4: Hard LeetCode
+Questions (Ongoing)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#phase-5-advanced-go-concepts"><span class="nav-number">9.5.</span> <span class="nav-text">Phase 5: Advanced Go Concepts</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#leetcode-practices"><span class="nav-number">10.</span> <span class="nav-text">🧩 LeetCode Practices</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#search-insert-position"><span class="nav-number">10.1.</span> <span class="nav-text">35.
+Search Insert Position</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#problem-description"><span class="nav-number">10.1.1.</span> <span class="nav-text">Problem Description</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#go-implementation"><span class="nav-number">10.1.2.</span> <span class="nav-text">🚀 Go Implementation</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#differences-from-javascript"><span class="nav-number">10.1.3.</span> <span class="nav-text">🔄 Differences from JavaScript</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#example-edge-cases"><span class="nav-number">10.1.4.</span> <span class="nav-text">🧪 Example Edge Cases</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pascals-triangle"><span class="nav-number">10.2.</span> <span class="nav-text">118. Pascal&#39;s
+Triangle</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#key-insights"><span class="nav-number">10.2.1.</span> <span class="nav-text">🔑 Key Insights</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#go-vs-js"><span class="nav-number">10.2.2.</span> <span class="nav-text">⚡ Go vs JS</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#pitfalls"><span class="nav-number">10.2.3.</span> <span class="nav-text">🚨 Pitfalls</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#best-practices"><span class="nav-number">10.2.4.</span> <span class="nav-text">✅ Best Practices</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#wip-..."><span class="nav-number">11.</span> <span class="nav-text">🚧 WIP ...</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -1433,7 +1470,7 @@ NEW: Readers & Total Views
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">4:47</span>
+    <span title="Reading time total">4:48</span>
 </div>
 
         
