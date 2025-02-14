@@ -10,7 +10,7 @@
   <id>https://blog.enkr1.com/</id>
   
   <author>
-    <name>Jing Hui PANG | 彭竞辉 | ENKR</name>
+    <name>Jing Hui PANG | 彭競辉 | ENKR</name>
     
   </author>
   
@@ -75,11 +75,11 @@ has something solid to build on. law of attraction? we&#39;ll see. 🎯&lt;/p&gt
     
     <category term="programming" scheme="https://blog.enkr1.com/tags/programming/"/>
     
+    <category term="notes" scheme="https://blog.enkr1.com/tags/notes/"/>
+    
     <category term="go" scheme="https://blog.enkr1.com/tags/go/"/>
     
     <category term="golang" scheme="https://blog.enkr1.com/tags/golang/"/>
-    
-    <category term="notes" scheme="https://blog.enkr1.com/tags/notes/"/>
     
   </entry>
   

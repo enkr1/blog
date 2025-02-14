@@ -55,11 +55,11 @@
             
             <tag> programming </tag>
             
+            <tag> notes </tag>
+            
             <tag> go </tag>
             
             <tag> golang </tag>
-            
-            <tag> notes </tag>
             
         </tags>
       
@@ -650,9 +650,9 @@
           
           <category> Software Engineering </category>
           
-          <category> Web Development </category>
-          
           <category> Notebooks </category>
+          
+          <category> Web Development </category>
           
           <category> Front-end </category>
           
@@ -918,9 +918,9 @@
             
             <tag> leetcode-medium </tag>
             
-            <tag> interview-preparation </tag>
-            
             <tag> dynamic-programming </tag>
+            
+            <tag> interview-preparation </tag>
             
             <tag> top-interview-150 </tag>
             
@@ -957,9 +957,9 @@
             
             <tag> leetcode-medium </tag>
             
-            <tag> interview-preparation </tag>
-            
             <tag> dynamic-programming </tag>
+            
+            <tag> interview-preparation </tag>
             
         </tags>
       
@@ -1209,9 +1209,9 @@
             
             <tag> leetcode-medium </tag>
             
-            <tag> interview-preparation </tag>
-            
             <tag> dynamic-programming </tag>
+            
+            <tag> interview-preparation </tag>
             
             <tag> min-heap </tag>
             
@@ -2281,9 +2281,9 @@
       
         <tags>
             
-            <tag> beatbox </tag>
-            
             <tag> hobby </tag>
+            
+            <tag> beatbox </tag>
             
             <tag> stage-performance </tag>
             
@@ -2505,9 +2505,9 @@
           
           <category> Software Engineering </category>
           
-          <category> Web Development </category>
-          
           <category> Notebooks </category>
+          
+          <category> Web Development </category>
           
           <category> Front-end </category>
           
