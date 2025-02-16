@@ -31,12 +31,12 @@
 <meta property="og:description" content="Follow my hands-on Go learning journey through LeetCode solutions and real-world comparisons with JavaScript. Discover how Go&#39;s concurrency and memory efficiency solve problems where JS hits limits.">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2025-02-08T11:05:55.000Z">
-<meta property="article:modified_time" content="2025-02-11T17:42:22.857Z">
+<meta property="article:modified_time" content="2025-02-16T08:44:31.507Z">
 <meta property="article:author" content="Jing Hui PANG | 彭競辉 | ENKR">
 <meta property="article:tag" content="programming">
-<meta property="article:tag" content="notes">
 <meta property="article:tag" content="go">
 <meta property="article:tag" content="golang">
+<meta property="article:tag" content="notes">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="https://blog.enkr1.com/go-notebook/">
@@ -323,7 +323,7 @@ NOTE: created_at
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: Wednesday, 12 February 2025 01:42:22 AM 01:42:22 AM" itemprop="dateModified" datetime="2025-02-12T01:42:22+08:00">Wednesday, 12 February 2025 01:42:22 AM</time>
+                <time title="Modified: Sunday, 16 February 2025 16:44:31 PM 16:44:31 PM" itemprop="dateModified" datetime="2025-02-16T16:44:31+08:00">Sunday, 16 February 2025 16:44:31 PM</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -364,7 +364,7 @@ NOTE: word count
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-              <span>12k</span>
+              <span>2.4k</span>
             </span>
 
 <!--
@@ -374,7 +374,7 @@ NOTE: reading time
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
-              <span>11 mins.</span>
+              <span>9 mins.</span>
             </span>
 
 
@@ -1051,7 +1051,7 @@ Search Insert Position</a></h3>
 <p>Given a sorted array of distinct integers and a target value, return
 the index if the target is found. If not, return the index where it
 would be if it were inserted in order. You must write an algorithm with
-<strong>O(log n)</strong> runtime complexity.</p>
+<span class="math inline">\(O(\log n)\)</span> runtime complexity.</p>
 <h4 id="go-implementation">🚀 Go Implementation</h4>
 <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">searchInsert</span><span class="params">(nums []<span class="type">int</span>, target <span class="type">int</span>)</span></span> <span class="type">int</span> &#123;</span><br><span class="line">    left, right := <span class="number">0</span>, <span class="built_in">len</span>(nums)<span class="number">-1</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> left &lt;= right &#123;</span><br><span class="line">        mid := left + (right-left)/<span class="number">2</span></span><br><span class="line">        <span class="keyword">if</span> nums[mid] == target &#123;</span><br><span class="line">            <span class="keyword">return</span> mid</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> nums[mid] &lt; target &#123;</span><br><span class="line">            left = mid + <span class="number">1</span></span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            right = mid - <span class="number">1</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> left</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h4 id="differences-from-javascript">🔄 Differences from JavaScript</h4>
@@ -1171,6 +1171,81 @@ first → O(n) space</li>
 <li>Handle edge cases (numRows=0)</li>
 <li>Use range loops for clean iteration</li>
 </ul>
+<h3 id="count-number-of-bad-pairs"><a
+target="_blank" rel="noopener" href="https://leetcode.com/problems/count-number-of-bad-pairs/">2364.
+Count Number of Bad Pairs</a></h3>
+<p><strong>Key Insight</strong></p>
+<p>Transform <code>j - i != nums[j] - nums[i]</code> →
+<code>i - nums[i] != j - nums[j]</code>. Track <code>i - nums[i]</code>
+counts using map.</p>
+<p><strong>Go Implementation</strong> <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">countBadPairs</span><span class="params">(nums []<span class="type">int</span>)</span></span> <span class="type">int64</span> &#123;</span><br><span class="line">    total := <span class="type">int64</span>(<span class="built_in">len</span>(nums)*(<span class="built_in">len</span>(nums)<span class="number">-1</span>)/<span class="number">2</span>)</span><br><span class="line">    good := <span class="type">int64</span>(<span class="number">0</span>)</span><br><span class="line">    cache := <span class="built_in">make</span>(<span class="keyword">map</span>[<span class="type">int</span>]<span class="type">int</span>) <span class="comment">// Key: i - nums[i]</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i, num := <span class="keyword">range</span> nums &#123;</span><br><span class="line">        key := i - num</span><br><span class="line">        good += <span class="type">int64</span>(cache[key]) <span class="comment">// Count existing matches</span></span><br><span class="line">        cache[key]++ <span class="comment">// Update after counting</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> total - good</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><strong>Go-Specific Learnings</strong></p>
+<ol type="1">
+<li><p><strong>Map Initialisation</strong>
+<code>cache := make(map[int]int)</code></p>
+<ul>
+<li>Zero-value initialised (no <code>nil</code> issues)</li>
+<li>Auto-expands as needed</li>
+</ul></li>
+<li><p><strong>Unused Variables</strong> Go compiler errors if:
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i, num := <span class="keyword">range</span> nums &#123; <span class="comment">// Must use both i and num</span></span><br><span class="line">    <span class="comment">// If not, use _: for _, num := range nums</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p></li>
+<li><p><strong>Efficient Counting</strong></p>
+<ul>
+<li><code>cache[key]</code> returns 0 if missing (no panic)</li>
+<li><code>cache[key]++</code> handles insertion/update</li>
+</ul></li>
+</ol>
+<p><strong>Complexity</strong></p>
+<ul>
+<li>Time: <span class="math inline">\(O(n)\)</span> - Single pass with
+map lookups</li>
+<li>Space: <span class="math inline">\(O(n)\)</span> - Worst-case unique
+keys</li>
+</ul>
+<p><strong>Why This Works</strong></p>
+<ul>
+<li>Each <code>key</code> collision represents a good pair</li>
+<li>Total pairs = <span class="math inline">\(n * (n-1)/2\)</span></li>
+<li>Bad pairs = Total - Good</li>
+</ul>
+<hr />
+<h3 id="contains-duplicate-ii"><a
+target="_blank" rel="noopener" href="https://leetcode.com/problems/contains-duplicate-ii/">219.
+Contains Duplicate II</a></h3>
+<p><strong>Key Insight</strong></p>
+<p>Track last seen indices using a hashmap to check for duplicates
+within <code>k</code> distance in <span
+class="math inline">\(O(n)\)</span> time.</p>
+<p><strong>Go Implementation</strong> <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">containsNearbyDuplicate</span><span class="params">(nums []<span class="type">int</span>, k <span class="type">int</span>)</span></span> <span class="type">bool</span> &#123;</span><br><span class="line">	<span class="comment">// N = 6</span></span><br><span class="line">	<span class="comment">// k = 2</span></span><br><span class="line">	<span class="comment">// [0,1,2,3,4,5]</span></span><br><span class="line">	<span class="comment">// [1,2,3,1,2,3]</span></span><br><span class="line">	<span class="comment">// e.g. 3</span></span><br><span class="line">	<span class="comment">// =&gt; 3 - 2 = 1</span></span><br><span class="line"></span><br><span class="line">	numToIndexMap := <span class="built_in">make</span>(<span class="keyword">map</span>[<span class="type">int</span>]<span class="type">int</span>)</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span> i := <span class="number">0</span>; i &lt; <span class="built_in">len</span>(nums); i++ &#123;</span><br><span class="line">		<span class="keyword">if</span> existedIndex, exists := numToIndexMap[nums[i]]; exists &#123;</span><br><span class="line"></span><br><span class="line">			<span class="comment">// if existedIndex &gt;= (i-k) || (i+k) &lt;= existedIndex &#123;</span></span><br><span class="line">			<span class="keyword">if</span> (i - existedIndex) &lt;= k &#123;</span><br><span class="line">				<span class="keyword">return</span> <span class="literal">true</span></span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		numToIndexMap[nums[i]] = i</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><strong>Go-Specific Learnings</strong></p>
+<ol type="1">
+<li><p><strong>Map Initialisation</strong>
+<code>make(map[int]int)</code> creates an empty hashmap that
+auto-expands</p></li>
+<li><p><strong>Index Management</strong></p>
+<ul>
+<li>Store current index on each iteration</li>
+<li>Check <code>i-j</code> (not absolute value since
+<code>i &gt; j</code>)</li>
+</ul></li>
+<li><p><strong>Efficiency</strong></p>
+<ul>
+<li>Single pass <span class="math inline">\(O(n)\)</span> time</li>
+<li>Worst-case <span class="math inline">\(O(n)\)</span> space for all
+unique elements</li>
+</ul></li>
+</ol>
+<p><strong>Edge Cases</strong></p>
+<ul>
+<li><code>k=0</code> → Always false (indices must differ)</li>
+<li>All elements unique → false</li>
+<li>Duplicates exactly <code>k</code> apart → true</li>
+</ul>
+<p><strong>Complexity</strong></p>
+<ul>
+<li>Time: <span class="math inline">\(O(n)\)</span></li>
+<li>Space: <span class="math inline">\(O(n)\)</span></li>
+</ul>
 <hr />
 <h2 id="wip-...">🚧 WIP ...</h2>
 
@@ -1210,9 +1285,9 @@ first → O(n) space</li>
       <footer class="post-footer">
           <div class="post-tags">
               <a href="/tags/programming/" rel="tag"># programming</a>
-              <a href="/tags/notes/" rel="tag"># notes</a>
               <a href="/tags/go/" rel="tag"># go</a>
               <a href="/tags/golang/" rel="tag"># golang</a>
+              <a href="/tags/notes/" rel="tag"># notes</a>
           </div>
 
         
@@ -1301,7 +1376,9 @@ LeetCode Questions (2-3 Weeks)</span></a></li><li class="nav-item nav-level-3"><
 LeetCode Questions (3-5 Weeks)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#phase-4-hard-leetcode-questions-ongoing"><span class="nav-number">9.4.</span> <span class="nav-text">Phase 4: Hard LeetCode
 Questions (Ongoing)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#phase-5-advanced-go-concepts"><span class="nav-number">9.5.</span> <span class="nav-text">Phase 5: Advanced Go Concepts</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#leetcode-practices"><span class="nav-number">10.</span> <span class="nav-text">🧩 LeetCode Practices</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#search-insert-position"><span class="nav-number">10.1.</span> <span class="nav-text">35.
 Search Insert Position</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#problem-description"><span class="nav-number">10.1.1.</span> <span class="nav-text">Problem Description</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#go-implementation"><span class="nav-number">10.1.2.</span> <span class="nav-text">🚀 Go Implementation</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#differences-from-javascript"><span class="nav-number">10.1.3.</span> <span class="nav-text">🔄 Differences from JavaScript</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#example-edge-cases"><span class="nav-number">10.1.4.</span> <span class="nav-text">🧪 Example Edge Cases</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pascals-triangle"><span class="nav-number">10.2.</span> <span class="nav-text">118. Pascal&#39;s
-Triangle</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#key-insights"><span class="nav-number">10.2.1.</span> <span class="nav-text">🔑 Key Insights</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#go-vs-js"><span class="nav-number">10.2.2.</span> <span class="nav-text">⚡ Go vs JS</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#pitfalls"><span class="nav-number">10.2.3.</span> <span class="nav-text">🚨 Pitfalls</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#best-practices"><span class="nav-number">10.2.4.</span> <span class="nav-text">✅ Best Practices</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#wip-..."><span class="nav-number">11.</span> <span class="nav-text">🚧 WIP ...</span></a></li></ol></div>
+Triangle</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#key-insights"><span class="nav-number">10.2.1.</span> <span class="nav-text">🔑 Key Insights</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#go-vs-js"><span class="nav-number">10.2.2.</span> <span class="nav-text">⚡ Go vs JS</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#pitfalls"><span class="nav-number">10.2.3.</span> <span class="nav-text">🚨 Pitfalls</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#best-practices"><span class="nav-number">10.2.4.</span> <span class="nav-text">✅ Best Practices</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#count-number-of-bad-pairs"><span class="nav-number">10.3.</span> <span class="nav-text">2364.
+Count Number of Bad Pairs</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#contains-duplicate-ii"><span class="nav-number">10.4.</span> <span class="nav-text">219.
+Contains Duplicate II</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#wip-..."><span class="nav-number">11.</span> <span class="nav-text">🚧 WIP ...</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -1465,12 +1542,12 @@ NEW: Readers & Total Views
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="Symbols count total">371k</span>
+    <span title="Symbols count total">79k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">5:37</span>
+    <span title="Reading time total">4:49</span>
 </div>
 
         

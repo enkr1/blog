@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://blog.enkr1.com/go-notebook/</loc>
-    <lastmod>2025-02-11</lastmod>
+    <lastmod>2025-02-16</lastmod>
   </url>
   <url>
     <loc>https://blog.enkr1.com/journal-week-25/</loc>
@@ -113,10 +113,6 @@
     <lastmod>2025-01-04</lastmod>
   </url>
   <url>
-    <loc>https://blog.enkr1.com/journal-week-11/</loc>
-    <lastmod>2024-12-30</lastmod>
-  </url>
-  <url>
     <loc>https://blog.enkr1.com/journal-week-12/</loc>
     <lastmod>2024-12-30</lastmod>
   </url>
@@ -129,7 +125,7 @@
     <lastmod>2024-12-30</lastmod>
   </url>
   <url>
-    <loc>https://blog.enkr1.com/journal-week-14/</loc>
+    <loc>https://blog.enkr1.com/journal-week-11/</loc>
     <lastmod>2024-12-30</lastmod>
   </url>
   <url>
@@ -137,15 +133,19 @@
     <lastmod>2024-12-30</lastmod>
   </url>
   <url>
+    <loc>https://blog.enkr1.com/journal-week-14/</loc>
+    <lastmod>2024-12-30</lastmod>
+  </url>
+  <url>
     <loc>https://blog.enkr1.com/journal-week-19/</loc>
     <lastmod>2024-12-30</lastmod>
   </url>
   <url>
-    <loc>https://blog.enkr1.com/journal-week-8/</loc>
+    <loc>https://blog.enkr1.com/journal-week-9/</loc>
     <lastmod>2024-12-30</lastmod>
   </url>
   <url>
-    <loc>https://blog.enkr1.com/journal-week-9/</loc>
+    <loc>https://blog.enkr1.com/journal-week-8/</loc>
     <lastmod>2024-12-30</lastmod>
   </url>
   <url>
@@ -213,11 +213,11 @@
     <lastmod>2024-10-23</lastmod>
   </url>
   <url>
-    <loc>https://blog.enkr1.com/deep-learning/</loc>
+    <loc>https://blog.enkr1.com/regression-hypothesis-testing/</loc>
     <lastmod>2024-10-23</lastmod>
   </url>
   <url>
-    <loc>https://blog.enkr1.com/regression-hypothesis-testing/</loc>
+    <loc>https://blog.enkr1.com/deep-learning/</loc>
     <lastmod>2024-10-23</lastmod>
   </url>
   <url>
@@ -233,7 +233,7 @@
     <lastmod>2024-10-23</lastmod>
   </url>
   <url>
-    <loc>https://blog.enkr1.com/making-sense-of-unstructured-data-a-dive-into-clustering-and-dimensionality-reduction/</loc>
+    <loc>https://blog.enkr1.com/foundations-of-data-science-navigating-through-inferential-statistics/</loc>
     <lastmod>2024-10-23</lastmod>
   </url>
   <url>
@@ -241,7 +241,7 @@
     <lastmod>2024-10-23</lastmod>
   </url>
   <url>
-    <loc>https://blog.enkr1.com/foundations-of-data-science-navigating-through-inferential-statistics/</loc>
+    <loc>https://blog.enkr1.com/making-sense-of-unstructured-data-a-dive-into-clustering-and-dimensionality-reduction/</loc>
     <lastmod>2024-10-23</lastmod>
   </url>
   <url>
