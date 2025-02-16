@@ -31,7 +31,7 @@
 <meta property="og:description" content="Follow my hands-on Go learning journey through LeetCode solutions and real-world comparisons with JavaScript. Discover how Go&#39;s concurrency and memory efficiency solve problems where JS hits limits.">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2025-02-08T11:05:55.000Z">
-<meta property="article:modified_time" content="2025-02-16T08:44:31.507Z">
+<meta property="article:modified_time" content="2025-02-16T09:17:19.284Z">
 <meta property="article:author" content="Jing Hui PANG | 彭競辉 | ENKR">
 <meta property="article:tag" content="programming">
 <meta property="article:tag" content="go">
@@ -323,7 +323,7 @@ NOTE: created_at
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: Sunday, 16 February 2025 16:44:31 PM 16:44:31 PM" itemprop="dateModified" datetime="2025-02-16T16:44:31+08:00">Sunday, 16 February 2025 16:44:31 PM</time>
+                <time title="Modified: Sunday, 16 February 2025 17:17:19 PM 17:17:19 PM" itemprop="dateModified" datetime="2025-02-16T17:17:19+08:00">Sunday, 16 February 2025 17:17:19 PM</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1045,131 +1045,102 @@ Questions (Ongoing)</h3>
 <hr />
 <h2 id="leetcode-practices">🧩 LeetCode Practices</h2>
 <h3 id="search-insert-position"><a
-target="_blank" rel="noopener" href="https://leetcode.com/problems/search-insert-position/?envType=problem-list-v2&amp;envId=array">35.
-Search Insert Position</a></h3>
-<h4 id="problem-description">Problem Description</h4>
-<p>Given a sorted array of distinct integers and a target value, return
-the index if the target is found. If not, return the index where it
-would be if it were inserted in order. You must write an algorithm with
-<span class="math inline">\(O(\log n)\)</span> runtime complexity.</p>
-<h4 id="go-implementation">🚀 Go Implementation</h4>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">searchInsert</span><span class="params">(nums []<span class="type">int</span>, target <span class="type">int</span>)</span></span> <span class="type">int</span> &#123;</span><br><span class="line">    left, right := <span class="number">0</span>, <span class="built_in">len</span>(nums)<span class="number">-1</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> left &lt;= right &#123;</span><br><span class="line">        mid := left + (right-left)/<span class="number">2</span></span><br><span class="line">        <span class="keyword">if</span> nums[mid] == target &#123;</span><br><span class="line">            <span class="keyword">return</span> mid</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> nums[mid] &lt; target &#123;</span><br><span class="line">            left = mid + <span class="number">1</span></span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            right = mid - <span class="number">1</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> left</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="differences-from-javascript">🔄 Differences from JavaScript</h4>
-<table>
-<colgroup>
-<col style="width: 21%" />
-<col style="width: 34%" />
-<col style="width: 43%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Feature</th>
-<th>Go</th>
-<th>JavaScript</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Array Length</strong></td>
-<td><code>len(nums)</code></td>
-<td><code>nums.length</code></td>
-</tr>
-<tr class="even">
-<td><strong>Loop Syntax</strong></td>
-<td><code>for left &lt;= right</code></td>
-<td><code>while (left &lt;= right)</code></td>
-</tr>
-<tr class="odd">
-<td><strong>Mid Calculation</strong></td>
-<td><code>mid := left + (right-left)/2</code></td>
-<td><code>mid = Math.floor((left + right) / 2)</code></td>
-</tr>
-<tr class="even">
-<td><strong>Return Value</strong></td>
-<td><code>left</code> (insert position)</td>
-<td><code>left</code> (insert position)</td>
-</tr>
-</tbody>
-</table>
-<h4 id="example-edge-cases">🧪 Example Edge Cases</h4>
+target="_blank" rel="noopener" href="https://leetcode.com/problems/search-insert-position/">35. Search
+Insert Position</a></h3>
+<p><strong>Key Insight</strong></p>
+<p>Binary search implementation where <code>left</code> pointer
+naturally converges to insertion point when target not found.</p>
+<p><strong>Go Implementation</strong></p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">searchInsert</span><span class="params">(nums []<span class="type">int</span>, target <span class="type">int</span>)</span></span> <span class="type">int</span> &#123;</span><br><span class="line">    left, right := <span class="number">0</span>, <span class="built_in">len</span>(nums)<span class="number">-1</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> left &lt;= right &#123;</span><br><span class="line">        mid := left + (right-left)/<span class="number">2</span> <span class="comment">// Prevent overflow</span></span><br><span class="line">        <span class="keyword">switch</span> &#123;</span><br><span class="line">        <span class="keyword">case</span> nums[mid] == target:</span><br><span class="line">            <span class="keyword">return</span> mid</span><br><span class="line">        <span class="keyword">case</span> nums[mid] &lt; target:</span><br><span class="line">            left = mid + <span class="number">1</span></span><br><span class="line">        <span class="keyword">default</span>:</span><br><span class="line">            right = mid - <span class="number">1</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> left <span class="comment">// Insert position when not found</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>Go-Specific Learnings</strong></p>
 <ol type="1">
-<li><strong>Target at Start</strong>:
-<ul>
-<li><code>nums = [1, 3, 5, 6]</code>, <code>target = 0</code> → Return
-<code>0</code>.</li>
-</ul></li>
-<li><strong>Target at End</strong>:
-<ul>
-<li><code>nums = [1, 3, 5, 6]</code>, <code>target = 7</code> → Return
-<code>4</code>.</li>
-</ul></li>
-<li><strong>Target Exists</strong>:
-<ul>
-<li><code>nums = [1, 3, 5, 6]</code>, <code>target = 5</code> → Return
-<code>2</code>.</li>
-</ul></li>
+<li><strong>Loop Structure</strong> <code>for left &lt;= right</code>
+replaces JS <code>while</code> loop</li>
+<li><strong>Mid Calculation</strong> <code>left + (right-left)/2</code>
+prevents integer overflow</li>
+<li><strong>Return Value</strong> <code>left</code> always points to
+insertion index post-loop</li>
 </ol>
-<hr />
+<p><strong>Edge Cases</strong></p>
+<ul>
+<li>Empty array → returns 0</li>
+<li>Target smaller than all elements → 0</li>
+<li>Target larger than all elements → len(nums)</li>
+</ul>
+<p><strong>Complexity</strong></p>
+<ul>
+<li>Time: <span class="math inline">\(O(log n)\)</span></li>
+<li>Space: <span class="math inline">\(O(1)\)</span></li>
+</ul>
+<p><strong>Why This Works</strong></p>
+<ul>
+<li>Binary search reduces problem space by half each iteration</li>
+<li>Final <code>left</code> position reflects where target would
+maintain sorted order</li>
+</ul>
 <h3 id="pascals-triangle"><a
 target="_blank" rel="noopener" href="https://leetcode.com/problems/pascals-triangle/">118. Pascal's
 Triangle</a></h3>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">generate</span><span class="params">(numRows <span class="type">int</span>)</span></span> [][]<span class="type">int</span> &#123;</span><br><span class="line">    res := <span class="built_in">make</span>([][]<span class="type">int</span>, numRows)</span><br><span class="line">    <span class="keyword">for</span> i := <span class="keyword">range</span> res &#123;</span><br><span class="line">        res[i] = <span class="built_in">make</span>([]<span class="type">int</span>, i+<span class="number">1</span>)</span><br><span class="line">        res[i][<span class="number">0</span>], res[i][i] = <span class="number">1</span>, <span class="number">1</span></span><br><span class="line">        <span class="keyword">for</span> j := <span class="number">1</span>; j &lt; i; j++ &#123;</span><br><span class="line">            res[i][j] = res[i<span class="number">-1</span>][j<span class="number">-1</span>] + res[i<span class="number">-1</span>][j]</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> res</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="key-insights">🔑 Key Insights</h4>
+<p><strong>Key Insight</strong></p>
+<p>Pre-allocate slices and manually initialize endpoints since Go arrays
+lack built-in fill methods.</p>
+<p><strong>Go Implementation</strong> <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">generate</span><span class="params">(numRows <span class="type">int</span>)</span></span> [][]<span class="type">int</span> &#123;</span><br><span class="line">    res := <span class="built_in">make</span>([][]<span class="type">int</span>, numRows) <span class="comment">// Outer slice</span></span><br><span class="line">    <span class="keyword">for</span> i := <span class="keyword">range</span> res &#123;</span><br><span class="line">        res[i] = <span class="built_in">make</span>([]<span class="type">int</span>, i+<span class="number">1</span>) <span class="comment">// Inner slice</span></span><br><span class="line">        res[i][<span class="number">0</span>], res[i][i] = <span class="number">1</span>, <span class="number">1</span> <span class="comment">// Endpoints</span></span><br><span class="line">        <span class="keyword">for</span> j := <span class="number">1</span>; j &lt; i; j++ &#123;</span><br><span class="line">            res[i][j] = res[i<span class="number">-1</span>][j<span class="number">-1</span>] + res[i<span class="number">-1</span>][j] <span class="comment">// Sum parents</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> res</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><strong>Go-Specific Learnings</strong></p>
+<ol type="1">
+<li><strong>Slice Initialisation</strong>
 <ul>
-<li><strong>Go Slices ≠ JS Arrays</strong>:
-<ul>
-<li><code>make([]int, n)</code> initializes with
-<strong>zeros</strong></li>
-<li>No native <code>fill(1)</code> → manually set endpoints</li>
+<li><code>make([]int, n)</code> creates zero-initialised slices</li>
+<li>Must manually set first/last elements to 1</li>
 </ul></li>
-<li><strong>:= vs =</strong> <code>:=</code> declares+assigns (new
-vars), <code>=</code> reassigns</li>
-<li><strong>Pre-allocation</strong> <code>make([][]int, numRows)</code>
-first → O(n) space</li>
-</ul>
-<h4 id="go-vs-js">⚡ Go vs JS</h4>
+<li><strong>Nested Slices</strong> <code>make([][]int, rows)</code> →
+Each inner slice needs separate allocation</li>
+<li><strong>Index Boundaries</strong> <code>j</code> runs from
+<code>1</code> to <code>i-1</code> to avoid overwriting endpoints</li>
+</ol>
+<p><strong>Memory Management</strong></p>
 <table>
-<colgroup>
-<col style="width: 21%" />
-<col style="width: 36%" />
-<col style="width: 42%" />
-</colgroup>
 <thead>
 <tr class="header">
-<th>Feature</th>
+<th>Approach</th>
 <th>Go</th>
 <th>JavaScript</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Array Creation</td>
-<td><code>make([]int, n)</code> (zeros)</td>
-<td><code>new Array(n).fill(1)</code></td>
+<td><strong>Creation</strong></td>
+<td><code>make([]int, 0, capacity)</code></td>
+<td><code>new Array(n).fill(0)</code></td>
 </tr>
 <tr class="even">
-<td>Value Init</td>
-<td>Manual <code>[0], [i] = 1,1</code></td>
-<td>Auto-filled with constructor</td>
+<td><strong>Fill</strong></td>
+<td>Manual initialisation</td>
+<td>Built-in <code>fill()</code> method</td>
 </tr>
 <tr class="odd">
-<td>Matrix</td>
-<td><code>make([][]int, rows)</code></td>
-<td>Nested <code>Array()</code> calls</td>
+<td><strong>Matrix</strong></td>
+<td>Nested <code>make()</code> calls</td>
+<td>Array of arrays</td>
 </tr>
 </tbody>
 </table>
-<h4 id="pitfalls">🚨 Pitfalls</h4>
-<ol type="1">
-<li>Forgetting to <code>make</code> inner slices</li>
-<li>Not manually setting first/last elements</li>
-<li>Index math errors in triangle pattern</li>
-</ol>
-<h4 id="best-practices">✅ Best Practices</h4>
+<p><strong>Edge Cases</strong></p>
 <ul>
-<li>Pre-allocate with <code>make</code></li>
-<li>Handle edge cases (numRows=0)</li>
-<li>Use range loops for clean iteration</li>
+<li><code>numRows = 0</code> → Return empty slice</li>
+<li><code>numRows = 1</code> → <code>[[1]]</code></li>
+</ul>
+<p><strong>Complexity</strong></p>
+<ul>
+<li>Time: <span class="math inline">\(O(n²)\)</span> - Each element
+computed once</li>
+<li>Space: <span class="math inline">\(O(n²)\)</span> - Stores entire
+triangle</li>
+</ul>
+<p><strong>Why This Works</strong></p>
+<ul>
+<li>Pre-allocation avoids slice growth overhead</li>
+<li>Mathematical properties of Pascal's Triangle enable efficient
+computation</li>
 </ul>
 <h3 id="count-number-of-bad-pairs"><a
 target="_blank" rel="noopener" href="https://leetcode.com/problems/count-number-of-bad-pairs/">2364.
@@ -1374,9 +1345,9 @@ the Right Tool</span></a></li><li class="nav-item nav-level-2"><a class="nav-lin
 Basics (1-2 Weeks)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#phase-2-easy-leetcode-questions-2-3-weeks"><span class="nav-number">9.2.</span> <span class="nav-text">Phase 2: Easy
 LeetCode Questions (2-3 Weeks)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#phase-3-medium-leetcode-questions-3-5-weeks"><span class="nav-number">9.3.</span> <span class="nav-text">Phase 3: Medium
 LeetCode Questions (3-5 Weeks)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#phase-4-hard-leetcode-questions-ongoing"><span class="nav-number">9.4.</span> <span class="nav-text">Phase 4: Hard LeetCode
-Questions (Ongoing)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#phase-5-advanced-go-concepts"><span class="nav-number">9.5.</span> <span class="nav-text">Phase 5: Advanced Go Concepts</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#leetcode-practices"><span class="nav-number">10.</span> <span class="nav-text">🧩 LeetCode Practices</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#search-insert-position"><span class="nav-number">10.1.</span> <span class="nav-text">35.
-Search Insert Position</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#problem-description"><span class="nav-number">10.1.1.</span> <span class="nav-text">Problem Description</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#go-implementation"><span class="nav-number">10.1.2.</span> <span class="nav-text">🚀 Go Implementation</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#differences-from-javascript"><span class="nav-number">10.1.3.</span> <span class="nav-text">🔄 Differences from JavaScript</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#example-edge-cases"><span class="nav-number">10.1.4.</span> <span class="nav-text">🧪 Example Edge Cases</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pascals-triangle"><span class="nav-number">10.2.</span> <span class="nav-text">118. Pascal&#39;s
-Triangle</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#key-insights"><span class="nav-number">10.2.1.</span> <span class="nav-text">🔑 Key Insights</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#go-vs-js"><span class="nav-number">10.2.2.</span> <span class="nav-text">⚡ Go vs JS</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#pitfalls"><span class="nav-number">10.2.3.</span> <span class="nav-text">🚨 Pitfalls</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#best-practices"><span class="nav-number">10.2.4.</span> <span class="nav-text">✅ Best Practices</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#count-number-of-bad-pairs"><span class="nav-number">10.3.</span> <span class="nav-text">2364.
+Questions (Ongoing)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#phase-5-advanced-go-concepts"><span class="nav-number">9.5.</span> <span class="nav-text">Phase 5: Advanced Go Concepts</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#leetcode-practices"><span class="nav-number">10.</span> <span class="nav-text">🧩 LeetCode Practices</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#search-insert-position"><span class="nav-number">10.1.</span> <span class="nav-text">35. Search
+Insert Position</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pascals-triangle"><span class="nav-number">10.2.</span> <span class="nav-text">118. Pascal&#39;s
+Triangle</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#count-number-of-bad-pairs"><span class="nav-number">10.3.</span> <span class="nav-text">2364.
 Count Number of Bad Pairs</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#contains-duplicate-ii"><span class="nav-number">10.4.</span> <span class="nav-text">219.
 Contains Duplicate II</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#wip-..."><span class="nav-number">11.</span> <span class="nav-text">🚧 WIP ...</span></a></li></ol></div>
       </div>
