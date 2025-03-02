@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://blog.enkr1.com/journal-week-28/</loc>
+    <lastmod>2025-03-02</lastmod>
+  </url>
+  <url>
     <loc>https://blog.enkr1.com/journal-week-27/</loc>
-    <lastmod>2025-02-25</lastmod>
+    <lastmod>2025-03-02</lastmod>
   </url>
   <url>
     <loc>https://blog.enkr1.com/scss-css-notebook/</loc>
@@ -173,11 +177,11 @@
     <lastmod>2024-12-30</lastmod>
   </url>
   <url>
-    <loc>https://blog.enkr1.com/journal-week-5/</loc>
+    <loc>https://blog.enkr1.com/journal-week-7/</loc>
     <lastmod>2024-12-30</lastmod>
   </url>
   <url>
-    <loc>https://blog.enkr1.com/journal-week-7/</loc>
+    <loc>https://blog.enkr1.com/journal-week-5/</loc>
     <lastmod>2024-12-30</lastmod>
   </url>
   <url>
@@ -225,11 +229,11 @@
     <lastmod>2024-10-23</lastmod>
   </url>
   <url>
-    <loc>https://blog.enkr1.com/regression-prediction/</loc>
+    <loc>https://blog.enkr1.com/deep-learning/</loc>
     <lastmod>2024-10-23</lastmod>
   </url>
   <url>
-    <loc>https://blog.enkr1.com/deep-learning/</loc>
+    <loc>https://blog.enkr1.com/regression-prediction/</loc>
     <lastmod>2024-10-23</lastmod>
   </url>
   <url>
