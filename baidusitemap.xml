@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://blog.enkr1.com/python-notebook/</loc>
+    <lastmod>2025-03-13</lastmod>
+  </url>
+  <url>
     <loc>https://blog.enkr1.com/%E8%83%A1%E6%80%9D%E4%B9%B1%E5%86%99-2/</loc>
     <lastmod>2025-03-13</lastmod>
   </url>
@@ -103,10 +107,6 @@
   <url>
     <loc>https://blog.enkr1.com/journal-week-24/</loc>
     <lastmod>2025-02-10</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.enkr1.com/python-notebook/</loc>
-    <lastmod>2025-02-08</lastmod>
   </url>
   <url>
     <loc>https://blog.enkr1.com/sql-demystifying-database-design-a-dive-into-3nf-and-bcnf/</loc>
@@ -241,11 +241,11 @@
     <lastmod>2024-10-23</lastmod>
   </url>
   <url>
-    <loc>https://blog.enkr1.com/deep-learning/</loc>
+    <loc>https://blog.enkr1.com/regression-hypothesis-testing/</loc>
     <lastmod>2024-10-23</lastmod>
   </url>
   <url>
-    <loc>https://blog.enkr1.com/regression-hypothesis-testing/</loc>
+    <loc>https://blog.enkr1.com/deep-learning/</loc>
     <lastmod>2024-10-23</lastmod>
   </url>
   <url>
