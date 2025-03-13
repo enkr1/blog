@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>胡思乱写 2</title>
+      <link href="/%E8%83%A1%E6%80%9D%E4%B9%B1%E5%86%99-2/"/>
+      <url>/%E8%83%A1%E6%80%9D%E4%B9%B1%E5%86%99-2/</url>
+      
+        <content type="html"><![CDATA[<p><strong>“是金子就总会发光”</strong></p><p>是吧...</p><p>或许吧</p><p>或许只是暂时的大风大浪打翻了我双手打造的帆船</p><p>船儿啊</p><p>你看起来并没有被打翻啊</p><p>怎么就不动了？</p><p>是我误打误撞造出的你不够稳固吗？</p><p>或许是我... 掌握不住你？</p><p>我是怎么了</p><p><strong>金子... 就总会发光吧？</strong></p><p>或许</p><p>船儿啊，你并没有被打翻啊。</p><p>是我</p><p>掉入了海里。</p><p>我想</p><p>让我在那沉淀一会儿</p><p><strong>金子总会发光</strong></p><p>这突如其来的破浪，打不翻我的。</p><p>振作起来吧，竞辉。🥺❤️</p><p>这是你打造的船，这是你航行那么久的记忆啊，别忘了你起航的初衷。🎯</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> About Me </category>
+          
+          <category> Random Thoughts </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> thoughts </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Journal: Week 28</title>
       <link href="/journal-week-28/"/>
       <url>/journal-week-28/</url>
@@ -163,11 +190,11 @@
             
             <tag> programming </tag>
             
+            <tag> notes </tag>
+            
             <tag> go </tag>
             
             <tag> golang </tag>
-            
-            <tag> notes </tag>
             
         </tags>
       
@@ -1020,15 +1047,15 @@
             
             <tag> algorithm </tag>
             
-            <tag> leetcode </tag>
-            
             <tag> javascript </tag>
+            
+            <tag> leetcode </tag>
             
             <tag> leetcode-medium </tag>
             
-            <tag> dynamic-programming </tag>
-            
             <tag> interview-preparation </tag>
+            
+            <tag> dynamic-programming </tag>
             
             <tag> top-interview-150 </tag>
             
@@ -1059,15 +1086,15 @@
             
             <tag> algorithm </tag>
             
-            <tag> leetcode </tag>
-            
             <tag> javascript </tag>
+            
+            <tag> leetcode </tag>
             
             <tag> leetcode-medium </tag>
             
-            <tag> dynamic-programming </tag>
-            
             <tag> interview-preparation </tag>
+            
+            <tag> dynamic-programming </tag>
             
         </tags>
       
@@ -1152,9 +1179,9 @@
             
             <tag> algorithm </tag>
             
-            <tag> leetcode </tag>
-            
             <tag> javascript </tag>
+            
+            <tag> leetcode </tag>
             
             <tag> interview-preparation </tag>
             
@@ -1311,19 +1338,19 @@
             
             <tag> algorithm </tag>
             
-            <tag> leetcode </tag>
-            
             <tag> javascript </tag>
             
-            <tag> leetcode-medium </tag>
+            <tag> leetcode </tag>
             
-            <tag> dynamic-programming </tag>
+            <tag> leetcode-medium </tag>
             
             <tag> interview-preparation </tag>
             
             <tag> min-heap </tag>
             
             <tag> priority-queue </tag>
+            
+            <tag> dynamic-programming </tag>
             
         </tags>
       
@@ -1352,9 +1379,9 @@
             
             <tag> algorithm </tag>
             
-            <tag> leetcode </tag>
-            
             <tag> javascript </tag>
+            
+            <tag> leetcode </tag>
             
             <tag> interview-preparation </tag>
             
@@ -1621,9 +1648,9 @@
             
             <tag> algorithm </tag>
             
-            <tag> leetcode </tag>
-            
             <tag> javascript </tag>
+            
+            <tag> leetcode </tag>
             
             <tag> leetcode-medium </tag>
             
@@ -1668,9 +1695,9 @@
             
             <tag> interview-preparation </tag>
             
-            <tag> bash </tag>
-            
             <tag> leetcode-easy </tag>
+            
+            <tag> bash </tag>
             
         </tags>
       
@@ -1802,8 +1829,6 @@
             
             <tag> leetcode </tag>
             
-            <tag> tiktok </tag>
-            
             <tag> site-reliability-engineer </tag>
             
             <tag> sre </tag>
@@ -1813,6 +1838,8 @@
             <tag> coding-interview </tag>
             
             <tag> job-interview </tag>
+            
+            <tag> tiktok </tag>
             
         </tags>
       
@@ -1843,6 +1870,8 @@
             
             <tag> leetcode </tag>
             
+            <tag> google </tag>
+            
             <tag> site-reliability-engineer </tag>
             
             <tag> sre </tag>
@@ -1852,8 +1881,6 @@
             <tag> coding-interview </tag>
             
             <tag> job-interview </tag>
-            
-            <tag> google </tag>
             
         </tags>
       
@@ -2389,9 +2416,9 @@
       
         <tags>
             
-            <tag> beatbox </tag>
-            
             <tag> hobby </tag>
+            
+            <tag> beatbox </tag>
             
             <tag> stage-performance </tag>
             
@@ -2406,7 +2433,7 @@
       <link href="/shoutout-to-stellar-hexo-blogs/"/>
       <url>/shoutout-to-stellar-hexo-blogs/</url>
       
-        <content type="html"><![CDATA[<p>In the vibrant world of blogging, choosing the right platform canmake all the difference. Today, I want to talk about Hexo, a fast,simple, and powerful framework that transforms plain text into staticwebsites and blogs. It's designed for those who love tweaking their sitebut also appreciate speed and efficiency. This post is a celebration ofthose who use Hexo to create some truly inspiring content.</p><span id="more"></span><h2 id="why-choose-hexo">Why Choose Hexo?</h2><p>So, why do people flock to Hexo? First off, it's incrediblyfast—static pages mean load times are minimal. It's also highlycustomisable, giving users complete control over their site's design andfunctionality. Plus, Hexo's Markdown-centric nature makes it a darlingespecially for developers and writers who prefer to focus on theircontent without fussing too much over the technical stuff.</p><h2 id="featured-hexo-blogs">Featured Hexo Blogs</h2><p>Here are some of my favourite picks from the Hexo community. Eachblog stands out for its unique content and the personal flair itscreator brings to the platform.</p><ul><li><span class="exturl" data-url="aHR0cHM6Ly93aW50ZXJ0dHIubWUv">Winterttr<i class="fa fa-external-link-alt"></i></span></li><li><span class="exturl" data-url="aHR0cHM6Ly9xaW5kYXpodS5naXRodWIuaW8v">Qinda Zhu<i class="fa fa-external-link-alt"></i></span></li><li><span class="exturl" data-url="aHR0cHM6Ly93d3cuanVuaGFvdy5jb20v">Junhao Wang<i class="fa fa-external-link-alt"></i></span></li><li><span class="exturl" data-url="aHR0cHM6Ly9qdW43MTEuZ2l0aHViLmlvLw==">Jun711<i class="fa fa-external-link-alt"></i></span></li><li><ahref="https://codegitz.github.io/2017/12/04/hexo%E8%BF%9B%E9%98%B6%E9%85%8D%E7%BD%AE/">Codegitz</a></li><li><ahref="https://haojen.github.io/Claudia-theme-blog/archives/">Haojen</a></li><li><span class="exturl" data-url="aHR0cHM6Ly9sZWltYW8uZ2l0aHViLmlvLw==">Lei Mao<i class="fa fa-external-link-alt"></i></span></li><li><span class="exturl" data-url="aHR0cHM6Ly9pby1vaS5tZS8=">reuixiy<i class="fa fa-external-link-alt"></i></span></li><li><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmVzb24ub3JnLw==">ESON<i class="fa fa-external-link-alt"></i></span></li><li><span class="exturl" data-url="aHR0cHM6Ly9wcG9mZmljZS5naXRodWIuaW8vaGV4by10aGVtZS1pY2FydXMv">PPOffice(Theme: Icarus)<i class="fa fa-external-link-alt"></i></span></li><li><span class="exturl" data-url="aHR0cHM6Ly96aGFuZ3NodXFpYW8ub3JnLw==">米米的博客<i class="fa fa-external-link-alt"></i></span></li><li><span class="exturl" data-url="aHR0cHM6Ly93d3cucGFkZGluZ2xlZnQuY29tL3BvcnRmb2xpby8=">Sing's Log<i class="fa fa-external-link-alt"></i></span> -tw's blogger</li></ul><p>I want to give a big shoutout to these some amazing folks and sitesthat sparked my journey and provided a wealth of inspiration!</p><h2 id="conclusion">Conclusion</h2><p>Whether you're a tech enthusiast, a travel guru, or a culinarywizard, Hexo offers a solid foundation for building and managing yourblog. I hope these featured blogs inspire you to explore what Hexo cando for your own digital storytelling. If you're using Hexo and want yourblog featured in a future post, comment it down below I'd love to seewhat you've created!</p><p>Happy blogging!</p>]]></content>
+        <content type="html"><![CDATA[<p>In the vibrant world of blogging, choosing the right platform canmake all the difference. Today, I want to talk about Hexo, a fast,simple, and powerful framework that transforms plain text into staticwebsites and blogs. It's designed for those who love tweaking their sitebut also appreciate speed and efficiency. This post is a celebration ofthose who use Hexo to create some truly inspiring content.</p><span id="more"></span><h2 id="why-choose-hexo">Why Choose Hexo?</h2><p>So, why do people flock to Hexo? First off, it's incrediblyfast—static pages mean load times are minimal. It's also highlycustomisable, giving users complete control over their site's design andfunctionality. Plus, Hexo's Markdown-centric nature makes it a darlingespecially for developers and writers who prefer to focus on theircontent without fussing too much over the technical stuff.</p><h2 id="featured-hexo-blogs">Featured Hexo Blogs</h2><p>Here are some of my favourite picks from the Hexo community. Eachblog stands out for its unique content and the personal flair itscreator brings to the platform.</p><ul><li><span class="exturl" data-url="aHR0cHM6Ly93aW50ZXJ0dHIubWUv">Winterttr<i class="fa fa-external-link-alt"></i></span></li><li><span class="exturl" data-url="aHR0cHM6Ly9xaW5kYXpodS5naXRodWIuaW8v">Qinda Zhu<i class="fa fa-external-link-alt"></i></span></li><li><span class="exturl" data-url="aHR0cHM6Ly93d3cuanVuaGFvdy5jb20v">Junhao Wang<i class="fa fa-external-link-alt"></i></span></li><li><span class="exturl" data-url="aHR0cHM6Ly9qdW43MTEuZ2l0aHViLmlvLw==">Jun711<i class="fa fa-external-link-alt"></i></span></li><li><ahref="https://codegitz.github.io/2017/12/04/hexo%E8%BF%9B%E9%98%B6%E9%85%8D%E7%BD%AE/">Codegitz</a></li><li><ahref="https://haojen.github.io/Claudia-theme-blog/archives/">Haojen</a></li><li><span class="exturl" data-url="aHR0cHM6Ly9sZWltYW8uZ2l0aHViLmlvLw==">Lei Mao<i class="fa fa-external-link-alt"></i></span></li><li><span class="exturl" data-url="aHR0cHM6Ly9pby1vaS5tZS8=">reuixiy<i class="fa fa-external-link-alt"></i></span></li><li><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmVzb24ub3JnLw==">ESON<i class="fa fa-external-link-alt"></i></span></li><li><span class="exturl" data-url="aHR0cHM6Ly9wcG9mZmljZS5naXRodWIuaW8vaGV4by10aGVtZS1pY2FydXMv">PPOffice(Theme: Icarus)<i class="fa fa-external-link-alt"></i></span></li><li><span class="exturl" data-url="aHR0cHM6Ly96aGFuZ3NodXFpYW8ub3JnLw==">米米的博客<i class="fa fa-external-link-alt"></i></span></li><li><span class="exturl" data-url="aHR0cHM6Ly93d3cucGFkZGluZ2xlZnQuY29tL3BvcnRmb2xpby8=">Sing's Log<i class="fa fa-external-link-alt"></i></span> -tw's blogger</li><li><span class="exturl" data-url="aHR0cHM6Ly9za3llLWh4ei5naXRodWIuaW8v">Skye's Blog<i class="fa fa-external-link-alt"></i></span></li></ul><p>I want to give a big shoutout to these some amazing folks and sitesthat sparked my journey and provided a wealth of inspiration!</p><h2 id="conclusion">Conclusion</h2><p>Whether you're a tech enthusiast, a travel guru, or a culinarywizard, Hexo offers a solid foundation for building and managing yourblog. I hope these featured blogs inspire you to explore what Hexo cando for your own digital storytelling. If you're using Hexo and want yourblog featured in a future post, comment it down below I'd love to seewhat you've created!</p><p>Happy blogging!</p>]]></content>
       
       
       <categories>
@@ -3234,9 +3261,9 @@
       
         <tags>
             
-            <tag> programming </tag>
-            
             <tag> hexo </tag>
+            
+            <tag> programming </tag>
             
         </tags>
       
