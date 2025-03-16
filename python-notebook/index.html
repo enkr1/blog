@@ -31,7 +31,7 @@
 <meta property="og:description" content="Embark on a journey through the Python programming language, exploring its fundamental concepts, advanced features, and practical applications. This comprehensive guide is designed for both beginners">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2023-12-13T06:37:20.000Z">
-<meta property="article:modified_time" content="2025-03-13T18:06:37.573Z">
+<meta property="article:modified_time" content="2025-03-16T18:53:20.350Z">
 <meta property="article:author" content="Jing Hui PANG | 彭競辉 | ENKR">
 <meta property="article:tag" content="programming">
 <meta name="twitter:card" content="summary">
@@ -320,7 +320,7 @@ NOTE: created_at
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: Friday, 14 March 2025 02:06:37 AM 02:06:37 AM" itemprop="dateModified" datetime="2025-03-14T02:06:37+08:00">Friday, 14 March 2025 02:06:37 AM</time>
+                <time title="Modified: Monday, 17 March 2025 02:53:20 AM 02:53:20 AM" itemprop="dateModified" datetime="2025-03-17T02:53:20+08:00">Monday, 17 March 2025 02:53:20 AM</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -361,7 +361,7 @@ NOTE: word count
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-              <span>1.1k</span>
+              <span>3.9k</span>
             </span>
 
 <!--
@@ -371,7 +371,7 @@ NOTE: reading time
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
-              <span>4 mins.</span>
+              <span>14 mins.</span>
             </span>
 
 
@@ -417,7 +417,63 @@ NOTE: views count
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="variables">Variables</h2>
+        <p>wip ...</p>
+<hr />
+<h2 id="leetcode-grind-plan">LeetCode Grind Plan 🔥</h2>
+<h3 id="python-note">Python note</h3>
+<ul>
+<li>Uses snake_case</li>
+<li>PascalCase for class names</li>
+<li>Use explicit "is" for None comparisons: <code>if x is None</code>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 🚨 Dangerous (might give false positives)</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">process_data</span>(<span class="params">data=[]</span>):</span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> data:  <span class="comment"># Could be None, empty list, 0, False, etc</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;No data received&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># ✅ Explicit check</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">process_data</span>(<span class="params">data=<span class="literal">None</span></span>):</span><br><span class="line">    <span class="keyword">if</span> data <span class="keyword">is</span> <span class="literal">None</span>:  <span class="comment"># Only triggers for None</span></span><br><span class="line">        data = []</span><br><span class="line">    <span class="comment"># process data...</span></span><br></pre></td></tr></table></figure></li>
+<li>Prefer list comprehensions over loops where readable
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Traditional loop</span></span><br><span class="line">squares = []</span><br><span class="line"><span class="keyword">for</span> num <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">10</span>):</span><br><span class="line">    <span class="keyword">if</span> num % <span class="number">2</span> == <span class="number">0</span>:</span><br><span class="line">        squares.append(num ** <span class="number">2</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># List comprehension (same result)</span></span><br><span class="line">squares = [num ** <span class="number">2</span> <span class="keyword">for</span> num <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">10</span>) <span class="keyword">if</span> num % <span class="number">2</span> == <span class="number">0</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># Nested example (still readable)</span></span><br><span class="line">matrix = [[<span class="number">1</span>,<span class="number">2</span>], [<span class="number">3</span>,<span class="number">4</span>], [<span class="number">5</span>,<span class="number">6</span>]]</span><br><span class="line">flattened = [num <span class="keyword">for</span> row <span class="keyword">in</span> matrix <span class="keyword">for</span> num <span class="keyword">in</span> row]</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="set">Set</h3>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># simply just</span></span><br><span class="line"><span class="comment"># Create a set</span></span><br><span class="line"><span class="built_in">set</span> = <span class="built_in">set</span>()</span><br><span class="line"></span><br><span class="line"><span class="comment"># then you can directly use the existing array to a set like</span></span><br><span class="line"><span class="built_in">list</span> = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br><span class="line"><span class="built_in">set</span> = <span class="built_in">set</span>(<span class="built_in">list</span>)</span><br><span class="line"><span class="comment"># then you can use the set to do some operations</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">set</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="array">Array</h3>
+<h3 id="map">Map</h3>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Create a dictionary</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<hr />
+<h2 id="leetcode-practices">🧩 LeetCode Practices</h2>
+<h3 id="find-the-town-judge"><a
+target="_blank" rel="noopener" href="https://leetcode.com/problems/find-the-town-judge/">997. Find the
+Town Judge</a></h3>
+<p><strong>Key Insight</strong></p>
+<p>Identify the town judge by tracking trust relationships: the judge is
+trusted by everyone else but trusts no one.</p>
+<p><strong>Python Implementation</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>(<span class="title class_ inherited__">object</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">findJudge</span>(<span class="params">self, n, trust</span>):</span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        :type n: int</span></span><br><span class="line"><span class="string">        :type trust: List[List[int]]</span></span><br><span class="line"><span class="string">        :rtype: int</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line">        <span class="comment"># trust relationships are directed edges</span></span><br><span class="line"></span><br><span class="line">        <span class="comment"># loop by n</span></span><br><span class="line">        <span class="comment"># find from list</span></span><br><span class="line">        <span class="comment"># if index is not found in list</span></span><br><span class="line">        <span class="comment"># return index</span></span><br><span class="line">        <span class="comment"># else return -1</span></span><br><span class="line"></span><br><span class="line">        nb_trusts = [<span class="number">0</span>] * (n+<span class="number">1</span>)</span><br><span class="line">        nb_trusted_by = [<span class="number">0</span>] * (n+<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> a, b <span class="keyword">in</span> trust:</span><br><span class="line">            nb_trusts[a] += <span class="number">1</span></span><br><span class="line">            nb_trusted_by[b] += <span class="number">1</span></span><br><span class="line"></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;nb_trusts&quot;</span>, nb_trusts)</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;nb_trusted_by&quot;</span>, nb_trusted_by)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, n+<span class="number">1</span>):</span><br><span class="line">            <span class="keyword">if</span> nb_trusts[i] == <span class="number">0</span> <span class="keyword">and</span> nb_trusted_by[i] == n-<span class="number">1</span>: <span class="comment"># not trusting anyone &amp; trusted by everyone</span></span><br><span class="line">                <span class="keyword">return</span> i</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> -<span class="number">1</span></span><br></pre></td></tr></table></figure>
+<p><strong>Python-Specific Learnings</strong></p>
+<ol type="1">
+<li><strong>List Initialisation</strong> Use a list to track trust
+scores for each person.</li>
+<li><strong>Loop Structure</strong> Iterate over trust pairs to adjust
+scores.</li>
+<li><strong>Return Value</strong> Check for the person with a trust
+score of <code>n-1</code>.</li>
+</ol>
+<p><strong>Edge Cases</strong></p>
+<ul>
+<li>Single person with no trust relationships → returns 1</li>
+<li>No person satisfies the judge conditions → returns -1</li>
+</ul>
+<p><strong>Complexity</strong></p>
+<ul>
+<li>Time: <span class="math inline">\(O(T + n)\)</span>, where <span
+class="math inline">\(T\)</span> is the length of the trust list</li>
+<li>Space: <span class="math inline">\(O(n)\)</span></li>
+</ul>
+<p><strong>Why This Works</strong></p>
+<ul>
+<li>The judge has a trust score of <code>n-1</code> because= they are
+trusted by everyone else and trust no one.</li>
+</ul>
+<hr />
+<blockquote>
+<p>below are outdated notes, to be refined later</p>
+</blockquote>
+<h2 id="variables">Variables</h2>
 <figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>()</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Hello&quot;</span>, <span class="string">&quot;World&quot;</span>)</span><br><span class="line"><span class="comment"># &quot;Hello World&quot;</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Hello&quot;</span>, <span class="string">&quot;World&quot;</span>, sep=<span class="string">&quot;&quot;</span>)</span><br><span class="line"><span class="comment"># &quot;HelloWorld&quot;</span></span><br></pre></td></tr></table></figure>
 <figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">type</span>()</span><br></pre></td></tr></table></figure>
 <figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">// <span class="comment"># this forces the output to be integer</span></span><br></pre></td></tr></table></figure>
@@ -496,9 +552,427 @@ placed before **kwargs (for variable-length keyword arguments).</p>
 </blockquote>
 <figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">my_function</span>(<span class="params">a, b, *args, **kwargs</span>):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;a:&quot;</span>, a)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;b:&quot;</span>, b)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;args:&quot;</span>, args)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;kwargs:&quot;</span>, kwargs)</span><br><span class="line"></span><br><span class="line">my_function(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, x=<span class="number">6</span>, y=<span class="number">7</span>)</span><br><span class="line"><span class="comment"># a: 1</span></span><br><span class="line"><span class="comment"># b: 2</span></span><br><span class="line"><span class="comment"># args: (3, 4, 5)</span></span><br><span class="line"><span class="comment"># kwargs: &#123;&#x27;x&#x27;: 6, &#x27;y&#x27;: 7&#125;</span></span><br></pre></td></tr></table></figure>
 <figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">fun</span>(<span class="params">A, B=<span class="number">30</span></span>):</span><br><span class="line">    <span class="keyword">return</span> A + B</span><br><span class="line"></span><br><span class="line"><span class="comment"># A is a positional argument and B is a keyword argument</span></span><br></pre></td></tr></table></figure>
-<hr />
-<h2 id="some-findings">Some findings</h2>
-<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">list_mul = [<span class="string">&#x27;2&#x27;</span>,<span class="string">&#x27;2&#x27;</span>,<span class="string">&#x27;2&#x27;</span>]</span><br><span class="line">list_mul*<span class="number">2</span></span><br></pre></td></tr></table></figure>
+<table style="width:6%;">
+<colgroup>
+<col style="width: 5%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>## Some findings <figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">list_mul = [<span class="string">&#x27;2&#x27;</span>,<span class="string">&#x27;2&#x27;</span>,<span class="string">&#x27;2&#x27;</span>]</span><br><span class="line">list_mul*<span class="number">2</span></span><br></pre></td></tr></table></figure></td>
+</tr>
+</tbody>
+</table>
+<h2 id="comparison">Comparison</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Aspect</strong></th>
+<th><strong>Python</strong></th>
+<th><strong>JavaScript</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Syntax &amp; Code Structure</strong></td>
+<td><strong>Clean, minimal syntax:</strong> Uses indentation and colons
+to define code blocks instead of curly braces, leading to cleaner and
+more readable code (<a
+target="_blank" rel="noopener" href="https://dev.to/davinderpalrehal/why-i-moved-from-javascript-to-python-for-leetcode-3pm1#:~:text=of%20miss%20how%20less%20code,like%20in%20JavaScript%20and%20Python">Why
+I moved from JavaScript to Python for LeetCode - DEV Community</a>). No
+semicolons are required and there is less boilerplate (e.g. no
+parentheses around if conditions) (<a
+target="_blank" rel="noopener" href="https://dev.to/davinderpalrehal/why-i-moved-from-javascript-to-python-for-leetcode-3pm1#:~:text=As%20you%20can%20see%2C%20Python,the%20code%20more%20elegant%20and">Why
+I moved from JavaScript to Python for LeetCode - DEV Community</a>).
+Python also offers syntactic sugar like list comprehensions, multiple
+assignment, and tuple unpacking that make code more concise and
+expressive (<a
+target="_blank" rel="noopener" href="https://dev.to/davinderpalrehal/why-i-moved-from-javascript-to-python-for-leetcode-3pm1#:~:text=As%20you%20can%20see%2C%20Python,the%20code%20more%20elegant%20and">Why
+I moved from JavaScript to Python for LeetCode - DEV
+Community</a>).</td>
+<td><strong>C-style syntax:</strong> Uses curly braces <code>&#123; &#125;</code>
+to denote code blocks and typically uses semicolons to terminate
+statements (though semicolons are optional in modern JS) (<a
+target="_blank" rel="noopener" href="https://dev.to/davinderpalrehal/why-i-moved-from-javascript-to-python-for-leetcode-3pm1#:~:text=of%20miss%20how%20less%20code,like%20in%20JavaScript%20and%20Python">Why
+I moved from JavaScript to Python for LeetCode - DEV Community</a>).
+This results in a bit more verbose structure and punctuation compared to
+Python (<a
+target="_blank" rel="noopener" href="https://dev.to/davinderpalrehal/why-i-moved-from-javascript-to-python-for-leetcode-3pm1#:~:text=As%20you%20can%20see%2C%20Python,the%20code%20more%20elegant%20and">Why
+I moved from JavaScript to Python for LeetCode - DEV Community</a>).
+JavaScript’s syntax is flexible (e.g. arrow functions, object literals,
+destructuring) but generally requires more symbols, which can make
+simple logic appear slightly more cluttered than Python.</td>
+</tr>
+<tr class="even">
+<td><strong>Pros (Coding Interviews)</strong></td>
+<td><strong>Readable and quick to write:</strong> Python’s simple,
+English-like syntax lets you implement solutions quickly – it often
+feels like writing pseudocode (<a
+target="_blank" rel="noopener" href="https://dev.to/braeden/why-javascript-is-actually-a-great-leetcode-interview-language-34g1#:~:text=On%20the%20other%20hand%2C%20people,is%20fast%20to%20iterate%20upon">Why
+JavaScript is actually a great LeetCode/Interview language - DEV
+Community</a>) (<a
+target="_blank" rel="noopener" href="https://www.designgurus.io/answers/detail/which-language-is-best-for-interviews#:~:text=Python%20is%20often%20considered%20the,that%20can%20simplify%20complex%20algorithms">Which
+language is best for interviews?</a>). It has a rich set of built-in
+functions and data structures (lists, dictionaries, sets, etc.) that
+simplify common tasks without extra code (<a
+target="_blank" rel="noopener" href="https://www.designgurus.io/answers/detail/which-language-is-best-for-interviews#:~:text=Python%20is%20often%20considered%20the,that%20can%20simplify%20complex%20algorithms">Which
+language is best for interviews?</a>). Python is widely used on LeetCode
+and in interviews, so many interviewers are familiar with it, and there
+are plenty of solution resources available in Python.</td>
+<td><strong>Versatile and fast:</strong> JavaScript works for both
+frontend and backend (Node.js), so using it in interviews can be
+advantageous if you’re applying for web development roles (<a
+target="_blank" rel="noopener" href="https://www.designgurus.io/answers/detail/which-language-is-best-for-interviews#:~:text=,languages%20like%20Python%20or%20C">Which
+language is best for interviews?</a>). Its syntax is relatively simple
+(no explicit types) and far less verbose than Java or C++, which means
+you can still code and iterate quickly under time pressure. The V8
+engine gives JavaScript very high execution speed, so performance is
+rarely a bottleneck for algorithmic problems (<a
+target="_blank" rel="noopener" href="https://dev.to/braeden/why-javascript-is-actually-a-great-leetcode-interview-language-34g1#:~:text=Worry%20no%20longer%20about%20execution,js">Why
+JavaScript is actually a great LeetCode/Interview language - DEV
+Community</a>). Additionally, JavaScript has handy built-in methods
+(like <code>Array.prototype.map</code>, <code>filter</code>,
+<code>reduce</code>) that can make code succinct and show off elegant
+problem-solving when used appropriately.</td>
+</tr>
+<tr class="odd">
+<td><strong>Cons (Coding Interviews)</strong></td>
+<td><strong>Performance and speed limits:</strong> Python’s runtime
+speed is slower than some other languages, which can lead to timeouts on
+extremely large test cases if the solution isn’t optimal (<a
+target="_blank" rel="noopener" href="https://www.designgurus.io/answers/detail/which-language-is-best-for-interviews#:~:text=,critical%20interviews">Which
+language is best for interviews?</a>) (<a
+target="_blank" rel="noopener" href="https://dev.to/braeden/why-javascript-is-actually-a-great-leetcode-interview-language-34g1#:~:text=Language%20specific%20time,larger%20test%20cases%20in%20Python">Why
+JavaScript is actually a great LeetCode/Interview language - DEV
+Community</a>). It also has higher memory overhead for data structures
+(e.g. a list or dict may use more memory than a similar structure in
+C/C++ or JS) (<a
+target="_blank" rel="noopener" href="https://movadex.com/blog/article/node-js-vs-python-selecting-the-ideal-backend-tech-for-2024#:~:text=1,intensive%20than%20their%20JavaScript%20counterparts">Node.js
+vs Python: Selecting the Ideal Backend Tech for 2024</a>). Additionally,
+Python’s significant whitespace (indentation) means a simple indent
+mistake can cause a syntax error – this is easy to fix with practice,
+but it’s a gotcha for those not used to it.</td>
+<td><strong>Limited data structures &amp; subtle quirks:</strong>
+JavaScript has fewer native data structures for algorithms – for
+example, it lacks a built-in heap/priority queue, so you might need to
+implement one manually if needed (<a
+target="_blank" rel="noopener" href="https://dev.to/braeden/why-javascript-is-actually-a-great-leetcode-interview-language-34g1#:~:text=A%20few%20downfalls%20or%20dislikes%3A">Why
+JavaScript is actually a great LeetCode/Interview language - DEV
+Community</a>) (<a
+target="_blank" rel="noopener" href="https://www.designgurus.io/answers/detail/which-language-is-best-for-interviews#:~:text=,languages%20like%20Python%20or%20C">Which
+language is best for interviews?</a>). Some language quirks can also
+cause bugs: JavaScript’s loose typing and type coercion (e.g.
+<code>"5" + 2</code> vs <code>"5" - 2</code>) can lead to unexpected
+behavior if you’re not careful. And unlike Python, certain errors won’t
+stop execution (e.g. out-of-bounds array access just yields
+<code>undefined</code> instead of throwing an error), so logic bugs
+might not be immediately obvious. Historically, algorithm communities
+had fewer JS solutions (though this is improving), meaning slightly less
+community guidance for tricky problems compared to Python.</td>
+</tr>
+<tr class="even">
+<td><strong>Code Readability &amp; Conciseness</strong></td>
+<td><strong>Highly readable:</strong> Python’s enforced indentation and
+uncluttered syntax make code easy to follow. It generally requires fewer
+lines to solve a problem than JavaScript, thanks to features like list
+comprehensions and the lack of extra symbols (<a
+target="_blank" rel="noopener" href="https://dev.to/davinderpalrehal/why-i-moved-from-javascript-to-python-for-leetcode-3pm1#:~:text=As%20you%20can%20see%2C%20Python,the%20code%20more%20elegant%20and">Why
+I moved from JavaScript to Python for LeetCode - DEV Community</a>). In
+practice, Python code is often considered more concise and closer to
+pseudocode, which helps others (including interviewers) understand your
+solution quickly (<a
+target="_blank" rel="noopener" href="https://www.sayonetech.com/blog/python-vs-javascript-what-are-differences/#:~:text=Python%27s%20syntax%20is%20generally%20more,for%20more%20complex%20programming%20constructs">Python
+Vs Javascript: What are the Differences? in 2025</a>).</td>
+<td><strong>Fairly readable (with more syntax):</strong> JavaScript code
+includes braces and semicolons, which add some visual noise. However,
+its syntax is familiar to many developers and is still relatively
+succinct compared to languages like Java. Modern ES6+ features (arrow
+functions, destructuring, etc.) have improved JavaScript’s conciseness,
+but Python’s syntax is typically shorter for equivalent logic (<a
+target="_blank" rel="noopener" href="https://www.sayonetech.com/blog/python-vs-javascript-what-are-differences/#:~:text=Python%27s%20syntax%20is%20generally%20more,for%20more%20complex%20programming%20constructs">Python
+Vs Javascript: What are the Differences? in 2025</a>). Clear formatting
+and naming in JS are important to approach Python’s level of
+readability.</td>
+</tr>
+<tr class="odd">
+<td><strong>Built-in Data Structures &amp; Libraries</strong></td>
+<td><strong>“Batteries included”:</strong> Python offers a wide range of
+built-in data structures – lists, dictionaries (hash maps), sets, tuples
+– each optimized for different use cases (<a
+target="_blank" rel="noopener" href="https://dev.to/davinderpalrehal/why-i-moved-from-javascript-to-python-for-leetcode-3pm1#:~:text=A%20major%20difference%20between%20JavaScript,example%2C%20here%20is%20how%20to">Why
+I moved from JavaScript to Python for LeetCode - DEV Community</a>). It
+also has modules like <code>collections</code> (providing deque,
+Counter, etc.) and <code>heapq</code> for heaps, which are extremely
+handy for interview problems involving queues, stacks, or priority
+queues. Many algorithms can be implemented using Python’s standard
+library (e.g. sorting with <code>sorted()</code>, binary search with
+<code>bisect</code>), reducing the amount of code you must write. This
+richness means Python often has a ready-made tool for common interview
+tasks (<a
+target="_blank" rel="noopener" href="https://dev.to/davinderpalrehal/why-i-moved-from-javascript-to-python-for-leetcode-3pm1#:~:text=Another%20difference%20between%20JavaScript%20and,scipy%2C%20pandas%2C%20matplotlib%2C%20and%20sklearn">Why
+I moved from JavaScript to Python for LeetCode - DEV Community</a>) (<a
+target="_blank" rel="noopener" href="https://dev.to/davinderpalrehal/why-i-moved-from-javascript-to-python-for-leetcode-3pm1#:~:text=packages%20that%20are%20useful%20for,how%20to%20calculate%20the%20mean">Why
+I moved from JavaScript to Python for LeetCode - DEV
+Community</a>).</td>
+<td><strong>Basic structures only:</strong> JavaScript historically had
+just arrays (for lists) and objects (for key-value maps) as built-ins
+(<a
+target="_blank" rel="noopener" href="https://dev.to/davinderpalrehal/why-i-moved-from-javascript-to-python-for-leetcode-3pm1#:~:text=A%20major%20difference%20between%20JavaScript,example%2C%20here%20is%20how%20to">Why
+I moved from JavaScript to Python for LeetCode - DEV Community</a>). ES6
+added <code>Map</code> and <code>Set</code> classes for dictionaries and
+sets, but there is still no native deque or heap structure (<a
+target="_blank" rel="noopener" href="https://dev.to/braeden/why-javascript-is-actually-a-great-leetcode-interview-language-34g1#:~:text=A%20few%20downfalls%20or%20dislikes%3A">Why
+JavaScript is actually a great LeetCode/Interview language - DEV
+Community</a>). You can use arrays to simulate stacks/queues (with
+<code>push/pop</code> and <code>shift</code>), but operations like
+removing from the front of an array are not as efficient as Python’s
+<code>collections.deque</code> (<a
+target="_blank" rel="noopener" href="https://dev.to/davinderpalrehal/why-i-moved-from-javascript-to-python-for-leetcode-3pm1#:~:text=As%20you%20can%20see%2C%20Python,terms%20of%20time%20and%20space">Why
+I moved from JavaScript to Python for LeetCode - DEV Community</a>).
+Similarly, to get a priority queue, you would have to use an array and
+sort it or implement a heap manually. JavaScript’s standard library has
+fewer algorithm-specific utilities, so interview solutions may require
+writing more helper code from scratch (libraries exist but usually
+aren’t available in coding test environments).</td>
+</tr>
+<tr class="even">
+<td><strong>Execution Speed &amp; Memory Usage</strong></td>
+<td><strong>Slower execution, higher memory:</strong> Python is
+generally slower at runtime because it’s interpreted (CPython has no
+JIT). For very large inputs or heavy computations, a Python solution
+might run close to the time limit – there are anecdotes of hitting
+timeouts in Python even with optimal algorithms (<a
+target="_blank" rel="noopener" href="https://dev.to/braeden/why-javascript-is-actually-a-great-leetcode-interview-language-34g1#:~:text=Language%20specific%20time,larger%20test%20cases%20in%20Python">Why
+JavaScript is actually a great LeetCode/Interview language - DEV
+Community</a>). In contrast, JavaScript’s JIT-compiled engine often runs
+the same algorithm faster. Python’s structures also tend to use more
+memory (each object has overhead), so a large list/dict can consume more
+memory than an equivalent structure in JS (<a
+target="_blank" rel="noopener" href="https://movadex.com/blog/article/node-js-vs-python-selecting-the-ideal-backend-tech-for-2024#:~:text=1,intensive%20than%20their%20JavaScript%20counterparts">Node.js
+vs Python: Selecting the Ideal Backend Tech for 2024</a>). The upside is
+that Python’s high-level operations (big integers, slicing, etc.) are
+handled for you (convenience at some cost). In most interview problems,
+if your algorithmic complexity is good, Python is fast enough, but it’s
+something to keep in mind for edge cases.</td>
+<td><strong>Fast JIT execution, lower memory:</strong> JavaScript
+executes very fast under modern engines – its JIT compilation and
+optimizations let it approach the speed of lower-level languages like
+Java/C++ (<a
+target="_blank" rel="noopener" href="https://dev.to/braeden/why-javascript-is-actually-a-great-leetcode-interview-language-34g1#:~:text=Worry%20no%20longer%20about%20execution,js">Why
+JavaScript is actually a great LeetCode/Interview language - DEV
+Community</a>). This means if you write an efficient algorithm in JS,
+you’re unlikely to hit performance issues on coding platforms. Memory
+usage for JavaScript’s data types is generally lower than Python’s for
+the same workload, since primitive types (numbers, booleans) are
+lightweight. Both Python and JS have garbage collection, so memory is
+managed for you, but JS’s overall memory footprint for a large data
+structure tends to be a bit smaller (<a
+target="_blank" rel="noopener" href="https://movadex.com/blog/article/node-js-vs-python-selecting-the-ideal-backend-tech-for-2024#:~:text=1,intensive%20than%20their%20JavaScript%20counterparts">Node.js
+vs Python: Selecting the Ideal Backend Tech for 2024</a>). In short,
+JavaScript provides better raw performance, which can be a confidence
+boost when handling big inputs in interviews.</td>
+</tr>
+<tr class="odd">
+<td><strong>Ecosystem &amp; Job Market Relevance</strong></td>
+<td><strong>Versatile ecosystem:</strong> Python has a massive ecosystem
+in areas like web backends (Django/Flask), data science, machine
+learning, automation, etc. It’s often ranked just behind JavaScript in
+overall popularity, reflecting its broad use across industries (<a
+target="_blank" rel="noopener" href="https://www.reddit.com/r/AskProgramming/comments/17ex3lg/programming_languages_with_the_highest_labor/#:~:text=match%20at%20L568%20Javascript%2C%20Javascript%2C,Javascript%E2%80%A6is%20absolutely%20dominating%20right%20now">Programming
+languages with the highest labor demand 2024 : r/AskProgramming</a>). In
+interview practice, Python is extremely common – many competitive
+programming and LeetCode discussions use Python, so a wealth of learning
+resources is available. For job hunting, knowing Python opens up roles
+in AI/ML, data analysis, scientific computing, and backend development
+(<a
+target="_blank" rel="noopener" href="https://www.monarch-innovation.com/python-vs-javascript#:~:text=Both%20Python%20versus%20JavaScript%20open,ML%2C%20and%20data%20science">Python
+vs JavaScript: What to Choose in 2024 - Monarch Innovation</a>). Many
+companies (especially in those domains) allow or encourage Python in
+interviews. (For front-end roles, Python is less directly relevant, but
+those interviews might focus on system design or algorithms where Python
+can still be used.)</td>
+<td><strong>Dominant for web:</strong> JavaScript is arguably the most
+in-demand programming language today, powering the vast majority of web
+applications (<a
+target="_blank" rel="noopener" href="https://www.reddit.com/r/AskProgramming/comments/17ex3lg/programming_languages_with_the_highest_labor/#:~:text=Javascript%2C%20Javascript%2C%20Javascript%E2%80%A6is%20absolutely%20dominating,right%20now">Programming
+languages with the highest labor demand 2024 : r/AskProgramming</a>).
+Its ecosystem (Node.js, NPM, and frameworks like React/Angular) makes it
+indispensable for front-end and full-stack development (<a
+target="_blank" rel="noopener" href="https://www.monarch-innovation.com/python-vs-javascript#:~:text=Both%20Python%20versus%20JavaScript%20open,ML%2C%20and%20data%20science">Python
+vs JavaScript: What to Choose in 2024 - Monarch Innovation</a>). In
+coding interviews, JavaScript is commonly used if you’re targeting a
+front-end or full-stack position, and companies hiring for those roles
+will expect proficiency in it. While historically algorithm interview
+communities were dominated by Python/Java/C++, JavaScript has become
+very popular as more candidates from web backgrounds use it. Job-market
+wise, JavaScript skills are highly marketable – it’s often said to be
+“absolutely dominating” job postings, with Python in second place (<a
+target="_blank" rel="noopener" href="https://www.reddit.com/r/AskProgramming/comments/17ex3lg/programming_languages_with_the_highest_labor/#:~:text=Javascript%2C%20Javascript%2C%20Javascript%E2%80%A6is%20absolutely%20dominating,right%20now">Programming
+languages with the highest labor demand 2024 : r/AskProgramming</a>). So
+choosing JS for interviews is wise if it aligns with the job’s tech
+stack.</td>
+</tr>
+<tr class="even">
+<td><strong>Debugging &amp; Error Handling</strong></td>
+<td><strong>Clear errors:</strong> Python tends to fail fast and loud.
+It is strongly typed at runtime, so invalid operations (like adding
+incompatible types or accessing an out-of-range index) immediately raise
+exceptions with informative tracebacks (<a
+target="_blank" rel="noopener" href="https://stackoverflow.com/questions/29472883/why-are-using-exceptions-more-acceptable-in-python-than-javascript#:~:text=My%20take%20on%20this%20would,bubbles%20up%20the%20call%20graph">Why
+are using exceptions more acceptable in python than javascript - Stack
+Overflow</a>). This helps with debugging during interviews, since
+mistakes are caught early rather than silently producing wrong results.
+Python uses <code>try/except</code> blocks for error handling;
+exceptions are a normal part of control flow for unusual conditions
+(e.g. catching a <code>KeyError</code> instead of checking existence
+every time). Overall, Python’s error messages are usually clear
+(pointing out the exact issue and location), which makes it
+straightforward to fix bugs in your code.</td>
+<td><strong>Silent failures possible:</strong> JavaScript uses
+<code>try/catch</code> for exceptions similarly, but many errors won’t
+throw exceptions by default. The language often <strong>“glosses over”
+issues</strong> – for example, using a non-existent array index just
+gives <code>undefined</code> and keeps running, rather than throwing an
+error (<a
+target="_blank" rel="noopener" href="https://stackoverflow.com/questions/29472883/why-are-using-exceptions-more-acceptable-in-python-than-javascript#:~:text=Javascript%20and%20many%20other%20interpreted,to%20defend%20against%20Javascript%20itself">Why
+are using exceptions more acceptable in python than javascript - Stack
+Overflow</a>). This means a bug can fail silently, and you have to
+carefully watch for unexpected <code>undefined/NaN</code> values. Type
+coercion can also cause subtle issues without any error (e.g.
+<code>"5" * 2</code> becomes 10 in JS, whereas in Python
+<code>"5" * 2</code> would throw a TypeError). In practice, debugging
+JavaScript might involve more manual checks or console logs to pinpoint
+logic errors. On the plus side, modern debuggers (browser DevTools,
+Node.js inspector) are very powerful for stepping through code when you
+have that environment. In interview platforms, you’ll primarily rely on
+test cases, so in JS it’s important to add your own validations or use
+strict equality (<code>===</code>) to avoid tricky coercion bugs.</td>
+</tr>
+<tr class="odd">
+<td><strong>Transitioning from JavaScript to Python</strong></td>
+<td><strong>Adapting to Python:</strong> If you’re moving from JS to
+Python, focus on Python’s idioms and differences. Embrace whitespace –
+Python uses indentation instead of <code>&#123;&#125;</code> braces, and a missing
+colon or wrong indent will cause errors, so practice writing neatly
+indented code. Get used to Python syntax for common constructs (e.g.
+<code>for x in list</code> instead of C-style index loops,
+<code>and</code>/<code>or</code> instead of
+<code>&amp;&amp;</code>/<code>||</code>, and
+<code>True</code>/<code>False</code> instead of
+<code>true</code>/<code>false</code>). Leverage Python’s powerful
+built-ins and libraries rather than coding everything manually – for
+instance, use <code>collections.Counter</code> for frequency counts or
+<code>heapq</code> for a priority queue (in JS you might have had to
+write these from scratch). Also, be mindful that Python won't implicitly
+convert types; you'll need to convert types explicitly (e.g. use
+<code>str()</code> to convert a number to a string) where JavaScript
+might do it for you, but this strictness prevents certain bugs. One big
+advantage of switching is the abundance of resources – many tutorials
+and solution discussions are in Python, so you can directly study those
+instead of translating from JS (<a
+target="_blank" rel="noopener" href="https://dev.to/davinderpalrehal/why-i-moved-from-javascript-to-python-for-leetcode-3pm1#:~:text=Everytime%20I%20get%20stuck%20in,step%20through%20with%20different%20inputs">Why
+I moved from JavaScript to Python for LeetCode - DEV Community</a>).
+Practice plenty of problems in Python and read Pythonic solutions to
+adjust your coding style and avoid common pitfalls.</td>
+<td><strong>Mindset shift:</strong> As a JS developer, you already
+understand core programming concepts, but avoid carrying over
+JavaScript-specific habits. Don’t rely on JS truthy/falsy quirks or
+loose typing in Python – Python will enforce correctness (e.g. 0 vs
+<code>None</code> vs <code>False</code> are distinct). Be ready to write
+out data structure manipulations using Python's methods (for example,
+<code>my_list.append(x)</code> instead of <code>array.push(x)</code>).
+In short, transitioning from JS is about unlearning JS-specific syntax
+and embracing Python’s way of doing things. <em>(Transitioning from
+Python to JavaScript would involve the opposite – learning to use
+braces/semicolons, managing type coercion, etc. – but that’s outside our
+scope here.)</em></td>
+</tr>
+</tbody>
+</table>
+<h3 id="javascript-vs-python-core-concepts">JavaScript vs Python Core
+Concepts</h3>
+<table>
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 30%" />
+<col style="width: 57%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Concept</th>
+<th>JavaScript Example</th>
+<th>Python Example &amp; Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Variables</strong></td>
+<td><code>let x = 10;</code><br><code>const y = 20;</code></td>
+<td><code>x = 10</code> (dynamic typing)<br><code>y = 20</code>
+(reassignable)</td>
+</tr>
+<tr class="even">
+<td><strong>Constants</strong></td>
+<td><code>const PI = 3.14;</code></td>
+<td><code>PI = 3.14</code> (by
+convention)<br><code>from math import pi</code> (built-in
+constants)</td>
+</tr>
+<tr class="odd">
+<td><strong>Functions</strong></td>
+<td><code>function add(a, b) &#123; return a + b; &#125;</code></td>
+<td><code>def add(a, b): return a + b</code><br>Indentation defines
+blocks</td>
+</tr>
+<tr class="even">
+<td><strong>Data Types</strong></td>
+<td>Dynamic typing</td>
+<td>Dynamic typing:<br><code>s = "text"</code><br><code>n = 3.14</code>
+(type hints optional: <code>n: float = 3.14</code>)</td>
+</tr>
+<tr class="odd">
+<td><strong>Collections</strong></td>
+<td><code>const arr = [1,2];</code><br><code>const obj = &#123;key:1&#125;;</code></td>
+<td><code>arr = [1,2]</code> (list)<br><code>d = &#123;"key": 1&#125;</code>
+(dict)<br><code>t = (1,2)</code> (tuple)<br><code>s = &#123;1,2&#125;</code>
+(set)</td>
+</tr>
+<tr class="even">
+<td><strong>Zero Values</strong></td>
+<td><code>undefined</code>, <code>null</code></td>
+<td><code>None</code> (single null-like value)<br>No undefined
+concept</td>
+</tr>
+<tr class="odd">
+<td><strong>Error Handling</strong></td>
+<td><code>try/catch</code></td>
+<td><code>try/except</code><br>EAFP: "Easier to ask forgiveness than
+permission"</td>
+</tr>
+<tr class="even">
+<td><strong>Concurrency</strong></td>
+<td><code>Promise</code>, <code>async/await</code></td>
+<td><code>asyncio</code>,
+<code>async/await</code><br><code>threading</code>,
+<code>multiprocessing</code></td>
+</tr>
+<tr class="odd">
+<td><strong>Memory</strong></td>
+<td>Automatic GC</td>
+<td>Automatic GC<br>Reference counting + cycle detection</td>
+</tr>
+<tr class="even">
+<td><strong>Build</strong></td>
+<td><code>node script.js</code></td>
+<td><code>python script.py</code><br>Interpreted, no compilation
+step</td>
+</tr>
+</tbody>
+</table>
 
     </div>
 
@@ -515,7 +989,7 @@ placed before **kwargs (for variable-length keyword arguments).</p>
       <div class="popular-posts-title"><a href="/my-journey-with-hexo-building-a-blog-from-scratch/" rel="bookmark">My Journey with Hexo - Building a Blog from Scratch</a></div>
     </li>
     <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="/linked-list-notebook/" rel="bookmark">Linked List Notebook</a></div>
+      <div class="popular-posts-title"><a href="/24-hours-harvard-cs50-by-david-malan/" rel="bookmark">24 Hours Harvard CS50 By David Malan</a></div>
     </li>
   </ul>
 <div class="post-widgets">
@@ -616,9 +1090,11 @@ placed before **kwargs (for variable-length keyword arguments).</p>
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#variables"><span class="nav-number">1.</span> <span class="nav-text">Variables</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#type-conversion-the-process-of-converting-one-data-type-to-another-data-type-is-called-type-conversion."><span class="nav-number">1.1.</span> <span class="nav-text">Type
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#leetcode-grind-plan"><span class="nav-number">1.</span> <span class="nav-text">LeetCode Grind Plan 🔥</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#python-note"><span class="nav-number">1.1.</span> <span class="nav-text">Python note</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#set"><span class="nav-number">1.2.</span> <span class="nav-text">Set</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#array"><span class="nav-number">1.3.</span> <span class="nav-text">Array</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#map"><span class="nav-number">1.4.</span> <span class="nav-text">Map</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#leetcode-practices"><span class="nav-number">2.</span> <span class="nav-text">🧩 LeetCode Practices</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#find-the-town-judge"><span class="nav-number">2.1.</span> <span class="nav-text">997. Find the
+Town Judge</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#variables"><span class="nav-number">3.</span> <span class="nav-text">Variables</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#type-conversion-the-process-of-converting-one-data-type-to-another-data-type-is-called-type-conversion."><span class="nav-number">3.1.</span> <span class="nav-text">Type
 Conversion: The process of converting one data type to another data type
-is called type conversion.</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#data-structures"><span class="nav-number">2.</span> <span class="nav-text">Data Structures</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#list"><span class="nav-number">2.1.</span> <span class="nav-text">List</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#first-n-items-in-list"><span class="nav-number">2.1.1.</span> <span class="nav-text">first N items in list</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#last-item"><span class="nav-number">2.1.2.</span> <span class="nav-text">Last item</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#remove-last-and-return"><span class="nav-number">2.1.3.</span> <span class="nav-text">Remove last and return</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#add-to-last"><span class="nav-number">2.1.4.</span> <span class="nav-text">Add to last</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#tuples"><span class="nav-number">2.2.</span> <span class="nav-text">Tuples</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#dictionary-map"><span class="nav-number">2.3.</span> <span class="nav-text">Dictionary (Map)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#updatekey-value"><span class="nav-number">2.3.1.</span> <span class="nav-text">update({key: value})</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#popkey"><span class="nav-number">2.3.2.</span> <span class="nav-text">pop(key)</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#conditional-statements"><span class="nav-number">3.</span> <span class="nav-text">Conditional Statements</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#looping-statements"><span class="nav-number">4.</span> <span class="nav-text">Looping Statements</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#list-comprehensions"><span class="nav-number">5.</span> <span class="nav-text">List Comprehensions</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#functions"><span class="nav-number">6.</span> <span class="nav-text">Functions</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#lambda-functions"><span class="nav-number">6.1.</span> <span class="nav-text">lambda functions</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#args-and-kwargs"><span class="nav-number">7.</span> <span class="nav-text">*args and **kwargs</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#invalid-syntax"><span class="nav-number">7.1.</span> <span class="nav-text">Invalid Syntax</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#some-findings"><span class="nav-number">8.</span> <span class="nav-text">Some findings</span></a></li></ol></div>
+is called type conversion.</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#data-structures"><span class="nav-number">4.</span> <span class="nav-text">Data Structures</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#list"><span class="nav-number">4.1.</span> <span class="nav-text">List</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#first-n-items-in-list"><span class="nav-number">4.1.1.</span> <span class="nav-text">first N items in list</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#last-item"><span class="nav-number">4.1.2.</span> <span class="nav-text">Last item</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#remove-last-and-return"><span class="nav-number">4.1.3.</span> <span class="nav-text">Remove last and return</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#add-to-last"><span class="nav-number">4.1.4.</span> <span class="nav-text">Add to last</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#tuples"><span class="nav-number">4.2.</span> <span class="nav-text">Tuples</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#dictionary-map"><span class="nav-number">4.3.</span> <span class="nav-text">Dictionary (Map)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#updatekey-value"><span class="nav-number">4.3.1.</span> <span class="nav-text">update({key: value})</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#popkey"><span class="nav-number">4.3.2.</span> <span class="nav-text">pop(key)</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#conditional-statements"><span class="nav-number">5.</span> <span class="nav-text">Conditional Statements</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#looping-statements"><span class="nav-number">6.</span> <span class="nav-text">Looping Statements</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#list-comprehensions"><span class="nav-number">7.</span> <span class="nav-text">List Comprehensions</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#functions"><span class="nav-number">8.</span> <span class="nav-text">Functions</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#lambda-functions"><span class="nav-number">8.1.</span> <span class="nav-text">lambda functions</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#args-and-kwargs"><span class="nav-number">9.</span> <span class="nav-text">*args and **kwargs</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#invalid-syntax"><span class="nav-number">9.1.</span> <span class="nav-text">Invalid Syntax</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#comparison"><span class="nav-number">10.</span> <span class="nav-text">Comparison</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#javascript-vs-python-core-concepts"><span class="nav-number">10.1.</span> <span class="nav-text">JavaScript vs Python Core
+Concepts</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -782,12 +1258,12 @@ NEW: Readers & Total Views
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="Symbols count total">83k</span>
+    <span title="Symbols count total">86k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">5:02</span>
+    <span title="Reading time total">5:12</span>
 </div>
 
         
