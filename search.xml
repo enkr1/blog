@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>Why I Write</title>
+      <link href="/why-i-write/"/>
+      <url>/why-i-write/</url>
+      
+        <content type="html"><![CDATA[<h2 id="why-i-started-this-blog">📌 Why I Started This Blog</h2><p>initially, i started writing because i wanted to leave somethingbehind—a way for my grandchildren (...fr) or anyone curious about who iwas to know me beyond just a name or a few photos. i wanted to capturemy thoughts, experiences, and journey in life <strong>so that even afteri'm gone, my words will remain</strong>.</p><h2 id="what-i-learned-along-the-way">✍️ What I Learned Along theWay</h2><p>over time, i realised that writing a blog wasn't just about leavingsomething behind—it became one of the best ways for me to reflect.sitting down to write helps me process everything—the ups and downs,what went well, what i could've done better, and how i should moveforward. this habit has become something i look forward to each week, away to slow down and think.</p><h2 id="what-this-blog-covers">💡 What This Blog Covers</h2><p>right now, my blog is <strong>mostly aboutjournaling</strong>—documenting my life and thoughts. but i also sharetechnical insights, knowledge, and lessons i've learned along the way.everything here is a reflection of how my life unfolds, one event at atime.</p><h2 id="how-often-i-write">⏳ How Often I Write</h2><p>i journal <strong>once a week</strong>—well, most of the time. thereare weeks when life gets too hectic, and i go without writing for awhile, but i always come back.</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> about-this-blog </tag>
+            
+            <tag> why-i-write </tag>
+            
+            <tag> personal-reflections </tag>
+            
+            <tag> journaling </tag>
+            
+            <tag> writing-journey </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>胡思乱写 3</title>
       <link href="/%E8%83%A1%E6%80%9D%E4%B9%B1%E5%86%99-3/"/>
       <url>/%E8%83%A1%E6%80%9D%E4%B9%B1%E5%86%99-3/</url>
@@ -244,11 +271,11 @@
             
             <tag> programming </tag>
             
-            <tag> notes </tag>
-            
             <tag> go </tag>
             
             <tag> golang </tag>
+            
+            <tag> notes </tag>
             
         </tags>
       
@@ -418,9 +445,9 @@
       
         <tags>
             
-            <tag> ebook </tag>
-            
             <tag> reading </tag>
+            
+            <tag> ebook </tag>
             
         </tags>
       
@@ -658,9 +685,9 @@
       
         <tags>
             
-            <tag> ebook </tag>
-            
             <tag> reading </tag>
+            
+            <tag> ebook </tag>
             
         </tags>
       
@@ -1883,6 +1910,8 @@
             
             <tag> leetcode </tag>
             
+            <tag> tiktok </tag>
+            
             <tag> site-reliability-engineer </tag>
             
             <tag> sre </tag>
@@ -1892,8 +1921,6 @@
             <tag> coding-interview </tag>
             
             <tag> job-interview </tag>
-            
-            <tag> tiktok </tag>
             
         </tags>
       
@@ -1924,8 +1951,6 @@
             
             <tag> leetcode </tag>
             
-            <tag> google </tag>
-            
             <tag> site-reliability-engineer </tag>
             
             <tag> sre </tag>
@@ -1935,6 +1960,8 @@
             <tag> coding-interview </tag>
             
             <tag> job-interview </tag>
+            
+            <tag> google </tag>
             
         </tags>
       
@@ -2109,9 +2136,9 @@
           
           <category> Programming Languages </category>
           
-          <category> SQL </category>
-          
           <category> Notebooks </category>
+          
+          <category> SQL </category>
           
       </categories>
       
@@ -2408,9 +2435,9 @@
       
         <tags>
             
-            <tag> reading </tag>
-            
             <tag> physical-book </tag>
+            
+            <tag> reading </tag>
             
         </tags>
       
@@ -2661,9 +2688,9 @@
           
           <category> Programming Languages </category>
           
-          <category> SQL </category>
-          
           <category> Notebooks </category>
+          
+          <category> SQL </category>
           
       </categories>
       
