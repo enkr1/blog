@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://blog.enkr1.com/python-notebook/</loc>
+    <lastmod>2025-03-18</lastmod>
+  </url>
+  <url>
     <loc>https://blog.enkr1.com/why-i-write/</loc>
     <lastmod>2025-03-18</lastmod>
   </url>
@@ -18,10 +22,6 @@
   </url>
   <url>
     <loc>https://blog.enkr1.com/%E8%83%A1%E6%80%9D%E4%B9%B1%E5%86%99-1/</loc>
-    <lastmod>2025-03-16</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.enkr1.com/python-notebook/</loc>
     <lastmod>2025-03-16</lastmod>
   </url>
   <url>
@@ -249,11 +249,15 @@
     <lastmod>2024-10-23</lastmod>
   </url>
   <url>
-    <loc>https://blog.enkr1.com/deep-learning/</loc>
+    <loc>https://blog.enkr1.com/regression-prediction/</loc>
     <lastmod>2024-10-23</lastmod>
   </url>
   <url>
     <loc>https://blog.enkr1.com/regression-hypothesis-testing/</loc>
+    <lastmod>2024-10-23</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.enkr1.com/deep-learning/</loc>
     <lastmod>2024-10-23</lastmod>
   </url>
   <url>
@@ -262,10 +266,6 @@
   </url>
   <url>
     <loc>https://blog.enkr1.com/sql-notebook/</loc>
-    <lastmod>2024-10-23</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.enkr1.com/regression-prediction/</loc>
     <lastmod>2024-10-23</lastmod>
   </url>
   <url>
