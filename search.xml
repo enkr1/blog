@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>test-001</title>
+      <link href="/test-001/"/>
+      <url>/test-001/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Journal: Week 30</title>
       <link href="/journal-week-30/"/>
       <url>/journal-week-30/</url>
@@ -302,11 +315,11 @@
             
             <tag> programming </tag>
             
-            <tag> notes </tag>
-            
             <tag> go </tag>
             
             <tag> golang </tag>
+            
+            <tag> notes </tag>
             
         </tags>
       
@@ -1165,9 +1178,9 @@
             
             <tag> leetcode-medium </tag>
             
-            <tag> dynamic-programming </tag>
-            
             <tag> interview-preparation </tag>
+            
+            <tag> dynamic-programming </tag>
             
             <tag> top-interview-150 </tag>
             
@@ -1204,9 +1217,9 @@
             
             <tag> leetcode-medium </tag>
             
-            <tag> dynamic-programming </tag>
-            
             <tag> interview-preparation </tag>
+            
+            <tag> dynamic-programming </tag>
             
         </tags>
       
@@ -1456,13 +1469,13 @@
             
             <tag> leetcode-medium </tag>
             
-            <tag> dynamic-programming </tag>
-            
             <tag> interview-preparation </tag>
             
             <tag> min-heap </tag>
             
             <tag> priority-queue </tag>
+            
+            <tag> dynamic-programming </tag>
             
         </tags>
       
@@ -1807,9 +1820,9 @@
             
             <tag> interview-preparation </tag>
             
-            <tag> bash </tag>
-            
             <tag> leetcode-easy </tag>
+            
+            <tag> bash </tag>
             
         </tags>
       
@@ -2649,9 +2662,9 @@
           
           <category> Personal Development </category>
           
-          <category> Career Development </category>
-          
           <category> Life Lessons </category>
+          
+          <category> Career Development </category>
           
           <category> Project Management </category>
           
