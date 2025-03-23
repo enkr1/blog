@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://blog.enkr1.com/journal-week-30/</loc>
+    <lastmod>2025-03-23</lastmod>
+  </url>
+  <url>
     <loc>https://blog.enkr1.com/python-notebook/</loc>
     <lastmod>2025-03-20</lastmod>
   </url>
@@ -273,15 +277,15 @@
     <lastmod>2024-10-23</lastmod>
   </url>
   <url>
+    <loc>https://blog.enkr1.com/foundations-of-data-science-navigating-through-inferential-statistics/</loc>
+    <lastmod>2024-10-23</lastmod>
+  </url>
+  <url>
     <loc>https://blog.enkr1.com/pre-work-introduction-to-data-science-ai/</loc>
     <lastmod>2024-10-23</lastmod>
   </url>
   <url>
     <loc>https://blog.enkr1.com/making-sense-of-unstructured-data-a-dive-into-clustering-and-dimensionality-reduction/</loc>
-    <lastmod>2024-10-23</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.enkr1.com/foundations-of-data-science-navigating-through-inferential-statistics/</loc>
     <lastmod>2024-10-23</lastmod>
   </url>
   <url>
