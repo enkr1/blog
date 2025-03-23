@@ -11,11 +11,18 @@ html {
   font-size: 62.5%;
   overflow-x: hidden;
 }
+body {
+  background-color: #f5f7f9 !important;
+}
 .sidebar-inner,
 .header-inner,
 .content.index article,
 .post-block {
-  border: 1px solid #000;
+  border: 1px solid transparent;
+}
+.sidebar {
+  border-radius: 1rem;
+  background-color: #f5f7f9 !important;
 }
 .header {
   z-index: 1301;
@@ -61,7 +68,7 @@ hr {
 }
 pre {
   font-family: monospace, monospace !important;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 pre span {
   font-family: monospace, monospace !important;
@@ -203,7 +210,7 @@ body {
   background: var(--body-bg-color);
   color: var(--text-color);
   font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   line-height: 2;
 }
 body p {
@@ -314,7 +321,7 @@ li {
 table {
   border-collapse: collapse;
   border-spacing: 0;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   margin: 0 0 20px 0;
   width: 100%;
 }
@@ -349,7 +356,7 @@ td {
   border-radius: 1rem;
   color: var(--btn-default-color);
   display: inline-block;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   line-height: 2;
   padding: 0.3rem 1.3rem;
   text-decoration: none;
@@ -503,7 +510,7 @@ code {
   background: #eff2f3;
   color: #4d4d4c;
   display: flex;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   justify-content: space-between;
   line-height: 1.2;
   padding: 0.5em;
@@ -545,7 +552,7 @@ pre {
 pre code {
   background: none;
   color: #4d4d4c;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   padding: 0;
   text-shadow: none;
 }
@@ -1124,7 +1131,7 @@ pre .javascript .function {
 }
 .site-subtitle {
   color: #ddd;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: 300;
   margin: 10px 0;
 }
@@ -1255,7 +1262,7 @@ p {
 .menu-item span.exturl {
   border-bottom: 0;
   display: block;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   transition-property: border-color;
   transition-delay: 0s;
   transition-duration: 0.2s;
@@ -1278,7 +1285,7 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   text-align: center;
   white-space: nowrap;
@@ -1368,11 +1375,11 @@ p {
   font-weight: 600;
   margin: 0 0 0.2rem;
   text-align: center;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
 }
 .site-description {
   color: #999;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   margin-top: 0;
   text-align: center;
 }
@@ -1383,7 +1390,7 @@ p {
 .links-of-author span.exturl {
   border-bottom-color: #555;
   display: inline-block;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   margin-bottom: 10px;
   margin-right: 10px;
   vertical-align: middle;
@@ -1393,7 +1400,7 @@ p {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #5eff40;
+  background: #c87e34;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -1430,11 +1437,11 @@ p {
   color: #fff;
 }
 .links-of-blogroll {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   margin-top: 10px;
 }
 .links-of-blogroll-title {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 600;
   margin-top: 0;
 }
@@ -1474,7 +1481,7 @@ p {
   color: var(--text-color);
   cursor: pointer;
   display: inline-block;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
 }
 .sidebar-nav li.sidebar-nav-overview {
   margin-left: 10px;
@@ -1519,7 +1526,7 @@ p {
   background: #c60000;
 }
 .post-toc {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 .post-toc ol {
   list-style: none;
@@ -1590,11 +1597,11 @@ p {
 }
 .site-state-item-name {
   color: #999;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 .footer {
   color: #999;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   padding: 20px 0;
 }
 .footer.footer-fixed {
@@ -1607,7 +1614,7 @@ p {
   box-sizing: border-box;
   margin: 0 auto;
   text-align: center;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   width: calc(100% - 20px);
 }
 @media (min-width: 1200px) {
@@ -1779,7 +1786,7 @@ p {
   font-family: 'Font Awesome 5 Free';
   content: "\f35d";
   font-weight: 900;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   position: relative;
   top: -0.1rem;
   right: 0;
@@ -1793,7 +1800,7 @@ p {
 .post-body .image-caption,
 .post-body .figure .caption {
   color: #999;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   line-height: 1;
   margin: -0.6rem auto 1.3rem;
   text-align: center;
@@ -1822,7 +1829,7 @@ p {
 }
 .post-button {
   text-align: right;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   width: fit-content;
   margin: 0 0 0 auto;
   transition: all 0.3s ease-in-out;
@@ -1912,7 +1919,7 @@ p {
   color: #bbb;
   margin: auto;
   font-weight: 400;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
 }
 .posts-collapse .collection-year {
   font-size: 2.8rem;
@@ -1963,7 +1970,7 @@ p {
 .posts-collapse .post-title {
   display: flex;
   align-items: center;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
 }
 .posts-collapse .post-meta {
   justify-content: center;
@@ -1978,7 +1985,7 @@ p {
   color: var(--link-color);
 }
 .posts-collapse .post-title .fa-external-link-alt {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   margin-left: 5px;
 }
 .posts-collapse::before {
@@ -2193,18 +2200,18 @@ p {
   visibility: visible;
 }
 .posts-expand .post-title-link .fa-external-link-alt {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   margin-left: 5px;
 }
 .posts-expand .post-meta {
   color: #999;
   font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   margin: 1rem 0 1.8rem;
   text-align: center;
 }
 .posts-expand .post-meta .post-description {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   text-align: justify;
   margin: 1.3rem 0 0;
 }
@@ -2255,7 +2262,7 @@ p {
 .post-nav-item a {
   border-bottom: none;
   display: block;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   line-height: 1.6;
   position: relative;
 }
@@ -2263,7 +2270,7 @@ p {
   top: 2px;
 }
 .post-nav-item .fa {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
 }
 .post-nav-item:first-child {
   margin-right: 15px;
@@ -2298,7 +2305,7 @@ p {
 }
 .post-tags a {
   display: inline-block;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 .post-tags a:not(:last-child) {
   margin-right: 10px;
@@ -2321,7 +2328,7 @@ p {
 }
 .social-like {
   display: flex;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   justify-content: center;
   text-align: center;
 }
@@ -2542,7 +2549,7 @@ p {
   }
 }
 ul.breadcrumb {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   list-style: none;
   margin: 1em 0;
   padding: 0 2em;
@@ -2722,7 +2729,7 @@ ul.breadcrumb li + li:last-child {
   margin-left: 0.8rem;
 }
 .popular-posts .popular-posts-item .popular-posts-title {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: normal;
   line-height: 2.4;
   margin: 0;
@@ -2836,10 +2843,10 @@ mjx-container + br {
 }
 @media (max-width: 991px) {
   .site-meta .site-title {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
   .site-meta .site-subtitle {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     margin: 0;
   }
 }
@@ -3181,7 +3188,7 @@ mjx-container + br {
     border-radius: 1rem;
     box-shadow: initial;
     padding: 5px 20px 25px;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
   .post-block+.post-block {
     margin-top: 10px;
@@ -3250,11 +3257,31 @@ mjx-container + br {
   box-shadow: unset !important;
 }
 .fancybox .image-caption {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   line-height: 1.4;
 }
 .fancybox .fancybox-caption {
   transform: translateY(1.1rem);
+}
+.journal-post .fancybox {
+  margin: 1.5rem auto 3rem;
+}
+.journal-post .fancybox img {
+  border: 0.3px solid #333;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  max-height: unset !important;
+  transition: all 0.3s ease;
+}
+@media (min-width: 992px) {
+  .journal-post .fancybox img {
+    width: 50%;
+  }
+}
+.journal-post .fancybox img:hover {
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+.journal-post .fancybox .image-caption {
+  margin-bottom: 3rem;
 }
 .category-all-page,
 .tag-cloud {
@@ -3271,7 +3298,7 @@ mjx-container + br {
 .tag-cloud .category-all-title,
 .category-all-page .tag-cloud-title,
 .tag-cloud .tag-cloud-title {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-style: italic;
   padding: 0 0 1rem;
   text-align: center;
