@@ -1400,7 +1400,7 @@ p {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #a66163;
+  background: #380b9e;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -3263,9 +3263,11 @@ mjx-container + br {
 .fancybox .fancybox-caption {
   transform: translateY(1.1rem);
 }
+.journal .fancybox,
 .journal-post .fancybox {
   margin: 1.5rem auto 3rem;
 }
+.journal .fancybox img,
 .journal-post .fancybox img {
   border: 0.3px solid #333;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
@@ -3273,13 +3275,16 @@ mjx-container + br {
   transition: all 0.3s ease;
 }
 @media (min-width: 992px) {
+  .journal .fancybox img,
   .journal-post .fancybox img {
     width: 50%;
   }
 }
+.journal .fancybox img:hover,
 .journal-post .fancybox img:hover {
   box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
+.journal .fancybox .image-caption,
 .journal-post .fancybox .image-caption {
   margin-bottom: 3rem;
 }
