@@ -1400,7 +1400,7 @@ p {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #c3a45d;
+  background: #ffb4c1;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -3265,7 +3265,7 @@ mjx-container + br {
 }
 .journal .fancybox,
 .journal-post .fancybox {
-  margin: 1.5rem auto 3rem;
+  margin: 0rem auto 1.5rem;
 }
 .journal .fancybox img,
 .journal-post .fancybox img {
@@ -3283,10 +3283,6 @@ mjx-container + br {
 .journal .fancybox img:hover,
 .journal-post .fancybox img:hover {
   box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-}
-.journal .fancybox .image-caption,
-.journal-post .fancybox .image-caption {
-  margin-bottom: 3rem;
 }
 .category-all-page,
 .tag-cloud {
