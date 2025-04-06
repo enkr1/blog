@@ -4,6 +4,29 @@
   
     
     <entry>
+      <title>Reminder 🤍</title>
+      <link href="/reminder-%F0%9F%A4%8D/"/>
+      <url>/reminder-%F0%9F%A4%8D/</url>
+      
+        <content type="html"><![CDATA[<h2id="you-cant-control-the-wind-but-you-can-adjust-your-sail."><strong><em>"youcan't control the wind but you can adjust your sail."</em></strong></h2><blockquote><p>it's not about what happens to you, it's how you react. make a betterchoice. <ahref="https://youtu.be/0lN8NniSXbw?si=mXr_igQakTzMwHeB&amp;t=193">Source</a></p></blockquote>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> inspirational </tag>
+            
+            <tag> motivation </tag>
+            
+            <tag> quote </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>胡思乱写 5</title>
       <link href="/%E8%83%A1%E6%80%9D%E4%B9%B1%E5%86%99-5/"/>
       <url>/%E8%83%A1%E6%80%9D%E4%B9%B1%E5%86%99-5/</url>
@@ -430,11 +453,11 @@
             
             <tag> programming </tag>
             
+            <tag> notes </tag>
+            
             <tag> go </tag>
             
             <tag> golang </tag>
-            
-            <tag> notes </tag>
             
         </tags>
       
@@ -604,9 +627,9 @@
       
         <tags>
             
-            <tag> reading </tag>
-            
             <tag> ebook </tag>
+            
+            <tag> reading </tag>
             
         </tags>
       
@@ -844,9 +867,9 @@
       
         <tags>
             
-            <tag> reading </tag>
-            
             <tag> ebook </tag>
+            
+            <tag> reading </tag>
             
         </tags>
       
@@ -1311,9 +1334,9 @@
             
             <tag> leetcode-medium </tag>
             
-            <tag> interview-preparation </tag>
-            
             <tag> dynamic-programming </tag>
+            
+            <tag> interview-preparation </tag>
             
             <tag> top-interview-150 </tag>
             
@@ -1350,9 +1373,9 @@
             
             <tag> leetcode-medium </tag>
             
-            <tag> interview-preparation </tag>
-            
             <tag> dynamic-programming </tag>
+            
+            <tag> interview-preparation </tag>
             
         </tags>
       
@@ -1602,13 +1625,13 @@
             
             <tag> leetcode-medium </tag>
             
+            <tag> dynamic-programming </tag>
+            
             <tag> interview-preparation </tag>
             
             <tag> min-heap </tag>
             
             <tag> priority-queue </tag>
-            
-            <tag> dynamic-programming </tag>
             
         </tags>
       
@@ -2612,9 +2635,9 @@
       
         <tags>
             
-            <tag> physical-book </tag>
-            
             <tag> reading </tag>
+            
+            <tag> physical-book </tag>
             
         </tags>
       
