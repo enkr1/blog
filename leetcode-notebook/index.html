@@ -23,16 +23,16 @@
     var CONFIG = {"hostname":"blog.enkr1.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":true,"sidebar":{"position":"left","width":300,"display":"post","padding":0,"offset":0,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"buttons","active":"disqus","storage":true,"lazyload":true,"nav":null,"activeClass":"disqus"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":-1,"unescape":true,"preload":true},"motion":{"enable":true,"async":false,"transition":{"post_block":"slideDownBigIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="Notion Database Binary Tree topics... Problems 909. Snakes and Ladders 1[ 0, -1, 15, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 35, -1, -1, 13, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,">
+  <meta name="description" content="Notion Database 🗣️ How to Be a Strong Hire - Interview Insights 🎯 Problem: Odd-Even Linked List How to explain it in an interview to show you’re a strong hire: &quot;To solve this, I used a two-pointer s">
 <meta property="og:type" content="article">
 <meta property="og:title" content="LeetCode Notebook">
 <meta property="og:url" content="https://blog.enkr1.com/leetcode-notebook/index.html">
 <meta property="og:site_name" content="ENKR&#39;s Blog | Jing Hui PANG">
-<meta property="og:description" content="Notion Database Binary Tree topics... Problems 909. Snakes and Ladders 1[ 0, -1, 15, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 35, -1, -1, 13, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,">
+<meta property="og:description" content="Notion Database 🗣️ How to Be a Strong Hire - Interview Insights 🎯 Problem: Odd-Even Linked List How to explain it in an interview to show you’re a strong hire: &quot;To solve this, I used a two-pointer s">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2024-10-01T19:42:03.000Z">
-<meta property="article:modified_time" content="2025-03-26T19:16:29.439Z">
-<meta property="article:author" content="Jing Hui PANG | 彭競辉 | ENKR">
+<meta property="article:modified_time" content="2025-04-12T10:19:26.886Z">
+<meta property="article:author" content="Jing Hui PANG | 彭竞辉 | ENKR">
 <meta property="article:tag" content="leetcode">
 <meta property="article:tag" content="programming">
 <meta name="twitter:card" content="summary">
@@ -285,7 +285,7 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Jing Hui PANG | 彭競辉 | ENKR">
+      <meta itemprop="name" content="Jing Hui PANG | 彭竞辉 | ENKR">
       <meta itemprop="description" content="Words for my future self—a space for insights and creativity. Along the way, I’ll be journaling my journey, diving into programming tips, beatboxing stories and sharing insights on fitness, music, and more to inspire anyone chasing their own path.">
     </span>
 
@@ -321,7 +321,7 @@ NOTE: created_at
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: Thursday, 27 March 2025 03:16:29 AM 03:16:29 AM" itemprop="dateModified" datetime="2025-03-27T03:16:29+08:00">Thursday, 27 March 2025 03:16:29 AM</time>
+                <time title="Modified: Saturday, 12 April 2025 18:19:26 PM 18:19:26 PM" itemprop="dateModified" datetime="2025-04-12T18:19:26+08:00">Saturday, 12 April 2025 18:19:26 PM</time>
               </span>
 
             <span class="post-meta-item">
@@ -358,7 +358,7 @@ NOTE: word count
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-              <span>1.1k</span>
+              <span>1.3k</span>
             </span>
 
 <!--
@@ -368,7 +368,7 @@ NOTE: reading time
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
-              <span>4 mins.</span>
+              <span>5 mins.</span>
             </span>
 
 
@@ -416,6 +416,30 @@ NOTE: views count
         <h2 id="notion-database"><a
 target="_blank" rel="noopener" href="https://enkr.notion.site/ebd/af5b4b790deb4dd5b5f7e990c18f65c5">Notion
 Database</a></h2>
+<h2 id="how-to-be-a-strong-hire---interview-insights">🗣️ How to Be a
+Strong Hire - Interview Insights</h2>
+<p>🎯 Problem: Odd-Even Linked List</p>
+<p>How to explain it in an interview to show you’re a strong hire:</p>
+<p>"To solve this, I used a two-pointer strategy — one for odd-indexed
+nodes and one for even-indexed nodes. I conceptually treat the linked
+list like two interleaved sublists — one for all odd nodes and one for
+even ones.</p>
+<p>As I traverse, I rewire the .next pointers to separate these two
+sequences. The critical insight is understanding that in a linked list,
+updating .next alone is not enough — I also need to move the tail
+pointer forward. I call this the 'tail follows head' principle: once I
+update odd.next, I must move odd = odd.next so that the tail pointer
+remains accurate for future rewiring.</p>
+<p>After separation, I stitch the end of the odd list to the head of the
+even list, which I preserved before modification. This keeps the
+operation in-place with O(1) space and O(n) time."</p>
+<p>🔁 Bonus phrasing:</p>
+<p>“I reused the existing node structure instead of allocating new
+nodes.”</p>
+<p>“The key is safe pointer progression — modifying .next and moving the
+active pointer in tandem.”</p>
+<p>“It’s a pointer-surgery problem with clear sequencing logic.”</p>
+<hr />
 <h2 id="binary-tree">Binary Tree</h2>
 <p>topics...</p>
 <h2 id="problems">Problems</h2>
@@ -545,21 +569,22 @@ Snakes and Ladders</a></h3>
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
           <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#notion-database"><span class="nav-number">1.</span> <span class="nav-text">Notion
-Database</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#binary-tree"><span class="nav-number">2.</span> <span class="nav-text">Binary Tree</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#problems"><span class="nav-number">3.</span> <span class="nav-text">Problems</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#snakes-and-ladders"><span class="nav-number">3.1.</span> <span class="nav-text">909.
+Database</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#how-to-be-a-strong-hire---interview-insights"><span class="nav-number">2.</span> <span class="nav-text">🗣️ How to Be a
+Strong Hire - Interview Insights</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#binary-tree"><span class="nav-number">3.</span> <span class="nav-text">Binary Tree</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#problems"><span class="nav-number">4.</span> <span class="nav-text">Problems</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#snakes-and-ladders"><span class="nav-number">4.1.</span> <span class="nav-text">909.
 Snakes and Ladders</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">Jing Hui PANG | 彭競辉 | ENKR</p>
+  <p class="site-author-name" itemprop="name">Jing Hui PANG | 彭竞辉 | ENKR</p>
   <div class="site-description" itemprop="description">Words for my future self—a space for insights and creativity. Along the way, I’ll be journaling my journey, diving into programming tips, beatboxing stories and sharing insights on fitness, music, and more to inspire anyone chasing their own path.</div>
 </div>
 <div class="site-state-wrap motion-element">
   <nav class="site-state">
     <div class="site-state-item site-state-posts">
         <a href="/archives">
-          <span class="site-state-item-count">109</span>
+          <span class="site-state-item-count">111</span>
           <span class="site-state-item-name">Posts</span>
         </a>
     </div>
@@ -705,17 +730,17 @@ NEW: Readers & Total Views
   <span class="with-love">
     <i class=""></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">Jing Hui PANG | 彭競辉 | ENKR</span>
+  <span class="author" itemprop="copyrightHolder">Jing Hui PANG | 彭竞辉 | ENKR</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="Symbols count total">90k</span>
+    <span title="Symbols count total">92k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">5:27</span>
+    <span title="Reading time total">5:34</span>
 </div>
 
         

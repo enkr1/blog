@@ -30,12 +30,12 @@
 <meta property="og:site_name" content="ENKR&#39;s Blog | Jing Hui PANG">
 <meta property="og:description" content="Words for my future self—a space for insights and creativity. Along the way, I’ll be journaling my journey, diving into programming tips, beatboxing stories and sharing insights on fitness, music, and">
 <meta property="og:locale" content="en_US">
-<meta property="article:author" content="Jing Hui PANG | 彭競辉 | ENKR">
+<meta property="article:author" content="Jing Hui PANG | 彭竞辉 | ENKR">
 <meta property="article:tag" content="ENKR">
 <meta property="article:tag" content="Jing Hui PANG">
 <meta property="article:tag" content="Pang Jing Hui">
 <meta property="article:tag" content="彭竞辉">
-<meta property="article:tag" content="彭競辉">
+<meta property="article:tag" content="彭竞辉">
 <meta property="article:tag" content="Beatbox">
 <meta property="article:tag" content="ByteDance">
 <meta property="article:tag" content="ByteDancer">
@@ -322,11 +322,339 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://blog.enkr1.com/understanding-programming-styles-declarative-vs-imperative/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Jing Hui PANG | 彭竞辉 | ENKR">
+      <meta itemprop="description" content="Words for my future self—a space for insights and creativity. Along the way, I’ll be journaling my journey, diving into programming tips, beatboxing stories and sharing insights on fitness, music, and more to inspire anyone chasing their own path.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ENKR's Blog | Jing Hui PANG">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/understanding-programming-styles-declarative-vs-imperative/" class="post-title-link" itemprop="url">Understanding Programming Styles: Declarative vs Imperative</a>
+        </h2>
+
+        <div class="post-meta">
+
+<!--
+NOTE: created_at
+-->
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: Thursday, 25 April 2024 00:56:04 AM 00:56:04 AM" itemprop="dateCreated datePublished" datetime="2024-04-25T00:56:04+08:00">Thursday, 25 April 2024 00:56:04 AM</time>
+            </span>
+
+<!--
+NOTE: created_at
+-->
+<!--
+-->
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: Friday, 10 May 2024 00:52:10 AM 00:52:10 AM" itemprop="dateModified" datetime="2024-05-10T00:52:10+08:00">Friday, 10 May 2024 00:52:10 AM</time>
+              </span>
+
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Software-Engineering/" itemprop="url" rel="index"><span itemprop="name">Software Engineering</span></a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Software-Engineering/Programming-Styles/" itemprop="url" rel="index"><span itemprop="name">Programming Styles</span></a>
+                </span>
+            </span>
+
+          
+
+
+<!--
+NEW: Added a break after category
+-->
+  <br>
+
+
+<!--
+NOTE: word count
+-->
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+              <span>421</span>
+            </span>
+
+<!--
+NOTE: reading time
+-->
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+              <span>2 mins.</span>
+            </span>
+
+
+<!--
+NOTE: disqus
+-->
+  
+  <span class="post-meta-item disqus-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/understanding-programming-styles-declarative-vs-imperative/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="understanding-programming-styles-declarative-vs-imperative/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+<!--
+NOTE: views count
+-->
+            <span class="post-meta-item" title="Views">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <!--
+              NOTE: Hide "Views: "
+              <span class="post-meta-item-text">Views: </span>
+              -->
+              <b><span class="firestore-visitors-count">loading ...</span></b>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Dive into the core differences between declarative and imperative programming styles in this comprehensive guide. Understand the unique benefits and challenges of each approach to enhance your coding techniques and optimize your software development process. Whether you're a novice coder or an experienced developer, this article will provide valuable insights into choosing the right programming style for your projects.</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/understanding-programming-styles-declarative-vs-imperative/">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      
+
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://blog.enkr1.com/learning-from-lim-hock-chee-life-and-business-insights-from-the-ceo-of-sheng-siong/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Jing Hui PANG | 彭竞辉 | ENKR">
+      <meta itemprop="description" content="Words for my future self—a space for insights and creativity. Along the way, I’ll be journaling my journey, diving into programming tips, beatboxing stories and sharing insights on fitness, music, and more to inspire anyone chasing their own path.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ENKR's Blog | Jing Hui PANG">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/learning-from-lim-hock-chee-life-and-business-insights-from-the-ceo-of-sheng-siong/" class="post-title-link" itemprop="url">Learning from Lim Hock Chee: Life and Business Insights from the CEO of Sheng Siong</a>
+        </h2>
+
+        <div class="post-meta">
+
+<!--
+NOTE: created_at
+-->
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: Saturday, 20 April 2024 05:13:47 AM 05:13:47 AM" itemprop="dateCreated datePublished" datetime="2024-04-20T05:13:47+08:00">Saturday, 20 April 2024 05:13:47 AM</time>
+            </span>
+
+<!--
+NOTE: created_at
+-->
+<!--
+-->
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: Saturday, 5 October 2024 23:13:02 PM 23:13:02 PM" itemprop="dateModified" datetime="2024-10-05T23:13:02+08:00">Saturday, 5 October 2024 23:13:02 PM</time>
+              </span>
+
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Personal-Development/" itemprop="url" rel="index"><span itemprop="name">Personal Development</span></a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Career-Development/" itemprop="url" rel="index"><span itemprop="name">Career Development</span></a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Personal-Development/Life-Lessons/" itemprop="url" rel="index"><span itemprop="name">Life Lessons</span></a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Career-Development/Project-Management/" itemprop="url" rel="index"><span itemprop="name">Project Management</span></a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Career-Development/Project-Management/Leadership-Skills/" itemprop="url" rel="index"><span itemprop="name">Leadership Skills</span></a>
+                </span>
+            </span>
+
+          
+
+
+<!--
+NEW: Added a break after category
+-->
+  <br>
+
+
+<!--
+NOTE: word count
+-->
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+              <span>523</span>
+            </span>
+
+<!--
+NOTE: reading time
+-->
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+              <span>2 mins.</span>
+            </span>
+
+
+<!--
+NOTE: disqus
+-->
+  
+  <span class="post-meta-item disqus-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/learning-from-lim-hock-chee-life-and-business-insights-from-the-ceo-of-sheng-siong/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="learning-from-lim-hock-chee-life-and-business-insights-from-the-ceo-of-sheng-siong/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+<!--
+NOTE: views count
+-->
+            <span class="post-meta-item" title="Views">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <!--
+              NOTE: Hide "Views: "
+              <span class="post-meta-item-text">Views: </span>
+              -->
+              <b><span class="firestore-visitors-count">loading ...</span></b>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Explore the life and leadership philosophy of Lim Hock Chee, the CEO of Sheng Siong, one of Singapore's leading supermarket chains. This post delves into the business strategies, cultural insights, and personal principles that have shaped his journey and the success of Sheng Siong. Discover actionable lessons in entrepreneurship, leadership, and personal development that can inspire and guide your own career and life choices.</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/learning-from-lim-hock-chee-life-and-business-insights-from-the-ceo-of-sheng-siong/">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      
+
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="https://blog.enkr1.com/decoding-dunbar-s-number-the-limits-of-social-connections/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Jing Hui PANG | 彭競辉 | ENKR">
+      <meta itemprop="name" content="Jing Hui PANG | 彭竞辉 | ENKR">
       <meta itemprop="description" content="Words for my future self—a space for insights and creativity. Along the way, I’ll be journaling my journey, diving into programming tips, beatboxing stories and sharing insights on fitness, music, and more to inspire anyone chasing their own path.">
     </span>
 
@@ -484,7 +812,7 @@ NOTE: views count
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Jing Hui PANG | 彭競辉 | ENKR">
+      <meta itemprop="name" content="Jing Hui PANG | 彭竞辉 | ENKR">
       <meta itemprop="description" content="Words for my future self—a space for insights and creativity. Along the way, I’ll be journaling my journey, diving into programming tips, beatboxing stories and sharing insights on fitness, music, and more to inspire anyone chasing their own path.">
     </span>
 
@@ -655,7 +983,7 @@ concepts clear and memorable.</p>
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Jing Hui PANG | 彭競辉 | ENKR">
+      <meta itemprop="name" content="Jing Hui PANG | 彭竞辉 | ENKR">
       <meta itemprop="description" content="Words for my future self—a space for insights and creativity. Along the way, I’ll be journaling my journey, diving into programming tips, beatboxing stories and sharing insights on fitness, music, and more to inspire anyone chasing their own path.">
     </span>
 
@@ -705,11 +1033,11 @@ NOTE: created_at
                 </span>
                   , 
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Software-Engineering/Web-Development/" itemprop="url" rel="index"><span itemprop="name">Web Development</span></a>
+                  <a href="/categories/Notebooks/" itemprop="url" rel="index"><span itemprop="name">Notebooks</span></a>
                 </span>
                   , 
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Notebooks/" itemprop="url" rel="index"><span itemprop="name">Notebooks</span></a>
+                  <a href="/categories/Software-Engineering/Web-Development/" itemprop="url" rel="index"><span itemprop="name">Web Development</span></a>
                 </span>
                   , 
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
@@ -821,7 +1149,7 @@ NOTE: views count
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Jing Hui PANG | 彭競辉 | ENKR">
+      <meta itemprop="name" content="Jing Hui PANG | 彭竞辉 | ENKR">
       <meta itemprop="description" content="Words for my future self—a space for insights and creativity. Along the way, I’ll be journaling my journey, diving into programming tips, beatboxing stories and sharing insights on fitness, music, and more to inspire anyone chasing their own path.">
     </span>
 
@@ -987,7 +1315,7 @@ NOTE: views count
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Jing Hui PANG | 彭競辉 | ENKR">
+      <meta itemprop="name" content="Jing Hui PANG | 彭竞辉 | ENKR">
       <meta itemprop="description" content="Words for my future self—a space for insights and creativity. Along the way, I’ll be journaling my journey, diving into programming tips, beatboxing stories and sharing insights on fitness, music, and more to inspire anyone chasing their own path.">
     </span>
 
@@ -1142,7 +1470,7 @@ NOTE: views count
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Jing Hui PANG | 彭競辉 | ENKR">
+      <meta itemprop="name" content="Jing Hui PANG | 彭竞辉 | ENKR">
       <meta itemprop="description" content="Words for my future self—a space for insights and creativity. Along the way, I’ll be journaling my journey, diving into programming tips, beatboxing stories and sharing insights on fitness, music, and more to inspire anyone chasing their own path.">
     </span>
 
@@ -1308,7 +1636,7 @@ NOTE: views count
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Jing Hui PANG | 彭競辉 | ENKR">
+      <meta itemprop="name" content="Jing Hui PANG | 彭竞辉 | ENKR">
       <meta itemprop="description" content="Words for my future self—a space for insights and creativity. Along the way, I’ll be journaling my journey, diving into programming tips, beatboxing stories and sharing insights on fitness, music, and more to inspire anyone chasing their own path.">
     </span>
 
@@ -1463,7 +1791,7 @@ NOTE: views count
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Jing Hui PANG | 彭競辉 | ENKR">
+      <meta itemprop="name" content="Jing Hui PANG | 彭竞辉 | ENKR">
       <meta itemprop="description" content="Words for my future self—a space for insights and creativity. Along the way, I’ll be journaling my journey, diving into programming tips, beatboxing stories and sharing insights on fitness, music, and more to inspire anyone chasing their own path.">
     </span>
 
@@ -1618,7 +1946,7 @@ NOTE: views count
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Jing Hui PANG | 彭競辉 | ENKR">
+      <meta itemprop="name" content="Jing Hui PANG | 彭竞辉 | ENKR">
       <meta itemprop="description" content="Words for my future self—a space for insights and creativity. Along the way, I’ll be journaling my journey, diving into programming tips, beatboxing stories and sharing insights on fitness, music, and more to inspire anyone chasing their own path.">
     </span>
 
@@ -1773,7 +2101,7 @@ NOTE: views count
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Jing Hui PANG | 彭競辉 | ENKR">
+      <meta itemprop="name" content="Jing Hui PANG | 彭竞辉 | ENKR">
       <meta itemprop="description" content="Words for my future self—a space for insights and creativity. Along the way, I’ll be journaling my journey, diving into programming tips, beatboxing stories and sharing insights on fitness, music, and more to inspire anyone chasing their own path.">
     </span>
 
@@ -1935,7 +2263,7 @@ NOTE: views count
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Jing Hui PANG | 彭競辉 | ENKR">
+      <meta itemprop="name" content="Jing Hui PANG | 彭竞辉 | ENKR">
       <meta itemprop="description" content="Words for my future self—a space for insights and creativity. Along the way, I’ll be journaling my journey, diving into programming tips, beatboxing stories and sharing insights on fitness, music, and more to inspire anyone chasing their own path.">
     </span>
 
@@ -2089,330 +2417,6 @@ NOTE: views count
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://blog.enkr1.com/foundations-of-data-science-navigating-through-inferential-statistics/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Jing Hui PANG | 彭競辉 | ENKR">
-      <meta itemprop="description" content="Words for my future self—a space for insights and creativity. Along the way, I’ll be journaling my journey, diving into programming tips, beatboxing stories and sharing insights on fitness, music, and more to inspire anyone chasing their own path.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ENKR's Blog | Jing Hui PANG">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/foundations-of-data-science-navigating-through-inferential-statistics/" class="post-title-link" itemprop="url">Foundations of Data Science: Navigating Through Inferential Statistics</a>
-        </h2>
-
-        <div class="post-meta">
-
-<!--
-NOTE: created_at
--->
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: Thursday, 1 February 2024 16:22:15 PM 16:22:15 PM" itemprop="dateCreated datePublished" datetime="2024-02-01T16:22:15+08:00">Thursday, 1 February 2024 16:22:15 PM</time>
-            </span>
-
-<!--
-NOTE: created_at
--->
-<!--
--->
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: Thursday, 24 October 2024 03:41:57 AM 03:41:57 AM" itemprop="dateModified" datetime="2024-10-24T03:41:57+08:00">Thursday, 24 October 2024 03:41:57 AM</time>
-              </span>
-
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Software-Engineering/" itemprop="url" rel="index"><span itemprop="name">Software Engineering</span></a>
-                </span>
-                  , 
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Personal-Development/" itemprop="url" rel="index"><span itemprop="name">Personal Development</span></a>
-                </span>
-                  , 
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Notebooks/" itemprop="url" rel="index"><span itemprop="name">Notebooks</span></a>
-                </span>
-                  , 
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Personal-Development/Online-Courses/" itemprop="url" rel="index"><span itemprop="name">Online Courses</span></a>
-                </span>
-                  , 
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Personal-Development/Online-Courses/MIT-IDSS-AI-ML/" itemprop="url" rel="index"><span itemprop="name">MIT & IDSS - AI & ML</span></a>
-                </span>
-                  , 
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Software-Engineering/Machine-Learning-AI/" itemprop="url" rel="index"><span itemprop="name">Machine Learning & AI</span></a>
-                </span>
-            </span>
-
-          
-
-
-<!--
-NEW: Added a break after category
--->
-  <br>
-
-
-<!--
-NOTE: word count
--->
-            <span class="post-meta-item" title="Symbols count in article">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-              <span>1.4k</span>
-            </span>
-
-<!--
-NOTE: reading time
--->
-            <span class="post-meta-item" title="Reading time">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-              <span>5 mins.</span>
-            </span>
-
-
-<!--
-NOTE: disqus
--->
-  
-  
-
-<!--
-NOTE: views count
--->
-            <span class="post-meta-item" title="Views">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <!--
-              NOTE: Hide "Views: "
-              <span class="post-meta-item-text">Views: </span>
-              -->
-              <b><span class="firestore-visitors-count">loading ...</span></b>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Dive deep into the statistical methods that power data science with a focus on inferential statistics. This post explores core concepts, distribution types, and the application of statistics in making informed decisions based on data.</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/foundations-of-data-science-navigating-through-inferential-statistics/">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      
-
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://blog.enkr1.com/pre-work-introduction-to-data-science-ai/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Jing Hui PANG | 彭競辉 | ENKR">
-      <meta itemprop="description" content="Words for my future self—a space for insights and creativity. Along the way, I’ll be journaling my journey, diving into programming tips, beatboxing stories and sharing insights on fitness, music, and more to inspire anyone chasing their own path.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ENKR's Blog | Jing Hui PANG">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/pre-work-introduction-to-data-science-ai/" class="post-title-link" itemprop="url">Pre Work: Introduction to Data Science & AI</a>
-        </h2>
-
-        <div class="post-meta">
-
-<!--
-NOTE: created_at
--->
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: Saturday, 20 January 2024 20:04:59 PM 20:04:59 PM" itemprop="dateCreated datePublished" datetime="2024-01-20T20:04:59+08:00">Saturday, 20 January 2024 20:04:59 PM</time>
-            </span>
-
-<!--
-NOTE: created_at
--->
-<!--
--->
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: Thursday, 24 October 2024 03:41:57 AM 03:41:57 AM" itemprop="dateModified" datetime="2024-10-24T03:41:57+08:00">Thursday, 24 October 2024 03:41:57 AM</time>
-              </span>
-
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Software-Engineering/" itemprop="url" rel="index"><span itemprop="name">Software Engineering</span></a>
-                </span>
-                  , 
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Personal-Development/" itemprop="url" rel="index"><span itemprop="name">Personal Development</span></a>
-                </span>
-                  , 
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Notebooks/" itemprop="url" rel="index"><span itemprop="name">Notebooks</span></a>
-                </span>
-                  , 
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Personal-Development/Online-Courses/" itemprop="url" rel="index"><span itemprop="name">Online Courses</span></a>
-                </span>
-                  , 
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Personal-Development/Online-Courses/MIT-IDSS-AI-ML/" itemprop="url" rel="index"><span itemprop="name">MIT & IDSS - AI & ML</span></a>
-                </span>
-                  , 
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Software-Engineering/Machine-Learning-AI/" itemprop="url" rel="index"><span itemprop="name">Machine Learning & AI</span></a>
-                </span>
-            </span>
-
-          
-
-
-<!--
-NEW: Added a break after category
--->
-  <br>
-
-
-<!--
-NOTE: word count
--->
-            <span class="post-meta-item" title="Symbols count in article">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-              <span>444</span>
-            </span>
-
-<!--
-NOTE: reading time
--->
-            <span class="post-meta-item" title="Reading time">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-              <span>2 mins.</span>
-            </span>
-
-
-<!--
-NOTE: disqus
--->
-  
-  
-
-<!--
-NOTE: views count
--->
-            <span class="post-meta-item" title="Views">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <!--
-              NOTE: Hide "Views: "
-              <span class="post-meta-item-text">Views: </span>
-              -->
-              <b><span class="firestore-visitors-count">loading ...</span></b>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Step into the realm of Data Science and AI with this introductory guide, designed for those new to the field. Covering fundamental concepts, practical applications, and insights into the future of technology, this post aims to demystify the complexities of AI and data science, making it accessible to aspiring technologists and curious minds alike.</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/pre-work-introduction-to-data-science-ai/">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      
-
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -2474,14 +2478,14 @@ NOTE: views count
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">Jing Hui PANG | 彭競辉 | ENKR</p>
+  <p class="site-author-name" itemprop="name">Jing Hui PANG | 彭竞辉 | ENKR</p>
   <div class="site-description" itemprop="description">Words for my future self—a space for insights and creativity. Along the way, I’ll be journaling my journey, diving into programming tips, beatboxing stories and sharing insights on fitness, music, and more to inspire anyone chasing their own path.</div>
 </div>
 <div class="site-state-wrap motion-element">
   <nav class="site-state">
     <div class="site-state-item site-state-posts">
         <a href="/archives">
-          <span class="site-state-item-count">109</span>
+          <span class="site-state-item-count">111</span>
           <span class="site-state-item-name">Posts</span>
         </a>
     </div>
@@ -2627,17 +2631,17 @@ NEW: Readers & Total Views
   <span class="with-love">
     <i class=""></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">Jing Hui PANG | 彭競辉 | ENKR</span>
+  <span class="author" itemprop="copyrightHolder">Jing Hui PANG | 彭竞辉 | ENKR</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="Symbols count total">90k</span>
+    <span title="Symbols count total">92k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">5:27</span>
+    <span title="Reading time total">5:34</span>
 </div>
 
         

@@ -31,8 +31,8 @@
 <meta property="og:description" content="In this note, I walk through how I reverse a singly linked list using a dummy node in JavaScript. Sharing my thought process and a step-by-step breakdown, this guide is for anyone looking to understan">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2024-09-22T04:16:33.000Z">
-<meta property="article:modified_time" content="2024-10-23T19:41:57.623Z">
-<meta property="article:author" content="Jing Hui PANG | 彭競辉 | ENKR">
+<meta property="article:modified_time" content="2025-04-12T11:08:31.003Z">
+<meta property="article:author" content="Jing Hui PANG | 彭竞辉 | ENKR">
 <meta property="article:tag" content="programming">
 <meta property="article:tag" content="data-structures">
 <meta name="twitter:card" content="summary">
@@ -285,7 +285,7 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Jing Hui PANG | 彭競辉 | ENKR">
+      <meta itemprop="name" content="Jing Hui PANG | 彭竞辉 | ENKR">
       <meta itemprop="description" content="Words for my future self—a space for insights and creativity. Along the way, I’ll be journaling my journey, diving into programming tips, beatboxing stories and sharing insights on fitness, music, and more to inspire anyone chasing their own path.">
     </span>
 
@@ -321,7 +321,7 @@ NOTE: created_at
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: Thursday, 24 October 2024 03:41:57 AM 03:41:57 AM" itemprop="dateModified" datetime="2024-10-24T03:41:57+08:00">Thursday, 24 October 2024 03:41:57 AM</time>
+                <time title="Modified: Saturday, 12 April 2025 19:08:31 PM 19:08:31 PM" itemprop="dateModified" datetime="2025-04-12T19:08:31+08:00">Saturday, 12 April 2025 19:08:31 PM</time>
               </span>
 
             <span class="post-meta-item">
@@ -358,7 +358,7 @@ NOTE: word count
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-              <span>863</span>
+              <span>1.6k</span>
             </span>
 
 <!--
@@ -368,7 +368,7 @@ NOTE: reading time
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
-              <span>3 mins.</span>
+              <span>6 mins.</span>
             </span>
 
 
@@ -415,12 +415,132 @@ NOTE: views count
 
       
         <h2 id="wip-...">WIP ...</h2>
+<h2 id="singlely-linked-list">Singlely Linked List</h2>
+<h3 id="understanding-pointer">Understanding pointer</h3>
+<p>Fantastic question — this is where understanding <strong>references
+and memory models</strong> in Python really levels you up in linked list
+questions.</p>
+<p>Let’s go deep but keep it intuitive 🧠:</p>
+<hr />
+<h4 id="what-does-it-mean-slow-head-or-return-head">🔗 What does it
+mean: <code>slow = head</code> or <code>return head</code>?</h4>
+<p>When you write:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">slow = head</span><br></pre></td></tr></table></figure>
+<p>You are <strong>not copying</strong> the node.</p>
+<p>You are saying: &gt; “<code>slow</code> now points to the same
+<code>ListNode</code> object in memory as <code>head</code>.”</p>
+<p>So if you do: <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">slow.val = <span class="number">999</span></span><br></pre></td></tr></table></figure></p>
+<p>Then: <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(head.val)  <span class="comment"># Will also be 999!</span></span><br></pre></td></tr></table></figure></p>
+<p>Because they’re both referencing the <strong>same node</strong>.</p>
+<hr />
+<h4 id="why-can-we-return-head-at-the-end">🧩 Why can we return
+<code>head</code> at the end?</h4>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">return</span> head</span><br></pre></td></tr></table></figure>
+<p>Even though we changed <code>prev.next</code>, we <strong>never
+reassigned <code>head</code></strong> — it’s still pointing to the first
+node of the linked list.</p>
+<p>What we did inside: - Used <code>slow</code> and <code>fast</code> to
+<strong>move through the list</strong> - Used
+<code>prev.next = slow.next</code> to <strong>cut out the middle
+node</strong></p>
+<p>But <code>head</code> was never modified directly. That’s why we can
+return it safely — it's still the "start" of the list, even if we
+changed its internals.</p>
+<hr />
+<h3 id="think-of-linked-lists-like-this">🎯 Think of Linked Lists Like
+This:</h3>
+<h4 id="visual">Visual:</h4>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">head → <span class="selector-attr">[1]</span> → <span class="selector-attr">[2]</span> → <span class="selector-attr">[3]</span> → <span class="selector-attr">[4]</span></span><br><span class="line">          ↑      ↑</span><br><span class="line">         prev   slow (<span class="selector-tag">to</span> delete <span class="number">3</span>)</span><br></pre></td></tr></table></figure>
+<p>When you do: <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">prev.<span class="built_in">next</span> = slow.<span class="built_in">next</span>  <span class="comment"># remove 3</span></span><br></pre></td></tr></table></figure></p>
+<p>You now have: <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">head → <span class="selector-attr">[1]</span> → <span class="selector-attr">[2]</span> ------→ <span class="selector-attr">[4]</span></span><br></pre></td></tr></table></figure></p>
+<p>And <code>head</code> is still pointing to the first <code>[1]</code>
+node. 💡</p>
+<hr />
+<h3 id="how-to-remember-this">🔁 How to Remember This:</h3>
+<ol type="1">
+<li><strong>Every assignment</strong> (<code>slow = head</code>,
+<code>prev = slow</code>) is a <strong>reference</strong>, not a
+copy.</li>
+<li><strong><code>head</code> never changes</strong>, so it’s safe to
+return.</li>
+<li>When deleting:
+<ul>
+<li>You don’t delete the node itself — just <strong>skip it</strong> by
+reassigning <code>.next</code>.</li>
+</ul></li>
+</ol>
+<hr />
+<h3 id="mental-model">✍️ Mental Model:</h3>
+<blockquote>
+<p>Think of <code>ListNode</code> variables as <strong>fingers pointing
+to nodes</strong>. You move the fingers (<code>slow</code>,
+<code>fast</code>, <code>prev</code>) to navigate and edit. But the
+<strong>original finger</strong> (<code>head</code>) still points at the
+start.</p>
+</blockquote>
+<h3 id="examples">Examples</h3>
+<h4 id="delete-the-middle-node-of-a-linked-list"><a
+target="_blank" rel="noopener" href="https://leetcode.com/problems/delete-the-middle-node-of-a-linked-list/description/?envType=study-plan-v2&amp;envId=leetcode-75">2095.
+Delete the Middle Node of a Linked List</a></h4>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"># Definition for singly-linked list.</span><br><span class="line"># class ListNode:</span><br><span class="line">#     def __init__(self, val=0, next=None):</span><br><span class="line">#         self.val = val</span><br><span class="line">#         self.next = next</span><br><span class="line">class Solution:</span><br><span class="line">    def deleteMiddle(self, head: Optional[ListNode]) -&gt; Optional[ListNode]:</span><br><span class="line">        # slow &amp; faster pointer</span><br><span class="line">        if head.next is None:</span><br><span class="line">            return None</span><br><span class="line"></span><br><span class="line">        slow = head</span><br><span class="line">        fast = head</span><br><span class="line">        prev = None</span><br><span class="line"></span><br><span class="line">        while fast and fast.next:</span><br><span class="line">            prev = slow</span><br><span class="line">            slow = slow.next</span><br><span class="line">            fast = fast.next.next</span><br><span class="line"></span><br><span class="line">        if slow:</span><br><span class="line">            prev.next = slow.next</span><br><span class="line"></span><br><span class="line">        return head</span><br></pre></td></tr></table></figure>
+<h4 id="odd-even-linked-list"><a
+target="_blank" rel="noopener" href="https://leetcode.com/problems/odd-even-linked-list/description/?envType=study-plan-v2&amp;envId=leetcode-75">328.
+Odd Even Linked List</a></h4>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>🗣️ Strong-Hire Explanation Script "To solve this, I used a
+two-pointer strategy — one for odd-indexed nodes and one for
+even-indexed nodes. I conceptually treat the linked list like two
+interleaved sublists — one for all odd nodes and one for even ones.</p>
+<p>As I traverse, I rewire the .next pointers to separate these two
+sequences. The critical insight is understanding that in a linked list,
+updating .next alone is not enough — I also need to move the tail
+pointer forward. I call this the 'tail &gt; follows head' principle:
+once I update odd.next, I must move odd = odd.next so that the tail
+pointer remains accurate for future rewiring.</p>
+<p>After separation, I stitch the end of the odd list to the head of the
+even list, which I preserved before modification. This keeps the
+operation in-place with O(1) space and O(n) time."</p>
+</blockquote>
+<p>🔁 Bonus phrases to mix in:</p>
+<ul>
+<li>“I reused the existing node structure instead of allocating new
+nodes.”</li>
+<li>“The key is safe pointer progression — modifying .next and moving
+the active pointer in tandem.”</li>
+<li>“It’s a pointer-surgery problem with clear sequencing logic.”</li>
+</ul>
+<hr />
 <h2 id="how-to-reverse-a-singly-linked-list">How to reverse a Singly
 Linked List</h2>
 <p>The <code>reverseList</code> function reverses a singly linked list.
 It uses a <strong>dummy node</strong> to simplify the insertion of nodes
-at the beginning of the new list. Here's the function for reference:</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * function ListNode(val, next) &#123;</span></span><br><span class="line"><span class="comment"> *     this.val = (val===undefined ? 0 : val)</span></span><br><span class="line"><span class="comment"> *     this.next = (next===undefined ? null : next)</span></span><br><span class="line"><span class="comment"> * &#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">ListNode</span>&#125; <span class="variable">head</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">ListNode</span>&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">reverseList</span> = (<span class="params">head</span>) =&gt; &#123;</span><br><span class="line">    <span class="keyword">let</span> dummy = <span class="keyword">new</span> <span class="title class_">ListNode</span>()</span><br><span class="line">    <span class="keyword">let</span> new_head = dummy;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (head !== <span class="literal">null</span>) &#123;</span><br><span class="line">        dummy.<span class="property">next</span> = <span class="keyword">new</span> <span class="title class_">ListNode</span>(head.<span class="property">val</span>, dummy.<span class="property">next</span>);</span><br><span class="line">        head = head.<span class="property">next</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> new_head.<span class="property">next</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+at the beginning of the new list. Here's the function for reference: ###
+Solution #### JavaScript <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * function ListNode(val, next) &#123;</span></span><br><span class="line"><span class="comment"> *     this.val = (val===undefined ? 0 : val)</span></span><br><span class="line"><span class="comment"> *     this.next = (next===undefined ? null : next)</span></span><br><span class="line"><span class="comment"> * &#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">ListNode</span>&#125; <span class="variable">head</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">ListNode</span>&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">reverseList</span> = (<span class="params">head</span>) =&gt; &#123;</span><br><span class="line">    <span class="keyword">let</span> dummy = <span class="keyword">new</span> <span class="title class_">ListNode</span>()</span><br><span class="line">    <span class="keyword">let</span> new_head = dummy;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (head !== <span class="literal">null</span>) &#123;</span><br><span class="line">        dummy.<span class="property">next</span> = <span class="keyword">new</span> <span class="title class_">ListNode</span>(head.<span class="property">val</span>, dummy.<span class="property">next</span>);</span><br><span class="line">        head = head.<span class="property">next</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> new_head.<span class="property">next</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<h4 id="python">Python</h4>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"># Definition for singly-linked list.</span><br><span class="line"># class ListNode:</span><br><span class="line">#     def __init__(self, val=0, next=None):</span><br><span class="line">#         self.val = val</span><br><span class="line">#         self.next = next</span><br><span class="line">class Solution:</span><br><span class="line">    def reverseList(self, head: Optional[ListNode]) -&gt; Optional[ListNode]:</span><br><span class="line">        current = head</span><br><span class="line">        previous = None</span><br><span class="line">        next_node = head</span><br><span class="line"></span><br><span class="line">        while current:</span><br><span class="line">            next_node = current.next</span><br><span class="line">            current.next = previous</span><br><span class="line">            previous = current</span><br><span class="line">            current = next_node</span><br><span class="line"></span><br><span class="line">        return previous</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>"This is a classic pointer reversal problem. My strategy is to walk
+through the list with a current pointer and flip the <code>.next</code>
+pointer of each node as I go.</p>
+<p>To avoid losing the rest of the list during this process, I track a
+next_node (like a bookmark to the future), and a previous pointer to
+build the reversed list in-place. The loop progresses as: store the
+future, reverse the link, and move &gt; forward.</p>
+<p>The biggest trap here is forgetting to return the new head. Once
+current becomes None, the previous pointer is left pointing at the new
+head of the reversed list, so that's what we return."</p>
+</blockquote>
+<p>🔁 Bonus phrasing:</p>
+<ul>
+<li>“This is a classic three-pointer walk: prev, current, and
+next_node.”</li>
+<li>“The reversal happens in-place with O(1) space and O(n) time.”</li>
+<li>“The key idea is to flip the arrows one by one without losing access
+to the future nodes.”</li>
+</ul>
+<p>Reversive:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">class Solution:</span><br><span class="line">    def reverseList(self, head: Optional[ListNode]) -&gt; Optional[ListNode]:</span><br><span class="line">        if not head or not head.next:</span><br><span class="line">            return head</span><br><span class="line"></span><br><span class="line">        reversed_head = self.reverseList(head.next)</span><br><span class="line">        head.next.next = head</span><br><span class="line">        head.next = None</span><br><span class="line">        return reversed_head</span><br></pre></td></tr></table></figure>
 <h3 id="key-components">Key Components:</h3>
 <ul>
 <li><strong>Dummy Node (<code>dummy</code>)</strong>: Acts as a
@@ -659,10 +779,10 @@ the reversed list.</p>
       <div class="popular-posts-title"><a href="/data-structure-notebook/" rel="bookmark">Data Structure Notebook</a></div>
     </li>
     <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="/leetcode-notebook/" rel="bookmark">LeetCode Notebook</a></div>
+      <div class="popular-posts-title"><a href="/my-journey-with-hexo-building-a-blog-from-scratch/" rel="bookmark">My Journey with Hexo - Building a Blog from Scratch</a></div>
     </li>
     <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="/my-journey-with-hexo-building-a-blog-from-scratch/" rel="bookmark">My Journey with Hexo - Building a Blog from Scratch</a></div>
+      <div class="popular-posts-title"><a href="/leetcode-notebook/" rel="bookmark">LeetCode Notebook</a></div>
     </li>
   </ul>
 <div class="post-widgets">
@@ -764,27 +884,32 @@ the reversed list.</p>
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#wip-..."><span class="nav-number">1.</span> <span class="nav-text">WIP ...</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#how-to-reverse-a-singly-linked-list"><span class="nav-number">2.</span> <span class="nav-text">How to reverse a Singly
-Linked List</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#key-components"><span class="nav-number">2.1.</span> <span class="nav-text">Key Components:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#step-by-step-visualisation"><span class="nav-number">2.2.</span> <span class="nav-text">Step-by-Step Visualisation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#initial-setup"><span class="nav-number">2.3.</span> <span class="nav-text">Initial Setup</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#iteration-1-processing-node-with-value-1"><span class="nav-number">2.4.</span> <span class="nav-text">Iteration 1:
-Processing Node with Value 1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#iteration-2-processing-node-with-value-2"><span class="nav-number">2.5.</span> <span class="nav-text">Iteration 2:
-Processing Node with Value 2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#iteration-3-processing-node-with-value-3"><span class="nav-number">2.6.</span> <span class="nav-text">Iteration 3:
-Processing Node with Value 3</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#final-step-returning-the-reversed-list"><span class="nav-number">2.7.</span> <span class="nav-text">Final Step: Returning
-the Reversed List</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#detailed-explanation-of-dummy-and-new_head"><span class="nav-number">3.</span> <span class="nav-text">Detailed Explanation
-of dummy and new_head</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#why-use-dummy"><span class="nav-number">3.1.</span> <span class="nav-text">Why Use dummy?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#role-of-new_head"><span class="nav-number">3.2.</span> <span class="nav-text">Role of new_head</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#how-dummy.next-works"><span class="nav-number">3.3.</span> <span class="nav-text">How dummy.next Works</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#visual-summary"><span class="nav-number">4.</span> <span class="nav-text">Visual Summary</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#why-new_head-isnt-updated"><span class="nav-number">5.</span> <span class="nav-text">Why new_head Isn&#39;t
-Updated</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#final-visualisation"><span class="nav-number">6.</span> <span class="nav-text">Final Visualisation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#conclusion"><span class="nav-number">7.</span> <span class="nav-text">Conclusion</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#wip-..."><span class="nav-number">1.</span> <span class="nav-text">WIP ...</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#singlely-linked-list"><span class="nav-number">2.</span> <span class="nav-text">Singlely Linked List</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#understanding-pointer"><span class="nav-number">2.1.</span> <span class="nav-text">Understanding pointer</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#what-does-it-mean-slow-head-or-return-head"><span class="nav-number">2.1.1.</span> <span class="nav-text">🔗 What does it
+mean: slow &#x3D; head or return head?</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#why-can-we-return-head-at-the-end"><span class="nav-number">2.1.2.</span> <span class="nav-text">🧩 Why can we return
+head at the end?</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#think-of-linked-lists-like-this"><span class="nav-number">2.2.</span> <span class="nav-text">🎯 Think of Linked Lists Like
+This:</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#visual"><span class="nav-number">2.2.1.</span> <span class="nav-text">Visual:</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#how-to-remember-this"><span class="nav-number">2.3.</span> <span class="nav-text">🔁 How to Remember This:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mental-model"><span class="nav-number">2.4.</span> <span class="nav-text">✍️ Mental Model:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#examples"><span class="nav-number">2.5.</span> <span class="nav-text">Examples</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#delete-the-middle-node-of-a-linked-list"><span class="nav-number">2.5.1.</span> <span class="nav-text">2095.
+Delete the Middle Node of a Linked List</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#odd-even-linked-list"><span class="nav-number">2.5.2.</span> <span class="nav-text">328.
+Odd Even Linked List</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#how-to-reverse-a-singly-linked-list"><span class="nav-number">3.</span> <span class="nav-text">How to reverse a Singly
+Linked List</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#python"><span class="nav-number">3.0.1.</span> <span class="nav-text">Python</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#key-components"><span class="nav-number">3.1.</span> <span class="nav-text">Key Components:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#step-by-step-visualisation"><span class="nav-number">3.2.</span> <span class="nav-text">Step-by-Step Visualisation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#initial-setup"><span class="nav-number">3.3.</span> <span class="nav-text">Initial Setup</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#iteration-1-processing-node-with-value-1"><span class="nav-number">3.4.</span> <span class="nav-text">Iteration 1:
+Processing Node with Value 1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#iteration-2-processing-node-with-value-2"><span class="nav-number">3.5.</span> <span class="nav-text">Iteration 2:
+Processing Node with Value 2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#iteration-3-processing-node-with-value-3"><span class="nav-number">3.6.</span> <span class="nav-text">Iteration 3:
+Processing Node with Value 3</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#final-step-returning-the-reversed-list"><span class="nav-number">3.7.</span> <span class="nav-text">Final Step: Returning
+the Reversed List</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#detailed-explanation-of-dummy-and-new_head"><span class="nav-number">4.</span> <span class="nav-text">Detailed Explanation
+of dummy and new_head</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#why-use-dummy"><span class="nav-number">4.1.</span> <span class="nav-text">Why Use dummy?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#role-of-new_head"><span class="nav-number">4.2.</span> <span class="nav-text">Role of new_head</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#how-dummy.next-works"><span class="nav-number">4.3.</span> <span class="nav-text">How dummy.next Works</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#visual-summary"><span class="nav-number">5.</span> <span class="nav-text">Visual Summary</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#why-new_head-isnt-updated"><span class="nav-number">6.</span> <span class="nav-text">Why new_head Isn&#39;t
+Updated</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#final-visualisation"><span class="nav-number">7.</span> <span class="nav-text">Final Visualisation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#conclusion"><span class="nav-number">8.</span> <span class="nav-text">Conclusion</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">Jing Hui PANG | 彭競辉 | ENKR</p>
+  <p class="site-author-name" itemprop="name">Jing Hui PANG | 彭竞辉 | ENKR</p>
   <div class="site-description" itemprop="description">Words for my future self—a space for insights and creativity. Along the way, I’ll be journaling my journey, diving into programming tips, beatboxing stories and sharing insights on fitness, music, and more to inspire anyone chasing their own path.</div>
 </div>
 <div class="site-state-wrap motion-element">
   <nav class="site-state">
     <div class="site-state-item site-state-posts">
         <a href="/archives">
-          <span class="site-state-item-count">109</span>
+          <span class="site-state-item-count">111</span>
           <span class="site-state-item-name">Posts</span>
         </a>
     </div>
@@ -930,17 +1055,17 @@ NEW: Readers & Total Views
   <span class="with-love">
     <i class=""></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">Jing Hui PANG | 彭競辉 | ENKR</span>
+  <span class="author" itemprop="copyrightHolder">Jing Hui PANG | 彭竞辉 | ENKR</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="Symbols count total">90k</span>
+    <span title="Symbols count total">92k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">5:27</span>
+    <span title="Reading time total">5:34</span>
 </div>
 
         
