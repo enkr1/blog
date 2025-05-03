@@ -547,11 +547,11 @@
             
             <tag> programming </tag>
             
-            <tag> notes </tag>
-            
             <tag> go </tag>
             
             <tag> golang </tag>
+            
+            <tag> notes </tag>
             
         </tags>
       
@@ -1142,9 +1142,9 @@
           
           <category> Software Engineering </category>
           
-          <category> Web Development </category>
-          
           <category> Notebooks </category>
+          
+          <category> Web Development </category>
           
           <category> Front-end </category>
           
@@ -2432,9 +2432,9 @@
           
           <category> Programming Languages </category>
           
-          <category> Notebooks </category>
-          
           <category> SQL </category>
+          
+          <category> Notebooks </category>
           
       </categories>
       
@@ -2984,9 +2984,9 @@
           
           <category> Programming Languages </category>
           
-          <category> Notebooks </category>
-          
           <category> SQL </category>
+          
+          <category> Notebooks </category>
           
       </categories>
       
@@ -3017,9 +3017,9 @@
           
           <category> Software Engineering </category>
           
-          <category> Web Development </category>
-          
           <category> Notebooks </category>
+          
+          <category> Web Development </category>
           
           <category> Front-end </category>
           
@@ -3638,9 +3638,9 @@
       
         <tags>
             
-            <tag> hexo </tag>
-            
             <tag> programming </tag>
+            
+            <tag> hexo </tag>
             
         </tags>
       
