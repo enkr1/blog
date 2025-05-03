@@ -6,7 +6,7 @@
   <link href="https://blog.enkr1.com/atom.xml" rel="self"/>
   
   <link href="https://blog.enkr1.com/"/>
-  <updated>2025-05-03T11:50:34.372Z</updated>
+  <updated>2025-05-03T11:54:34.969Z</updated>
   <id>https://blog.enkr1.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>System Design Notebook</title>
+    <link href="https://blog.enkr1.com/system-design-notebook/"/>
+    <id>https://blog.enkr1.com/system-design-notebook/</id>
+    <published>2025-05-03T11:53:44.000Z</published>
+    <updated>2025-05-03T11:54:34.969Z</updated>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+      
+      
+    <summary type="html">
+</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Journal: Week 35</title>
@@ -105,16 +126,19 @@ reuniting </summary>
     <link href="https://blog.enkr1.com/reminder-%F0%9F%A4%8D/"/>
     <id>https://blog.enkr1.com/reminder-%F0%9F%A4%8D/</id>
     <published>2025-04-06T18:34:57.000Z</published>
-    <updated>2025-04-06T18:42:31.345Z</updated>
+    <updated>2025-05-03T12:01:27.832Z</updated>
     
-    <content type="html"><![CDATA[<h2id="you-cant-control-the-wind-but-you-can-adjust-your-sail."><strong><em>"youcan't control the wind but you can adjust your sail."</em></strong></h2><blockquote><p>it's not about what happens to you, it's how you react. make a betterchoice. <ahref="https://youtu.be/0lN8NniSXbw?si=mXr_igQakTzMwHeB&amp;t=193">Source</a></p></blockquote>]]></content>
+    <content type="html"><![CDATA[<center><strong><em>"you can't control the wind but you can adjust yoursail."</em></strong></center><center>it's not about what happens to you,</center><center>it's how you react.</center><center>make a better choice.</center><p><ahref="https://youtu.be/0lN8NniSXbw?si=mXr_igQakTzMwHeB&amp;t=193">Source</a></p>]]></content>
     
     
       
       
-    <summary type="html">&lt;h2
-id=&quot;you-cant-control-the-wind-but-you-can-adjust-your-sail.&quot;&gt;&lt;strong&gt;&lt;em&gt;&quot;you
-can&#39;t control the wind but you can adjust your sail.&quot;&lt;/em&gt;</summary>
+    <summary type="html">&lt;center&gt;
+&lt;strong&gt;&lt;em&gt;&quot;you can&#39;t control the wind but you can adjust your
+sail.&quot;&lt;/em&gt;&lt;/strong&gt;
+&lt;/center&gt;
+&lt;center&gt;
+it&#39;s not about what happens</summary>
       
     
     
@@ -294,14 +318,14 @@ found m</summary>
     <link href="https://blog.enkr1.com/why-i-write/"/>
     <id>https://blog.enkr1.com/why-i-write/</id>
     <published>2025-03-18T17:29:43.000Z</published>
-    <updated>2025-03-23T19:33:46.122Z</updated>
+    <updated>2025-05-03T11:56:00.274Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="why-i-started-this-blog">📌 Why I Started This Blog</h2><p>initially, i started writing because i wanted to leave somethingbehind—a way for my grandchildren or anyone curious about who i was toknow me beyond just a name or a few photos (...fr). i wanted to capturemy thoughts, experiences, and journey in life <strong>so that even afteri'm gone, my words will remain</strong>.</p><h2 id="what-i-learned-along-the-way">✍️ What I Learned Along theWay</h2><p>over time, i realised that writing a blog wasn't just about leavingsomething behind—it became one of the best ways for me to reflect.sitting down to write helps me process everything—the ups and downs,what went well, what i could've done better, and how i should moveforward. this habit has become something i look forward to each week, away to slow down and think.</p><h2 id="what-this-blog-covers">💡 What This Blog Covers</h2><p>right now, my blog is <strong>mostly aboutjournaling</strong>—documenting my life and thoughts. but i also sharetechnical insights, knowledge, and lessons i've learned along the way.everything here is a reflection of how my life unfolds, one event at atime.</p><h2 id="how-often-i-write">⏳ How Often I Write</h2><p>i journal <strong>once a week</strong>—well, most of the time. thereare weeks when life gets too hectic, and i go without writing for awhile, but i always come back.</p>]]></content>
+    <content type="html"><![CDATA[<h4 id="why-i-started-this-blog">📌 Why I Started This Blog</h4><p>initially, i started writing because i wanted to leave somethingbehind—a way for my grandchildren or anyone curious about who i was toknow me beyond just a name or a few photos (...fr). i wanted to capturemy thoughts, experiences, and journey in life <strong>so that even afteri'm gone, my words will remain</strong>.</p><h4 id="what-i-learned-along-the-way">✍️ What I Learned Along theWay</h4><p>over time, i realised that writing a blog wasn't just about leavingsomething behind—it became one of the best ways for me to reflect.sitting down to write helps me process everything—the ups and downs,what went well, what i could've done better, and how i should moveforward. this habit has become something i look forward to each week, away to slow down and think.</p><h4 id="what-this-blog-covers">💡 What This Blog Covers</h4><p>right now, my blog is <strong>mostly aboutjournaling</strong>—documenting my life and thoughts. but i also sharetechnical insights, knowledge, and lessons i've learned along the way.everything here is a reflection of how my life unfolds, one event at atime.</p><h4 id="how-often-i-write">⏳ How Often I Write</h4><p>i journal <strong>once a week</strong>—well, most of the time. thereare weeks when life gets too hectic, and i go without writing for awhile, but i always come back.</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;h2 id=&quot;why-i-started-this-blog&quot;&gt;📌 Why I Started This Blog&lt;/h2&gt;
+    <summary type="html">&lt;h4 id=&quot;why-i-started-this-blog&quot;&gt;📌 Why I Started This Blog&lt;/h4&gt;
 &lt;p&gt;initially, i started writing because i wanted to leave something
 behind—</summary>
       
@@ -599,34 +623,6 @@ sunday, a</summary>
     <category term="go" scheme="https://blog.enkr1.com/tags/go/"/>
     
     <category term="golang" scheme="https://blog.enkr1.com/tags/golang/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Journal: Week 24</title>
-    <link href="https://blog.enkr1.com/journal-week-24/"/>
-    <id>https://blog.enkr1.com/journal-week-24/</id>
-    <published>2025-02-03T13:49:36.000Z</published>
-    <updated>2025-04-01T16:44:19.015Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="highlights-of-the-week">✨ Highlights of the Week</h2><p>as i mentioned in my last journal, i went back to JB on saturday forCNY, and honestly, last week was just so much fun! finally got to spendsome quality time with my fam and relatives, catching up properly,talking more, and getting to know a little bit more about everyone. 🥰 idid so much better this time—heehee!</p><p>CNY definitely feels a little less exciting as i grow older 🥺, butno matter what, i still love the vibes. the food, the red packets, themahjong (YES, i finally learnt how to play this year! but honestly... itain't my thing heehee), the gambling (without money for me!), thelaughter, the jokes, the stories, the memories—every little moment thatmakes CNY feel like home. 🧧 even if the excitement fades a little withage, i realise it's never really about the traditions themselves, butthe people we share them with.</p><p>but deep down, watching everyone get older and the kids grow up hitsdifferently now. there's this bittersweet feeling—like i wish i couldfreeze time, just for a little while, and relive those moments again,exactly as they were. but i guess that's just life, right? we grow up,time moves forward, and all we can do is cherish what we have while westill have it. 🥲</p><p>真的，时间啊，</p><p>你怎么不在该慢的时候慢一些...</p><p>你可以在我爱的人身上流失得慢一些么</p><p>but even with these emotions lingering, there were so many beautifulmoments to hold onto. lo hey, fireworks, endless rounds of catching up,and just chilling at home with family—those were easily the best partsof the week. no matter how old i get, these are the moments i'll alwaystreasure. 🎆🧨</p><p>of course, there were some small conflicts here and there, but that'sjust part of family dynamics. misunderstandings, miscommunications—ithappens. but at the end of the day, what matters is that we learn, wegrow, and we appreciate each other more. 🤝 after all, without the lows,how would we ever truly appreciate the highs?</p><h2 id="memories-jan-27-feb-2">🥰 Memories | Jan 27 ~ Feb 2</h2><img data-src="/journal-week-24/IMG_1881.jpeg" class="" title="大扫除！和家人一起挂新年装饰的温馨时刻 🧹✨"><img data-src="/journal-week-24/IMG_1882.jpeg" class="" title="阿姨们亲手打造的 CNY 打卡墙！超有创意！真心觉得很好看"><img data-src="/journal-week-24/IMG_1883.jpeg" class="" title="哈哈哈 很开心 很喜欢这种一起讨论分享意见、看法的时光"><img data-src="/journal-week-24/IMG_1886.jpeg" class="" title="miko 阿姨画的画~ 优秀"><img data-src="/journal-week-24/IMG_1891.jpeg" class="" title="可爱的婆婆"><img data-src="/journal-week-24/IMG_1893.jpeg" class="" title="90%！"><img data-src="/journal-week-24/IMG_1900.jpeg" class="" title="干妈给的压岁红包~ 🧧"><img data-src="/journal-week-24/IMG_1903.jpeg" class="" title="回爷爷家一起吃除夕饭~"><img data-src="/journal-week-24/IMG_1914.jpg" class="" title="看烟花拉！🎇"><img data-src="/journal-week-24/IMG_1931.jpeg" class="" title="爸爸妈妈也给了我们压岁红包~"><img data-src="/journal-week-24/IMG_1944.jpeg" class="" title="放红炮！初一往内炸到外"><img data-src="/journal-week-24/IMG_1950.jpeg" class="" title="耶！耳朵要聋了哈哈哈哈"><img data-src="/journal-week-24/IMG_1952.jpeg" class="" title="满地红！😍 huat ah!!!!!"><img data-src="/journal-week-24/IMG_1953.jpeg" class="" title="爷爷家婆婆还特地做了汤圆 🥺 补上冬至的遗憾 - 因为她知道上个月冬至时我因为出差忙在北京没吃到汤圆... 🥰"><img data-src="/journal-week-24/IMG_1961.jpeg" class="" title="古老的一种炮！叫什么「寿星公」的"><img data-src="/journal-week-24/IMG_1962.jpeg" class="" title="已经是古董鞭炮了"><img data-src="/journal-week-24/IMG_1985.jpeg" class="" title="妈咪爸爸~ ❤️"><img data-src="/journal-week-24/IMG_1998.jpeg" class="" title="fam fam"><img data-src="/journal-week-24/IMG_2018.jpeg" class="" title="和一部分的亲戚大合照！📸 缺席的几位，我们明年要补上！"><img data-src="/journal-week-24/IMG_2292.jpeg" class="" title="晚上去寺庙看舞狮和烟火！"><img data-src="/journal-week-24/IMG_2386.jpeg" class="" title="壮观"><img data-src="/journal-week-24/IMG_2403.jpeg" class="" title="黑咖啡！干！"><img data-src="/journal-week-24/IMG_2404.jpeg" class="" title="爷爷~ ❤️"><img data-src="/journal-week-24/IMG_2405.jpeg" class="" title="吃早餐咯~ 爸爸在我旁边 嘿嘿"><img data-src="/journal-week-24/IMG_2406.jpeg" class="" title="这家 roti prata 绝了... 超级好吃 脆脆又酥酥的"><img data-src="/journal-week-24/IMG_2407.jpeg" class="" title="他家的 menu"><img data-src="/journal-week-24/IMG_2409.jpeg" class="" title="然后就顺路去了寺庙拜拜"><img data-src="/journal-week-24/IMG_2437.jpeg" class="" title="初二开门红！今年要红得彻底~ 🔥 这次炸的真的特别红啊啊啊啊"><img data-src="/journal-week-24/IMG_2446.jpeg" class="" title="woooooo"><img data-src="/journal-week-24/IMG_2461.jpeg" class="" title="然后去婆婆家！"><img data-src="/journal-week-24/IMG_2462.jpeg" class="" title="拜年啦~"><img data-src="/journal-week-24/IMG_2488.jpeg" class="" title="红包 红包 🧧"><img data-src="/journal-week-24/IMG_2621.jpeg" class="" title="终于学了怎么打麻将了！其实也不怎么难 就... 可能图案会比较容易搞错之外，就是个数学概率游戏 🀄️"><img data-src="/journal-week-24/IMG_2641.jpeg" class="" title="看着短短一支仙女棒，在短短的时间内结束她的生命，就为了点亮孩子们的快乐回忆 🥺"><img data-src="/journal-week-24/IMG_2723.jpeg" class="" title="干饭！"><img data-src="/journal-week-24/IMG_2729.jpeg" class="" title="小喝几嘴"><img data-src="/journal-week-24/IMG_2734.jpeg" class="" title="然后我们围起来讨论爷爷桌子下收藏的老照片 🥺 时间你给我走慢点！真的！！"><img data-src="/journal-week-24/IMG_2735.jpeg" class="" title="我真的除了我姐... 其他人我都有点不记得了啊啊啊">]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;highlights-of-the-week&quot;&gt;✨ Highlights of the Week&lt;/h2&gt;
-&lt;p&gt;as i mentioned in my last journal, i went back to JB on saturday for
-CNY, a</summary>
-      
-    
-    
-    
-    <category term="About Me" scheme="https://blog.enkr1.com/categories/About-Me/"/>
-    
-    <category term="Journals" scheme="https://blog.enkr1.com/categories/About-Me/Journals/"/>
-    
-    
-    <category term="journal" scheme="https://blog.enkr1.com/tags/journal/"/>
     
   </entry>
   

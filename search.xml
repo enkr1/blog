@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>System Design Notebook</title>
+      <link href="/system-design-notebook/"/>
+      <url>/system-design-notebook/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Journal: Week 35</title>
       <link href="/journal-week-35/"/>
       <url>/journal-week-35/</url>
@@ -89,7 +102,7 @@
       <link href="/reminder-%F0%9F%A4%8D/"/>
       <url>/reminder-%F0%9F%A4%8D/</url>
       
-        <content type="html"><![CDATA[<h2id="you-cant-control-the-wind-but-you-can-adjust-your-sail."><strong><em>"youcan't control the wind but you can adjust your sail."</em></strong></h2><blockquote><p>it's not about what happens to you, it's how you react. make a betterchoice. <ahref="https://youtu.be/0lN8NniSXbw?si=mXr_igQakTzMwHeB&amp;t=193">Source</a></p></blockquote>]]></content>
+        <content type="html"><![CDATA[<center><strong><em>"you can't control the wind but you can adjust yoursail."</em></strong></center><center>it's not about what happens to you,</center><center>it's how you react.</center><center>make a better choice.</center><p><ahref="https://youtu.be/0lN8NniSXbw?si=mXr_igQakTzMwHeB&amp;t=193">Source</a></p>]]></content>
       
       
       
@@ -257,7 +270,7 @@
       <link href="/why-i-write/"/>
       <url>/why-i-write/</url>
       
-        <content type="html"><![CDATA[<h2 id="why-i-started-this-blog">📌 Why I Started This Blog</h2><p>initially, i started writing because i wanted to leave somethingbehind—a way for my grandchildren or anyone curious about who i was toknow me beyond just a name or a few photos (...fr). i wanted to capturemy thoughts, experiences, and journey in life <strong>so that even afteri'm gone, my words will remain</strong>.</p><h2 id="what-i-learned-along-the-way">✍️ What I Learned Along theWay</h2><p>over time, i realised that writing a blog wasn't just about leavingsomething behind—it became one of the best ways for me to reflect.sitting down to write helps me process everything—the ups and downs,what went well, what i could've done better, and how i should moveforward. this habit has become something i look forward to each week, away to slow down and think.</p><h2 id="what-this-blog-covers">💡 What This Blog Covers</h2><p>right now, my blog is <strong>mostly aboutjournaling</strong>—documenting my life and thoughts. but i also sharetechnical insights, knowledge, and lessons i've learned along the way.everything here is a reflection of how my life unfolds, one event at atime.</p><h2 id="how-often-i-write">⏳ How Often I Write</h2><p>i journal <strong>once a week</strong>—well, most of the time. thereare weeks when life gets too hectic, and i go without writing for awhile, but i always come back.</p>]]></content>
+        <content type="html"><![CDATA[<h4 id="why-i-started-this-blog">📌 Why I Started This Blog</h4><p>initially, i started writing because i wanted to leave somethingbehind—a way for my grandchildren or anyone curious about who i was toknow me beyond just a name or a few photos (...fr). i wanted to capturemy thoughts, experiences, and journey in life <strong>so that even afteri'm gone, my words will remain</strong>.</p><h4 id="what-i-learned-along-the-way">✍️ What I Learned Along theWay</h4><p>over time, i realised that writing a blog wasn't just about leavingsomething behind—it became one of the best ways for me to reflect.sitting down to write helps me process everything—the ups and downs,what went well, what i could've done better, and how i should moveforward. this habit has become something i look forward to each week, away to slow down and think.</p><h4 id="what-this-blog-covers">💡 What This Blog Covers</h4><p>right now, my blog is <strong>mostly aboutjournaling</strong>—documenting my life and thoughts. but i also sharetechnical insights, knowledge, and lessons i've learned along the way.everything here is a reflection of how my life unfolds, one event at atime.</p><h4 id="how-often-i-write">⏳ How Often I Write</h4><p>i journal <strong>once a week</strong>—well, most of the time. thereare weeks when life gets too hectic, and i go without writing for awhile, but i always come back.</p>]]></content>
       
       
       
@@ -1415,9 +1428,9 @@
             
             <tag> leetcode-medium </tag>
             
-            <tag> interview-preparation </tag>
-            
             <tag> dynamic-programming </tag>
+            
+            <tag> interview-preparation </tag>
             
             <tag> top-interview-150 </tag>
             
@@ -1454,9 +1467,9 @@
             
             <tag> leetcode-medium </tag>
             
-            <tag> interview-preparation </tag>
-            
             <tag> dynamic-programming </tag>
+            
+            <tag> interview-preparation </tag>
             
         </tags>
       
@@ -1706,13 +1719,13 @@
             
             <tag> leetcode-medium </tag>
             
+            <tag> dynamic-programming </tag>
+            
             <tag> interview-preparation </tag>
             
             <tag> min-heap </tag>
             
             <tag> priority-queue </tag>
-            
-            <tag> dynamic-programming </tag>
             
         </tags>
       
@@ -2191,8 +2204,6 @@
             
             <tag> leetcode </tag>
             
-            <tag> tiktok </tag>
-            
             <tag> site-reliability-engineer </tag>
             
             <tag> sre </tag>
@@ -2202,6 +2213,8 @@
             <tag> coding-interview </tag>
             
             <tag> job-interview </tag>
+            
+            <tag> tiktok </tag>
             
         </tags>
       
@@ -2232,6 +2245,8 @@
             
             <tag> leetcode </tag>
             
+            <tag> google </tag>
+            
             <tag> site-reliability-engineer </tag>
             
             <tag> sre </tag>
@@ -2242,7 +2257,7 @@
             
             <tag> job-interview </tag>
             
-            <tag> google </tag>
+            <tag> memories 🥺 </tag>
             
         </tags>
       
@@ -2417,9 +2432,9 @@
           
           <category> Programming Languages </category>
           
-          <category> SQL </category>
-          
           <category> Notebooks </category>
+          
+          <category> SQL </category>
           
       </categories>
       
@@ -2778,9 +2793,9 @@
       
         <tags>
             
-            <tag> hobby </tag>
-            
             <tag> beatbox </tag>
+            
+            <tag> hobby </tag>
             
             <tag> stage-performance </tag>
             
@@ -2969,9 +2984,9 @@
           
           <category> Programming Languages </category>
           
-          <category> SQL </category>
-          
           <category> Notebooks </category>
+          
+          <category> SQL </category>
           
       </categories>
       
