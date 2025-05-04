@@ -1,6 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://blog.enkr1.com/journal-week-36/</loc>
+    <lastmod>2025-05-04</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.enkr1.com/journal-week-35/</loc>
+    <lastmod>2025-05-04</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.enkr1.com/system-design-notebook/</loc>
+    <lastmod>2025-05-04</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.enkr1.com/linked-list-notebook/</loc>
+    <lastmod>2025-05-03</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.enkr1.com/journal-week-3/</loc>
+    <lastmod>2025-05-03</lastmod>
+  </url>
+  <url>
     <loc>https://blog.enkr1.com/reminder-%F0%9F%A4%8D/</loc>
     <lastmod>2025-05-03</lastmod>
   </url>
@@ -10,14 +30,6 @@
   </url>
   <url>
     <loc>https://blog.enkr1.com/my-first-ever-interview-experience-software-engineer-general-gcloud-tech-infra-24x7-site-reliability/</loc>
-    <lastmod>2025-05-03</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.enkr1.com/system-design-notebook/</loc>
-    <lastmod>2025-05-03</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.enkr1.com/journal-week-35/</loc>
     <lastmod>2025-05-03</lastmod>
   </url>
   <url>
@@ -34,10 +46,6 @@
   </url>
   <url>
     <loc>https://blog.enkr1.com/python-notebook/</loc>
-    <lastmod>2025-04-12</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.enkr1.com/linked-list-notebook/</loc>
     <lastmod>2025-04-12</lastmod>
   </url>
   <url>
@@ -173,15 +181,11 @@
     <lastmod>2025-03-29</lastmod>
   </url>
   <url>
-    <loc>https://blog.enkr1.com/journal-week-3/</loc>
+    <loc>https://blog.enkr1.com/journal-week-5/</loc>
     <lastmod>2025-03-23</lastmod>
   </url>
   <url>
     <loc>https://blog.enkr1.com/journal-week-4/</loc>
-    <lastmod>2025-03-23</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.enkr1.com/journal-week-5/</loc>
     <lastmod>2025-03-23</lastmod>
   </url>
   <url>
@@ -297,11 +301,11 @@
     <lastmod>2024-10-23</lastmod>
   </url>
   <url>
-    <loc>https://blog.enkr1.com/regression-hypothesis-testing/</loc>
+    <loc>https://blog.enkr1.com/deep-learning/</loc>
     <lastmod>2024-10-23</lastmod>
   </url>
   <url>
-    <loc>https://blog.enkr1.com/deep-learning/</loc>
+    <loc>https://blog.enkr1.com/regression-hypothesis-testing/</loc>
     <lastmod>2024-10-23</lastmod>
   </url>
   <url>
