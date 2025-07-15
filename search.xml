@@ -4,6 +4,60 @@
   
     
     <entry>
+      <title>Journal: Week 38</title>
+      <link href="/journal-week-38/"/>
+      <url>/journal-week-38/</url>
+      
+        <content type="html"><![CDATA[<p>hi readers,</p><p>wow. its been... 2-month since i last journal...</p><p>even tho i know it's gonna be me in the future who will readthis.</p><p>where did i go? what was keeping me busy? i was off for somethinggreat since April, i put myself 200% focus on them, welp.</p><p>to myself: <em>jinghui, u're doing so great, keep it up okay, goodthing's coming</em></p><p>what i did? - made a BIG decision * - was prepping myself for myuniversity programme - have been catching up with the latest AI trend, alot of readings, and a lot of coding!</p><p>i just feel like i have so much to learn, i wish i could buy moretime...</p><p>but yeah, jinghui u've been doing great!!</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> About Me </category>
+          
+          <category> Journals </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> journal </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Journal: Week 37</title>
+      <link href="/journal-week-37/"/>
+      <url>/journal-week-37/</url>
+      
+        <content type="html"><![CDATA[<h2 id="highlights-of-the-week">✨ Highlights of the Week</h2><p>...</p><h2 id="reading-insights">📝 Reading Insights</h2><p>...</p><h2 id="memories">🥰 Memories |</h2><p>...</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> About Me </category>
+          
+          <category> Journals </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> journal </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Journal: Week 36</title>
       <link href="/journal-week-36/"/>
       <url>/journal-week-36/</url>
@@ -35,7 +89,7 @@
       <link href="/system-design-notebook/"/>
       <url>/system-design-notebook/</url>
       
-        <content type="html"><![CDATA[<h2 id="wip">WIP</h2><p>https://assets.bytebytego.com/ByteByteGo-Big-Archive-System-Design-2023.pdf</p>]]></content>
+        <content type="html"><![CDATA[<h2 id="wip">WIP</h2><ul><li><ahref="https://assets.bytebytego.com/ByteByteGo-Big-Archive-System-Design-2023.pdf">SystemDesign - The Big Archive 2023 Edition - ByteByteGo.com</a></li><li><ahref="https://z-library.sk/book/2880632/d655c8/designing-dataintensive-applications-the-big-ideas-behind-reliable-scalable-and-maintainable-sys.html">DesigningData-Intensive Applications: The Big Ideas Behind Reliable, Scalable,and Maintainable Systems</a></li></ul>]]></content>
       
       
       <categories>
@@ -590,11 +644,11 @@
             
             <tag> programming </tag>
             
+            <tag> notes </tag>
+            
             <tag> go </tag>
             
             <tag> golang </tag>
-            
-            <tag> notes </tag>
             
         </tags>
       
@@ -747,9 +801,9 @@
       
       <categories>
           
-          <category> Notebooks </category>
-          
           <category> Personal Development </category>
+          
+          <category> Notebooks </category>
           
           <category> Collections </category>
           
@@ -764,9 +818,9 @@
       
         <tags>
             
-            <tag> reading </tag>
-            
             <tag> ebook </tag>
+            
+            <tag> reading </tag>
             
         </tags>
       
@@ -987,9 +1041,9 @@
       
       <categories>
           
-          <category> Notebooks </category>
-          
           <category> Personal Development </category>
+          
+          <category> Notebooks </category>
           
           <category> Collections </category>
           
@@ -1004,9 +1058,9 @@
       
         <tags>
             
-            <tag> reading </tag>
-            
             <tag> ebook </tag>
+            
+            <tag> reading </tag>
             
         </tags>
       
@@ -1148,9 +1202,9 @@
       
       <categories>
           
-          <category> Notebooks </category>
-          
           <category> Personal Development </category>
+          
+          <category> Notebooks </category>
           
           <category> Collections </category>
           
@@ -1185,9 +1239,9 @@
           
           <category> Software Engineering </category>
           
-          <category> Notebooks </category>
-          
           <category> Web Development </category>
+          
+          <category> Notebooks </category>
           
           <category> Front-end </category>
           
@@ -1471,9 +1525,9 @@
             
             <tag> leetcode-medium </tag>
             
-            <tag> dynamic-programming </tag>
-            
             <tag> interview-preparation </tag>
+            
+            <tag> dynamic-programming </tag>
             
             <tag> top-interview-150 </tag>
             
@@ -1510,9 +1564,9 @@
             
             <tag> leetcode-medium </tag>
             
-            <tag> dynamic-programming </tag>
-            
             <tag> interview-preparation </tag>
+            
+            <tag> dynamic-programming </tag>
             
         </tags>
       
@@ -1762,13 +1816,13 @@
             
             <tag> leetcode-medium </tag>
             
-            <tag> dynamic-programming </tag>
-            
             <tag> interview-preparation </tag>
             
             <tag> min-heap </tag>
             
             <tag> priority-queue </tag>
+            
+            <tag> dynamic-programming </tag>
             
         </tags>
       
@@ -2113,9 +2167,9 @@
             
             <tag> interview-preparation </tag>
             
-            <tag> leetcode-easy </tag>
-            
             <tag> bash </tag>
+            
+            <tag> leetcode-easy </tag>
             
         </tags>
       
@@ -2247,6 +2301,8 @@
             
             <tag> leetcode </tag>
             
+            <tag> tiktok </tag>
+            
             <tag> site-reliability-engineer </tag>
             
             <tag> sre </tag>
@@ -2256,8 +2312,6 @@
             <tag> coding-interview </tag>
             
             <tag> job-interview </tag>
-            
-            <tag> tiktok </tag>
             
         </tags>
       
@@ -2288,8 +2342,6 @@
             
             <tag> leetcode </tag>
             
-            <tag> google </tag>
-            
             <tag> site-reliability-engineer </tag>
             
             <tag> sre </tag>
@@ -2299,6 +2351,8 @@
             <tag> coding-interview </tag>
             
             <tag> job-interview </tag>
+            
+            <tag> google </tag>
             
             <tag> memories 🥺 </tag>
             
@@ -2629,9 +2683,9 @@
           
           <category> Software Engineering </category>
           
-          <category> Notebooks </category>
-          
           <category> Software Engineering Best Practices </category>
+          
+          <category> Notebooks </category>
           
           <category> Career Development </category>
           
@@ -2730,9 +2784,9 @@
           
           <category> Software Engineering </category>
           
-          <category> Notebooks </category>
-          
           <category> Computer Networking </category>
+          
+          <category> Notebooks </category>
           
       </categories>
       
@@ -2757,9 +2811,9 @@
       
       <categories>
           
-          <category> Notebooks </category>
-          
           <category> Personal Development </category>
+          
+          <category> Notebooks </category>
           
           <category> Collections </category>
           
@@ -2774,9 +2828,9 @@
       
         <tags>
             
-            <tag> physical-book </tag>
-            
             <tag> reading </tag>
+            
+            <tag> physical-book </tag>
             
         </tags>
       
@@ -3060,9 +3114,9 @@
           
           <category> Software Engineering </category>
           
-          <category> Notebooks </category>
-          
           <category> Web Development </category>
+          
+          <category> Notebooks </category>
           
           <category> Front-end </category>
           
@@ -3167,9 +3221,9 @@
           
           <category> Software Engineering </category>
           
-          <category> Notebooks </category>
-          
           <category> Personal Development </category>
+          
+          <category> Notebooks </category>
           
           <category> Online Courses </category>
           
@@ -3241,9 +3295,9 @@
           
           <category> Software Engineering </category>
           
-          <category> Notebooks </category>
-          
           <category> Personal Development </category>
+          
+          <category> Notebooks </category>
           
           <category> Online Courses </category>
           
@@ -3284,9 +3338,9 @@
           
           <category> Software Engineering </category>
           
-          <category> Notebooks </category>
-          
           <category> Personal Development </category>
+          
+          <category> Notebooks </category>
           
           <category> Online Courses </category>
           
@@ -3327,9 +3381,9 @@
           
           <category> Software Engineering </category>
           
-          <category> Notebooks </category>
-          
           <category> Personal Development </category>
+          
+          <category> Notebooks </category>
           
           <category> Online Courses </category>
           
@@ -3370,9 +3424,9 @@
           
           <category> Software Engineering </category>
           
-          <category> Notebooks </category>
-          
           <category> Personal Development </category>
+          
+          <category> Notebooks </category>
           
           <category> Online Courses </category>
           
@@ -3407,9 +3461,9 @@
           
           <category> Software Engineering </category>
           
-          <category> Notebooks </category>
-          
           <category> Personal Development </category>
+          
+          <category> Notebooks </category>
           
           <category> Online Courses </category>
           
@@ -3450,9 +3504,9 @@
           
           <category> Software Engineering </category>
           
-          <category> Notebooks </category>
-          
           <category> Personal Development </category>
+          
+          <category> Notebooks </category>
           
           <category> Online Courses </category>
           
@@ -3493,9 +3547,9 @@
           
           <category> Software Engineering </category>
           
-          <category> Notebooks </category>
-          
           <category> Personal Development </category>
+          
+          <category> Notebooks </category>
           
           <category> Online Courses </category>
           
@@ -3637,9 +3691,9 @@
       
       <categories>
           
-          <category> Notebooks </category>
-          
           <category> Personal Development </category>
+          
+          <category> Notebooks </category>
           
           <category> Online Courses </category>
           
