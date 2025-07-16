@@ -4,38 +4,11 @@
   
     
     <entry>
-      <title>Journal: Week 38</title>
-      <link href="/journal-week-38/"/>
-      <url>/journal-week-38/</url>
-      
-        <content type="html"><![CDATA[<p>hi readers,</p><p>wow. its been... 2-month since i last journal...</p><p>even tho i know it's gonna be me in the future who will readthis.</p><p>where did i go? what was keeping me busy? i was off for somethinggreat since April, i put myself 200% focus on them, welp.</p><p>to myself: <em>jinghui, u're doing so great, keep it up okay, goodthing's coming</em></p><p>what i did? - made a BIG decision * - was prepping myself for myuniversity programme - have been catching up with the latest AI trend, alot of readings, and a lot of coding!</p><p>i just feel like i have so much to learn, i wish i could buy moretime...</p><p>but yeah, jinghui u've been doing great!!</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> About Me </category>
-          
-          <category> Journals </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> journal </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Journal: Week 37</title>
       <link href="/journal-week-37/"/>
       <url>/journal-week-37/</url>
       
-        <content type="html"><![CDATA[<h2 id="highlights-of-the-week">✨ Highlights of the Week</h2><p>...</p><h2 id="reading-insights">📝 Reading Insights</h2><p>...</p><h2 id="memories">🥰 Memories |</h2><p>...</p>]]></content>
+        <content type="html"><![CDATA[<p>hi readers,</p><p>wow. it's been... more than 2 months since my last journal.</p><p>definitely feels weird to not write anything, really weird.</p><p>even though i know-it's probably just me who'll be reading this inthe future. and maybe that's enough.</p><p>where did i go? what's been keeping me busy?</p><p>i disappeared for something big, something great. since around marchor april, i've been pouring 200% of my focus into it.</p><p>and to myself:</p><blockquote><p>jinghui, you’re doing amazing. keep going - good things are on theirway.</p></blockquote><p>what i've been up to:</p><ol type="1"><li>made a <strong>BIG decision</strong></li><li>been preparing for my upcoming <strong>universityprogramme</strong></li><li>catching up with the latest <strong>AI trends</strong>—lots ofreadings, lots of coding!</li></ol><p>i just feel like... there's still so much to learn.</p><p>sometimes, i really wish i could buy myself more time. ⏳</p><p>but hey-</p><blockquote><p>you've been doing great, jinghui.</p><p>keep growing. keep showing up.</p><p>and don't stop believing in yourself. 🌱</p></blockquote>]]></content>
       
       
       <categories>
@@ -801,9 +774,9 @@
       
       <categories>
           
-          <category> Personal Development </category>
-          
           <category> Notebooks </category>
+          
+          <category> Personal Development </category>
           
           <category> Collections </category>
           
@@ -1041,9 +1014,9 @@
       
       <categories>
           
-          <category> Personal Development </category>
-          
           <category> Notebooks </category>
+          
+          <category> Personal Development </category>
           
           <category> Collections </category>
           
@@ -1202,9 +1175,9 @@
       
       <categories>
           
-          <category> Personal Development </category>
-          
           <category> Notebooks </category>
+          
+          <category> Personal Development </category>
           
           <category> Collections </category>
           
@@ -1239,9 +1212,9 @@
           
           <category> Software Engineering </category>
           
-          <category> Web Development </category>
-          
           <category> Notebooks </category>
+          
+          <category> Web Development </category>
           
           <category> Front-end </category>
           
@@ -1318,9 +1291,9 @@
             
             <tag> dns </tag>
             
-            <tag> hexo </tag>
-            
             <tag> github-pages </tag>
+            
+            <tag> hexo </tag>
             
         </tags>
       
@@ -1519,15 +1492,15 @@
             
             <tag> algorithm </tag>
             
-            <tag> leetcode </tag>
-            
             <tag> javascript </tag>
+            
+            <tag> leetcode </tag>
             
             <tag> leetcode-medium </tag>
             
-            <tag> interview-preparation </tag>
-            
             <tag> dynamic-programming </tag>
+            
+            <tag> interview-preparation </tag>
             
             <tag> top-interview-150 </tag>
             
@@ -1558,15 +1531,15 @@
             
             <tag> algorithm </tag>
             
-            <tag> leetcode </tag>
-            
             <tag> javascript </tag>
+            
+            <tag> leetcode </tag>
             
             <tag> leetcode-medium </tag>
             
-            <tag> interview-preparation </tag>
-            
             <tag> dynamic-programming </tag>
+            
+            <tag> interview-preparation </tag>
             
         </tags>
       
@@ -1651,9 +1624,9 @@
             
             <tag> algorithm </tag>
             
-            <tag> leetcode </tag>
-            
             <tag> javascript </tag>
+            
+            <tag> leetcode </tag>
             
             <tag> interview-preparation </tag>
             
@@ -1810,19 +1783,19 @@
             
             <tag> algorithm </tag>
             
-            <tag> leetcode </tag>
-            
             <tag> javascript </tag>
             
+            <tag> leetcode </tag>
+            
             <tag> leetcode-medium </tag>
+            
+            <tag> dynamic-programming </tag>
             
             <tag> interview-preparation </tag>
             
             <tag> min-heap </tag>
             
             <tag> priority-queue </tag>
-            
-            <tag> dynamic-programming </tag>
             
         </tags>
       
@@ -1851,9 +1824,9 @@
             
             <tag> algorithm </tag>
             
-            <tag> leetcode </tag>
-            
             <tag> javascript </tag>
+            
+            <tag> leetcode </tag>
             
             <tag> interview-preparation </tag>
             
@@ -1971,9 +1944,9 @@
             
             <tag> dns </tag>
             
-            <tag> hexo </tag>
-            
             <tag> github-pages </tag>
+            
+            <tag> hexo </tag>
             
         </tags>
       
@@ -2120,9 +2093,9 @@
             
             <tag> algorithm </tag>
             
-            <tag> leetcode </tag>
-            
             <tag> javascript </tag>
+            
+            <tag> leetcode </tag>
             
             <tag> leetcode-medium </tag>
             
@@ -2167,9 +2140,9 @@
             
             <tag> interview-preparation </tag>
             
-            <tag> bash </tag>
-            
             <tag> leetcode-easy </tag>
+            
+            <tag> bash </tag>
             
         </tags>
       
@@ -2301,8 +2274,6 @@
             
             <tag> leetcode </tag>
             
-            <tag> tiktok </tag>
-            
             <tag> site-reliability-engineer </tag>
             
             <tag> sre </tag>
@@ -2312,6 +2283,8 @@
             <tag> coding-interview </tag>
             
             <tag> job-interview </tag>
+            
+            <tag> tiktok </tag>
             
         </tags>
       
@@ -2342,6 +2315,8 @@
             
             <tag> leetcode </tag>
             
+            <tag> google </tag>
+            
             <tag> site-reliability-engineer </tag>
             
             <tag> sre </tag>
@@ -2351,8 +2326,6 @@
             <tag> coding-interview </tag>
             
             <tag> job-interview </tag>
-            
-            <tag> google </tag>
             
             <tag> memories 🥺 </tag>
             
@@ -2683,9 +2656,9 @@
           
           <category> Software Engineering </category>
           
-          <category> Software Engineering Best Practices </category>
-          
           <category> Notebooks </category>
+          
+          <category> Software Engineering Best Practices </category>
           
           <category> Career Development </category>
           
@@ -2784,9 +2757,9 @@
           
           <category> Software Engineering </category>
           
-          <category> Computer Networking </category>
-          
           <category> Notebooks </category>
+          
+          <category> Computer Networking </category>
           
       </categories>
       
@@ -2811,9 +2784,9 @@
       
       <categories>
           
-          <category> Personal Development </category>
-          
           <category> Notebooks </category>
+          
+          <category> Personal Development </category>
           
           <category> Collections </category>
           
@@ -2890,9 +2863,9 @@
       
         <tags>
             
-            <tag> beatbox </tag>
-            
             <tag> hobby </tag>
+            
+            <tag> beatbox </tag>
             
             <tag> stage-performance </tag>
             
@@ -3114,9 +3087,9 @@
           
           <category> Software Engineering </category>
           
-          <category> Web Development </category>
-          
           <category> Notebooks </category>
+          
+          <category> Web Development </category>
           
           <category> Front-end </category>
           
@@ -3221,9 +3194,9 @@
           
           <category> Software Engineering </category>
           
-          <category> Personal Development </category>
-          
           <category> Notebooks </category>
+          
+          <category> Personal Development </category>
           
           <category> Online Courses </category>
           
@@ -3295,9 +3268,9 @@
           
           <category> Software Engineering </category>
           
-          <category> Personal Development </category>
-          
           <category> Notebooks </category>
+          
+          <category> Personal Development </category>
           
           <category> Online Courses </category>
           
@@ -3338,9 +3311,9 @@
           
           <category> Software Engineering </category>
           
-          <category> Personal Development </category>
-          
           <category> Notebooks </category>
+          
+          <category> Personal Development </category>
           
           <category> Online Courses </category>
           
@@ -3381,9 +3354,9 @@
           
           <category> Software Engineering </category>
           
-          <category> Personal Development </category>
-          
           <category> Notebooks </category>
+          
+          <category> Personal Development </category>
           
           <category> Online Courses </category>
           
@@ -3424,9 +3397,9 @@
           
           <category> Software Engineering </category>
           
-          <category> Personal Development </category>
-          
           <category> Notebooks </category>
+          
+          <category> Personal Development </category>
           
           <category> Online Courses </category>
           
@@ -3461,9 +3434,9 @@
           
           <category> Software Engineering </category>
           
-          <category> Personal Development </category>
-          
           <category> Notebooks </category>
+          
+          <category> Personal Development </category>
           
           <category> Online Courses </category>
           
@@ -3504,9 +3477,9 @@
           
           <category> Software Engineering </category>
           
-          <category> Personal Development </category>
-          
           <category> Notebooks </category>
+          
+          <category> Personal Development </category>
           
           <category> Online Courses </category>
           
@@ -3547,9 +3520,9 @@
           
           <category> Software Engineering </category>
           
-          <category> Personal Development </category>
-          
           <category> Notebooks </category>
+          
+          <category> Personal Development </category>
           
           <category> Online Courses </category>
           
@@ -3691,9 +3664,9 @@
       
       <categories>
           
-          <category> Personal Development </category>
-          
           <category> Notebooks </category>
+          
+          <category> Personal Development </category>
           
           <category> Online Courses </category>
           
@@ -3735,9 +3708,9 @@
       
         <tags>
             
-            <tag> hexo </tag>
-            
             <tag> programming </tag>
+            
+            <tag> hexo </tag>
             
         </tags>
       
