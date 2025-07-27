@@ -1,16 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://blog.enkr1.com/journal-week-37/</loc>
-    <lastmod>2025-07-16</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.enkr1.com/system-design-notebook/</loc>
-    <lastmod>2025-05-20</lastmod>
+    <loc>https://blog.enkr1.com/journal-week-38/</loc>
+    <lastmod>2025-07-27</lastmod>
   </url>
   <url>
     <loc>https://blog.enkr1.com/journal-week-36/</loc>
-    <lastmod>2025-05-04</lastmod>
+    <lastmod>2025-07-27</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.enkr1.com/system-design-notebook/</loc>
+    <lastmod>2025-07-16</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.enkr1.com/my-journey-in-elixir-phoenix/</loc>
+    <lastmod>2025-07-16</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.enkr1.com/shoutout-to-stellar-hexo-blogs/</loc>
+    <lastmod>2025-07-16</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.enkr1.com/journal-week-37/</loc>
+    <lastmod>2025-07-16</lastmod>
   </url>
   <url>
     <loc>https://blog.enkr1.com/journal-week-35/</loc>
@@ -197,10 +209,6 @@
     <lastmod>2025-03-23</lastmod>
   </url>
   <url>
-    <loc>https://blog.enkr1.com/shoutout-to-stellar-hexo-blogs/</loc>
-    <lastmod>2025-03-13</lastmod>
-  </url>
-  <url>
     <loc>https://blog.enkr1.com/scss-css-notebook/</loc>
     <lastmod>2025-02-22</lastmod>
   </url>
@@ -305,19 +313,19 @@
     <lastmod>2024-10-23</lastmod>
   </url>
   <url>
-    <loc>https://blog.enkr1.com/regression-prediction/</loc>
-    <lastmod>2024-10-23</lastmod>
-  </url>
-  <url>
     <loc>https://blog.enkr1.com/deep-learning/</loc>
     <lastmod>2024-10-23</lastmod>
   </url>
   <url>
-    <loc>https://blog.enkr1.com/regression-hypothesis-testing/</loc>
+    <loc>https://blog.enkr1.com/regression-prediction/</loc>
     <lastmod>2024-10-23</lastmod>
   </url>
   <url>
     <loc>https://blog.enkr1.com/elixir-notebook/</loc>
+    <lastmod>2024-10-23</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.enkr1.com/regression-hypothesis-testing/</loc>
     <lastmod>2024-10-23</lastmod>
   </url>
   <url>
@@ -333,11 +341,11 @@
     <lastmod>2024-10-23</lastmod>
   </url>
   <url>
-    <loc>https://blog.enkr1.com/foundations-of-data-science-navigating-through-inferential-statistics/</loc>
+    <loc>https://blog.enkr1.com/making-sense-of-unstructured-data-a-dive-into-clustering-and-dimensionality-reduction/</loc>
     <lastmod>2024-10-23</lastmod>
   </url>
   <url>
-    <loc>https://blog.enkr1.com/making-sense-of-unstructured-data-a-dive-into-clustering-and-dimensionality-reduction/</loc>
+    <loc>https://blog.enkr1.com/foundations-of-data-science-navigating-through-inferential-statistics/</loc>
     <lastmod>2024-10-23</lastmod>
   </url>
   <url>
@@ -451,10 +459,6 @@
   <url>
     <loc>https://blog.enkr1.com/kicking-off-my-ml-ai-journey-with-mit-idss-and-great-learning/</loc>
     <lastmod>2024-05-22</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.enkr1.com/my-journey-in-elixir-phoenix/</loc>
-    <lastmod>2024-05-20</lastmod>
   </url>
   <url>
     <loc>https://blog.enkr1.com/understanding-programming-styles-declarative-vs-imperative/</loc>
