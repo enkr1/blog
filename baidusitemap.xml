@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://blog.enkr1.com/journal-week-39/</loc>
+    <lastmod>2025-08-03</lastmod>
+  </url>
+  <url>
     <loc>https://blog.enkr1.com/journal-week-38/</loc>
+    <lastmod>2025-08-03</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.enkr1.com/nus-bit-notebook/</loc>
     <lastmod>2025-07-27</lastmod>
   </url>
   <url>
@@ -313,7 +321,7 @@
     <lastmod>2024-10-23</lastmod>
   </url>
   <url>
-    <loc>https://blog.enkr1.com/deep-learning/</loc>
+    <loc>https://blog.enkr1.com/regression-hypothesis-testing/</loc>
     <lastmod>2024-10-23</lastmod>
   </url>
   <url>
@@ -321,11 +329,11 @@
     <lastmod>2024-10-23</lastmod>
   </url>
   <url>
-    <loc>https://blog.enkr1.com/elixir-notebook/</loc>
+    <loc>https://blog.enkr1.com/deep-learning/</loc>
     <lastmod>2024-10-23</lastmod>
   </url>
   <url>
-    <loc>https://blog.enkr1.com/regression-hypothesis-testing/</loc>
+    <loc>https://blog.enkr1.com/elixir-notebook/</loc>
     <lastmod>2024-10-23</lastmod>
   </url>
   <url>
@@ -337,7 +345,7 @@
     <lastmod>2024-10-23</lastmod>
   </url>
   <url>
-    <loc>https://blog.enkr1.com/pre-work-introduction-to-data-science-ai/</loc>
+    <loc>https://blog.enkr1.com/foundations-of-data-science-navigating-through-inferential-statistics/</loc>
     <lastmod>2024-10-23</lastmod>
   </url>
   <url>
@@ -345,7 +353,7 @@
     <lastmod>2024-10-23</lastmod>
   </url>
   <url>
-    <loc>https://blog.enkr1.com/foundations-of-data-science-navigating-through-inferential-statistics/</loc>
+    <loc>https://blog.enkr1.com/pre-work-introduction-to-data-science-ai/</loc>
     <lastmod>2024-10-23</lastmod>
   </url>
   <url>
