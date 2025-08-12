@@ -985,7 +985,7 @@ NOTE: created_at
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: Wednesday, 16 July 2025 18:14:17 PM 18:14:17 PM" itemprop="dateModified" datetime="2025-07-16T18:14:17+08:00">Wednesday, 16 July 2025 18:14:17 PM</time>
+                <time title="Modified: Monday, 11 August 2025 05:47:26 AM 05:47:26 AM" itemprop="dateModified" datetime="2025-08-11T05:47:26+08:00">Monday, 11 August 2025 05:47:26 AM</time>
               </span>
 
             <span class="post-meta-item">
@@ -1022,7 +1022,7 @@ NOTE: word count
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-              <span>39</span>
+              <span>1.1k</span>
             </span>
 
 <!--
@@ -1032,7 +1032,7 @@ NOTE: reading time
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
-              <span>1 mins.</span>
+              <span>4 mins.</span>
             </span>
 
 
@@ -1078,6 +1078,206 @@ NOTE: views count
 
       
           <h2 id="wip">WIP</h2>
+<p>. . .</p>
+<h2 id="system-design-one-pager-print-this">System-Design One-Pager
+(print this)</h2>
+<p><strong>Trigger mantra:</strong> <strong>SPEC → NUMBERS → FLOW →
+FAILURE → TRADE-OFFS → ROADMAP.</strong></p>
+<p><strong>90-second opening script (memorise):</strong></p>
+<ol type="1">
+<li>“Goal: <em>X delivers Y to Z users.</em> Non-goals: A/B. Success =
+p95 latency ≤ L, freshness ≤ F, cost ≤ C.”</li>
+<li>“Scale assumptions: QPS, payload size S, daily writes/reads, growth
+G.”</li>
+<li>“Critical path: request → validate → write/read → persist → respond
+(happy path first).”</li>
+<li>“State model + data model at a glance (entities, keys, hot
+partitions).”</li>
+<li>“We’ll design for 1 failure now (idempotency + retries), and evolve
+here (roadmap).”</li>
+</ol>
+<p><strong>Back-of-envelope (fill in fast):</strong></p>
+<ul>
+<li><strong>Throughput:</strong> <code>req/s × payload</code> →
+network/CPU budget.</li>
+<li><strong>Storage:</strong>
+<code>daily writes × avg size × retention</code> (+ replication
+factor).</li>
+<li><strong>Latency budget:</strong> front-end <code>≤50ms</code>, edge
+<code>≤20ms</code>, core read/write <code>≤120ms</code>, queue/async
+<code>≤1–5s</code> (MVP).</li>
+<li><strong>Costs:</strong> biggest 2 line items (storage +
+egress/compute); name them.</li>
+</ul>
+<p><strong>Data model checklist:</strong></p>
+<ul>
+<li>Entities &amp; keys (avoid hot keys; include secondary
+indexes).</li>
+<li>Partitioning/sharding rule (what’s the shard key and why).</li>
+<li><strong>State machine</strong> for long-running work (e.g.,
+<code>PENDING → RUNNING → RETRYING → SUCCEEDED|FAILED(DLQ)</code>).</li>
+</ul>
+<p><strong>Data-flow narrative (say out loud, in order):</strong></p>
+<ul>
+<li>Ingress format &amp; size → validation → write path → derived data
+(indexes/vectors) → read path &amp; ranking.</li>
+<li>Idempotency key + retry policy on every write/async step.</li>
+<li>Exactly which store each read hits (and why).</li>
+</ul>
+<p><strong>Failure inventory (pick 2 now, note the rest):</strong></p>
+<ul>
+<li>Duplicate requests; partial writes; queue poison message; downstream
+timeout; hot partition.</li>
+<li>Controls: idempotency keys, exponential backoff, DLQ with alert,
+circuit breaker, TTLs, SLO + error budget.</li>
+</ul>
+<p><strong>Trade-off playbook (2 pros/2 cons, commit):</strong></p>
+<ul>
+<li>SQL vs NoSQL; stream vs batch; cache vs no cache; single region vs
+multi.</li>
+<li>Name what you <em>give up</em> and how you’d reverse the decision
+later.</li>
+</ul>
+<p><strong>Roadmap ladder (close strong):</strong></p>
+<ul>
+<li><strong>MVP (90 days):</strong> 1 region, 1 DB, 1 queue,
+observability baseline.</li>
+<li><strong>Next 10×:</strong> read replicas/ANN index, cache for N hot
+queries, backfill job, multi-AZ/region, privacy/PII pipeline.</li>
+</ul>
+<p><strong>Security &amp; compliance in one breath:</strong> AuthN (JWT)
+→ AuthZ (tenant/resource checks) → data segregation → PII handling
+(hash/tokenise, deletion path) → audit logs.</p>
+<hr />
+<h2 id="why-this-beats-your-synthesis-attempt">Why this beats your
+Synthesis attempt</h2>
+<ul>
+<li>You <em>start</em> with the <strong>critical path</strong> and
+<strong>state machine</strong>, not gateways/caches/ES.</li>
+<li>You limit primitives (one DB + one queue) until reads prove
+otherwise.</li>
+<li>Every box exposes <strong>input, output, SLO, and failure
+behaviour</strong>—no black boxes.</li>
+<li>You anchor with <strong>numbers</strong> so choices feel
+intentional, not ornamental.</li>
+</ul>
+<hr />
+<h2 id="deep-keys-mental-models-you-can-reuse">Deep keys (mental models
+you can reuse)</h2>
+<ul>
+<li><strong>Two-Store Rule (MVP):</strong> one blob store + one
+OLTP/OLAP (or OLTP+pgvector). Add ES/Redis only when a <em>measured</em>
+query needs it.</li>
+<li><strong>One-Queue Rule:</strong> one durable queue for long tasks;
+state machine per job; retries + DLQ from day 1.</li>
+<li><strong>Happy-Path First:</strong> prove <em>upload → process →
+search</em> (or analogous) end-to-end before any embellishment.</li>
+<li><strong>Talk in Deltas:</strong> each evolution step should change
+exactly one constraint (throughput, latency, durability, cost).</li>
+<li><strong>Hot-spot Radar:</strong> say where hot keys and fan-outs
+will occur and how you’ll detect them (metrics &amp; sample
+alerts).</li>
+<li><strong>Observability trinity:</strong> logs with correlation IDs,
+RED/USE metrics, 1–2 SLOs with error budgets.</li>
+</ul>
+<hr />
+<h2 id="reflection-prompts-turn-this-sting-into-skill">Reflection
+prompts (turn this sting into skill)</h2>
+<p>Answer these in writing—short bullets:</p>
+<ol type="1">
+<li><strong>Priority drift:</strong> When under pressure, what made me
+reach for “shiny” components before the core flow? How will I catch that
+impulse (e.g., <em>say the 90-sec script before touching the
+marker</em>)?</li>
+<li><strong>Narrative gap:</strong> Could I explain the entire data path
+in <strong>60 seconds without diagrams</strong>? If not, tighten
+it.</li>
+<li><strong>State clarity:</strong> Where did I fail to name states and
+transitions? Rewrite them as a table.</li>
+<li><strong>Numbers poverty:</strong> Which number did I avoid stating
+(traffic, size, cost)? Why? Add a default baseline toolkit (below).</li>
+<li><strong>Failure courage:</strong> Which failure mode do I habitually
+ignore? Design one control and one alert for it.</li>
+<li><strong>Life parallel:</strong> In your HRBP project, scope crept
+and you optimised mid-UAT. What’s the SD analogue? → <em>Lock MVP spine;
+create a “parking lot” for nice-to-haves; only pull from it after the
+spine stands.</em></li>
+</ol>
+<hr />
+<h2 id="baseline-numbers-toolkit-memorise-reasonable-defaults">Baseline
+numbers toolkit (memorise reasonable defaults)</h2>
+<ul>
+<li>Payloads: JSON request 1–5 KB; doc text page 2–4 KB; image 200–500
+KB.</li>
+<li>Throughput tiers: prototype 10 rps; MVP 100 rps; scale target 1k
+rps.</li>
+<li>Storage: plain text ~1 byte/char; embed vector 768 floats ≈ 3
+KB.</li>
+<li>Queue: Pub/Sub/Kafka consumer stable at O(100–1k msg/s) per worker
+with I/O-bound tasks.</li>
+<li>Latency: network hop 5–20 ms in-region; disk read 1–10 ms SSD;
+ANN/vector search 10–80 ms per 10k vectors (ballpark).</li>
+<li>Cost: egress is often the silent killer; cache prevents egress, not
+just latency.</li>
+</ul>
+<hr />
+<h2
+id="red-team-yourself-10-interrupts-an-interviewer-might-use">Red-team
+yourself (10 interrupts an interviewer might use)</h2>
+<ol type="1">
+<li>“Walk the happy path, no optimisations.”</li>
+<li>“Point to each arrow and tell me payload &amp; size.”</li>
+<li>“What’s the shard key? Why won’t it hot-spot?”</li>
+<li>“If this downstream is down for 10 minutes?”</li>
+<li>“How do I retry safely without dup effects?”</li>
+<li>“Which read hits which index?”</li>
+<li>“Show me the job state machine.”</li>
+<li>“Where do you log correlation IDs?”</li>
+<li>“What’s your single biggest cost line?”</li>
+<li>“How do you roll back a bad deploy?”</li>
+</ol>
+<hr />
+<h2 id="practice-protocol-repeat-weekly">Practice protocol (repeat
+weekly)</h2>
+<ul>
+<li><strong>5-min warm-up:</strong> recite the 90-sec opening, draw the
+state machine.</li>
+<li><strong>15-min drill:</strong> pick any common SD prompt (feed, rate
+limiter, search, chat). Do: numbers → flow → failures.</li>
+<li><strong>10-min red-team:</strong> have a friend interrupt with the
+10 questions above.</li>
+<li><strong>Post-mortem note (3 bullets):</strong> what I skipped, what
+I over-engineered, one number I’ll bring next time.</li>
+</ul>
+<hr />
+<h2 id="your-cheat-sheet-tuned-copypaste">Your cheat sheet, tuned
+(copy/paste)</h2>
+<p><strong>System-Design Mistakes — Pocket Checklist</strong></p>
+<ol type="1">
+<li><strong>Vague spec →</strong> Write <strong>goal, non-goals,
+SLOs</strong>.</li>
+<li><strong>No numbers →</strong> Quick calc: <strong>QPS, size,
+storage, latency, cost</strong>.</li>
+<li><strong>Messy diagram →</strong> Boxes, <strong>numbered
+arrows</strong>, legend; pass-1 &lt; 2 min.</li>
+<li><strong>Silent schema →</strong> Entities, keys,
+<strong>indexes</strong>, hot-key risk.</li>
+<li><strong>No state machine →</strong> Jobs:
+<strong>PENDING→RUNNING→RETRYING→SUCCEEDED|FAILED(DLQ)</strong>.</li>
+<li><strong>No data-flow story →</strong> Trace <strong>one
+request</strong> with format/size/retry/idempotency.</li>
+<li><strong>Ignoring failures →</strong> Choose 2, add <strong>backoff,
+DLQ, circuit breaker</strong>, runbook trigger.</li>
+<li><strong>Zero trade-offs →</strong> For each big choice, <strong>2
+pros/2 cons + reversal path</strong>.</li>
+<li><strong>No roadmap →</strong> <strong>MVP spine</strong> now; next
+10× bottlenecks later.</li>
+<li><strong>Security &amp; cost blindspot →</strong> AuthN/Z, PII path,
+<strong>top 2 cost drivers</strong>.</li>
+</ol>
+<p><strong>Mantra:</strong> <strong>SPEC → NUMBERS → FLOW → FAILURE →
+TRADE-OFFS → ROADMAP.</strong></p>
+<hr />
 <p>I have built a repo as a preparation hub: - <a
 target="_blank" rel="noopener" href="https://github.com/enkr1/interview_preparation_materials">Interview
 Preparation Materials</a> - <a
@@ -1605,6 +1805,262 @@ NOTE: views count
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://blog.enkr1.com/journal-week-40/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Jing Hui PANG | 彭竞辉 | ENKR">
+      <meta itemprop="description" content="Words for my future self—a space for insights and creativity. Along the way, I’ll be journaling my journey, diving into programming tips, beatboxing stories and sharing insights on fitness, music, and more to inspire anyone chasing their own path.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ENKR's Blog | Jing Hui PANG">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/journal-week-40/" class="post-title-link" itemprop="url">Journal: Week 40</a>
+        </h2>
+
+        <div class="post-meta">
+
+<!--
+NOTE: created_at
+-->
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: Monday, 11 August 2025 21:37:18 PM 21:37:18 PM" itemprop="dateCreated datePublished" datetime="2025-08-11T21:37:18+08:00">Monday, 11 August 2025 21:37:18 PM</time>
+            </span>
+
+<!--
+NOTE: created_at
+-->
+<!--
+-->
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: Wednesday, 13 August 2025 05:58:29 AM 05:58:29 AM" itemprop="dateModified" datetime="2025-08-13T05:58:29+08:00">Wednesday, 13 August 2025 05:58:29 AM</time>
+              </span>
+
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/About-Me/" itemprop="url" rel="index"><span itemprop="name">About Me</span></a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/About-Me/Journals/" itemprop="url" rel="index"><span itemprop="name">Journals</span></a>
+                </span>
+            </span>
+
+          
+
+
+<!--
+NEW: Added a break after category
+-->
+  <br>
+
+
+<!--
+NOTE: word count
+-->
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+              <span>1.1k</span>
+            </span>
+
+<!--
+NOTE: reading time
+-->
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+              <span>4 mins.</span>
+            </span>
+
+
+<!--
+NOTE: disqus
+-->
+  
+  
+
+<!--
+NOTE: views count
+-->
+            <span class="post-meta-item" title="Views">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <!--
+              NOTE: Hide "Views: "
+              <span class="post-meta-item-text">Views: </span>
+              -->
+              <b><span class="firestore-visitors-count">loading ...</span></b>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="highlights-of-the-week">✨ Highlights of the Week</h2>
+<p>this week felt slow on purpose—i let time pass and just thought about
+the future. i officially started two modules this sem: TCX1101 &amp;
+TCX2002. re-learning maths instantly pulled me back to secondary
+school.</p>
+<p>reminiscing...</p>
+<p>i used to be that kid in class—naughty, restless, not listening. ask
+me why? no idea.</p>
+<p>then, out of nowhere, something clicked...</p>
+<p>about three months before form 3—the big exam that decides your
+stream (science, accountancy, architecture etc.)—i suddenly realised how
+important knowledge is. i crammed. no seconds wasted. boom: accountancy
+stream (class 2). first exam, additional maths 97. that's when i got to
+know folks from the top science class—super friendly, super humble—we
+studied together. i helped where i could; maths was my strongest, my
+favourite.</p>
+<p>this week, all those feelings came back—the stress, the nerves, the
+lost-ness... and the quiet stubbornness to keep going anyway.</p>
+<p>looking back, i'm sooo proud—but NOT satisfied.
+不是贪心，是有底气的饥饿感。i know there's more in me.</p>
+<p>something better is coming. i’m building toward the next next NEXT
+level. 🔥</p>
+<h2 id="reading-insights">📝 Reading Insights</h2>
+<p>this week's reading all pointed to the same reminder: don't rush.
+slow down, think, then move.</p>
+<p>in 《段位》, a few chapters emphasise 先想后动—think before you make
+a move; think more to avoid avoidable errors. couldn't agree more.</p>
+<p>and this line from Jewish Wisdom for Business Success hit me
+hard:</p>
+<blockquote>
+<p>“When the going gets tough, realise that fear makes threats look
+larger than they really are and there is no need to retreat to what is
+familiar. remember the strength you had to leave the past and move
+forward with faith.”</p>
+</blockquote>
+<p>right now, i'm in a good position to aim for the right role—not just
+the next role—and even leave space to build something of my own. no
+rushing, no panic moves. this decision is pivotal, so i'll choose with
+intention.</p>
+<p>how i'm applying it next week:</p>
+<ul>
+<li>block thinking time before big decisions (no "instant yes").</li>
+<li>write a one-pager for any major move: goals, trade-offs, risks, next
+steps.</li>
+<li>default to "not yet" on shiny distractions for 48 hours.</li>
+<li>measure twice, cut once: review plans and code before
+execution.</li>
+</ul>
+<p>slow is smooth; smooth is fast.</p>
+<hr />
+<p>some other insights from <strong>Jewish Wisdom</strong>:</p>
+<blockquote>
+<p><strong>INSIGHT FOR BUSINESS</strong>: Fear makes the unknown seem
+more ominous than it really is. Sticking with strategies of the past can
+often hurt a business. The world is always changing-manage for today and
+tomorrow instead of yesterday.</p>
+<p><strong>INSIGHT FOR LIFE</strong>: Always face the future, not the
+past. You need no longer fear the enemies that you have already
+conquered.</p>
+</blockquote>
+<h2 id="memories-august-4---10">🥰 Memories | August 4 - 10</h2>
+<img data-src="/journal-week-40/IMG_7206.jpeg" class="" title="lunchie w sis!">
+<img data-src="/journal-week-40/IMG_7207.jpeg" class="" title="topped up my hair spray">
+<img data-src="/journal-week-40/IMG_7209.jpeg" class="" title="交流时，需保持冷静思考 - 这本书真的，好深，好喜欢">
+<img data-src="/journal-week-40/IMG_7210.jpeg" class="" title="anthropic droppin fire">
+<img data-src="/journal-week-40/IMG_7211.jpeg" class="" title="12 golden rules for low latency?">
+<img data-src="/journal-week-40/IMG_7212.jpeg" class="" title="懂得给对方台阶下也是一门学问">
+<img data-src="/journal-week-40/IMG_7218.jpeg" class="" title="捧杀">
+<img data-src="/journal-week-40/IMG_7219.jpeg" class="" title="捧杀 - 用头脑去思考的重要性">
+<img data-src="/journal-week-40/IMG_7220.jpeg" class="" title="tried 了一下...">
+<img data-src="/journal-week-40/IMG_7221.jpeg" class="" title="thank you, next...">
+<img data-src="/journal-week-40/IMG_7222.jpeg" class="" title="日常">
+<img data-src="/journal-week-40/IMG_7227.jpeg" class="" title="认真思考了，PT 之路开始。">
+<img data-src="/journal-week-40/IMG_7237.jpeg" class="" title="我真的 🥹">
+<img data-src="/journal-week-40/IMG_7239.jpeg" class="" title="来了这家！有些应该忘记的回忆，突然涌上...">
+<img data-src="/journal-week-40/IMG_7240.jpeg" class="" title="oh my 天, 14 bucks for...">
+<img data-src="/journal-week-40/IMG_7241.jpeg" class="" title="chat is that worth 14 bucks chat?">
+<img data-src="/journal-week-40/IMG_7243.jpeg" class="" title="just say no - learning negotiation... cuz they be funny lately">
+<img data-src="/journal-week-40/IMG_7244.jpeg" class="" title="ask for more information - yes, guys, ... pls">
+<img data-src="/journal-week-40/IMG_7245.jpeg" class="" title="give concessionary info">
+<img data-src="/journal-week-40/IMG_7247.jpg" class="" title="compliment from 🐽🐽">
+<img data-src="/journal-week-40/IMG_7255.jpeg" class="" title="look at the cloud guys ☁️">
+<img data-src="/journal-week-40/IMG_7257.jpeg" class="" title="牛肉小面！真的很小，吃不饱，，，但是好吃！">
+<img data-src="/journal-week-40/IMG_B661CE09-A53E-42FC-8620-B55D752F6B3A.JPEG" class="" title="配上 avocado + banana">
+<img data-src="/journal-week-40/IMG_7259.jpeg" class="" title="study room back view">
+<img data-src="/journal-week-40/IMG_7263.jpeg" class="" title="知人者智，想得越多，错的越少">
+<img data-src="/journal-week-40/IMG_7264.jpeg" class="" title="鸡饭，一盘">
+<img data-src="/journal-week-40/IMG_7265.jpeg" class="" title="鸡蛋，四颗">
+<img data-src="/journal-week-40/IMG_7266.jpeg" class="" title="如果你看到前面的阴影，别怕！那是因为你的背后有阳光！- awwww">
+<img data-src="/journal-week-40/IMG_7267.jpeg" class="" title="when the going gets tough, realise that the fear makes threats look larger than they really are.">
+<img data-src="/journal-week-40/IMG_7268.jpeg" class="" title="Always face the future, not the past. You need no longer fear the enemies that you have already conquered">
+<img data-src="/journal-week-40/IMG_98DCE4AC-AA85-4E54-BEB6-EE94D58083D1.JPEG" class="" title="reading TCX2002 pre-lecture note omw back to jb!">
+<img data-src="/journal-week-40/IMG_7271.jpeg" class="" title="prataaaaaaaaa">
+<img data-src="/journal-week-40/IMG_7272.jpeg" class="" title="and the must-have teh tarik nom nom nomz">
+<img data-src="/journal-week-40/IMG_7274.jpeg" class="" title="rOTI BOOM they were so big that day... honestly, usually it is just a palm size ngl">
+<img data-src="/journal-week-40/IMG_7275.jpeg" class="" title="ugh and naan cheese + ayam">
+<img data-src="/journal-week-40/IMG_7280.jpeg" class="" title="nasi goreng daging - this was straight 100&#x2F;10">
+<img data-src="/journal-week-40/IMG_7281.jpeg" class="" title="and whATTT the gambing soup 😭🙏🏽💕">
+<img data-src="/journal-week-40/IMG_7286.jpeg" class="" title="and back home w my fam home made 金瓜焖饭？超级好吃啊啊啊啊啊 太幸福了我">
+<img data-src="/journal-week-40/IMG_7292.jpeg" class="" title="AFMA has theseeeeee wHAT!!!">
+<img data-src="/journal-week-40/IMG_7293.jpg" class="" title="weight been droppin since then... 🥺">
+<img data-src="/journal-week-40/IMG_7297.jpeg" class="" title="妈咪的糖水 ❤️%}
+{% asset_img  IMG_7300.jpeg omg we found our childhood lullaby my dad used to play otw back grandpa house 🥺&quot;">
+<img data-src="/journal-week-40/IMG_7302.jpeg" class="" title="蒜米炸鸡">
+<img data-src="/journal-week-40/IMG_7303.jpeg" class="" title="豆腐豆腐">
+<img data-src="/journal-week-40/IMG_7306.jpeg" class="" title="another sweet moment w 爸爸妈妈姐姐爷爷婆婆 🥺💕">
+<img data-src="/journal-week-40/IMG_7313.jpeg" class="" title="someone said, they line up to be picked to kill............ 🙏🏽">
+<img data-src="/journal-week-40/IMG_7314.jpeg" class="" title="here it is, recommend but just not so budget ..?">
+<img data-src="/journal-week-40/IMG_7315.jpeg" class="" title="look at the moon! it was orangieeeee">
+<img data-src="/journal-week-40/IMG_7319.jpeg" class="" title="grandpa even treated us durian that he bought during his trip to Bentong 文冬 - 猫山王的原产地, 爷爷 treated us sultan 王 + 猫山王! 🥺">
+<img data-src="/journal-week-40/IMG_7320.jpeg" class="" title="and guess what... niuniu ate tooooooo ahhhh so cute and shes so blessed">
+<img data-src="/journal-week-40/IMG_7328.jpeg" class="" title="shop for some cookies and cakes">
+<img data-src="/journal-week-40/IMG_7329.jpeg" class="" title="😋">
+<img data-src="/journal-week-40/IMG_7330.jpeg" class="" title="干肉骨茶！！！！！超级好吃">
+<img data-src="/journal-week-40/IMG_7331.jpeg" class="" title="猪肚汤">
+<img data-src="/journal-week-40/IMG_7332.jpeg" class="" title="什么豆腐汤、五香和最左边那个忘记名字了啊啊啊">
+<img data-src="/journal-week-40/IMG_7343.jpeg" class="" title="随拍">
+<img data-src="/journal-week-40/IMG_7346.jpeg" class="" title="check, happy, proud">
+
+      
+    </div>
+
+    
+    
+    
+      
+
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="https://blog.enkr1.com/journal-week-39/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1646,7 +2102,7 @@ NOTE: created_at
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: Monday, 4 August 2025 03:15:14 AM 03:15:14 AM" itemprop="dateModified" datetime="2025-08-04T03:15:14+08:00">Monday, 4 August 2025 03:15:14 AM</time>
+                <time title="Modified: Wednesday, 13 August 2025 04:25:29 AM 04:25:29 AM" itemprop="dateModified" datetime="2025-08-13T04:25:29+08:00">Wednesday, 13 August 2025 04:25:29 AM</time>
               </span>
 
             <span class="post-meta-item">
@@ -1765,7 +2221,8 @@ comes.</p>
 <p><em>Asking isn't weakness. it's a sign of strength—because you're not
 just learning, you're co-creating your growth.</em></p>
 </blockquote>
-<h2 id="memories-july-28---may-3">🥰 Memories | July 28 - May 3</h2>
+<h2 id="memories-july-28---august-3">🥰 Memories | July 28 - August
+3</h2>
 <img data-src="/journal-week-39/IMG_7086.jpeg" class="" title="reading 《段位》">
 <img data-src="/journal-week-39/IMG_7087.jpeg" class="" title="觉得这个挺有意思的，其实不经意的也有在默默使用，还得继续磨炼！">
 <img data-src="/journal-week-39/IMG_7093.jpeg" class="" title="wc 我真的觉得这家蛮好吃的">
@@ -1859,11 +2316,11 @@ NOTE: created_at
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Career-Development/" itemprop="url" rel="index"><span itemprop="name">Career Development</span></a>
+                  <a href="/categories/Notebooks/" itemprop="url" rel="index"><span itemprop="name">Notebooks</span></a>
                 </span>
                   , 
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Notebooks/" itemprop="url" rel="index"><span itemprop="name">Notebooks</span></a>
+                  <a href="/categories/Career-Development/" itemprop="url" rel="index"><span itemprop="name">Career Development</span></a>
                 </span>
                   , 
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
@@ -2315,203 +2772,6 @@ readings, lots of coding!</li>
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://blog.enkr1.com/journal-week-36/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Jing Hui PANG | 彭竞辉 | ENKR">
-      <meta itemprop="description" content="Words for my future self—a space for insights and creativity. Along the way, I’ll be journaling my journey, diving into programming tips, beatboxing stories and sharing insights on fitness, music, and more to inspire anyone chasing their own path.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ENKR's Blog | Jing Hui PANG">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/journal-week-36/" class="post-title-link" itemprop="url">Journal: Week 36</a>
-        </h2>
-
-        <div class="post-meta">
-
-<!--
-NOTE: created_at
--->
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: Monday, 5 May 2025 00:10:02 AM 00:10:02 AM" itemprop="dateCreated datePublished" datetime="2025-05-05T00:10:02+08:00">Monday, 5 May 2025 00:10:02 AM</time>
-            </span>
-
-<!--
-NOTE: created_at
--->
-<!--
--->
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: Sunday, 27 July 2025 18:53:44 PM 18:53:44 PM" itemprop="dateModified" datetime="2025-07-27T18:53:44+08:00">Sunday, 27 July 2025 18:53:44 PM</time>
-              </span>
-
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/About-Me/" itemprop="url" rel="index"><span itemprop="name">About Me</span></a>
-                </span>
-                  , 
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/About-Me/Journals/" itemprop="url" rel="index"><span itemprop="name">Journals</span></a>
-                </span>
-            </span>
-
-          
-
-
-<!--
-NEW: Added a break after category
--->
-  <br>
-
-
-<!--
-NOTE: word count
--->
-            <span class="post-meta-item" title="Symbols count in article">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-              <span>510</span>
-            </span>
-
-<!--
-NOTE: reading time
--->
-            <span class="post-meta-item" title="Reading time">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-              <span>2 mins.</span>
-            </span>
-
-
-<!--
-NOTE: disqus
--->
-  
-  
-
-<!--
-NOTE: views count
--->
-            <span class="post-meta-item" title="Views">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <!--
-              NOTE: Hide "Views: "
-              <span class="post-meta-item-text">Views: </span>
-              -->
-              <b><span class="firestore-visitors-count">loading ...</span></b>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="highlights-of-the-week">✨ Highlights of the Week</h2>
-<p>it was a short week thanks to the mid-week public holiday, and
-honestly, apart from that, things were pretty chill.</p>
-<p>but one major thing hppened: i conquered one of my biggest interview
-traumas. 🥺</p>
-<p>back in 2023, i interviewed with a company that completely caught me
-off guard. there was a question that shut me down entirely—i froze. no
-follow-up questions, no attempts to clarify. just silence. i was so deep
-in self-doubt that all i could do was sit in that fear. 😞</p>
-<p>but after that interview, i made a promise to myself. i dove deep
-into that specific topic. i studied it until i truly understood it—not
-just to memorise it, but to recognise the underlying pattern. i didn't
-want to be caught off guard again.</p>
-<p>fast forward two years, and guess what? i got another shot. i had the
-chance to interview with them again.</p>
-<p>this time, i clarified inputs, rephrased questions, walked through my
-thinking process, offered multiple approaches, did a mini speedrun to
-validate the logic, and coded the full solution. not only did i stay
-calm, but i actually enjoyed the whole process.</p>
-<p>what i've come to realise is—yes, AI will probably replace a lot of
-coding. but what makes coding fun isn't just the code. it's that 0-to-1
-moment—the "ah ha!" breakthrough, the joy of unravelling a complex
-puzzle. it's the ability to notice new patterns every time, and that
-feeling... that is what i fell in love with again this week. ❤️‍🔥</p>
-<p>aside from that, i also started revisiting system design, and i'll
-begin jotting down my notes here. excited to build this up week by week!
-🧠📘</p>
-<p>ohh! and another highlight—andy chiew said something that really
-stuck with me during one of our pantry chats: <strong><em>"changes
-happen to you so that you're given a chance to make a choice. it might
-turn out bad, it might turn out good, but in the end, it becomes an
-unregrettable experience that shapes who you're going to
-become."</em></strong></p>
-<p>the moment he said it, i paused. it just hit different. i jotted it
-down on my note app right after. it resonated deeply with how i've
-always viewed changes—not as disruption, but as opportunity. an
-invitation to grow, to make intentional decisions, and to evolve.</p>
-<p><strong>it reminded me that every change, no matter how uncertain, is
-a chance to choose who i want to be. and that's powerful.</strong>
-🌱</p>
-<h2 id="memories-april-28---may-4">🥰 Memories | April 28 - May 4</h2>
-<img data-src="/journal-week-36/IMG_5278.jpeg" class="" title="lunchie">
-<img data-src="/journal-week-36/IMG_5280.jpeg" class="">
-<img data-src="/journal-week-36/IMG_5287.jpeg" class="" title="breakie">
-<img data-src="/journal-week-36/IMG_5288.jpeg" class="" title="lunchie w jeannie!">
-<img data-src="/journal-week-36/IMG_5298.jpeg" class="" title="yeah! ✌🏽">
-<img data-src="/journal-week-36/IMG_5304.jpeg" class="">
-<img data-src="/journal-week-36/IMG_5302.jpeg" class="" title="📸">
-<img data-src="/journal-week-36/IMG_5311.jpeg" class="">
-<img data-src="/journal-week-36/IMG_5312.jpeg" class="">
-<img data-src="/journal-week-36/IMG_5314.jpeg" class="" title="✅">
-<img data-src="/journal-week-36/IMG_5318.jpeg" class="" title="koala... fr">
-<img data-src="/journal-week-36/IMG_5330.jpeg" class="">
-<img data-src="/journal-week-36/IMG_5340.jpeg" class="" title="lunch w pierre @ Hakata Ikkousha Ramen!">
-<img data-src="/journal-week-36/IMG_5345.jpeg" class="" title="taiqing gave us this snack from his japan trip">
-<img data-src="/journal-week-36/IMG_5347.jpeg" class="" title="aw thanks to joven, got my dinner settled! 😗">
-<img data-src="/journal-week-36/IMG_5348.jpeg" class="" title="okk still got hungry">
-<img data-src="/journal-week-36/IMG_5351.jpeg" class="" title="🫡">
-<img data-src="/journal-week-36/IMG_5353.jpeg" class="" title="as usual.">
-
-      
-    </div>
-
-    
-    
-    
-      
-
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -2580,7 +2840,7 @@ a chance to choose who i want to be. and that's powerful.</strong>
   <nav class="site-state">
     <div class="site-state-item site-state-posts">
         <a href="/archives">
-          <span class="site-state-item-count">118</span>
+          <span class="site-state-item-count">119</span>
           <span class="site-state-item-name">Posts</span>
         </a>
     </div>
@@ -2731,12 +2991,12 @@ NEW: Readers & Total Views
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="Symbols count total">94k</span>
+    <span title="Symbols count total">96k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">5:42</span>
+    <span title="Reading time total">5:50</span>
 </div>
 
         

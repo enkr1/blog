@@ -23,15 +23,15 @@
     var CONFIG = {"hostname":"blog.enkr1.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":true,"sidebar":{"position":"left","width":300,"display":"post","padding":0,"offset":0,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"buttons","active":"disqus","storage":true,"lazyload":true,"nav":null,"activeClass":"disqus"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":-1,"unescape":true,"preload":true},"motion":{"enable":true,"async":false,"transition":{"post_block":"slideDownBigIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="WIP I have built a repo as a preparation hub: - Interview Preparation Materials - ByteByteGo - System Design Interview References  System Design - The Big Archive 2023 Edition - ByteByteGo.com Designi">
+  <meta name="description" content="WIP . . . System-Design One-Pager (print this) Trigger mantra: SPEC → NUMBERS → FLOW → FAILURE → TRADE-OFFS → ROADMAP. 90-second opening script (memorise):  “Goal: X delivers Y to Z users. Non-goals:">
 <meta property="og:type" content="article">
 <meta property="og:title" content="System Design Notebook">
 <meta property="og:url" content="https://blog.enkr1.com/system-design-notebook/index.html">
 <meta property="og:site_name" content="ENKR&#39;s Blog | Jing Hui PANG">
-<meta property="og:description" content="WIP I have built a repo as a preparation hub: - Interview Preparation Materials - ByteByteGo - System Design Interview References  System Design - The Big Archive 2023 Edition - ByteByteGo.com Designi">
+<meta property="og:description" content="WIP . . . System-Design One-Pager (print this) Trigger mantra: SPEC → NUMBERS → FLOW → FAILURE → TRADE-OFFS → ROADMAP. 90-second opening script (memorise):  “Goal: X delivers Y to Z users. Non-goals:">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2025-05-03T11:53:44.000Z">
-<meta property="article:modified_time" content="2025-07-16T10:14:17.712Z">
+<meta property="article:modified_time" content="2025-08-10T21:47:26.956Z">
 <meta property="article:author" content="Jing Hui PANG | 彭竞辉 | ENKR">
 <meta property="article:tag" content="system-design">
 <meta name="twitter:card" content="summary">
@@ -320,7 +320,7 @@ NOTE: created_at
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: Wednesday, 16 July 2025 18:14:17 PM 18:14:17 PM" itemprop="dateModified" datetime="2025-07-16T18:14:17+08:00">Wednesday, 16 July 2025 18:14:17 PM</time>
+                <time title="Modified: Monday, 11 August 2025 05:47:26 AM 05:47:26 AM" itemprop="dateModified" datetime="2025-08-11T05:47:26+08:00">Monday, 11 August 2025 05:47:26 AM</time>
               </span>
 
             <span class="post-meta-item">
@@ -357,7 +357,7 @@ NOTE: word count
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-              <span>39</span>
+              <span>1.1k</span>
             </span>
 
 <!--
@@ -367,7 +367,7 @@ NOTE: reading time
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
-              <span>1 mins.</span>
+              <span>4 mins.</span>
             </span>
 
 
@@ -413,6 +413,206 @@ NOTE: views count
 
       
         <h2 id="wip">WIP</h2>
+<p>. . .</p>
+<h2 id="system-design-one-pager-print-this">System-Design One-Pager
+(print this)</h2>
+<p><strong>Trigger mantra:</strong> <strong>SPEC → NUMBERS → FLOW →
+FAILURE → TRADE-OFFS → ROADMAP.</strong></p>
+<p><strong>90-second opening script (memorise):</strong></p>
+<ol type="1">
+<li>“Goal: <em>X delivers Y to Z users.</em> Non-goals: A/B. Success =
+p95 latency ≤ L, freshness ≤ F, cost ≤ C.”</li>
+<li>“Scale assumptions: QPS, payload size S, daily writes/reads, growth
+G.”</li>
+<li>“Critical path: request → validate → write/read → persist → respond
+(happy path first).”</li>
+<li>“State model + data model at a glance (entities, keys, hot
+partitions).”</li>
+<li>“We’ll design for 1 failure now (idempotency + retries), and evolve
+here (roadmap).”</li>
+</ol>
+<p><strong>Back-of-envelope (fill in fast):</strong></p>
+<ul>
+<li><strong>Throughput:</strong> <code>req/s × payload</code> →
+network/CPU budget.</li>
+<li><strong>Storage:</strong>
+<code>daily writes × avg size × retention</code> (+ replication
+factor).</li>
+<li><strong>Latency budget:</strong> front-end <code>≤50ms</code>, edge
+<code>≤20ms</code>, core read/write <code>≤120ms</code>, queue/async
+<code>≤1–5s</code> (MVP).</li>
+<li><strong>Costs:</strong> biggest 2 line items (storage +
+egress/compute); name them.</li>
+</ul>
+<p><strong>Data model checklist:</strong></p>
+<ul>
+<li>Entities &amp; keys (avoid hot keys; include secondary
+indexes).</li>
+<li>Partitioning/sharding rule (what’s the shard key and why).</li>
+<li><strong>State machine</strong> for long-running work (e.g.,
+<code>PENDING → RUNNING → RETRYING → SUCCEEDED|FAILED(DLQ)</code>).</li>
+</ul>
+<p><strong>Data-flow narrative (say out loud, in order):</strong></p>
+<ul>
+<li>Ingress format &amp; size → validation → write path → derived data
+(indexes/vectors) → read path &amp; ranking.</li>
+<li>Idempotency key + retry policy on every write/async step.</li>
+<li>Exactly which store each read hits (and why).</li>
+</ul>
+<p><strong>Failure inventory (pick 2 now, note the rest):</strong></p>
+<ul>
+<li>Duplicate requests; partial writes; queue poison message; downstream
+timeout; hot partition.</li>
+<li>Controls: idempotency keys, exponential backoff, DLQ with alert,
+circuit breaker, TTLs, SLO + error budget.</li>
+</ul>
+<p><strong>Trade-off playbook (2 pros/2 cons, commit):</strong></p>
+<ul>
+<li>SQL vs NoSQL; stream vs batch; cache vs no cache; single region vs
+multi.</li>
+<li>Name what you <em>give up</em> and how you’d reverse the decision
+later.</li>
+</ul>
+<p><strong>Roadmap ladder (close strong):</strong></p>
+<ul>
+<li><strong>MVP (90 days):</strong> 1 region, 1 DB, 1 queue,
+observability baseline.</li>
+<li><strong>Next 10×:</strong> read replicas/ANN index, cache for N hot
+queries, backfill job, multi-AZ/region, privacy/PII pipeline.</li>
+</ul>
+<p><strong>Security &amp; compliance in one breath:</strong> AuthN (JWT)
+→ AuthZ (tenant/resource checks) → data segregation → PII handling
+(hash/tokenise, deletion path) → audit logs.</p>
+<hr />
+<h2 id="why-this-beats-your-synthesis-attempt">Why this beats your
+Synthesis attempt</h2>
+<ul>
+<li>You <em>start</em> with the <strong>critical path</strong> and
+<strong>state machine</strong>, not gateways/caches/ES.</li>
+<li>You limit primitives (one DB + one queue) until reads prove
+otherwise.</li>
+<li>Every box exposes <strong>input, output, SLO, and failure
+behaviour</strong>—no black boxes.</li>
+<li>You anchor with <strong>numbers</strong> so choices feel
+intentional, not ornamental.</li>
+</ul>
+<hr />
+<h2 id="deep-keys-mental-models-you-can-reuse">Deep keys (mental models
+you can reuse)</h2>
+<ul>
+<li><strong>Two-Store Rule (MVP):</strong> one blob store + one
+OLTP/OLAP (or OLTP+pgvector). Add ES/Redis only when a <em>measured</em>
+query needs it.</li>
+<li><strong>One-Queue Rule:</strong> one durable queue for long tasks;
+state machine per job; retries + DLQ from day 1.</li>
+<li><strong>Happy-Path First:</strong> prove <em>upload → process →
+search</em> (or analogous) end-to-end before any embellishment.</li>
+<li><strong>Talk in Deltas:</strong> each evolution step should change
+exactly one constraint (throughput, latency, durability, cost).</li>
+<li><strong>Hot-spot Radar:</strong> say where hot keys and fan-outs
+will occur and how you’ll detect them (metrics &amp; sample
+alerts).</li>
+<li><strong>Observability trinity:</strong> logs with correlation IDs,
+RED/USE metrics, 1–2 SLOs with error budgets.</li>
+</ul>
+<hr />
+<h2 id="reflection-prompts-turn-this-sting-into-skill">Reflection
+prompts (turn this sting into skill)</h2>
+<p>Answer these in writing—short bullets:</p>
+<ol type="1">
+<li><strong>Priority drift:</strong> When under pressure, what made me
+reach for “shiny” components before the core flow? How will I catch that
+impulse (e.g., <em>say the 90-sec script before touching the
+marker</em>)?</li>
+<li><strong>Narrative gap:</strong> Could I explain the entire data path
+in <strong>60 seconds without diagrams</strong>? If not, tighten
+it.</li>
+<li><strong>State clarity:</strong> Where did I fail to name states and
+transitions? Rewrite them as a table.</li>
+<li><strong>Numbers poverty:</strong> Which number did I avoid stating
+(traffic, size, cost)? Why? Add a default baseline toolkit (below).</li>
+<li><strong>Failure courage:</strong> Which failure mode do I habitually
+ignore? Design one control and one alert for it.</li>
+<li><strong>Life parallel:</strong> In your HRBP project, scope crept
+and you optimised mid-UAT. What’s the SD analogue? → <em>Lock MVP spine;
+create a “parking lot” for nice-to-haves; only pull from it after the
+spine stands.</em></li>
+</ol>
+<hr />
+<h2 id="baseline-numbers-toolkit-memorise-reasonable-defaults">Baseline
+numbers toolkit (memorise reasonable defaults)</h2>
+<ul>
+<li>Payloads: JSON request 1–5 KB; doc text page 2–4 KB; image 200–500
+KB.</li>
+<li>Throughput tiers: prototype 10 rps; MVP 100 rps; scale target 1k
+rps.</li>
+<li>Storage: plain text ~1 byte/char; embed vector 768 floats ≈ 3
+KB.</li>
+<li>Queue: Pub/Sub/Kafka consumer stable at O(100–1k msg/s) per worker
+with I/O-bound tasks.</li>
+<li>Latency: network hop 5–20 ms in-region; disk read 1–10 ms SSD;
+ANN/vector search 10–80 ms per 10k vectors (ballpark).</li>
+<li>Cost: egress is often the silent killer; cache prevents egress, not
+just latency.</li>
+</ul>
+<hr />
+<h2
+id="red-team-yourself-10-interrupts-an-interviewer-might-use">Red-team
+yourself (10 interrupts an interviewer might use)</h2>
+<ol type="1">
+<li>“Walk the happy path, no optimisations.”</li>
+<li>“Point to each arrow and tell me payload &amp; size.”</li>
+<li>“What’s the shard key? Why won’t it hot-spot?”</li>
+<li>“If this downstream is down for 10 minutes?”</li>
+<li>“How do I retry safely without dup effects?”</li>
+<li>“Which read hits which index?”</li>
+<li>“Show me the job state machine.”</li>
+<li>“Where do you log correlation IDs?”</li>
+<li>“What’s your single biggest cost line?”</li>
+<li>“How do you roll back a bad deploy?”</li>
+</ol>
+<hr />
+<h2 id="practice-protocol-repeat-weekly">Practice protocol (repeat
+weekly)</h2>
+<ul>
+<li><strong>5-min warm-up:</strong> recite the 90-sec opening, draw the
+state machine.</li>
+<li><strong>15-min drill:</strong> pick any common SD prompt (feed, rate
+limiter, search, chat). Do: numbers → flow → failures.</li>
+<li><strong>10-min red-team:</strong> have a friend interrupt with the
+10 questions above.</li>
+<li><strong>Post-mortem note (3 bullets):</strong> what I skipped, what
+I over-engineered, one number I’ll bring next time.</li>
+</ul>
+<hr />
+<h2 id="your-cheat-sheet-tuned-copypaste">Your cheat sheet, tuned
+(copy/paste)</h2>
+<p><strong>System-Design Mistakes — Pocket Checklist</strong></p>
+<ol type="1">
+<li><strong>Vague spec →</strong> Write <strong>goal, non-goals,
+SLOs</strong>.</li>
+<li><strong>No numbers →</strong> Quick calc: <strong>QPS, size,
+storage, latency, cost</strong>.</li>
+<li><strong>Messy diagram →</strong> Boxes, <strong>numbered
+arrows</strong>, legend; pass-1 &lt; 2 min.</li>
+<li><strong>Silent schema →</strong> Entities, keys,
+<strong>indexes</strong>, hot-key risk.</li>
+<li><strong>No state machine →</strong> Jobs:
+<strong>PENDING→RUNNING→RETRYING→SUCCEEDED|FAILED(DLQ)</strong>.</li>
+<li><strong>No data-flow story →</strong> Trace <strong>one
+request</strong> with format/size/retry/idempotency.</li>
+<li><strong>Ignoring failures →</strong> Choose 2, add <strong>backoff,
+DLQ, circuit breaker</strong>, runbook trigger.</li>
+<li><strong>Zero trade-offs →</strong> For each big choice, <strong>2
+pros/2 cons + reversal path</strong>.</li>
+<li><strong>No roadmap →</strong> <strong>MVP spine</strong> now; next
+10× bottlenecks later.</li>
+<li><strong>Security &amp; cost blindspot →</strong> AuthN/Z, PII path,
+<strong>top 2 cost drivers</strong>.</li>
+</ol>
+<p><strong>Mantra:</strong> <strong>SPEC → NUMBERS → FLOW → FAILURE →
+TRADE-OFFS → ROADMAP.</strong></p>
+<hr />
 <p>I have built a repo as a preparation hub: - <a
 target="_blank" rel="noopener" href="https://github.com/enkr1/interview_preparation_materials">Interview
 Preparation Materials</a> - <a
@@ -533,7 +733,15 @@ and Maintainable Systems</a></li>
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#wip"><span class="nav-number">1.</span> <span class="nav-text">WIP</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#references"><span class="nav-number">2.</span> <span class="nav-text">References</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#wip"><span class="nav-number">1.</span> <span class="nav-text">WIP</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#system-design-one-pager-print-this"><span class="nav-number">2.</span> <span class="nav-text">System-Design One-Pager
+(print this)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#why-this-beats-your-synthesis-attempt"><span class="nav-number">3.</span> <span class="nav-text">Why this beats your
+Synthesis attempt</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#deep-keys-mental-models-you-can-reuse"><span class="nav-number">4.</span> <span class="nav-text">Deep keys (mental models
+you can reuse)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#reflection-prompts-turn-this-sting-into-skill"><span class="nav-number">5.</span> <span class="nav-text">Reflection
+prompts (turn this sting into skill)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#baseline-numbers-toolkit-memorise-reasonable-defaults"><span class="nav-number">6.</span> <span class="nav-text">Baseline
+numbers toolkit (memorise reasonable defaults)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#red-team-yourself-10-interrupts-an-interviewer-might-use"><span class="nav-number">7.</span> <span class="nav-text">Red-team
+yourself (10 interrupts an interviewer might use)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#practice-protocol-repeat-weekly"><span class="nav-number">8.</span> <span class="nav-text">Practice protocol (repeat
+weekly)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#your-cheat-sheet-tuned-copypaste"><span class="nav-number">9.</span> <span class="nav-text">Your cheat sheet, tuned
+(copy&#x2F;paste)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#references"><span class="nav-number">10.</span> <span class="nav-text">References</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -546,7 +754,7 @@ and Maintainable Systems</a></li>
   <nav class="site-state">
     <div class="site-state-item site-state-posts">
         <a href="/archives">
-          <span class="site-state-item-count">118</span>
+          <span class="site-state-item-count">119</span>
           <span class="site-state-item-name">Posts</span>
         </a>
     </div>
@@ -697,12 +905,12 @@ NEW: Readers & Total Views
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="Symbols count total">94k</span>
+    <span title="Symbols count total">96k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">5:42</span>
+    <span title="Reading time total">5:50</span>
 </div>
 
         

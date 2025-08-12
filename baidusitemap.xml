@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://blog.enkr1.com/journal-week-40/</loc>
+    <lastmod>2025-08-12</lastmod>
+  </url>
+  <url>
     <loc>https://blog.enkr1.com/journal-week-39/</loc>
-    <lastmod>2025-08-03</lastmod>
+    <lastmod>2025-08-12</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.enkr1.com/system-design-notebook/</loc>
+    <lastmod>2025-08-10</lastmod>
   </url>
   <url>
     <loc>https://blog.enkr1.com/journal-week-38/</loc>
@@ -15,10 +23,6 @@
   <url>
     <loc>https://blog.enkr1.com/journal-week-36/</loc>
     <lastmod>2025-07-27</lastmod>
-  </url>
-  <url>
-    <loc>https://blog.enkr1.com/system-design-notebook/</loc>
-    <lastmod>2025-07-16</lastmod>
   </url>
   <url>
     <loc>https://blog.enkr1.com/my-journey-in-elixir-phoenix/</loc>
@@ -321,15 +325,15 @@
     <lastmod>2024-10-23</lastmod>
   </url>
   <url>
-    <loc>https://blog.enkr1.com/regression-hypothesis-testing/</loc>
-    <lastmod>2024-10-23</lastmod>
-  </url>
-  <url>
     <loc>https://blog.enkr1.com/regression-prediction/</loc>
     <lastmod>2024-10-23</lastmod>
   </url>
   <url>
     <loc>https://blog.enkr1.com/deep-learning/</loc>
+    <lastmod>2024-10-23</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.enkr1.com/regression-hypothesis-testing/</loc>
     <lastmod>2024-10-23</lastmod>
   </url>
   <url>
